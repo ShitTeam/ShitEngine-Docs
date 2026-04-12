@@ -17,7 +17,9 @@ hero:
 
 features:
   - title: 高性能
-    details: 采用 C++ ，快就完事了！
-  - title: 组件化编程
-    details: 组件化编程， 快速迭代，开发速度快。
+    details: 采用 C++，快就完事了！
+  - title: 组件化架构
+    details: 灵活的组件系统，快速迭代
+  - title: 易于使用
+    details: 简洁的 API 设计
 ---
