@@ -30,6 +30,10 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ShitTeam' }
-    ]
+    ],
+
+    footer: {
+      copyright: 'Copyright © 2024-present ShitTeam. All rights reserved.'
+    }
   }
 })
