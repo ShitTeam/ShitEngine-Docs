@@ -7,6 +7,9 @@ hero:
   name: "ShitEngine"
   text: "一个 C++ 2D游戏引擎"
   tagline: 高性能，组件化
+  image:
+    src: /logo.png
+    alt: ShitEngine Logo
   actions:
     - theme: brand
       text: 了解更多

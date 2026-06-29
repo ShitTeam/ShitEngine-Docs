@@ -1,24 +1,40 @@
-# 了解更多
+# ShitEngine
 
-欢迎来到 ShitEngine 文档！
+ShitEngine 是一个基于 **C++20** 和 **SDL3** 的轻量级 2D 游戏引擎。
 
-ShitEngine 是一个高性能的 C++ 2D 游戏引擎，具有以下特点：
+它从零开始设计，采用面向对象的组件化架构（Component + System），不依赖任何大型框架。引擎内置了完整的生命周期管理、场景栈、多相机渲染管线、资源缓存和输入系统，让你可以直接开始写游戏逻辑，而不必从窗口和渲染轮子搭起。
 
-## 主要特性
+## 为什么用 ShitEngine？
 
-- **高性能**：采用 C++，快就完事了！
-- **组件化架构**：灵活的组件系统，快速迭代
-- **易于使用**：简洁的 API 设计
+- **即用型游戏框架** — 场景栈、组件生命周期、多相机渲染、输入、资源缓存开箱即用
+- **像素级渲染品质** — 逻辑分辨率 + 最近邻缩放 + 像素对齐，像素风在任何分辨率下都不模糊
+- **现代 C++ 零配置** — CMake FetchContent 自动拉取全部依赖，SDL3 全家桶即构即用
 
-## 快速开始
+## 核心架构
 
-要开始使用 ShitEngine，请查看 [快速开始](./quick_start.md) 指南。
+引擎围绕三个核心概念组织：
 
-## 项目信息
+**GameObject** — 游戏世界中的实体，作为组件的容器。本身不包含逻辑，通过挂载不同的组件获得行为。
 
-- 仓库：[GitHub - ShitTeam](https://github.com/ShitTeam)
-- 语言：C++
+**Component** — 功能的积木块。`TransformComponent` 控制位置和缩放，`SpriteRenderer` 绘制精灵，`CameraComponent` 定义视角。用户继承 `Behavior` 重写 `onUpdate` 即可添加自定义逻辑。
 
-#### 第三方库
+**System** — 管理同类组件的更新。`BehaviorSystem` 遍历所有 Behavior 执行脚本，`RenderSystem` 按相机和 Z 序排序后渲染。System 有优先级控制执行顺序。
 
-- 图形库：[SFML](https://github.com/SFML/SFML)
+## 核心系统
+
+| 系统 | 职责 |
+|---|---|
+| Game | 引擎入口，初始化和主循环 |
+| Window | SDL3 窗口管理 |
+| Renderer | 逻辑分辨率、缩放模式、绘制 API 封装 |
+| Time | DeltaTime / TotalTime 计算 |
+| Input | 键盘和鼠标的 Down/Pressed/Released 三态检测 |
+| Config | JSON 配置文件读取 |
+| ResourceManager | 纹理等资源的自动缓存 |
+| SceneManager | 场景栈管理，支持延迟推入/弹出/替换 |
+| Scene | 管理 GameObject 和 System 的生命周期 |
+
+## 链接
+
+- 源代码：[GitHub - ShitTeam](https://github.com/ShitTeam)
+- 许可证：Apache License 2.0

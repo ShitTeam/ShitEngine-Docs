@@ -3,3 +3,9 @@
   --vp-c-brand-1: #b87333;
   --vp-c-brand-2: #b87333;
 }
+
+.VPImage.image-src {
+  max-width: 200px;
+  max-height: 200px;
+  filter: drop-shadow(0 0 50px rgba(184, 115, 51, 0.8));
+}

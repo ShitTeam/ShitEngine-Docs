@@ -4,8 +4,15 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "ShitEngine",
   description: "一个 C++ 2D游戏引擎",
+
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/logo.png',
+
     nav: [
       { text: '主页', link: '/' },
       { text: '教程', link: '/guide/introduction' }
