@@ -5,11 +5,11 @@ lang: zh_CN
 
 # 音频系统
 
-ShitEngine 的音频系统基于 SDL3_mixer，支持常见的音频格式（WAV、OGG、MP3、FLAC 等）。
+ShitEngine 的音频系统支持常见的音频格式（WAV、OGG、MP3、FLAC 等）。
 
 ## 初始化
 
-音频在 `Game::Init()` 阶段自动初始化（`SDL_INIT_AUDIO` + `AudioPlayer::Init()`），不需要你手动调用。
+音频在 `Game::Init()` 阶段自动初始化，不需要你手动调用。
 
 ## 轨道组
 

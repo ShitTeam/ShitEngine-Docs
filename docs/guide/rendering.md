@@ -9,11 +9,11 @@ ShitEngine 的渲染管线围绕三个核心概念：**精灵（Sprite）**、**
 
 ## 逻辑分辨率
 
-引擎默认使用 1280×720 的逻辑分辨率。你的所有坐标都基于这个空间，SDL3 会自动缩放适配实际窗口，黑边填充多余区域。
+引擎默认使用 1280×720 的逻辑分辨率。你的所有坐标都基于这个空间，渲染器会自动缩放适配实际窗口，黑边填充多余区域。
 
 ```cpp
 // Renderer::init() 中自动设置
-SDL_SetRenderLogicalPresentation(renderer, 1280, 720, SDL_LOGICAL_PRESENTATION_LETTERBOX);
+
 ```
 
 这意味着无论窗口是 1024×768 还是 1920×1080，你写的 `setPosition({640, 360})` 始终指向屏幕正中央。
@@ -36,7 +36,7 @@ sprite->setTexturePath("textures/player.png");
 `Sprite` 是一个数据类，描述"画什么"。它包含纹理路径、裁剪区域和翻转标志：
 
 ```cpp
-Shit::Sprite sprite("player.png", SDL_FRect{0, 0, 32, 32});  // 裁剪第 32×32 区域
+Shit::Sprite sprite("player.png", {0, 0, 32, 32});  // 裁剪第 32×32 区域
 sprite.setFlipped(true);  // 水平翻转
 ```
 

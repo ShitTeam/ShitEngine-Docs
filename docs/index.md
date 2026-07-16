@@ -1,11 +1,11 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-title: "ShitEngine: 一个 C++ 2D游戏引擎"
+title: "ShitEngine: 一个 C++ 2D 游戏引擎"
 
 hero:
   name: "ShitEngine"
-  text: "一个 C++ 2D游戏引擎"
+  text: "一个 C++ 2D 游戏引擎"
   tagline: 高性能，组件化
   image:
     src: /logo.png

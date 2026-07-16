@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: "ShitEngine",
-  description: "基于 C++20 和 SDL3 的轻量级 2D 游戏引擎",
+  description: "基于 C++20 的轻量级 2D 游戏引擎",
 
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
