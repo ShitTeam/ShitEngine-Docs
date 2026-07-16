@@ -5,123 +5,132 @@ lang: zh_CN
 
 # 场景管理
 
-场景（Scene）管理游戏世界中所有的对象，提供了清晰的生命周期和切换机制。
+> 场景就是你的游戏世界——所有东西都在里面活着、动着。
 
-## 场景生命周期
+## 生命周期
 
-一个场景从创建到销毁会经历这些阶段：
+一个场景从生到死会经历这些阶段：
 
 ```
 创建 → init → update(每帧) → destroy → 销毁
 ```
 
-创建场景并初始化：
+出生：
 
 ```cpp
 auto scene = std::make_unique<Shit::Scene>("level1");
 scene->init();
 ```
 
-`init()` 会注册两个默认系统：`BehaviorSystem` 和 `RenderSystem`。你可以在场景的生命周期中添加自定义逻辑，通过继承 `Scene` 并重写相关方法：
+`init()` 帮你注册了俩默认系统：`BehaviorSystem`（跑脚本）和 `RenderSystem`（画画面）。你要有自己的系统，就在这里注册。
+
+如果你想在场景初始化时做点自己的事，继承它就行：
 
 ```cpp
 class MyScene : public Shit::Scene {
     using Shit::Scene::Scene;
 
     void init() override {
-        Shit::Scene::init();  // 别忘了调父类
-        // 自己的初始化逻辑
+        Shit::Scene::init();  // 别忘了先调父类，否则没有系统跑
+        // 加载地图、生成敌人、播放 BGM……
     }
 };
 ```
 
 ## 场景栈
 
-SceneManager 用栈的形式管理场景。任何时候只有**栈顶**的场景处于活跃状态：
+SceneManager 用栈管场景。任何时候**只有栈顶的场景在活跃**——想象一盘叠叠乐：
 
 ```cpp
-// 压入场景（压入后自动设为当前场景）
-Shit::SceneManager::PushScene(std::move(scene1));
-Shit::SceneManager::PushScene(std::move(scene2));  // scene2 为当前
+// 压入主菜单
+Shit::SceneManager::PushScene(std::move(menuScene));
+// ↕ 现在是菜单
 
-// 弹出当前场景，返回上一场景
+// 玩家点击"开始游戏"：直接替换
+Shit::SceneManager::ReplaceScene(std::move(gameScene));
+// ↕ 现在是游戏
+
+// 按暂停：压入暂停菜单
+Shit::SceneManager::PushScene(std::move(pauseScene));
+// ↕ 暂停菜单
+// ↩ 游戏在下面等着
+
+// 恢复：弹走暂停菜单
 Shit::SceneManager::PopScene();
+// ↕ 游戏回来了
 
-// 替换所有场景
-Shit::SceneManager::ReplaceScene(std::move(newScene));
-
-// 清空场景栈
+// 清空所有
 Shit::SceneManager::ClearScene();
 ```
 
-### 实际应用
+### 实际场景
 
-**主菜单 → 游戏场景**：
+**主菜单 → 游戏中**：
 
 ```cpp
 auto menu = std::make_unique<MenuScene>("menu");
-// 创建 UI 等...
+// 画 UI，等点击……
 Shit::SceneManager::PushScene(std::move(menu));
 Shit::Game::Run();
 
-// 玩家点击开始游戏后：
+// 玩家点了"开始"：
 Shit::SceneManager::ReplaceScene(std::make_unique<GameScene>("game"));
 ```
 
-**暂停时叠加 UI 场景**：
+**暂停时叠一层 UI**：
 
 ```cpp
-// 游戏场景上压入暂停菜单
+// 游戏中按 ESC：
 Shit::SceneManager::PushScene(std::make_unique<PauseScene>("pause"));
 
-// 恢复时弹走
+// 恢复：
 Shit::SceneManager::PopScene();
 ```
 
+这套机制让你轻松实现"主菜单→游戏→暂停"等流程，切换时下面被压住的场景不会销毁，回来时状态全在。
+
 ## 系统（System）
 
-系统负责更新同类组件。每个场景有自己的系统列表，用优先级控制执行顺序：
+系统按优先级每帧统一更新。数字越小越先跑：
 
 ```cpp
-scene->registerSystem<BehaviorSystem>();   // 默认已注册
-scene->registerSystem<RenderSystem>();      // 默认已注册
-scene->registerSystem<MyCustomSystem>(50);  // 优先级 50
+scene->registerSystem<BehaviorSystem>();   // 默认已注册，优先级 0
+scene->registerSystem<RenderSystem>();      // 默认已注册，优先级 100
+scene->registerSystem<MyCustomSystem>(50);  // 插在中间
 ```
 
-优先级越小越先执行。`BehaviorSystem` 默认优先级 0，`RenderSystem` 默认优先级 100，所以行为逻辑在渲染之前执行。
+顺序是：BehaviorSystem（0）→ 你的系统（50）→ RenderSystem（100）。逻辑先跑、渲染在后，天经地义。
 
-### 自定义系统
+### 写一个自己的系统
 
-继承 `System` 重写 `update` 和 `destroy`：
+继承 `System`，重写 `update` 和 `destroy`：
 
 ```cpp
 class PhysicsSystem : public Shit::System {
     using Shit::System::System;
 
     void update() override {
-        // 每帧调用
-        auto& objects = getScene()->getGameObjects();
-        for (auto& obj : objects) {
+        // 每帧遍历场景对象，更新物理
+        for (auto& obj : getScene()->getGameObjects()) {
             auto* physics = obj->getComponent<PhysicsComponent>();
             if (physics) physics->tick();
         }
     }
 
     void destroy() override {
-        // 场景销毁时调用
+        // 清理资源
     }
 };
 ```
 
 ## 延迟操作
 
-场景和场景管理器的操作会在帧末统一处理，避免在迭代过程中修改容器导致崩溃：
+不要在迭代过程中增删对象——会崩。ShitEngine 把操作推迟到帧末统一处理：
 
 ```cpp
-// 这些操作是安全的，不会立即生效
-scene->addGameObject(std::move(obj));   // 排入待添加队列
-scene->removeGameObject(objPtr);        // 标记为待销毁
-scene->unregisterSystem<RenderSystem>(); // 排入待移除队列
+scene->addGameObject(std::move(obj));    // 排入待添加队列
+scene->removeGameObject(objPtr);         // 标记为待销毁
+scene->unregisterSystem<RenderSystem>();  // 排入待移除队列
 ```
 
-所有操作在 `Scene::update()` 结尾统一处理，对调用者透明。
+这些操作不会立即生效，但在 `Scene::update()` 结尾会被统一处理。对你透明，对迭代器安全。

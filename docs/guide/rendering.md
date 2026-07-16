@@ -5,134 +5,142 @@ lang: zh_CN
 
 # 渲染与相机
 
-ShitEngine 的渲染管线围绕三个核心概念：**精灵（Sprite）**、**相机（Camera）** 和 **渲染器（Renderer）**。
+> 你能看到游戏世界，全靠这哥俩。
 
 ## 逻辑分辨率
 
-引擎默认使用 1280×720 的逻辑分辨率。你的所有坐标都基于这个空间，渲染器会自动缩放适配实际窗口，黑边填充多余区域。
+ShitEngine 默认用 **1280×720** 作为逻辑坐标空间。你写代码时永远在这个"理想屏幕"上思考，渲染器会自动适配到真实窗口，多出的部分用黑边填满（Letterbox）。
 
 ```cpp
-// Renderer::init() 中自动设置
-
+// Renderer::init() 帮你设好了
+// 你设坐标 {640, 360} 永远是屏幕正中央
+// 不管窗口是 1024×768 还是 1980×1080
 ```
 
-这意味着无论窗口是 1024×768 还是 1920×1080，你写的 `setPosition({640, 360})` 始终指向屏幕正中央。
+这意味着你可以忘了"自适应分辨率"这件事。
 
 ## 精灵渲染
 
-### SpriteRenderer
+### SpriteRenderer — 最简单的画图方式
 
-最常用的渲染组件。挂到 GameObject 上，设置纹理即可显示：
+把 `SpriteRenderer` 挂到 GameObject 上，告诉它纹理路径，它帮你画出来：
 
 ```cpp
 auto* sprite = go->addComponent<Shit::SpriteRenderer>();
 sprite->setTexturePath("textures/player.png");
 ```
 
-纹理由 `ResourceManager` 自动缓存，同一纹理多次加载不会重复分配资源。
+纹理由 `ResourceManager` 自动缓存。同一个 png 加载一百次也只占一份内存。
 
-### Sprite 数据
+### 源矩形裁剪
 
-`Sprite` 是一个数据类，描述"画什么"。它包含纹理路径、裁剪区域和翻转标志：
+精灵图集（sprite-sheet）的用法——不画整张图，只画其中一小块：
 
 ```cpp
-Shit::Sprite sprite("player.png", {0, 0, 32, 32});  // 裁剪第 32×32 区域
-sprite.setFlipped(true);  // 水平翻转
+// 只裁剪纹理中 (0, 0, 32, 32) 的区域
+sprite->setSourceRect({0.0f, 0.0f, 32.0f, 32.0f});
+
+// 清空恢复整图
+sprite->setSourceRect(std::nullopt);
+```
+
+这个接口是 `AnimationComponent` 在背后调用的——你不需要手动管理它。
+
+### Sprite 数据类
+
+`Sprite` 是一个纯数据容器，描述"画什么"：
+
+```cpp
+Shit::Sprite sprite("player.png", {0, 0, 32, 32});
+sprite.setFlipped(true);
 ```
 
 ## 相机
 
-相机决定你从哪个角度观察世界。
+相机决定你能看到什么。没有相机等于闭着眼睛玩游戏。
 
 ### 基本用法
 
 ```cpp
-auto camera = std::make_unique<Shit::GameObject>("camera");
+auto* camera = scene->createGameObject("camera");
 camera->addComponent<Shit::TransformComponent>();
 camera->addComponent<Shit::CameraComponent>();
 ```
 
-相机的**位置**由 TransformComponent 决定，**看到的范围**由 CameraComponent 的 `worldSize` 控制：
+相机的**位置**由 TransformComponent 决定，**视口尺寸**由 CameraComponent 控制：
 
 ```cpp
 auto* cam = camera->getComponent<Shit::CameraComponent>();
-cam->setSize({ 320, 180 });  // 看到的世界大小（逻辑分辨率单位）
-cam->setZoom(1.0f);
+cam->setZoom(5.0f);          // 放大，像素风游戏必备
+cam->setSize({ 320, 180 });  // 世界大小（逻辑分辨率单位）
 ```
-
-相机默认以 1280×720 的世界范围展示在屏幕上。
 
 ### 坐标转换
 
-相机提供了两个坐标转换方法：
-
 ```cpp
-// 世界坐标 → 屏幕坐标（像素）
-Vector2 screenPos = camera->worldToScreen(worldPosition);
+// 世界坐标 → 屏幕像素
+Vector2 screenPos = camera->worldToScreen(worldPos);
 
-// 屏幕坐标 → 世界坐标
-Vector2 worldPos = camera->screenToWorld(screenPosition);
+// 屏幕像素 → 世界坐标
+Vector2 worldPos = camera->screenToWorld(screenPos);
 ```
 
-这些方法在实现点击拾取、拖拽等交互时非常有用。
+做点击检测、拖拽交互的时候特别好用。
 
 ### 多相机分屏
 
-这是 ShitEngine 的特色功能。多个相机可以共享同一个场景，各自渲染不同的部分：
+这是 ShitEngine 的特色。多个相机可以共享同一个场景，各画各的：
 
 ```cpp
-// 玩家 1 视口（左半屏）
+// 玩家 1 视口：左半边
 auto* p1cam = p1->getComponent<Shit::CameraComponent>();
-p1cam->setViewportRatio({0.0f, 0.0f, 0.5f, 1.0f});  // {x, y, w, h} ∈ [0, 1]
-p1cam->setSize({200, 200});
+p1cam->setViewportRatio({0.0f, 0.0f, 0.5f, 1.0f});
 
-// 玩家 2 视口（右半屏）
+// 玩家 2 视口：右半边
 auto* p2cam = p2->getComponent<Shit::CameraComponent>();
 p2cam->setViewportRatio({0.5f, 0.0f, 0.5f, 1.0f});
-p2cam->setSize({200, 200});
 ```
 
-`setViewportRatio` 的参数是 0~1 的比例值，相对于逻辑分辨率。四个分量分别对应：视口左上角 X、视口左上角 Y、视口宽度、视口高度。
+**真实用途**：
 
-**应用场景**：
-
-| 场景 | 实现 |
+| 要干嘛 | 怎么搞 |
 |---|---|
-| 分屏合作 | 两台相机各占一半屏幕 |
-| 小地图 | 右下角开一个小视口 |
-| 画中画 | 相机嵌套相机 |
-| 镜像/反射 | 翻转相机内容 |
+| 分屏合作 | 两台相机各占一半 |
+| 小地图 | 右下角一个小视口 |
+| 画中画 | 两相机嵌套 |
+| 子弹镜 | 相机跟子弹走 |
 
-### 相机的优先级
+### 优先级
 
-多个相机渲染时，优先级低的先渲染。通过 `setPriority` 控制：
+多个相机渲染时，优先级低的先画（在底层）。
 
 ```cpp
-cam->setPriority(0);   // 先渲染（底层）
-cam->setPriority(10);  // 后渲染（盖在上面，适合 UI 相机）
+cam->setPriority(0);   // 背景层
+cam->setPriority(10);  // UI 层，盖在上面
 ```
 
 ### 裁剪
 
-超出相机视野范围的精灵不会被渲染，这叫**视锥体裁剪**。引擎自动处理，不需要你操心。精灵的世界坐标包围盒超出相机可见区域就会被跳过。
+超出相机视野范围的精灵不会被渲染——这是视锥体裁剪，引擎自动做，你不需要写一行代码。
 
-## 系统执行顺序
+## 渲染流程
 
-每帧的渲染流程：
+每帧的铁打流程：
 
 ```
-1. Renderer::ClearScreen()          — 清屏
-2. 按优先级排序相机
-3. 按 Z-Index 排序 SpriteRenderer
+1. ClearScreen()         — 清屏
+2. 排序相机（按优先级）
+3. 排序精灵（按 Z-Index）
 4. 对每个相机：
    a. 设置视口
-   b. 计算裁剪区域（Letterbox 纯画面区域）
-   c. 对每个可见精灵调用 onRender()
-5. Renderer::Present()              — 显示结果
+   b. 计算裁剪区域
+   c. 逐个渲染可见精灵
+5. Present()             — 显示结果
 ```
 
-Z-Index 控制精灵的遮挡关系，值越小越靠下（越先绘制）：
+Z-Index 控制谁盖在谁上面：
 
 ```cpp
-sprite->getComponent<Shit::SpriteRenderer>()->setZIndex(10);
+sprite->setZIndex(10);  // 值越大越靠上
 ```
+

@@ -13,19 +13,28 @@ export default defineConfig({
 
     nav: [
       { text: '主页', link: '/' },
-      { text: '教程', link: '/guide/introduction' }
+      { text: '入门', link: '/guide/introduction' },
+      { text: '手册', link: '/guide/scene' }
     ],
 
     sidebar: [
       {
-        text: '教程',
+        text: '入门',
         items: [
-          { text: '了解更多', link: '/guide/introduction' },
+          { text: '引擎概览', link: '/guide/introduction' },
           { text: '快速开始', link: '/guide/quick_start' },
-          { text: '场景管理', link: '/guide/scene' },
+          { text: '教程：第一个游戏', link: '/guide/tutorial' }
+        ]
+      },
+      {
+        text: '手册',
+        items: [
+          { text: '游戏对象与组件', link: '/guide/game-objects' },
+          { text: '场景与系统', link: '/guide/scene' },
           { text: '渲染与相机', link: '/guide/rendering' },
-          { text: '事件系统', link: '/guide/events' },
-          { text: '音频系统', link: '/guide/audio' }
+          { text: '逐帧动画', link: '/guide/animation' },
+          { text: '音频系统', link: '/guide/audio' },
+          { text: '事件系统', link: '/guide/events' }
         ]
       }
     ],
