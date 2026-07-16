@@ -1,16 +1,14 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "ShitEngine",
-  description: "一个 C++ 2D游戏引擎",
+  description: "基于 C++20 和 SDL3 的轻量级 2D 游戏引擎",
 
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
 
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
 
     nav: [
@@ -23,7 +21,11 @@ export default defineConfig({
         text: '教程',
         items: [
           { text: '了解更多', link: '/guide/introduction' },
-          { text: '快速开始', link: '/guide/quick_start' }
+          { text: '快速开始', link: '/guide/quick_start' },
+          { text: '场景管理', link: '/guide/scene' },
+          { text: '渲染与相机', link: '/guide/rendering' },
+          { text: '事件系统', link: '/guide/events' },
+          { text: '音频系统', link: '/guide/audio' }
         ]
       }
     ],
@@ -33,7 +35,11 @@ export default defineConfig({
     ],
 
     footer: {
-      copyright: 'Copyright © 2024-present ShitTeam. All rights reserved.'
+      copyright: `Copyright © 2024-${new Date().getFullYear()} ShitTeam. All rights reserved.`
+    },
+
+    editLink: {
+      pattern: 'https://github.com/ShitTeam/ShitEngine/edit/main/docs/:path'
     }
   }
 })
