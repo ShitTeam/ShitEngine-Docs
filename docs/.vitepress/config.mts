@@ -14,7 +14,8 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: '入门', link: '/guide/introduction' },
-      { text: '手册', link: '/guide/scene' }
+      { text: '手册', link: '/guide/scene' },
+      { text: 'API 参考', link: '/api/api' }
     ],
 
     sidebar: [
@@ -37,6 +38,34 @@ export default defineConfig({
           { text: '音频系统', link: '/guide/audio' },
           { text: '事件系统', link: '/guide/events' },
           { text: '配置系统', link: '/guide/config' }
+        ]
+      },
+      {
+        text: 'API 参考',
+        items: [
+          { text: '概览', link: '/api/api' },
+          { text: 'Game — 引擎入口', link: '/api/Shit-Game' },
+          { text: 'Window — 窗口管理', link: '/api/Shit-Window' },
+          { text: 'Time — 时间与帧率', link: '/api/Shit-Time' },
+          { text: 'Config — 配置系统', link: '/api/Shit-Config' },
+          { text: 'Component — 组件基类', link: '/api/Shit-Component' },
+          { text: 'Behavior — 自定义脚本', link: '/api/Shit-Behavior' },
+          { text: 'TransformComponent — 变换', link: '/api/Shit-TransformComponent' },
+          { text: 'SpriteRenderer — 精灵渲染', link: '/api/Shit-SpriteRenderer' },
+          { text: 'CameraComponent — 相机', link: '/api/Shit-CameraComponent' },
+          { text: 'AnimationComponent — 动画', link: '/api/Shit-AnimationComponent' },
+          { text: 'GameObject — 游戏对象', link: '/api/Shit-GameObject' },
+          { text: 'Prefab — 预制体', link: '/api/Shit-Prefab' },
+          { text: 'Scene — 场景', link: '/api/Shit-Scene' },
+          { text: 'SceneManager — 场景栈', link: '/api/Shit-SceneManager' },
+          { text: 'System — 自定义系统', link: '/api/Shit-System' },
+          { text: 'Renderer — 渲染器', link: '/api/Shit-Renderer' },
+          { text: 'Sprite / SpriteSheet / Animation', link: '/api/Shit-Sprite' },
+          { text: 'AudioPlayer — 音频播放', link: '/api/Shit-AudioPlayer' },
+          { text: 'AudioTrack — 轨道控制', link: '/api/Shit-AudioTrack' },
+          { text: 'EventBus — 事件总线', link: '/api/Shit-EventBus' },
+          { text: 'Input — 输入系统', link: '/api/Shit-Input' },
+          { text: 'ResourceManager — 资源缓存', link: '/api/Shit-ResourceManager' }
         ]
       }
     ],
