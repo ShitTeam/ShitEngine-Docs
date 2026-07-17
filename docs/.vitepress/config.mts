@@ -15,7 +15,7 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '入门', link: '/guide/introduction' },
       { text: '手册', link: '/guide/scene' },
-      { text: 'API 参考', link: '/api-docs/index.html' }
+      { text: 'API 参考', link: '/api-docs/' }
     ],
 
     sidebar: [
@@ -43,7 +43,7 @@ export default defineConfig({
       {
         text: 'API 参考',
         items: [
-          { text: 'Doxygen 文档', link: '/api-docs/index.html' }
+          { text: 'Doxygen 文档', link: '/api-docs/' }
         ]
       }
     ],
