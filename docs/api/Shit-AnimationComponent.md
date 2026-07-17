@@ -25,7 +25,7 @@ Defined in ShitEngine/Component/AnimationComponent.h:31
 
 继承 Behavior，由 [BehaviorSystem](Shit-BehaviorSystem.md#behaviorsystem) 每帧调用 onUpdate 推进当前动画时间， 并把当前帧的源矩形 (SDL_FRect) 回写到同 [GameObject](Shit-GameObject.md#gameobject-2) 上的 SpriteRenderer。
 
-典型用法（三点式 sprite-sheet）： [Shit::SpriteSheet](Shit-SpriteSheet.md#spritesheet) sheet(4, 8, 32, 32); // 4行8列，每帧32×32 auto* anim = go->addComponent<AnimationComponent>(); anim->play("walk", sheet, {0,1,2,3,4,5}, 0.1f, true); // 全局帧索引数组
+典型用法（三点式 sprite-sheet）： [Shit::SpriteSheet](Shit-SpriteSheet.md#spritesheet) sheet(4, 8, 32, 32); // 4行8列，每帧32×32 auto* anim = go->addComponent`<AnimationComponent>`(); anim->play("walk", sheet, {0,1,2,3,4,5}, 0.1f, true); // 全局帧索引数组
 
 或手工添加已构造好的 Animation： anim->addAnimation("walk", std::move(walkAnim)); anim->play("walk");
 

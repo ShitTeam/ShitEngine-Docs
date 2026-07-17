@@ -23,7 +23,7 @@ Defined in ShitEngine/Scene/Scene.h:34
 
 场景是游戏世界的容器，管理所有 GameObject、System 的生命周期。 通过 [SceneManager](Shit-SceneManager.md#scenemanager) 的栈机制实现场景切换（主菜单→游戏→暂停）。
 
-使用方式： auto scene = std::make_unique<Scene>("level1"); scene->[init()](#init-11); // 注册默认 [BehaviorSystem](Shit-BehaviorSystem.md#behaviorsystem) + [RenderSystem](Shit-RenderSystem.md#rendersystem) auto* player = scene->createGameObject("player"); SceneManager::PushScene(std::move(scene));
+使用方式： auto scene = std::make_unique`<Scene>`("level1"); scene->[init()](#init-11); // 注册默认 [BehaviorSystem](Shit-BehaviorSystem.md#behaviorsystem) + [RenderSystem](Shit-RenderSystem.md#rendersystem) auto* player = scene->createGameObject("player"); SceneManager::PushScene(std::move(scene));
 
 ## List of all members
 

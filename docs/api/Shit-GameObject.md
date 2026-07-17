@@ -266,11 +266,11 @@ Defined in ShitEngine/GameObject/GameObject.h:89
         }
 ```
 
-创建组件 auto new_component = std::make_unique<T>(std::forward<Args>(args)...); T* new_component_ptr = new_component.get(); new_component->setOwner(this); new_component->onCreate(); // onCreate：轻量初始化
+创建组件 auto new_component = std::make_unique<T>(std::forward`<Args>`(args)...); T* new_component_ptr = new_component.get(); new_component->setOwner(this); new_component->onCreate(); // onCreate：轻量初始化
 
 若已挂载场景则立即执行 onAttach（注册到 System） if (m_scene) { new_component->onAttach(); }
 
-m_components[type_index] = std::unique_ptr<Component>(new_component.release()); ST_CORE_TRACE("GameObject : {} 已添加 组件 {}", m_name, typeid(T).name());
+m_components[type_index] = std::unique_ptr`<Component>`(new_component.release()); ST_CORE_TRACE("GameObject : {} 已添加 组件 {}", m_name, typeid(T).name());
 
 return new_component_ptr; }
 

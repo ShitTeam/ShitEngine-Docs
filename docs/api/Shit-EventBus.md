@@ -25,9 +25,9 @@ Defined in ShitEngine/Event/EventBus.h:30
 
 使用示例： struct CollisionEvent : public [Shit::Event](Shit-Event.md#event) { class GameObject* a; class GameObject* b; };
 
-uint64_t id = [Shit::EventBus::Subscribe<CollisionEvent>](#subscribe)( [](const CollisionEvent& e) { /* handle *\/ });
+uint64_t id = [Shit::EventBus::Subscribe`<CollisionEvent>`](#subscribe)( [](const CollisionEvent& e) { /* handle *\/ });
 
-[Shit::EventBus::Emit](#emit)(CollisionEvent{nullptr, nullptr}); // 游戏循环结束时： [Shit::EventBus::ProcessEvents()](#processevents); Shit::EventBus::Unsubscribe<CollisionEvent>(id);
+[Shit::EventBus::Emit](#emit)(CollisionEvent{nullptr, nullptr}); // 游戏循环结束时： [Shit::EventBus::ProcessEvents()](#processevents); Shit::EventBus::Unsubscribe`<CollisionEvent>`(id);
 
 ## List of all members
 
