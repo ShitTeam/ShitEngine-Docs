@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_log_8h" kind="file" language="C++">
+    <compoundname>Log.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">spdlog/spdlog.h</includes>
+    <includes local="no">spdlog/sinks/stdout_color_sinks.h</includes>
+    <includes local="no">spdlog/fmt/ostr.h</includes>
+    <includes refid="_core_8h" local="yes">Core.h</includes>
+    <includedby refid="_config_8h" local="yes">ShitEngine/Core/Config.h</includedby>
+    <includedby refid="_scene_8h" local="yes">ShitEngine/Scene/Scene.h</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Core/Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="5">
+        <label>spdlog/sinks/stdout_color_sinks.h</label>
+      </node>
+      <node id="4">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="3">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>ShitEngine/Component/AnimationComponent.h</label>
+        <link refid="_animation_component_8h_source"/>
+      </node>
+      <node id="4">
+        <label>ShitEngine/Component/Behavior.h</label>
+        <link refid="_behavior_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ShitEngine/Component/CameraComponent.h</label>
+        <link refid="_camera_component_8h_source"/>
+      </node>
+      <node id="3">
+        <label>ShitEngine/Component/Component.h</label>
+        <link refid="_component_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ShitEngine/Component/RendererComponent.h</label>
+        <link refid="_renderer_component_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ShitEngine/Component/SpriteRenderer.h</label>
+        <link refid="_sprite_renderer_8h_source"/>
+      </node>
+      <node id="11">
+        <label>ShitEngine/Component/TransformComponent.h</label>
+        <link refid="_transform_component_8h_source"/>
+      </node>
+      <node id="2">
+        <label>ShitEngine/Core/Config.h</label>
+        <link refid="_config_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Core/Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ShitEngine/GameObject/GameObject.h</label>
+        <link refid="_game_object_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ShitEngine/GameObject/Prefab.h</label>
+        <link refid="_prefab_8h_source"/>
+      </node>
+      <node id="12">
+        <label>ShitEngine/Scene/Scene.h</label>
+        <link refid="_scene_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_shit_1_1_log" prot="public">Shit::Log</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_log_8h_1ac379c2e7c01d6e578fa1dff97428de87" prot="public" static="no">
+        <name>ST_CORE_TRACE</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a0ebea9df52ba5c8e0d2b43e0c445a7fb" kindref="member">::Shit::Log::GetCoreLogger</ref>()-&gt;trace(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="48" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1afe6cc112769b2b8ca030f3a2d26f6452" prot="public" static="no">
+        <name>ST_CORE_DEBUG</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a0ebea9df52ba5c8e0d2b43e0c445a7fb" kindref="member">::Shit::Log::GetCoreLogger</ref>()-&gt;debug(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="49" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1a96339747663a68b687d0662cf327e668" prot="public" static="no">
+        <name>ST_CORE_INFO</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a0ebea9df52ba5c8e0d2b43e0c445a7fb" kindref="member">::Shit::Log::GetCoreLogger</ref>()-&gt;info(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="50" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1a1e6b79023cc055b13e1a06e6e005cd70" prot="public" static="no">
+        <name>ST_CORE_WARN</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a0ebea9df52ba5c8e0d2b43e0c445a7fb" kindref="member">::Shit::Log::GetCoreLogger</ref>()-&gt;warn(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="51" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1abf3849fe584d46510e5470f930e2eda0" prot="public" static="no">
+        <name>ST_CORE_ERROR</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a0ebea9df52ba5c8e0d2b43e0c445a7fb" kindref="member">::Shit::Log::GetCoreLogger</ref>()-&gt;error(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="52" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1a304ac95c5017efaabaca729e1dadcb5f" prot="public" static="no">
+        <name>ST_CORE_CRITICAL</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a0ebea9df52ba5c8e0d2b43e0c445a7fb" kindref="member">::Shit::Log::GetCoreLogger</ref>()-&gt;critical(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="53" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1aff815259ef2e2e22ca8d0c723bd9b180" prot="public" static="no">
+        <name>ST_TRACE</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a605bee20f22c9abb0f919d9f6e696a79" kindref="member">::Shit::Log::GetClientLogger</ref>()-&gt;trace(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="56" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1a2f37c549a03eedd6ae4b72dd74b9fdaf" prot="public" static="no">
+        <name>ST_DEBUG</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a605bee20f22c9abb0f919d9f6e696a79" kindref="member">::Shit::Log::GetClientLogger</ref>()-&gt;debug(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="57" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1a7a4d584307a18bc66e8dad1f9ad8625b" prot="public" static="no">
+        <name>ST_INFO</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a605bee20f22c9abb0f919d9f6e696a79" kindref="member">::Shit::Log::GetClientLogger</ref>()-&gt;info(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="58" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1a7f435c61107a128a0edc0a952a94c619" prot="public" static="no">
+        <name>ST_WARN</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a605bee20f22c9abb0f919d9f6e696a79" kindref="member">::Shit::Log::GetClientLogger</ref>()-&gt;warn(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="59" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1a654de4379e17adb39550e7ee2e0e29f9" prot="public" static="no">
+        <name>ST_ERROR</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a605bee20f22c9abb0f919d9f6e696a79" kindref="member">::Shit::Log::GetClientLogger</ref>()-&gt;error(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="60" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_log_8h_1a43f1d9c5642d86a618a90d58351084ed" prot="public" static="no">
+        <name>ST_CRITICAL</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="class_shit_1_1_log_1a605bee20f22c9abb0f919d9f6e696a79" kindref="member">::Shit::Log::GetClientLogger</ref>()-&gt;critical(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Log.h" line="61" column="9" bodyfile="ShitEngine/Core/Log.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Core/Log.h"/>
+  </compounddef>
+</doxygen>

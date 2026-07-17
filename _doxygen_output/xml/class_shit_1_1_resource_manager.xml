@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_resource_manager" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Shit::ResourceManager</compoundname>
+    <includes refid="_resource_manager_8h" local="no">ResourceManager.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_resource_manager_1a6623d452c9fbbebe482007d03b3d9661" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_shit_1_1_texture_manager" kindref="compound">TextureManager</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;TextureManager&gt; m_textureManager</definition>
+        <argsstring></argsstring>
+        <name>m_textureManager</name>
+        <qualifiedname>Shit::ResourceManager::m_textureManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="62" column="17" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_resource_manager_1a2856b9b97431aa84e8b46f3bb9686de8" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_shit_1_1_audio_manager" kindref="compound">AudioManager</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;AudioManager&gt; m_audioManager</definition>
+        <argsstring></argsstring>
+        <name>m_audioManager</name>
+        <qualifiedname>Shit::ResourceManager::m_audioManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="63" column="17" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_resource_manager_1a8d77bbc11f604b7776d8def64973526f" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_shit_1_1_font_manager" kindref="compound">FontManager</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;FontManager&gt; m_fontManager</definition>
+        <argsstring></argsstring>
+        <name>m_fontManager</name>
+        <qualifiedname>Shit::ResourceManager::m_fontManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="64" column="17" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a6a2f2dfe18eed126c72be99972c02236" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ResourceManager</definition>
+        <argsstring>()</argsstring>
+        <name>ResourceManager</name>
+        <qualifiedname>Shit::ResourceManager::ResourceManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1adcd84dbcdcbee123679a41a770054d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~ResourceManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ResourceManager</name>
+        <qualifiedname>Shit::ResourceManager::~ResourceManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1abe96be7a072e74363ab934ff351b7994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ResourceManager</definition>
+        <argsstring>(const ResourceManager &amp;)=delete</argsstring>
+        <name>ResourceManager</name>
+        <qualifiedname>Shit::ResourceManager::ResourceManager</qualifiedname>
+        <param>
+          <type>const ResourceManager &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1af7972552de0d4966c6f94862e8f0298c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_resource_manager_1a6a2f2dfe18eed126c72be99972c02236" kindref="member">ResourceManager</ref> &amp;</type>
+        <definition>ResourceManager &amp; operator=</definition>
+        <argsstring>(const ResourceManager &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::ResourceManager::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_shit_1_1_resource_manager_1a6a2f2dfe18eed126c72be99972c02236" kindref="member">ResourceManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="29" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a1ed8a99a4569c0bdaa9059fb6b6f9567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ResourceManager</definition>
+        <argsstring>(ResourceManager &amp;&amp;)=delete</argsstring>
+        <name>ResourceManager</name>
+        <qualifiedname>Shit::ResourceManager::ResourceManager</qualifiedname>
+        <param>
+          <type>ResourceManager &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1ac02ce63ddf69acb94236d9802c17bd98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_resource_manager_1a6a2f2dfe18eed126c72be99972c02236" kindref="member">ResourceManager</ref> &amp;</type>
+        <definition>ResourceManager &amp; operator=</definition>
+        <argsstring>(ResourceManager &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::ResourceManager::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_shit_1_1_resource_manager_1a6a2f2dfe18eed126c72be99972c02236" kindref="member">ResourceManager</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="31" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1ab162670d6701eb22f1aaacd30b589e2e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_resource_manager_1a6a2f2dfe18eed126c72be99972c02236" kindref="member">ResourceManager</ref> &amp;</type>
+        <definition>static ResourceManager &amp; GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>Shit::ResourceManager::GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="34" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a1716946dffd7f7f6a9c8f46406ab0732" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>Shit::ResourceManager::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="35" column="20" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1ad725872fe5683084c429452249fc1e7e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SDL_Texture *</type>
+        <definition>static SDL_Texture * LoadTexture</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>LoadTexture</name>
+        <qualifiedname>Shit::ResourceManager::LoadTexture</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="38" column="20" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1aafc43012f24df717203acec29d7dd8c6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SDL_Texture *</type>
+        <definition>static SDL_Texture * GetTexture</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>GetTexture</name>
+        <qualifiedname>Shit::ResourceManager::GetTexture</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="39" column="20" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a0a6525d07e3b6d71c53350c43e31eb59" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void UnloadTexture</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>UnloadTexture</name>
+        <qualifiedname>Shit::ResourceManager::UnloadTexture</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="40" column="13" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a51a1a1592ed7b9526cc062cd2425cd95" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ClearTexture</definition>
+        <argsstring>()</argsstring>
+        <name>ClearTexture</name>
+        <qualifiedname>Shit::ResourceManager::ClearTexture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="41" column="13" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a029bd523f3b16c95c42c64fb90a609c1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MIX_Audio *</type>
+        <definition>static MIX_Audio * LoadAudio</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>LoadAudio</name>
+        <qualifiedname>Shit::ResourceManager::LoadAudio</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="44" column="18" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a95a2051da3dd8154854122a27c9714f7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MIX_Audio *</type>
+        <definition>static MIX_Audio * GetAudio</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>GetAudio</name>
+        <qualifiedname>Shit::ResourceManager::GetAudio</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="45" column="18" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a293d58b1556dce47af8451475db7e5db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void UnloadAudio</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>UnloadAudio</name>
+        <qualifiedname>Shit::ResourceManager::UnloadAudio</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="46" column="13" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a132d07a4ffd0097f21c351066eecf3fb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ClearAudio</definition>
+        <argsstring>()</argsstring>
+        <name>ClearAudio</name>
+        <qualifiedname>Shit::ResourceManager::ClearAudio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="47" column="13" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a2538639fb4799d3000d4a2efbdd81b4d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TTF_Font *</type>
+        <definition>static TTF_Font * LoadFont</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>LoadFont</name>
+        <qualifiedname>Shit::ResourceManager::LoadFont</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="50" column="17" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a0a59c0a4ebedc8850b3cee678884e671" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TTF_Font *</type>
+        <definition>static TTF_Font * GetFont</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>GetFont</name>
+        <qualifiedname>Shit::ResourceManager::GetFont</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="51" column="17" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a4cc4dfed4b04252861f2afd6edca979e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void UnloadFont</definition>
+        <argsstring>(const std::string &amp;filePath)</argsstring>
+        <name>UnloadFont</name>
+        <qualifiedname>Shit::ResourceManager::UnloadFont</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="52" column="13" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a48cba22a6a68c7adc5ae8672eab58250" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ClearFont</definition>
+        <argsstring>()</argsstring>
+        <name>ClearFont</name>
+        <qualifiedname>Shit::ResourceManager::ClearFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="53" column="13" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a8394950c01f3467de9329b92ec611f07" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SetAudioMixer</definition>
+        <argsstring>(struct MIX_Mixer *mixer)</argsstring>
+        <name>SetAudioMixer</name>
+        <qualifiedname>Shit::ResourceManager::SetAudioMixer</qualifiedname>
+        <param>
+          <type>struct MIX_Mixer *</type>
+          <declname>mixer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="56" column="13" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1ac8bb3912a3ce86b15842e79d0b421204" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>Shit::ResourceManager::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="59" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_resource_manager_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Shit::ResourceManager::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/ResourceManager.h" line="60" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>资源管理器（单例） </para>
+    </briefdescription>
+    <detaileddescription>
+<para>统一门面类，封装纹理、音频、字体的加载与缓存。 同路径资源只加载一次，后续请求从缓存返回。 在 <ref refid="class_shit_1_1_game_1ae596c367662c7f3b19b6626b89ffc08b" kindref="member">Game::Init()</ref> 中自动初始化。 </para>
+    </detaileddescription>
+    <location file="ShitEngine/Resource/ResourceManager.h" line="23" column="1" bodyfile="ShitEngine/Resource/ResourceManager.h" bodystart="23" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_resource_manager_1ac8bb3912a3ce86b15842e79d0b421204" prot="private" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>clear</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a132d07a4ffd0097f21c351066eecf3fb" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>ClearAudio</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a48cba22a6a68c7adc5ae8672eab58250" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>ClearFont</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a51a1a1592ed7b9526cc062cd2425cd95" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>ClearTexture</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a95a2051da3dd8154854122a27c9714f7" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>GetAudio</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a0a59c0a4ebedc8850b3cee678884e671" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>GetFont</name></member>
+      <member refid="class_shit_1_1_resource_manager_1ab162670d6701eb22f1aaacd30b589e2e" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>GetInstance</name></member>
+      <member refid="class_shit_1_1_resource_manager_1aafc43012f24df717203acec29d7dd8c6" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>GetTexture</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a1716946dffd7f7f6a9c8f46406ab0732" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>Init</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="private" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>init</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a029bd523f3b16c95c42c64fb90a609c1" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>LoadAudio</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a2538639fb4799d3000d4a2efbdd81b4d" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>LoadFont</name></member>
+      <member refid="class_shit_1_1_resource_manager_1ad725872fe5683084c429452249fc1e7e" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>LoadTexture</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a2856b9b97431aa84e8b46f3bb9686de8" prot="private" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>m_audioManager</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a8d77bbc11f604b7776d8def64973526f" prot="private" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>m_fontManager</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a6623d452c9fbbebe482007d03b3d9661" prot="private" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>m_textureManager</name></member>
+      <member refid="class_shit_1_1_resource_manager_1af7972552de0d4966c6f94862e8f0298c" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_resource_manager_1ac02ce63ddf69acb94236d9802c17bd98" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a6a2f2dfe18eed126c72be99972c02236" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>ResourceManager</name></member>
+      <member refid="class_shit_1_1_resource_manager_1abe96be7a072e74363ab934ff351b7994" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>ResourceManager</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a1ed8a99a4569c0bdaa9059fb6b6f9567" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>ResourceManager</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a8394950c01f3467de9329b92ec611f07" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>SetAudioMixer</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a293d58b1556dce47af8451475db7e5db" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>UnloadAudio</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a4cc4dfed4b04252861f2afd6edca979e" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>UnloadFont</name></member>
+      <member refid="class_shit_1_1_resource_manager_1a0a6525d07e3b6d71c53350c43e31eb59" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>UnloadTexture</name></member>
+      <member refid="class_shit_1_1_resource_manager_1adcd84dbcdcbee123679a41a770054d52" prot="public" virt="non-virtual"><scope>Shit::ResourceManager</scope><name>~ResourceManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

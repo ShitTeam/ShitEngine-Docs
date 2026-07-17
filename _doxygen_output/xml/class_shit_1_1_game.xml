@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_game" kind="class" language="C++" prot="public">
+    <compoundname>Shit::Game</compoundname>
+    <includes refid="_game_8h" local="no">Game.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_game_1aeed46316a0437c8c259cf2e278a230d4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_isRunning</definition>
+        <argsstring></argsstring>
+        <name>m_isRunning</name>
+        <qualifiedname>Shit::Game::m_isRunning</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="37" column="6" bodyfile="ShitEngine/Core/Game.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_game_1aa55e98882d3abac5682a76cee6d43d3d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_isInited</definition>
+        <argsstring></argsstring>
+        <name>m_isInited</name>
+        <qualifiedname>Shit::Game::m_isInited</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="38" column="6" bodyfile="ShitEngine/Core/Game.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_game_1a98d87ba6bde3f389e92664a2ef9bfcb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game</definition>
+        <argsstring>()</argsstring>
+        <name>Game</name>
+        <qualifiedname>Shit::Game::Game</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1ac168f724bc6694d4f9d4c87f8c0189ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Game</definition>
+        <argsstring>()</argsstring>
+        <name>~Game</name>
+        <qualifiedname>Shit::Game::~Game</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1aee8048628ff2b5c026c9e15acdcaacb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Shit::Game::init</qualifiedname>
+        <briefdescription>
+<para>初始化引擎所有子系统 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="21" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1a13a43e6d814de94978c515cb084873b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>Shit::Game::run</qualifiedname>
+        <briefdescription>
+<para>启动主循环（阻塞直至窗口关闭） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="22" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1a23532d6f55d03a64a5bcb462d5a83958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game</definition>
+        <argsstring>(const Game &amp;)=delete</argsstring>
+        <name>Game</name>
+        <qualifiedname>Shit::Game::Game</qualifiedname>
+        <param>
+          <type>const Game &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1a13ce32219b6e08b9446c8df000395d1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_game_1a98d87ba6bde3f389e92664a2ef9bfcb1" kindref="member">Game</ref> &amp;</type>
+        <definition>Game &amp; operator=</definition>
+        <argsstring>(const Game &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::Game::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_shit_1_1_game_1a98d87ba6bde3f389e92664a2ef9bfcb1" kindref="member">Game</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="32" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1aeec9479d38309fa8c258404832402d3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game</definition>
+        <argsstring>(Game &amp;&amp;)=delete</argsstring>
+        <name>Game</name>
+        <qualifiedname>Shit::Game::Game</qualifiedname>
+        <param>
+          <type>Game &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1a0e7f12794b31440192880422d30d2c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_game_1a98d87ba6bde3f389e92664a2ef9bfcb1" kindref="member">Game</ref> &amp;</type>
+        <definition>Game &amp; operator=</definition>
+        <argsstring>(Game &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::Game::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_shit_1_1_game_1a98d87ba6bde3f389e92664a2ef9bfcb1" kindref="member">Game</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="34" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shit_1_1_game_1abd5c78a9612b6bea2c24643c48b4743b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_game_1a98d87ba6bde3f389e92664a2ef9bfcb1" kindref="member">Game</ref> &amp;</type>
+        <definition>static Game &amp; GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>Shit::Game::GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="25" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1ae596c367662c7f3b19b6626b89ffc08b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>Shit::Game::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="26" column="20" bodyfile="ShitEngine/Core/Game.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1abcf24ae9fc270d7a9e1664d94ba02900" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <qualifiedname>Shit::Game::Run</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="27" column="20" bodyfile="ShitEngine/Core/Game.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1a62a73aff7afffe2fba7c2e47e07d9134" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <qualifiedname>Shit::Game::Destroy</qualifiedname>
+        <briefdescription>
+<para>反初始化，按依赖逆序清理子系统 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="28" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_game_1abac80b6e5030ccd8245ed2cd0edaf51f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool IsRunning</definition>
+        <argsstring>()</argsstring>
+        <name>IsRunning</name>
+        <qualifiedname>Shit::Game::IsRunning</qualifiedname>
+        <briefdescription>
+<para>主循环是否仍在运行 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Game.h" line="29" column="13" bodyfile="ShitEngine/Core/Game.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>引擎主控类 </para>
+    </briefdescription>
+    <detaileddescription>
+<para>管理引擎的初始化、主循环与销毁。 所有静态方法内聚为单例调用。</para>
+<para>使用方式： <ref refid="class_shit_1_1_game_1ae596c367662c7f3b19b6626b89ffc08b" kindref="member">Game::Init()</ref>; <ref refid="class_shit_1_1_game_1abcf24ae9fc270d7a9e1664d94ba02900" kindref="member">Game::Run()</ref>; <ref refid="class_shit_1_1_game_1a62a73aff7afffe2fba7c2e47e07d9134" kindref="member">Game::Destroy()</ref>; </para>
+    </detaileddescription>
+    <location file="ShitEngine/Core/Game.h" line="16" column="1" bodyfile="ShitEngine/Core/Game.h" bodystart="16" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_game_1a62a73aff7afffe2fba7c2e47e07d9134" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>Destroy</name></member>
+      <member refid="class_shit_1_1_game_1a98d87ba6bde3f389e92664a2ef9bfcb1" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>Game</name></member>
+      <member refid="class_shit_1_1_game_1a23532d6f55d03a64a5bcb462d5a83958" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>Game</name></member>
+      <member refid="class_shit_1_1_game_1aeec9479d38309fa8c258404832402d3f" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>Game</name></member>
+      <member refid="class_shit_1_1_game_1abd5c78a9612b6bea2c24643c48b4743b" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>GetInstance</name></member>
+      <member refid="class_shit_1_1_game_1ae596c367662c7f3b19b6626b89ffc08b" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>Init</name></member>
+      <member refid="class_shit_1_1_game_1aee8048628ff2b5c026c9e15acdcaacb8" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>init</name></member>
+      <member refid="class_shit_1_1_game_1abac80b6e5030ccd8245ed2cd0edaf51f" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>IsRunning</name></member>
+      <member refid="class_shit_1_1_game_1aa55e98882d3abac5682a76cee6d43d3d" prot="private" virt="non-virtual"><scope>Shit::Game</scope><name>m_isInited</name></member>
+      <member refid="class_shit_1_1_game_1aeed46316a0437c8c259cf2e278a230d4" prot="private" virt="non-virtual"><scope>Shit::Game</scope><name>m_isRunning</name></member>
+      <member refid="class_shit_1_1_game_1a13ce32219b6e08b9446c8df000395d1c" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_game_1a0e7f12794b31440192880422d30d2c44" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_game_1abcf24ae9fc270d7a9e1664d94ba02900" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>Run</name></member>
+      <member refid="class_shit_1_1_game_1a13a43e6d814de94978c515cb084873b1" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>run</name></member>
+      <member refid="class_shit_1_1_game_1ac168f724bc6694d4f9d4c87f8c0189ba" prot="public" virt="non-virtual"><scope>Shit::Game</scope><name>~Game</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

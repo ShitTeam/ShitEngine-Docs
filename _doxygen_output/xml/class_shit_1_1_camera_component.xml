@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_camera_component" kind="class" language="C++" prot="public">
+    <compoundname>Shit::CameraComponent</compoundname>
+    <basecompoundref refid="class_shit_1_1_component" prot="public" virt="non-virtual">Component</basecompoundref>
+    <includes refid="_camera_component_8h" local="no">CameraComponent.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_camera_component_1aa440e2798949935ec1327cdd94129071" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref></type>
+        <definition>Vector2 m_worldSize</definition>
+        <argsstring></argsstring>
+        <name>m_worldSize</name>
+        <qualifiedname>Shit::CameraComponent::m_worldSize</qualifiedname>
+        <initializer>{ 1280.0f, 720.0f }</initializer>
+        <briefdescription>
+<para>看到的世界范围（世界单位） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="40" column="9" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_camera_component_1ab3928ada13476507c935516b92568439" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float m_zoom</definition>
+        <argsstring></argsstring>
+        <name>m_zoom</name>
+        <qualifiedname>Shit::CameraComponent::m_zoom</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="41" column="7" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_camera_component_1aebd544741012b3bab43cfbbc4e9d28f3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_priority</definition>
+        <argsstring></argsstring>
+        <name>m_priority</name>
+        <qualifiedname>Shit::CameraComponent::m_priority</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="42" column="5" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_camera_component_1ab47207eca106f79acd160a0eebcf0f8d" prot="private" static="no" mutable="no">
+        <type>SDL_FRect</type>
+        <definition>SDL_FRect m_viewportRatio</definition>
+        <argsstring></argsstring>
+        <name>m_viewportRatio</name>
+        <qualifiedname>Shit::CameraComponent::m_viewportRatio</qualifiedname>
+        <initializer>{ 0.0f, 0.0f, 1.0f, 1.0f }</initializer>
+        <briefdescription>
+<para>相对于逻辑分辨率的裁剪区域 (0~1) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="43" column="11" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1a0935f7489d0a9fdc768a68e4b585bae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CameraComponent</definition>
+        <argsstring>()</argsstring>
+        <name>CameraComponent</name>
+        <qualifiedname>Shit::CameraComponent::CameraComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1acbef2688cd43fd22241759f89fe12d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void onAttach</definition>
+        <argsstring>() override</argsstring>
+        <name>onAttach</name>
+        <qualifiedname>Shit::CameraComponent::onAttach</qualifiedname>
+        <reimplements refid="class_shit_1_1_component_1a6f4c9e6fe81d4bffc712d4d0ae4d72ff">onAttach</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="19" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1aee7be93617a6078496df31830d454990" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void onDestroy</definition>
+        <argsstring>() override</argsstring>
+        <name>onDestroy</name>
+        <qualifiedname>Shit::CameraComponent::onDestroy</qualifiedname>
+        <reimplements refid="class_shit_1_1_component_1a448d46f0dcad2b19c77f8a2cc880127c">onDestroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="20" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1a4e6ff1718ba5e79b6ffeeb145ebfa12c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref></type>
+        <definition>Vector2 worldToScreen</definition>
+        <argsstring>(const Vector2 &amp;worldPosition) const</argsstring>
+        <name>worldToScreen</name>
+        <qualifiedname>Shit::CameraComponent::worldToScreen</qualifiedname>
+        <param>
+          <type>const <ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref> &amp;</type>
+          <declname>worldPosition</declname>
+        </param>
+        <briefdescription>
+<para>世界坐标 → 屏幕像素坐标 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="23" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1adacc3723e92b1b17f2c0cebd59fb006f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref></type>
+        <definition>Vector2 screenToWorld</definition>
+        <argsstring>(const Vector2 &amp;screenPosition) const</argsstring>
+        <name>screenToWorld</name>
+        <qualifiedname>Shit::CameraComponent::screenToWorld</qualifiedname>
+        <param>
+          <type>const <ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref> &amp;</type>
+          <declname>screenPosition</declname>
+        </param>
+        <briefdescription>
+<para>屏幕像素坐标 → 世界坐标 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="24" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1a4f49ac7d5921e6e3595517ffa6dc5971" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref></type>
+        <definition>Vector2 getPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>getPosition</name>
+        <qualifiedname>Shit::CameraComponent::getPosition</qualifiedname>
+        <briefdescription>
+<para>相机中心位置（从 <ref refid="class_shit_1_1_transform_component" kindref="compound">TransformComponent</ref> 同步读取） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="26" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1a0365ad1e60466b1f48a2ecadc8f16734" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref></type>
+        <definition>Vector2 getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <qualifiedname>Shit::CameraComponent::getSize</qualifiedname>
+        <briefdescription>
+<para>视口世界大小 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="27" column="9" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1a84fd3fa8518393f35603dbd797b64807" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float getZoom</definition>
+        <argsstring>() const</argsstring>
+        <name>getZoom</name>
+        <qualifiedname>Shit::CameraComponent::getZoom</qualifiedname>
+        <briefdescription>
+<para>缩放系数 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="28" column="7" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="28" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1ad65045bcc70661e1e745edbb1da0377b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int getPriority</definition>
+        <argsstring>() const</argsstring>
+        <name>getPriority</name>
+        <qualifiedname>Shit::CameraComponent::getPriority</qualifiedname>
+        <briefdescription>
+<para>渲染优先级（小值先画） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="29" column="5" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="29" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1acf78bf882d3f4bcbecd88e8538c0c66f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float getPixelPerUnit</definition>
+        <argsstring>() const</argsstring>
+        <name>getPixelPerUnit</name>
+        <qualifiedname>Shit::CameraComponent::getPixelPerUnit</qualifiedname>
+        <briefdescription>
+<para>每逻辑单位对应的像素数 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="30" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1ac6fbdf7e9178c78eb3c69f0b041b6abc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setSize</definition>
+        <argsstring>(const Vector2 &amp;worldSize)</argsstring>
+        <name>setSize</name>
+        <qualifiedname>Shit::CameraComponent::setSize</qualifiedname>
+        <param>
+          <type>const <ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref> &amp;</type>
+          <declname>worldSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="32" column="6" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1ae0e04ac9c7535158dd7f0d73d9e8501c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setZoom</definition>
+        <argsstring>(float zoom)</argsstring>
+        <name>setZoom</name>
+        <qualifiedname>Shit::CameraComponent::setZoom</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>zoom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="33" column="6" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1a257fc8f8148265762ab350a6a8563ffc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPriority</definition>
+        <argsstring>(int priority)</argsstring>
+        <name>setPriority</name>
+        <qualifiedname>Shit::CameraComponent::setPriority</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="34" column="6" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1af46f9f1cacade2d0de7f898d8950b9da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const SDL_FRect &amp;</type>
+        <definition>const SDL_FRect &amp; getViewportRatio</definition>
+        <argsstring>() const</argsstring>
+        <name>getViewportRatio</name>
+        <qualifiedname>Shit::CameraComponent::getViewportRatio</qualifiedname>
+        <briefdescription>
+<para>视口比例 (0~1) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="36" column="17" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_camera_component_1a0f25b79a5807f94786a01bb8e28932a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setViewportRatio</definition>
+        <argsstring>(const SDL_FRect &amp;ratio)</argsstring>
+        <name>setViewportRatio</name>
+        <qualifiedname>Shit::CameraComponent::setViewportRatio</qualifiedname>
+        <param>
+          <type>const SDL_FRect &amp;</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+<para>设置视口比例 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/CameraComponent.h" line="37" column="6" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="37" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>相机组件，定义&quot;从哪个角度观察世界&quot; </para>
+    </briefdescription>
+    <detaileddescription>
+<para>相机的位置由同 <ref refid="class_shit_1_1_game_object" kindref="compound">GameObject</ref> 上的 <ref refid="class_shit_1_1_transform_component" kindref="compound">TransformComponent</ref> 决定。 m_worldSize 决定能看到的世界范围，m_viewportRatio 决定渲染到屏幕的哪个区域。 支持多相机分屏渲染（按 priority 排序）。 </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CameraComponent</label>
+        <link refid="class_shit_1_1_camera_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Component</label>
+        <link refid="class_shit_1_1_component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CameraComponent</label>
+        <link refid="class_shit_1_1_camera_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Component</label>
+        <link refid="class_shit_1_1_component"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GameObject</label>
+        <link refid="class_shit_1_1_game_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="ShitEngine/Component/CameraComponent.h" line="15" column="1" bodyfile="ShitEngine/Component/CameraComponent.h" bodystart="15" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_camera_component_1a0935f7489d0a9fdc768a68e4b585bae6" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>CameraComponent</name></member>
+      <member refid="class_shit_1_1_component_1a0171e1571f18dc6a27c8b041de55feec" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>Component</name></member>
+      <member refid="class_shit_1_1_component_1a7a86c1a5c9cb8bc0be998d276c438054" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>Component</name></member>
+      <member refid="class_shit_1_1_component_1aa85c694df3855843a20a64cb0fc17233" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>Component</name></member>
+      <member refid="class_shit_1_1_component_1a9b36b6de005b18dd7c77687d8621774a" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>getOwner</name></member>
+      <member refid="class_shit_1_1_camera_component_1acf78bf882d3f4bcbecd88e8538c0c66f" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>getPixelPerUnit</name></member>
+      <member refid="class_shit_1_1_camera_component_1a4f49ac7d5921e6e3595517ffa6dc5971" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>getPosition</name></member>
+      <member refid="class_shit_1_1_camera_component_1ad65045bcc70661e1e745edbb1da0377b" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>getPriority</name></member>
+      <member refid="class_shit_1_1_camera_component_1a0365ad1e60466b1f48a2ecadc8f16734" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>getSize</name></member>
+      <member refid="class_shit_1_1_camera_component_1af46f9f1cacade2d0de7f898d8950b9da" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>getViewportRatio</name></member>
+      <member refid="class_shit_1_1_camera_component_1a84fd3fa8518393f35603dbd797b64807" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>getZoom</name></member>
+      <member refid="class_shit_1_1_component_1ab3318796ce9f4c658aa5cd5b65719246" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>isRegistered</name></member>
+      <member refid="class_shit_1_1_component_1ae8fd281c96362b5079bc11b6ae10007a" prot="protected" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>m_isRegistered</name></member>
+      <member refid="class_shit_1_1_component_1aa1aee3acda958839f017f93f6ed1bbb3" prot="protected" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>m_owner</name></member>
+      <member refid="class_shit_1_1_camera_component_1aebd544741012b3bab43cfbbc4e9d28f3" prot="private" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>m_priority</name></member>
+      <member refid="class_shit_1_1_camera_component_1ab47207eca106f79acd160a0eebcf0f8d" prot="private" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>m_viewportRatio</name></member>
+      <member refid="class_shit_1_1_camera_component_1aa440e2798949935ec1327cdd94129071" prot="private" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>m_worldSize</name></member>
+      <member refid="class_shit_1_1_camera_component_1ab3928ada13476507c935516b92568439" prot="private" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>m_zoom</name></member>
+      <member refid="class_shit_1_1_camera_component_1acbef2688cd43fd22241759f89fe12d28" prot="public" virt="virtual"><scope>Shit::CameraComponent</scope><name>onAttach</name></member>
+      <member refid="class_shit_1_1_component_1a58db3b5933199c866796fade5e1ad722" prot="public" virt="virtual"><scope>Shit::CameraComponent</scope><name>onCreate</name></member>
+      <member refid="class_shit_1_1_camera_component_1aee7be93617a6078496df31830d454990" prot="public" virt="virtual"><scope>Shit::CameraComponent</scope><name>onDestroy</name></member>
+      <member refid="class_shit_1_1_component_1aae1f5204fbabb92a0de013b8f0fd6616" prot="public" virt="virtual"><scope>Shit::CameraComponent</scope><name>onDetach</name></member>
+      <member refid="class_shit_1_1_component_1ace504c89f605c2e53f2450021ebca56e" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_component_1a34f2dae077ca6d1b6e3a39201c79c796" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_camera_component_1adacc3723e92b1b17f2c0cebd59fb006f" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>screenToWorld</name></member>
+      <member refid="class_shit_1_1_camera_component_1a257fc8f8148265762ab350a6a8563ffc" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>setPriority</name></member>
+      <member refid="class_shit_1_1_camera_component_1ac6fbdf7e9178c78eb3c69f0b041b6abc" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>setSize</name></member>
+      <member refid="class_shit_1_1_camera_component_1a0f25b79a5807f94786a01bb8e28932a0" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>setViewportRatio</name></member>
+      <member refid="class_shit_1_1_camera_component_1ae0e04ac9c7535158dd7f0d73d9e8501c" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>setZoom</name></member>
+      <member refid="class_shit_1_1_camera_component_1a4e6ff1718ba5e79b6ffeeb145ebfa12c" prot="public" virt="non-virtual"><scope>Shit::CameraComponent</scope><name>worldToScreen</name></member>
+      <member refid="class_shit_1_1_component_1ab8905908be361c6fce216879f4739d98" prot="public" virt="virtual"><scope>Shit::CameraComponent</scope><name>~Component</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_render_system_8h" kind="file" language="C++">
+    <compoundname>RenderSystem.h</compoundname>
+    <includes refid="_core_8h" local="yes">../Core/Core.h</includes>
+    <includes refid="_math_8h" local="yes">../Math.h</includes>
+    <includes refid="_system_8h" local="yes">ShitEngine/System/System.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../Core/Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="3">
+        <label>../Math.h</label>
+        <link refid="_math_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Render/RenderSystem.h</label>
+        <link refid="_render_system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ShitEngine/System/System.h</label>
+        <link refid="_system_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>glm/glm.hpp</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_shit_1_1_render_system" prot="public">Shit::RenderSystem</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Render/RenderSystem.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,559 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_sprite_sheet" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Shit::SpriteSheet</compoundname>
+    <includes refid="_sprite_sheet_8h" local="no">SpriteSheet.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_sprite_sheet_1a52a4a6b03f9deec5b2b1b016f31fc0dd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_rows</definition>
+        <argsstring></argsstring>
+        <name>m_rows</name>
+        <qualifiedname>Shit::SpriteSheet::m_rows</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="65" column="9" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_sprite_sheet_1a2cb9d2ce2a9ab306b15f507ebad8e888" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_cols</definition>
+        <argsstring></argsstring>
+        <name>m_cols</name>
+        <qualifiedname>Shit::SpriteSheet::m_cols</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="66" column="9" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_sprite_sheet_1aabf2371cee2076b85faacf6ac114b69d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float m_frameWidth</definition>
+        <argsstring></argsstring>
+        <name>m_frameWidth</name>
+        <qualifiedname>Shit::SpriteSheet::m_frameWidth</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="67" column="11" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_sprite_sheet_1accc7941ab4656e8347c7c935fc8492b6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float m_frameHeight</definition>
+        <argsstring></argsstring>
+        <name>m_frameHeight</name>
+        <qualifiedname>Shit::SpriteSheet::m_frameHeight</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="68" column="11" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_sprite_sheet_1ae65ecde5aeeef880ba025007c104c38c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float m_margin</definition>
+        <argsstring></argsstring>
+        <name>m_margin</name>
+        <qualifiedname>Shit::SpriteSheet::m_margin</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="69" column="11" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_sprite_sheet_1a2aae6b7ae40e54f10f9280f02633cce8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float m_spacing</definition>
+        <argsstring></argsstring>
+        <name>m_spacing</name>
+        <qualifiedname>Shit::SpriteSheet::m_spacing</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="70" column="11" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1af0204be98cbc67f20f8a7a67f4adcbbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpriteSheet</definition>
+        <argsstring>(int rows, int cols, float frameWidth, float frameHeight, float margin=0.0f, float spacing=0.0f)</argsstring>
+        <name>SpriteSheet</name>
+        <qualifiedname>Shit::SpriteSheet::SpriteSheet</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>frameWidth</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>frameHeight</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>margin</declname>
+          <defval>0.0f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>spacing</declname>
+          <defval>0.0f</defval>
+        </param>
+        <briefdescription>
+<para>构造网格切割参数 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>行数 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>列数 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>单帧宽（像素） </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>单帧高（像素） </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>margin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>图集左上角留白（像素，默认 0） </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spacing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>帧与帧之间的间隔（像素，默认 0） </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a9d1cfe048f9a480676a4872d727ff5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~SpriteSheet</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SpriteSheet</name>
+        <qualifiedname>Shit::SpriteSheet::~SpriteSheet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1aaeac8b2f949a38f9246d282aeec53eb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpriteSheet</definition>
+        <argsstring>(const SpriteSheet &amp;)=default</argsstring>
+        <name>SpriteSheet</name>
+        <qualifiedname>Shit::SpriteSheet::SpriteSheet</qualifiedname>
+        <param>
+          <type>const SpriteSheet &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a7df2cb572cdb9d70c10eef65798c0881" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_sprite_sheet_1af0204be98cbc67f20f8a7a67f4adcbbf" kindref="member">SpriteSheet</ref> &amp;</type>
+        <definition>SpriteSheet &amp; operator=</definition>
+        <argsstring>(const SpriteSheet &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::SpriteSheet::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_shit_1_1_sprite_sheet_1af0204be98cbc67f20f8a7a67f4adcbbf" kindref="member">SpriteSheet</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="39" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a5a2a3e9b9f4f8508355e36407689454b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>SpriteSheet</definition>
+        <argsstring>(SpriteSheet &amp;&amp;) noexcept=default</argsstring>
+        <name>SpriteSheet</name>
+        <qualifiedname>Shit::SpriteSheet::SpriteSheet</qualifiedname>
+        <param>
+          <type>SpriteSheet &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="40" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a5deec2e55b2f5fb73082247c014d9cd3" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_sprite_sheet_1af0204be98cbc67f20f8a7a67f4adcbbf" kindref="member">SpriteSheet</ref> &amp;</type>
+        <definition>SpriteSheet &amp; operator=</definition>
+        <argsstring>(SpriteSheet &amp;&amp;) noexcept=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::SpriteSheet::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_shit_1_1_sprite_sheet_1af0204be98cbc67f20f8a7a67f4adcbbf" kindref="member">SpriteSheet</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="41" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a8a6293e1f2b6fb2f50b41e5d38110ae8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SDL_FRect</type>
+        <definition>SDL_FRect getFrameRect</definition>
+        <argsstring>(int frameIndex) const</argsstring>
+        <name>getFrameRect</name>
+        <qualifiedname>Shit::SpriteSheet::getFrameRect</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>frameIndex</declname>
+        </param>
+        <briefdescription>
+<para>全局帧索引（0..rows*cols-1）对应的源矩形 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="44" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a55b78d81bcf11ad14f96016135428afb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SDL_FRect</type>
+        <definition>SDL_FRect getFrameRect</definition>
+        <argsstring>(int row, int col) const</argsstring>
+        <name>getFrameRect</name>
+        <qualifiedname>Shit::SpriteSheet::getFrameRect</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>指定行列（0 基）对应的源矩形 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="47" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1ad343f9bbb050d9037167e80e423ab4e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int getRows</definition>
+        <argsstring>() const</argsstring>
+        <name>getRows</name>
+        <qualifiedname>Shit::SpriteSheet::getRows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="49" column="9" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a15dbe8362fb658e89feacb5e7bae3ef3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int getCols</definition>
+        <argsstring>() const</argsstring>
+        <name>getCols</name>
+        <qualifiedname>Shit::SpriteSheet::getCols</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="50" column="9" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a74be57bd40687e061c6c3cc2246ad63c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float getFrameWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>getFrameWidth</name>
+        <qualifiedname>Shit::SpriteSheet::getFrameWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="51" column="11" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a6b72e2634e52bca5934299ffd9d455e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float getFrameHeight</definition>
+        <argsstring>() const</argsstring>
+        <name>getFrameHeight</name>
+        <qualifiedname>Shit::SpriteSheet::getFrameHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="52" column="11" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1ad0b0509f7ac071f49cc248341336e7cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float getMargin</definition>
+        <argsstring>() const</argsstring>
+        <name>getMargin</name>
+        <qualifiedname>Shit::SpriteSheet::getMargin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="53" column="11" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a1211c84bcbcd2d5acaa530e76d7b58d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float getSpacing</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpacing</name>
+        <qualifiedname>Shit::SpriteSheet::getSpacing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="54" column="11" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a020bc01fe5af38371c152924e10e817e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int getFrameCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getFrameCount</name>
+        <qualifiedname>Shit::SpriteSheet::getFrameCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="55" column="9" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a508bbe326657af6d3add84deb4595989" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setRows</definition>
+        <argsstring>(int rows)</argsstring>
+        <name>setRows</name>
+        <qualifiedname>Shit::SpriteSheet::setRows</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="57" column="10" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a84593b69dee341df0b48441f2fdd9e58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setCols</definition>
+        <argsstring>(int cols)</argsstring>
+        <name>setCols</name>
+        <qualifiedname>Shit::SpriteSheet::setCols</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="58" column="10" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a99abb798e1f923f27926f1eade34ba76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setFrameWidth</definition>
+        <argsstring>(float width)</argsstring>
+        <name>setFrameWidth</name>
+        <qualifiedname>Shit::SpriteSheet::setFrameWidth</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="59" column="10" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a66bd8056aa42395bc44c2824eeb7d0a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setFrameHeight</definition>
+        <argsstring>(float height)</argsstring>
+        <name>setFrameHeight</name>
+        <qualifiedname>Shit::SpriteSheet::setFrameHeight</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="60" column="10" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a4f9972873dfd768793c3ded7ab3d6e59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setMargin</definition>
+        <argsstring>(float margin)</argsstring>
+        <name>setMargin</name>
+        <qualifiedname>Shit::SpriteSheet::setMargin</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>margin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="61" column="10" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_sprite_sheet_1a3be0c8136f459a8cc59221a54d196dca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setSpacing</definition>
+        <argsstring>(float spacing)</argsstring>
+        <name>setSpacing</name>
+        <qualifiedname>Shit::SpriteSheet::setSpacing</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>spacing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/SpriteSheet.h" line="62" column="10" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>精灵图集（sprite-sheet）网格切割器 </para>
+    </briefdescription>
+    <detaileddescription>
+<para>把一张按“rows 行 × cols 列”规则排列的大图，按帧索引切出每一帧的源矩形 (SDL_FRect)。 可选 margin（图集四周留白）与 spacing（帧间间隔），单位为像素。</para>
+<para>典型用法： <ref refid="class_shit_1_1_sprite_sheet" kindref="compound">Shit::SpriteSheet</ref> sheet(4, 8, 32, 32); // 4行8列，每帧32×32 SDL_FRect f = sheet.getFrameRect(5); // 全局第5帧 std::vector&lt;int&gt; walk{0,1,2,3,4,5}; animComp-&gt;play(&quot;walk&quot;, &amp;sheet, walk, 0.1f, true); </para>
+    </detaileddescription>
+    <location file="ShitEngine/Render/SpriteSheet.h" line="22" column="1" bodyfile="ShitEngine/Render/SpriteSheet.h" bodystart="22" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_sprite_sheet_1a15dbe8362fb658e89feacb5e7bae3ef3" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getCols</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a020bc01fe5af38371c152924e10e817e" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getFrameCount</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a6b72e2634e52bca5934299ffd9d455e8" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getFrameHeight</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a8a6293e1f2b6fb2f50b41e5d38110ae8" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getFrameRect</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a55b78d81bcf11ad14f96016135428afb" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getFrameRect</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a74be57bd40687e061c6c3cc2246ad63c" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getFrameWidth</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1ad0b0509f7ac071f49cc248341336e7cc" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getMargin</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1ad343f9bbb050d9037167e80e423ab4e8" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getRows</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a1211c84bcbcd2d5acaa530e76d7b58d7" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>getSpacing</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a2cb9d2ce2a9ab306b15f507ebad8e888" prot="private" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>m_cols</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1accc7941ab4656e8347c7c935fc8492b6" prot="private" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>m_frameHeight</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1aabf2371cee2076b85faacf6ac114b69d" prot="private" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>m_frameWidth</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1ae65ecde5aeeef880ba025007c104c38c" prot="private" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>m_margin</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a52a4a6b03f9deec5b2b1b016f31fc0dd" prot="private" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>m_rows</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a2aae6b7ae40e54f10f9280f02633cce8" prot="private" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>m_spacing</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a7df2cb572cdb9d70c10eef65798c0881" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a5deec2e55b2f5fb73082247c014d9cd3" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a84593b69dee341df0b48441f2fdd9e58" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>setCols</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a66bd8056aa42395bc44c2824eeb7d0a0" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>setFrameHeight</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a99abb798e1f923f27926f1eade34ba76" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>setFrameWidth</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a4f9972873dfd768793c3ded7ab3d6e59" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>setMargin</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a508bbe326657af6d3add84deb4595989" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>setRows</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a3be0c8136f459a8cc59221a54d196dca" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>setSpacing</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1af0204be98cbc67f20f8a7a67f4adcbbf" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>SpriteSheet</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1aaeac8b2f949a38f9246d282aeec53eb9" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>SpriteSheet</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a5a2a3e9b9f4f8508355e36407689454b" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>SpriteSheet</name></member>
+      <member refid="class_shit_1_1_sprite_sheet_1a9d1cfe048f9a480676a4872d727ff5ec" prot="public" virt="non-virtual"><scope>Shit::SpriteSheet</scope><name>~SpriteSheet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

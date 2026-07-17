@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_animation" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Shit::Animation</compoundname>
+    <includes refid="_animation_8h" local="no">Animation.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_animation_1a6164ea1dfbb755acef79d439664aa705" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; SDL_FRect &gt;</type>
+        <definition>std::vector&lt;SDL_FRect&gt; m_frames</definition>
+        <argsstring></argsstring>
+        <name>m_frames</name>
+        <qualifiedname>Shit::Animation::m_frames</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="35" column="21" bodyfile="ShitEngine/Render/Animation.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_animation_1a3dd558efdd729250e555b176b42f1dbd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float m_duration</definition>
+        <argsstring></argsstring>
+        <name>m_duration</name>
+        <qualifiedname>Shit::Animation::m_duration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="36" column="15" bodyfile="ShitEngine/Render/Animation.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_animation_1a3cb72cf187c2d3f0d5a64c05ee9bea07" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_loop</definition>
+        <argsstring></argsstring>
+        <name>m_loop</name>
+        <qualifiedname>Shit::Animation::m_loop</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="37" column="14" bodyfile="ShitEngine/Render/Animation.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_animation_1a58936f4cd9797c6b52d287c172b90756" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Animation</definition>
+        <argsstring>(float duration=0.1f, bool loop=true)</argsstring>
+        <name>Animation</name>
+        <qualifiedname>Shit::Animation::Animation</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>duration</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>loop</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="18" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1aee6bf19aac7ec2c3616d44496f7bed5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Animation</definition>
+        <argsstring>()</argsstring>
+        <name>~Animation</name>
+        <qualifiedname>Shit::Animation::~Animation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="19" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1af73ed4af698e8d2f6edd8190f67c91a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addFrame</definition>
+        <argsstring>(const SDL_FRect &amp;frame)</argsstring>
+        <name>addFrame</name>
+        <qualifiedname>Shit::Animation::addFrame</qualifiedname>
+        <param>
+          <type>const SDL_FRect &amp;</type>
+          <declname>frame</declname>
+        </param>
+        <briefdescription>
+<para>添加单帧 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="21" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1aba968763860730661f2fabb8ab934629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addFrames</definition>
+        <argsstring>(const std::vector&lt; SDL_FRect &gt; &amp;frames)</argsstring>
+        <name>addFrames</name>
+        <qualifiedname>Shit::Animation::addFrames</qualifiedname>
+        <param>
+          <type>const std::vector&lt; SDL_FRect &gt; &amp;</type>
+          <declname>frames</declname>
+        </param>
+        <briefdescription>
+<para>批量添加帧 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="22" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1a2683bd69f50c551f54cb35e8b83f4c6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SDL_FRect</type>
+        <definition>SDL_FRect getFrame</definition>
+        <argsstring>(float elapsedTime) const</argsstring>
+        <name>getFrame</name>
+        <qualifiedname>Shit::Animation::getFrame</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>elapsedTime</declname>
+        </param>
+        <briefdescription>
+<para>根据已播放时间返回当前帧的源矩形 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="24" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1aa029c7e4c1ad0858c1a7e7e7309e1cb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setLoop</definition>
+        <argsstring>(bool loop)</argsstring>
+        <name>setLoop</name>
+        <qualifiedname>Shit::Animation::setLoop</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>loop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="27" column="14" bodyfile="ShitEngine/Render/Animation.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1a8439272c49d21d8b6362f4cc9dc0e040" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setDuration</definition>
+        <argsstring>(float duration)</argsstring>
+        <name>setDuration</name>
+        <qualifiedname>Shit::Animation::setDuration</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>duration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="28" column="14" bodyfile="ShitEngine/Render/Animation.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1a78155a2b0119ac92d377fa404e348a98" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isLooping</definition>
+        <argsstring>() const</argsstring>
+        <name>isLooping</name>
+        <qualifiedname>Shit::Animation::isLooping</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="30" column="14" bodyfile="ShitEngine/Render/Animation.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1a1b376b64bd225fd20c4d5e502437eced" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float getDuration</definition>
+        <argsstring>() const</argsstring>
+        <name>getDuration</name>
+        <qualifiedname>Shit::Animation::getDuration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="31" column="15" bodyfile="ShitEngine/Render/Animation.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_animation_1a020bc01fe5af38371c152924e10e817e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int getFrameCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getFrameCount</name>
+        <qualifiedname>Shit::Animation::getFrameCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Animation.h" line="32" column="13" bodyfile="ShitEngine/Render/Animation.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>逐帧动画数据 </para>
+    </briefdescription>
+    <detaileddescription>
+<para>存储一组帧矩形（SDL_FRect）及每帧持续时间。 getFrame(elapsedTime) 根据当前播放时间返回对应帧。 通常由 <ref refid="class_shit_1_1_animation_component" kindref="compound">AnimationComponent</ref> 自动管理，不直接使用。 </para>
+    </detaileddescription>
+    <location file="ShitEngine/Render/Animation.h" line="16" column="5" bodyfile="ShitEngine/Render/Animation.h" bodystart="16" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_animation_1af73ed4af698e8d2f6edd8190f67c91a2" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>addFrame</name></member>
+      <member refid="class_shit_1_1_animation_1aba968763860730661f2fabb8ab934629" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>addFrames</name></member>
+      <member refid="class_shit_1_1_animation_1a58936f4cd9797c6b52d287c172b90756" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>Animation</name></member>
+      <member refid="class_shit_1_1_animation_1a1b376b64bd225fd20c4d5e502437eced" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>getDuration</name></member>
+      <member refid="class_shit_1_1_animation_1a2683bd69f50c551f54cb35e8b83f4c6b" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>getFrame</name></member>
+      <member refid="class_shit_1_1_animation_1a020bc01fe5af38371c152924e10e817e" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>getFrameCount</name></member>
+      <member refid="class_shit_1_1_animation_1a78155a2b0119ac92d377fa404e348a98" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>isLooping</name></member>
+      <member refid="class_shit_1_1_animation_1a3dd558efdd729250e555b176b42f1dbd" prot="private" virt="non-virtual"><scope>Shit::Animation</scope><name>m_duration</name></member>
+      <member refid="class_shit_1_1_animation_1a6164ea1dfbb755acef79d439664aa705" prot="private" virt="non-virtual"><scope>Shit::Animation</scope><name>m_frames</name></member>
+      <member refid="class_shit_1_1_animation_1a3cb72cf187c2d3f0d5a64c05ee9bea07" prot="private" virt="non-virtual"><scope>Shit::Animation</scope><name>m_loop</name></member>
+      <member refid="class_shit_1_1_animation_1a8439272c49d21d8b6362f4cc9dc0e040" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>setDuration</name></member>
+      <member refid="class_shit_1_1_animation_1aa029c7e4c1ad0858c1a7e7e7309e1cb2" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>setLoop</name></member>
+      <member refid="class_shit_1_1_animation_1aee6bf19aac7ec2c3616d44496f7bed5b" prot="public" virt="non-virtual"><scope>Shit::Animation</scope><name>~Animation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

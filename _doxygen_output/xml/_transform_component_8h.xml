@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_transform_component_8h" kind="file" language="C++">
+    <compoundname>TransformComponent.h</compoundname>
+    <includes refid="_component_8h" local="yes">Component.h</includes>
+    <includes refid="_math_8h" local="yes">../Math.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Component.h</label>
+        <link refid="_component_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Component/TransformComponent.h</label>
+        <link refid="_transform_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../Core/Config.h</label>
+        <link refid="_config_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="6">
+        <label>Log.h</label>
+        <link refid="_log_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../Math.h</label>
+        <link refid="_math_8h_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="7">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="11">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="10">
+        <label>spdlog/sinks/stdout_color_sinks.h</label>
+      </node>
+      <node id="9">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_shit_1_1_transform_component" prot="public">Shit::TransformComponent</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Component/TransformComponent.h"/>
+  </compounddef>
+</doxygen>

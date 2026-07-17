@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_window" kind="class" language="C++" prot="public">
+    <compoundname>Shit::Window</compoundname>
+    <includes refid="_window_8h" local="no">Window.h</includes>
+    <innerclass refid="struct_shit_1_1_window_1_1_s_d_l_window_deleter" prot="private">Shit::Window::SDLWindowDeleter</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_window_1a7d6c6f6e0d6bc7c21351ea8838af8d6a" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; SDL_Window, SDLWindowDeleter &gt;</type>
+        <definition>std::unique_ptr&lt;SDL_Window, SDLWindowDeleter&gt; m_window</definition>
+        <argsstring></argsstring>
+        <name>m_window</name>
+        <qualifiedname>Shit::Window::m_window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="45" column="17" bodyfile="ShitEngine/Core/Window.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_window_1ad14d58eb754b8fa7229169ed4d5de225" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_isOpen</definition>
+        <argsstring></argsstring>
+        <name>m_isOpen</name>
+        <qualifiedname>Shit::Window::m_isOpen</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="46" column="6" bodyfile="ShitEngine/Core/Window.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_window_1a6cbfa660b1af1f7020fc63dce78aabad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Window</definition>
+        <argsstring>()=default</argsstring>
+        <name>Window</name>
+        <qualifiedname>Shit::Window::Window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1a0124c7e88186e79f35666a69d6cc3547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Window</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Window</name>
+        <qualifiedname>Shit::Window::~Window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1a6a68cb5a5ac04c26f735b17e641fc83d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Window</definition>
+        <argsstring>(const Window &amp;)=delete</argsstring>
+        <name>Window</name>
+        <qualifiedname>Shit::Window::Window</qualifiedname>
+        <param>
+          <type>const Window &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1ab97c00f43df83ad3a9a7b40b5e723d59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_window_1a6cbfa660b1af1f7020fc63dce78aabad" kindref="member">Window</ref> &amp;</type>
+        <definition>Window &amp; operator=</definition>
+        <argsstring>(const Window &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::Window::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_shit_1_1_window_1a6cbfa660b1af1f7020fc63dce78aabad" kindref="member">Window</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="29" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1a98168bc8e581a19b57976700a466f239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Window</definition>
+        <argsstring>(Window &amp;&amp;)=delete</argsstring>
+        <name>Window</name>
+        <qualifiedname>Shit::Window::Window</qualifiedname>
+        <param>
+          <type>Window &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1ab368f6453bafaeef5951456ecca8f83b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_window_1a6cbfa660b1af1f7020fc63dce78aabad" kindref="member">Window</ref> &amp;</type>
+        <definition>Window &amp; operator=</definition>
+        <argsstring>(Window &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::Window::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_shit_1_1_window_1a6cbfa660b1af1f7020fc63dce78aabad" kindref="member">Window</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="31" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shit_1_1_window_1a98fb471c6beb97e834a89a65a4537696" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_window_1a6cbfa660b1af1f7020fc63dce78aabad" kindref="member">Window</ref> &amp;</type>
+        <definition>static Window &amp; GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>Shit::Window::GetInstance</qualifiedname>
+        <briefdescription>
+<para>获取单例 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="20" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1ae596c367662c7f3b19b6626b89ffc08b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>Shit::Window::Init</qualifiedname>
+        <briefdescription>
+<para>初始化窗口 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="21" column="13" bodyfile="ShitEngine/Core/Window.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1a011fa43ee8ec0d64efd8f81a839c88ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SDL_Window *</type>
+        <definition>static SDL_Window * GetWindow</definition>
+        <argsstring>()</argsstring>
+        <name>GetWindow</name>
+        <qualifiedname>Shit::Window::GetWindow</qualifiedname>
+        <briefdescription>
+<para>获取原生 SDL_Window 指针 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="22" column="19" bodyfile="ShitEngine/Core/Window.h" bodystart="22" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1aef5d8fcadcba402ea54a6a655a400dae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HandleEvent</definition>
+        <argsstring>(const SDL_Event &amp;event)</argsstring>
+        <name>HandleEvent</name>
+        <qualifiedname>Shit::Window::HandleEvent</qualifiedname>
+        <param>
+          <type>const SDL_Event &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>分发窗口事件给子系统 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="23" column="13" bodyfile="ShitEngine/Core/Window.h" bodystart="23" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1a9216f2c6587e4405c4f1821f3a35f69d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool IsOpen</definition>
+        <argsstring>()</argsstring>
+        <name>IsOpen</name>
+        <qualifiedname>Shit::Window::IsOpen</qualifiedname>
+        <briefdescription>
+<para>窗口是否仍然打开 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="24" column="13" bodyfile="ShitEngine/Core/Window.h" bodystart="24" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1afd8acd145096a4c6bf37a4c0ef1b91d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <qualifiedname>Shit::Window::Close</qualifiedname>
+        <briefdescription>
+<para>关闭窗口 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="25" column="13" bodyfile="ShitEngine/Core/Window.h" bodystart="25" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1a62a73aff7afffe2fba7c2e47e07d9134" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <qualifiedname>Shit::Window::Destroy</qualifiedname>
+        <briefdescription>
+<para>销毁窗口及资源 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="26" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shit_1_1_window_1aee8048628ff2b5c026c9e15acdcaacb8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Shit::Window::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="34" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1ac5293921cbd2f72d61bf1098cba9c87c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handleEvent</definition>
+        <argsstring>(const SDL_Event &amp;event)</argsstring>
+        <name>handleEvent</name>
+        <qualifiedname>Shit::Window::handleEvent</qualifiedname>
+        <param>
+          <type>const SDL_Event &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="35" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1a3a9ba7594ee74425dd345ecc263a5564" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isOpen</definition>
+        <argsstring>()</argsstring>
+        <name>isOpen</name>
+        <qualifiedname>Shit::Window::isOpen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="36" column="6" bodyfile="ShitEngine/Core/Window.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_window_1a5ae591df94fc66ccb85cbb6565368bca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <qualifiedname>Shit::Window::close</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Window.h" line="37" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>窗口管理类 </para>
+    </briefdescription>
+    <detaileddescription>
+<para>封装 SDL_Window 的生命周期，提供窗口事件处理与状态查询。 </para>
+    </detaileddescription>
+    <location file="ShitEngine/Core/Window.h" line="14" column="1" bodyfile="ShitEngine/Core/Window.h" bodystart="14" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_window_1afd8acd145096a4c6bf37a4c0ef1b91d0" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>Close</name></member>
+      <member refid="class_shit_1_1_window_1a5ae591df94fc66ccb85cbb6565368bca" prot="private" virt="non-virtual"><scope>Shit::Window</scope><name>close</name></member>
+      <member refid="class_shit_1_1_window_1a62a73aff7afffe2fba7c2e47e07d9134" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>Destroy</name></member>
+      <member refid="class_shit_1_1_window_1a98fb471c6beb97e834a89a65a4537696" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>GetInstance</name></member>
+      <member refid="class_shit_1_1_window_1a011fa43ee8ec0d64efd8f81a839c88ab" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>GetWindow</name></member>
+      <member refid="class_shit_1_1_window_1aef5d8fcadcba402ea54a6a655a400dae" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>HandleEvent</name></member>
+      <member refid="class_shit_1_1_window_1ac5293921cbd2f72d61bf1098cba9c87c" prot="private" virt="non-virtual"><scope>Shit::Window</scope><name>handleEvent</name></member>
+      <member refid="class_shit_1_1_window_1ae596c367662c7f3b19b6626b89ffc08b" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>Init</name></member>
+      <member refid="class_shit_1_1_window_1aee8048628ff2b5c026c9e15acdcaacb8" prot="private" virt="non-virtual"><scope>Shit::Window</scope><name>init</name></member>
+      <member refid="class_shit_1_1_window_1a9216f2c6587e4405c4f1821f3a35f69d" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>IsOpen</name></member>
+      <member refid="class_shit_1_1_window_1a3a9ba7594ee74425dd345ecc263a5564" prot="private" virt="non-virtual"><scope>Shit::Window</scope><name>isOpen</name></member>
+      <member refid="class_shit_1_1_window_1ad14d58eb754b8fa7229169ed4d5de225" prot="private" virt="non-virtual"><scope>Shit::Window</scope><name>m_isOpen</name></member>
+      <member refid="class_shit_1_1_window_1a7d6c6f6e0d6bc7c21351ea8838af8d6a" prot="private" virt="non-virtual"><scope>Shit::Window</scope><name>m_window</name></member>
+      <member refid="class_shit_1_1_window_1ab97c00f43df83ad3a9a7b40b5e723d59" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_window_1ab368f6453bafaeef5951456ecca8f83b" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_window_1a6cbfa660b1af1f7020fc63dce78aabad" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>Window</name></member>
+      <member refid="class_shit_1_1_window_1a6a68cb5a5ac04c26f735b17e641fc83d" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>Window</name></member>
+      <member refid="class_shit_1_1_window_1a98168bc8e581a19b57976700a466f239" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>Window</name></member>
+      <member refid="class_shit_1_1_window_1a0124c7e88186e79f35666a69d6cc3547" prot="public" virt="non-virtual"><scope>Shit::Window</scope><name>~Window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

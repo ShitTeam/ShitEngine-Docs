@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_behavior_system_8h" kind="file" language="C++">
+    <compoundname>BehaviorSystem.h</compoundname>
+    <includes refid="_system_8h" local="yes">System.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>ShitEngine/Core/Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="1">
+        <label>ShitEngine/System/BehaviorSystem.h</label>
+        <link refid="_behavior_system_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>System.h</label>
+        <link refid="_system_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_shit_1_1_behavior_system" prot="public">Shit::BehaviorSystem</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/System/BehaviorSystem.h"/>
+  </compounddef>
+</doxygen>

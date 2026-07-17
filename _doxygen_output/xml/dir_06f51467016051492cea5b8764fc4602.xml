@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="dir_06f51467016051492cea5b8764fc4602" kind="dir">
+    <compoundname>ShitEngine/System</compoundname>
+    <innerfile refid="_behavior_system_8h">BehaviorSystem.h</innerfile>
+    <innerfile refid="_system_8h">System.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/System/"/>
+  </compounddef>
+</doxygen>

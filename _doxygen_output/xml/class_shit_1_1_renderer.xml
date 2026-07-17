@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_renderer" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Shit::Renderer</compoundname>
+    <includes refid="_renderer_8h" local="no">Renderer.h</includes>
+    <innerclass refid="struct_shit_1_1_renderer_1_1_s_d_l_renderer_deleter" prot="private">Shit::Renderer::SDLRendererDeleter</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_renderer_1a51541c8e801b2ae4fde17a2d15f88188" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; SDL_Renderer, SDLRendererDeleter &gt;</type>
+        <definition>std::unique_ptr&lt;SDL_Renderer, SDLRendererDeleter&gt; m_renderer</definition>
+        <argsstring></argsstring>
+        <name>m_renderer</name>
+        <qualifiedname>Shit::Renderer::m_renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="60" column="17" bodyfile="ShitEngine/Render/Renderer.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_renderer_1aa5c7ce97912721d095f68409c5478272" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_logicalWidth</definition>
+        <argsstring></argsstring>
+        <name>m_logicalWidth</name>
+        <qualifiedname>Shit::Renderer::m_logicalWidth</qualifiedname>
+        <initializer>= 1280</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="61" column="5" bodyfile="ShitEngine/Render/Renderer.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_renderer_1a98d1c0394770565897ba0a3d6671962d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_logicalHeight</definition>
+        <argsstring></argsstring>
+        <name>m_logicalHeight</name>
+        <qualifiedname>Shit::Renderer::m_logicalHeight</qualifiedname>
+        <initializer>= 720</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="62" column="5" bodyfile="ShitEngine/Render/Renderer.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a7f8773f951a66de0e9e63c55f9b4611b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Renderer</definition>
+        <argsstring>(const Renderer &amp;)=delete</argsstring>
+        <name>Renderer</name>
+        <qualifiedname>Shit::Renderer::Renderer</qualifiedname>
+        <param>
+          <type>const Renderer &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a407b586a873ce3895710519d567f2af0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_renderer_1a7f8773f951a66de0e9e63c55f9b4611b" kindref="member">Renderer</ref> &amp;</type>
+        <definition>Renderer &amp; operator=</definition>
+        <argsstring>(const Renderer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::Renderer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_shit_1_1_renderer_1a7f8773f951a66de0e9e63c55f9b4611b" kindref="member">Renderer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a5c16a12fa607b0602be5110c8ef216ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Renderer</definition>
+        <argsstring>(Renderer &amp;&amp;)=default</argsstring>
+        <name>Renderer</name>
+        <qualifiedname>Shit::Renderer::Renderer</qualifiedname>
+        <param>
+          <type>Renderer &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a62384daa81a3398bc254a647685d4dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_renderer_1a7f8773f951a66de0e9e63c55f9b4611b" kindref="member">Renderer</ref> &amp;</type>
+        <definition>Renderer &amp; operator=</definition>
+        <argsstring>(Renderer &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::Renderer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_shit_1_1_renderer_1a7f8773f951a66de0e9e63c55f9b4611b" kindref="member">Renderer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="26" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a7155169a884952f261026adcda51e928" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_renderer_1a7f8773f951a66de0e9e63c55f9b4611b" kindref="member">Renderer</ref> &amp;</type>
+        <definition>static Renderer &amp; GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>Shit::Renderer::GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="29" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1ae596c367662c7f3b19b6626b89ffc08b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>Shit::Renderer::Init</qualifiedname>
+        <briefdescription>
+<para>初始化渲染器 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="30" column="13" bodyfile="ShitEngine/Render/Renderer.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a00cf1a2e31eb12524052a36227c81c8d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ClearScreen</definition>
+        <argsstring>()</argsstring>
+        <name>ClearScreen</name>
+        <qualifiedname>Shit::Renderer::ClearScreen</qualifiedname>
+        <briefdescription>
+<para>清屏（每帧开头调用） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="31" column="13" bodyfile="ShitEngine/Render/Renderer.h" bodystart="31" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1abdc592736185addda2799dbabfee82f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Present</definition>
+        <argsstring>()</argsstring>
+        <name>Present</name>
+        <qualifiedname>Shit::Renderer::Present</qualifiedname>
+        <briefdescription>
+<para>交换缓冲区（每帧末尾调用） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="32" column="13" bodyfile="ShitEngine/Render/Renderer.h" bodystart="32" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a46e30e87d3ca42bc3018843f563dfb12" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SDL_Renderer *</type>
+        <definition>static SDL_Renderer * GetRenderer</definition>
+        <argsstring>()</argsstring>
+        <name>GetRenderer</name>
+        <qualifiedname>Shit::Renderer::GetRenderer</qualifiedname>
+        <briefdescription>
+<para>获取原生 SDL_Renderer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="33" column="21" bodyfile="ShitEngine/Render/Renderer.h" bodystart="33" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1ab41bacdc8fc4a5f995d01cc99c62c0ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int GetLogicalWidth</definition>
+        <argsstring>()</argsstring>
+        <name>GetLogicalWidth</name>
+        <qualifiedname>Shit::Renderer::GetLogicalWidth</qualifiedname>
+        <briefdescription>
+<para>逻辑分辨率宽度 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="35" column="12" bodyfile="ShitEngine/Render/Renderer.h" bodystart="35" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1ad903053e03f7af1de814d044f7b0dcb4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int GetLogicalHeight</definition>
+        <argsstring>()</argsstring>
+        <name>GetLogicalHeight</name>
+        <qualifiedname>Shit::Renderer::GetLogicalHeight</qualifiedname>
+        <briefdescription>
+<para>逻辑分辨率高度 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="36" column="12" bodyfile="ShitEngine/Render/Renderer.h" bodystart="36" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a4fdb65e37b1d8c3a170fab28fe818fe0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DrawSprite</definition>
+        <argsstring>(const Sprite &amp;sprite, const Vector2 &amp;position, const std::optional&lt; Vector2 &gt; &amp;size=std::nullopt)</argsstring>
+        <name>DrawSprite</name>
+        <qualifiedname>Shit::Renderer::DrawSprite</qualifiedname>
+        <param>
+          <type>const <ref refid="class_shit_1_1_sprite" kindref="compound">Sprite</ref> &amp;</type>
+          <declname>sprite</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const std::optional&lt; <ref refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kindref="member">Vector2</ref> &gt; &amp;</type>
+          <declname>size</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <briefdescription>
+<para>在屏幕坐标直接绘制精灵（UI 场景用） </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sprite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>精灵数据 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>屏幕坐标左上角 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>可选目标尺寸，留空用纹理原始尺寸 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="44" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shit_1_1_renderer_1adb430ca9a4363d18fd4a7d0765095cda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Renderer</definition>
+        <argsstring>()=default</argsstring>
+        <name>Renderer</name>
+        <qualifiedname>Shit::Renderer::Renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a21da7cd68671d3486479e47d66036942" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Renderer</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Renderer</name>
+        <qualifiedname>Shit::Renderer::~Renderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1aee8048628ff2b5c026c9e15acdcaacb8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Shit::Renderer::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="50" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a9d7e8af417b6d543da691e9c0e2f6f9f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearScreen</definition>
+        <argsstring>()</argsstring>
+        <name>clearScreen</name>
+        <qualifiedname>Shit::Renderer::clearScreen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="51" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_renderer_1a150ffb0f8328a3a283e2cb8933c89b48" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void present</definition>
+        <argsstring>()</argsstring>
+        <name>present</name>
+        <qualifiedname>Shit::Renderer::present</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Render/Renderer.h" line="52" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>渲染器，封装 SDL3 绘制 API </para>
+    </briefdescription>
+    <detaileddescription>
+<para>管理逻辑分辨率、清屏、精灵绘制（UI 用）以及 Present。 默认逻辑分辨率 1280×720，通过 settings.json 中的 window.width/height 配置。 </para>
+    </detaileddescription>
+    <location file="ShitEngine/Render/Renderer.h" line="21" column="1" bodyfile="ShitEngine/Render/Renderer.h" bodystart="21" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_renderer_1a00cf1a2e31eb12524052a36227c81c8d" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>ClearScreen</name></member>
+      <member refid="class_shit_1_1_renderer_1a9d7e8af417b6d543da691e9c0e2f6f9f" prot="private" virt="non-virtual"><scope>Shit::Renderer</scope><name>clearScreen</name></member>
+      <member refid="class_shit_1_1_renderer_1a4fdb65e37b1d8c3a170fab28fe818fe0" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>DrawSprite</name></member>
+      <member refid="class_shit_1_1_renderer_1a7155169a884952f261026adcda51e928" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>GetInstance</name></member>
+      <member refid="class_shit_1_1_renderer_1ad903053e03f7af1de814d044f7b0dcb4" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>GetLogicalHeight</name></member>
+      <member refid="class_shit_1_1_renderer_1ab41bacdc8fc4a5f995d01cc99c62c0ab" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>GetLogicalWidth</name></member>
+      <member refid="class_shit_1_1_renderer_1a46e30e87d3ca42bc3018843f563dfb12" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>GetRenderer</name></member>
+      <member refid="class_shit_1_1_renderer_1ae596c367662c7f3b19b6626b89ffc08b" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>Init</name></member>
+      <member refid="class_shit_1_1_renderer_1aee8048628ff2b5c026c9e15acdcaacb8" prot="private" virt="non-virtual"><scope>Shit::Renderer</scope><name>init</name></member>
+      <member refid="class_shit_1_1_renderer_1a98d1c0394770565897ba0a3d6671962d" prot="private" virt="non-virtual"><scope>Shit::Renderer</scope><name>m_logicalHeight</name></member>
+      <member refid="class_shit_1_1_renderer_1aa5c7ce97912721d095f68409c5478272" prot="private" virt="non-virtual"><scope>Shit::Renderer</scope><name>m_logicalWidth</name></member>
+      <member refid="class_shit_1_1_renderer_1a51541c8e801b2ae4fde17a2d15f88188" prot="private" virt="non-virtual"><scope>Shit::Renderer</scope><name>m_renderer</name></member>
+      <member refid="class_shit_1_1_renderer_1a407b586a873ce3895710519d567f2af0" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_renderer_1a62384daa81a3398bc254a647685d4dfe" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_renderer_1abdc592736185addda2799dbabfee82f6" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>Present</name></member>
+      <member refid="class_shit_1_1_renderer_1a150ffb0f8328a3a283e2cb8933c89b48" prot="private" virt="non-virtual"><scope>Shit::Renderer</scope><name>present</name></member>
+      <member refid="class_shit_1_1_renderer_1a7f8773f951a66de0e9e63c55f9b4611b" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>Renderer</name></member>
+      <member refid="class_shit_1_1_renderer_1a5c16a12fa607b0602be5110c8ef216ee" prot="public" virt="non-virtual"><scope>Shit::Renderer</scope><name>Renderer</name></member>
+      <member refid="class_shit_1_1_renderer_1adb430ca9a4363d18fd4a7d0765095cda" prot="private" virt="non-virtual"><scope>Shit::Renderer</scope><name>Renderer</name></member>
+      <member refid="class_shit_1_1_renderer_1a21da7cd68671d3486479e47d66036942" prot="private" virt="non-virtual"><scope>Shit::Renderer</scope><name>~Renderer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

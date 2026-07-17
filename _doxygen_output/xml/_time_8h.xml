@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_time_8h" kind="file" language="C++">
+    <compoundname>Time.h</compoundname>
+    <includes refid="_core_8h" local="yes">Core.h</includes>
+    <includes local="no">SDL3/SDL_stdinc.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Core/Time.h</label>
+        <link refid="_time_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SDL3/SDL_stdinc.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_shit_1_1_time" prot="public">Shit::Time</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Core/Time.h"/>
+  </compounddef>
+</doxygen>

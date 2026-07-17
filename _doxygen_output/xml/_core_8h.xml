@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_core_8h" kind="file" language="C++">
+    <compoundname>Core.h</compoundname>
+    <includedby refid="_audio_player_8h" local="yes">ShitEngine/Audio/AudioPlayer.h</includedby>
+    <includedby refid="_audio_track_8h" local="yes">ShitEngine/Audio/AudioTrack.h</includedby>
+    <includedby refid="_animation_component_8h" local="yes">ShitEngine/Component/AnimationComponent.h</includedby>
+    <includedby refid="_camera_component_8h" local="yes">ShitEngine/Component/CameraComponent.h</includedby>
+    <includedby refid="_renderer_component_8h" local="yes">ShitEngine/Component/RendererComponent.h</includedby>
+    <includedby refid="_config_8h" local="yes">ShitEngine/Core/Config.h</includedby>
+    <includedby refid="_game_8h" local="yes">ShitEngine/Core/Game.h</includedby>
+    <includedby refid="_log_8h" local="yes">ShitEngine/Core/Log.h</includedby>
+    <includedby refid="_time_8h" local="yes">ShitEngine/Core/Time.h</includedby>
+    <includedby refid="_window_8h" local="yes">ShitEngine/Core/Window.h</includedby>
+    <includedby refid="_event_8h" local="yes">ShitEngine/Event/Event.h</includedby>
+    <includedby refid="_input_8h" local="yes">ShitEngine/Input/Input.h</includedby>
+    <includedby refid="_animation_8h" local="yes">ShitEngine/Render/Animation.h</includedby>
+    <includedby refid="_render_system_8h" local="yes">ShitEngine/Render/RenderSystem.h</includedby>
+    <includedby refid="_renderer_8h" local="yes">ShitEngine/Render/Renderer.h</includedby>
+    <includedby refid="_sprite_8h" local="yes">ShitEngine/Render/Sprite.h</includedby>
+    <includedby refid="_sprite_sheet_8h" local="yes">ShitEngine/Render/SpriteSheet.h</includedby>
+    <includedby refid="_audio_manager_8h" local="yes">ShitEngine/Resource/AudioManager.h</includedby>
+    <includedby refid="_font_manager_8h" local="yes">ShitEngine/Resource/FontManager.h</includedby>
+    <includedby refid="_resource_manager_8h" local="yes">ShitEngine/Resource/ResourceManager.h</includedby>
+    <includedby refid="_texture_manager_8h" local="yes">ShitEngine/Resource/TextureManager.h</includedby>
+    <includedby refid="_scene_8h" local="yes">ShitEngine/Scene/Scene.h</includedby>
+    <includedby refid="_scene_manager_8h" local="yes">ShitEngine/Scene/SceneManager.h</includedby>
+    <includedby refid="_system_8h" local="yes">ShitEngine/System/System.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>ShitEngine/Audio/AudioPlayer.h</label>
+        <link refid="_audio_player_8h_source"/>
+      </node>
+      <node id="3">
+        <label>ShitEngine/Audio/AudioTrack.h</label>
+        <link refid="_audio_track_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ShitEngine/Component/AnimationComponent.h</label>
+        <link refid="_animation_component_8h_source"/>
+      </node>
+      <node id="12">
+        <label>ShitEngine/Component/Behavior.h</label>
+        <link refid="_behavior_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ShitEngine/Component/CameraComponent.h</label>
+        <link refid="_camera_component_8h_source"/>
+      </node>
+      <node id="11">
+        <label>ShitEngine/Component/Component.h</label>
+        <link refid="_component_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ShitEngine/Component/RendererComponent.h</label>
+        <link refid="_renderer_component_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ShitEngine/Component/SpriteRenderer.h</label>
+        <link refid="_sprite_renderer_8h_source"/>
+      </node>
+      <node id="13">
+        <label>ShitEngine/Component/TransformComponent.h</label>
+        <link refid="_transform_component_8h_source"/>
+      </node>
+      <node id="10">
+        <label>ShitEngine/Core/Config.h</label>
+        <link refid="_config_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Core/Core.h</label>
+        <link refid="_core_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ShitEngine/Core/Game.h</label>
+        <link refid="_game_8h_source"/>
+      </node>
+      <node id="15">
+        <label>ShitEngine/Core/Log.h</label>
+        <link refid="_log_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>ShitEngine/Core/Time.h</label>
+        <link refid="_time_8h_source"/>
+      </node>
+      <node id="18">
+        <label>ShitEngine/Core/Window.h</label>
+        <link refid="_window_8h_source"/>
+      </node>
+      <node id="19">
+        <label>ShitEngine/Event/Event.h</label>
+        <link refid="_event_8h_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ShitEngine/Event/EventBus.h</label>
+        <link refid="_event_bus_8h_source"/>
+      </node>
+      <node id="8">
+        <label>ShitEngine/GameObject/GameObject.h</label>
+        <link refid="_game_object_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ShitEngine/GameObject/Prefab.h</label>
+        <link refid="_prefab_8h_source"/>
+      </node>
+      <node id="21">
+        <label>ShitEngine/Input/Input.h</label>
+        <link refid="_input_8h_source"/>
+      </node>
+      <node id="22">
+        <label>ShitEngine/Render/Animation.h</label>
+        <link refid="_animation_8h_source"/>
+      </node>
+      <node id="23">
+        <label>ShitEngine/Render/RenderSystem.h</label>
+        <link refid="_render_system_8h_source"/>
+      </node>
+      <node id="24">
+        <label>ShitEngine/Render/Renderer.h</label>
+        <link refid="_renderer_8h_source"/>
+      </node>
+      <node id="25">
+        <label>ShitEngine/Render/Sprite.h</label>
+        <link refid="_sprite_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>ShitEngine/Render/SpriteSheet.h</label>
+        <link refid="_sprite_sheet_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>ShitEngine/Resource/AudioManager.h</label>
+        <link refid="_audio_manager_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ShitEngine/Resource/FontManager.h</label>
+        <link refid="_font_manager_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>ShitEngine/Resource/ResourceManager.h</label>
+        <link refid="_resource_manager_8h_source"/>
+      </node>
+      <node id="30">
+        <label>ShitEngine/Resource/TextureManager.h</label>
+        <link refid="_texture_manager_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ShitEngine/Scene/Scene.h</label>
+        <link refid="_scene_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>ShitEngine/Scene/SceneManager.h</label>
+        <link refid="_scene_manager_8h_source"/>
+      </node>
+      <node id="33">
+        <label>ShitEngine/System/BehaviorSystem.h</label>
+        <link refid="_behavior_system_8h_source"/>
+      </node>
+      <node id="32">
+        <label>ShitEngine/System/System.h</label>
+        <link refid="_system_8h_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_core_8h_1ad27cc17b25bb93134368d5eb21126eae" prot="public" static="no">
+        <name>BIT</name>
+        <param><defname>x</defname></param>
+        <initializer>(1 &lt;&lt; x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Core.h" line="15" column="9" bodyfile="ShitEngine/Core/Core.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Core/Core.h"/>
+  </compounddef>
+</doxygen>

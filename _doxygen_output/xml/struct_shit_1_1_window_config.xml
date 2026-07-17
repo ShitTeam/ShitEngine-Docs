@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="struct_shit_1_1_window_config" kind="struct" language="C++" prot="public">
+    <compoundname>Shit::WindowConfig</compoundname>
+    <includes refid="_config_8h" local="no">Config.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_shit_1_1_window_config_1ac30fed21fe991cc8475ce543929f8b72" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <qualifiedname>Shit::WindowConfig::title</qualifiedname>
+        <initializer>= &quot;Example&quot;</initializer>
+        <briefdescription>
+<para>窗口标题 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Config.h" line="17" column="13" bodyfile="ShitEngine/Core/Config.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_shit_1_1_window_config_1aca34d28e3d8bcbcadb8edb4e3af24f8c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>Shit::WindowConfig::width</qualifiedname>
+        <initializer>= 1280</initializer>
+        <briefdescription>
+<para>逻辑分辨率宽度 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Config.h" line="18" column="14" bodyfile="ShitEngine/Core/Config.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_shit_1_1_window_config_1ab2e78c61905b4419fcc7b4cfc500fe85" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>Shit::WindowConfig::height</qualifiedname>
+        <initializer>= 720</initializer>
+        <briefdescription>
+<para>逻辑分辨率高度 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Config.h" line="19" column="14" bodyfile="ShitEngine/Core/Config.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_shit_1_1_window_config_1a8705191cbc0ffb20367a9ef2ba000194" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int targetFPS</definition>
+        <argsstring></argsstring>
+        <name>targetFPS</name>
+        <qualifiedname>Shit::WindowConfig::targetFPS</qualifiedname>
+        <initializer>= 144</initializer>
+        <briefdescription>
+<para>帧率上限 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Core/Config.h" line="20" column="14" bodyfile="ShitEngine/Core/Config.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>窗口配置 </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>WindowConfig</label>
+        <link refid="struct_shit_1_1_window_config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>title</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShitEngine/Core/Config.h" line="16" column="1" bodyfile="ShitEngine/Core/Config.h" bodystart="16" bodyend="21"/>
+    <listofallmembers>
+      <member refid="struct_shit_1_1_window_config_1ab2e78c61905b4419fcc7b4cfc500fe85" prot="public" virt="non-virtual"><scope>Shit::WindowConfig</scope><name>height</name></member>
+      <member refid="struct_shit_1_1_window_config_1a8705191cbc0ffb20367a9ef2ba000194" prot="public" virt="non-virtual"><scope>Shit::WindowConfig</scope><name>targetFPS</name></member>
+      <member refid="struct_shit_1_1_window_config_1ac30fed21fe991cc8475ce543929f8b72" prot="public" virt="non-virtual"><scope>Shit::WindowConfig</scope><name>title</name></member>
+      <member refid="struct_shit_1_1_window_config_1aca34d28e3d8bcbcadb8edb4e3af24f8c" prot="public" virt="non-virtual"><scope>Shit::WindowConfig</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

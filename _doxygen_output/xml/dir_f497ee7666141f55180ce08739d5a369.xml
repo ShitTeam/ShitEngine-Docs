@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="dir_f497ee7666141f55180ce08739d5a369" kind="dir">
+    <compoundname>ShitEngine/Core</compoundname>
+    <innerfile refid="_config_8h">Config.h</innerfile>
+    <innerfile refid="_core_8h">Core.h</innerfile>
+    <innerfile refid="_game_8h">Game.h</innerfile>
+    <innerfile refid="_log_8h">Log.h</innerfile>
+    <innerfile refid="pch_8h">pch.h</innerfile>
+    <innerfile refid="_time_8h">Time.h</innerfile>
+    <innerfile refid="_window_8h">Window.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Core/"/>
+  </compounddef>
+</doxygen>

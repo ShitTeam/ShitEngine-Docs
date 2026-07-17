@@ -1,0 +1,934 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.17.0" xml:lang="zh">
+  <compound refid="class_shit_1_1_animation" kind="class"><name>Shit::Animation</name>
+    <member refid="class_shit_1_1_animation_1a6164ea1dfbb755acef79d439664aa705" kind="variable"><name>m_frames</name></member>
+    <member refid="class_shit_1_1_animation_1a3dd558efdd729250e555b176b42f1dbd" kind="variable"><name>m_duration</name></member>
+    <member refid="class_shit_1_1_animation_1a3cb72cf187c2d3f0d5a64c05ee9bea07" kind="variable"><name>m_loop</name></member>
+    <member refid="class_shit_1_1_animation_1a58936f4cd9797c6b52d287c172b90756" kind="function"><name>Animation</name></member>
+    <member refid="class_shit_1_1_animation_1aee6bf19aac7ec2c3616d44496f7bed5b" kind="function"><name>~Animation</name></member>
+    <member refid="class_shit_1_1_animation_1af73ed4af698e8d2f6edd8190f67c91a2" kind="function"><name>addFrame</name></member>
+    <member refid="class_shit_1_1_animation_1aba968763860730661f2fabb8ab934629" kind="function"><name>addFrames</name></member>
+    <member refid="class_shit_1_1_animation_1a2683bd69f50c551f54cb35e8b83f4c6b" kind="function"><name>getFrame</name></member>
+    <member refid="class_shit_1_1_animation_1aa029c7e4c1ad0858c1a7e7e7309e1cb2" kind="function"><name>setLoop</name></member>
+    <member refid="class_shit_1_1_animation_1a8439272c49d21d8b6362f4cc9dc0e040" kind="function"><name>setDuration</name></member>
+    <member refid="class_shit_1_1_animation_1a78155a2b0119ac92d377fa404e348a98" kind="function"><name>isLooping</name></member>
+    <member refid="class_shit_1_1_animation_1a1b376b64bd225fd20c4d5e502437eced" kind="function"><name>getDuration</name></member>
+    <member refid="class_shit_1_1_animation_1a020bc01fe5af38371c152924e10e817e" kind="function"><name>getFrameCount</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_animation_component" kind="class"><name>Shit::AnimationComponent</name>
+    <member refid="class_shit_1_1_animation_component_1a1d8739506e9d60bf44d66c687203a9e2" kind="variable"><name>m_animations</name></member>
+    <member refid="class_shit_1_1_animation_component_1ae1b0566c673694283cf332704d118000" kind="variable"><name>m_currentAnimation</name></member>
+    <member refid="class_shit_1_1_animation_component_1a86dd73c5fe2939d831e3d72add2e5085" kind="variable"><name>m_currentAnimationName</name></member>
+    <member refid="class_shit_1_1_animation_component_1acc6f0a0b4ba267d7a7e7ec5843104f6b" kind="variable"><name>m_currentTime</name></member>
+    <member refid="class_shit_1_1_animation_component_1aeeb2f74f794dfa8896f9d5d706159ac9" kind="variable"><name>m_isPlaying</name></member>
+    <member refid="class_shit_1_1_animation_component_1a496292f54adcd619208a51dadca5c2e0" kind="variable"><name>m_isPaused</name></member>
+    <member refid="class_shit_1_1_animation_component_1ace67d3c9fe243d83ff4a3b49d5754d88" kind="function"><name>AnimationComponent</name></member>
+    <member refid="class_shit_1_1_animation_component_1ab88abaa7bea3a251b829b19ac66da7cc" kind="function"><name>~AnimationComponent</name></member>
+    <member refid="class_shit_1_1_animation_component_1acbef2688cd43fd22241759f89fe12d28" kind="function"><name>onAttach</name></member>
+    <member refid="class_shit_1_1_animation_component_1a14127bfdcd55437a44ca5a76b916d899" kind="function"><name>onStart</name></member>
+    <member refid="class_shit_1_1_animation_component_1ae15f5dc3626bedd435b05d234dabcb85" kind="function"><name>onUpdate</name></member>
+    <member refid="class_shit_1_1_animation_component_1aee7be93617a6078496df31830d454990" kind="function"><name>onDestroy</name></member>
+    <member refid="class_shit_1_1_animation_component_1af45a49555d112977f9b820ddeedfad9e" kind="function"><name>addAnimation</name></member>
+    <member refid="class_shit_1_1_animation_component_1a35603aab48b6df36d41ee5c7b3dccc5a" kind="function"><name>play</name></member>
+    <member refid="class_shit_1_1_animation_component_1a8c528baf37154d347366083f0f816846" kind="function"><name>stop</name></member>
+    <member refid="class_shit_1_1_animation_component_1a7167f5c196fc5e167bfabde1a730e81d" kind="function"><name>pause</name></member>
+    <member refid="class_shit_1_1_animation_component_1a41de8150eff044a237990c271d57ea27" kind="function"><name>resume</name></member>
+    <member refid="class_shit_1_1_animation_component_1adbfc61cd3f1ee21a9bb61c6f8d20ff99" kind="function"><name>play</name></member>
+    <member refid="class_shit_1_1_animation_component_1a389ad71786b00ae81f69060f153509d2" kind="function"><name>isPlaying</name></member>
+    <member refid="class_shit_1_1_animation_component_1a48ffb22c4b73bf70c93e036abeab81f2" kind="function"><name>isPaused</name></member>
+    <member refid="class_shit_1_1_animation_component_1a1ac952e9527ddb8dfa0f379c5a3a26d5" kind="function"><name>getCurrentAnimationName</name></member>
+    <member refid="class_shit_1_1_animation_component_1ae1ef4f14e937c3cfd5332063a74f740e" kind="function"><name>applyCurrentFrame</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_audio_manager" kind="class"><name>Shit::AudioManager</name>
+    <member refid="class_shit_1_1_audio_manager_1a54c1252abc87a78a301e6b6984470408" kind="friend"><name>ResourceManager</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a5bec004d4a0ce38567a111daa8d70974" kind="variable"><name>m_mixer</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a7440721209722bc7cf1343148b8f0a30" kind="variable"><name>m_audioCache</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a6c9b10afa36efd5acc683e19d15cd968" kind="function"><name>AudioManager</name></member>
+    <member refid="class_shit_1_1_audio_manager_1aca4dc1c68e0df56c304fada6b20089b9" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a80272ef45a7324adeff5a67cb57c7cfb" kind="function"><name>AudioManager</name></member>
+    <member refid="class_shit_1_1_audio_manager_1ab947eeee488379d402e4e98ec85ccb5d" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a01d94dbb0173cede5c56004b20562671" kind="function"><name>~AudioManager</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a28bbb5ca755c79e4c1efe17f70117e91" kind="function"><name>AudioManager</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a3d7e0d597f9b22c0d093550f7e71d4ee" kind="function"><name>loadAudio</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a34c1d8cbd3fd5888d3c0849146652f70" kind="function"><name>getAudio</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a52c8dca62c109b8f9a8fc6ef79d082f2" kind="function"><name>unloadAudio</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a0750c0c4d04a6a8adffdec67a9e9714c" kind="function"><name>clearAudio</name></member>
+    <member refid="class_shit_1_1_audio_manager_1a21f3340e7168e5a4f921957524d53085" kind="function"><name>setMixer</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_audio_player" kind="class"><name>Shit::AudioPlayer</name>
+    <member refid="class_shit_1_1_audio_player_1a7b23f1bb52adb766f853718b363c40fc" kind="variable"><name>m_mixer</name></member>
+    <member refid="class_shit_1_1_audio_player_1aa55e98882d3abac5682a76cee6d43d3d" kind="variable"><name>m_isInited</name></member>
+    <member refid="class_shit_1_1_audio_player_1a94e653033a035c14d06407f1fc338b31" kind="variable"><name>m_masterGain</name></member>
+    <member refid="class_shit_1_1_audio_player_1a29f3c6b3d165abe53924f37cae5cf415" kind="variable"><name>m_groups</name></member>
+    <member refid="class_shit_1_1_audio_player_1a8edce3888c7acad2bca2f6e96dd138ef" kind="variable"><name>m_tracks</name></member>
+    <member refid="class_shit_1_1_audio_player_1ae596c367662c7f3b19b6626b89ffc08b" kind="function"><name>Init</name></member>
+    <member refid="class_shit_1_1_audio_player_1a62a73aff7afffe2fba7c2e47e07d9134" kind="function"><name>Destroy</name></member>
+    <member refid="class_shit_1_1_audio_player_1a554d0f30ae93d2787435dca9a46c6c5d" kind="function"><name>Update</name></member>
+    <member refid="class_shit_1_1_audio_player_1aa28102fc6628113f8df2bf137a56dbf4" kind="function"><name>CreateTrackGroup</name></member>
+    <member refid="class_shit_1_1_audio_player_1a1808a18d4251b068f5918292e02ee3bd" kind="function"><name>GetTrackGroup</name></member>
+    <member refid="class_shit_1_1_audio_player_1a13693ec1551b1ac57ae42c52fc5ce02c" kind="function"><name>Play</name></member>
+    <member refid="class_shit_1_1_audio_player_1aa5a1799fb46cab51c9d242d43d06ac20" kind="function"><name>SetMasterVolume</name></member>
+    <member refid="class_shit_1_1_audio_player_1ae29e26e89211f70c3f06d7d50b649227" kind="function"><name>GetMasterVolume</name></member>
+    <member refid="class_shit_1_1_audio_player_1aa0fdd77bbc34ecfcd2089fdf8c97505f" kind="function"><name>PauseAll</name></member>
+    <member refid="class_shit_1_1_audio_player_1a7ad26de4d9552f0c317ccc67403f1194" kind="function"><name>ResumeAll</name></member>
+    <member refid="class_shit_1_1_audio_player_1ad4314c6bc19a633e5d62c20b6eb85064" kind="function"><name>StopAll</name></member>
+    <member refid="class_shit_1_1_audio_player_1aa89cb3cfdbdd384a906bf1fc873f3ab7" kind="function"><name>ApplyTrackGain</name></member>
+    <member refid="class_shit_1_1_audio_player_1a9fd8778cfd0e762b0d8a167dbc755fdb" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_audio_player_1a71445503ff71241a1394d15d7178441b" kind="function"><name>AudioPlayer</name></member>
+    <member refid="class_shit_1_1_audio_player_1a778064d7e9f13d69e058b35d76dbd994" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_audio_player_1ab4db3ae581702270e3031456a247fc4a" kind="function"><name>AudioPlayer</name></member>
+    <member refid="class_shit_1_1_audio_player_1adf093c1b93ce2cbc3ac83077d24f5409" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_audio_player_1aa8a6ef6a920d94256be051b7593093a9" kind="function"><name>AudioPlayer</name></member>
+    <member refid="class_shit_1_1_audio_player_1a2d8697ee19cf996799c66b8265ca3ccf" kind="function"><name>~AudioPlayer</name></member>
+    <member refid="class_shit_1_1_audio_player_1aee8048628ff2b5c026c9e15acdcaacb8" kind="function"><name>init</name></member>
+    <member refid="class_shit_1_1_audio_player_1a3a80b6032f86a56bec74609034b3246f" kind="function"><name>destroy</name></member>
+    <member refid="class_shit_1_1_audio_player_1ac5c54df7ed3b930268c8d7752c101725" kind="function"><name>update</name></member>
+    <member refid="class_shit_1_1_audio_player_1a397ad0ad5b988fc8a0886f5f83200831" kind="function"><name>createTrackGroup</name></member>
+    <member refid="class_shit_1_1_audio_player_1ac5273715a570710e827f694da33dc139" kind="function"><name>getTrackGroup</name></member>
+    <member refid="class_shit_1_1_audio_player_1a1d982cbeca2c1a22ad3e1e777ff6a548" kind="function"><name>play</name></member>
+    <member refid="class_shit_1_1_audio_player_1a177060dc273946078ca9b3ebaae509b7" kind="function"><name>setMasterVolume</name></member>
+    <member refid="class_shit_1_1_audio_player_1a8ae0e710d094445dec14dd3f9fed4d9f" kind="function"><name>pauseAll</name></member>
+    <member refid="class_shit_1_1_audio_player_1a6818a4cf7e305e87ccc30dc793b10323" kind="function"><name>resumeAll</name></member>
+    <member refid="class_shit_1_1_audio_player_1a4823aa91e33925c0da5969f5011c07da" kind="function"><name>stopAll</name></member>
+    <member refid="class_shit_1_1_audio_player_1a96429d53927e1bb8e466a33c346522ec" kind="function"><name>applyTrackGain</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_audio_track" kind="class"><name>Shit::AudioTrack</name>
+    <member refid="class_shit_1_1_audio_track_1a730923163cee8657080776520dba6a57" kind="friend"><name>AudioPlayer</name></member>
+    <member refid="class_shit_1_1_audio_track_1a2bc59e86369837e9c28a2294669a347a" kind="friend"><name>AudioTrackGroup</name></member>
+    <member refid="class_shit_1_1_audio_track_1a17b1303b93313aee4579dd6f190963b7" kind="variable"><name>m_handle</name></member>
+    <member refid="class_shit_1_1_audio_track_1a537350b591ed0ccd7d13998525a2a987" kind="variable"><name>m_gain</name></member>
+    <member refid="class_shit_1_1_audio_track_1a2dc44a9ad829994a23fc4cd1797efa07" kind="variable"><name>m_loops</name></member>
+    <member refid="class_shit_1_1_audio_track_1a94a6813e56e122b2467c8e247d1f9654" kind="variable"><name>m_group</name></member>
+    <member refid="class_shit_1_1_audio_track_1a28aab4c8c7ed694a633c97f2f3c6d3f2" kind="variable"><name>m_started</name></member>
+    <member refid="class_shit_1_1_audio_track_1a11968d4066f5092a27ef7ec3b1ecb3ed" kind="variable"><name>m_paused</name></member>
+    <member refid="class_shit_1_1_audio_track_1ae261c483b247655d209b9eed08880e42" kind="function"><name>AudioTrack</name></member>
+    <member refid="class_shit_1_1_audio_track_1af5bb96b535cca6cb725b5a8ccf4cdec4" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_audio_track_1aa3a03ab113c0336438e6a982b9ac89c9" kind="function"><name>AudioTrack</name></member>
+    <member refid="class_shit_1_1_audio_track_1a369fc388c555df006dad6cac4135440f" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_audio_track_1a602457f33c45f9a170a4683c5ae75af6" kind="function"><name>~AudioTrack</name></member>
+    <member refid="class_shit_1_1_audio_track_1a7167f5c196fc5e167bfabde1a730e81d" kind="function"><name>pause</name></member>
+    <member refid="class_shit_1_1_audio_track_1a41de8150eff044a237990c271d57ea27" kind="function"><name>resume</name></member>
+    <member refid="class_shit_1_1_audio_track_1a8c528baf37154d347366083f0f816846" kind="function"><name>stop</name></member>
+    <member refid="class_shit_1_1_audio_track_1ac9fdacb844713965161bc991e8452ade" kind="function"><name>setVolume</name></member>
+    <member refid="class_shit_1_1_audio_track_1adde132ea7b25cca5886eb5f9bcc20f58" kind="function"><name>getVolume</name></member>
+    <member refid="class_shit_1_1_audio_track_1a27324fa8614e450c68a66ac52239a618" kind="function"><name>setLooping</name></member>
+    <member refid="class_shit_1_1_audio_track_1aeaa26ba3ffcc274da8a32ce7d63eba41" kind="function"><name>getLooping</name></member>
+    <member refid="class_shit_1_1_audio_track_1a389ad71786b00ae81f69060f153509d2" kind="function"><name>isPlaying</name></member>
+    <member refid="class_shit_1_1_audio_track_1a48ffb22c4b73bf70c93e036abeab81f2" kind="function"><name>isPaused</name></member>
+    <member refid="class_shit_1_1_audio_track_1a489985f47db5f016d8ee9629140f1854" kind="function"><name>isFinished</name></member>
+    <member refid="class_shit_1_1_audio_track_1a964d1ebf3ab36c2bc44866ae1f59e6df" kind="function"><name>AudioTrack</name></member>
+    <member refid="class_shit_1_1_audio_track_1a29c4fed8162bd5ab8f1e998435502179" kind="function"><name>AudioTrack</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_audio_track_group" kind="class"><name>Shit::AudioTrackGroup</name>
+    <member refid="class_shit_1_1_audio_track_group_1a730923163cee8657080776520dba6a57" kind="friend"><name>AudioPlayer</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1af25123b00bc5b424d5a76caca903c939" kind="friend"><name>AudioTrack</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1adb41893ba19e889e56c559f25fc1a68a" kind="variable"><name>m_name</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1a537350b591ed0ccd7d13998525a2a987" kind="variable"><name>m_gain</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1ad0ff7a444451be9b0a89d7be0901b07f" kind="variable"><name>m_tracks</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1ac5347c2164caeac0caf59a8d4c7ddd7c" kind="function"><name>~AudioTrackGroup</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1a8ae0e710d094445dec14dd3f9fed4d9f" kind="function"><name>pauseAll</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1a6818a4cf7e305e87ccc30dc793b10323" kind="function"><name>resumeAll</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1a4823aa91e33925c0da5969f5011c07da" kind="function"><name>stopAll</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1ac9fdacb844713965161bc991e8452ade" kind="function"><name>setVolume</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1adde132ea7b25cca5886eb5f9bcc20f58" kind="function"><name>getVolume</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1a3fd7335faa33dce2f87c7e50eef3e294" kind="function"><name>getName</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1add10f7584b17691ef3db7f5b68dc08f1" kind="function"><name>AudioTrackGroup</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1aff3abc46b2815ea3541faf85069dcfc3" kind="function"><name>registerTrack</name></member>
+    <member refid="class_shit_1_1_audio_track_group_1a486360bc582eb15bb377ab0ceb03a9cb" kind="function"><name>unregisterTrack</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_behavior" kind="class"><name>Shit::Behavior</name>
+    <member refid="class_shit_1_1_behavior_1a00df87c957d8f7ee0fc51f07a0542f4a" kind="friend"><name>GameObject</name></member>
+    <member refid="class_shit_1_1_behavior_1a04b5b6d3587350e5f8834fedeb9cab9e" kind="variable"><name>m_isStarted</name></member>
+    <member refid="class_shit_1_1_behavior_1a4f24a7153019bf68d0ec7f99428db90e" kind="function"><name>Behavior</name></member>
+    <member refid="class_shit_1_1_behavior_1a505b38eb8ed0bab19cf378f5e35854d9" kind="function"><name>~Behavior</name></member>
+    <member refid="class_shit_1_1_behavior_1acbe76e0ea44ef342a8c85726573860d4" kind="function"><name>onCreate</name></member>
+    <member refid="class_shit_1_1_behavior_1acbef2688cd43fd22241759f89fe12d28" kind="function"><name>onAttach</name></member>
+    <member refid="class_shit_1_1_behavior_1a62c5b2c91580204a54e2d32e9594e6e9" kind="function"><name>onStart</name></member>
+    <member refid="class_shit_1_1_behavior_1ac521702842354e4c4c71d4cf28b1db0b" kind="function"><name>onUpdate</name></member>
+    <member refid="class_shit_1_1_behavior_1ad43b1fbcd8f355c3f312fa47fb3be914" kind="function"><name>onDetach</name></member>
+    <member refid="class_shit_1_1_behavior_1aee7be93617a6078496df31830d454990" kind="function"><name>onDestroy</name></member>
+    <member refid="class_shit_1_1_behavior_1ac1991ea0e286fbb461b60c8c9299d781" kind="function"><name>isStarted</name></member>
+    <member refid="class_shit_1_1_behavior_1aa28282f574997057b62d336af9198bb2" kind="function"><name>setStarted</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_behavior_system" kind="class"><name>Shit::BehaviorSystem</name>
+    <member refid="class_shit_1_1_behavior_system_1a9b49f77b02b3515aaa221f961281a1d3" kind="variable"><name>m_behaviors</name></member>
+    <member refid="class_shit_1_1_behavior_system_1a76b57f6871fc955f235012c894b44b0f" kind="variable"><name>m_pendingBehaviors</name></member>
+    <member refid="class_shit_1_1_behavior_system_1a580b6b2767a0695fe483d22b5e7d074a" kind="function"><name>BehaviorSystem</name></member>
+    <member refid="class_shit_1_1_behavior_system_1a9bcaafd127c8f7c68d3d22ad444aadea" kind="function"><name>~BehaviorSystem</name></member>
+    <member refid="class_shit_1_1_behavior_system_1a44137bb65de2396875934e48a6ee5099" kind="function"><name>update</name></member>
+    <member refid="class_shit_1_1_behavior_system_1ae1cf30cae681d95a94934492ae7ea627" kind="function"><name>destroy</name></member>
+    <member refid="class_shit_1_1_behavior_system_1ade5bdfcef86c78042aa1357822c17969" kind="function"><name>registerBehavior</name></member>
+    <member refid="class_shit_1_1_behavior_system_1a8d5db63d546eb6c8d6c8de2eeb18658d" kind="function"><name>unregisterBehavior</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_camera_component" kind="class"><name>Shit::CameraComponent</name>
+    <member refid="class_shit_1_1_camera_component_1aa440e2798949935ec1327cdd94129071" kind="variable"><name>m_worldSize</name></member>
+    <member refid="class_shit_1_1_camera_component_1ab3928ada13476507c935516b92568439" kind="variable"><name>m_zoom</name></member>
+    <member refid="class_shit_1_1_camera_component_1aebd544741012b3bab43cfbbc4e9d28f3" kind="variable"><name>m_priority</name></member>
+    <member refid="class_shit_1_1_camera_component_1ab47207eca106f79acd160a0eebcf0f8d" kind="variable"><name>m_viewportRatio</name></member>
+    <member refid="class_shit_1_1_camera_component_1a0935f7489d0a9fdc768a68e4b585bae6" kind="function"><name>CameraComponent</name></member>
+    <member refid="class_shit_1_1_camera_component_1acbef2688cd43fd22241759f89fe12d28" kind="function"><name>onAttach</name></member>
+    <member refid="class_shit_1_1_camera_component_1aee7be93617a6078496df31830d454990" kind="function"><name>onDestroy</name></member>
+    <member refid="class_shit_1_1_camera_component_1a4e6ff1718ba5e79b6ffeeb145ebfa12c" kind="function"><name>worldToScreen</name></member>
+    <member refid="class_shit_1_1_camera_component_1adacc3723e92b1b17f2c0cebd59fb006f" kind="function"><name>screenToWorld</name></member>
+    <member refid="class_shit_1_1_camera_component_1a4f49ac7d5921e6e3595517ffa6dc5971" kind="function"><name>getPosition</name></member>
+    <member refid="class_shit_1_1_camera_component_1a0365ad1e60466b1f48a2ecadc8f16734" kind="function"><name>getSize</name></member>
+    <member refid="class_shit_1_1_camera_component_1a84fd3fa8518393f35603dbd797b64807" kind="function"><name>getZoom</name></member>
+    <member refid="class_shit_1_1_camera_component_1ad65045bcc70661e1e745edbb1da0377b" kind="function"><name>getPriority</name></member>
+    <member refid="class_shit_1_1_camera_component_1acf78bf882d3f4bcbecd88e8538c0c66f" kind="function"><name>getPixelPerUnit</name></member>
+    <member refid="class_shit_1_1_camera_component_1ac6fbdf7e9178c78eb3c69f0b041b6abc" kind="function"><name>setSize</name></member>
+    <member refid="class_shit_1_1_camera_component_1ae0e04ac9c7535158dd7f0d73d9e8501c" kind="function"><name>setZoom</name></member>
+    <member refid="class_shit_1_1_camera_component_1a257fc8f8148265762ab350a6a8563ffc" kind="function"><name>setPriority</name></member>
+    <member refid="class_shit_1_1_camera_component_1af46f9f1cacade2d0de7f898d8950b9da" kind="function"><name>getViewportRatio</name></member>
+    <member refid="class_shit_1_1_camera_component_1a0f25b79a5807f94786a01bb8e28932a0" kind="function"><name>setViewportRatio</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_component" kind="class"><name>Shit::Component</name>
+    <member refid="class_shit_1_1_component_1a00df87c957d8f7ee0fc51f07a0542f4a" kind="friend"><name>GameObject</name></member>
+    <member refid="class_shit_1_1_component_1aa1aee3acda958839f017f93f6ed1bbb3" kind="variable"><name>m_owner</name></member>
+    <member refid="class_shit_1_1_component_1ae8fd281c96362b5079bc11b6ae10007a" kind="variable"><name>m_isRegistered</name></member>
+    <member refid="class_shit_1_1_component_1a0171e1571f18dc6a27c8b041de55feec" kind="function"><name>Component</name></member>
+    <member refid="class_shit_1_1_component_1ab8905908be361c6fce216879f4739d98" kind="function"><name>~Component</name></member>
+    <member refid="class_shit_1_1_component_1a58db3b5933199c866796fade5e1ad722" kind="function"><name>onCreate</name></member>
+    <member refid="class_shit_1_1_component_1a6f4c9e6fe81d4bffc712d4d0ae4d72ff" kind="function"><name>onAttach</name></member>
+    <member refid="class_shit_1_1_component_1aae1f5204fbabb92a0de013b8f0fd6616" kind="function"><name>onDetach</name></member>
+    <member refid="class_shit_1_1_component_1a448d46f0dcad2b19c77f8a2cc880127c" kind="function"><name>onDestroy</name></member>
+    <member refid="class_shit_1_1_component_1a7a86c1a5c9cb8bc0be998d276c438054" kind="function"><name>Component</name></member>
+    <member refid="class_shit_1_1_component_1ace504c89f605c2e53f2450021ebca56e" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_component_1aa85c694df3855843a20a64cb0fc17233" kind="function"><name>Component</name></member>
+    <member refid="class_shit_1_1_component_1a34f2dae077ca6d1b6e3a39201c79c796" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_component_1a9b36b6de005b18dd7c77687d8621774a" kind="function"><name>getOwner</name></member>
+    <member refid="class_shit_1_1_component_1ab3318796ce9f4c658aa5cd5b65719246" kind="function"><name>isRegistered</name></member>
+    <member refid="class_shit_1_1_component_1a70aa1ac6311fc7835071ef5e7bbf956f" kind="function"><name>setOwner</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_config" kind="class"><name>Shit::Config</name>
+    <member refid="class_shit_1_1_config_1ad4bf28fa9af7d779714ba7517d2785bc" kind="variable"><name>m_projectConfig</name></member>
+    <member refid="class_shit_1_1_config_1a625bb5356daf142220be86b9835e481e" kind="variable"><name>m_windowConfig</name></member>
+    <member refid="class_shit_1_1_config_1aee8048628ff2b5c026c9e15acdcaacb8" kind="function"><name>init</name></member>
+    <member refid="class_shit_1_1_config_1af061be3a4cb4f6095c8f35912f912560" kind="function"><name>loadFromJson</name></member>
+    <member refid="class_shit_1_1_config_1a52b64caee9a1f9f56acb8ba05ab06d72" kind="function"><name>Config</name></member>
+    <member refid="class_shit_1_1_config_1a089f18c66a3d828e04c10ee901611cfb" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_config_1aea5728c345bdbe71b0e14a9dcd84ad20" kind="function"><name>Config</name></member>
+    <member refid="class_shit_1_1_config_1a2e1f3411f59a0088e9c1f621f33332b9" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_config_1a002f9783c98122bf130215bbeaa53cc1" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_config_1ae596c367662c7f3b19b6626b89ffc08b" kind="function"><name>Init</name></member>
+    <member refid="class_shit_1_1_config_1a8717a3fba609a3f42593984e6e27151c" kind="function"><name>GetProjectConfig</name></member>
+    <member refid="class_shit_1_1_config_1ae3560ebd4b4cd8a9f94c14f38c95b6d0" kind="function"><name>GetWindowConfig</name></member>
+    <member refid="class_shit_1_1_config_1a808e2d97b647173636c3472d045eb666" kind="function"><name>Config</name></member>
+    <member refid="class_shit_1_1_config_1af34fc1ed6de5dca2dcdb6690e9128438" kind="function"><name>~Config</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_event" kind="struct"><name>Shit::Event</name>
+    <member refid="struct_shit_1_1_event_1ab259bf8791b9706ecd60c91988165e18" kind="function"><name>~Event</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_event_bus" kind="class"><name>Shit::EventBus</name>
+    <member refid="class_shit_1_1_event_bus_1a74f6a4a2f0198c7132749234a6d5d63f" kind="typedef"><name>HandlerID</name></member>
+    <member refid="class_shit_1_1_event_bus_1af4c3c2d1685d592a7c55613abcbedc47" kind="variable"><name>m_listeners</name></member>
+    <member refid="class_shit_1_1_event_bus_1ad370ffc24e33d43351e8767b23fd80e7" kind="variable"><name>m_eventQueue</name></member>
+    <member refid="class_shit_1_1_event_bus_1a5c751dae9068bdb864af14129bbe0fa1" kind="variable"><name>m_mutex</name></member>
+    <member refid="class_shit_1_1_event_bus_1af02097281be23f3b7f1af766a4575c8f" kind="variable"><name>m_nextID</name></member>
+    <member refid="class_shit_1_1_event_bus_1ad0640c08d4605baad81a07600d73baf3" kind="function"><name>Subscribe</name></member>
+    <member refid="class_shit_1_1_event_bus_1a5eeff6d40ef1719892d241810f6506b4" kind="function"><name>Unsubscribe</name></member>
+    <member refid="class_shit_1_1_event_bus_1ad800bc2ed091aea074aeed2b65f7b506" kind="function"><name>Emit</name></member>
+    <member refid="class_shit_1_1_event_bus_1ae7c1278f3c351b9d96c8715ed23e257d" kind="function"><name>ProcessEvents</name></member>
+    <member refid="class_shit_1_1_event_bus_1a0a411c917b6c53f4bbcf8e315c11fee8" kind="function"><name>Clear</name></member>
+    <member refid="class_shit_1_1_event_bus_1af7ffedb25d7bc40a105a65f0a9cb7943" kind="function"><name>ClearAll</name></member>
+    <member refid="class_shit_1_1_event_bus_1a0297aa5d256dc97db07c371fbada9a36" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_event_bus_1aea518fa2333bad9241acb92f499b1c62" kind="function"><name>EventBus</name></member>
+    <member refid="class_shit_1_1_event_bus_1ad795e0dee38a24427b9c200d40c48abf" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_event_bus_1ab4fc8ca0de8c342fb85269a7d6c21c9b" kind="function"><name>EventBus</name></member>
+    <member refid="class_shit_1_1_event_bus_1a6c2d6f38a9c25314d460f91f1c2a801c" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_event_bus_1a975a2ab5198aedb534ac0bde31a43240" kind="function"><name>EventBus</name></member>
+    <member refid="class_shit_1_1_event_bus_1a78ae8b250de449cec76cb2a92ce5b17b" kind="function"><name>~EventBus</name></member>
+    <member refid="class_shit_1_1_event_bus_1a800d88718321bb856b65c57ec0d6a023" kind="function"><name>subscribe</name></member>
+    <member refid="class_shit_1_1_event_bus_1ad4244bcffe831e61fed1034329a349b7" kind="function"><name>unsubscribe</name></member>
+    <member refid="class_shit_1_1_event_bus_1a75487443a98b9dba6251f2056843483a" kind="function"><name>emit</name></member>
+    <member refid="class_shit_1_1_event_bus_1ad5473b44af17c41807bd98b6d1da298b" kind="function"><name>processEvents</name></member>
+    <member refid="class_shit_1_1_event_bus_1a2dfb09258b61f0388aeb2a37cc34819b" kind="function"><name>clear</name></member>
+    <member refid="class_shit_1_1_event_bus_1a798729dca95209ecdc609807a653a2bf" kind="function"><name>clearAll</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_font_manager" kind="class"><name>Shit::FontManager</name>
+    <member refid="class_shit_1_1_font_manager_1a54c1252abc87a78a301e6b6984470408" kind="friend"><name>ResourceManager</name></member>
+    <member refid="class_shit_1_1_font_manager_1a9d77e0b08aad7f25ae87d63d83f422ed" kind="variable"><name>m_fontSize</name></member>
+    <member refid="class_shit_1_1_font_manager_1aa0851a51ef581296bc95039f910187ba" kind="variable"><name>m_fonts</name></member>
+    <member refid="class_shit_1_1_font_manager_1a5520f17d8d70b43bceaaba0085ee5905" kind="function"><name>FontManager</name></member>
+    <member refid="class_shit_1_1_font_manager_1a3f2667eaea1dbae0a96236f8e2a87b44" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_font_manager_1a0315701b5ee6b96d3fae9de3c71c7eae" kind="function"><name>FontManager</name></member>
+    <member refid="class_shit_1_1_font_manager_1af241907d5fd747fe778ade6f730ac263" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_font_manager_1a3edda2d47c72c5cec1233a8f2b6d571a" kind="function"><name>~FontManager</name></member>
+    <member refid="class_shit_1_1_font_manager_1aa9983d28cc53c9b59feee44989c2890f" kind="function"><name>FontManager</name></member>
+    <member refid="class_shit_1_1_font_manager_1a2b1a49ad8433dc43514addd1e64c286c" kind="function"><name>loadFont</name></member>
+    <member refid="class_shit_1_1_font_manager_1acf303fdcc50b010c968354ed365d8b1e" kind="function"><name>getFont</name></member>
+    <member refid="class_shit_1_1_font_manager_1ad2504e6799063cf911328131df416e2d" kind="function"><name>unloadFont</name></member>
+    <member refid="class_shit_1_1_font_manager_1a606c9f21aacfff6d3ad4d4190536cef2" kind="function"><name>clearFont</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_game" kind="class"><name>Shit::Game</name>
+    <member refid="class_shit_1_1_game_1aeed46316a0437c8c259cf2e278a230d4" kind="variable"><name>m_isRunning</name></member>
+    <member refid="class_shit_1_1_game_1aa55e98882d3abac5682a76cee6d43d3d" kind="variable"><name>m_isInited</name></member>
+    <member refid="class_shit_1_1_game_1a98d87ba6bde3f389e92664a2ef9bfcb1" kind="function"><name>Game</name></member>
+    <member refid="class_shit_1_1_game_1ac168f724bc6694d4f9d4c87f8c0189ba" kind="function"><name>~Game</name></member>
+    <member refid="class_shit_1_1_game_1aee8048628ff2b5c026c9e15acdcaacb8" kind="function"><name>init</name></member>
+    <member refid="class_shit_1_1_game_1a13a43e6d814de94978c515cb084873b1" kind="function"><name>run</name></member>
+    <member refid="class_shit_1_1_game_1a23532d6f55d03a64a5bcb462d5a83958" kind="function"><name>Game</name></member>
+    <member refid="class_shit_1_1_game_1a13ce32219b6e08b9446c8df000395d1c" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_game_1aeec9479d38309fa8c258404832402d3f" kind="function"><name>Game</name></member>
+    <member refid="class_shit_1_1_game_1a0e7f12794b31440192880422d30d2c44" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_game_1abd5c78a9612b6bea2c24643c48b4743b" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_game_1ae596c367662c7f3b19b6626b89ffc08b" kind="function"><name>Init</name></member>
+    <member refid="class_shit_1_1_game_1abcf24ae9fc270d7a9e1664d94ba02900" kind="function"><name>Run</name></member>
+    <member refid="class_shit_1_1_game_1a62a73aff7afffe2fba7c2e47e07d9134" kind="function"><name>Destroy</name></member>
+    <member refid="class_shit_1_1_game_1abac80b6e5030ccd8245ed2cd0edaf51f" kind="function"><name>IsRunning</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_game_object" kind="class"><name>Shit::GameObject</name>
+    <member refid="class_shit_1_1_game_object_1a032858ae1fe02d2d1170981c2af2d67c" kind="friend"><name>Scene</name></member>
+    <member refid="class_shit_1_1_game_object_1adb41893ba19e889e56c559f25fc1a68a" kind="variable"><name>m_name</name></member>
+    <member refid="class_shit_1_1_game_object_1a255ce75ea44e0927343b8ba28a1b46c8" kind="variable"><name>m_tag</name></member>
+    <member refid="class_shit_1_1_game_object_1a6d9ce218dfa1f5f2645b9b4c2abea6ca" kind="variable"><name>m_scene</name></member>
+    <member refid="class_shit_1_1_game_object_1af22406d784a94d23d7401c836fae718f" kind="variable"><name>m_components</name></member>
+    <member refid="class_shit_1_1_game_object_1afd2c20612c350e3ee5250d5efe24d934" kind="variable"><name>m_needDestroy</name></member>
+    <member refid="class_shit_1_1_game_object_1a92c3eb26ed46a071220626a7eedb55cd" kind="function"><name>GameObject</name></member>
+    <member refid="class_shit_1_1_game_object_1a2bbe646c052baf99f04a367ef6031d74" kind="function"><name>clean</name></member>
+    <member refid="class_shit_1_1_game_object_1a017e00b45eb2e288dadbc4100f023993" kind="function"><name>~GameObject</name></member>
+    <member refid="class_shit_1_1_game_object_1aeb07140ebe8805277f8a0076dfe0b541" kind="function"><name>GameObject</name></member>
+    <member refid="class_shit_1_1_game_object_1a4f541a7914dfb4850ce4d27f90e7dfa2" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_game_object_1af8035eae20f4d90aa3e2e044fa9fd845" kind="function"><name>GameObject</name></member>
+    <member refid="class_shit_1_1_game_object_1a6630dbb84ec77ba85f7a6e4fd9050b5a" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_game_object_1a3a80b6032f86a56bec74609034b3246f" kind="function"><name>destroy</name></member>
+    <member refid="class_shit_1_1_game_object_1a3fd7335faa33dce2f87c7e50eef3e294" kind="function"><name>getName</name></member>
+    <member refid="class_shit_1_1_game_object_1af83d38d84c66cc8ea7a83659d941a323" kind="function"><name>getTag</name></member>
+    <member refid="class_shit_1_1_game_object_1a0c36c4965240371f43c896f8d6af7feb" kind="function"><name>getScene</name></member>
+    <member refid="class_shit_1_1_game_object_1af9c9255af4b284a0b456483acbfe1b0e" kind="function"><name>isNeedDestroy</name></member>
+    <member refid="class_shit_1_1_game_object_1a9d3a2685df23b5e7cbf59c19c4a1f9b5" kind="function"><name>setName</name></member>
+    <member refid="class_shit_1_1_game_object_1a7f57a9ed979c10c89eb81e09136718a5" kind="function"><name>setTag</name></member>
+    <member refid="class_shit_1_1_game_object_1a36f2aa21e8b3898775462d2a378d2e0f" kind="function"><name>setScene</name></member>
+    <member refid="class_shit_1_1_game_object_1a03eb988617fc41944c0de1bbf62a8abf" kind="function"><name>setNeedDestroy</name></member>
+    <member refid="class_shit_1_1_game_object_1a8ec3a8d4557c78eebb2cafef428070c3" kind="function"><name>getComponents</name></member>
+    <member refid="class_shit_1_1_game_object_1af3fc709644a6ee3ffe6496d8fe2fe521" kind="function"><name>getComponent</name></member>
+    <member refid="class_shit_1_1_game_object_1abe100a1d418965113893d4aead521a7c" kind="function"><name>hasComponent</name></member>
+    <member refid="class_shit_1_1_game_object_1a7e3a4076579262cdc6d8b88ee4e609d8" kind="function"><name>removeComponent</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_input" kind="class"><name>Shit::Input</name>
+    <member refid="class_shit_1_1_input_1a54340d5f1308efe81a44c5fe969e4471" kind="variable"><name>m_currentKeys</name></member>
+    <member refid="class_shit_1_1_input_1a1d50d01e0fac563c6a2d51f316fc3135" kind="variable"><name>m_previousKeys</name></member>
+    <member refid="class_shit_1_1_input_1a3446d29665f940f4f0a3451ad1675393" kind="variable"><name>m_currentMouseButtons</name></member>
+    <member refid="class_shit_1_1_input_1aa899758b996f2a561577e1e03325b4b3" kind="variable"><name>m_previousMouseButtons</name></member>
+    <member refid="class_shit_1_1_input_1a4c9d811fb7e57cc34ef98616d3c53ec4" kind="variable"><name>m_mouseScroll</name></member>
+    <member refid="class_shit_1_1_input_1a64b0c57f68d9b5f2a17b2b2c5db5f8cd" kind="function"><name>isKeyDown</name></member>
+    <member refid="class_shit_1_1_input_1ab252507282f307b4176f37ba41db71d4" kind="function"><name>isKeyPressed</name></member>
+    <member refid="class_shit_1_1_input_1abc5a9ef0828871364194d7008ee1ec41" kind="function"><name>isKeyReleased</name></member>
+    <member refid="class_shit_1_1_input_1a5c8715ddb384e6d179b4b7ff46236496" kind="function"><name>isMouseButtonDown</name></member>
+    <member refid="class_shit_1_1_input_1a38fccbadb69091e6a2d62003db20c164" kind="function"><name>isMouseButtonPressed</name></member>
+    <member refid="class_shit_1_1_input_1a97d5542ddc3fd3a89972a5265d61c21f" kind="function"><name>isMouseButtonReleased</name></member>
+    <member refid="class_shit_1_1_input_1adfbd398e0ffbf567f47ab2cdd424c4bf" kind="function"><name>getMousePosition</name></member>
+    <member refid="class_shit_1_1_input_1ac5c54df7ed3b930268c8d7752c101725" kind="function"><name>update</name></member>
+    <member refid="class_shit_1_1_input_1ac5293921cbd2f72d61bf1098cba9c87c" kind="function"><name>handleEvent</name></member>
+    <member refid="class_shit_1_1_input_1a29ccf3bca672c084ffb606a91a1f4a93" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_input_1a093050f41930bae8c8c882fa2c0cef2a" kind="function"><name>IsKeyDown</name></member>
+    <member refid="class_shit_1_1_input_1a4218e82307996d899231669d6f41a3b9" kind="function"><name>IsKeyPressed</name></member>
+    <member refid="class_shit_1_1_input_1a5cfa354e655bf910f04bd751ce8a6829" kind="function"><name>IsKeyReleased</name></member>
+    <member refid="class_shit_1_1_input_1a5db434d2ece1a338c132167274fca2d8" kind="function"><name>IsMouseButtonDown</name></member>
+    <member refid="class_shit_1_1_input_1aeec62dee2b23582b51ca21b66cce14d4" kind="function"><name>IsMouseButtonPressed</name></member>
+    <member refid="class_shit_1_1_input_1ac650944a5bf0c77c2303294851425028" kind="function"><name>IsMouseButtonReleased</name></member>
+    <member refid="class_shit_1_1_input_1aef5d8fcadcba402ea54a6a655a400dae" kind="function"><name>HandleEvent</name></member>
+    <member refid="class_shit_1_1_input_1a554d0f30ae93d2787435dca9a46c6c5d" kind="function"><name>Update</name></member>
+    <member refid="class_shit_1_1_input_1ac00b45c4f900b83fb737520008e23e4f" kind="function"><name>GetMousePosition</name></member>
+    <member refid="class_shit_1_1_input_1afed10b7b04c832bee3ee5bf20c4d1e18" kind="function"><name>Input</name></member>
+    <member refid="class_shit_1_1_input_1ac4677053caa4cf3bf020e4bb79913ee6" kind="function"><name>~Input</name></member>
+    <member refid="class_shit_1_1_input_1a7f3e2f90fb01569672adc94394ac8baa" kind="function"><name>Input</name></member>
+    <member refid="class_shit_1_1_input_1aacd13417d48c1f63b1ac4c80edeb6fbf" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_input_1a976ed112592ca54c6aa2abcb3645eb19" kind="function"><name>Input</name></member>
+    <member refid="class_shit_1_1_input_1a00f07445fc95764352ac7b79222a3f8e" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_event_bus_1_1_listener_entry" kind="struct"><name>Shit::EventBus::ListenerEntry</name>
+    <member refid="struct_shit_1_1_event_bus_1_1_listener_entry_1a02ba1c5ef2194c628f65fccfb6d8df9c" kind="variable"><name>id</name></member>
+    <member refid="struct_shit_1_1_event_bus_1_1_listener_entry_1a277ad236be6e8d9df62603583ce56a22" kind="variable"><name>callback</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_log" kind="class"><name>Shit::Log</name>
+    <member refid="class_shit_1_1_log_1a6d3183ff3de3b1d8eed5504658ac1a04" kind="variable"><name>s_CoreLogger</name></member>
+    <member refid="class_shit_1_1_log_1a5627a037e349ae5dd6526d9760e8f427" kind="variable"><name>s_ClientLogger</name></member>
+    <member refid="class_shit_1_1_log_1ae596c367662c7f3b19b6626b89ffc08b" kind="function"><name>Init</name></member>
+    <member refid="class_shit_1_1_log_1a24db4d83b8dddf7b919548e19a2a912a" kind="function"><name>Trace</name></member>
+    <member refid="class_shit_1_1_log_1a2a6e532e31b365cddf9aea61d33608c7" kind="function"><name>Debug</name></member>
+    <member refid="class_shit_1_1_log_1acf6dbc55a4e25bb21b715e55fad247b2" kind="function"><name>Info</name></member>
+    <member refid="class_shit_1_1_log_1a4528dd1a9ea25fb4b3ef47b77de0122b" kind="function"><name>Warn</name></member>
+    <member refid="class_shit_1_1_log_1a38d349d74eb6ca356a7a9e5b29b0bdc8" kind="function"><name>Error</name></member>
+    <member refid="class_shit_1_1_log_1af1b37d13d7b417be80c6280d5f5240e8" kind="function"><name>Critical</name></member>
+    <member refid="class_shit_1_1_log_1a0ebea9df52ba5c8e0d2b43e0c445a7fb" kind="function"><name>GetCoreLogger</name></member>
+    <member refid="class_shit_1_1_log_1a605bee20f22c9abb0f919d9f6e696a79" kind="function"><name>GetClientLogger</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_audio_manager_1_1_m_i_x_audio_deleter" kind="struct"><name>Shit::AudioManager::MIXAudioDeleter</name>
+    <member refid="struct_shit_1_1_audio_manager_1_1_m_i_x_audio_deleter_1ab57a401c14566bcf2ad4b4d82fdf05ab" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_scene_manager_1_1_pending_action" kind="struct"><name>Shit::SceneManager::PendingAction</name>
+    <member refid="struct_shit_1_1_scene_manager_1_1_pending_action_1a3ad569d8c67c60951bf975c543b9196e" kind="variable"><name>action</name></member>
+    <member refid="struct_shit_1_1_scene_manager_1_1_pending_action_1a0c8f225c946f09eefda78dcd2289fd2d" kind="variable"><name>scene</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_prefab" kind="class"><name>Shit::Prefab</name>
+    <member refid="class_shit_1_1_prefab_1a5a22acdc42fdb4f1a122b2321f6e952b" kind="typedef"><name>Builder</name></member>
+    <member refid="class_shit_1_1_prefab_1af9b43a50354635b8f4b3474376f29cdc" kind="variable"><name>m_builder</name></member>
+    <member refid="class_shit_1_1_prefab_1a1d22abc417cff2c10acf747b6c1ee93d" kind="function"><name>Build</name></member>
+    <member refid="class_shit_1_1_prefab_1a6b1eb934cd47f9b035aa2dabd4644900" kind="function"><name>apply</name></member>
+    <member refid="class_shit_1_1_prefab_1a90659d66a249909d2e6580ad83c2028a" kind="function"><name>Prefab</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_project_config" kind="struct"><name>Shit::ProjectConfig</name>
+    <member refid="struct_shit_1_1_project_config_1a9b45b3e13bd9167aab02e17e08916231" kind="variable"><name>name</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_renderer" kind="class"><name>Shit::Renderer</name>
+    <member refid="class_shit_1_1_renderer_1a51541c8e801b2ae4fde17a2d15f88188" kind="variable"><name>m_renderer</name></member>
+    <member refid="class_shit_1_1_renderer_1aa5c7ce97912721d095f68409c5478272" kind="variable"><name>m_logicalWidth</name></member>
+    <member refid="class_shit_1_1_renderer_1a98d1c0394770565897ba0a3d6671962d" kind="variable"><name>m_logicalHeight</name></member>
+    <member refid="class_shit_1_1_renderer_1a7f8773f951a66de0e9e63c55f9b4611b" kind="function"><name>Renderer</name></member>
+    <member refid="class_shit_1_1_renderer_1a407b586a873ce3895710519d567f2af0" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_renderer_1a5c16a12fa607b0602be5110c8ef216ee" kind="function"><name>Renderer</name></member>
+    <member refid="class_shit_1_1_renderer_1a62384daa81a3398bc254a647685d4dfe" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_renderer_1a7155169a884952f261026adcda51e928" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_renderer_1ae596c367662c7f3b19b6626b89ffc08b" kind="function"><name>Init</name></member>
+    <member refid="class_shit_1_1_renderer_1a00cf1a2e31eb12524052a36227c81c8d" kind="function"><name>ClearScreen</name></member>
+    <member refid="class_shit_1_1_renderer_1abdc592736185addda2799dbabfee82f6" kind="function"><name>Present</name></member>
+    <member refid="class_shit_1_1_renderer_1a46e30e87d3ca42bc3018843f563dfb12" kind="function"><name>GetRenderer</name></member>
+    <member refid="class_shit_1_1_renderer_1ab41bacdc8fc4a5f995d01cc99c62c0ab" kind="function"><name>GetLogicalWidth</name></member>
+    <member refid="class_shit_1_1_renderer_1ad903053e03f7af1de814d044f7b0dcb4" kind="function"><name>GetLogicalHeight</name></member>
+    <member refid="class_shit_1_1_renderer_1a4fdb65e37b1d8c3a170fab28fe818fe0" kind="function"><name>DrawSprite</name></member>
+    <member refid="class_shit_1_1_renderer_1adb430ca9a4363d18fd4a7d0765095cda" kind="function"><name>Renderer</name></member>
+    <member refid="class_shit_1_1_renderer_1a21da7cd68671d3486479e47d66036942" kind="function"><name>~Renderer</name></member>
+    <member refid="class_shit_1_1_renderer_1aee8048628ff2b5c026c9e15acdcaacb8" kind="function"><name>init</name></member>
+    <member refid="class_shit_1_1_renderer_1a9d7e8af417b6d543da691e9c0e2f6f9f" kind="function"><name>clearScreen</name></member>
+    <member refid="class_shit_1_1_renderer_1a150ffb0f8328a3a283e2cb8933c89b48" kind="function"><name>present</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_renderer_component" kind="class"><name>Shit::RendererComponent</name>
+    <member refid="class_shit_1_1_renderer_component_1a2b31866ba7ed40c82edd92abe0081948" kind="variable"><name>m_zIndex</name></member>
+    <member refid="class_shit_1_1_renderer_component_1ace177fa285e5e88a6ba132129f89b73c" kind="variable"><name>m_isVisible</name></member>
+    <member refid="class_shit_1_1_renderer_component_1a17349359a2bd5bd4fe0ce2c13be0ae5f" kind="function"><name>RendererComponent</name></member>
+    <member refid="class_shit_1_1_renderer_component_1a3752fb4f0e338826c1dec5444631ca75" kind="function"><name>~RendererComponent</name></member>
+    <member refid="class_shit_1_1_renderer_component_1acbef2688cd43fd22241759f89fe12d28" kind="function"><name>onAttach</name></member>
+    <member refid="class_shit_1_1_renderer_component_1ad43b1fbcd8f355c3f312fa47fb3be914" kind="function"><name>onDetach</name></member>
+    <member refid="class_shit_1_1_renderer_component_1a6f6c866d92d5553df9d186de5f7ac452" kind="function"><name>onRender</name></member>
+    <member refid="class_shit_1_1_renderer_component_1aee7be93617a6078496df31830d454990" kind="function"><name>onDestroy</name></member>
+    <member refid="class_shit_1_1_renderer_component_1ad51138fd45b987bf8edbc766b4875122" kind="function"><name>getZIndex</name></member>
+    <member refid="class_shit_1_1_renderer_component_1a9d8a6cfb13917785c143e74d40e4e2be" kind="function"><name>isVisible</name></member>
+    <member refid="class_shit_1_1_renderer_component_1a72e5840ff7ba60365296acc20d995a38" kind="function"><name>getGlobalBounds</name></member>
+    <member refid="class_shit_1_1_renderer_component_1ac303f527d4eeb6055c6e1d3575dbdf7a" kind="function"><name>setZIndex</name></member>
+    <member refid="class_shit_1_1_renderer_component_1a7e6108ec64a6cb8b2566c8342e50540c" kind="function"><name>setVisible</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_render_system" kind="class"><name>Shit::RenderSystem</name>
+    <member refid="class_shit_1_1_render_system_1adc2cc3263b241a861e72bdd2b341cac3" kind="variable"><name>m_renderer</name></member>
+    <member refid="class_shit_1_1_render_system_1ae716f27b4b134e2c61489f19c70cb27c" kind="variable"><name>m_renderers</name></member>
+    <member refid="class_shit_1_1_render_system_1ab50623633bfd4da3001772bae5cf8d0d" kind="variable"><name>m_isRenderersNeedSort</name></member>
+    <member refid="class_shit_1_1_render_system_1a27a5fcf4c474f43925d08580227ddb7f" kind="variable"><name>m_cameras</name></member>
+    <member refid="class_shit_1_1_render_system_1a79110f18117cb1abf91e077428c34572" kind="variable"><name>m_isCamerasNeedSort</name></member>
+    <member refid="class_shit_1_1_render_system_1a0344b84022584b4fe5672c893f31af00" kind="function"><name>RenderSystem</name></member>
+    <member refid="class_shit_1_1_render_system_1ad70b1fecf294edfec1302add14c488f9" kind="function"><name>~RenderSystem</name></member>
+    <member refid="class_shit_1_1_render_system_1a44137bb65de2396875934e48a6ee5099" kind="function"><name>update</name></member>
+    <member refid="class_shit_1_1_render_system_1ae1cf30cae681d95a94934492ae7ea627" kind="function"><name>destroy</name></member>
+    <member refid="class_shit_1_1_render_system_1ad8f82ce398f9a548a07a5530876fcb08" kind="function"><name>registerRenderer</name></member>
+    <member refid="class_shit_1_1_render_system_1a0ccb6e65947aae847f77d3ad1dcc1343" kind="function"><name>unregisterRenderer</name></member>
+    <member refid="class_shit_1_1_render_system_1ad5267b789c11ef525f9c8377eaa9b54b" kind="function"><name>registerCamera</name></member>
+    <member refid="class_shit_1_1_render_system_1a3a6ea09f465a894d37a326bd7e58b0ff" kind="function"><name>unregisterCamera</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_resource_manager" kind="class"><name>Shit::ResourceManager</name>
+    <member refid="class_shit_1_1_resource_manager_1a6623d452c9fbbebe482007d03b3d9661" kind="variable"><name>m_textureManager</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a2856b9b97431aa84e8b46f3bb9686de8" kind="variable"><name>m_audioManager</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a8d77bbc11f604b7776d8def64973526f" kind="variable"><name>m_fontManager</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a6a2f2dfe18eed126c72be99972c02236" kind="function"><name>ResourceManager</name></member>
+    <member refid="class_shit_1_1_resource_manager_1adcd84dbcdcbee123679a41a770054d52" kind="function"><name>~ResourceManager</name></member>
+    <member refid="class_shit_1_1_resource_manager_1abe96be7a072e74363ab934ff351b7994" kind="function"><name>ResourceManager</name></member>
+    <member refid="class_shit_1_1_resource_manager_1af7972552de0d4966c6f94862e8f0298c" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a1ed8a99a4569c0bdaa9059fb6b6f9567" kind="function"><name>ResourceManager</name></member>
+    <member refid="class_shit_1_1_resource_manager_1ac02ce63ddf69acb94236d9802c17bd98" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_resource_manager_1ab162670d6701eb22f1aaacd30b589e2e" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a1716946dffd7f7f6a9c8f46406ab0732" kind="function"><name>Init</name></member>
+    <member refid="class_shit_1_1_resource_manager_1ad725872fe5683084c429452249fc1e7e" kind="function"><name>LoadTexture</name></member>
+    <member refid="class_shit_1_1_resource_manager_1aafc43012f24df717203acec29d7dd8c6" kind="function"><name>GetTexture</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a0a6525d07e3b6d71c53350c43e31eb59" kind="function"><name>UnloadTexture</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a51a1a1592ed7b9526cc062cd2425cd95" kind="function"><name>ClearTexture</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a029bd523f3b16c95c42c64fb90a609c1" kind="function"><name>LoadAudio</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a95a2051da3dd8154854122a27c9714f7" kind="function"><name>GetAudio</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a293d58b1556dce47af8451475db7e5db" kind="function"><name>UnloadAudio</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a132d07a4ffd0097f21c351066eecf3fb" kind="function"><name>ClearAudio</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a2538639fb4799d3000d4a2efbdd81b4d" kind="function"><name>LoadFont</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a0a59c0a4ebedc8850b3cee678884e671" kind="function"><name>GetFont</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a4cc4dfed4b04252861f2afd6edca979e" kind="function"><name>UnloadFont</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a48cba22a6a68c7adc5ae8672eab58250" kind="function"><name>ClearFont</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a8394950c01f3467de9329b92ec611f07" kind="function"><name>SetAudioMixer</name></member>
+    <member refid="class_shit_1_1_resource_manager_1ac8bb3912a3ce86b15842e79d0b421204" kind="function"><name>clear</name></member>
+    <member refid="class_shit_1_1_resource_manager_1a02fd73d861ef2e4aabb38c0c9ff82947" kind="function"><name>init</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_scene" kind="class"><name>Shit::Scene</name>
+    <member refid="class_shit_1_1_scene_1adb41893ba19e889e56c559f25fc1a68a" kind="variable"><name>m_name</name></member>
+    <member refid="class_shit_1_1_scene_1a0e78fe7ca9062c723586697ab196fd17" kind="variable"><name>m_gameObjects</name></member>
+    <member refid="class_shit_1_1_scene_1a5edc40f97658bdee3579d209ef55fd10" kind="variable"><name>m_pendingAdditions</name></member>
+    <member refid="class_shit_1_1_scene_1a4f5467099f6d7fd565a8785bbecc95c8" kind="variable"><name>m_systemsMap</name></member>
+    <member refid="class_shit_1_1_scene_1ac050da68237ba94e73eba0d27294c0fc" kind="variable"><name>m_systems</name></member>
+    <member refid="class_shit_1_1_scene_1a215229c9e627ab3a579986179fd30ddd" kind="variable"><name>m_pendingRemoveSystems</name></member>
+    <member refid="class_shit_1_1_scene_1a49750c6b82d232076f3daf32a6d51895" kind="variable"><name>m_isSystemsNeedSort</name></member>
+    <member refid="class_shit_1_1_scene_1af054c02064ec2ebee723a6a651934aaa" kind="function"><name>Scene</name></member>
+    <member refid="class_shit_1_1_scene_1a27f0d53a3c22e7fd44cdd3b113942061" kind="function"><name>~Scene</name></member>
+    <member refid="class_shit_1_1_scene_1aab6ee01f1d7f236d6bd5f105156e2ca9" kind="function"><name>Scene</name></member>
+    <member refid="class_shit_1_1_scene_1a022dd9625fc47205f10ec978727b90d0" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_scene_1a91f30edc038f2faa6a57127cb69bb764" kind="function"><name>Scene</name></member>
+    <member refid="class_shit_1_1_scene_1af09f0b2d48bd4461b96f47a768f4aa3a" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_scene_1a9339772ec5ac9fa929938109207f2863" kind="function"><name>init</name></member>
+    <member refid="class_shit_1_1_scene_1ac5c54df7ed3b930268c8d7752c101725" kind="function"><name>update</name></member>
+    <member refid="class_shit_1_1_scene_1aed2d208f4d304cc6def0a15b73f115bf" kind="function"><name>destroy</name></member>
+    <member refid="class_shit_1_1_scene_1a011567ea2e90782dc7cffbd962549f88" kind="function"><name>addGameObject</name></member>
+    <member refid="class_shit_1_1_scene_1a9f4ae128a66f2c918b57e58ed9534677" kind="function"><name>createGameObject</name></member>
+    <member refid="class_shit_1_1_scene_1aacfe102452215e81fe047bfe6de8e4d0" kind="function"><name>instantiate</name></member>
+    <member refid="class_shit_1_1_scene_1a476333bb647cc4e1f5a6085a4a8abf00" kind="function"><name>removeGameObject</name></member>
+    <member refid="class_shit_1_1_scene_1a3b509c9a28035513d2eb716fd3ab91d4" kind="function"><name>removeGameObjectByName</name></member>
+    <member refid="class_shit_1_1_scene_1ad0d534f5199d8706d236fd00679450d9" kind="function"><name>registerSystem</name></member>
+    <member refid="class_shit_1_1_scene_1ab4e8eb9227833b905a437e3c31fa2d07" kind="function"><name>unregisterSystem</name></member>
+    <member refid="class_shit_1_1_scene_1ab4a3a27e9b74cb9cca5a7cded635aad6" kind="function"><name>getSystem</name></member>
+    <member refid="class_shit_1_1_scene_1aea880a156468d35b99e0e49bb0502540" kind="function"><name>hasSystem</name></member>
+    <member refid="class_shit_1_1_scene_1a3fd7335faa33dce2f87c7e50eef3e294" kind="function"><name>getName</name></member>
+    <member refid="class_shit_1_1_scene_1ae81a7db40b4b7cdc5f0b037e999fd560" kind="function"><name>getGameObjects</name></member>
+    <member refid="class_shit_1_1_scene_1a9d3a2685df23b5e7cbf59c19c4a1f9b5" kind="function"><name>setName</name></member>
+    <member refid="class_shit_1_1_scene_1ad5f123aa0ec98f305564025e40b30f46" kind="function"><name>processPendingAdditions</name></member>
+    <member refid="class_shit_1_1_scene_1a3b301360a31647a1a6f39bd591cb0488" kind="function"><name>processPendingRemoveSystems</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_scene_manager" kind="class"><name>Shit::SceneManager</name>
+    <member refid="class_shit_1_1_scene_manager_1a15db9665f88e57da76bcf49a132aa076" kind="enum"><name>StackAction</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a15db9665f88e57da76bcf49a132aa076a6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a15db9665f88e57da76bcf49a132aa076a9c6a9d9f033001a9b3104984d319563b" kind="enumvalue"><name>Push</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a15db9665f88e57da76bcf49a132aa076a0ae61bd0474e04c9f1195d4baa0213a0" kind="enumvalue"><name>Pop</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a15db9665f88e57da76bcf49a132aa076adc30bc0c7914db5918da4263fce93ad2" kind="enumvalue"><name>Clear</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a15db9665f88e57da76bcf49a132aa076a0ebe6df8a3ac338e0512acc741823fdb" kind="enumvalue"><name>Replace</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a9e41eaf737733172c95d56f461afccb0" kind="variable"><name>m_sceneStack</name></member>
+    <member refid="class_shit_1_1_scene_manager_1aa918da664bf4c1a83ff189c6b63ead2e" kind="variable"><name>m_pendingActions</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a56e74084b96a4960cbac4c377472e5ad" kind="function"><name>SceneManager</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a04bbcf4e6db0801aeeda962157cc2673" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a6a68462bb7a8de13b69c762bb0dc4439" kind="function"><name>SceneManager</name></member>
+    <member refid="class_shit_1_1_scene_manager_1af01af0eef584ecb24ded0e75bc3f4c24" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_scene_manager_1aee88db8ba5649a8b071cdd7b3742b99c" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a554d0f30ae93d2787435dca9a46c6c5d" kind="function"><name>Update</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a62a73aff7afffe2fba7c2e47e07d9134" kind="function"><name>Destroy</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a6a428410da43a236f1ffc3dde15508d9" kind="function"><name>PushScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a65a98350e821e4029abf45c77074c185" kind="function"><name>PopScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a9fafde24f44fcc9f1adc352297541434" kind="function"><name>ClearScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a2eaa093e982c488a420d60ff3233902d" kind="function"><name>ReplaceScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a96b356e8e86ea7fd01e4a07562c0e103" kind="function"><name>SceneManager</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a07e3814d4207ea991b4b2fa5daf554ab" kind="function"><name>~SceneManager</name></member>
+    <member refid="class_shit_1_1_scene_manager_1ad10e7e0d344e2485f2d48193e79ae102" kind="function"><name>pushScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a986825afe276e17d22b817f535a80423" kind="function"><name>popScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a448ed3edddb28aff222719bfabe5e067" kind="function"><name>clearScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1af27a786b742bef8a2e1743818ecc7d64" kind="function"><name>replaceScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1ac5c54df7ed3b930268c8d7752c101725" kind="function"><name>update</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a3a80b6032f86a56bec74609034b3246f" kind="function"><name>destroy</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a4d403f423181304e77608b02f29100e8" kind="function"><name>processPendingActions</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a9872593368c1ea3fada9e3e6e71ff0c1" kind="function"><name>processPushScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1ac12890e24529aba08b751ed4ad3a0418" kind="function"><name>processPopScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a887cd8e1b0f596f4d4e2a8a91044bb71" kind="function"><name>processClearScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1ad3727855ca8ff35ebe28c89ac0c33cd3" kind="function"><name>processReplaceScene</name></member>
+    <member refid="class_shit_1_1_scene_manager_1a9c33dd010077558057798a6d6b712ecb" kind="function"><name>getCurrentScene</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_renderer_1_1_s_d_l_renderer_deleter" kind="struct"><name>Shit::Renderer::SDLRendererDeleter</name>
+    <member refid="struct_shit_1_1_renderer_1_1_s_d_l_renderer_deleter_1a90a217f60318742483d1e37d5f47e2d2" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_texture_manager_1_1_s_d_l_texture_deleter" kind="struct"><name>Shit::TextureManager::SDLTextureDeleter</name>
+    <member refid="struct_shit_1_1_texture_manager_1_1_s_d_l_texture_deleter_1a3727548b66c334f479cfc11dc1466bd0" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_window_1_1_s_d_l_window_deleter" kind="struct"><name>Shit::Window::SDLWindowDeleter</name>
+    <member refid="struct_shit_1_1_window_1_1_s_d_l_window_deleter_1a7150cdfbab2c1610b25e088843fd18db" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_sprite" kind="class"><name>Shit::Sprite</name>
+    <member refid="class_shit_1_1_sprite_1aa2f7cf99e4b9055736f2f2908d062e72" kind="variable"><name>m_texturePath</name></member>
+    <member refid="class_shit_1_1_sprite_1ad97004c8e75e7c68abc07f31fb198b04" kind="variable"><name>m_sourceRect</name></member>
+    <member refid="class_shit_1_1_sprite_1a9615ebf89b42ccd378dbf64644420341" kind="variable"><name>m_isFlipped</name></member>
+    <member refid="class_shit_1_1_sprite_1a637dbaba7024234f1dd304df1706c371" kind="function"><name>Sprite</name></member>
+    <member refid="class_shit_1_1_sprite_1a43fb6e9fc79dbcf1e1c19f5ddd46b705" kind="function"><name>Sprite</name></member>
+    <member refid="class_shit_1_1_sprite_1ab666c41ebea083a5c6604ce593b59e17" kind="function"><name>getTexturePath</name></member>
+    <member refid="class_shit_1_1_sprite_1acc6d59208bb5d18bf9ffd30dc3432169" kind="function"><name>getSourceRect</name></member>
+    <member refid="class_shit_1_1_sprite_1af1579f186eb2eb6413a1a9c312a9f020" kind="function"><name>isFlipped</name></member>
+    <member refid="class_shit_1_1_sprite_1a41da7c464a16ff1588754ddf26068f61" kind="function"><name>setTexturePath</name></member>
+    <member refid="class_shit_1_1_sprite_1add80442c628d1bb373d5d9a9afddc4d4" kind="function"><name>setSourceRect</name></member>
+    <member refid="class_shit_1_1_sprite_1ad34a52d954a18c0f9aa8e99bd02104f0" kind="function"><name>setFlipped</name></member>
+    <member refid="class_shit_1_1_sprite_1ad8aed24d6c5a7976bf3ea266fa166367" kind="function"><name>setFrame</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_sprite_renderer" kind="class"><name>Shit::SpriteRenderer</name>
+    <member refid="class_shit_1_1_sprite_renderer_1a00df87c957d8f7ee0fc51f07a0542f4a" kind="friend"><name>GameObject</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1a0283aa1f720c5ec2543817315526a9c2" kind="variable"><name>m_sprite</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1a5bc9172f1df492499a3bd7c52ea7046b" kind="function"><name>SpriteRenderer</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1aa9b9843877412513a915bb01789a5cad" kind="function"><name>~SpriteRenderer</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1ad5954d600e7e4fc3341ad4a15cda63ba" kind="function"><name>onRender</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1a41da7c464a16ff1588754ddf26068f61" kind="function"><name>setTexturePath</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1ab666c41ebea083a5c6604ce593b59e17" kind="function"><name>getTexturePath</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1a793a0745c1b76fe461518367f1ed7199" kind="function"><name>setSourceRect</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1acc6d59208bb5d18bf9ffd30dc3432169" kind="function"><name>getSourceRect</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1ad34a52d954a18c0f9aa8e99bd02104f0" kind="function"><name>setFlipped</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1af1579f186eb2eb6413a1a9c312a9f020" kind="function"><name>isFlipped</name></member>
+    <member refid="class_shit_1_1_sprite_renderer_1a010f0a0f9ea578d4dce68159ac086233" kind="function"><name>getGlobalBounds</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_sprite_sheet" kind="class"><name>Shit::SpriteSheet</name>
+    <member refid="class_shit_1_1_sprite_sheet_1a52a4a6b03f9deec5b2b1b016f31fc0dd" kind="variable"><name>m_rows</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a2cb9d2ce2a9ab306b15f507ebad8e888" kind="variable"><name>m_cols</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1aabf2371cee2076b85faacf6ac114b69d" kind="variable"><name>m_frameWidth</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1accc7941ab4656e8347c7c935fc8492b6" kind="variable"><name>m_frameHeight</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1ae65ecde5aeeef880ba025007c104c38c" kind="variable"><name>m_margin</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a2aae6b7ae40e54f10f9280f02633cce8" kind="variable"><name>m_spacing</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1af0204be98cbc67f20f8a7a67f4adcbbf" kind="function"><name>SpriteSheet</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a9d1cfe048f9a480676a4872d727ff5ec" kind="function"><name>~SpriteSheet</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1aaeac8b2f949a38f9246d282aeec53eb9" kind="function"><name>SpriteSheet</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a7df2cb572cdb9d70c10eef65798c0881" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a5a2a3e9b9f4f8508355e36407689454b" kind="function"><name>SpriteSheet</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a5deec2e55b2f5fb73082247c014d9cd3" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a8a6293e1f2b6fb2f50b41e5d38110ae8" kind="function"><name>getFrameRect</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a55b78d81bcf11ad14f96016135428afb" kind="function"><name>getFrameRect</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1ad343f9bbb050d9037167e80e423ab4e8" kind="function"><name>getRows</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a15dbe8362fb658e89feacb5e7bae3ef3" kind="function"><name>getCols</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a74be57bd40687e061c6c3cc2246ad63c" kind="function"><name>getFrameWidth</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a6b72e2634e52bca5934299ffd9d455e8" kind="function"><name>getFrameHeight</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1ad0b0509f7ac071f49cc248341336e7cc" kind="function"><name>getMargin</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a1211c84bcbcd2d5acaa530e76d7b58d7" kind="function"><name>getSpacing</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a020bc01fe5af38371c152924e10e817e" kind="function"><name>getFrameCount</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a508bbe326657af6d3add84deb4595989" kind="function"><name>setRows</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a84593b69dee341df0b48441f2fdd9e58" kind="function"><name>setCols</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a99abb798e1f923f27926f1eade34ba76" kind="function"><name>setFrameWidth</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a66bd8056aa42395bc44c2824eeb7d0a0" kind="function"><name>setFrameHeight</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a4f9972873dfd768793c3ded7ab3d6e59" kind="function"><name>setMargin</name></member>
+    <member refid="class_shit_1_1_sprite_sheet_1a3be0c8136f459a8cc59221a54d196dca" kind="function"><name>setSpacing</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_system" kind="class"><name>Shit::System</name>
+    <member refid="class_shit_1_1_system_1aebd544741012b3bab43cfbbc4e9d28f3" kind="variable"><name>m_priority</name></member>
+    <member refid="class_shit_1_1_system_1a6d9ce218dfa1f5f2645b9b4c2abea6ca" kind="variable"><name>m_scene</name></member>
+    <member refid="class_shit_1_1_system_1a5034f7aabb39aa71406a18f57af4971e" kind="function"><name>System</name></member>
+    <member refid="class_shit_1_1_system_1aa7229e118bb766e4752281389b321ed6" kind="function"><name>~System</name></member>
+    <member refid="class_shit_1_1_system_1ab5be7e5a13ea77d59aac45d21dceb6a0" kind="function"><name>init</name></member>
+    <member refid="class_shit_1_1_system_1a99b02345a8a15d3c5ea2844a2253f510" kind="function"><name>update</name></member>
+    <member refid="class_shit_1_1_system_1af79997318d96497d77015571261ec88b" kind="function"><name>destroy</name></member>
+    <member refid="class_shit_1_1_system_1a0c36c4965240371f43c896f8d6af7feb" kind="function"><name>getScene</name></member>
+    <member refid="class_shit_1_1_system_1a36f2aa21e8b3898775462d2a378d2e0f" kind="function"><name>setScene</name></member>
+    <member refid="class_shit_1_1_system_1ad65045bcc70661e1e745edbb1da0377b" kind="function"><name>getPriority</name></member>
+    <member refid="class_shit_1_1_system_1a257fc8f8148265762ab350a6a8563ffc" kind="function"><name>setPriority</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_texture_manager" kind="class"><name>Shit::TextureManager</name>
+    <member refid="class_shit_1_1_texture_manager_1a54c1252abc87a78a301e6b6984470408" kind="friend"><name>ResourceManager</name></member>
+    <member refid="class_shit_1_1_texture_manager_1a23fcf922ad9270dab6e9c6f8ef5536c4" kind="variable"><name>m_textures</name></member>
+    <member refid="class_shit_1_1_texture_manager_1a4e29adea2be507dc2b6510439f6a8de8" kind="function"><name>TextureManager</name></member>
+    <member refid="class_shit_1_1_texture_manager_1aedb158f1eed226a73cce08c31910ba7d" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_texture_manager_1a25cc7de49c31eeb6df51efdef13717d2" kind="function"><name>TextureManager</name></member>
+    <member refid="class_shit_1_1_texture_manager_1a5e9711bf96c7672c5f5a044461a1b5cd" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_texture_manager_1acd31917a2f52d40612d70ea1bffecd74" kind="function"><name>~TextureManager</name></member>
+    <member refid="class_shit_1_1_texture_manager_1a140e2c186271d17e7ef17f16a4d81ff6" kind="function"><name>TextureManager</name></member>
+    <member refid="class_shit_1_1_texture_manager_1aa8d2e7ed966af18a843ea0ab2346ab6f" kind="function"><name>loadTexture</name></member>
+    <member refid="class_shit_1_1_texture_manager_1a8e8747813c907e737a863c3752c46419" kind="function"><name>getTexture</name></member>
+    <member refid="class_shit_1_1_texture_manager_1a21e9958c6e4fdeb00dc664ad29f5f1e3" kind="function"><name>unloadTexture</name></member>
+    <member refid="class_shit_1_1_texture_manager_1a69399c8f851326511a48b1f1e93513e7" kind="function"><name>clearTexture</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_time" kind="class"><name>Shit::Time</name>
+    <member refid="class_shit_1_1_time_1aa2fab026580d6f14280c2ffb8063a314" kind="friend"><name>Game</name></member>
+    <member refid="class_shit_1_1_time_1a67a32158e1dd2e3d455251414782765a" kind="variable"><name>m_deltaTime</name></member>
+    <member refid="class_shit_1_1_time_1a0a855de92df23283e07262acf7c8a668" kind="variable"><name>m_totalTime</name></member>
+    <member refid="class_shit_1_1_time_1a2786fd1dbabedc98c3612ca1c48a4cba" kind="variable"><name>m_lastTime</name></member>
+    <member refid="class_shit_1_1_time_1a13eb9e00be37bed24c8f5385a4135902" kind="variable"><name>m_currentTime</name></member>
+    <member refid="class_shit_1_1_time_1a5b1820c1cf36b8695f1cf0dde50b71b3" kind="variable"><name>m_targetFPS</name></member>
+    <member refid="class_shit_1_1_time_1a29d35748d7e4bdde4b013cd9744926f5" kind="function"><name>Time</name></member>
+    <member refid="class_shit_1_1_time_1a770f074d363f8963cc3cf17db74604c7" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_time_1a3cd15566d901c8904f275f8f3b828bf5" kind="function"><name>Time</name></member>
+    <member refid="class_shit_1_1_time_1a3d15d4632db454da2635b562946fa414" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_time_1a69a4da7e701547430f6780223a5cecfe" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_time_1a1716946dffd7f7f6a9c8f46406ab0732" kind="function"><name>Init</name></member>
+    <member refid="class_shit_1_1_time_1a554d0f30ae93d2787435dca9a46c6c5d" kind="function"><name>Update</name></member>
+    <member refid="class_shit_1_1_time_1a80811a4413d7819a39947fc37c91a685" kind="function"><name>GetDeltaTime</name></member>
+    <member refid="class_shit_1_1_time_1a6af4a6772f3d17350f488afcfe903e70" kind="function"><name>GetTotalTime</name></member>
+    <member refid="class_shit_1_1_time_1a50053e5e12635e902c5e00b2d8047cb0" kind="function"><name>GetTargetFPS</name></member>
+    <member refid="class_shit_1_1_time_1aefe4538733c9ee5538c5432698a85397" kind="function"><name>SetTargetFPS</name></member>
+    <member refid="class_shit_1_1_time_1a38b0285424ae98cbe324c635b300c750" kind="function"><name>Time</name></member>
+    <member refid="class_shit_1_1_time_1af3bc16485bfe955f9cd4ebde7399c135" kind="function"><name>~Time</name></member>
+    <member refid="class_shit_1_1_time_1a02fd73d861ef2e4aabb38c0c9ff82947" kind="function"><name>init</name></member>
+    <member refid="class_shit_1_1_time_1ac5c54df7ed3b930268c8d7752c101725" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_transform_component" kind="class"><name>Shit::TransformComponent</name>
+    <member refid="class_shit_1_1_transform_component_1a00df87c957d8f7ee0fc51f07a0542f4a" kind="friend"><name>GameObject</name></member>
+    <member refid="class_shit_1_1_transform_component_1a171af7a99cfbd8df9a27800b30beb321" kind="variable"><name>m_position</name></member>
+    <member refid="class_shit_1_1_transform_component_1a91d3973ceaa517ead3459da4258b704b" kind="variable"><name>m_scale</name></member>
+    <member refid="class_shit_1_1_transform_component_1aaa51fe8c50c943b3be79f0f54c985d0e" kind="variable"><name>m_rotation</name></member>
+    <member refid="class_shit_1_1_transform_component_1a666d167dbdf85cdc16b62d17d0201e73" kind="function"><name>TransformComponent</name></member>
+    <member refid="class_shit_1_1_transform_component_1ab7640d4219bddbd4e9e7833d1f4b5ce7" kind="function"><name>~TransformComponent</name></member>
+    <member refid="class_shit_1_1_transform_component_1a2c081df76c94591374823c11e3c59b4f" kind="function"><name>getPosition</name></member>
+    <member refid="class_shit_1_1_transform_component_1a5c42a8a652adfd7a2185229dfa8a2f99" kind="function"><name>setPosition</name></member>
+    <member refid="class_shit_1_1_transform_component_1a55fae77af496d995278c4ba68a65dde5" kind="function"><name>getScale</name></member>
+    <member refid="class_shit_1_1_transform_component_1a894db7186af158a15b732f4e936cd3ef" kind="function"><name>setScale</name></member>
+    <member refid="class_shit_1_1_transform_component_1a08c4315a337758eba99f5986c53e5f62" kind="function"><name>getRotation</name></member>
+    <member refid="class_shit_1_1_transform_component_1a10a489a162a4fb1c43c38d7f60537fe1" kind="function"><name>setRotation</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_font_manager_1_1_t_t_f___font_deleter" kind="struct"><name>Shit::FontManager::TTF_FontDeleter</name>
+    <member refid="struct_shit_1_1_font_manager_1_1_t_t_f___font_deleter_1ade778d7691f1286d5e3a9de894bc8879" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="class_shit_1_1_window" kind="class"><name>Shit::Window</name>
+    <member refid="class_shit_1_1_window_1a7d6c6f6e0d6bc7c21351ea8838af8d6a" kind="variable"><name>m_window</name></member>
+    <member refid="class_shit_1_1_window_1ad14d58eb754b8fa7229169ed4d5de225" kind="variable"><name>m_isOpen</name></member>
+    <member refid="class_shit_1_1_window_1a6cbfa660b1af1f7020fc63dce78aabad" kind="function"><name>Window</name></member>
+    <member refid="class_shit_1_1_window_1a0124c7e88186e79f35666a69d6cc3547" kind="function"><name>~Window</name></member>
+    <member refid="class_shit_1_1_window_1a6a68cb5a5ac04c26f735b17e641fc83d" kind="function"><name>Window</name></member>
+    <member refid="class_shit_1_1_window_1ab97c00f43df83ad3a9a7b40b5e723d59" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_window_1a98168bc8e581a19b57976700a466f239" kind="function"><name>Window</name></member>
+    <member refid="class_shit_1_1_window_1ab368f6453bafaeef5951456ecca8f83b" kind="function"><name>operator=</name></member>
+    <member refid="class_shit_1_1_window_1a98fb471c6beb97e834a89a65a4537696" kind="function"><name>GetInstance</name></member>
+    <member refid="class_shit_1_1_window_1ae596c367662c7f3b19b6626b89ffc08b" kind="function"><name>Init</name></member>
+    <member refid="class_shit_1_1_window_1a011fa43ee8ec0d64efd8f81a839c88ab" kind="function"><name>GetWindow</name></member>
+    <member refid="class_shit_1_1_window_1aef5d8fcadcba402ea54a6a655a400dae" kind="function"><name>HandleEvent</name></member>
+    <member refid="class_shit_1_1_window_1a9216f2c6587e4405c4f1821f3a35f69d" kind="function"><name>IsOpen</name></member>
+    <member refid="class_shit_1_1_window_1afd8acd145096a4c6bf37a4c0ef1b91d0" kind="function"><name>Close</name></member>
+    <member refid="class_shit_1_1_window_1a62a73aff7afffe2fba7c2e47e07d9134" kind="function"><name>Destroy</name></member>
+    <member refid="class_shit_1_1_window_1aee8048628ff2b5c026c9e15acdcaacb8" kind="function"><name>init</name></member>
+    <member refid="class_shit_1_1_window_1ac5293921cbd2f72d61bf1098cba9c87c" kind="function"><name>handleEvent</name></member>
+    <member refid="class_shit_1_1_window_1a3a9ba7594ee74425dd345ecc263a5564" kind="function"><name>isOpen</name></member>
+    <member refid="class_shit_1_1_window_1a5ae591df94fc66ccb85cbb6565368bca" kind="function"><name>close</name></member>
+  </compound>
+  <compound refid="struct_shit_1_1_window_config" kind="struct"><name>Shit::WindowConfig</name>
+    <member refid="struct_shit_1_1_window_config_1ac30fed21fe991cc8475ce543929f8b72" kind="variable"><name>title</name></member>
+    <member refid="struct_shit_1_1_window_config_1aca34d28e3d8bcbcadb8edb4e3af24f8c" kind="variable"><name>width</name></member>
+    <member refid="struct_shit_1_1_window_config_1ab2e78c61905b4419fcc7b4cfc500fe85" kind="variable"><name>height</name></member>
+    <member refid="struct_shit_1_1_window_config_1a8705191cbc0ffb20367a9ef2ba000194" kind="variable"><name>targetFPS</name></member>
+  </compound>
+  <compound refid="namespace_shit" kind="namespace"><name>Shit</name>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0d" kind="enum"><name>KeyCode</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e" kind="enumvalue"><name>Unknown</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da7fc56270e7a70fa81a5935b72eacbe29" kind="enumvalue"><name>A</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da9d5ed678fe57bcca610140957afab571" kind="enumvalue"><name>B</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da0d61f8370cad1d412f80b84d143e1257" kind="enumvalue"><name>C</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daf623e75af30e62bbd73d6df5b50bb7b5" kind="enumvalue"><name>D</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da3a3ea00cfc35332cedf6e5e9a32e94da" kind="enumvalue"><name>E</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da800618943025315f869e4e1f09471012" kind="enumvalue"><name>F</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dadfcf28d0734569a6a693bc8194de62bf" kind="enumvalue"><name>G</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dac1d9f50f86825a1a2302ec2449c17196" kind="enumvalue"><name>H</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dadd7536794b63bf90eccfd37f9b147d7f" kind="enumvalue"><name>I</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daff44570aca8241914870afbc310cdb85" kind="enumvalue"><name>J</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daa5f3c6a11b03839d46af9fb43c97c188" kind="enumvalue"><name>K</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dad20caec3b48a1eef164cb4ca81ba2587" kind="enumvalue"><name>L</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da69691c7bdcc3ce6d5d8a1361f22d04ac" kind="enumvalue"><name>M</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da8d9c307cb7f3c4a32822a51922d1ceaa" kind="enumvalue"><name>N</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daf186217753c37b9b9f958d906208506e" kind="enumvalue"><name>O</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da44c29edb103a2872f519ad0c9a0fdaaa" kind="enumvalue"><name>P</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daf09564c9ca56850d4cd6b3319e541aee" kind="enumvalue"><name>Q</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dae1e1d3d40573127e9ee0480caf1283d6" kind="enumvalue"><name>R</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da5dbc98dcc983a70728bd082d1a47546e" kind="enumvalue"><name>S</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3" kind="enumvalue"><name>T</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da4c614360da93c0a041b22e537de151eb" kind="enumvalue"><name>U</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da5206560a306a2e085a437fd258eb57ce" kind="enumvalue"><name>V</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da61e9c06ea9a85a5088a499df6458d276" kind="enumvalue"><name>W</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da02129bb861061d1a052c592e2dc6b383" kind="enumvalue"><name>X</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da57cec4137b614c87cb4e24a3d003a3e0" kind="enumvalue"><name>Y</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da21c2e59531c8710156d34a3c30ac81d5" kind="enumvalue"><name>Z</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dabacb69a042a9fdc268a672919052d1f2" kind="enumvalue"><name>Num1</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da72bd76d6e2b68a539c8d1a77b564ed72" kind="enumvalue"><name>Num2</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daa3a965b443a13522aa59fbdea31d00ce" kind="enumvalue"><name>Num3</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dae0af89b5f83c670e4cc584c73c4732ca" kind="enumvalue"><name>Num4</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da7e89a79bbb017bfcaff80ff820a15d8a" kind="enumvalue"><name>Num5</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da0581cd1de881a0f697f3b46741fb326b" kind="enumvalue"><name>Num6</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da4911ceac5c68b5a3f1499d68b27b0938" kind="enumvalue"><name>Num7</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da894e7d9b7dcced78e8007ba2d38b8dd2" kind="enumvalue"><name>Num8</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dad7b1dbe22119bc7acf6e4a1afcc06e46" kind="enumvalue"><name>Num9</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da845787798a45b48e825e9b99a338537a" kind="enumvalue"><name>Num0</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da988fd738de9c6d177440c5dcf69e73ce" kind="enumvalue"><name>Return</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da013ec032d3460d4be4431c6ab1f8f224" kind="enumvalue"><name>Escape</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dacd7d13ceea728b08555f7c818cfb13ef" kind="enumvalue"><name>Backspace</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da5c6ba25104401c9ee0650230fc6ba413" kind="enumvalue"><name>Tab</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dad511f8439ecde36647437fbba67a4394" kind="enumvalue"><name>Space</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da453fb623e752c5993f65bc410fd74fe5" kind="enumvalue"><name>Minus</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da0ccb67e7eaae09d9e4078d161eeca100" kind="enumvalue"><name>Equals</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da481c09f513474b2d31ba5c2992947b17" kind="enumvalue"><name>LeftBracket</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da455364d8991395f71ef9ccc5cc449e5c" kind="enumvalue"><name>RightBracket</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daf6c6379402dce27659f7cffee6bc1f00" kind="enumvalue"><name>Backslash</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daa3785bd98756d27d78d4f10f2a56c487" kind="enumvalue"><name>NonUSH</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da9806fa37a3ecd39bf637c203aa011ed0" kind="enumvalue"><name>Semicolon</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dab6ac6f84bcb33f9b5186bda6b4c8b399" kind="enumvalue"><name>Apostrophe</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daed24ff8971b1fa43a1efbb386618ce35" kind="enumvalue"><name>Grave</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da58be47db9455679e6a44df2eff9c9fa6" kind="enumvalue"><name>Comma</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da1901606ea069a83dc7beea17881ef95a" kind="enumvalue"><name>Period</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da358cfe58715d680d9ab09f82e4010cbc" kind="enumvalue"><name>Slash</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da8d0f4171170104d094d8b6d4f8bf49e6" kind="enumvalue"><name>CapsLock</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dae1dffc8709f31a4987c8a88334107e89" kind="enumvalue"><name>F1</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dafe5c3684dce76cdd9f7f42430868aa74" kind="enumvalue"><name>F2</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da4b6bf4b531770872d4328ce69bef5627" kind="enumvalue"><name>F3</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dae7e0e72401a9f2718ed0f39f2861d702" kind="enumvalue"><name>F4</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da37f438df6a6d5ba4c17ef8ca58562f00" kind="enumvalue"><name>F5</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da1faf42f2823f184eb2c9f0dffe5d73f2" kind="enumvalue"><name>F6</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da47489eb597b7db34caa24b1fc78fc839" kind="enumvalue"><name>F7</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da4787509ad9f9d747a81a30e9dde3d4a7" kind="enumvalue"><name>F8</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da892a245e287c163080b23db737d3c4c9" kind="enumvalue"><name>F9</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dab213ce22ca6ad4eda8db82966b9b6e5a" kind="enumvalue"><name>F10</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da643b0662422d1d0dffa3fca2e2bf28a8" kind="enumvalue"><name>F11</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dae902674982fc99aa343cdd94da7476c3" kind="enumvalue"><name>F12</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dabf54024481cd2ad6bbb9ae44b7312472" kind="enumvalue"><name>PrintScreen</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da7d7902d5e2998e4fb2b8694a2de4ff65" kind="enumvalue"><name>ScrollLock</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da105b296a83f9c105355403f3332af50f" kind="enumvalue"><name>Pause</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daa458be0f08b7e4ff3c0f633c100176c0" kind="enumvalue"><name>Insert</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da8cf04a9734132302f96da8e113e80ce5" kind="enumvalue"><name>Home</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da9b869c510c75c5827ac82e49d4340927" kind="enumvalue"><name>PageUp</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daf2a6c498fb90ee345d997f888fce3b18" kind="enumvalue"><name>Delete</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da87557f11575c0ad78e4e28abedc13b6e" kind="enumvalue"><name>End</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daee3677bcca83ece9384b01e43952bf33" kind="enumvalue"><name>PageDown</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da92b09c7c48c520c3c55e497875da437c" kind="enumvalue"><name>Right</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da945d5e233cf7d6240f6b783b36a374ff" kind="enumvalue"><name>Left</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da08a38277b0309070706f6652eeae9a53" kind="enumvalue"><name>Down</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da258f49887ef8d14ac268c92b02503aaa" kind="enumvalue"><name>Up</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daa0d353252a1e8d8e5cd953539583bfe9" kind="enumvalue"><name>NumLockClear</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da786deffd1b8656ff4c64758a735c6ac2" kind="enumvalue"><name>KP_Divide</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da481d474ecf4a33cc5a24483814b2a78d" kind="enumvalue"><name>KP_Multiply</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da58466c8513a0694279ac777ee76daa20" kind="enumvalue"><name>KP_Minus</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da33a469d9c6424719d4912a23e94d3319" kind="enumvalue"><name>KP_Plus</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da0fd1f47372ccf126169d0143bb9b536c" kind="enumvalue"><name>KP_Enter</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dafdcbdc22f7e22388bf5905c290bcfe4b" kind="enumvalue"><name>KP_1</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da2d0bfa737eccfce7842cd2230eed6712" kind="enumvalue"><name>KP_2</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da766b4a88cba7645629bac70fd01d8275" kind="enumvalue"><name>KP_3</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da9c56f942b051ba23447e108e16a8b23b" kind="enumvalue"><name>KP_4</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dadc271d081ca9fcbefdc42998313398d8" kind="enumvalue"><name>KP_5</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da2091809ab6bdbc0a1975bf61d6099748" kind="enumvalue"><name>KP_6</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da71f42e8faf0fb7cb14174c8481461c00" kind="enumvalue"><name>KP_7</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da62e75b78c155e8549c5c5edb434a7757" kind="enumvalue"><name>KP_8</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da3d548437292c0cd1662fc30d420f2c27" kind="enumvalue"><name>KP_9</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daffb2ce8868d49c78376bf7e76c88fd52" kind="enumvalue"><name>KP_0</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da6a20e05bfcaa06538780318507a5722f" kind="enumvalue"><name>KP_Period</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da2e4d11b4925221b71e5954c1343a2e9e" kind="enumvalue"><name>NonUSBackslash</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dae498749f3c42246d50b15c81c101d988" kind="enumvalue"><name>Application</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dadd4fe0cc913f704600b97d1f5dd285de" kind="enumvalue"><name>Power</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da8b81d794a622af95fc575d9121d1043c" kind="enumvalue"><name>KP_Equals</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da95dfde4807d4d6a9eec499203b3c24a0" kind="enumvalue"><name>F13</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da2468649b6215c4cdd2aef5095b3f5932" kind="enumvalue"><name>F14</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dae53b55851b9ff4979f2c3ff434a4a138" kind="enumvalue"><name>F15</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da56d8353718e6fdc78b8d69078a2cdb94" kind="enumvalue"><name>F16</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daffa5882d1ddcf903bf0d0dbc30bfc604" kind="enumvalue"><name>F17</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da810b30cdfc07fd7fff553a94b828ff78" kind="enumvalue"><name>F18</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dacd7c2a221ef5d0a34acc0bcd679b2054" kind="enumvalue"><name>F19</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dafc335adb3d69d3d8270769e1923ea4dc" kind="enumvalue"><name>F20</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da77e9eee7c579eef5f3731ecf1053c02e" kind="enumvalue"><name>F21</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da7fa06ead699fcbd63132370ffe13335a" kind="enumvalue"><name>F22</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da889645d530078147e7dc69a9caadc31e" kind="enumvalue"><name>F23</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daebd7820c520d05eca2d775c37d141273" kind="enumvalue"><name>F24</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da243924bfd56a682be235638b53961e09" kind="enumvalue"><name>Sleep</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da688761c83ec62d30ec1fe269849d42ad" kind="enumvalue"><name>Wake</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da126da17caa4a9238a8c6328cfe706fc1" kind="enumvalue"><name>MediaPlay</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da164a1e9b972e107a40ae5162fd877ee2" kind="enumvalue"><name>MediaPause</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da3c07283997c5468041e4c4cd6de71a41" kind="enumvalue"><name>MediaRecord</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da4e176e193d22d9d37b354b4d3dcf0531" kind="enumvalue"><name>MediaNext</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da2d9f557d86388fe13895e0245e7d6592" kind="enumvalue"><name>MediaPrev</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da4e98cb54aeee7205dd16a2a054810be0" kind="enumvalue"><name>MediaStop</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daad5b800a2da567cb4b91f857b48761ac" kind="enumvalue"><name>MediaPlayPause</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da692ed49ff2182a144044181274242db5" kind="enumvalue"><name>LCtrl</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da667d08af6165c1cb6e72970036a9f7d7" kind="enumvalue"><name>LShift</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0daab527e774a30bf52a69de316727ce4cd" kind="enumvalue"><name>LAlt</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dafefd8998f6e031552da872b5cbe47c4f" kind="enumvalue"><name>LGui</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da60e5d1d82b2d0c1287331bfca0ab0061" kind="enumvalue"><name>RCtrl</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da8e707c0a523c7ec2179a6b6821d6eba8" kind="enumvalue"><name>RShift</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da067967ae88a4f9ad8cf58e1bb88c32d8" kind="enumvalue"><name>RAlt</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da28c7d73bf57b5e005c416e80c9c0356e" kind="enumvalue"><name>RGui</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da650be61892bf690026089544abbd9d26" kind="enumvalue"><name>Mode</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0da942d4e37dd5607ab68e54755540d4a47" kind="enumvalue"><name>Reserved</name></member>
+    <member refid="namespace_shit_1a94b769a2899b14202ace87b550519a0dae93f994f01c537c4e2f7d8528c3eb5e9" kind="enumvalue"><name>Count</name></member>
+    <member refid="namespace_shit_1a826ef52e881054fee6a2055e382950b4" kind="enum"><name>MouseButton</name></member>
+    <member refid="namespace_shit_1a826ef52e881054fee6a2055e382950b4a945d5e233cf7d6240f6b783b36a374ff" kind="enumvalue"><name>Left</name></member>
+    <member refid="namespace_shit_1a826ef52e881054fee6a2055e382950b4a92b09c7c48c520c3c55e497875da437c" kind="enumvalue"><name>Right</name></member>
+    <member refid="namespace_shit_1a826ef52e881054fee6a2055e382950b4ab1ca34f82e83c52b010f86955f264e05" kind="enumvalue"><name>Middle</name></member>
+    <member refid="namespace_shit_1a826ef52e881054fee6a2055e382950b4aac8e5aa1a680bd64e6fb9313db5b4428" kind="enumvalue"><name>XButton1</name></member>
+    <member refid="namespace_shit_1a826ef52e881054fee6a2055e382950b4a7af9d9a16f813c045a3dbe8068a13f4d" kind="enumvalue"><name>XButton2</name></member>
+    <member refid="namespace_shit_1a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9" kind="enumvalue"><name>Count</name></member>
+    <member refid="namespace_shit_1af13a1979f9e8f62c101433fac6511cc6" kind="typedef"><name>Json</name></member>
+    <member refid="namespace_shit_1ab13fcf529046c79a4544246bf8e28741" kind="typedef"><name>Vector2</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_audio_player_8h" kind="file"><name>AudioPlayer.h</name>
+  </compound>
+  <compound refid="_audio_track_8h" kind="file"><name>AudioTrack.h</name>
+  </compound>
+  <compound refid="_animation_component_8h" kind="file"><name>AnimationComponent.h</name>
+  </compound>
+  <compound refid="_behavior_8h" kind="file"><name>Behavior.h</name>
+  </compound>
+  <compound refid="_camera_component_8h" kind="file"><name>CameraComponent.h</name>
+  </compound>
+  <compound refid="_component_8h" kind="file"><name>Component.h</name>
+  </compound>
+  <compound refid="_renderer_component_8h" kind="file"><name>RendererComponent.h</name>
+  </compound>
+  <compound refid="_sprite_renderer_8h" kind="file"><name>SpriteRenderer.h</name>
+  </compound>
+  <compound refid="_transform_component_8h" kind="file"><name>TransformComponent.h</name>
+  </compound>
+  <compound refid="_config_8h" kind="file"><name>Config.h</name>
+  </compound>
+  <compound refid="_core_8h" kind="file"><name>Core.h</name>
+    <member refid="_core_8h_1ad27cc17b25bb93134368d5eb21126eae" kind="define"><name>BIT</name></member>
+  </compound>
+  <compound refid="_game_8h" kind="file"><name>Game.h</name>
+  </compound>
+  <compound refid="_log_8h" kind="file"><name>Log.h</name>
+    <member refid="_log_8h_1ac379c2e7c01d6e578fa1dff97428de87" kind="define"><name>ST_CORE_TRACE</name></member>
+    <member refid="_log_8h_1afe6cc112769b2b8ca030f3a2d26f6452" kind="define"><name>ST_CORE_DEBUG</name></member>
+    <member refid="_log_8h_1a96339747663a68b687d0662cf327e668" kind="define"><name>ST_CORE_INFO</name></member>
+    <member refid="_log_8h_1a1e6b79023cc055b13e1a06e6e005cd70" kind="define"><name>ST_CORE_WARN</name></member>
+    <member refid="_log_8h_1abf3849fe584d46510e5470f930e2eda0" kind="define"><name>ST_CORE_ERROR</name></member>
+    <member refid="_log_8h_1a304ac95c5017efaabaca729e1dadcb5f" kind="define"><name>ST_CORE_CRITICAL</name></member>
+    <member refid="_log_8h_1aff815259ef2e2e22ca8d0c723bd9b180" kind="define"><name>ST_TRACE</name></member>
+    <member refid="_log_8h_1a2f37c549a03eedd6ae4b72dd74b9fdaf" kind="define"><name>ST_DEBUG</name></member>
+    <member refid="_log_8h_1a7a4d584307a18bc66e8dad1f9ad8625b" kind="define"><name>ST_INFO</name></member>
+    <member refid="_log_8h_1a7f435c61107a128a0edc0a952a94c619" kind="define"><name>ST_WARN</name></member>
+    <member refid="_log_8h_1a654de4379e17adb39550e7ee2e0e29f9" kind="define"><name>ST_ERROR</name></member>
+    <member refid="_log_8h_1a43f1d9c5642d86a618a90d58351084ed" kind="define"><name>ST_CRITICAL</name></member>
+  </compound>
+  <compound refid="pch_8h" kind="file"><name>pch.h</name>
+  </compound>
+  <compound refid="_time_8h" kind="file"><name>Time.h</name>
+  </compound>
+  <compound refid="_window_8h" kind="file"><name>Window.h</name>
+  </compound>
+  <compound refid="_event_8h" kind="file"><name>Event.h</name>
+  </compound>
+  <compound refid="_event_bus_8h" kind="file"><name>EventBus.h</name>
+  </compound>
+  <compound refid="_game_object_8h" kind="file"><name>GameObject.h</name>
+  </compound>
+  <compound refid="_prefab_8h" kind="file"><name>Prefab.h</name>
+  </compound>
+  <compound refid="_input_8h" kind="file"><name>Input.h</name>
+  </compound>
+  <compound refid="_key_code_8h" kind="file"><name>KeyCode.h</name>
+  </compound>
+  <compound refid="_math_8h" kind="file"><name>Math.h</name>
+  </compound>
+  <compound refid="_animation_8h" kind="file"><name>Animation.h</name>
+  </compound>
+  <compound refid="_renderer_8h" kind="file"><name>Renderer.h</name>
+  </compound>
+  <compound refid="_render_system_8h" kind="file"><name>RenderSystem.h</name>
+  </compound>
+  <compound refid="_sprite_8h" kind="file"><name>Sprite.h</name>
+  </compound>
+  <compound refid="_sprite_sheet_8h" kind="file"><name>SpriteSheet.h</name>
+  </compound>
+  <compound refid="_audio_manager_8h" kind="file"><name>AudioManager.h</name>
+  </compound>
+  <compound refid="_font_manager_8h" kind="file"><name>FontManager.h</name>
+  </compound>
+  <compound refid="_resource_manager_8h" kind="file"><name>ResourceManager.h</name>
+  </compound>
+  <compound refid="_texture_manager_8h" kind="file"><name>TextureManager.h</name>
+  </compound>
+  <compound refid="_scene_8h" kind="file"><name>Scene.h</name>
+  </compound>
+  <compound refid="_scene_manager_8h" kind="file"><name>SceneManager.h</name>
+  </compound>
+  <compound refid="_behavior_system_8h" kind="file"><name>BehaviorSystem.h</name>
+  </compound>
+  <compound refid="_system_8h" kind="file"><name>System.h</name>
+  </compound>
+  <compound refid="dir_64ab6b7cc6e0ec761878303a3fa00d84" kind="dir"><name>ShitEngine/Audio</name>
+  </compound>
+  <compound refid="dir_32969a043fc8664fcf2e255345bf1b45" kind="dir"><name>ShitEngine/Component</name>
+  </compound>
+  <compound refid="dir_f497ee7666141f55180ce08739d5a369" kind="dir"><name>ShitEngine/Core</name>
+  </compound>
+  <compound refid="dir_a091b941245c02695f6913209156cac4" kind="dir"><name>ShitEngine/Event</name>
+  </compound>
+  <compound refid="dir_0df28b342b44d99371338c05ca0644e6" kind="dir"><name>ShitEngine/GameObject</name>
+  </compound>
+  <compound refid="dir_ba4d2b34fbd29e9c6515d35e6e05d5f4" kind="dir"><name>ShitEngine/Input</name>
+  </compound>
+  <compound refid="dir_ca7c3494f2209672890ed4143e0e9848" kind="dir"><name>ShitEngine/Render</name>
+  </compound>
+  <compound refid="dir_850ab33065c80cdd33f88f319ed19a1f" kind="dir"><name>ShitEngine/Resource</name>
+  </compound>
+  <compound refid="dir_b635e3bbc67c753417fae74bf14cec88" kind="dir"><name>ShitEngine/Scene</name>
+  </compound>
+  <compound refid="dir_19f11fc2c73d363ad17a8ec4bece441b" kind="dir"><name>ShitEngine</name>
+  </compound>
+  <compound refid="dir_06f51467016051492cea5b8764fc4602" kind="dir"><name>ShitEngine/System</name>
+  </compound>
+</doxygenindex>

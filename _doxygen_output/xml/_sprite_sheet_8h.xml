@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_sprite_sheet_8h" kind="file" language="C++">
+    <compoundname>SpriteSheet.h</compoundname>
+    <includes refid="_core_8h" local="yes">../Core/Core.h</includes>
+    <includes local="no">SDL3/SDL_rect.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cstddef</includes>
+    <includedby refid="_animation_component_8h" local="yes">ShitEngine/Component/AnimationComponent.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>../Core/Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Render/SpriteSheet.h</label>
+        <link refid="_sprite_sheet_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SDL3/SDL_rect.h</label>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ShitEngine/Component/AnimationComponent.h</label>
+        <link refid="_animation_component_8h_source"/>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Render/SpriteSheet.h</label>
+        <link refid="_sprite_sheet_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_shit_1_1_sprite_sheet" prot="public">Shit::SpriteSheet</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Render/SpriteSheet.h"/>
+  </compounddef>
+</doxygen>

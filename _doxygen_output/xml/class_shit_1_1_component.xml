@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_component" kind="class" language="C++" prot="public">
+    <compoundname>Shit::Component</compoundname>
+    <derivedcompoundref refid="class_shit_1_1_behavior" prot="public" virt="non-virtual">Behavior</derivedcompoundref>
+    <derivedcompoundref refid="class_shit_1_1_camera_component" prot="public" virt="non-virtual">CameraComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_shit_1_1_renderer_component" prot="public" virt="non-virtual">RendererComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_shit_1_1_transform_component" prot="public" virt="non-virtual">TransformComponent</derivedcompoundref>
+    <includes refid="_component_8h" local="no">Component.h</includes>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_shit_1_1_component_1a00df87c957d8f7ee0fc51f07a0542f4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class GameObject</definition>
+        <argsstring></argsstring>
+        <name>GameObject</name>
+        <qualifiedname>Shit::Component::GameObject</qualifiedname>
+        <param>
+          <type>GameObject</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="19" column="14" bodyfile="ShitEngine/Component/Component.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_component_1aa1aee3acda958839f017f93f6ed1bbb3" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_shit_1_1_component_1a00df87c957d8f7ee0fc51f07a0542f4a" kindref="member">GameObject</ref> *</type>
+        <definition>GameObject* m_owner</definition>
+        <argsstring></argsstring>
+        <name>m_owner</name>
+        <qualifiedname>Shit::Component::m_owner</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="44" column="12" bodyfile="ShitEngine/Component/Component.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_component_1ae8fd281c96362b5079bc11b6ae10007a" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_isRegistered</definition>
+        <argsstring></argsstring>
+        <name>m_isRegistered</name>
+        <qualifiedname>Shit::Component::m_isRegistered</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="45" column="6" bodyfile="ShitEngine/Component/Component.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_component_1a0171e1571f18dc6a27c8b041de55feec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Component</definition>
+        <argsstring>()</argsstring>
+        <name>Component</name>
+        <qualifiedname>Shit::Component::Component</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1ab8905908be361c6fce216879f4739d98" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~Component</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Component</name>
+        <qualifiedname>Shit::Component::~Component</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="23" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1a58db3b5933199c866796fade5e1ad722" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void onCreate</definition>
+        <argsstring>()</argsstring>
+        <name>onCreate</name>
+        <qualifiedname>Shit::Component::onCreate</qualifiedname>
+        <reimplementedby refid="class_shit_1_1_behavior_1acbe76e0ea44ef342a8c85726573860d4">onCreate</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="25" column="14" bodyfile="ShitEngine/Component/Component.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1a6f4c9e6fe81d4bffc712d4d0ae4d72ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void onAttach</definition>
+        <argsstring>()</argsstring>
+        <name>onAttach</name>
+        <qualifiedname>Shit::Component::onAttach</qualifiedname>
+        <reimplementedby refid="class_shit_1_1_animation_component_1acbef2688cd43fd22241759f89fe12d28">onAttach</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_behavior_1acbef2688cd43fd22241759f89fe12d28">onAttach</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_camera_component_1acbef2688cd43fd22241759f89fe12d28">onAttach</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_renderer_component_1acbef2688cd43fd22241759f89fe12d28">onAttach</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="26" column="14" bodyfile="ShitEngine/Component/Component.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1aae1f5204fbabb92a0de013b8f0fd6616" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void onDetach</definition>
+        <argsstring>()</argsstring>
+        <name>onDetach</name>
+        <qualifiedname>Shit::Component::onDetach</qualifiedname>
+        <reimplementedby refid="class_shit_1_1_behavior_1ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_renderer_component_1ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="27" column="14" bodyfile="ShitEngine/Component/Component.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1a448d46f0dcad2b19c77f8a2cc880127c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void onDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>onDestroy</name>
+        <qualifiedname>Shit::Component::onDestroy</qualifiedname>
+        <reimplementedby refid="class_shit_1_1_animation_component_1aee7be93617a6078496df31830d454990">onDestroy</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_behavior_1aee7be93617a6078496df31830d454990">onDestroy</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_camera_component_1aee7be93617a6078496df31830d454990">onDestroy</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_renderer_component_1aee7be93617a6078496df31830d454990">onDestroy</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="28" column="14" bodyfile="ShitEngine/Component/Component.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1a7a86c1a5c9cb8bc0be998d276c438054" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Component</definition>
+        <argsstring>(const Component &amp;)=delete</argsstring>
+        <name>Component</name>
+        <qualifiedname>Shit::Component::Component</qualifiedname>
+        <param>
+          <type>const Component &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1ace504c89f605c2e53f2450021ebca56e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_component_1a0171e1571f18dc6a27c8b041de55feec" kindref="member">Component</ref> &amp;</type>
+        <definition>Component &amp; operator=</definition>
+        <argsstring>(const Component &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::Component::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_shit_1_1_component_1a0171e1571f18dc6a27c8b041de55feec" kindref="member">Component</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="32" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1aa85c694df3855843a20a64cb0fc17233" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Component</definition>
+        <argsstring>(Component &amp;&amp;)=delete</argsstring>
+        <name>Component</name>
+        <qualifiedname>Shit::Component::Component</qualifiedname>
+        <param>
+          <type>Component &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1a34f2dae077ca6d1b6e3a39201c79c796" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_component_1a0171e1571f18dc6a27c8b041de55feec" kindref="member">Component</ref> &amp;</type>
+        <definition>Component &amp; operator=</definition>
+        <argsstring>(Component &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Shit::Component::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_shit_1_1_component_1a0171e1571f18dc6a27c8b041de55feec" kindref="member">Component</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="34" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1a9b36b6de005b18dd7c77687d8621774a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_component_1a00df87c957d8f7ee0fc51f07a0542f4a" kindref="member">GameObject</ref> *</type>
+        <definition>GameObject * getOwner</definition>
+        <argsstring>() const</argsstring>
+        <name>getOwner</name>
+        <qualifiedname>Shit::Component::getOwner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="36" column="12" bodyfile="ShitEngine/Component/Component.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_component_1ab3318796ce9f4c658aa5cd5b65719246" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isRegistered</definition>
+        <argsstring>() const</argsstring>
+        <name>isRegistered</name>
+        <qualifiedname>Shit::Component::isRegistered</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="37" column="6" bodyfile="ShitEngine/Component/Component.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shit_1_1_component_1a70aa1ac6311fc7835071ef5e7bbf956f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setOwner</definition>
+        <argsstring>(GameObject *owner)</argsstring>
+        <name>setOwner</name>
+        <qualifiedname>Shit::Component::setOwner</qualifiedname>
+        <param>
+          <type><ref refid="class_shit_1_1_component_1a00df87c957d8f7ee0fc51f07a0542f4a" kindref="member">GameObject</ref> *</type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Component/Component.h" line="41" column="13" bodyfile="ShitEngine/Component/Component.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>组件基类 </para>
+    </briefdescription>
+    <detaileddescription>
+<para>所有组件必须继承此类。</para>
+<para>生命周期（按调用顺序）： onCreate — 组件刚被构造、已绑定 owner，尚未挂载到场景 onAttach — 组件所属 <ref refid="class_shit_1_1_game_object" kindref="compound">GameObject</ref> 进入活动场景时 onDetach — 组件即将从场景中移除时（在 onDestroy 前调用） onDestroy — 组件被销毁时 </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Component</label>
+        <link refid="class_shit_1_1_component"/>
+      </node>
+      <node id="3">
+        <label>AnimationComponent</label>
+        <link refid="class_shit_1_1_animation_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Behavior</label>
+        <link refid="class_shit_1_1_behavior"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CameraComponent</label>
+        <link refid="class_shit_1_1_camera_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>RendererComponent</label>
+        <link refid="class_shit_1_1_renderer_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SpriteRenderer</label>
+        <link refid="class_shit_1_1_sprite_renderer"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>TransformComponent</label>
+        <link refid="class_shit_1_1_transform_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Component</label>
+        <link refid="class_shit_1_1_component"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GameObject</label>
+        <link refid="class_shit_1_1_game_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="ShitEngine/Component/Component.h" line="18" column="1" bodyfile="ShitEngine/Component/Component.h" bodystart="18" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_component_1a0171e1571f18dc6a27c8b041de55feec" prot="public" virt="non-virtual"><scope>Shit::Component</scope><name>Component</name></member>
+      <member refid="class_shit_1_1_component_1a7a86c1a5c9cb8bc0be998d276c438054" prot="public" virt="non-virtual"><scope>Shit::Component</scope><name>Component</name></member>
+      <member refid="class_shit_1_1_component_1aa85c694df3855843a20a64cb0fc17233" prot="public" virt="non-virtual"><scope>Shit::Component</scope><name>Component</name></member>
+      <member refid="class_shit_1_1_component_1a00df87c957d8f7ee0fc51f07a0542f4a" prot="private" virt="non-virtual"><scope>Shit::Component</scope><name>GameObject</name></member>
+      <member refid="class_shit_1_1_component_1a9b36b6de005b18dd7c77687d8621774a" prot="public" virt="non-virtual"><scope>Shit::Component</scope><name>getOwner</name></member>
+      <member refid="class_shit_1_1_component_1ab3318796ce9f4c658aa5cd5b65719246" prot="public" virt="non-virtual"><scope>Shit::Component</scope><name>isRegistered</name></member>
+      <member refid="class_shit_1_1_component_1ae8fd281c96362b5079bc11b6ae10007a" prot="protected" virt="non-virtual"><scope>Shit::Component</scope><name>m_isRegistered</name></member>
+      <member refid="class_shit_1_1_component_1aa1aee3acda958839f017f93f6ed1bbb3" prot="protected" virt="non-virtual"><scope>Shit::Component</scope><name>m_owner</name></member>
+      <member refid="class_shit_1_1_component_1a6f4c9e6fe81d4bffc712d4d0ae4d72ff" prot="public" virt="virtual"><scope>Shit::Component</scope><name>onAttach</name></member>
+      <member refid="class_shit_1_1_component_1a58db3b5933199c866796fade5e1ad722" prot="public" virt="virtual"><scope>Shit::Component</scope><name>onCreate</name></member>
+      <member refid="class_shit_1_1_component_1a448d46f0dcad2b19c77f8a2cc880127c" prot="public" virt="virtual"><scope>Shit::Component</scope><name>onDestroy</name></member>
+      <member refid="class_shit_1_1_component_1aae1f5204fbabb92a0de013b8f0fd6616" prot="public" virt="virtual"><scope>Shit::Component</scope><name>onDetach</name></member>
+      <member refid="class_shit_1_1_component_1ace504c89f605c2e53f2450021ebca56e" prot="public" virt="non-virtual"><scope>Shit::Component</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_component_1a34f2dae077ca6d1b6e3a39201c79c796" prot="public" virt="non-virtual"><scope>Shit::Component</scope><name>operator=</name></member>
+      <member refid="class_shit_1_1_component_1a70aa1ac6311fc7835071ef5e7bbf956f" prot="private" virt="non-virtual"><scope>Shit::Component</scope><name>setOwner</name></member>
+      <member refid="class_shit_1_1_component_1ab8905908be361c6fce216879f4739d98" prot="public" virt="virtual"><scope>Shit::Component</scope><name>~Component</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

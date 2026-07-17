@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="class_shit_1_1_system" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Shit::System</compoundname>
+    <derivedcompoundref refid="class_shit_1_1_behavior_system" prot="public" virt="non-virtual">BehaviorSystem</derivedcompoundref>
+    <derivedcompoundref refid="class_shit_1_1_render_system" prot="public" virt="non-virtual">RenderSystem</derivedcompoundref>
+    <includes refid="_system_8h" local="no">System.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_shit_1_1_system_1aebd544741012b3bab43cfbbc4e9d28f3" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int m_priority</definition>
+        <argsstring></argsstring>
+        <name>m_priority</name>
+        <qualifiedname>Shit::System::m_priority</qualifiedname>
+        <briefdescription>
+<para>优先级（小值先执行） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="32" column="13" bodyfile="ShitEngine/System/System.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shit_1_1_system_1a6d9ce218dfa1f5f2645b9b4c2abea6ca" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_shit_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* m_scene</definition>
+        <argsstring></argsstring>
+        <name>m_scene</name>
+        <qualifiedname>Shit::System::m_scene</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>所属场景 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="33" column="15" bodyfile="ShitEngine/System/System.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shit_1_1_system_1a5034f7aabb39aa71406a18f57af4971e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>System</definition>
+        <argsstring>(int priority=0)</argsstring>
+        <name>System</name>
+        <qualifiedname>Shit::System::System</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>priority</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="17" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_system_1aa7229e118bb766e4752281389b321ed6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~System</definition>
+        <argsstring>()</argsstring>
+        <name>~System</name>
+        <qualifiedname>Shit::System::~System</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="18" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_system_1ab5be7e5a13ea77d59aac45d21dceb6a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void init</definition>
+        <argsstring>()=0</argsstring>
+        <name>init</name>
+        <qualifiedname>Shit::System::init</qualifiedname>
+        <briefdescription>
+<para>初始化 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="20" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_system_1a99b02345a8a15d3c5ea2844a2253f510" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void update</definition>
+        <argsstring>()=0</argsstring>
+        <name>update</name>
+        <qualifiedname>Shit::System::update</qualifiedname>
+        <reimplementedby refid="class_shit_1_1_behavior_system_1a44137bb65de2396875934e48a6ee5099">update</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_render_system_1a44137bb65de2396875934e48a6ee5099">update</reimplementedby>
+        <briefdescription>
+<para>每帧更新（纯虚） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="21" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_system_1af79997318d96497d77015571261ec88b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void destroy</definition>
+        <argsstring>()=0</argsstring>
+        <name>destroy</name>
+        <qualifiedname>Shit::System::destroy</qualifiedname>
+        <reimplementedby refid="class_shit_1_1_behavior_system_1ae1cf30cae681d95a94934492ae7ea627">destroy</reimplementedby>
+        <reimplementedby refid="class_shit_1_1_render_system_1ae1cf30cae681d95a94934492ae7ea627">destroy</reimplementedby>
+        <briefdescription>
+<para>销毁（纯虚） </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="22" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_system_1a0c36c4965240371f43c896f8d6af7feb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_shit_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene * getScene</definition>
+        <argsstring>() const</argsstring>
+        <name>getScene</name>
+        <qualifiedname>Shit::System::getScene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="25" column="15" bodyfile="ShitEngine/System/System.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_system_1a36f2aa21e8b3898775462d2a378d2e0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setScene</definition>
+        <argsstring>(Scene *scene)</argsstring>
+        <name>setScene</name>
+        <qualifiedname>Shit::System::setScene</qualifiedname>
+        <param>
+          <type><ref refid="class_shit_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="26" column="14" bodyfile="ShitEngine/System/System.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_system_1ad65045bcc70661e1e745edbb1da0377b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int getPriority</definition>
+        <argsstring>() const</argsstring>
+        <name>getPriority</name>
+        <qualifiedname>Shit::System::getPriority</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="28" column="13" bodyfile="ShitEngine/System/System.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shit_1_1_system_1a257fc8f8148265762ab350a6a8563ffc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPriority</definition>
+        <argsstring>(int priority)</argsstring>
+        <name>setPriority</name>
+        <qualifiedname>Shit::System::setPriority</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/System/System.h" line="29" column="14" bodyfile="ShitEngine/System/System.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="class_shit_1_1_system" kindref="compound">System</ref> 基类 </para>
+    </briefdescription>
+    <detaileddescription>
+<para>所有自定义系统必须继承此类并实现 <ref refid="class_shit_1_1_system_1a99b02345a8a15d3c5ea2844a2253f510" kindref="member">update()</ref> 与 <ref refid="class_shit_1_1_system_1af79997318d96497d77015571261ec88b" kindref="member">destroy()</ref>。 系统按 priority 值排序，小值先执行。 通过 <ref refid="class_shit_1_1_scene_1ad0d534f5199d8706d236fd00679450d9" kindref="member">Scene::registerSystem&lt;T&gt;()</ref> 注册到场景。 </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BehaviorSystem</label>
+        <link refid="class_shit_1_1_behavior_system"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RenderSystem</label>
+        <link refid="class_shit_1_1_render_system"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>System</label>
+        <link refid="class_shit_1_1_system"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Scene</label>
+        <link refid="class_shit_1_1_scene"/>
+      </node>
+      <node id="1">
+        <label>System</label>
+        <link refid="class_shit_1_1_system"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_scene</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShitEngine/System/System.h" line="15" column="5" bodyfile="ShitEngine/System/System.h" bodystart="15" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_shit_1_1_system_1af79997318d96497d77015571261ec88b" prot="public" virt="pure-virtual"><scope>Shit::System</scope><name>destroy</name></member>
+      <member refid="class_shit_1_1_system_1ad65045bcc70661e1e745edbb1da0377b" prot="public" virt="non-virtual"><scope>Shit::System</scope><name>getPriority</name></member>
+      <member refid="class_shit_1_1_system_1a0c36c4965240371f43c896f8d6af7feb" prot="public" virt="non-virtual"><scope>Shit::System</scope><name>getScene</name></member>
+      <member refid="class_shit_1_1_system_1ab5be7e5a13ea77d59aac45d21dceb6a0" prot="public" virt="pure-virtual"><scope>Shit::System</scope><name>init</name></member>
+      <member refid="class_shit_1_1_system_1aebd544741012b3bab43cfbbc4e9d28f3" prot="protected" virt="non-virtual"><scope>Shit::System</scope><name>m_priority</name></member>
+      <member refid="class_shit_1_1_system_1a6d9ce218dfa1f5f2645b9b4c2abea6ca" prot="protected" virt="non-virtual"><scope>Shit::System</scope><name>m_scene</name></member>
+      <member refid="class_shit_1_1_system_1a257fc8f8148265762ab350a6a8563ffc" prot="public" virt="non-virtual"><scope>Shit::System</scope><name>setPriority</name></member>
+      <member refid="class_shit_1_1_system_1a36f2aa21e8b3898775462d2a378d2e0f" prot="public" virt="non-virtual"><scope>Shit::System</scope><name>setScene</name></member>
+      <member refid="class_shit_1_1_system_1a5034f7aabb39aa71406a18f57af4971e" prot="public" virt="non-virtual"><scope>Shit::System</scope><name>System</name></member>
+      <member refid="class_shit_1_1_system_1a99b02345a8a15d3c5ea2844a2253f510" prot="public" virt="pure-virtual"><scope>Shit::System</scope><name>update</name></member>
+      <member refid="class_shit_1_1_system_1aa7229e118bb766e4752281389b321ed6" prot="public" virt="virtual"><scope>Shit::System</scope><name>~System</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

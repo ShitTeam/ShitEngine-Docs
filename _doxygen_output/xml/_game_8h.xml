@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_game_8h" kind="file" language="C++">
+    <compoundname>Game.h</compoundname>
+    <includes refid="_core_8h" local="yes">Core.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Core/Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_shit_1_1_game" prot="public">Shit::Game</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Core/Game.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="struct_shit_1_1_font_manager_1_1_t_t_f___font_deleter" kind="struct" language="C++" prot="private">
+    <compoundname>Shit::FontManager::TTF_FontDeleter</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_shit_1_1_font_manager_1_1_t_t_f___font_deleter_1ade778d7691f1286d5e3a9de894bc8879" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void operator()</definition>
+        <argsstring>(TTF_Font *font) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>Shit::FontManager::TTF_FontDeleter::operator()</qualifiedname>
+        <param>
+          <type>TTF_Font *</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ShitEngine/Resource/FontManager.h" line="24" column="6" bodyfile="ShitEngine/Resource/FontManager.h" bodystart="24" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Resource/FontManager.h" line="23" column="1" bodyfile="ShitEngine/Resource/FontManager.h" bodystart="23" bodyend="27"/>
+    <listofallmembers>
+      <member refid="struct_shit_1_1_font_manager_1_1_t_t_f___font_deleter_1ade778d7691f1286d5e3a9de894bc8879" prot="public" virt="non-virtual"><scope>Shit::FontManager::TTF_FontDeleter</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="dir_19f11fc2c73d363ad17a8ec4bece441b" kind="dir">
+    <compoundname>ShitEngine</compoundname>
+    <innerdir refid="dir_64ab6b7cc6e0ec761878303a3fa00d84">ShitEngine/Audio</innerdir>
+    <innerdir refid="dir_32969a043fc8664fcf2e255345bf1b45">ShitEngine/Component</innerdir>
+    <innerdir refid="dir_f497ee7666141f55180ce08739d5a369">ShitEngine/Core</innerdir>
+    <innerdir refid="dir_a091b941245c02695f6913209156cac4">ShitEngine/Event</innerdir>
+    <innerdir refid="dir_0df28b342b44d99371338c05ca0644e6">ShitEngine/GameObject</innerdir>
+    <innerdir refid="dir_ba4d2b34fbd29e9c6515d35e6e05d5f4">ShitEngine/Input</innerdir>
+    <innerdir refid="dir_ca7c3494f2209672890ed4143e0e9848">ShitEngine/Render</innerdir>
+    <innerdir refid="dir_850ab33065c80cdd33f88f319ed19a1f">ShitEngine/Resource</innerdir>
+    <innerdir refid="dir_b635e3bbc67c753417fae74bf14cec88">ShitEngine/Scene</innerdir>
+    <innerdir refid="dir_06f51467016051492cea5b8764fc4602">ShitEngine/System</innerdir>
+    <innerfile refid="_math_8h">Math.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/"/>
+  </compounddef>
+</doxygen>

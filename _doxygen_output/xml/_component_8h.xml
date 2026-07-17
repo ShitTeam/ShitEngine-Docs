@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_component_8h" kind="file" language="C++">
+    <compoundname>Component.h</compoundname>
+    <includes refid="_config_8h" local="yes">../Core/Config.h</includes>
+    <includedby refid="_behavior_8h" local="yes">ShitEngine/Component/Behavior.h</includedby>
+    <includedby refid="_camera_component_8h" local="yes">ShitEngine/Component/CameraComponent.h</includedby>
+    <includedby refid="_renderer_component_8h" local="yes">ShitEngine/Component/RendererComponent.h</includedby>
+    <includedby refid="_transform_component_8h" local="yes">ShitEngine/Component/TransformComponent.h</includedby>
+    <includedby refid="_game_object_8h" local="yes">ShitEngine/GameObject/GameObject.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>ShitEngine/Component/Component.h</label>
+        <link refid="_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../Core/Config.h</label>
+        <link refid="_config_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="5">
+        <label>Log.h</label>
+        <link refid="_log_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="4">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="10">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="9">
+        <label>spdlog/sinks/stdout_color_sinks.h</label>
+      </node>
+      <node id="8">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>ShitEngine/Component/AnimationComponent.h</label>
+        <link refid="_animation_component_8h_source"/>
+      </node>
+      <node id="2">
+        <label>ShitEngine/Component/Behavior.h</label>
+        <link refid="_behavior_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ShitEngine/Component/CameraComponent.h</label>
+        <link refid="_camera_component_8h_source"/>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Component/Component.h</label>
+        <link refid="_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ShitEngine/Component/RendererComponent.h</label>
+        <link refid="_renderer_component_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ShitEngine/Component/SpriteRenderer.h</label>
+        <link refid="_sprite_renderer_8h_source"/>
+      </node>
+      <node id="9">
+        <label>ShitEngine/Component/TransformComponent.h</label>
+        <link refid="_transform_component_8h_source"/>
+      </node>
+      <node id="4">
+        <label>ShitEngine/GameObject/GameObject.h</label>
+        <link refid="_game_object_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ShitEngine/GameObject/Prefab.h</label>
+        <link refid="_prefab_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_shit_1_1_component" prot="public">Shit::Component</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Component/Component.h"/>
+  </compounddef>
+</doxygen>

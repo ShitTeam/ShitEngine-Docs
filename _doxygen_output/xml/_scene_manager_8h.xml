@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="zh">
+  <compounddef id="_scene_manager_8h" kind="file" language="C++">
+    <compoundname>SceneManager.h</compoundname>
+    <includes refid="_core_8h" local="yes">../Core/Core.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../Core/Core.h</label>
+        <link refid="_core_8h_source"/>
+      </node>
+      <node id="1">
+        <label>ShitEngine/Scene/SceneManager.h</label>
+        <link refid="_scene_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_shit_1_1_scene_manager" prot="public">Shit::SceneManager</innerclass>
+    <innerclass refid="struct_shit_1_1_scene_manager_1_1_pending_action" prot="private">Shit::SceneManager::PendingAction</innerclass>
+    <innernamespace refid="namespace_shit">Shit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ShitEngine/Scene/SceneManager.h"/>
+  </compounddef>
+</doxygen>
