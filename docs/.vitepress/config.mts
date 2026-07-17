@@ -32,9 +32,11 @@ export default defineConfig({
           { text: '游戏对象与组件', link: '/guide/game-objects' },
           { text: '场景与系统', link: '/guide/scene' },
           { text: '渲染与相机', link: '/guide/rendering' },
+          { text: '输入系统', link: '/guide/input' },
           { text: '逐帧动画', link: '/guide/animation' },
           { text: '音频系统', link: '/guide/audio' },
-          { text: '事件系统', link: '/guide/events' }
+          { text: '事件系统', link: '/guide/events' },
+          { text: '配置系统', link: '/guide/config' }
         ]
       }
     ],

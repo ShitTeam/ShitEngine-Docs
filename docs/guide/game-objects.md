@@ -31,6 +31,23 @@ auto* player = scene->createGameObject("player");
 | `scene` | 所属场景，由 Scene 自动管理 |
 | `components` | 挂载的组件集合，按 type 索引 |
 
+### 标签（Tag）
+
+标签用于快速分类和批量筛选游戏对象：
+
+```cpp
+auto* enemy = scene->createGameObject("goblin");
+enemy->setTag("enemy");
+enemy->getTag();  // → "enemy"
+```
+
+### 销毁游戏对象
+
+```cpp
+go->destroy();           // 标记为待销毁，帧末统一清理
+go->isNeedDestroy();     // 是否已被标记
+```
+
 ---
 
 ## Component — 功能的积木块
@@ -75,7 +92,20 @@ sprite->setSourceRect({0.0f, 0.0f, 32.0f, 32.0f});  // 只裁剪 32×32 区域
 sprite->setSourceRect(std::nullopt);                   // 恢复整图渲染
 ```
 
-这个接口通常由 `AnimationComponent` 自动管理，你不需要手动调用。
+也可以直接用 `Sprite::setFrame` 从 SpriteSheet 里取帧：
+
+```cpp
+Shit::SpriteSheet sheet(4, 8, 32, 32);
+sprite->setSourceRect(sheet.getFrameRect(5));  // 等价于下面这种手动写法
+// ↑ AnimationComponent 用的就是这个接口，你一般不需要手动调
+```
+
+SpriteRenderer 也支持翻转渲染：
+
+```cpp
+sprite->setFlipped(true);   // 水平翻转
+sprite->isFlipped();        // → true
+```
 
 ---
 
@@ -152,6 +182,10 @@ class Player : public Shit::Behavior {
     }
 };
 ```
+
+::: warning 命名提醒
+ShitEngine 中 `IsKeyPressed` = 持续按住（适合移动），`IsKeyDown` = 按下瞬间（适合跳跃）。这和 Unity/Godot 相反，详见[输入系统](/guide/input)。
+:::
 
 挂到 GameObject 上之后，BehaviorSystem 每帧会自动驱动它。不需要你手动调用。
 

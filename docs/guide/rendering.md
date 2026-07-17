@@ -11,13 +11,24 @@ lang: zh_CN
 
 ShitEngine 默认用 **1280×720** 作为逻辑坐标空间。你写代码时永远在这个"理想屏幕"上思考，渲染器会自动适配到真实窗口，多出的部分用黑边填满（Letterbox）。
 
-```cpp
-// Renderer::init() 帮你设好了
-// 你设坐标 {640, 360} 永远是屏幕正中央
-// 不管窗口是 1024×768 还是 1980×1080
+逻辑分辨率可以通过 `settings.json` 修改：
+
+```json
+{
+  "window": {
+    "title": "My Game",
+    "width": 1920,
+    "height": 1080,
+    "targetFPS": 60
+  }
+}
 ```
 
-这意味着你可以忘了"自适应分辨率"这件事。
+```cpp
+// 也可以在代码中查询当前逻辑分辨率
+float w = Renderer::GetLogicalWidth();   // → 1280.0
+float h = Renderer::GetLogicalHeight();  // → 720.0
+```
 
 ## 精灵渲染
 
@@ -53,6 +64,28 @@ sprite->setSourceRect(std::nullopt);
 ```cpp
 Shit::Sprite sprite("player.png", {0, 0, 32, 32});
 sprite.setFlipped(true);
+
+// 从 SpriteSheet 快速取帧
+Shit::SpriteSheet sheet(4, 8, 32, 32);
+sprite.setFrame(sheet, 5);  // 等价于 setSourceRect(sheet.getFrameRect(5))
+```
+
+### 显示与隐藏
+
+`RendererComponent` 支持运行时隐藏，不渲染但保留组件状态：
+
+```cpp
+sprite->setVisible(false);  // 隐藏
+sprite->isVisible();       // → false
+```
+
+### 包围盒
+
+获取精灵在世界坐标系下的轴对齐包围盒（AABB），可用于碰撞检测或裁剪：
+
+```cpp
+SDL_FRect bounds = sprite->getGlobalBounds();
+// → { x, y, width * scaleX, height * scaleY }
 ```
 
 ## 相机
@@ -86,6 +119,17 @@ Vector2 worldPos = camera->screenToWorld(screenPos);
 ```
 
 做点击检测、拖拽交互的时候特别好用。
+
+### 像素单位比（PixelPerUnit）
+
+`CameraComponent` 暴露了 `getPixelPerUnit()`，表示一个逻辑单位对应多少像素：
+
+```cpp
+float ppu = camera->getPixelPerUnit();
+// SpriteRenderer 渲染时自动用这个值缩放精灵
+```
+
+`setZoom()` 改变的是视口大小，`getPixelPerUnit()` 会随之变化，从而自动缩放所有精灵。
 
 ### 多相机分屏
 
@@ -143,4 +187,16 @@ Z-Index 控制谁盖在谁上面：
 ```cpp
 sprite->setZIndex(10);  // 值越大越靠上
 ```
+
+## 直接绘制（UI 场景）
+
+除了挂载 `SpriteRenderer`，也可以直接在屏幕上画精灵——适合 UI 元素（血条、分数、图标）：
+
+```cpp
+// 在屏幕坐标 (100, 50) 画一个 200×40 的 UI 元素
+Shit::Sprite uiSprite("ui/healthbar.png");
+Renderer::DrawSprite(uiSprite, {100.0f, 50.0f}, {200.0f, 40.0f});
+```
+
+`DrawSprite` 是静态方法，不依赖 GameObject/Camera 体系，直接在屏幕像素坐标上绘制。
 

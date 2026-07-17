@@ -70,7 +70,7 @@ auto* player = scene->createGameObject("player");
 | **Config** | `settings.json` 读配置，没有就默认 |
 | **ResourceManager** | 纹理/音频/字体自动缓存，不重复加载 |
 | **AudioPlayer** | 分层音频：master × group × track |
-| **EventBus** | 类型安全的事件通信，不锁不崩 |
+| **EventBus** | 类型安全的事件通信，缓冲队列派发 |
 | **SceneManager** | 场景栈，推拉替换全延迟执行 |
 
 ## 链接

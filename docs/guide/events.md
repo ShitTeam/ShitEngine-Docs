@@ -65,16 +65,30 @@ EventBus::Emit(PlayerDeathEvent{playerId, killer});
 
 ## 派发事件
 
+`ProcessEvents()` 由引擎在 `Game::run()` 主循环中自动调用——你一般不需要手动调它。
+
+如果你继承了 `Game` 并重写了 `run()`，需要在自己的循环中手动调用：
+
 ```cpp
-// 在 Game::run() 主循环的合适位置
-EventBus::ProcessEvents();
+void MyGame::run() {
+    while (Window::IsOpen()) {
+        Window::HandleEvent();
+        Input::Update();
+        SceneManager::Update();
+        EventBus::ProcessEvents();   // 派发本帧事件
+        AudioPlayer::Update();
+        Renderer::Present();
+    }
+}
 ```
 
-一般在 SceneManager::Update 之前或之后调用——取决于你希望事件在什么时候被处理。
+事件派发发生在 `ProcessEvents()` 被调用的那一刻。回调内可以安全地 `Emit` 新事件（会被排队到下一次 `ProcessEvents`），也可以安全地 `Subscribe` / `Unsubscribe`。
 
 ## 退订事件
 
-> 不退订 = 野指针。监听者销毁前必须退订。
+::: danger 不退订 = 野指针
+监听者销毁前必须退订。
+:::
 
 ```cpp
 EventBus::Unsubscribe<PlayerDeathEvent>(token);
@@ -153,6 +167,14 @@ void Enemy::onDeath() {
     EventBus::Emit(ScoreEvent{100, this});
 }
 ```
+
+## 回调安全性
+
+- **回调内 Emit 新事件**：安全，新事件会被排队到下一次 `ProcessEvents` 统一派发。
+- **回调内 Subscribe / Unsubscribe**：安全，不会破坏当前派发遍历。
+- **回调内 Clear / ClearAll**：安全，当前派发不受影响。
+
+`ProcessEvents` 在派发时会拷贝一份 listener 快照，然后解锁后遍历快照调用回调。因此回调内对 listener 列表的修改不会影响本轮派发。
 
 ## 什么时候用？
 

@@ -111,6 +111,7 @@ class PhysicsSystem : public Shit::System {
 
     void update() override {
         // 每帧遍历场景对象，更新物理
+        // PhysicsComponent 是你自己定义的组件，引擎不内置物理系统
         for (auto& obj : getScene()->getGameObjects()) {
             auto* physics = obj->getComponent<PhysicsComponent>();
             if (physics) physics->tick();
@@ -129,8 +130,18 @@ class PhysicsSystem : public Shit::System {
 
 ```cpp
 scene->addGameObject(std::move(obj));    // 排入待添加队列
-scene->removeGameObject(objPtr);         // 标记为待销毁
+scene->removeGameObject(objPtr);         // 标记为待销毁（按指针）
+scene->removeGameObjectByName("enemy");  // 标记为待销毁（按名字）
 scene->unregisterSystem<RenderSystem>();  // 排入待移除队列
 ```
 
 这些操作不会立即生效，但在 `Scene::update()` 结尾会被统一处理。对你透明，对迭代器安全。
+
+## 查询系统
+
+已注册的系统可以随时查询：
+
+```cpp
+auto* behaviorSys = scene->getSystem<Shit::BehaviorSystem>();
+bool has = scene->hasSystem<Shit::RenderSystem>();
+```

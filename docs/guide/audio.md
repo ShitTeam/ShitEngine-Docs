@@ -30,8 +30,11 @@ AudioPlayer::CreateTrackGroup("sfx");
 分组的精髓在于音量独立：
 
 ```cpp
-AudioPlayer::GetTrackGroup("music")->setVolume(0.5f);  // 音乐小一点
-AudioPlayer::GetTrackGroup("sfx")->setVolume(1.0f);    // 音效拉满
+auto* musicGroup = AudioPlayer::GetTrackGroup("music");
+musicGroup->setVolume(0.5f);    // 音乐小一点
+musicGroup->getName();          // → "music"
+
+AudioPlayer::GetTrackGroup("sfx")->setVolume(1.0f);  // 音效拉满
 ```
 
 ## 播放音频

@@ -144,7 +144,13 @@ player->addComponent<Player>();
 
 BehaviorSystem 每帧会自动找到这个组件并调用它的 `onUpdate`。不需要你手动管理。
 
-> **生命周期小结**：`onCreate → onAttach → onStart → onUpdate(每帧) → onDetach → onDestroy`
+::: warning 命名提醒
+ShitEngine 的 `IsKeyPressed` = 持续按住（适合移动），`IsKeyDown` = 按下瞬间（适合跳跃）。这和 Unity/Godot 的习惯相反，注意区分。详见[输入系统](/guide/input)。
+:::
+
+::: info 生命周期小结
+`onCreate → onAttach → onStart → onUpdate(每帧) → onDetach → onDestroy`
+:::
 
 ## 五、加个相机
 
@@ -223,11 +229,11 @@ int main() {
 
 ```cpp
 // 在 onStart 里
-auto* bgm = Shit::AudioPlayer::Play("audio/bgm.mp3");
+auto* bgm = Shit::AudioPlayer::Play("audio/bgm.mp3", "bgm");
 bgm->setLooping(-1);  // 无限循环
 ```
 
-`Play` 返回一个 `AudioTrack*`，你可以用它控制暂停、恢复、音量。
+`Play` 第二个参数是轨道组名，不传则默认归入 `"default"` 组。返回 `AudioTrack*`，可以用来控制暂停、恢复、音量。
 
 音量分三级：**主音量 × 组音量 × 轨道音量**。默认全 1.0，改哪层都行。
 
@@ -268,7 +274,7 @@ EventBus::Emit(ScoreEvent{100});
 EventBus::Unsubscribe<ScoreEvent>(token);
 ```
 
-事件不会立即触发，而是排队等待 `ProcessEvents` 统一派发，安全无锁。
+事件不会立即触发，而是排队等待 `ProcessEvents` 统一派发。引擎在主循环中已自动调用，你一般不需要手动处理。
 
 ## 继续深入
 
@@ -276,8 +282,11 @@ EventBus::Unsubscribe<ScoreEvent>(token);
 
 | 模块 | 去这里 |
 |---|---|
+| GameObject、组件生命周期、Behavior、Prefab | [游戏对象与组件](/guide/game-objects) |
 | 场景切换、场景栈、自定义 System | [场景管理](/guide/scene) |
-| 多相机分屏、渲染流程 | [渲染与相机](/guide/rendering) |
+| 多相机分屏、渲染流程、UI 直接绘制 | [渲染与相机](/guide/rendering) |
+| 键盘鼠标三态检测、鼠标位置 | [输入系统](/guide/input) |
 | SpriteSheet、动画生命周期 | [逐帧动画](/guide/animation) |
-| EventBus 完整 API、设计建议 | [事件系统](/guide/events) |
 | 轨道组、全局控制、缓存机制 | [音频系统](/guide/audio) |
+| EventBus 完整 API、回调安全性 | [事件系统](/guide/events) |
+| settings.json、逻辑分辨率、帧率 | [配置系统](/guide/config) |

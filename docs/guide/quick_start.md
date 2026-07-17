@@ -87,7 +87,9 @@ scene->init();  // 注册 BehaviorSystem + RenderSystem
 
 ### 2. 创建游戏对象
 
-> 注意：GameObject 只能通过 `scene->createGameObject()` 创建，不能直接 `new`。
+::: tip
+GameObject 只能通过 `scene->createGameObject()` 创建，不能直接 `new`。
+:::
 
 ```cpp
 auto* player = scene->createGameObject("player");
@@ -140,6 +142,10 @@ class Player : public Shit::Behavior {
 player->addComponent<Player>();
 ```
 
+::: tip
+`IsKeyPressed` 检测的是**持续按住**，适合移动。如果是跳跃这类单次触发，用 `IsKeyDown`。命名和 Unity 相反，注意区分（详见[输入系统](/guide/input)）。
+:::
+
 ## 再加个相机
 
 没有相机就什么都看不到。相机决定你从哪个角度观察世界：
@@ -180,7 +186,7 @@ int main() {
 
         auto* player = scene->createGameObject("player");
         player->addComponent<Shit::TransformComponent>();
-        player->getComponent<Shit::SpriteRenderer>()->setTexturePath("player.png");
+        player->addComponent<Shit::SpriteRenderer>()->setTexturePath("player.png");
         player->addComponent<Player>();
 
         auto* camera = scene->createGameObject("camera");
@@ -199,8 +205,11 @@ int main() {
 你已经能跑会动了。继续深入了解：
 
 - [引擎核心架构](/guide/introduction)
-- **场景管理** — 多场景切换、叠加菜单
-- **逐帧动画** — 让 sprite 动得更花哨
-- **多相机分屏** — 小地图、分屏合作
-- **事件系统** — 模块间通信不耦合
-- **音频系统** — 音效和背景音乐
+- [游戏对象与组件](/guide/game-objects) — 组件生命周期、Behavior、Prefab
+- [场景管理](/guide/scene) — 多场景切换、叠加菜单
+- [渲染与相机](/guide/rendering) — 多相机分屏、UI 直接绘制
+- [输入系统](/guide/input) — 键盘鼠标三态检测
+- [逐帧动画](/guide/animation) — 让 sprite 动得更花哨
+- [事件系统](/guide/events) — 模块间通信不耦合
+- [音频系统](/guide/audio) — 音效和背景音乐
+- [配置系统](/guide/config) — settings.json、逻辑分辨率
