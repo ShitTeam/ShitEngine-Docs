@@ -4,5 +4,4 @@ _doxygen_output/
 Doxyfile
 docs/public/api-docs/
 docs/api/
-
-_doxygen_output/
+docs/.vitepress/dist/
