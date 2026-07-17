@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: Sprite类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_sprite.html','','class_shit_1_1_sprite-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Sprite类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>精灵数据，描述"画什么"  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_sprite_8h_source.html">Sprite.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a637dbaba7024234f1dd304df1706c371" id="r_a637dbaba7024234f1dd304df1706c371"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a637dbaba7024234f1dd304df1706c371">Sprite</a> ()</td></tr>
+<tr class="memitem:a43fb6e9fc79dbcf1e1c19f5ddd46b705" id="r_a43fb6e9fc79dbcf1e1c19f5ddd46b705"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a43fb6e9fc79dbcf1e1c19f5ddd46b705">Sprite</a> (const std::string &amp;texturePath, const std::optional&lt; SDL_FRect &gt; &amp;sourceRect=std::nullopt, bool flipped=false)</td></tr>
+<tr class="memitem:ab666c41ebea083a5c6604ce593b59e17" id="r_ab666c41ebea083a5c6604ce593b59e17"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab666c41ebea083a5c6604ce593b59e17">getTexturePath</a> () const</td></tr>
+<tr class="memitem:acc6d59208bb5d18bf9ffd30dc3432169" id="r_acc6d59208bb5d18bf9ffd30dc3432169"><td class="memItemLeft">const std::optional&lt; SDL_FRect &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#acc6d59208bb5d18bf9ffd30dc3432169">getSourceRect</a> () const</td></tr>
+<tr class="memitem:af1579f186eb2eb6413a1a9c312a9f020" id="r_af1579f186eb2eb6413a1a9c312a9f020"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af1579f186eb2eb6413a1a9c312a9f020">isFlipped</a> () const</td></tr>
+<tr class="memitem:a41da7c464a16ff1588754ddf26068f61" id="r_a41da7c464a16ff1588754ddf26068f61"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a41da7c464a16ff1588754ddf26068f61">setTexturePath</a> (const std::string &amp;texturePath)</td></tr>
+<tr class="memitem:add80442c628d1bb373d5d9a9afddc4d4" id="r_add80442c628d1bb373d5d9a9afddc4d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#add80442c628d1bb373d5d9a9afddc4d4">setSourceRect</a> (const std::optional&lt; SDL_FRect &gt; &amp;rect)</td></tr>
+<tr class="memitem:ad34a52d954a18c0f9aa8e99bd02104f0" id="r_ad34a52d954a18c0f9aa8e99bd02104f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad34a52d954a18c0f9aa8e99bd02104f0">setFlipped</a> (bool flipped)</td></tr>
+<tr class="memitem:ad8aed24d6c5a7976bf3ea266fa166367" id="r_ad8aed24d6c5a7976bf3ea266fa166367"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad8aed24d6c5a7976bf3ea266fa166367">setFrame</a> (const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;sheet, int frameIndex)</td></tr>
+<tr class="memdesc:ad8aed24d6c5a7976bf3ea266fa166367"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 <a class="el" href="class_shit_1_1_sprite_sheet.html" title="精灵图集（sprite-sheet）网格切割器">SpriteSheet</a> 中取第 frameIndex 帧作为源矩形  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>精灵数据，描述"画什么" </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a637dbaba7024234f1dd304df1706c371" name="a637dbaba7024234f1dd304df1706c371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637dbaba7024234f1dd304df1706c371">&#9670;&#160;</a></span>Sprite() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43fb6e9fc79dbcf1e1c19f5ddd46b705" name="a43fb6e9fc79dbcf1e1c19f5ddd46b705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43fb6e9fc79dbcf1e1c19f5ddd46b705">&#9670;&#160;</a></span>Sprite() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sprite </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>texturePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; SDL_FRect &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sourceRect</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>flipped</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="acc6d59208bb5d18bf9ffd30dc3432169" name="acc6d59208bb5d18bf9ffd30dc3432169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6d59208bb5d18bf9ffd30dc3432169">&#9670;&#160;</a></span>getSourceRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt; SDL_FRect &gt; &amp; getSourceRect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab666c41ebea083a5c6604ce593b59e17" name="ab666c41ebea083a5c6604ce593b59e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab666c41ebea083a5c6604ce593b59e17">&#9670;&#160;</a></span>getTexturePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; getTexturePath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1579f186eb2eb6413a1a9c312a9f020" name="af1579f186eb2eb6413a1a9c312a9f020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1579f186eb2eb6413a1a9c312a9f020">&#9670;&#160;</a></span>isFlipped()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isFlipped </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad34a52d954a18c0f9aa8e99bd02104f0" name="ad34a52d954a18c0f9aa8e99bd02104f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad34a52d954a18c0f9aa8e99bd02104f0">&#9670;&#160;</a></span>setFlipped()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFlipped </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>flipped</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8aed24d6c5a7976bf3ea266fa166367" name="ad8aed24d6c5a7976bf3ea266fa166367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8aed24d6c5a7976bf3ea266fa166367">&#9670;&#160;</a></span>setFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>frameIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从 <a class="el" href="class_shit_1_1_sprite_sheet.html" title="精灵图集（sprite-sheet）网格切割器">SpriteSheet</a> 中取第 frameIndex 帧作为源矩形 </p>
+
+</div>
+</div>
+<a id="add80442c628d1bb373d5d9a9afddc4d4" name="add80442c628d1bb373d5d9a9afddc4d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add80442c628d1bb373d5d9a9afddc4d4">&#9670;&#160;</a></span>setSourceRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSourceRect </td>
+          <td>(</td>
+          <td class="paramtype">const std::optional&lt; SDL_FRect &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41da7c464a16ff1588754ddf26068f61" name="a41da7c464a16ff1588754ddf26068f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41da7c464a16ff1588754ddf26068f61">&#9670;&#160;</a></span>setTexturePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTexturePath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>texturePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_sprite.html">Sprite</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
