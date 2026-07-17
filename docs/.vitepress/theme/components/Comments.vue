@@ -12,7 +12,7 @@
       data-reactions-enabled="1"
       data-emit-metadata="0"
       data-input-position="bottom"
-      data-theme="preferred_color_scheme"
+      :data-theme="giscusTheme"
       data-lang="zh-CN"
       crossorigin="anonymous"
       async
@@ -21,10 +21,10 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 
-const { frontmatter } = useData()
+const { isDark, frontmatter } = useData()
 const route = useRoute()
 
 const repo = 'ShitTeam/ShitEngine-Docs'
@@ -33,6 +33,18 @@ const category = 'General'
 const categoryId = 'DIC_kwDOR6Brb84DBYEE'
 
 const showComments = ref(true)
+const giscusTheme = computed(() => isDark.value ? 'dark' : 'light')
+
+// 实时跟随 VitePress 暗色模式
+watch(isDark, (val) => {
+  const iframe = document.querySelector('iframe.giscus-frame')
+  if (iframe) {
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: val ? 'dark' : 'light' } } },
+      'https://giscus.app'
+    )
+  }
+})
 
 watch(() => route.path, () => {
   showComments.value = frontmatter.value.comments !== false
