@@ -21,18 +21,17 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from 'vue'
+import { ref, watch } from 'vue'
 import { useData, useRoute } from 'vitepress'
 
-const { isDark, frontmatter } = useData()
+const { frontmatter } = useData()
 const route = useRoute()
 
-// ===== 配置区 =====
-// 访问 https://giscus.app/ 获取以下参数
+// ===== giscus 配置 =====
 const repo = 'ShitTeam/ShitEngine-Docs'
-const repoId = ''      // ← 你的 repo ID
+const repoId = 'R_kgDOR6Brbw'
 const category = 'General'
-const categoryId = ''  // ← 你的 category ID
+const categoryId = 'DIC_kwDOR6Brb84DBYEE'
 // =================
 
 const mapping = 'pathname'
@@ -45,28 +44,11 @@ const loading = 'lazy'
 const lang = 'zh-CN'
 
 const showComments = ref(true)
-const theme = ref('light')
-
-// 跟随 VitePress 暗色模式切换
-watch(isDark, (val) => {
-  theme.value = val ? 'dark' : 'light'
-  updateGiscusTheme(val ? 'dark' : 'light')
-})
 
 // 隐藏评论页（如首页）
 watch(() => route.path, () => {
   showComments.value = !frontmatter.value.comments === false
 })
-
-function updateGiscusTheme(theme) {
-  const iframe = document.querySelector('iframe.giscus-frame')
-  if (iframe) {
-    iframe.contentWindow.postMessage(
-      { giscus: { setConfig: { theme } } },
-      'https://giscus.app'
-    )
-  }
-}
 
 // Reload giscus on route change
 watch(() => route.path, () => {
