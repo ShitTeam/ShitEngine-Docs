@@ -8,6 +8,6 @@ var searchData=
   ['escape_5',['Escape',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da013ec032d3460d4be4431c6ab1f8f224',1,'Shit']]],
   ['event_6',['Event',['../struct_shit_1_1_event.html',1,'Shit']]],
   ['event_2eh_7',['Event.h',['../_event_8h.html',1,'']]],
-  ['eventbus_8',['eventbus',['../class_shit_1_1_event_bus.html',1,'EventBus'],['../class_shit_1_1_event_bus.html#aea518fa2333bad9241acb92f499b1c62',1,'Shit::EventBus::EventBus(const EventBus &amp;)=delete'],['../class_shit_1_1_event_bus.html#ab4fc8ca0de8c342fb85269a7d6c21c9b',1,'Shit::EventBus::EventBus(EventBus &amp;&amp;)=delete']]],
+  ['eventbus_8',['EventBus',['../class_shit_1_1_event_bus.html',1,'EventBus'],['../class_shit_1_1_event_bus.html#aea518fa2333bad9241acb92f499b1c62',1,'Shit::EventBus::EventBus(const EventBus &amp;)=delete'],['../class_shit_1_1_event_bus.html#ab4fc8ca0de8c342fb85269a7d6c21c9b',1,'Shit::EventBus::EventBus(EventBus &amp;&amp;)=delete']]],
   ['eventbus_2eh_9',['EventBus.h',['../_event_bus_8h.html',1,'']]]
 ];

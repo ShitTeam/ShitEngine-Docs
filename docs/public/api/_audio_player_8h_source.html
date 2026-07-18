@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: include/ShitEngine/Audio/AudioPlayer.h 源文件</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,17 +94,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -117,7 +113,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_audio_player_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('_audio_player_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -147,7 +143,7 @@ $(document).ready(function(){initNavTree('_audio_player_8h_source.html',''); ini
 </div><!--header-->
 <div class="contents">
 <a href="_audio_player_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../Core/Core.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8h.html">../Core/Core.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_audio_track_8h.html">AudioTrack.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
@@ -158,7 +154,7 @@ $(document).ready(function(){initNavTree('_audio_player_8h_source.html',''); ini
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespace_shit.html">    9</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_track_group.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_track_group.html">   11</a></span><span class="keyword">class </span>AudioTrackGroup {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_track_group.html#ac5347c2164caeac0caf59a8d4c7ddd7c">   13</a></span>    <a class="code hl_function" href="class_shit_1_1_audio_track_group.html#ac5347c2164caeac0caf59a8d4c7ddd7c">~AudioTrackGroup</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
@@ -170,9 +166,9 @@ $(document).ready(function(){initNavTree('_audio_player_8h_source.html',''); ini
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_track_group.html#a3fd7335faa33dce2f87c7e50eef3e294">   20</a></span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_shit_1_1_audio_track_group.html#a3fd7335faa33dce2f87c7e50eef3e294">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_name; }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_track_group.html#a730923163cee8657080776520dba6a57">   23</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_track_group.html#af25123b00bc5b424d5a76caca903c939">   24</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_audio_track.html">AudioTrack</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a>(<span class="keyword">const</span> std::string&amp; name) : m_name(name) {}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_track_group.html#a730923163cee8657080776520dba6a57">   23</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_shit_1_1_audio_track_group.html#a730923163cee8657080776520dba6a57">AudioPlayer</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_track_group.html#af25123b00bc5b424d5a76caca903c939">   24</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_shit_1_1_audio_track_group.html#af25123b00bc5b424d5a76caca903c939">AudioTrack</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    AudioTrackGroup(<span class="keyword">const</span> std::string&amp; name) : m_name(name) {}</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> registerTrack(<a class="code hl_class" href="class_shit_1_1_audio_track.html">AudioTrack</a>* track);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> unregisterTrack(<a class="code hl_class" href="class_shit_1_1_audio_track.html">AudioTrack</a>* track);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
@@ -183,48 +179,48 @@ $(document).ready(function(){initNavTree('_audio_player_8h_source.html',''); ini
 </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html">   34</a></span><span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html">   34</a></span><span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a> {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#ae596c367662c7f3b19b6626b89ffc08b">   36</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#ae596c367662c7f3b19b6626b89ffc08b">Init</a>() { <span class="keywordflow">return</span> GetInstance().init(); }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a62a73aff7afffe2fba7c2e47e07d9134">   37</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a>() { GetInstance().destroy(); }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a554d0f30ae93d2787435dca9a46c6c5d">   38</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a554d0f30ae93d2787435dca9a46c6c5d">Update</a>() { GetInstance().update(); }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#ae596c367662c7f3b19b6626b89ffc08b">   36</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#ae596c367662c7f3b19b6626b89ffc08b">Init</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().init(); }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a62a73aff7afffe2fba7c2e47e07d9134">   37</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a>() { <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().destroy(); }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a554d0f30ae93d2787435dca9a46c6c5d">   38</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a554d0f30ae93d2787435dca9a46c6c5d">Update</a>() { <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().update(); }</div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#aa28102fc6628113f8df2bf137a56dbf4">   39</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a>* <a class="code hl_function" href="class_shit_1_1_audio_player.html#aa28102fc6628113f8df2bf137a56dbf4">CreateTrackGroup</a>(<span class="keyword">const</span> std::string&amp; name) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> GetInstance().createTrackGroup(name);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().createTrackGroup(name);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
 </div>
 <div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a1808a18d4251b068f5918292e02ee3bd">   42</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a>* <a class="code hl_function" href="class_shit_1_1_audio_player.html#a1808a18d4251b068f5918292e02ee3bd">GetTrackGroup</a>(<span class="keyword">const</span> std::string&amp; name) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> GetInstance().getTrackGroup(name);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().getTrackGroup(name);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
 </div>
 <div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a13693ec1551b1ac57ae42c52fc5ce02c">   45</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="class_shit_1_1_audio_track.html">AudioTrack</a>* <a class="code hl_function" href="class_shit_1_1_audio_player.html#a13693ec1551b1ac57ae42c52fc5ce02c">Play</a>(<span class="keyword">const</span> std::string&amp; filePath, <span class="keyword">const</span> std::string&amp; group = <span class="stringliteral">&quot;default&quot;</span>) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span>&amp; inst = GetInstance();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span>&amp; inst = <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> inst.play(filePath, inst.getTrackGroup(group));</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#aa5a1799fb46cab51c9d242d43d06ac20">   49</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#aa5a1799fb46cab51c9d242d43d06ac20">SetMasterVolume</a>(<span class="keywordtype">float</span> gain) { GetInstance().setMasterVolume(gain); }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#ae29e26e89211f70c3f06d7d50b649227">   50</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#ae29e26e89211f70c3f06d7d50b649227">GetMasterVolume</a>() { <span class="keywordflow">return</span> GetInstance().m_masterGain; }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#aa0fdd77bbc34ecfcd2089fdf8c97505f">   51</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#aa0fdd77bbc34ecfcd2089fdf8c97505f">PauseAll</a>() { GetInstance().pauseAll(); }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a7ad26de4d9552f0c317ccc67403f1194">   52</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a7ad26de4d9552f0c317ccc67403f1194">ResumeAll</a>() { GetInstance().resumeAll(); }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#ad4314c6bc19a633e5d62c20b6eb85064">   53</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#ad4314c6bc19a633e5d62c20b6eb85064">StopAll</a>() { GetInstance().stopAll(); }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#aa5a1799fb46cab51c9d242d43d06ac20">   49</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#aa5a1799fb46cab51c9d242d43d06ac20">SetMasterVolume</a>(<span class="keywordtype">float</span> gain) { <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().setMasterVolume(gain); }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#ae29e26e89211f70c3f06d7d50b649227">   50</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#ae29e26e89211f70c3f06d7d50b649227">GetMasterVolume</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().m_masterGain; }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#aa0fdd77bbc34ecfcd2089fdf8c97505f">   51</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#aa0fdd77bbc34ecfcd2089fdf8c97505f">PauseAll</a>() { <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().pauseAll(); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a7ad26de4d9552f0c317ccc67403f1194">   52</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a7ad26de4d9552f0c317ccc67403f1194">ResumeAll</a>() { <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().resumeAll(); }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#ad4314c6bc19a633e5d62c20b6eb85064">   53</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#ad4314c6bc19a633e5d62c20b6eb85064">StopAll</a>() { <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().stopAll(); }</div>
 <div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#aa89cb3cfdbdd384a906bf1fc873f3ab7">   54</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#aa89cb3cfdbdd384a906bf1fc873f3ab7">ApplyTrackGain</a>(<a class="code hl_class" href="class_shit_1_1_audio_track.html">AudioTrack</a>* track, <span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a>* group) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        GetInstance().applyTrackGain(track, group);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>().applyTrackGain(track, group);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
 </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">   58</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>&amp; <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">   58</a></span>    <span class="keyword">static</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>&amp; <a class="code hl_function" href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">GetInstance</a>();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">   60</a></span>    <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a778064d7e9f13d69e058b35d76dbd994">   61</a></span>    <a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>&amp; <a class="code hl_function" href="class_shit_1_1_audio_player.html#a778064d7e9f13d69e058b35d76dbd994">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#ab4db3ae581702270e3031456a247fc4a">   62</a></span>    <a class="code hl_function" href="class_shit_1_1_audio_player.html#ab4db3ae581702270e3031456a247fc4a">AudioPlayer</a>(<a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#adf093c1b93ce2cbc3ac83077d24f5409">   63</a></span>    <a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>&amp; <a class="code hl_function" href="class_shit_1_1_audio_player.html#adf093c1b93ce2cbc3ac83077d24f5409">operator=</a>(<a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">   60</a></span>    <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#a778064d7e9f13d69e058b35d76dbd994">   61</a></span>    <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>&amp; <a class="code hl_function" href="class_shit_1_1_audio_player.html#a778064d7e9f13d69e058b35d76dbd994">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#ab4db3ae581702270e3031456a247fc4a">   62</a></span>    <a class="code hl_function" href="class_shit_1_1_audio_player.html#ab4db3ae581702270e3031456a247fc4a">AudioPlayer</a>(<a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_shit_1_1_audio_player.html#adf093c1b93ce2cbc3ac83077d24f5409">   63</a></span>    <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>&amp; <a class="code hl_function" href="class_shit_1_1_audio_player.html#adf093c1b93ce2cbc3ac83077d24f5409">operator=</a>(<a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_class" href="class_shit_1_1_audio_player.html">AudioPlayer</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_class" href="class_shit_1_1_audio_player.html">~AudioPlayer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">AudioPlayer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">~AudioPlayer</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">bool</span> init();</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> destroy();</div>
@@ -249,35 +245,37 @@ $(document).ready(function(){initNavTree('_audio_player_8h_source.html',''); ini
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">// namespace Shit</span></div>
 </div>
 <div class="ttc" id="a_audio_track_8h_html"><div class="ttname"><a href="_audio_track_8h.html">AudioTrack.h</a></div></div>
-<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html"><div class="ttname"><a href="class_shit_1_1_audio_player.html">Shit::AudioPlayer</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:34</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_a13693ec1551b1ac57ae42c52fc5ce02c"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a13693ec1551b1ac57ae42c52fc5ce02c">Shit::AudioPlayer::Play</a></div><div class="ttdeci">static AudioTrack * Play(const std::string &amp;filePath, const std::string &amp;group=&quot;default&quot;)</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:45</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_a1808a18d4251b068f5918292e02ee3bd"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a1808a18d4251b068f5918292e02ee3bd">Shit::AudioPlayer::GetTrackGroup</a></div><div class="ttdeci">static AudioTrackGroup * GetTrackGroup(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:42</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_a554d0f30ae93d2787435dca9a46c6c5d"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a554d0f30ae93d2787435dca9a46c6c5d">Shit::AudioPlayer::Update</a></div><div class="ttdeci">static void Update()</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:38</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_a62a73aff7afffe2fba7c2e47e07d9134"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a62a73aff7afffe2fba7c2e47e07d9134">Shit::AudioPlayer::Destroy</a></div><div class="ttdeci">static void Destroy()</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:37</div></div>
+<div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_a13693ec1551b1ac57ae42c52fc5ce02c"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a13693ec1551b1ac57ae42c52fc5ce02c">Shit::AudioPlayer::Play</a></div><div class="ttdeci">static AudioTrack * Play(const std::string &amp;filePath, const std::string &amp;group=&quot;default&quot;)</div><div class="ttdef"><b>定义</b> AudioPlayer.h:45</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_a1808a18d4251b068f5918292e02ee3bd"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a1808a18d4251b068f5918292e02ee3bd">Shit::AudioPlayer::GetTrackGroup</a></div><div class="ttdeci">static AudioTrackGroup * GetTrackGroup(const std::string &amp;name)</div><div class="ttdef"><b>定义</b> AudioPlayer.h:42</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_a554d0f30ae93d2787435dca9a46c6c5d"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a554d0f30ae93d2787435dca9a46c6c5d">Shit::AudioPlayer::Update</a></div><div class="ttdeci">static void Update()</div><div class="ttdef"><b>定义</b> AudioPlayer.h:38</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_a62a73aff7afffe2fba7c2e47e07d9134"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a62a73aff7afffe2fba7c2e47e07d9134">Shit::AudioPlayer::Destroy</a></div><div class="ttdeci">static void Destroy()</div><div class="ttdef"><b>定义</b> AudioPlayer.h:37</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_player_html_a71445503ff71241a1394d15d7178441b"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b">Shit::AudioPlayer::AudioPlayer</a></div><div class="ttdeci">AudioPlayer(const AudioPlayer &amp;)=delete</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_player_html_a778064d7e9f13d69e058b35d76dbd994"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a778064d7e9f13d69e058b35d76dbd994">Shit::AudioPlayer::operator=</a></div><div class="ttdeci">AudioPlayer &amp; operator=(const AudioPlayer &amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_a7ad26de4d9552f0c317ccc67403f1194"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a7ad26de4d9552f0c317ccc67403f1194">Shit::AudioPlayer::ResumeAll</a></div><div class="ttdeci">static void ResumeAll()</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:52</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_a7ad26de4d9552f0c317ccc67403f1194"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a7ad26de4d9552f0c317ccc67403f1194">Shit::AudioPlayer::ResumeAll</a></div><div class="ttdeci">static void ResumeAll()</div><div class="ttdef"><b>定义</b> AudioPlayer.h:52</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_player_html_a9fd8778cfd0e762b0d8a167dbc755fdb"><div class="ttname"><a href="class_shit_1_1_audio_player.html#a9fd8778cfd0e762b0d8a167dbc755fdb">Shit::AudioPlayer::GetInstance</a></div><div class="ttdeci">static AudioPlayer &amp; GetInstance()</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_aa0fdd77bbc34ecfcd2089fdf8c97505f"><div class="ttname"><a href="class_shit_1_1_audio_player.html#aa0fdd77bbc34ecfcd2089fdf8c97505f">Shit::AudioPlayer::PauseAll</a></div><div class="ttdeci">static void PauseAll()</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:51</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_aa28102fc6628113f8df2bf137a56dbf4"><div class="ttname"><a href="class_shit_1_1_audio_player.html#aa28102fc6628113f8df2bf137a56dbf4">Shit::AudioPlayer::CreateTrackGroup</a></div><div class="ttdeci">static AudioTrackGroup * CreateTrackGroup(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:39</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_aa5a1799fb46cab51c9d242d43d06ac20"><div class="ttname"><a href="class_shit_1_1_audio_player.html#aa5a1799fb46cab51c9d242d43d06ac20">Shit::AudioPlayer::SetMasterVolume</a></div><div class="ttdeci">static void SetMasterVolume(float gain)</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:49</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_aa89cb3cfdbdd384a906bf1fc873f3ab7"><div class="ttname"><a href="class_shit_1_1_audio_player.html#aa89cb3cfdbdd384a906bf1fc873f3ab7">Shit::AudioPlayer::ApplyTrackGain</a></div><div class="ttdeci">static void ApplyTrackGain(AudioTrack *track, const AudioTrackGroup *group)</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:54</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_aa0fdd77bbc34ecfcd2089fdf8c97505f"><div class="ttname"><a href="class_shit_1_1_audio_player.html#aa0fdd77bbc34ecfcd2089fdf8c97505f">Shit::AudioPlayer::PauseAll</a></div><div class="ttdeci">static void PauseAll()</div><div class="ttdef"><b>定义</b> AudioPlayer.h:51</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_aa28102fc6628113f8df2bf137a56dbf4"><div class="ttname"><a href="class_shit_1_1_audio_player.html#aa28102fc6628113f8df2bf137a56dbf4">Shit::AudioPlayer::CreateTrackGroup</a></div><div class="ttdeci">static AudioTrackGroup * CreateTrackGroup(const std::string &amp;name)</div><div class="ttdef"><b>定义</b> AudioPlayer.h:39</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_aa5a1799fb46cab51c9d242d43d06ac20"><div class="ttname"><a href="class_shit_1_1_audio_player.html#aa5a1799fb46cab51c9d242d43d06ac20">Shit::AudioPlayer::SetMasterVolume</a></div><div class="ttdeci">static void SetMasterVolume(float gain)</div><div class="ttdef"><b>定义</b> AudioPlayer.h:49</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_aa89cb3cfdbdd384a906bf1fc873f3ab7"><div class="ttname"><a href="class_shit_1_1_audio_player.html#aa89cb3cfdbdd384a906bf1fc873f3ab7">Shit::AudioPlayer::ApplyTrackGain</a></div><div class="ttdeci">static void ApplyTrackGain(AudioTrack *track, const AudioTrackGroup *group)</div><div class="ttdef"><b>定义</b> AudioPlayer.h:54</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_player_html_ab4db3ae581702270e3031456a247fc4a"><div class="ttname"><a href="class_shit_1_1_audio_player.html#ab4db3ae581702270e3031456a247fc4a">Shit::AudioPlayer::AudioPlayer</a></div><div class="ttdeci">AudioPlayer(AudioPlayer &amp;&amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_ad4314c6bc19a633e5d62c20b6eb85064"><div class="ttname"><a href="class_shit_1_1_audio_player.html#ad4314c6bc19a633e5d62c20b6eb85064">Shit::AudioPlayer::StopAll</a></div><div class="ttdeci">static void StopAll()</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:53</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_ad4314c6bc19a633e5d62c20b6eb85064"><div class="ttname"><a href="class_shit_1_1_audio_player.html#ad4314c6bc19a633e5d62c20b6eb85064">Shit::AudioPlayer::StopAll</a></div><div class="ttdeci">static void StopAll()</div><div class="ttdef"><b>定义</b> AudioPlayer.h:53</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_player_html_adf093c1b93ce2cbc3ac83077d24f5409"><div class="ttname"><a href="class_shit_1_1_audio_player.html#adf093c1b93ce2cbc3ac83077d24f5409">Shit::AudioPlayer::operator=</a></div><div class="ttdeci">AudioPlayer &amp; operator=(AudioPlayer &amp;&amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_ae29e26e89211f70c3f06d7d50b649227"><div class="ttname"><a href="class_shit_1_1_audio_player.html#ae29e26e89211f70c3f06d7d50b649227">Shit::AudioPlayer::GetMasterVolume</a></div><div class="ttdeci">static float GetMasterVolume()</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:50</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_player_html_ae596c367662c7f3b19b6626b89ffc08b"><div class="ttname"><a href="class_shit_1_1_audio_player.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::AudioPlayer::Init</a></div><div class="ttdeci">static bool Init()</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:36</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_track_group_html"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html">Shit::AudioTrackGroup</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:11</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_track_group_html_a3fd7335faa33dce2f87c7e50eef3e294"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#a3fd7335faa33dce2f87c7e50eef3e294">Shit::AudioTrackGroup::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:20</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_ae29e26e89211f70c3f06d7d50b649227"><div class="ttname"><a href="class_shit_1_1_audio_player.html#ae29e26e89211f70c3f06d7d50b649227">Shit::AudioPlayer::GetMasterVolume</a></div><div class="ttdeci">static float GetMasterVolume()</div><div class="ttdef"><b>定义</b> AudioPlayer.h:50</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_player_html_ae596c367662c7f3b19b6626b89ffc08b"><div class="ttname"><a href="class_shit_1_1_audio_player.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::AudioPlayer::Init</a></div><div class="ttdeci">static bool Init()</div><div class="ttdef"><b>定义</b> AudioPlayer.h:36</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_track_group_html"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html">Shit::AudioTrackGroup</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:11</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_track_group_html_a3fd7335faa33dce2f87c7e50eef3e294"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#a3fd7335faa33dce2f87c7e50eef3e294">Shit::AudioTrackGroup::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>定义</b> AudioPlayer.h:20</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_track_group_html_a4823aa91e33925c0da5969f5011c07da"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#a4823aa91e33925c0da5969f5011c07da">Shit::AudioTrackGroup::stopAll</a></div><div class="ttdeci">void stopAll()</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_track_group_html_a6818a4cf7e305e87ccc30dc793b10323"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#a6818a4cf7e305e87ccc30dc793b10323">Shit::AudioTrackGroup::resumeAll</a></div><div class="ttdeci">void resumeAll()</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_track_group_html_a730923163cee8657080776520dba6a57"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#a730923163cee8657080776520dba6a57">Shit::AudioTrackGroup::AudioPlayer</a></div><div class="ttdeci">friend class AudioPlayer</div><div class="ttdef"><b>定义</b> AudioPlayer.h:23</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_track_group_html_a8ae0e710d094445dec14dd3f9fed4d9f"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#a8ae0e710d094445dec14dd3f9fed4d9f">Shit::AudioTrackGroup::pauseAll</a></div><div class="ttdeci">void pauseAll()</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_track_group_html_ac5347c2164caeac0caf59a8d4c7ddd7c"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#ac5347c2164caeac0caf59a8d4c7ddd7c">Shit::AudioTrackGroup::~AudioTrackGroup</a></div><div class="ttdeci">~AudioTrackGroup()=default</div></div>
 <div class="ttc" id="aclass_shit_1_1_audio_track_group_html_ac9fdacb844713965161bc991e8452ade"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#ac9fdacb844713965161bc991e8452ade">Shit::AudioTrackGroup::setVolume</a></div><div class="ttdeci">void setVolume(float gain)</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_track_group_html_adde132ea7b25cca5886eb5f9bcc20f58"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#adde132ea7b25cca5886eb5f9bcc20f58">Shit::AudioTrackGroup::getVolume</a></div><div class="ttdeci">float getVolume() const</div><div class="ttdef"><b>Definition</b> AudioPlayer.h:19</div></div>
-<div class="ttc" id="aclass_shit_1_1_audio_track_html"><div class="ttname"><a href="class_shit_1_1_audio_track.html">Shit::AudioTrack</a></div><div class="ttdef"><b>Definition</b> AudioTrack.h:10</div></div>
-<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_track_group_html_adde132ea7b25cca5886eb5f9bcc20f58"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#adde132ea7b25cca5886eb5f9bcc20f58">Shit::AudioTrackGroup::getVolume</a></div><div class="ttdeci">float getVolume() const</div><div class="ttdef"><b>定义</b> AudioPlayer.h:19</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_track_group_html_af25123b00bc5b424d5a76caca903c939"><div class="ttname"><a href="class_shit_1_1_audio_track_group.html#af25123b00bc5b424d5a76caca903c939">Shit::AudioTrackGroup::AudioTrack</a></div><div class="ttdeci">friend class AudioTrack</div><div class="ttdef"><b>定义</b> AudioPlayer.h:24</div></div>
+<div class="ttc" id="aclass_shit_1_1_audio_track_html"><div class="ttname"><a href="class_shit_1_1_audio_track.html">Shit::AudioTrack</a></div><div class="ttdef"><b>定义</b> AudioTrack.h:10</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.17.0-->
@@ -285,7 +283,7 @@ $(document).ready(function(){initNavTree('_audio_player_8h_source.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_515483f8ae85c04357bb148b3c9bd504.html">Audio</a></li><li class="navelem"><a class="el" href="_audio_player_8h.html">AudioPlayer.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

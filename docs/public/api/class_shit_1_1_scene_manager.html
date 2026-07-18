@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: SceneManager类 参考</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -112,7 +113,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_shit_1_1_scene_manager.html',''); initResizable(); });
+$(function(){initNavTree('class_shit_1_1_scene_manager.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -139,57 +140,56 @@ $(document).ready(function(){initNavTree('class_shit_1_1_scene_manager.html','')
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">类</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="class_shit_1_1_scene_manager-members.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">SceneManager类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+  <div class="headertitle"><div class="title">SceneManager类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>场景管理器（单例）  
- <a href="class_shit_1_1_scene_manager.html#details">更多...</a></p>
+ <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_scene_manager_8h_source.html">SceneManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a56e74084b96a4960cbac4c377472e5ad" id="r_a56e74084b96a4960cbac4c377472e5ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a> (const <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;)=delete</td></tr>
+<tr class="memitem:a56e74084b96a4960cbac4c377472e5ad" id="r_a56e74084b96a4960cbac4c377472e5ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a> (const <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;)=delete</td></tr>
 <tr class="separator:a56e74084b96a4960cbac4c377472e5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04bbcf4e6db0801aeeda962157cc2673" id="r_a04bbcf4e6db0801aeeda962157cc2673"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a04bbcf4e6db0801aeeda962157cc2673">operator=</a> (const <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;)=delete</td></tr>
+<tr class="memitem:a04bbcf4e6db0801aeeda962157cc2673" id="r_a04bbcf4e6db0801aeeda962157cc2673"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04bbcf4e6db0801aeeda962157cc2673">operator=</a> (const <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;)=delete</td></tr>
 <tr class="separator:a04bbcf4e6db0801aeeda962157cc2673"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a68462bb7a8de13b69c762bb0dc4439" id="r_a6a68462bb7a8de13b69c762bb0dc4439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a6a68462bb7a8de13b69c762bb0dc4439">SceneManager</a> (<a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a6a68462bb7a8de13b69c762bb0dc4439" id="r_a6a68462bb7a8de13b69c762bb0dc4439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a68462bb7a8de13b69c762bb0dc4439">SceneManager</a> (<a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a6a68462bb7a8de13b69c762bb0dc4439"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af01af0eef584ecb24ded0e75bc3f4c24" id="r_af01af0eef584ecb24ded0e75bc3f4c24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#af01af0eef584ecb24ded0e75bc3f4c24">operator=</a> (<a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&amp;)=delete</td></tr>
+<tr class="memitem:af01af0eef584ecb24ded0e75bc3f4c24" id="r_af01af0eef584ecb24ded0e75bc3f4c24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01af0eef584ecb24ded0e75bc3f4c24">operator=</a> (<a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:af01af0eef584ecb24ded0e75bc3f4c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:aee88db8ba5649a8b071cdd7b3742b99c" id="r_aee88db8ba5649a8b071cdd7b3742b99c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a> ()</td></tr>
+<tr class="memitem:aee88db8ba5649a8b071cdd7b3742b99c" id="r_aee88db8ba5649a8b071cdd7b3742b99c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a> ()</td></tr>
 <tr class="separator:aee88db8ba5649a8b071cdd7b3742b99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a554d0f30ae93d2787435dca9a46c6c5d" id="r_a554d0f30ae93d2787435dca9a46c6c5d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">Update</a> ()</td></tr>
+<tr class="memitem:a554d0f30ae93d2787435dca9a46c6c5d" id="r_a554d0f30ae93d2787435dca9a46c6c5d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a554d0f30ae93d2787435dca9a46c6c5d">Update</a> ()</td></tr>
 <tr class="memdesc:a554d0f30ae93d2787435dca9a46c6c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新当前场景  <br /></td></tr>
 <tr class="separator:a554d0f30ae93d2787435dca9a46c6c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62a73aff7afffe2fba7c2e47e07d9134" id="r_a62a73aff7afffe2fba7c2e47e07d9134"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a> ()</td></tr>
+<tr class="memitem:a62a73aff7afffe2fba7c2e47e07d9134" id="r_a62a73aff7afffe2fba7c2e47e07d9134"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a> ()</td></tr>
 <tr class="memdesc:a62a73aff7afffe2fba7c2e47e07d9134"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁所有场景  <br /></td></tr>
 <tr class="separator:a62a73aff7afffe2fba7c2e47e07d9134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a428410da43a236f1ffc3dde15508d9" id="r_a6a428410da43a236f1ffc3dde15508d9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a6a428410da43a236f1ffc3dde15508d9">PushScene</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;scene)</td></tr>
+<tr class="memitem:a6a428410da43a236f1ffc3dde15508d9" id="r_a6a428410da43a236f1ffc3dde15508d9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a428410da43a236f1ffc3dde15508d9">PushScene</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;scene)</td></tr>
 <tr class="memdesc:a6a428410da43a236f1ffc3dde15508d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">压入新场景（下个帧循环生效）  <br /></td></tr>
 <tr class="separator:a6a428410da43a236f1ffc3dde15508d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a98350e821e4029abf45c77074c185" id="r_a65a98350e821e4029abf45c77074c185"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a65a98350e821e4029abf45c77074c185">PopScene</a> ()</td></tr>
+<tr class="memitem:a65a98350e821e4029abf45c77074c185" id="r_a65a98350e821e4029abf45c77074c185"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65a98350e821e4029abf45c77074c185">PopScene</a> ()</td></tr>
 <tr class="memdesc:a65a98350e821e4029abf45c77074c185"><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出栈顶场景（下个帧循环生效）  <br /></td></tr>
 <tr class="separator:a65a98350e821e4029abf45c77074c185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fafde24f44fcc9f1adc352297541434" id="r_a9fafde24f44fcc9f1adc352297541434"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434">ClearScene</a> ()</td></tr>
+<tr class="memitem:a9fafde24f44fcc9f1adc352297541434" id="r_a9fafde24f44fcc9f1adc352297541434"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fafde24f44fcc9f1adc352297541434">ClearScene</a> ()</td></tr>
 <tr class="memdesc:a9fafde24f44fcc9f1adc352297541434"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空场景栈  <br /></td></tr>
 <tr class="separator:a9fafde24f44fcc9f1adc352297541434"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eaa093e982c488a420d60ff3233902d" id="r_a2eaa093e982c488a420d60ff3233902d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">ReplaceScene</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;scene)</td></tr>
+<tr class="memitem:a2eaa093e982c488a420d60ff3233902d" id="r_a2eaa093e982c488a420d60ff3233902d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eaa093e982c488a420d60ff3233902d">ReplaceScene</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;scene)</td></tr>
 <tr class="memdesc:a2eaa093e982c488a420d60ff3233902d"><td class="mdescLeft">&#160;</td><td class="mdescRight">替换栈顶场景  <br /></td></tr>
 <tr class="separator:a2eaa093e982c488a420d60ff3233902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>场景管理器（单例） </p>
-<p>使用栈结构管理场景生命周期。任何时候只有栈顶场景处于活跃状态。 所有操作延迟到 <a class="el" href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d" title="更新当前场景">Update()</a> 时执行，保证迭代安全。</p>
-<p>用法： SceneManager::PushScene(std::move(myScene)); SceneManager::ReplaceScene(std::move(gameScene)); <a class="el" href="class_shit_1_1_scene_manager.html#a65a98350e821e4029abf45c77074c185" title="弹出栈顶场景（下个帧循环生效）">SceneManager::PopScene()</a>; <a class="el" href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434" title="清空场景栈">SceneManager::ClearScene()</a>; </p>
+<p>使用栈结构管理场景生命周期。任何时候只有栈顶场景处于活跃状态。 所有操作延迟到 <a class="el" href="#a554d0f30ae93d2787435dca9a46c6c5d" title="更新当前场景">Update()</a> 时执行，保证迭代安全。</p>
+<p>用法： SceneManager::PushScene(std::move(myScene)); SceneManager::ReplaceScene(std::move(gameScene)); <a class="el" href="#a65a98350e821e4029abf45c77074c185" title="弹出栈顶场景（下个帧循环生效）">SceneManager::PopScene()</a>; <a class="el" href="#a9fafde24f44fcc9f1adc352297541434" title="清空场景栈">SceneManager::ClearScene()</a>; </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a56e74084b96a4960cbac4c377472e5ad" name="a56e74084b96a4960cbac4c377472e5ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56e74084b96a4960cbac4c377472e5ad">&#9670;&#160;</a></span>SceneManager() <span class="overload">[1/2]</span></h2>
@@ -203,14 +203,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -229,14 +228,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -256,13 +254,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static void ClearScene </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -283,13 +281,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static void Destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -310,13 +308,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp; GetInstance </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -335,14 +333,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -361,14 +358,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -387,13 +383,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static void PopScene </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -414,14 +410,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static void PushScene </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -442,14 +437,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static void ReplaceScene </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -470,13 +464,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">static void Update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -495,7 +489,7 @@ Public 成员函数</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

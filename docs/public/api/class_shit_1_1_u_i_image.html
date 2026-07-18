@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: UIImage类 参考</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -112,7 +113,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_shit_1_1_u_i_image.html',''); initResizable(); });
+$(function(){initNavTree('class_shit_1_1_u_i_image.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -146,7 +147,7 @@ $(document).ready(function(){initNavTree('class_shit_1_1_u_i_image.html',''); in
 <div class="contents">
 
 <p>UI 图片控件，在屏幕空间绘制一张精灵  
- <a href="class_shit_1_1_u_i_image.html#details">更多...</a></p>
+ <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_u_i_image_8h_source.html">UIImage.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -162,34 +163,34 @@ $(document).ready(function(){initNavTree('class_shit_1_1_u_i_image.html',''); in
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a7bc5d203c5c27f9f8fdc3c6fd3472da6" id="r_a7bc5d203c5c27f9f8fdc3c6fd3472da6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#a7bc5d203c5c27f9f8fdc3c6fd3472da6">UIImage</a> ()=default</td></tr>
+<tr class="memitem:a7bc5d203c5c27f9f8fdc3c6fd3472da6" id="r_a7bc5d203c5c27f9f8fdc3c6fd3472da6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bc5d203c5c27f9f8fdc3c6fd3472da6">UIImage</a> ()=default</td></tr>
 <tr class="separator:a7bc5d203c5c27f9f8fdc3c6fd3472da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3b5359e07d4fa60751aa8ad93f834f3" id="r_ac3b5359e07d4fa60751aa8ad93f834f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#ac3b5359e07d4fa60751aa8ad93f834f3">UIImage</a> (const std::string &amp;texturePath)</td></tr>
+<tr class="memitem:ac3b5359e07d4fa60751aa8ad93f834f3" id="r_ac3b5359e07d4fa60751aa8ad93f834f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3b5359e07d4fa60751aa8ad93f834f3">UIImage</a> (const std::string &amp;texturePath)</td></tr>
 <tr class="separator:ac3b5359e07d4fa60751aa8ad93f834f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde103d23b8c049e6450f91b868b4e94" id="r_acde103d23b8c049e6450f91b868b4e94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#acde103d23b8c049e6450f91b868b4e94">~UIImage</a> () override</td></tr>
+<tr class="memitem:acde103d23b8c049e6450f91b868b4e94" id="r_acde103d23b8c049e6450f91b868b4e94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acde103d23b8c049e6450f91b868b4e94">~UIImage</a> () override</td></tr>
 <tr class="separator:acde103d23b8c049e6450f91b868b4e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e739ff12d1cf50a1139791b2a425d58" id="r_a2e739ff12d1cf50a1139791b2a425d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#a2e739ff12d1cf50a1139791b2a425d58">onRender</a> (SDL_Renderer *renderer, const SDL_FRect &amp;screenRect) override</td></tr>
+<tr class="memitem:a2e739ff12d1cf50a1139791b2a425d58" id="r_a2e739ff12d1cf50a1139791b2a425d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e739ff12d1cf50a1139791b2a425d58">onRender</a> (SDL_Renderer *renderer, const SDL_FRect &amp;screenRect) override</td></tr>
 <tr class="memdesc:a2e739ff12d1cf50a1139791b2a425d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身  <br /></td></tr>
 <tr class="separator:a2e739ff12d1cf50a1139791b2a425d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
 <tr class="separator:aee7be93617a6078496df31830d454990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41da7c464a16ff1588754ddf26068f61" id="r_a41da7c464a16ff1588754ddf26068f61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#a41da7c464a16ff1588754ddf26068f61">setTexturePath</a> (const std::string &amp;texturePath)</td></tr>
+<tr class="memitem:a41da7c464a16ff1588754ddf26068f61" id="r_a41da7c464a16ff1588754ddf26068f61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41da7c464a16ff1588754ddf26068f61">setTexturePath</a> (const std::string &amp;texturePath)</td></tr>
 <tr class="separator:a41da7c464a16ff1588754ddf26068f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab666c41ebea083a5c6604ce593b59e17" id="r_ab666c41ebea083a5c6604ce593b59e17"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#ab666c41ebea083a5c6604ce593b59e17">getTexturePath</a> () const</td></tr>
+<tr class="memitem:ab666c41ebea083a5c6604ce593b59e17" id="r_ab666c41ebea083a5c6604ce593b59e17"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab666c41ebea083a5c6604ce593b59e17">getTexturePath</a> () const</td></tr>
 <tr class="separator:ab666c41ebea083a5c6604ce593b59e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a793a0745c1b76fe461518367f1ed7199" id="r_a793a0745c1b76fe461518367f1ed7199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#a793a0745c1b76fe461518367f1ed7199">setSourceRect</a> (const std::optional&lt; SDL_FRect &gt; &amp;sourceRect)</td></tr>
+<tr class="memitem:a793a0745c1b76fe461518367f1ed7199" id="r_a793a0745c1b76fe461518367f1ed7199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a793a0745c1b76fe461518367f1ed7199">setSourceRect</a> (const std::optional&lt; SDL_FRect &gt; &amp;sourceRect)</td></tr>
 <tr class="separator:a793a0745c1b76fe461518367f1ed7199"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc6d59208bb5d18bf9ffd30dc3432169" id="r_acc6d59208bb5d18bf9ffd30dc3432169"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; SDL_FRect &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#acc6d59208bb5d18bf9ffd30dc3432169">getSourceRect</a> () const</td></tr>
+<tr class="memitem:acc6d59208bb5d18bf9ffd30dc3432169" id="r_acc6d59208bb5d18bf9ffd30dc3432169"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; SDL_FRect &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc6d59208bb5d18bf9ffd30dc3432169">getSourceRect</a> () const</td></tr>
 <tr class="separator:acc6d59208bb5d18bf9ffd30dc3432169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34a52d954a18c0f9aa8e99bd02104f0" id="r_ad34a52d954a18c0f9aa8e99bd02104f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#ad34a52d954a18c0f9aa8e99bd02104f0">setFlipped</a> (bool flipped)</td></tr>
+<tr class="memitem:ad34a52d954a18c0f9aa8e99bd02104f0" id="r_ad34a52d954a18c0f9aa8e99bd02104f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad34a52d954a18c0f9aa8e99bd02104f0">setFlipped</a> (bool flipped)</td></tr>
 <tr class="separator:ad34a52d954a18c0f9aa8e99bd02104f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1579f186eb2eb6413a1a9c312a9f020" id="r_af1579f186eb2eb6413a1a9c312a9f020"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#af1579f186eb2eb6413a1a9c312a9f020">isFlipped</a> () const</td></tr>
+<tr class="memitem:af1579f186eb2eb6413a1a9c312a9f020" id="r_af1579f186eb2eb6413a1a9c312a9f020"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1579f186eb2eb6413a1a9c312a9f020">isFlipped</a> () const</td></tr>
 <tr class="separator:af1579f186eb2eb6413a1a9c312a9f020"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d29d190f51d53f05574fd2bc57adf2d" id="r_a0d29d190f51d53f05574fd2bc57adf2d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#a0d29d190f51d53f05574fd2bc57adf2d">getColor</a> () const</td></tr>
+<tr class="memitem:a0d29d190f51d53f05574fd2bc57adf2d" id="r_a0d29d190f51d53f05574fd2bc57adf2d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d29d190f51d53f05574fd2bc57adf2d">getColor</a> () const</td></tr>
 <tr class="separator:a0d29d190f51d53f05574fd2bc57adf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a518eaa08866d5abe9e686d1ccf476eec" id="r_a518eaa08866d5abe9e686d1ccf476eec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html#a518eaa08866d5abe9e686d1ccf476eec">setColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memitem:a518eaa08866d5abe9e686d1ccf476eec" id="r_a518eaa08866d5abe9e686d1ccf476eec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a518eaa08866d5abe9e686d1ccf476eec">setColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
 <tr class="separator:a518eaa08866d5abe9e686d1ccf476eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
 <tr class="memitem:aa8115cc4430d4879d11ade1d62666ec1 inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_aa8115cc4430d4879d11ade1d62666ec1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#aa8115cc4430d4879d11ade1d62666ec1">UIRendererComponent</a> ()</td></tr>
 <tr class="separator:aa8115cc4430d4879d11ade1d62666ec1 inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00ae90e38d862640edc9e480efde5852 inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a00ae90e38d862640edc9e480efde5852"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a00ae90e38d862640edc9e480efde5852">~UIRendererComponent</a> () override=default</td></tr>
@@ -211,7 +212,7 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a9d8a6cfb13917785c143e74d40e4e2be inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18e44e30b31525a243960ca3928125aa inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a18e44e30b31525a243960ca3928125aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a18e44e30b31525a243960ca3928125aa">setVisible</a> (bool visible)</td></tr>
 <tr class="separator:a18e44e30b31525a243960ca3928125aa inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
 <tr class="memitem:a0171e1571f18dc6a27c8b041de55feec inherit pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
 <tr class="separator:a0171e1571f18dc6a27c8b041de55feec inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8905908be361c6fce216879f4739d98 inherit pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
@@ -233,18 +234,18 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pro_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
 <tr class="memitem:ac6eb6cd5c4468fe1c73fad58e704dda8 inherit pro_methods_class_shit_1_1_u_i_renderer_component" id="r_ac6eb6cd5c4468fe1c73fad58e704dda8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac6eb6cd5c4468fe1c73fad58e704dda8">requestSort</a> ()</td></tr>
 <tr class="memdesc:ac6eb6cd5c4468fe1c73fad58e704dda8 inherit pro_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">components变更后通知系统重排（实例：zIndex 变化）  <br /></td></tr>
 <tr class="separator:ac6eb6cd5c4468fe1c73fad58e704dda8 inherit pro_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
 <tr class="memitem:a2b31866ba7ed40c82edd92abe0081948 inherit pro_attribs_class_shit_1_1_u_i_renderer_component" id="r_a2b31866ba7ed40c82edd92abe0081948"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948">m_zIndex</a> = 0</td></tr>
 <tr class="memdesc:a2b31866ba7ed40c82edd92abe0081948 inherit pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染层级（值越大越靠上）  <br /></td></tr>
 <tr class="separator:a2b31866ba7ed40c82edd92abe0081948 inherit pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace177fa285e5e88a6ba132129f89b73c inherit pro_attribs_class_shit_1_1_u_i_renderer_component" id="r_ace177fa285e5e88a6ba132129f89b73c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ace177fa285e5e88a6ba132129f89b73c">m_isVisible</a> = true</td></tr>
 <tr class="memdesc:ace177fa285e5e88a6ba132129f89b73c inherit pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否参与渲染与命中  <br /></td></tr>
 <tr class="separator:ace177fa285e5e88a6ba132129f89b73c inherit pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
 <tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 inherit pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
 <tr class="separator:aa1aee3acda958839f017f93f6ed1bbb3 inherit pro_attribs_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a inherit pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
@@ -266,13 +267,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_u_i_image.html">UIImage</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -291,14 +292,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_u_i_image.html">UIImage</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>texturePath</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>texturePath</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -317,13 +317,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">~<a class="el" href="class_shit_1_1_u_i_image.html">UIImage</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -343,13 +343,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp; getColor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -368,13 +368,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">const std::optional&lt; SDL_FRect &gt; &amp; getSourceRect </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -393,13 +393,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">const std::string &amp; getTexturePath </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -418,13 +418,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">bool isFlipped </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -443,13 +443,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void onDestroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -470,24 +470,17 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void onRender </td>
           <td>(</td>
-          <td class="paramtype">SDL_Renderer *&#160;</td>
-          <td class="paramname"><em>renderer</em>, </td>
+          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SDL_FRect &amp;&#160;</td>
-          <td class="paramname"><em>screenRect</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>screenRect</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -510,14 +503,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setColor </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -536,14 +528,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setFlipped </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>flipped</em></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>flipped</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -562,14 +553,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setSourceRect </td>
           <td>(</td>
-          <td class="paramtype">const std::optional&lt; SDL_FRect &gt; &amp;&#160;</td>
-          <td class="paramname"><em>sourceRect</em></td><td>)</td>
+          <td class="paramtype">const std::optional&lt; SDL_FRect &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sourceRect</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -588,14 +578,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setTexturePath </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>texturePath</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>texturePath</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -612,7 +601,7 @@ Public 成员函数</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_u_i_image.html">UIImage</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

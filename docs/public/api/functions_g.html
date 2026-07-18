@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: 类成员</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -112,7 +113,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('functions_g.html',''); initResizable(); });
+$(function(){initNavTree('functions_g.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -176,8 +177,8 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 <li>getLooping()&#160;:&#160;<a class="el" href="class_shit_1_1_audio_track.html#aeaa26ba3ffcc274da8a32ce7d63eba41">AudioTrack</a></li>
 <li>getMargin()&#160;:&#160;<a class="el" href="class_shit_1_1_sprite_sheet.html#ad0b0509f7ac071f49cc248341336e7cc">SpriteSheet</a></li>
 <li>GetMasterVolume()&#160;:&#160;<a class="el" href="class_shit_1_1_audio_player.html#ae29e26e89211f70c3f06d7d50b649227">AudioPlayer</a></li>
-<li>getMousePosition()&#160;:&#160;<a class="el" href="class_shit_1_1_input.html#adfbd398e0ffbf567f47ab2cdd424c4bf">Input</a></li>
 <li>GetMousePosition()&#160;:&#160;<a class="el" href="class_shit_1_1_input.html#ac00b45c4f900b83fb737520008e23e4f">Input</a></li>
+<li>getMousePosition()&#160;:&#160;<a class="el" href="class_shit_1_1_input.html#adfbd398e0ffbf567f47ab2cdd424c4bf">Input</a></li>
 <li>getName()&#160;:&#160;<a class="el" href="class_shit_1_1_audio_track_group.html#a3fd7335faa33dce2f87c7e50eef3e294">AudioTrackGroup</a>, <a class="el" href="class_shit_1_1_game_object.html#a3fd7335faa33dce2f87c7e50eef3e294">GameObject</a>, <a class="el" href="class_shit_1_1_scene.html#a3fd7335faa33dce2f87c7e50eef3e294">Scene</a></li>
 <li>getOwner()&#160;:&#160;<a class="el" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">Component</a></li>
 <li>getParent()&#160;:&#160;<a class="el" href="class_shit_1_1_game_object.html#a5adb8c6bcab6353e781579c0c9240e03">GameObject</a></li>
@@ -220,7 +221,7 @@ $(document).ready(function(){initNavTree('functions_g.html',''); initResizable()
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

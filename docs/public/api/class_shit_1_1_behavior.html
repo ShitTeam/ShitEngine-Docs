@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: Behavior类 参考</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -112,7 +113,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_shit_1_1_behavior.html',''); initResizable(); });
+$(function(){initNavTree('class_shit_1_1_behavior.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -148,7 +149,7 @@ $(document).ready(function(){initNavTree('class_shit_1_1_behavior.html',''); ini
 <div class="contents">
 
 <p>行为基类 —— 用于编写自定义游戏逻辑  
- <a href="class_shit_1_1_behavior.html#details">更多...</a></p>
+ <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_behavior_8h_source.html">Behavior.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -164,30 +165,30 @@ $(document).ready(function(){initNavTree('class_shit_1_1_behavior.html',''); ini
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a4f24a7153019bf68d0ec7f99428db90e" id="r_a4f24a7153019bf68d0ec7f99428db90e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a4f24a7153019bf68d0ec7f99428db90e">Behavior</a> ()=default</td></tr>
+<tr class="memitem:a4f24a7153019bf68d0ec7f99428db90e" id="r_a4f24a7153019bf68d0ec7f99428db90e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f24a7153019bf68d0ec7f99428db90e">Behavior</a> ()=default</td></tr>
 <tr class="separator:a4f24a7153019bf68d0ec7f99428db90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a505b38eb8ed0bab19cf378f5e35854d9" id="r_a505b38eb8ed0bab19cf378f5e35854d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a505b38eb8ed0bab19cf378f5e35854d9">~Behavior</a> () override=default</td></tr>
+<tr class="memitem:a505b38eb8ed0bab19cf378f5e35854d9" id="r_a505b38eb8ed0bab19cf378f5e35854d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505b38eb8ed0bab19cf378f5e35854d9">~Behavior</a> () override=default</td></tr>
 <tr class="separator:a505b38eb8ed0bab19cf378f5e35854d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbe76e0ea44ef342a8c85726573860d4" id="r_acbe76e0ea44ef342a8c85726573860d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#acbe76e0ea44ef342a8c85726573860d4">onCreate</a> () override</td></tr>
+<tr class="memitem:acbe76e0ea44ef342a8c85726573860d4" id="r_acbe76e0ea44ef342a8c85726573860d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe76e0ea44ef342a8c85726573860d4">onCreate</a> () override</td></tr>
 <tr class="separator:acbe76e0ea44ef342a8c85726573860d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbef2688cd43fd22241759f89fe12d28" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="memitem:acbef2688cd43fd22241759f89fe12d28" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
 <tr class="separator:acbef2688cd43fd22241759f89fe12d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62c5b2c91580204a54e2d32e9594e6e9" id="r_a62c5b2c91580204a54e2d32e9594e6e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a62c5b2c91580204a54e2d32e9594e6e9">onStart</a> ()</td></tr>
+<tr class="memitem:a62c5b2c91580204a54e2d32e9594e6e9" id="r_a62c5b2c91580204a54e2d32e9594e6e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62c5b2c91580204a54e2d32e9594e6e9">onStart</a> ()</td></tr>
 <tr class="memdesc:a62c5b2c91580204a54e2d32e9594e6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">首次 update 前执行一次  <br /></td></tr>
 <tr class="separator:a62c5b2c91580204a54e2d32e9594e6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac521702842354e4c4c71d4cf28b1db0b" id="r_ac521702842354e4c4c71d4cf28b1db0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#ac521702842354e4c4c71d4cf28b1db0b">onUpdate</a> ()</td></tr>
+<tr class="memitem:ac521702842354e4c4c71d4cf28b1db0b" id="r_ac521702842354e4c4c71d4cf28b1db0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac521702842354e4c4c71d4cf28b1db0b">onUpdate</a> ()</td></tr>
 <tr class="memdesc:ac521702842354e4c4c71d4cf28b1db0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧执行  <br /></td></tr>
 <tr class="separator:ac521702842354e4c4c71d4cf28b1db0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
+<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
 <tr class="separator:ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
 <tr class="separator:aee7be93617a6078496df31830d454990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1991ea0e286fbb461b60c8c9299d781" id="r_ac1991ea0e286fbb461b60c8c9299d781"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781">isStarted</a> () const</td></tr>
+<tr class="memitem:ac1991ea0e286fbb461b60c8c9299d781" id="r_ac1991ea0e286fbb461b60c8c9299d781"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1991ea0e286fbb461b60c8c9299d781">isStarted</a> () const</td></tr>
 <tr class="memdesc:ac1991ea0e286fbb461b60c8c9299d781"><td class="mdescLeft">&#160;</td><td class="mdescRight">onStart 是否已执行过  <br /></td></tr>
 <tr class="separator:ac1991ea0e286fbb461b60c8c9299d781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa28282f574997057b62d336af9198bb2" id="r_aa28282f574997057b62d336af9198bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#aa28282f574997057b62d336af9198bb2">setStarted</a> (bool <a class="el" href="class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781">isStarted</a>)</td></tr>
+<tr class="memitem:aa28282f574997057b62d336af9198bb2" id="r_aa28282f574997057b62d336af9198bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa28282f574997057b62d336af9198bb2">setStarted</a> (bool <a class="el" href="#ac1991ea0e286fbb461b60c8c9299d781">isStarted</a>)</td></tr>
 <tr class="separator:aa28282f574997057b62d336af9198bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
 <tr class="memitem:a0171e1571f18dc6a27c8b041de55feec inherit pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
 <tr class="separator:a0171e1571f18dc6a27c8b041de55feec inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8905908be361c6fce216879f4739d98 inherit pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
@@ -207,9 +208,9 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
-<tr class="memitem:a04b5b6d3587350e5f8834fedeb9cab9e" id="r_a04b5b6d3587350e5f8834fedeb9cab9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a04b5b6d3587350e5f8834fedeb9cab9e">m_isStarted</a> = false</td></tr>
+<tr class="memitem:a04b5b6d3587350e5f8834fedeb9cab9e" id="r_a04b5b6d3587350e5f8834fedeb9cab9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04b5b6d3587350e5f8834fedeb9cab9e">m_isStarted</a> = false</td></tr>
 <tr class="separator:a04b5b6d3587350e5f8834fedeb9cab9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
 <tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 inherit pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
 <tr class="separator:aa1aee3acda958839f017f93f6ed1bbb3 inherit pro_attribs_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a inherit pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
@@ -217,7 +218,7 @@ Protected 属性</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
-<tr class="memitem:a00df87c957d8f7ee0fc51f07a0542f4a" id="r_a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a></td></tr>
+<tr class="memitem:a00df87c957d8f7ee0fc51f07a0542f4a" id="r_a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a></td></tr>
 <tr class="separator:a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -238,13 +239,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -263,13 +264,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">~<a class="el" href="class_shit_1_1_behavior.html">Behavior</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -289,13 +290,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">bool isStarted </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -316,13 +317,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">void onAttach </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -343,13 +344,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">void onCreate </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -370,13 +371,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">void onDestroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -397,13 +398,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">void onDetach </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -424,13 +425,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">virtual void onStart </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -453,13 +454,13 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">virtual void onUpdate </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -482,21 +483,20 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">void setStarted </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isStarted</em></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isStarted</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">友元及相关函数文档</h2>
+<h2 class="groupheader">友元及相关符号说明</h2>
 <a id="a00df87c957d8f7ee0fc51f07a0542f4a" name="a00df87c957d8f7ee0fc51f07a0542f4a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00df87c957d8f7ee0fc51f07a0542f4a">&#9670;&#160;</a></span>GameObject</h2>
 
@@ -512,7 +512,7 @@ Protected 属性</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -535,7 +535,7 @@ Protected 属性</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -552,7 +552,7 @@ Protected 属性</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

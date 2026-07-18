@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: include/ShitEngine/Core/Time.h 源文件</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,17 +94,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -117,7 +113,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_time_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('_time_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -151,30 +147,30 @@ $(document).ready(function(){initNavTree('_time_8h_source.html',''); initResizab
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;SDL3/SDL_stdinc.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">class </span>Game;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_game.html">Game</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
 <div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_time.html">Time</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#aa2fab026580d6f14280c2ffb8063a314">   14</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_game.html">Game</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#aa2fab026580d6f14280c2ffb8063a314">   14</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_shit_1_1_time.html#aa2fab026580d6f14280c2ffb8063a314">Game</a>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">   16</a></span>        <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_time.html">Time</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a770f074d363f8963cc3cf17db74604c7">   17</a></span>        <a class="code hl_class" href="class_shit_1_1_time.html">Time</a>&amp; <a class="code hl_function" href="class_shit_1_1_time.html#a770f074d363f8963cc3cf17db74604c7">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_time.html">Time</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a3cd15566d901c8904f275f8f3b828bf5">   18</a></span>        <a class="code hl_function" href="class_shit_1_1_time.html#a3cd15566d901c8904f275f8f3b828bf5">Time</a>(<a class="code hl_class" href="class_shit_1_1_time.html">Time</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a3d15d4632db454da2635b562946fa414">   19</a></span>        <a class="code hl_class" href="class_shit_1_1_time.html">Time</a>&amp; <a class="code hl_function" href="class_shit_1_1_time.html#a3d15d4632db454da2635b562946fa414">operator=</a>(<a class="code hl_class" href="class_shit_1_1_time.html">Time</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">   16</a></span>        <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a770f074d363f8963cc3cf17db74604c7">   17</a></span>        <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>&amp; <a class="code hl_function" href="class_shit_1_1_time.html#a770f074d363f8963cc3cf17db74604c7">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a3cd15566d901c8904f275f8f3b828bf5">   18</a></span>        <a class="code hl_function" href="class_shit_1_1_time.html#a3cd15566d901c8904f275f8f3b828bf5">Time</a>(<a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a3d15d4632db454da2635b562946fa414">   19</a></span>        <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>&amp; <a class="code hl_function" href="class_shit_1_1_time.html#a3d15d4632db454da2635b562946fa414">operator=</a>(<a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="comment">// --- 静态API ---</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">   22</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="class_shit_1_1_time.html">Time</a>&amp; <a class="code hl_function" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">GetInstance</a>();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a1716946dffd7f7f6a9c8f46406ab0732">   23</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_time.html#a1716946dffd7f7f6a9c8f46406ab0732">Init</a>() { GetInstance().init(); }                    </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">   22</a></span>        <span class="keyword">static</span> <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>&amp; <a class="code hl_function" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">GetInstance</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a1716946dffd7f7f6a9c8f46406ab0732">   23</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_time.html#a1716946dffd7f7f6a9c8f46406ab0732">Init</a>() { <a class="code hl_function" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">GetInstance</a>().init(); }                    </div>
 <div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a554d0f30ae93d2787435dca9a46c6c5d">   24</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_time.html#a554d0f30ae93d2787435dca9a46c6c5d">Update</a>() { GetInstance().update(); }                </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a554d0f30ae93d2787435dca9a46c6c5d">   24</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_time.html#a554d0f30ae93d2787435dca9a46c6c5d">Update</a>() { <a class="code hl_function" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">GetInstance</a>().update(); }                </div>
 <div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a80811a4413d7819a39947fc37c91a685">   25</a></span>        <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_shit_1_1_time.html#a80811a4413d7819a39947fc37c91a685">GetDeltaTime</a>() { <span class="keywordflow">return</span> GetInstance().m_deltaTime; }   </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a80811a4413d7819a39947fc37c91a685">   25</a></span>        <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_shit_1_1_time.html#a80811a4413d7819a39947fc37c91a685">GetDeltaTime</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">GetInstance</a>().m_deltaTime; }   </div>
 <div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a6af4a6772f3d17350f488afcfe903e70">   26</a></span>        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_shit_1_1_time.html#a6af4a6772f3d17350f488afcfe903e70">GetTotalTime</a>() { <span class="keywordflow">return</span> GetInstance().m_totalTime; }  </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a6af4a6772f3d17350f488afcfe903e70">   26</a></span>        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_shit_1_1_time.html#a6af4a6772f3d17350f488afcfe903e70">GetTotalTime</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">GetInstance</a>().m_totalTime; }  </div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a50053e5e12635e902c5e00b2d8047cb0">   27</a></span>        <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_shit_1_1_time.html#a50053e5e12635e902c5e00b2d8047cb0">GetTargetFPS</a>() { <span class="keywordflow">return</span> GetInstance().m_targetFPS; }  </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#a50053e5e12635e902c5e00b2d8047cb0">   27</a></span>        <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_shit_1_1_time.html#a50053e5e12635e902c5e00b2d8047cb0">GetTargetFPS</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">GetInstance</a>().m_targetFPS; }  </div>
 <div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">   28</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">SetTargetFPS</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fps) { GetInstance().m_targetFPS = fps; }  </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">   28</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">SetTargetFPS</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fps) { <a class="code hl_function" href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">GetInstance</a>().m_targetFPS = fps; }  </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_class" href="class_shit_1_1_time.html">Time</a>();</div>
@@ -197,21 +193,22 @@ $(document).ready(function(){initNavTree('_time_8h_source.html',''); initResizab
 </div>
 </div>
 <div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
-<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
-<div class="ttc" id="aclass_shit_1_1_game_html"><div class="ttname"><a href="class_shit_1_1_game.html">Shit::Game</a></div><div class="ttdoc">引擎主控类</div><div class="ttdef"><b>Definition</b> Game.h:16</div></div>
-<div class="ttc" id="aclass_shit_1_1_time_html"><div class="ttname"><a href="class_shit_1_1_time.html">Shit::Time</a></div><div class="ttdoc">时间管理类</div><div class="ttdef"><b>Definition</b> Time.h:13</div></div>
-<div class="ttc" id="aclass_shit_1_1_time_html_a1716946dffd7f7f6a9c8f46406ab0732"><div class="ttname"><a href="class_shit_1_1_time.html#a1716946dffd7f7f6a9c8f46406ab0732">Shit::Time::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdoc">初始化计时器</div><div class="ttdef"><b>Definition</b> Time.h:23</div></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html"><div class="ttname"><a href="class_shit_1_1_game.html">Shit::Game</a></div><div class="ttdoc">引擎主控类</div><div class="ttdef"><b>定义</b> Game.h:16</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html"><div class="ttname"><a href="class_shit_1_1_time.html">Shit::Time</a></div><div class="ttdoc">时间管理类</div><div class="ttdef"><b>定义</b> Time.h:13</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html_a1716946dffd7f7f6a9c8f46406ab0732"><div class="ttname"><a href="class_shit_1_1_time.html#a1716946dffd7f7f6a9c8f46406ab0732">Shit::Time::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdoc">初始化计时器</div><div class="ttdef"><b>定义</b> Time.h:23</div></div>
 <div class="ttc" id="aclass_shit_1_1_time_html_a29d35748d7e4bdde4b013cd9744926f5"><div class="ttname"><a href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Shit::Time::Time</a></div><div class="ttdeci">Time(const Time &amp;)=delete</div></div>
 <div class="ttc" id="aclass_shit_1_1_time_html_a3cd15566d901c8904f275f8f3b828bf5"><div class="ttname"><a href="class_shit_1_1_time.html#a3cd15566d901c8904f275f8f3b828bf5">Shit::Time::Time</a></div><div class="ttdeci">Time(Time &amp;&amp;)=delete</div></div>
 <div class="ttc" id="aclass_shit_1_1_time_html_a3d15d4632db454da2635b562946fa414"><div class="ttname"><a href="class_shit_1_1_time.html#a3d15d4632db454da2635b562946fa414">Shit::Time::operator=</a></div><div class="ttdeci">Time &amp; operator=(Time &amp;&amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_time_html_a50053e5e12635e902c5e00b2d8047cb0"><div class="ttname"><a href="class_shit_1_1_time.html#a50053e5e12635e902c5e00b2d8047cb0">Shit::Time::GetTargetFPS</a></div><div class="ttdeci">static unsigned int GetTargetFPS()</div><div class="ttdoc">目标帧率上限</div><div class="ttdef"><b>Definition</b> Time.h:27</div></div>
-<div class="ttc" id="aclass_shit_1_1_time_html_a554d0f30ae93d2787435dca9a46c6c5d"><div class="ttname"><a href="class_shit_1_1_time.html#a554d0f30ae93d2787435dca9a46c6c5d">Shit::Time::Update</a></div><div class="ttdeci">static void Update()</div><div class="ttdoc">每帧调用，更新 m_deltaTime</div><div class="ttdef"><b>Definition</b> Time.h:24</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html_a50053e5e12635e902c5e00b2d8047cb0"><div class="ttname"><a href="class_shit_1_1_time.html#a50053e5e12635e902c5e00b2d8047cb0">Shit::Time::GetTargetFPS</a></div><div class="ttdeci">static unsigned int GetTargetFPS()</div><div class="ttdoc">目标帧率上限</div><div class="ttdef"><b>定义</b> Time.h:27</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html_a554d0f30ae93d2787435dca9a46c6c5d"><div class="ttname"><a href="class_shit_1_1_time.html#a554d0f30ae93d2787435dca9a46c6c5d">Shit::Time::Update</a></div><div class="ttdeci">static void Update()</div><div class="ttdoc">每帧调用，更新 m_deltaTime</div><div class="ttdef"><b>定义</b> Time.h:24</div></div>
 <div class="ttc" id="aclass_shit_1_1_time_html_a69a4da7e701547430f6780223a5cecfe"><div class="ttname"><a href="class_shit_1_1_time.html#a69a4da7e701547430f6780223a5cecfe">Shit::Time::GetInstance</a></div><div class="ttdeci">static Time &amp; GetInstance()</div></div>
-<div class="ttc" id="aclass_shit_1_1_time_html_a6af4a6772f3d17350f488afcfe903e70"><div class="ttname"><a href="class_shit_1_1_time.html#a6af4a6772f3d17350f488afcfe903e70">Shit::Time::GetTotalTime</a></div><div class="ttdeci">static double GetTotalTime()</div><div class="ttdoc">引擎启动至今的总时长（秒）</div><div class="ttdef"><b>Definition</b> Time.h:26</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html_a6af4a6772f3d17350f488afcfe903e70"><div class="ttname"><a href="class_shit_1_1_time.html#a6af4a6772f3d17350f488afcfe903e70">Shit::Time::GetTotalTime</a></div><div class="ttdeci">static double GetTotalTime()</div><div class="ttdoc">引擎启动至今的总时长（秒）</div><div class="ttdef"><b>定义</b> Time.h:26</div></div>
 <div class="ttc" id="aclass_shit_1_1_time_html_a770f074d363f8963cc3cf17db74604c7"><div class="ttname"><a href="class_shit_1_1_time.html#a770f074d363f8963cc3cf17db74604c7">Shit::Time::operator=</a></div><div class="ttdeci">Time &amp; operator=(const Time &amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_time_html_a80811a4413d7819a39947fc37c91a685"><div class="ttname"><a href="class_shit_1_1_time.html#a80811a4413d7819a39947fc37c91a685">Shit::Time::GetDeltaTime</a></div><div class="ttdeci">static float GetDeltaTime()</div><div class="ttdoc">上一帧耗时（秒）</div><div class="ttdef"><b>Definition</b> Time.h:25</div></div>
-<div class="ttc" id="aclass_shit_1_1_time_html_aefe4538733c9ee5538c5432698a85397"><div class="ttname"><a href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">Shit::Time::SetTargetFPS</a></div><div class="ttdeci">static void SetTargetFPS(unsigned int fps)</div><div class="ttdoc">设帧率上限</div><div class="ttdef"><b>Definition</b> Time.h:28</div></div>
-<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html_a80811a4413d7819a39947fc37c91a685"><div class="ttname"><a href="class_shit_1_1_time.html#a80811a4413d7819a39947fc37c91a685">Shit::Time::GetDeltaTime</a></div><div class="ttdeci">static float GetDeltaTime()</div><div class="ttdoc">上一帧耗时（秒）</div><div class="ttdef"><b>定义</b> Time.h:25</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html_aa2fab026580d6f14280c2ffb8063a314"><div class="ttname"><a href="class_shit_1_1_time.html#aa2fab026580d6f14280c2ffb8063a314">Shit::Time::Game</a></div><div class="ttdeci">friend class Game</div><div class="ttdef"><b>定义</b> Time.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html_aefe4538733c9ee5538c5432698a85397"><div class="ttname"><a href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">Shit::Time::SetTargetFPS</a></div><div class="ttdeci">static void SetTargetFPS(unsigned int fps)</div><div class="ttdoc">设帧率上限</div><div class="ttdef"><b>定义</b> Time.h:28</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.17.0-->
@@ -219,7 +216,7 @@ $(document).ready(function(){initNavTree('_time_8h_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_dfa7a918fb106898484ac3316f589b4e.html">Core</a></li><li class="navelem"><a class="el" href="_time_8h.html">Time.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

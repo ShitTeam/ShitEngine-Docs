@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: include/ShitEngine/Component/Component.h 源文件</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,17 +94,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -117,7 +113,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_component_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('_component_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -147,14 +143,14 @@ $(document).ready(function(){initNavTree('_component_8h_source.html',''); initRe
 </div><!--header-->
 <div class="contents">
 <a href="_component_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../Core/Config.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_config_8h.html">../Core/Config.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">class </span>GameObject; <span class="comment">// 前向声明</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>; <span class="comment">// 前向声明</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_component.html">Component</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">   19</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>; <span class="comment">// 只能通过GameObject初始化组件</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">   19</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a>; <span class="comment">// 只能通过GameObject初始化组件</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">   22</a></span>        <a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a>();</div>
@@ -166,40 +162,43 @@ $(document).ready(function(){initNavTree('_component_8h_source.html',''); initRe
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">   28</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">onDestroy</a>() {}  <span class="comment">// 组件销毁时</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="comment">// 禁止拷贝和移动</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">   31</a></span>        <a class="code hl_function" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_component.html">Component</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">   32</a></span>        <a class="code hl_class" href="class_shit_1_1_component.html">Component</a>&amp; <a class="code hl_function" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_component.html">Component</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">   33</a></span>        <a class="code hl_function" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a>(<a class="code hl_class" href="class_shit_1_1_component.html">Component</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">   34</a></span>        <a class="code hl_class" href="class_shit_1_1_component.html">Component</a>&amp; <a class="code hl_function" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a>(<a class="code hl_class" href="class_shit_1_1_component.html">Component</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">   31</a></span>        <a class="code hl_function" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">   32</a></span>        <a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a>&amp; <a class="code hl_function" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">   33</a></span>        <a class="code hl_function" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a>(<a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">   34</a></span>        <a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a>&amp; <a class="code hl_function" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a>(<a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">   36</a></span>        <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* <a class="code hl_function" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_owner; }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">   37</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_isRegistered; }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">   36</a></span>        <a class="code hl_friend" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a>* <a class="code hl_function" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a>; }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">   37</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a>; }</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="comment">// 只允许 GameObject 设置</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">inline</span> <span class="keywordtype">void</span> setOwner(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* owner) { m_owner = owner; }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">   44</a></span>        <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* m_owner = <span class="keyword">nullptr</span>; <span class="comment">// 组件的拥有者</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">   45</a></span>        <span class="keywordtype">bool</span> m_isRegistered = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">   44</a></span>        <a class="code hl_friend" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a>* <a class="code hl_variable" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = <span class="keyword">nullptr</span>; <span class="comment">// 组件的拥有者</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">   45</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
 </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
-<div class="ttc" id="aclass_shit_1_1_component_html"><div class="ttname"><a href="class_shit_1_1_component.html">Shit::Component</a></div><div class="ttdoc">组件基类</div><div class="ttdef"><b>Definition</b> Component.h:18</div></div>
+<div class="ttc" id="a_config_8h_html"><div class="ttname"><a href="_config_8h.html">Config.h</a></div></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_a00df87c957d8f7ee0fc51f07a0542f4a"><div class="ttname"><a href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">Shit::Component::GameObject</a></div><div class="ttdeci">friend class GameObject</div><div class="ttdef"><b>定义</b> Component.h:19</div></div>
 <div class="ttc" id="aclass_shit_1_1_component_html_a0171e1571f18dc6a27c8b041de55feec"><div class="ttname"><a href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Shit::Component::Component</a></div><div class="ttdeci">Component()</div></div>
 <div class="ttc" id="aclass_shit_1_1_component_html_a34f2dae077ca6d1b6e3a39201c79c796"><div class="ttname"><a href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">Shit::Component::operator=</a></div><div class="ttdeci">Component &amp; operator=(Component &amp;&amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_component_html_a448d46f0dcad2b19c77f8a2cc880127c"><div class="ttname"><a href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">Shit::Component::onDestroy</a></div><div class="ttdeci">virtual void onDestroy()</div><div class="ttdef"><b>Definition</b> Component.h:28</div></div>
-<div class="ttc" id="aclass_shit_1_1_component_html_a58db3b5933199c866796fade5e1ad722"><div class="ttname"><a href="class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722">Shit::Component::onCreate</a></div><div class="ttdeci">virtual void onCreate()</div><div class="ttdef"><b>Definition</b> Component.h:25</div></div>
-<div class="ttc" id="aclass_shit_1_1_component_html_a6f4c9e6fe81d4bffc712d4d0ae4d72ff"><div class="ttname"><a href="class_shit_1_1_component.html#a6f4c9e6fe81d4bffc712d4d0ae4d72ff">Shit::Component::onAttach</a></div><div class="ttdeci">virtual void onAttach()</div><div class="ttdef"><b>Definition</b> Component.h:26</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_a448d46f0dcad2b19c77f8a2cc880127c"><div class="ttname"><a href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">Shit::Component::onDestroy</a></div><div class="ttdeci">virtual void onDestroy()</div><div class="ttdef"><b>定义</b> Component.h:28</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_a58db3b5933199c866796fade5e1ad722"><div class="ttname"><a href="class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722">Shit::Component::onCreate</a></div><div class="ttdeci">virtual void onCreate()</div><div class="ttdef"><b>定义</b> Component.h:25</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_a6f4c9e6fe81d4bffc712d4d0ae4d72ff"><div class="ttname"><a href="class_shit_1_1_component.html#a6f4c9e6fe81d4bffc712d4d0ae4d72ff">Shit::Component::onAttach</a></div><div class="ttdeci">virtual void onAttach()</div><div class="ttdef"><b>定义</b> Component.h:26</div></div>
 <div class="ttc" id="aclass_shit_1_1_component_html_a7a86c1a5c9cb8bc0be998d276c438054"><div class="ttname"><a href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Shit::Component::Component</a></div><div class="ttdeci">Component(const Component &amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_component_html_a9b36b6de005b18dd7c77687d8621774a"><div class="ttname"><a href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">Shit::Component::getOwner</a></div><div class="ttdeci">GameObject * getOwner() const</div><div class="ttdef"><b>Definition</b> Component.h:36</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_a9b36b6de005b18dd7c77687d8621774a"><div class="ttname"><a href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">Shit::Component::getOwner</a></div><div class="ttdeci">GameObject * getOwner() const</div><div class="ttdef"><b>定义</b> Component.h:36</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_aa1aee3acda958839f017f93f6ed1bbb3"><div class="ttname"><a href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">Shit::Component::m_owner</a></div><div class="ttdeci">GameObject * m_owner</div><div class="ttdef"><b>定义</b> Component.h:44</div></div>
 <div class="ttc" id="aclass_shit_1_1_component_html_aa85c694df3855843a20a64cb0fc17233"><div class="ttname"><a href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Shit::Component::Component</a></div><div class="ttdeci">Component(Component &amp;&amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_component_html_aae1f5204fbabb92a0de013b8f0fd6616"><div class="ttname"><a href="class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616">Shit::Component::onDetach</a></div><div class="ttdeci">virtual void onDetach()</div><div class="ttdef"><b>Definition</b> Component.h:27</div></div>
-<div class="ttc" id="aclass_shit_1_1_component_html_ab3318796ce9f4c658aa5cd5b65719246"><div class="ttname"><a href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">Shit::Component::isRegistered</a></div><div class="ttdeci">bool isRegistered() const</div><div class="ttdef"><b>Definition</b> Component.h:37</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_aae1f5204fbabb92a0de013b8f0fd6616"><div class="ttname"><a href="class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616">Shit::Component::onDetach</a></div><div class="ttdeci">virtual void onDetach()</div><div class="ttdef"><b>定义</b> Component.h:27</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_ab3318796ce9f4c658aa5cd5b65719246"><div class="ttname"><a href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">Shit::Component::isRegistered</a></div><div class="ttdeci">bool isRegistered() const</div><div class="ttdef"><b>定义</b> Component.h:37</div></div>
 <div class="ttc" id="aclass_shit_1_1_component_html_ab8905908be361c6fce216879f4739d98"><div class="ttname"><a href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">Shit::Component::~Component</a></div><div class="ttdeci">virtual ~Component()=default</div></div>
 <div class="ttc" id="aclass_shit_1_1_component_html_ace504c89f605c2e53f2450021ebca56e"><div class="ttname"><a href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">Shit::Component::operator=</a></div><div class="ttdeci">Component &amp; operator=(const Component &amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_game_object_html"><div class="ttname"><a href="class_shit_1_1_game_object.html">Shit::GameObject</a></div><div class="ttdoc">游戏物体类</div><div class="ttdef"><b>Definition</b> GameObject.h:22</div></div>
-<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_ae8fd281c96362b5079bc11b6ae10007a"><div class="ttname"><a href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">Shit::Component::m_isRegistered</a></div><div class="ttdeci">bool m_isRegistered</div><div class="ttdef"><b>定义</b> Component.h:45</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html"><div class="ttname"><a href="class_shit_1_1_game_object.html">Shit::GameObject</a></div><div class="ttdoc">游戏物体类</div><div class="ttdef"><b>定义</b> GameObject.h:22</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.17.0-->
@@ -207,7 +206,7 @@ $(document).ready(function(){initNavTree('_component_8h_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_20927711bbdc291e89e3a65fe91dcd48.html">Component</a></li><li class="navelem"><a class="el" href="_component_8h.html">Component.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: include/ShitEngine/UI/UITransform.h 源文件</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,17 +94,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -117,7 +113,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_u_i_transform_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('_u_i_transform_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -147,22 +143,22 @@ $(document).ready(function(){initNavTree('_u_i_transform_8h_source.html',''); in
 </div><!--header-->
 <div class="contents">
 <a href="_u_i_transform_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../Core/Core.h&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../Component/Component.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../Math.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8h.html">../Core/Core.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">../Component/Component.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_math_8h.html">../Math.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL3/SDL_rect.h&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">class </span>GameObject;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">class </span>UICanvas;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_u_i_canvas.html">UICanvas</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
 <div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_u_i_transform.html">UITransform</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_shit_1_1_component.html">Component</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_function" href="class_shit_1_1_u_i_transform.html#ae7b5e9d7c4e5464eb3bcdee57e0e0591">UITransform</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html#ae7b5e9d7c4e5464eb3bcdee57e0e0591">   26</a></span>        <a class="code hl_function" href="class_shit_1_1_u_i_transform.html#ae7b5e9d7c4e5464eb3bcdee57e0e0591">UITransform</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html#a129168c0d2c7597fd9a7be69a7b3a623">   27</a></span>        <a class="code hl_function" href="class_shit_1_1_u_i_transform.html#a129168c0d2c7597fd9a7be69a7b3a623">~UITransform</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html#a0a193423ebfa9ca103b2efd2510e76ad">   30</a></span>        <a class="code hl_function" href="class_shit_1_1_u_i_transform.html#a0a193423ebfa9ca103b2efd2510e76ad">UITransform</a>(<span class="keywordtype">float</span> anchoredPositionX, <span class="keywordtype">float</span> anchoredPositionY, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">// --- getter &amp; setter ---</span></div>
@@ -186,9 +182,9 @@ $(document).ready(function(){initNavTree('_u_i_transform_8h_source.html',''); in
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html#ad51138fd45b987bf8edbc766b4875122">   51</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_shit_1_1_u_i_transform.html#ad51138fd45b987bf8edbc766b4875122">getZIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_zIndex; }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html#ac303f527d4eeb6055c6e1d3575dbdf7a">   52</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_transform.html#ac303f527d4eeb6055c6e1d3575dbdf7a">setZIndex</a>(<span class="keywordtype">int</span> zIndex) { m_zIndex = zIndex; }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html#a13131a4c8c8a2e8e07f50eef7c7bfb00">   55</a></span>        SDL_FRect <a class="code hl_function" href="class_shit_1_1_u_i_transform.html#a13131a4c8c8a2e8e07f50eef7c7bfb00">getScreenRect</a>(<span class="keyword">const</span> SDL_FRect* parentRect) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_transform.html#adb554df100c76115adf2ce3b303a9361">   58</a></span>        SDL_FRect <a class="code hl_function" href="class_shit_1_1_u_i_transform.html#adb554df100c76115adf2ce3b303a9361">resolveParentRect</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span>:</div>
@@ -202,30 +198,34 @@ $(document).ready(function(){initNavTree('_u_i_transform_8h_source.html',''); in
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
 </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
-<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
-<div class="ttc" id="aclass_shit_1_1_component_html"><div class="ttname"><a href="class_shit_1_1_component.html">Shit::Component</a></div><div class="ttdoc">组件基类</div><div class="ttdef"><b>Definition</b> Component.h:18</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html">Shit::UITransform</a></div><div class="ttdoc">UI 专用变换组件（参考 Unity RectTransform，但不引入 Canvas Scaler）</div><div class="ttdef"><b>Definition</b> UITransform.h:24</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a0288e6ca000fbc0afb78d1cbecbdf81c"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a0288e6ca000fbc0afb78d1cbecbdf81c">Shit::UITransform::getAnchorMax</a></div><div class="ttdeci">const Vector2 &amp; getAnchorMax() const</div><div class="ttdef"><b>Definition</b> UITransform.h:36</div></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
+<div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
+<div class="ttc" id="a_math_8h_html"><div class="ttname"><a href="_math_8h.html">Math.h</a></div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_a0171e1571f18dc6a27c8b041de55feec"><div class="ttname"><a href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Shit::Component::Component</a></div><div class="ttdeci">Component()</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html"><div class="ttname"><a href="class_shit_1_1_game_object.html">Shit::GameObject</a></div><div class="ttdoc">游戏物体类</div><div class="ttdef"><b>定义</b> GameObject.h:22</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_canvas_html"><div class="ttname"><a href="class_shit_1_1_u_i_canvas.html">Shit::UICanvas</a></div><div class="ttdoc">UI 层级根节点</div><div class="ttdef"><b>定义</b> UICanvas.h:16</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a0288e6ca000fbc0afb78d1cbecbdf81c"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a0288e6ca000fbc0afb78d1cbecbdf81c">Shit::UITransform::getAnchorMax</a></div><div class="ttdeci">const Vector2 &amp; getAnchorMax() const</div><div class="ttdef"><b>定义</b> UITransform.h:36</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a0a193423ebfa9ca103b2efd2510e76ad"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a0a193423ebfa9ca103b2efd2510e76ad">Shit::UITransform::UITransform</a></div><div class="ttdeci">UITransform(float anchoredPositionX, float anchoredPositionY, float width, float height)</div><div class="ttdoc">便捷构造：居中锚点 + 给定偏移与尺寸</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a129168c0d2c7597fd9a7be69a7b3a623"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a129168c0d2c7597fd9a7be69a7b3a623">Shit::UITransform::~UITransform</a></div><div class="ttdeci">~UITransform() override=default</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a13131a4c8c8a2e8e07f50eef7c7bfb00"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a13131a4c8c8a2e8e07f50eef7c7bfb00">Shit::UITransform::getScreenRect</a></div><div class="ttdeci">SDL_FRect getScreenRect(const SDL_FRect *parentRect) const</div><div class="ttdoc">计算最终屏幕空间矩形（传入已知父级矩形；nullptr 表示用 Canvas 屏幕矩形）</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a1cae8173a27f7a029a6610975b5e5cbc"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a1cae8173a27f7a029a6610975b5e5cbc">Shit::UITransform::setHeight</a></div><div class="ttdeci">void setHeight(float height)</div><div class="ttdef"><b>Definition</b> UITransform.h:49</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a21926c99f9ed7ba46fb67cf6f5095312"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a21926c99f9ed7ba46fb67cf6f5095312">Shit::UITransform::setWidth</a></div><div class="ttdeci">void setWidth(float width)</div><div class="ttdef"><b>Definition</b> UITransform.h:46</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a2718e3123c9b274c45aab67783d95e29"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a2718e3123c9b274c45aab67783d95e29">Shit::UITransform::setPivot</a></div><div class="ttdeci">void setPivot(const Vector2 &amp;pivot)</div><div class="ttdef"><b>Definition</b> UITransform.h:40</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a27c1a68a8565d596a8ceec9f6c055142"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a27c1a68a8565d596a8ceec9f6c055142">Shit::UITransform::getPivot</a></div><div class="ttdeci">const Vector2 &amp; getPivot() const</div><div class="ttdef"><b>Definition</b> UITransform.h:39</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a425400069a1305e794c727166b1c5fb0"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a425400069a1305e794c727166b1c5fb0">Shit::UITransform::setAnchoredPosition</a></div><div class="ttdeci">void setAnchoredPosition(const Vector2 &amp;position)</div><div class="ttdef"><b>Definition</b> UITransform.h:43</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a780db523bbfe54193ee7e32f66d68b40"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a780db523bbfe54193ee7e32f66d68b40">Shit::UITransform::setAnchorMax</a></div><div class="ttdeci">void setAnchorMax(const Vector2 &amp;anchorMax)</div><div class="ttdef"><b>Definition</b> UITransform.h:37</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a8325b2034e9d8ea4cf48d9067d083709"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a8325b2034e9d8ea4cf48d9067d083709">Shit::UITransform::setAnchorMin</a></div><div class="ttdeci">void setAnchorMin(const Vector2 &amp;anchorMin)</div><div class="ttdef"><b>Definition</b> UITransform.h:34</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_aaad368cfd9ea3cf64fbc091bd886f729"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#aaad368cfd9ea3cf64fbc091bd886f729">Shit::UITransform::getWidth</a></div><div class="ttdeci">float getWidth() const</div><div class="ttdef"><b>Definition</b> UITransform.h:45</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_ac303f527d4eeb6055c6e1d3575dbdf7a"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#ac303f527d4eeb6055c6e1d3575dbdf7a">Shit::UITransform::setZIndex</a></div><div class="ttdeci">void setZIndex(int zIndex)</div><div class="ttdef"><b>Definition</b> UITransform.h:52</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_ad51138fd45b987bf8edbc766b4875122"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#ad51138fd45b987bf8edbc766b4875122">Shit::UITransform::getZIndex</a></div><div class="ttdeci">int getZIndex() const</div><div class="ttdef"><b>Definition</b> UITransform.h:51</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a1cae8173a27f7a029a6610975b5e5cbc"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a1cae8173a27f7a029a6610975b5e5cbc">Shit::UITransform::setHeight</a></div><div class="ttdeci">void setHeight(float height)</div><div class="ttdef"><b>定义</b> UITransform.h:49</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a21926c99f9ed7ba46fb67cf6f5095312"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a21926c99f9ed7ba46fb67cf6f5095312">Shit::UITransform::setWidth</a></div><div class="ttdeci">void setWidth(float width)</div><div class="ttdef"><b>定义</b> UITransform.h:46</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a2718e3123c9b274c45aab67783d95e29"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a2718e3123c9b274c45aab67783d95e29">Shit::UITransform::setPivot</a></div><div class="ttdeci">void setPivot(const Vector2 &amp;pivot)</div><div class="ttdef"><b>定义</b> UITransform.h:40</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a27c1a68a8565d596a8ceec9f6c055142"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a27c1a68a8565d596a8ceec9f6c055142">Shit::UITransform::getPivot</a></div><div class="ttdeci">const Vector2 &amp; getPivot() const</div><div class="ttdef"><b>定义</b> UITransform.h:39</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a425400069a1305e794c727166b1c5fb0"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a425400069a1305e794c727166b1c5fb0">Shit::UITransform::setAnchoredPosition</a></div><div class="ttdeci">void setAnchoredPosition(const Vector2 &amp;position)</div><div class="ttdef"><b>定义</b> UITransform.h:43</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a780db523bbfe54193ee7e32f66d68b40"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a780db523bbfe54193ee7e32f66d68b40">Shit::UITransform::setAnchorMax</a></div><div class="ttdeci">void setAnchorMax(const Vector2 &amp;anchorMax)</div><div class="ttdef"><b>定义</b> UITransform.h:37</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_a8325b2034e9d8ea4cf48d9067d083709"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#a8325b2034e9d8ea4cf48d9067d083709">Shit::UITransform::setAnchorMin</a></div><div class="ttdeci">void setAnchorMin(const Vector2 &amp;anchorMin)</div><div class="ttdef"><b>定义</b> UITransform.h:34</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_aaad368cfd9ea3cf64fbc091bd886f729"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#aaad368cfd9ea3cf64fbc091bd886f729">Shit::UITransform::getWidth</a></div><div class="ttdeci">float getWidth() const</div><div class="ttdef"><b>定义</b> UITransform.h:45</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_ac303f527d4eeb6055c6e1d3575dbdf7a"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#ac303f527d4eeb6055c6e1d3575dbdf7a">Shit::UITransform::setZIndex</a></div><div class="ttdeci">void setZIndex(int zIndex)</div><div class="ttdef"><b>定义</b> UITransform.h:52</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_ad51138fd45b987bf8edbc766b4875122"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#ad51138fd45b987bf8edbc766b4875122">Shit::UITransform::getZIndex</a></div><div class="ttdeci">int getZIndex() const</div><div class="ttdef"><b>定义</b> UITransform.h:51</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_transform_html_adb554df100c76115adf2ce3b303a9361"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#adb554df100c76115adf2ce3b303a9361">Shit::UITransform::resolveParentRect</a></div><div class="ttdeci">SDL_FRect resolveParentRect() const</div><div class="ttdoc">自动查找父级矩形：沿 GameObject 父链找 UITransform，否则用 Canvas；二者都无返回全屏</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_adc84cee2fdf3fa3fb88e2139706a8642"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#adc84cee2fdf3fa3fb88e2139706a8642">Shit::UITransform::getAnchoredPosition</a></div><div class="ttdeci">const Vector2 &amp; getAnchoredPosition() const</div><div class="ttdef"><b>Definition</b> UITransform.h:42</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_ae07ffc83c6e2586b09157cacd623819b"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#ae07ffc83c6e2586b09157cacd623819b">Shit::UITransform::getHeight</a></div><div class="ttdeci">float getHeight() const</div><div class="ttdef"><b>Definition</b> UITransform.h:48</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_adc84cee2fdf3fa3fb88e2139706a8642"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#adc84cee2fdf3fa3fb88e2139706a8642">Shit::UITransform::getAnchoredPosition</a></div><div class="ttdeci">const Vector2 &amp; getAnchoredPosition() const</div><div class="ttdef"><b>定义</b> UITransform.h:42</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_ae07ffc83c6e2586b09157cacd623819b"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#ae07ffc83c6e2586b09157cacd623819b">Shit::UITransform::getHeight</a></div><div class="ttdeci">float getHeight() const</div><div class="ttdef"><b>定义</b> UITransform.h:48</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_transform_html_ae7b5e9d7c4e5464eb3bcdee57e0e0591"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#ae7b5e9d7c4e5464eb3bcdee57e0e0591">Shit::UITransform::UITransform</a></div><div class="ttdeci">UITransform()=default</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_af5168abc9adf1bc8965aadc58addd352"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#af5168abc9adf1bc8965aadc58addd352">Shit::UITransform::getAnchorMin</a></div><div class="ttdeci">const Vector2 &amp; getAnchorMin() const</div><div class="ttdef"><b>Definition</b> UITransform.h:33</div></div>
-<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
-<div class="ttc" id="anamespace_shit_html_ab13fcf529046c79a4544246bf8e28741"><div class="ttname"><a href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Shit::Vector2</a></div><div class="ttdeci">glm::vec2 Vector2</div><div class="ttdef"><b>Definition</b> Math.h:5</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_transform_html_af5168abc9adf1bc8965aadc58addd352"><div class="ttname"><a href="class_shit_1_1_u_i_transform.html#af5168abc9adf1bc8965aadc58addd352">Shit::UITransform::getAnchorMin</a></div><div class="ttdeci">const Vector2 &amp; getAnchorMin() const</div><div class="ttdef"><b>定义</b> UITransform.h:33</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="anamespace_shit_html_ab13fcf529046c79a4544246bf8e28741"><div class="ttname"><a href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Shit::Vector2</a></div><div class="ttdeci">glm::vec2 Vector2</div><div class="ttdef"><b>定义</b> Math.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.17.0-->
@@ -233,7 +233,7 @@ $(document).ready(function(){initNavTree('_u_i_transform_8h_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_314d3b5bfda03e759c3ddc64f23ac135.html">UI</a></li><li class="navelem"><a class="el" href="_u_i_transform_8h.html">UITransform.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

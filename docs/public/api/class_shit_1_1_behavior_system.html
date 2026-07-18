@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: BehaviorSystem类 参考</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -112,7 +113,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_shit_1_1_behavior_system.html',''); initResizable(); });
+$(function(){initNavTree('class_shit_1_1_behavior_system.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -141,12 +142,12 @@ $(document).ready(function(){initNavTree('class_shit_1_1_behavior_system.html','
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="class_shit_1_1_behavior_system-members.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">BehaviorSystem类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+  <div class="headertitle"><div class="title">BehaviorSystem类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><a class="el" href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑">Behavior</a> 驱动系统  
- <a href="class_shit_1_1_behavior_system.html#details">更多...</a></p>
+ <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_behavior_system_8h_source.html">BehaviorSystem.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -161,23 +162,23 @@ $(document).ready(function(){initNavTree('class_shit_1_1_behavior_system.html','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a580b6b2767a0695fe483d22b5e7d074a" id="r_a580b6b2767a0695fe483d22b5e7d074a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior_system.html#a580b6b2767a0695fe483d22b5e7d074a">BehaviorSystem</a> (int priority=0)</td></tr>
+<tr class="memitem:a580b6b2767a0695fe483d22b5e7d074a" id="r_a580b6b2767a0695fe483d22b5e7d074a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a580b6b2767a0695fe483d22b5e7d074a">BehaviorSystem</a> (int priority=0)</td></tr>
 <tr class="separator:a580b6b2767a0695fe483d22b5e7d074a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bcaafd127c8f7c68d3d22ad444aadea" id="r_a9bcaafd127c8f7c68d3d22ad444aadea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior_system.html#a9bcaafd127c8f7c68d3d22ad444aadea">~BehaviorSystem</a> () override</td></tr>
+<tr class="memitem:a9bcaafd127c8f7c68d3d22ad444aadea" id="r_a9bcaafd127c8f7c68d3d22ad444aadea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bcaafd127c8f7c68d3d22ad444aadea">~BehaviorSystem</a> () override</td></tr>
 <tr class="separator:a9bcaafd127c8f7c68d3d22ad444aadea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44137bb65de2396875934e48a6ee5099" id="r_a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior_system.html#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099" id="r_a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
 <tr class="memdesc:a44137bb65de2396875934e48a6ee5099"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧更新（纯虚）  <br /></td></tr>
 <tr class="separator:a44137bb65de2396875934e48a6ee5099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1cf30cae681d95a94934492ae7ea627" id="r_ae1cf30cae681d95a94934492ae7ea627"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior_system.html#ae1cf30cae681d95a94934492ae7ea627">destroy</a> () override</td></tr>
+<tr class="memitem:ae1cf30cae681d95a94934492ae7ea627" id="r_ae1cf30cae681d95a94934492ae7ea627"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1cf30cae681d95a94934492ae7ea627">destroy</a> () override</td></tr>
 <tr class="memdesc:ae1cf30cae681d95a94934492ae7ea627"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁（纯虚）  <br /></td></tr>
 <tr class="separator:ae1cf30cae681d95a94934492ae7ea627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade5bdfcef86c78042aa1357822c17969" id="r_ade5bdfcef86c78042aa1357822c17969"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior_system.html#ade5bdfcef86c78042aa1357822c17969">registerBehavior</a> (<a class="el" href="class_shit_1_1_behavior.html">Behavior</a> *behavior)</td></tr>
+<tr class="memitem:ade5bdfcef86c78042aa1357822c17969" id="r_ade5bdfcef86c78042aa1357822c17969"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade5bdfcef86c78042aa1357822c17969">registerBehavior</a> (<a class="el" href="class_shit_1_1_behavior.html">Behavior</a> *behavior)</td></tr>
 <tr class="memdesc:ade5bdfcef86c78042aa1357822c17969"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册 Behavior（onAttach 时自动调用）  <br /></td></tr>
 <tr class="separator:ade5bdfcef86c78042aa1357822c17969"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d5db63d546eb6c8d6c8de2eeb18658d" id="r_a8d5db63d546eb6c8d6c8de2eeb18658d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior_system.html#a8d5db63d546eb6c8d6c8de2eeb18658d">unregisterBehavior</a> (<a class="el" href="class_shit_1_1_behavior.html">Behavior</a> *behavior)</td></tr>
+<tr class="memitem:a8d5db63d546eb6c8d6c8de2eeb18658d" id="r_a8d5db63d546eb6c8d6c8de2eeb18658d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d5db63d546eb6c8d6c8de2eeb18658d">unregisterBehavior</a> (<a class="el" href="class_shit_1_1_behavior.html">Behavior</a> *behavior)</td></tr>
 <tr class="memdesc:a8d5db63d546eb6c8d6c8de2eeb18658d"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销 Behavior（onDetach 时自动调用）  <br /></td></tr>
 <tr class="separator:a8d5db63d546eb6c8d6c8de2eeb18658d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_shit_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_shit_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_system"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_shit_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
 <tr class="memitem:a5034f7aabb39aa71406a18f57af4971e inherit pub_methods_class_shit_1_1_system" id="r_a5034f7aabb39aa71406a18f57af4971e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#a5034f7aabb39aa71406a18f57af4971e">System</a> (int priority=0)</td></tr>
 <tr class="separator:a5034f7aabb39aa71406a18f57af4971e inherit pub_methods_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7229e118bb766e4752281389b321ed6 inherit pub_methods_class_shit_1_1_system" id="r_aa7229e118bb766e4752281389b321ed6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#aa7229e118bb766e4752281389b321ed6">~System</a> ()</td></tr>
@@ -196,7 +197,7 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pro_attribs_class_shit_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_shit_1_1_system')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_system"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_shit_1_1_system')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
 <tr class="memitem:aebd544741012b3bab43cfbbc4e9d28f3 inherit pro_attribs_class_shit_1_1_system" id="r_aebd544741012b3bab43cfbbc4e9d28f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#aebd544741012b3bab43cfbbc4e9d28f3">m_priority</a></td></tr>
 <tr class="memdesc:aebd544741012b3bab43cfbbc4e9d28f3 inherit pro_attribs_class_shit_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">优先级（小值先执行）  <br /></td></tr>
 <tr class="separator:aebd544741012b3bab43cfbbc4e9d28f3 inherit pro_attribs_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,8 +218,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_behavior_system.html">BehaviorSystem</a> </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>priority</em> = <code>0</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>priority</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -238,13 +238,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">~<a class="el" href="class_shit_1_1_behavior_system.html">BehaviorSystem</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -264,13 +264,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void destroy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -290,8 +290,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void registerBehavior </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a> *&#160;</td>
-          <td class="paramname"><em>behavior</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a> *</td>          <td class="paramname"><span class="paramname"><em>behavior</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -310,8 +309,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void unregisterBehavior </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a> *&#160;</td>
-          <td class="paramname"><em>behavior</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a> *</td>          <td class="paramname"><span class="paramname"><em>behavior</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -333,13 +331,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -360,7 +358,7 @@ Public 成员函数</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_behavior_system.html">BehaviorSystem</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

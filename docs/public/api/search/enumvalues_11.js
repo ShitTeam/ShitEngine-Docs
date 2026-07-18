@@ -6,7 +6,7 @@ var searchData=
   ['reserved_3',['Reserved',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da942d4e37dd5607ab68e54755540d4a47',1,'Shit']]],
   ['return_4',['Return',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da988fd738de9c6d177440c5dcf69e73ce',1,'Shit']]],
   ['rgui_5',['RGui',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da28c7d73bf57b5e005c416e80c9c0356e',1,'Shit']]],
-  ['right_6',['right',['../class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a92b09c7c48c520c3c55e497875da437c',1,'Shit::UIText::Right'],['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da92b09c7c48c520c3c55e497875da437c',1,'Shit::Right'],['../namespace_shit.html#a826ef52e881054fee6a2055e382950b4a92b09c7c48c520c3c55e497875da437c',1,'Shit::Right']]],
+  ['right_6',['Right',['../class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a92b09c7c48c520c3c55e497875da437c',1,'Shit::UIText::Right'],['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da92b09c7c48c520c3c55e497875da437c',1,'Shit::Right'],['../namespace_shit.html#a826ef52e881054fee6a2055e382950b4a92b09c7c48c520c3c55e497875da437c',1,'Shit::Right']]],
   ['rightbracket_7',['RightBracket',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da455364d8991395f71ef9ccc5cc449e5c',1,'Shit']]],
   ['rshift_8',['RShift',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da8e707c0a523c7ec2179a6b6821d6eba8',1,'Shit']]]
 ];

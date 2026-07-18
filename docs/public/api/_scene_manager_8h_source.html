@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: include/ShitEngine/Scene/SceneManager.h 源文件</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,17 +94,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -117,7 +113,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_scene_manager_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('_scene_manager_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -147,34 +143,34 @@ $(document).ready(function(){initNavTree('_scene_manager_8h_source.html',''); in
 </div><!--header-->
 <div class="contents">
 <a href="_scene_manager_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../Core/Core.h&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8h.html">../Core/Core.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">class </span>Scene; <span class="comment">// 前向声明</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>; <span class="comment">// 前向声明</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
 <div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a> final {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a> final {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// 禁止拷贝和移动</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">   23</a></span>        <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a04bbcf4e6db0801aeeda962157cc2673">   24</a></span>        <a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>&amp; <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a04bbcf4e6db0801aeeda962157cc2673">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a6a68462bb7a8de13b69c762bb0dc4439">   25</a></span>        <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a6a68462bb7a8de13b69c762bb0dc4439">SceneManager</a>(<a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#af01af0eef584ecb24ded0e75bc3f4c24">   26</a></span>        <a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>&amp; <a class="code hl_function" href="class_shit_1_1_scene_manager.html#af01af0eef584ecb24ded0e75bc3f4c24">operator=</a>(<a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">   23</a></span>        <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a04bbcf4e6db0801aeeda962157cc2673">   24</a></span>        <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>&amp; <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a04bbcf4e6db0801aeeda962157cc2673">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a6a68462bb7a8de13b69c762bb0dc4439">   25</a></span>        <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a6a68462bb7a8de13b69c762bb0dc4439">SceneManager</a>(<a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#af01af0eef584ecb24ded0e75bc3f4c24">   26</a></span>        <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>&amp; <a class="code hl_function" href="class_shit_1_1_scene_manager.html#af01af0eef584ecb24ded0e75bc3f4c24">operator=</a>(<a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="comment">// --- 静态API ---</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">   29</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>&amp; <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">   30</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">Update</a>() { GetInstance().update(); }                    </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">   29</a></span>        <span class="keyword">static</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>&amp; <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">   30</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">Update</a>() { <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>().update(); }                    </div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a62a73aff7afffe2fba7c2e47e07d9134">   31</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a>() { GetInstance().destroy(); }                  </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a62a73aff7afffe2fba7c2e47e07d9134">   31</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a>() { <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>().destroy(); }                  </div>
 <div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a6a428410da43a236f1ffc3dde15508d9">   32</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a6a428410da43a236f1ffc3dde15508d9">PushScene</a>(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene) { GetInstance().pushScene(std::move(scene)); }       </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a6a428410da43a236f1ffc3dde15508d9">   32</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a6a428410da43a236f1ffc3dde15508d9">PushScene</a>(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene) { <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>().pushScene(std::move(scene)); }       </div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a65a98350e821e4029abf45c77074c185">   33</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a65a98350e821e4029abf45c77074c185">PopScene</a>() { GetInstance().popScene(); }                </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a65a98350e821e4029abf45c77074c185">   33</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a65a98350e821e4029abf45c77074c185">PopScene</a>() { <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>().popScene(); }                </div>
 <div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434">   34</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434">ClearScene</a>() { GetInstance().clearScene(); }            </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434">   34</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434">ClearScene</a>() { <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>().clearScene(); }            </div>
 <div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">   35</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">ReplaceScene</a>(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene) { GetInstance().replaceScene(std::move(scene)); } </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">   35</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">ReplaceScene</a>(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene) { <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>().replaceScene(std::move(scene)); } </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>();</div>
@@ -212,21 +208,22 @@ $(document).ready(function(){initNavTree('_scene_manager_8h_source.html',''); in
 </div>
 </div>
 </div>
-<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_html"><div class="ttname"><a href="class_shit_1_1_scene.html">Shit::Scene</a></div><div class="ttdoc">场景类</div><div class="ttdef"><b>Definition</b> Scene.h:34</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_manager_html"><div class="ttname"><a href="class_shit_1_1_scene_manager.html">Shit::SceneManager</a></div><div class="ttdoc">场景管理器（单例）</div><div class="ttdef"><b>Definition</b> SceneManager.h:19</div></div>
+<div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_html"><div class="ttname"><a href="class_shit_1_1_scene.html">Shit::Scene</a></div><div class="ttdoc">场景类</div><div class="ttdef"><b>定义</b> Scene.h:34</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_manager_html"><div class="ttname"><a href="class_shit_1_1_scene_manager.html">Shit::SceneManager</a></div><div class="ttdoc">场景管理器（单例）</div><div class="ttdef"><b>定义</b> SceneManager.h:19</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a04bbcf4e6db0801aeeda962157cc2673"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a04bbcf4e6db0801aeeda962157cc2673">Shit::SceneManager::operator=</a></div><div class="ttdeci">SceneManager &amp; operator=(const SceneManager &amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a2eaa093e982c488a420d60ff3233902d"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">Shit::SceneManager::ReplaceScene</a></div><div class="ttdeci">static void ReplaceScene(std::unique_ptr&lt; Scene &gt; &amp;&amp;scene)</div><div class="ttdoc">替换栈顶场景</div><div class="ttdef"><b>Definition</b> SceneManager.h:35</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a554d0f30ae93d2787435dca9a46c6c5d"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">Shit::SceneManager::Update</a></div><div class="ttdeci">static void Update()</div><div class="ttdoc">更新当前场景</div><div class="ttdef"><b>Definition</b> SceneManager.h:30</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a2eaa093e982c488a420d60ff3233902d"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">Shit::SceneManager::ReplaceScene</a></div><div class="ttdeci">static void ReplaceScene(std::unique_ptr&lt; Scene &gt; &amp;&amp;scene)</div><div class="ttdoc">替换栈顶场景</div><div class="ttdef"><b>定义</b> SceneManager.h:35</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a554d0f30ae93d2787435dca9a46c6c5d"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">Shit::SceneManager::Update</a></div><div class="ttdeci">static void Update()</div><div class="ttdoc">更新当前场景</div><div class="ttdef"><b>定义</b> SceneManager.h:30</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a56e74084b96a4960cbac4c377472e5ad"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">Shit::SceneManager::SceneManager</a></div><div class="ttdeci">SceneManager(const SceneManager &amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a62a73aff7afffe2fba7c2e47e07d9134"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a62a73aff7afffe2fba7c2e47e07d9134">Shit::SceneManager::Destroy</a></div><div class="ttdeci">static void Destroy()</div><div class="ttdoc">销毁所有场景</div><div class="ttdef"><b>Definition</b> SceneManager.h:31</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a65a98350e821e4029abf45c77074c185"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a65a98350e821e4029abf45c77074c185">Shit::SceneManager::PopScene</a></div><div class="ttdeci">static void PopScene()</div><div class="ttdoc">弹出栈顶场景（下个帧循环生效）</div><div class="ttdef"><b>Definition</b> SceneManager.h:33</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a6a428410da43a236f1ffc3dde15508d9"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a6a428410da43a236f1ffc3dde15508d9">Shit::SceneManager::PushScene</a></div><div class="ttdeci">static void PushScene(std::unique_ptr&lt; Scene &gt; &amp;&amp;scene)</div><div class="ttdoc">压入新场景（下个帧循环生效）</div><div class="ttdef"><b>Definition</b> SceneManager.h:32</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a62a73aff7afffe2fba7c2e47e07d9134"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a62a73aff7afffe2fba7c2e47e07d9134">Shit::SceneManager::Destroy</a></div><div class="ttdeci">static void Destroy()</div><div class="ttdoc">销毁所有场景</div><div class="ttdef"><b>定义</b> SceneManager.h:31</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a65a98350e821e4029abf45c77074c185"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a65a98350e821e4029abf45c77074c185">Shit::SceneManager::PopScene</a></div><div class="ttdeci">static void PopScene()</div><div class="ttdoc">弹出栈顶场景（下个帧循环生效）</div><div class="ttdef"><b>定义</b> SceneManager.h:33</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a6a428410da43a236f1ffc3dde15508d9"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a6a428410da43a236f1ffc3dde15508d9">Shit::SceneManager::PushScene</a></div><div class="ttdeci">static void PushScene(std::unique_ptr&lt; Scene &gt; &amp;&amp;scene)</div><div class="ttdoc">压入新场景（下个帧循环生效）</div><div class="ttdef"><b>定义</b> SceneManager.h:32</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a6a68462bb7a8de13b69c762bb0dc4439"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a6a68462bb7a8de13b69c762bb0dc4439">Shit::SceneManager::SceneManager</a></div><div class="ttdeci">SceneManager(SceneManager &amp;&amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a9fafde24f44fcc9f1adc352297541434"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434">Shit::SceneManager::ClearScene</a></div><div class="ttdeci">static void ClearScene()</div><div class="ttdoc">清空场景栈</div><div class="ttdef"><b>Definition</b> SceneManager.h:34</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_manager_html_a9fafde24f44fcc9f1adc352297541434"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434">Shit::SceneManager::ClearScene</a></div><div class="ttdeci">static void ClearScene()</div><div class="ttdoc">清空场景栈</div><div class="ttdef"><b>定义</b> SceneManager.h:34</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_aee88db8ba5649a8b071cdd7b3742b99c"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">Shit::SceneManager::GetInstance</a></div><div class="ttdeci">static SceneManager &amp; GetInstance()</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_af01af0eef584ecb24ded0e75bc3f4c24"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#af01af0eef584ecb24ded0e75bc3f4c24">Shit::SceneManager::operator=</a></div><div class="ttdeci">SceneManager &amp; operator=(SceneManager &amp;&amp;)=delete</div></div>
-<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.17.0-->
@@ -234,7 +231,7 @@ $(document).ready(function(){initNavTree('_scene_manager_8h_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_d5658868d660ae747b8df7b66a8ad075.html">Scene</a></li><li class="navelem"><a class="el" href="_scene_manager_8h.html">SceneManager.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

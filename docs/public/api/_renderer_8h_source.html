@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: include/ShitEngine/Render/Renderer.h 源文件</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,17 +94,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -117,7 +113,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_renderer_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('_renderer_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -153,42 +149,42 @@ $(document).ready(function(){initNavTree('_renderer_8h_source.html',''); initRes
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL3/SDL_render.h&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;SDL3/SDL_timer.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../Core/Core.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../Math.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8h.html">../Core/Core.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_math_8h.html">../Math.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">class </span>Sprite;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">class </span>CameraComponent;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_sprite.html">Sprite</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_camera_component.html">CameraComponent</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html">   21</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a> final {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html">   21</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a> final {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">   23</a></span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a407b586a873ce3895710519d567f2af0">   24</a></span>        <a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a>&amp; <a class="code hl_function" href="class_shit_1_1_renderer.html#a407b586a873ce3895710519d567f2af0">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a5c16a12fa607b0602be5110c8ef216ee">   25</a></span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a5c16a12fa607b0602be5110c8ef216ee">Renderer</a>(<a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a62384daa81a3398bc254a647685d4dfe">   26</a></span>        <a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a>&amp; <a class="code hl_function" href="class_shit_1_1_renderer.html#a62384daa81a3398bc254a647685d4dfe">operator=</a>(<a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">   23</a></span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a407b586a873ce3895710519d567f2af0">   24</a></span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>&amp; <a class="code hl_function" href="class_shit_1_1_renderer.html#a407b586a873ce3895710519d567f2af0">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a5c16a12fa607b0602be5110c8ef216ee">   25</a></span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a5c16a12fa607b0602be5110c8ef216ee">Renderer</a>(<a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a62384daa81a3398bc254a647685d4dfe">   26</a></span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>&amp; <a class="code hl_function" href="class_shit_1_1_renderer.html#a62384daa81a3398bc254a647685d4dfe">operator=</a>(<a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="comment">// --- 静态API ---</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">   29</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a>&amp; <a class="code hl_function" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">GetInstance</a>();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#ae596c367662c7f3b19b6626b89ffc08b">   30</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#ae596c367662c7f3b19b6626b89ffc08b">Init</a>() { <span class="keywordflow">return</span> GetInstance().init(); }                        </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">   29</a></span>        <span class="keyword">static</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>&amp; <a class="code hl_function" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">GetInstance</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#ae596c367662c7f3b19b6626b89ffc08b">   30</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#ae596c367662c7f3b19b6626b89ffc08b">Init</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">GetInstance</a>().init(); }                        </div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a00cf1a2e31eb12524052a36227c81c8d">   31</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a00cf1a2e31eb12524052a36227c81c8d">ClearScreen</a>() { GetInstance().clearScreen(); }                 </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a00cf1a2e31eb12524052a36227c81c8d">   31</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a00cf1a2e31eb12524052a36227c81c8d">ClearScreen</a>() { <a class="code hl_function" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">GetInstance</a>().clearScreen(); }                 </div>
 <div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#abdc592736185addda2799dbabfee82f6">   32</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#abdc592736185addda2799dbabfee82f6">Present</a>() { GetInstance().present(); }                         </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#abdc592736185addda2799dbabfee82f6">   32</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#abdc592736185addda2799dbabfee82f6">Present</a>() { <a class="code hl_function" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">GetInstance</a>().present(); }                         </div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a46e30e87d3ca42bc3018843f563dfb12">   33</a></span>        <span class="keyword">static</span> SDL_Renderer* <a class="code hl_function" href="class_shit_1_1_renderer.html#a46e30e87d3ca42bc3018843f563dfb12">GetRenderer</a>() { <span class="keywordflow">return</span> GetInstance().m_renderer.get(); } </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a46e30e87d3ca42bc3018843f563dfb12">   33</a></span>        <span class="keyword">static</span> SDL_Renderer* <a class="code hl_function" href="class_shit_1_1_renderer.html#a46e30e87d3ca42bc3018843f563dfb12">GetRenderer</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">GetInstance</a>().m_renderer.get(); } </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#ab41bacdc8fc4a5f995d01cc99c62c0ab">   35</a></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#ab41bacdc8fc4a5f995d01cc99c62c0ab">GetLogicalWidth</a>() { <span class="keywordflow">return</span> GetInstance().m_logicalWidth; }      </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#ab41bacdc8fc4a5f995d01cc99c62c0ab">   35</a></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#ab41bacdc8fc4a5f995d01cc99c62c0ab">GetLogicalWidth</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">GetInstance</a>().m_logicalWidth; }      </div>
 <div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#ad903053e03f7af1de814d044f7b0dcb4">   36</a></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#ad903053e03f7af1de814d044f7b0dcb4">GetLogicalHeight</a>() { <span class="keywordflow">return</span> GetInstance().m_logicalHeight; }    </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#ad903053e03f7af1de814d044f7b0dcb4">   36</a></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#ad903053e03f7af1de814d044f7b0dcb4">GetLogicalHeight</a>() { <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">GetInstance</a>().m_logicalHeight; }    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
 <div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#a4fdb65e37b1d8c3a170fab28fe818fe0">   44</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_renderer.html#a4fdb65e37b1d8c3a170fab28fe818fe0">DrawSprite</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_sprite.html">Sprite</a>&amp; sprite, <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&amp; position, <span class="keyword">const</span> std::optional&lt;Vector2&gt;&amp; size = std::nullopt);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_class" href="class_shit_1_1_renderer.html">Renderer</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_class" href="class_shit_1_1_renderer.html">~Renderer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">~Renderer</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">bool</span> init();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> clearScreen();</div>
@@ -212,23 +208,25 @@ $(document).ready(function(){initNavTree('_renderer_8h_source.html',''); initRes
 </div>
 </div>
 </div>
-<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
-<div class="ttc" id="aclass_shit_1_1_renderer_html"><div class="ttname"><a href="class_shit_1_1_renderer.html">Shit::Renderer</a></div><div class="ttdoc">渲染器，封装 SDL3 绘制 API</div><div class="ttdef"><b>Definition</b> Renderer.h:21</div></div>
-<div class="ttc" id="aclass_shit_1_1_renderer_html_a00cf1a2e31eb12524052a36227c81c8d"><div class="ttname"><a href="class_shit_1_1_renderer.html#a00cf1a2e31eb12524052a36227c81c8d">Shit::Renderer::ClearScreen</a></div><div class="ttdeci">static void ClearScreen()</div><div class="ttdoc">清屏（每帧开头调用）</div><div class="ttdef"><b>Definition</b> Renderer.h:31</div></div>
+<div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
+<div class="ttc" id="a_math_8h_html"><div class="ttname"><a href="_math_8h.html">Math.h</a></div></div>
+<div class="ttc" id="aclass_shit_1_1_camera_component_html"><div class="ttname"><a href="class_shit_1_1_camera_component.html">Shit::CameraComponent</a></div><div class="ttdoc">相机组件，定义&quot;从哪个角度观察世界&quot;</div><div class="ttdef"><b>定义</b> CameraComponent.h:15</div></div>
+<div class="ttc" id="aclass_shit_1_1_renderer_html_a00cf1a2e31eb12524052a36227c81c8d"><div class="ttname"><a href="class_shit_1_1_renderer.html#a00cf1a2e31eb12524052a36227c81c8d">Shit::Renderer::ClearScreen</a></div><div class="ttdeci">static void ClearScreen()</div><div class="ttdoc">清屏（每帧开头调用）</div><div class="ttdef"><b>定义</b> Renderer.h:31</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_a407b586a873ce3895710519d567f2af0"><div class="ttname"><a href="class_shit_1_1_renderer.html#a407b586a873ce3895710519d567f2af0">Shit::Renderer::operator=</a></div><div class="ttdeci">Renderer &amp; operator=(const Renderer &amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_renderer_html_a46e30e87d3ca42bc3018843f563dfb12"><div class="ttname"><a href="class_shit_1_1_renderer.html#a46e30e87d3ca42bc3018843f563dfb12">Shit::Renderer::GetRenderer</a></div><div class="ttdeci">static SDL_Renderer * GetRenderer()</div><div class="ttdoc">获取原生 SDL_Renderer</div><div class="ttdef"><b>Definition</b> Renderer.h:33</div></div>
+<div class="ttc" id="aclass_shit_1_1_renderer_html_a46e30e87d3ca42bc3018843f563dfb12"><div class="ttname"><a href="class_shit_1_1_renderer.html#a46e30e87d3ca42bc3018843f563dfb12">Shit::Renderer::GetRenderer</a></div><div class="ttdeci">static SDL_Renderer * GetRenderer()</div><div class="ttdoc">获取原生 SDL_Renderer</div><div class="ttdef"><b>定义</b> Renderer.h:33</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_a4fdb65e37b1d8c3a170fab28fe818fe0"><div class="ttname"><a href="class_shit_1_1_renderer.html#a4fdb65e37b1d8c3a170fab28fe818fe0">Shit::Renderer::DrawSprite</a></div><div class="ttdeci">static void DrawSprite(const Sprite &amp;sprite, const Vector2 &amp;position, const std::optional&lt; Vector2 &gt; &amp;size=std::nullopt)</div><div class="ttdoc">在屏幕坐标直接绘制精灵（UI 场景用）</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_a5c16a12fa607b0602be5110c8ef216ee"><div class="ttname"><a href="class_shit_1_1_renderer.html#a5c16a12fa607b0602be5110c8ef216ee">Shit::Renderer::Renderer</a></div><div class="ttdeci">Renderer(Renderer &amp;&amp;)=default</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_a62384daa81a3398bc254a647685d4dfe"><div class="ttname"><a href="class_shit_1_1_renderer.html#a62384daa81a3398bc254a647685d4dfe">Shit::Renderer::operator=</a></div><div class="ttdeci">Renderer &amp; operator=(Renderer &amp;&amp;)=default</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_a7155169a884952f261026adcda51e928"><div class="ttname"><a href="class_shit_1_1_renderer.html#a7155169a884952f261026adcda51e928">Shit::Renderer::GetInstance</a></div><div class="ttdeci">static Renderer &amp; GetInstance()</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_a7f8773f951a66de0e9e63c55f9b4611b"><div class="ttname"><a href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Shit::Renderer::Renderer</a></div><div class="ttdeci">Renderer(const Renderer &amp;)=delete</div></div>
-<div class="ttc" id="aclass_shit_1_1_renderer_html_ab41bacdc8fc4a5f995d01cc99c62c0ab"><div class="ttname"><a href="class_shit_1_1_renderer.html#ab41bacdc8fc4a5f995d01cc99c62c0ab">Shit::Renderer::GetLogicalWidth</a></div><div class="ttdeci">static int GetLogicalWidth()</div><div class="ttdoc">逻辑分辨率宽度</div><div class="ttdef"><b>Definition</b> Renderer.h:35</div></div>
-<div class="ttc" id="aclass_shit_1_1_renderer_html_abdc592736185addda2799dbabfee82f6"><div class="ttname"><a href="class_shit_1_1_renderer.html#abdc592736185addda2799dbabfee82f6">Shit::Renderer::Present</a></div><div class="ttdeci">static void Present()</div><div class="ttdoc">交换缓冲区（每帧末尾调用）</div><div class="ttdef"><b>Definition</b> Renderer.h:32</div></div>
-<div class="ttc" id="aclass_shit_1_1_renderer_html_ad903053e03f7af1de814d044f7b0dcb4"><div class="ttname"><a href="class_shit_1_1_renderer.html#ad903053e03f7af1de814d044f7b0dcb4">Shit::Renderer::GetLogicalHeight</a></div><div class="ttdeci">static int GetLogicalHeight()</div><div class="ttdoc">逻辑分辨率高度</div><div class="ttdef"><b>Definition</b> Renderer.h:36</div></div>
-<div class="ttc" id="aclass_shit_1_1_renderer_html_ae596c367662c7f3b19b6626b89ffc08b"><div class="ttname"><a href="class_shit_1_1_renderer.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::Renderer::Init</a></div><div class="ttdeci">static bool Init()</div><div class="ttdoc">初始化渲染器</div><div class="ttdef"><b>Definition</b> Renderer.h:30</div></div>
-<div class="ttc" id="aclass_shit_1_1_sprite_html"><div class="ttname"><a href="class_shit_1_1_sprite.html">Shit::Sprite</a></div><div class="ttdoc">精灵数据，描述&quot;画什么&quot;</div><div class="ttdef"><b>Definition</b> Sprite.h:14</div></div>
-<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
-<div class="ttc" id="anamespace_shit_html_ab13fcf529046c79a4544246bf8e28741"><div class="ttname"><a href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Shit::Vector2</a></div><div class="ttdeci">glm::vec2 Vector2</div><div class="ttdef"><b>Definition</b> Math.h:5</div></div>
+<div class="ttc" id="aclass_shit_1_1_renderer_html_ab41bacdc8fc4a5f995d01cc99c62c0ab"><div class="ttname"><a href="class_shit_1_1_renderer.html#ab41bacdc8fc4a5f995d01cc99c62c0ab">Shit::Renderer::GetLogicalWidth</a></div><div class="ttdeci">static int GetLogicalWidth()</div><div class="ttdoc">逻辑分辨率宽度</div><div class="ttdef"><b>定义</b> Renderer.h:35</div></div>
+<div class="ttc" id="aclass_shit_1_1_renderer_html_abdc592736185addda2799dbabfee82f6"><div class="ttname"><a href="class_shit_1_1_renderer.html#abdc592736185addda2799dbabfee82f6">Shit::Renderer::Present</a></div><div class="ttdeci">static void Present()</div><div class="ttdoc">交换缓冲区（每帧末尾调用）</div><div class="ttdef"><b>定义</b> Renderer.h:32</div></div>
+<div class="ttc" id="aclass_shit_1_1_renderer_html_ad903053e03f7af1de814d044f7b0dcb4"><div class="ttname"><a href="class_shit_1_1_renderer.html#ad903053e03f7af1de814d044f7b0dcb4">Shit::Renderer::GetLogicalHeight</a></div><div class="ttdeci">static int GetLogicalHeight()</div><div class="ttdoc">逻辑分辨率高度</div><div class="ttdef"><b>定义</b> Renderer.h:36</div></div>
+<div class="ttc" id="aclass_shit_1_1_renderer_html_ae596c367662c7f3b19b6626b89ffc08b"><div class="ttname"><a href="class_shit_1_1_renderer.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::Renderer::Init</a></div><div class="ttdeci">static bool Init()</div><div class="ttdoc">初始化渲染器</div><div class="ttdef"><b>定义</b> Renderer.h:30</div></div>
+<div class="ttc" id="aclass_shit_1_1_sprite_html"><div class="ttname"><a href="class_shit_1_1_sprite.html">Shit::Sprite</a></div><div class="ttdoc">精灵数据，描述&quot;画什么&quot;</div><div class="ttdef"><b>定义</b> Sprite.h:14</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="anamespace_shit_html_ab13fcf529046c79a4544246bf8e28741"><div class="ttname"><a href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Shit::Vector2</a></div><div class="ttdeci">glm::vec2 Vector2</div><div class="ttdef"><b>定义</b> Math.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.17.0-->
@@ -236,7 +234,7 @@ $(document).ready(function(){initNavTree('_renderer_8h_source.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_e20fa15f4ad40cb643df26f8adb886b0.html">Render</a></li><li class="navelem"><a class="el" href="_renderer_8h.html">Renderer.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

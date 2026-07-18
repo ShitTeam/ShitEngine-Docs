@@ -4,12 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: SpriteSheet类 参考</title>
-<!--BEGIN PROJECT_ICON-->
-<link rel="icon" href="$projecticon" type="image/x-icon" />
-<!--END PROJECT_ICON-->
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <!--BEGIN HTML_DYNAMIC_SECTIONS-->
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,13 +14,12 @@
 <!--BEGIN HTML_CODE_FOLDING-->
 <script type="text/javascript" src="codefolding.js"></script>
 <!--END HTML_CODE_FOLDING-->
-<!--BEGIN COPY_CLIPBOARD-->
 <script type="text/javascript" src="clipboard.js"></script>
-<!--END COPY_CLIPBOARD-->
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -82,10 +78,15 @@ $mermaidjs
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.8 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -93,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','搜索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','搜索',true);
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -112,7 +113,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_shit_1_1_sprite_sheet.html',''); initResizable(); });
+$(function(){initNavTree('class_shit_1_1_sprite_sheet.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -141,61 +142,61 @@ $(document).ready(function(){initNavTree('class_shit_1_1_sprite_sheet.html','');
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="class_shit_1_1_sprite_sheet-members.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">SpriteSheet类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+  <div class="headertitle"><div class="title">SpriteSheet类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>精灵图集（sprite-sheet）网格切割器  
- <a href="class_shit_1_1_sprite_sheet.html#details">更多...</a></p>
+ <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_sprite_sheet_8h_source.html">SpriteSheet.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:af0204be98cbc67f20f8a7a67f4adcbbf" id="r_af0204be98cbc67f20f8a7a67f4adcbbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#af0204be98cbc67f20f8a7a67f4adcbbf">SpriteSheet</a> (int rows, int cols, float frameWidth, float frameHeight, float margin=0.0f, float spacing=0.0f)</td></tr>
+<tr class="memitem:af0204be98cbc67f20f8a7a67f4adcbbf" id="r_af0204be98cbc67f20f8a7a67f4adcbbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0204be98cbc67f20f8a7a67f4adcbbf">SpriteSheet</a> (int rows, int cols, float frameWidth, float frameHeight, float margin=0.0f, float spacing=0.0f)</td></tr>
 <tr class="memdesc:af0204be98cbc67f20f8a7a67f4adcbbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造网格切割参数  <br /></td></tr>
 <tr class="separator:af0204be98cbc67f20f8a7a67f4adcbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d1cfe048f9a480676a4872d727ff5ec" id="r_a9d1cfe048f9a480676a4872d727ff5ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a9d1cfe048f9a480676a4872d727ff5ec">~SpriteSheet</a> ()=default</td></tr>
+<tr class="memitem:a9d1cfe048f9a480676a4872d727ff5ec" id="r_a9d1cfe048f9a480676a4872d727ff5ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d1cfe048f9a480676a4872d727ff5ec">~SpriteSheet</a> ()=default</td></tr>
 <tr class="separator:a9d1cfe048f9a480676a4872d727ff5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaeac8b2f949a38f9246d282aeec53eb9" id="r_aaeac8b2f949a38f9246d282aeec53eb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#aaeac8b2f949a38f9246d282aeec53eb9">SpriteSheet</a> (const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;)=default</td></tr>
+<tr class="memitem:aaeac8b2f949a38f9246d282aeec53eb9" id="r_aaeac8b2f949a38f9246d282aeec53eb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeac8b2f949a38f9246d282aeec53eb9">SpriteSheet</a> (const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;)=default</td></tr>
 <tr class="separator:aaeac8b2f949a38f9246d282aeec53eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7df2cb572cdb9d70c10eef65798c0881" id="r_a7df2cb572cdb9d70c10eef65798c0881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a7df2cb572cdb9d70c10eef65798c0881">operator=</a> (const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;)=default</td></tr>
+<tr class="memitem:a7df2cb572cdb9d70c10eef65798c0881" id="r_a7df2cb572cdb9d70c10eef65798c0881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7df2cb572cdb9d70c10eef65798c0881">operator=</a> (const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;)=default</td></tr>
 <tr class="separator:a7df2cb572cdb9d70c10eef65798c0881"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a2a3e9b9f4f8508355e36407689454b" id="r_a5a2a3e9b9f4f8508355e36407689454b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a5a2a3e9b9f4f8508355e36407689454b">SpriteSheet</a> (<a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="memitem:a5a2a3e9b9f4f8508355e36407689454b" id="r_a5a2a3e9b9f4f8508355e36407689454b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a2a3e9b9f4f8508355e36407689454b">SpriteSheet</a> (<a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&amp;) noexcept=default</td></tr>
 <tr class="separator:a5a2a3e9b9f4f8508355e36407689454b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5deec2e55b2f5fb73082247c014d9cd3" id="r_a5deec2e55b2f5fb73082247c014d9cd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a5deec2e55b2f5fb73082247c014d9cd3">operator=</a> (<a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="memitem:a5deec2e55b2f5fb73082247c014d9cd3" id="r_a5deec2e55b2f5fb73082247c014d9cd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5deec2e55b2f5fb73082247c014d9cd3">operator=</a> (<a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&amp;) noexcept=default</td></tr>
 <tr class="separator:a5deec2e55b2f5fb73082247c014d9cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a6293e1f2b6fb2f50b41e5d38110ae8" id="r_a8a6293e1f2b6fb2f50b41e5d38110ae8"><td class="memItemLeft" align="right" valign="top">SDL_FRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a8a6293e1f2b6fb2f50b41e5d38110ae8">getFrameRect</a> (int frameIndex) const</td></tr>
+<tr class="memitem:a8a6293e1f2b6fb2f50b41e5d38110ae8" id="r_a8a6293e1f2b6fb2f50b41e5d38110ae8"><td class="memItemLeft" align="right" valign="top">SDL_FRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6293e1f2b6fb2f50b41e5d38110ae8">getFrameRect</a> (int frameIndex) const</td></tr>
 <tr class="memdesc:a8a6293e1f2b6fb2f50b41e5d38110ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局帧索引（0..rows*cols-1）对应的源矩形  <br /></td></tr>
 <tr class="separator:a8a6293e1f2b6fb2f50b41e5d38110ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55b78d81bcf11ad14f96016135428afb" id="r_a55b78d81bcf11ad14f96016135428afb"><td class="memItemLeft" align="right" valign="top">SDL_FRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a55b78d81bcf11ad14f96016135428afb">getFrameRect</a> (int row, int col) const</td></tr>
+<tr class="memitem:a55b78d81bcf11ad14f96016135428afb" id="r_a55b78d81bcf11ad14f96016135428afb"><td class="memItemLeft" align="right" valign="top">SDL_FRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55b78d81bcf11ad14f96016135428afb">getFrameRect</a> (int row, int col) const</td></tr>
 <tr class="memdesc:a55b78d81bcf11ad14f96016135428afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定行列（0 基）对应的源矩形  <br /></td></tr>
 <tr class="separator:a55b78d81bcf11ad14f96016135428afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad343f9bbb050d9037167e80e423ab4e8" id="r_ad343f9bbb050d9037167e80e423ab4e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#ad343f9bbb050d9037167e80e423ab4e8">getRows</a> () const</td></tr>
+<tr class="memitem:ad343f9bbb050d9037167e80e423ab4e8" id="r_ad343f9bbb050d9037167e80e423ab4e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad343f9bbb050d9037167e80e423ab4e8">getRows</a> () const</td></tr>
 <tr class="separator:ad343f9bbb050d9037167e80e423ab4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15dbe8362fb658e89feacb5e7bae3ef3" id="r_a15dbe8362fb658e89feacb5e7bae3ef3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a15dbe8362fb658e89feacb5e7bae3ef3">getCols</a> () const</td></tr>
+<tr class="memitem:a15dbe8362fb658e89feacb5e7bae3ef3" id="r_a15dbe8362fb658e89feacb5e7bae3ef3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15dbe8362fb658e89feacb5e7bae3ef3">getCols</a> () const</td></tr>
 <tr class="separator:a15dbe8362fb658e89feacb5e7bae3ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74be57bd40687e061c6c3cc2246ad63c" id="r_a74be57bd40687e061c6c3cc2246ad63c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a74be57bd40687e061c6c3cc2246ad63c">getFrameWidth</a> () const</td></tr>
+<tr class="memitem:a74be57bd40687e061c6c3cc2246ad63c" id="r_a74be57bd40687e061c6c3cc2246ad63c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74be57bd40687e061c6c3cc2246ad63c">getFrameWidth</a> () const</td></tr>
 <tr class="separator:a74be57bd40687e061c6c3cc2246ad63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b72e2634e52bca5934299ffd9d455e8" id="r_a6b72e2634e52bca5934299ffd9d455e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a6b72e2634e52bca5934299ffd9d455e8">getFrameHeight</a> () const</td></tr>
+<tr class="memitem:a6b72e2634e52bca5934299ffd9d455e8" id="r_a6b72e2634e52bca5934299ffd9d455e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b72e2634e52bca5934299ffd9d455e8">getFrameHeight</a> () const</td></tr>
 <tr class="separator:a6b72e2634e52bca5934299ffd9d455e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0b0509f7ac071f49cc248341336e7cc" id="r_ad0b0509f7ac071f49cc248341336e7cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#ad0b0509f7ac071f49cc248341336e7cc">getMargin</a> () const</td></tr>
+<tr class="memitem:ad0b0509f7ac071f49cc248341336e7cc" id="r_ad0b0509f7ac071f49cc248341336e7cc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0b0509f7ac071f49cc248341336e7cc">getMargin</a> () const</td></tr>
 <tr class="separator:ad0b0509f7ac071f49cc248341336e7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1211c84bcbcd2d5acaa530e76d7b58d7" id="r_a1211c84bcbcd2d5acaa530e76d7b58d7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a1211c84bcbcd2d5acaa530e76d7b58d7">getSpacing</a> () const</td></tr>
+<tr class="memitem:a1211c84bcbcd2d5acaa530e76d7b58d7" id="r_a1211c84bcbcd2d5acaa530e76d7b58d7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1211c84bcbcd2d5acaa530e76d7b58d7">getSpacing</a> () const</td></tr>
 <tr class="separator:a1211c84bcbcd2d5acaa530e76d7b58d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a020bc01fe5af38371c152924e10e817e" id="r_a020bc01fe5af38371c152924e10e817e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a020bc01fe5af38371c152924e10e817e">getFrameCount</a> () const</td></tr>
+<tr class="memitem:a020bc01fe5af38371c152924e10e817e" id="r_a020bc01fe5af38371c152924e10e817e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a020bc01fe5af38371c152924e10e817e">getFrameCount</a> () const</td></tr>
 <tr class="separator:a020bc01fe5af38371c152924e10e817e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a508bbe326657af6d3add84deb4595989" id="r_a508bbe326657af6d3add84deb4595989"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a508bbe326657af6d3add84deb4595989">setRows</a> (int rows)</td></tr>
+<tr class="memitem:a508bbe326657af6d3add84deb4595989" id="r_a508bbe326657af6d3add84deb4595989"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a508bbe326657af6d3add84deb4595989">setRows</a> (int rows)</td></tr>
 <tr class="separator:a508bbe326657af6d3add84deb4595989"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84593b69dee341df0b48441f2fdd9e58" id="r_a84593b69dee341df0b48441f2fdd9e58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a84593b69dee341df0b48441f2fdd9e58">setCols</a> (int cols)</td></tr>
+<tr class="memitem:a84593b69dee341df0b48441f2fdd9e58" id="r_a84593b69dee341df0b48441f2fdd9e58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84593b69dee341df0b48441f2fdd9e58">setCols</a> (int cols)</td></tr>
 <tr class="separator:a84593b69dee341df0b48441f2fdd9e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99abb798e1f923f27926f1eade34ba76" id="r_a99abb798e1f923f27926f1eade34ba76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a99abb798e1f923f27926f1eade34ba76">setFrameWidth</a> (float width)</td></tr>
+<tr class="memitem:a99abb798e1f923f27926f1eade34ba76" id="r_a99abb798e1f923f27926f1eade34ba76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99abb798e1f923f27926f1eade34ba76">setFrameWidth</a> (float width)</td></tr>
 <tr class="separator:a99abb798e1f923f27926f1eade34ba76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66bd8056aa42395bc44c2824eeb7d0a0" id="r_a66bd8056aa42395bc44c2824eeb7d0a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a66bd8056aa42395bc44c2824eeb7d0a0">setFrameHeight</a> (float height)</td></tr>
+<tr class="memitem:a66bd8056aa42395bc44c2824eeb7d0a0" id="r_a66bd8056aa42395bc44c2824eeb7d0a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66bd8056aa42395bc44c2824eeb7d0a0">setFrameHeight</a> (float height)</td></tr>
 <tr class="separator:a66bd8056aa42395bc44c2824eeb7d0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f9972873dfd768793c3ded7ab3d6e59" id="r_a4f9972873dfd768793c3ded7ab3d6e59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a4f9972873dfd768793c3ded7ab3d6e59">setMargin</a> (float margin)</td></tr>
+<tr class="memitem:a4f9972873dfd768793c3ded7ab3d6e59" id="r_a4f9972873dfd768793c3ded7ab3d6e59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f9972873dfd768793c3ded7ab3d6e59">setMargin</a> (float margin)</td></tr>
 <tr class="separator:a4f9972873dfd768793c3ded7ab3d6e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3be0c8136f459a8cc59221a54d196dca" id="r_a3be0c8136f459a8cc59221a54d196dca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html#a3be0c8136f459a8cc59221a54d196dca">setSpacing</a> (float spacing)</td></tr>
+<tr class="memitem:a3be0c8136f459a8cc59221a54d196dca" id="r_a3be0c8136f459a8cc59221a54d196dca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be0c8136f459a8cc59221a54d196dca">setSpacing</a> (float spacing)</td></tr>
 <tr class="separator:a3be0c8136f459a8cc59221a54d196dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -212,43 +213,32 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>rows</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cols</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cols</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>frameWidth</em>, </td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>frameWidth</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>frameHeight</em>, </td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>frameHeight</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>margin</em> = <code>0.0f</code>, </td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>margin</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0f</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>spacing</em> = <code>0.0f</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>spacing</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0f</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -280,13 +270,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">~<a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -305,14 +295,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -331,14 +320,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -358,13 +346,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int getCols </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -383,13 +371,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int getFrameCount </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -408,13 +396,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">float getFrameHeight </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -430,8 +418,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">SDL_FRect getFrameRect </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>frameIndex</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>frameIndex</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -450,19 +437,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">SDL_FRect getFrameRect </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>row</em>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>col</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -483,13 +463,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">float getFrameWidth </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -508,13 +488,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">float getMargin </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -533,13 +513,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">int getRows </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -558,13 +538,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">float getSpacing </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -583,14 +563,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -609,14 +588,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -635,14 +613,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setCols </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cols</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cols</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -661,14 +638,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setFrameHeight </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>height</em></td><td>)</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>height</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -687,14 +663,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setFrameWidth </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>width</em></td><td>)</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>width</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -713,14 +688,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setMargin </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>margin</em></td><td>)</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>margin</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -739,14 +713,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setRows </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>rows</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -765,14 +738,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void setSpacing </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>spacing</em></td><td>)</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>spacing</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -789,7 +761,7 @@ Public 成员函数</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>
