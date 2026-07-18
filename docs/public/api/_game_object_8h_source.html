@@ -1,0 +1,320 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: include/ShitEngine/GameObject/GameObject.h 源文件</title>
+<!--BEGIN PROJECT_ICON-->
+<link rel="icon" href="$projecticon" type="image/x-icon" />
+<!--END PROJECT_ICON-->
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<!--BEGIN HTML_DYNAMIC_SECTIONS-->
+<script type="text/javascript" src="dynsections.js"></script>
+<!--END HTML_DYNAMIC_SECTIONS-->
+<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript" src="codefolding.js"></script>
+<!--END HTML_CODE_FOLDING-->
+<!--BEGIN COPY_CLIPBOARD-->
+<script type="text/javascript" src="clipboard.js"></script>
+<!--END COPY_CLIPBOARD-->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+$mermaidjs
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_game_object_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GameObject.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_object_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;typeindex&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../Core/Config.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../Component/Component.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../Component/Behavior.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;../Component/RendererComponent.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;../Scene/Scene.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">class </span>Scene; <span class="comment">// 前向声明</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html">   22</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a> final {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a032858ae1fe02d2d1170981c2af2d67c">   23</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a017e00b45eb2e288dadbc4100f023993">   28</a></span>        <a class="code hl_function" href="class_shit_1_1_game_object.html#a017e00b45eb2e288dadbc4100f023993">~GameObject</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="comment">// 禁止拷贝和移动</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#aeb07140ebe8805277f8a0076dfe0b541">   31</a></span>        <a class="code hl_function" href="class_shit_1_1_game_object.html#aeb07140ebe8805277f8a0076dfe0b541">GameObject</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a4f541a7914dfb4850ce4d27f90e7dfa2">   32</a></span>        <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>&amp; <a class="code hl_function" href="class_shit_1_1_game_object.html#a4f541a7914dfb4850ce4d27f90e7dfa2">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#af8035eae20f4d90aa3e2e044fa9fd845">   33</a></span>        <a class="code hl_function" href="class_shit_1_1_game_object.html#af8035eae20f4d90aa3e2e044fa9fd845">GameObject</a>(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a6630dbb84ec77ba85f7a6e4fd9050b5a">   34</a></span>        <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>&amp; <a class="code hl_function" href="class_shit_1_1_game_object.html#a6630dbb84ec77ba85f7a6e4fd9050b5a">operator=</a>(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a3a80b6032f86a56bec74609034b3246f">   36</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#a3a80b6032f86a56bec74609034b3246f">destroy</a>(); </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="comment">// --- 父子关系 ---</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a03f0413882a431ba59905fc2e3b59b01">   46</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#a03f0413882a431ba59905fc2e3b59b01">setParent</a>(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* parent);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a5adb8c6bcab6353e781579c0c9240e03">   48</a></span>        <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* <a class="code hl_function" href="class_shit_1_1_game_object.html#a5adb8c6bcab6353e781579c0c9240e03">getParent</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_parent; }                        </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a2619c8ab3a893aaec60458343051b17d">   49</a></span>        <span class="keyword">const</span> std::vector&lt;GameObject*&gt;&amp; <a class="code hl_function" href="class_shit_1_1_game_object.html#a2619c8ab3a893aaec60458343051b17d">getChildren</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_children; } </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a06dad5895582cbe8aee4c182fc533c68">   52</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#a06dad5895582cbe8aee4c182fc533c68">addChild</a>(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* child) { <span class="keywordflow">if</span> (child) child-&gt;<a class="code hl_function" href="class_shit_1_1_game_object.html#a03f0413882a431ba59905fc2e3b59b01">setParent</a>(<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">// --- getter &amp; setter ---</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a3fd7335faa33dce2f87c7e50eef3e294">   55</a></span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_shit_1_1_game_object.html#a3fd7335faa33dce2f87c7e50eef3e294">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_name; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#af83d38d84c66cc8ea7a83659d941a323">   56</a></span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_shit_1_1_game_object.html#af83d38d84c66cc8ea7a83659d941a323">getTag</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_tag; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a0c36c4965240371f43c896f8d6af7feb">   57</a></span>        <a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>* <a class="code hl_function" href="class_shit_1_1_game_object.html#a0c36c4965240371f43c896f8d6af7feb">getScene</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_scene; }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#af9c9255af4b284a0b456483acbfe1b0e">   58</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#af9c9255af4b284a0b456483acbfe1b0e">isNeedDestroy</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_needDestroy; }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a9d3a2685df23b5e7cbf59c19c4a1f9b5">   60</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#a9d3a2685df23b5e7cbf59c19c4a1f9b5">setName</a>(<span class="keyword">const</span> std::string&amp; name) { m_name = name; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a7f57a9ed979c10c89eb81e09136718a5">   61</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#a7f57a9ed979c10c89eb81e09136718a5">setTag</a>(<span class="keyword">const</span> std::string&amp; tag) { m_tag = tag; }  </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a36f2aa21e8b3898775462d2a378d2e0f">   62</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#a36f2aa21e8b3898775462d2a378d2e0f">setScene</a>(<a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>* scene);  </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a03eb988617fc41944c0de1bbf62a8abf">   63</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#a03eb988617fc41944c0de1bbf62a8abf">setNeedDestroy</a>(<span class="keywordtype">bool</span> needDestroy) { m_needDestroy = needDestroy; }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a8ec3a8d4557c78eebb2cafef428070c3">   64</a></span>        std::unordered_map&lt;std::type_index, std::unique_ptr&lt;Component&gt;&gt;&amp; <a class="code hl_function" href="class_shit_1_1_game_object.html#a8ec3a8d4557c78eebb2cafef428070c3">getComponents</a>() { <span class="keywordflow">return</span> m_components; } </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#ac4cb35ac024fe4a08a4c23b4e24484e5">   75</a></span>        <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="class_shit_1_1_game_object.html#ac4cb35ac024fe4a08a4c23b4e24484e5">addComponent</a>(Args&amp;&amp;... args) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keyword">static_assert</span>(std::is_base_of_v&lt;Component, T&gt;, <span class="stringliteral">&quot;添加的组件必须继承自 Component！&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keyword">auto</span> type_index = std::type_index(<span class="keyword">typeid</span>(<a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">if</span> (hasComponent&lt;T&gt;()) { <span class="comment">// 是否已经存在</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                <span class="keywordflow">return</span> getComponent&lt;T&gt;();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="comment">// 创建组件</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keyword">auto</span> new_component = std::make_unique&lt;T&gt;(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* new_component_ptr = new_component.get();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            new_component-&gt;setOwner(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            new_component-&gt;onCreate(); <span class="comment">// onCreate：轻量初始化</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="comment">// 若已挂载场景则立即执行 onAttach（注册到 System）</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">if</span> (m_scene) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                new_component-&gt;onAttach();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            m_components[type_index] = std::unique_ptr&lt;Component&gt;(new_component.release());</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_define" href="_log_8h.html#ac379c2e7c01d6e578fa1dff97428de87">ST_CORE_TRACE</a>(<span class="stringliteral">&quot;GameObject : {} 已添加 组件 {}&quot;</span>, m_name, <span class="keyword">typeid</span>(<a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>).name());</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">return</span> new_component_ptr;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#af3fc709644a6ee3ffe6496d8fe2fe521">  107</a></span>        <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="class_shit_1_1_game_object.html#af3fc709644a6ee3ffe6496d8fe2fe521">getComponent</a>() {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keyword">static_assert</span>(std::is_base_of_v&lt;Component, T&gt;, <span class="stringliteral">&quot;获取的组件必须继承自 Component！&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keyword">auto</span> type_index = std::type_index(<span class="keyword">typeid</span>(<a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> it = m_components.find(type_index); it != m_components.end()) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>*<span class="keyword">&gt;</span>(it-&gt;second.get());</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#abe100a1d418965113893d4aead521a7c">  123</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#abe100a1d418965113893d4aead521a7c">hasComponent</a>() {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keyword">static_assert</span>(std::is_base_of_v&lt;Component, T&gt;, <span class="stringliteral">&quot;检查的组件必须继承自 Component！&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">return</span> m_components.contains(std::type_index(<span class="keyword">typeid</span>(<a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>)));</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8">  136</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8">removeComponent</a>() {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keyword">static_assert</span>(std::is_base_of_v&lt;Component, T&gt;, <span class="stringliteral">&quot;移除的组件必须继承自 Component！&quot;</span>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keyword">auto</span> type_index = std::type_index(<span class="keyword">typeid</span>(<a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>));</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> it = m_components.find(type_index); it != m_components.end()) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                it-&gt;second-&gt;onDetach();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                it-&gt;second-&gt;onDestroy();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                m_components.erase(it);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordtype">void</span> clean(); <span class="comment">// 清理（只能 Scene 调用）</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordtype">void</span> removeFromParentChildren(); <span class="comment">// 从当前父物体的子列表中移除自己</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        std::string m_name; <span class="comment">// 游戏物体名称</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        std::string m_tag; <span class="comment">// 标签</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>* m_scene = <span class="keyword">nullptr</span>; <span class="comment">// 所在 Scene 指针</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        std::unordered_map&lt;std::type_index, std::unique_ptr&lt;Component&gt;&gt; m_components; <span class="comment">// 挂载的组件</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordtype">bool</span> m_needDestroy = <span class="keyword">false</span>; <span class="comment">// 是否需要销毁（由 Scene 负责销毁）</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* m_parent = <span class="keyword">nullptr</span>; <span class="comment">// 父物体（裸指针，所有权归 Scene）</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        std::vector&lt;GameObject*&gt; m_children; <span class="comment">// 子物体列表（裸指针，仅表达层级）</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    };</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
+</div>
+</div>
+</div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
+<div class="ttc" id="a_log_8h_html_ac379c2e7c01d6e578fa1dff97428de87"><div class="ttname"><a href="_log_8h.html#ac379c2e7c01d6e578fa1dff97428de87">ST_CORE_TRACE</a></div><div class="ttdeci">#define ST_CORE_TRACE(...)</div><div class="ttdef"><b>Definition</b> Log.h:48</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html"><div class="ttname"><a href="class_shit_1_1_game_object.html">Shit::GameObject</a></div><div class="ttdoc">游戏物体类</div><div class="ttdef"><b>Definition</b> GameObject.h:22</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a017e00b45eb2e288dadbc4100f023993"><div class="ttname"><a href="class_shit_1_1_game_object.html#a017e00b45eb2e288dadbc4100f023993">Shit::GameObject::~GameObject</a></div><div class="ttdeci">~GameObject()=default</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a03eb988617fc41944c0de1bbf62a8abf"><div class="ttname"><a href="class_shit_1_1_game_object.html#a03eb988617fc41944c0de1bbf62a8abf">Shit::GameObject::setNeedDestroy</a></div><div class="ttdeci">void setNeedDestroy(bool needDestroy)</div><div class="ttdef"><b>Definition</b> GameObject.h:63</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a03f0413882a431ba59905fc2e3b59b01"><div class="ttname"><a href="class_shit_1_1_game_object.html#a03f0413882a431ba59905fc2e3b59b01">Shit::GameObject::setParent</a></div><div class="ttdeci">void setParent(GameObject *parent)</div><div class="ttdoc">设置父物体</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a06dad5895582cbe8aee4c182fc533c68"><div class="ttname"><a href="class_shit_1_1_game_object.html#a06dad5895582cbe8aee4c182fc533c68">Shit::GameObject::addChild</a></div><div class="ttdeci">void addChild(GameObject *child)</div><div class="ttdoc">添加子物体（等价于 child-&gt;setParent(this)）</div><div class="ttdef"><b>Definition</b> GameObject.h:52</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a0c36c4965240371f43c896f8d6af7feb"><div class="ttname"><a href="class_shit_1_1_game_object.html#a0c36c4965240371f43c896f8d6af7feb">Shit::GameObject::getScene</a></div><div class="ttdeci">Scene * getScene() const</div><div class="ttdef"><b>Definition</b> GameObject.h:57</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a2619c8ab3a893aaec60458343051b17d"><div class="ttname"><a href="class_shit_1_1_game_object.html#a2619c8ab3a893aaec60458343051b17d">Shit::GameObject::getChildren</a></div><div class="ttdeci">const std::vector&lt; GameObject * &gt; &amp; getChildren() const</div><div class="ttdoc">获取子物体列表</div><div class="ttdef"><b>Definition</b> GameObject.h:49</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a36f2aa21e8b3898775462d2a378d2e0f"><div class="ttname"><a href="class_shit_1_1_game_object.html#a36f2aa21e8b3898775462d2a378d2e0f">Shit::GameObject::setScene</a></div><div class="ttdeci">void setScene(Scene *scene)</div><div class="ttdoc">设置所属场景（同时触发未注册组件的 onAttach）</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a3a80b6032f86a56bec74609034b3246f"><div class="ttname"><a href="class_shit_1_1_game_object.html#a3a80b6032f86a56bec74609034b3246f">Shit::GameObject::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdoc">标记为待销毁（帧末由 Scene 统一清理）；级联标记所有子物体</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a3fd7335faa33dce2f87c7e50eef3e294"><div class="ttname"><a href="class_shit_1_1_game_object.html#a3fd7335faa33dce2f87c7e50eef3e294">Shit::GameObject::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition</b> GameObject.h:55</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a4f541a7914dfb4850ce4d27f90e7dfa2"><div class="ttname"><a href="class_shit_1_1_game_object.html#a4f541a7914dfb4850ce4d27f90e7dfa2">Shit::GameObject::operator=</a></div><div class="ttdeci">GameObject &amp; operator=(const GameObject &amp;)=delete</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a5adb8c6bcab6353e781579c0c9240e03"><div class="ttname"><a href="class_shit_1_1_game_object.html#a5adb8c6bcab6353e781579c0c9240e03">Shit::GameObject::getParent</a></div><div class="ttdeci">GameObject * getParent() const</div><div class="ttdoc">获取父物体</div><div class="ttdef"><b>Definition</b> GameObject.h:48</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a6630dbb84ec77ba85f7a6e4fd9050b5a"><div class="ttname"><a href="class_shit_1_1_game_object.html#a6630dbb84ec77ba85f7a6e4fd9050b5a">Shit::GameObject::operator=</a></div><div class="ttdeci">GameObject &amp; operator=(GameObject &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a7e3a4076579262cdc6d8b88ee4e609d8"><div class="ttname"><a href="class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8">Shit::GameObject::removeComponent</a></div><div class="ttdeci">void removeComponent()</div><div class="ttdoc">移除某个组件</div><div class="ttdef"><b>Definition</b> GameObject.h:136</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a7f57a9ed979c10c89eb81e09136718a5"><div class="ttname"><a href="class_shit_1_1_game_object.html#a7f57a9ed979c10c89eb81e09136718a5">Shit::GameObject::setTag</a></div><div class="ttdeci">void setTag(const std::string &amp;tag)</div><div class="ttdoc">设置标签（用于分类，如 &quot;enemy&quot;、&quot;player&quot;）</div><div class="ttdef"><b>Definition</b> GameObject.h:61</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a8ec3a8d4557c78eebb2cafef428070c3"><div class="ttname"><a href="class_shit_1_1_game_object.html#a8ec3a8d4557c78eebb2cafef428070c3">Shit::GameObject::getComponents</a></div><div class="ttdeci">std::unordered_map&lt; std::type_index, std::unique_ptr&lt; Component &gt; &gt; &amp; getComponents()</div><div class="ttdoc">获取全部组件（按 type_index 索引）</div><div class="ttdef"><b>Definition</b> GameObject.h:64</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_a9d3a2685df23b5e7cbf59c19c4a1f9b5"><div class="ttname"><a href="class_shit_1_1_game_object.html#a9d3a2685df23b5e7cbf59c19c4a1f9b5">Shit::GameObject::setName</a></div><div class="ttdeci">void setName(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> GameObject.h:60</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_abe100a1d418965113893d4aead521a7c"><div class="ttname"><a href="class_shit_1_1_game_object.html#abe100a1d418965113893d4aead521a7c">Shit::GameObject::hasComponent</a></div><div class="ttdeci">bool hasComponent()</div><div class="ttdoc">检查是否存在某个组件</div><div class="ttdef"><b>Definition</b> GameObject.h:123</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_ac4cb35ac024fe4a08a4c23b4e24484e5"><div class="ttname"><a href="class_shit_1_1_game_object.html#ac4cb35ac024fe4a08a4c23b4e24484e5">Shit::GameObject::addComponent</a></div><div class="ttdeci">T * addComponent(Args &amp;&amp;... args)</div><div class="ttdoc">添加组件</div><div class="ttdef"><b>Definition</b> GameObject.h:75</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_aeb07140ebe8805277f8a0076dfe0b541"><div class="ttname"><a href="class_shit_1_1_game_object.html#aeb07140ebe8805277f8a0076dfe0b541">Shit::GameObject::GameObject</a></div><div class="ttdeci">GameObject(const GameObject &amp;)=delete</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_af3fc709644a6ee3ffe6496d8fe2fe521"><div class="ttname"><a href="class_shit_1_1_game_object.html#af3fc709644a6ee3ffe6496d8fe2fe521">Shit::GameObject::getComponent</a></div><div class="ttdeci">T * getComponent()</div><div class="ttdoc">获取组件</div><div class="ttdef"><b>Definition</b> GameObject.h:107</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_af8035eae20f4d90aa3e2e044fa9fd845"><div class="ttname"><a href="class_shit_1_1_game_object.html#af8035eae20f4d90aa3e2e044fa9fd845">Shit::GameObject::GameObject</a></div><div class="ttdeci">GameObject(GameObject &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_af83d38d84c66cc8ea7a83659d941a323"><div class="ttname"><a href="class_shit_1_1_game_object.html#af83d38d84c66cc8ea7a83659d941a323">Shit::GameObject::getTag</a></div><div class="ttdeci">const std::string &amp; getTag() const</div><div class="ttdef"><b>Definition</b> GameObject.h:56</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_af9c9255af4b284a0b456483acbfe1b0e"><div class="ttname"><a href="class_shit_1_1_game_object.html#af9c9255af4b284a0b456483acbfe1b0e">Shit::GameObject::isNeedDestroy</a></div><div class="ttdeci">bool isNeedDestroy() const</div><div class="ttdef"><b>Definition</b> GameObject.h:58</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_html"><div class="ttname"><a href="class_shit_1_1_scene.html">Shit::Scene</a></div><div class="ttdoc">场景类</div><div class="ttdef"><b>Definition</b> Scene.h:34</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">Shit::KeyCode::T</a></div><div class="ttdeci">@ T</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_f2a2c5364f18abe3845af547d1b0be61.html">GameObject</a></li><li class="navelem"><a class="el" href="_game_object_8h.html">GameObject.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

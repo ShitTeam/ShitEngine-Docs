@@ -1,0 +1,231 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: include/ShitEngine/UI/UIButton.h 源文件</title>
+<!--BEGIN PROJECT_ICON-->
+<link rel="icon" href="$projecticon" type="image/x-icon" />
+<!--END PROJECT_ICON-->
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<!--BEGIN HTML_DYNAMIC_SECTIONS-->
+<script type="text/javascript" src="dynsections.js"></script>
+<!--END HTML_DYNAMIC_SECTIONS-->
+<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript" src="codefolding.js"></script>
+<!--END HTML_CODE_FOLDING-->
+<!--BEGIN COPY_CLIPBOARD-->
+<script type="text/javascript" src="clipboard.js"></script>
+<!--END COPY_CLIPBOARD-->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+$mermaidjs
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_u_i_button_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UIButton.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_u_i_button_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../Core/Core.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_u_i_renderer_component_8h.html">UIRendererComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_u_i_button.html">UIButton</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8">   17</a></span>        <span class="keyword">enum class</span> <a class="code hl_enumeration" href="class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> { Normal, Highlighted, Pressed, Disabled };</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_shit_1_1_u_i_button_1_1_color_block.html">   20</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_shit_1_1_u_i_button_1_1_color_block.html">ColorBlock</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_shit_1_1_u_i_button_1_1_color_block.html#ab1503d57b018fba5b8ec4c31a66a61f5">   21</a></span>            <a class="code hl_struct" href="struct_shit_1_1_color.html">Color</a> normalColor      = <a class="code hl_struct" href="struct_shit_1_1_color.html">Color</a>{ 255, 255, 255, 255 };</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_shit_1_1_u_i_button_1_1_color_block.html#a0eee6163238f99489e3f416052512c79">   22</a></span>            <a class="code hl_struct" href="struct_shit_1_1_color.html">Color</a> highlightedColor  = <a class="code hl_struct" href="struct_shit_1_1_color.html">Color</a>{ 230, 230, 230, 255 };</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_shit_1_1_u_i_button_1_1_color_block.html#aa3f8b0958b3a37993a6580a5881e9c3c">   23</a></span>            <a class="code hl_struct" href="struct_shit_1_1_color.html">Color</a> pressedColor      = <a class="code hl_struct" href="struct_shit_1_1_color.html">Color</a>{ 180, 180, 180, 255 };</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_shit_1_1_u_i_button_1_1_color_block.html#a6714329941f6a3660e68a65a6e0c515a">   24</a></span>            <a class="code hl_struct" href="struct_shit_1_1_color.html">Color</a> disabledColor     = <a class="code hl_struct" href="struct_shit_1_1_color.html">Color</a>{ 128, 128, 128, 128 };</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        };</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a217b542e0375e611a5769521238c2838">   27</a></span>        <a class="code hl_function" href="class_shit_1_1_u_i_button.html#a217b542e0375e611a5769521238c2838">UIButton</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a8adfbd30b2a9f46af502431a87662a5f">   28</a></span>        <a class="code hl_function" href="class_shit_1_1_u_i_button.html#a8adfbd30b2a9f46af502431a87662a5f">~UIButton</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="comment">// --- pointer 事件（由 UIRenderSystem raycasting 调用） ---</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a073731fd74c8c6cf6acea20874160a29">   31</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#a073731fd74c8c6cf6acea20874160a29">onPointerEnter</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a009b2978f3ae0e8560ac7f66a68750a7">   32</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#a009b2978f3ae0e8560ac7f66a68750a7">onPointerExit</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#afe4aa751b9088c3fe978fa2e7b7db562">   33</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#afe4aa751b9088c3fe978fa2e7b7db562">onPointerDown</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a00154730a865de849abe4839fd3e8df0">   34</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#a00154730a865de849abe4839fd3e8df0">onPointerUp</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// --- getter &amp; setter ---</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#ab53a6879a1b1f59360eca8a98ed03b1f">   37</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#ab53a6879a1b1f59360eca8a98ed03b1f">isInteractable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_interactable; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a816248a75d12c6837a7cc23529e9cba2">   38</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#a816248a75d12c6837a7cc23529e9cba2">setInteractable</a>(<span class="keywordtype">bool</span> interactable);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a8e52bcaecc271b1b57c4608da2d4b11e">   40</a></span>        <a class="code hl_enumeration" href="class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#a8e52bcaecc271b1b57c4608da2d4b11e">getState</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_state; }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#afa28e595d125123c032f30be9fa710af">   42</a></span>        <span class="keyword">const</span> <a class="code hl_struct" href="struct_shit_1_1_u_i_button_1_1_color_block.html">ColorBlock</a>&amp; <a class="code hl_function" href="class_shit_1_1_u_i_button.html#afa28e595d125123c032f30be9fa710af">getColors</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_colors; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#ad54d68d07977d973c25f61af585b32c9">   43</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#ad54d68d07977d973c25f61af585b32c9">setColors</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_shit_1_1_u_i_button_1_1_color_block.html">ColorBlock</a>&amp; colors) { m_colors = colors; applyCurrentColor(); }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#af598ca580f93cedcaeaa4933446123e2">   45</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#af598ca580f93cedcaeaa4933446123e2">setOnClick</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; callback) { m_onClick = std::move(callback); }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_button.html#a2e739ff12d1cf50a1139791b2a425d58">   48</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_u_i_button.html#a2e739ff12d1cf50a1139791b2a425d58">onRender</a>(SDL_Renderer* renderer, <span class="keyword">const</span> SDL_FRect&amp; screenRect) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> setState(<a class="code hl_enumeration" href="class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> newState);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">void</span> applyCurrentColor();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_enumeration" href="class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>                 m_state = State::Normal;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">bool</span>                  m_interactable = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">bool</span>                  m_isPointerInside = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">bool</span>                  m_isPressed = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_struct" href="struct_shit_1_1_u_i_button_1_1_color_block.html">ColorBlock</a>            m_colors;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        std::function&lt;void()&gt; m_onClick;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
+<div class="ttc" id="a_u_i_renderer_component_8h_html"><div class="ttname"><a href="_u_i_renderer_component_8h.html">UIRendererComponent.h</a></div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html"><div class="ttname"><a href="class_shit_1_1_u_i_button.html">Shit::UIButton</a></div><div class="ttdoc">UI 按钮控件，基于鼠标 Raycasting 触发交互</div><div class="ttdef"><b>Definition</b> UIButton.h:15</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a00154730a865de849abe4839fd3e8df0"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a00154730a865de849abe4839fd3e8df0">Shit::UIButton::onPointerUp</a></div><div class="ttdeci">void onPointerUp()</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a009b2978f3ae0e8560ac7f66a68750a7"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a009b2978f3ae0e8560ac7f66a68750a7">Shit::UIButton::onPointerExit</a></div><div class="ttdeci">void onPointerExit()</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a073731fd74c8c6cf6acea20874160a29"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a073731fd74c8c6cf6acea20874160a29">Shit::UIButton::onPointerEnter</a></div><div class="ttdeci">void onPointerEnter()</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a217b542e0375e611a5769521238c2838"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a217b542e0375e611a5769521238c2838">Shit::UIButton::UIButton</a></div><div class="ttdeci">UIButton()=default</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a2e739ff12d1cf50a1139791b2a425d58"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a2e739ff12d1cf50a1139791b2a425d58">Shit::UIButton::onRender</a></div><div class="ttdeci">void onRender(SDL_Renderer *renderer, const SDL_FRect &amp;screenRect) override</div><div class="ttdoc">子类实现：在给定屏幕矩形内绘制自身</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a5d74787dedbc4e11c1ab15bf487e61f8"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8">Shit::UIButton::State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition</b> UIButton.h:17</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a816248a75d12c6837a7cc23529e9cba2"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a816248a75d12c6837a7cc23529e9cba2">Shit::UIButton::setInteractable</a></div><div class="ttdeci">void setInteractable(bool interactable)</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a8adfbd30b2a9f46af502431a87662a5f"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a8adfbd30b2a9f46af502431a87662a5f">Shit::UIButton::~UIButton</a></div><div class="ttdeci">~UIButton() override=default</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_a8e52bcaecc271b1b57c4608da2d4b11e"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#a8e52bcaecc271b1b57c4608da2d4b11e">Shit::UIButton::getState</a></div><div class="ttdeci">State getState() const</div><div class="ttdef"><b>Definition</b> UIButton.h:40</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_ab53a6879a1b1f59360eca8a98ed03b1f"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#ab53a6879a1b1f59360eca8a98ed03b1f">Shit::UIButton::isInteractable</a></div><div class="ttdeci">bool isInteractable() const</div><div class="ttdef"><b>Definition</b> UIButton.h:37</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_ad54d68d07977d973c25f61af585b32c9"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#ad54d68d07977d973c25f61af585b32c9">Shit::UIButton::setColors</a></div><div class="ttdeci">void setColors(const ColorBlock &amp;colors)</div><div class="ttdef"><b>Definition</b> UIButton.h:43</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_af598ca580f93cedcaeaa4933446123e2"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#af598ca580f93cedcaeaa4933446123e2">Shit::UIButton::setOnClick</a></div><div class="ttdeci">void setOnClick(std::function&lt; void()&gt; callback)</div><div class="ttdef"><b>Definition</b> UIButton.h:45</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_afa28e595d125123c032f30be9fa710af"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#afa28e595d125123c032f30be9fa710af">Shit::UIButton::getColors</a></div><div class="ttdeci">const ColorBlock &amp; getColors() const</div><div class="ttdef"><b>Definition</b> UIButton.h:42</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_button_html_afe4aa751b9088c3fe978fa2e7b7db562"><div class="ttname"><a href="class_shit_1_1_u_i_button.html#afe4aa751b9088c3fe978fa2e7b7db562">Shit::UIButton::onPointerDown</a></div><div class="ttdeci">void onPointerDown()</div></div>
+<div class="ttc" id="aclass_shit_1_1_u_i_renderer_component_html"><div class="ttname"><a href="class_shit_1_1_u_i_renderer_component.html">Shit::UIRendererComponent</a></div><div class="ttdoc">UI 渲染控件基类（对应游戏世界的 RendererComponent）</div><div class="ttdef"><b>Definition</b> UIRendererComponent.h:19</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="astruct_shit_1_1_color_html"><div class="ttname"><a href="struct_shit_1_1_color.html">Shit::Color</a></div><div class="ttdoc">RGBA 颜色（每通道 8 位）</div><div class="ttdef"><b>Definition</b> Core.h:26</div></div>
+<div class="ttc" id="astruct_shit_1_1_u_i_button_1_1_color_block_html"><div class="ttname"><a href="struct_shit_1_1_u_i_button_1_1_color_block.html">Shit::UIButton::ColorBlock</a></div><div class="ttdoc">ColorTint 过渡的四种状态颜色（乘到 UIImage 像素上）</div><div class="ttdef"><b>Definition</b> UIButton.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_314d3b5bfda03e759c3ddc64f23ac135.html">UI</a></li><li class="navelem"><a class="el" href="_u_i_button_8h.html">UIButton.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

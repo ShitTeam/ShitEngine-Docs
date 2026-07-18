@@ -1,0 +1,553 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: Behavior类 参考</title>
+<!--BEGIN PROJECT_ICON-->
+<link rel="icon" href="$projecticon" type="image/x-icon" />
+<!--END PROJECT_ICON-->
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<!--BEGIN HTML_DYNAMIC_SECTIONS-->
+<script type="text/javascript" src="dynsections.js"></script>
+<!--END HTML_DYNAMIC_SECTIONS-->
+<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript" src="codefolding.js"></script>
+<!--END HTML_CODE_FOLDING-->
+<!--BEGIN COPY_CLIPBOARD-->
+<script type="text/javascript" src="clipboard.js"></script>
+<!--END COPY_CLIPBOARD-->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+$mermaidjs
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_shit_1_1_behavior.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_shit_1_1_behavior-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Behavior类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>行为基类 —— 用于编写自定义游戏逻辑  
+ <a href="class_shit_1_1_behavior.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_behavior_8h_source.html">Behavior.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Behavior 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_shit_1_1_behavior.png" usemap="#Behavior_map" alt=""/>
+  <map id="Behavior_map" name="Behavior_map">
+<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="0,0,130,24"/>
+<area href="class_shit_1_1_animation_component.html" title="动画组件" alt="AnimationComponent" shape="rect" coords="0,112,130,136"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4f24a7153019bf68d0ec7f99428db90e" id="r_a4f24a7153019bf68d0ec7f99428db90e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a4f24a7153019bf68d0ec7f99428db90e">Behavior</a> ()=default</td></tr>
+<tr class="separator:a4f24a7153019bf68d0ec7f99428db90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a505b38eb8ed0bab19cf378f5e35854d9" id="r_a505b38eb8ed0bab19cf378f5e35854d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a505b38eb8ed0bab19cf378f5e35854d9">~Behavior</a> () override=default</td></tr>
+<tr class="separator:a505b38eb8ed0bab19cf378f5e35854d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe76e0ea44ef342a8c85726573860d4" id="r_acbe76e0ea44ef342a8c85726573860d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#acbe76e0ea44ef342a8c85726573860d4">onCreate</a> () override</td></tr>
+<tr class="separator:acbe76e0ea44ef342a8c85726573860d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbef2688cd43fd22241759f89fe12d28" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="separator:acbef2688cd43fd22241759f89fe12d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c5b2c91580204a54e2d32e9594e6e9" id="r_a62c5b2c91580204a54e2d32e9594e6e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a62c5b2c91580204a54e2d32e9594e6e9">onStart</a> ()</td></tr>
+<tr class="memdesc:a62c5b2c91580204a54e2d32e9594e6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">首次 update 前执行一次  <br /></td></tr>
+<tr class="separator:a62c5b2c91580204a54e2d32e9594e6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac521702842354e4c4c71d4cf28b1db0b" id="r_ac521702842354e4c4c71d4cf28b1db0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#ac521702842354e4c4c71d4cf28b1db0b">onUpdate</a> ()</td></tr>
+<tr class="memdesc:ac521702842354e4c4c71d4cf28b1db0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧执行  <br /></td></tr>
+<tr class="separator:ac521702842354e4c4c71d4cf28b1db0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
+<tr class="separator:ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="separator:aee7be93617a6078496df31830d454990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1991ea0e286fbb461b60c8c9299d781" id="r_ac1991ea0e286fbb461b60c8c9299d781"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781">isStarted</a> () const</td></tr>
+<tr class="memdesc:ac1991ea0e286fbb461b60c8c9299d781"><td class="mdescLeft">&#160;</td><td class="mdescRight">onStart 是否已执行过  <br /></td></tr>
+<tr class="separator:ac1991ea0e286fbb461b60c8c9299d781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28282f574997057b62d336af9198bb2" id="r_aa28282f574997057b62d336af9198bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#aa28282f574997057b62d336af9198bb2">setStarted</a> (bool <a class="el" href="class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781">isStarted</a>)</td></tr>
+<tr class="separator:aa28282f574997057b62d336af9198bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a0171e1571f18dc6a27c8b041de55feec inherit pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
+<tr class="separator:a0171e1571f18dc6a27c8b041de55feec inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8905908be361c6fce216879f4739d98 inherit pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
+<tr class="separator:ab8905908be361c6fce216879f4739d98 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054 inherit pub_methods_class_shit_1_1_component" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const <a class="el" href="class_shit_1_1_component.html">Component</a> &amp;)=delete</td></tr>
+<tr class="separator:a7a86c1a5c9cb8bc0be998d276c438054 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace504c89f605c2e53f2450021ebca56e inherit pub_methods_class_shit_1_1_component" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_component.html">Component</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="class_shit_1_1_component.html">Component</a> &amp;)=delete</td></tr>
+<tr class="separator:ace504c89f605c2e53f2450021ebca56e inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85c694df3855843a20a64cb0fc17233 inherit pub_methods_class_shit_1_1_component" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:aa85c694df3855843a20a64cb0fc17233 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f2dae077ca6d1b6e3a39201c79c796 inherit pub_methods_class_shit_1_1_component" id="r_a34f2dae077ca6d1b6e3a39201c79c796"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_component.html">Component</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a34f2dae077ca6d1b6e3a39201c79c796 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b36b6de005b18dd7c77687d8621774a inherit pub_methods_class_shit_1_1_component" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
+<tr class="separator:a9b36b6de005b18dd7c77687d8621774a inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246 inherit pub_methods_class_shit_1_1_component" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
+<tr class="separator:ab3318796ce9f4c658aa5cd5b65719246 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a04b5b6d3587350e5f8834fedeb9cab9e" id="r_a04b5b6d3587350e5f8834fedeb9cab9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a04b5b6d3587350e5f8834fedeb9cab9e">m_isStarted</a> = false</td></tr>
+<tr class="separator:a04b5b6d3587350e5f8834fedeb9cab9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 inherit pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
+<tr class="separator:aa1aee3acda958839f017f93f6ed1bbb3 inherit pro_attribs_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a inherit pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
+<tr class="separator:ae8fd281c96362b5079bc11b6ae10007a inherit pro_attribs_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a00df87c957d8f7ee0fc51f07a0542f4a" id="r_a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a></td></tr>
+<tr class="separator:a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>行为基类 —— 用于编写自定义游戏逻辑 </p>
+<p>继承自 Component，扩展出 onStart / onUpdate 两个阶段： onCreate → onAttach → onStart → (每帧)onUpdate → onDetach → onDestroy</p>
+<p>onStart 在首次 update 前执行一次，适用于缓存指针。 onUpdate 每帧执行，适用于输入、移动、碰撞检测等。</p>
+<p>挂载后由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 自动驱动，无需手动调用。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4f24a7153019bf68d0ec7f99428db90e" name="a4f24a7153019bf68d0ec7f99428db90e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f24a7153019bf68d0ec7f99428db90e">&#9670;&#160;</a></span>Behavior()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a505b38eb8ed0bab19cf378f5e35854d9" name="a505b38eb8ed0bab19cf378f5e35854d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a505b38eb8ed0bab19cf378f5e35854d9">&#9670;&#160;</a></span>~Behavior()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="class_shit_1_1_behavior.html">Behavior</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac1991ea0e286fbb461b60c8c9299d781" name="ac1991ea0e286fbb461b60c8c9299d781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1991ea0e286fbb461b60c8c9299d781">&#9670;&#160;</a></span>isStarted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isStarted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onStart 是否已执行过 </p>
+
+</div>
+</div>
+<a id="acbef2688cd43fd22241759f89fe12d28" name="acbef2688cd43fd22241759f89fe12d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbef2688cd43fd22241759f89fe12d28">&#9670;&#160;</a></span>onAttach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onAttach </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a6f4c9e6fe81d4bffc712d4d0ae4d72ff">Component</a> .</p>
+
+</div>
+</div>
+<a id="acbe76e0ea44ef342a8c85726573860d4" name="acbe76e0ea44ef342a8c85726573860d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe76e0ea44ef342a8c85726573860d4">&#9670;&#160;</a></span>onCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onCreate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722">Component</a> .</p>
+
+</div>
+</div>
+<a id="aee7be93617a6078496df31830d454990" name="aee7be93617a6078496df31830d454990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7be93617a6078496df31830d454990">&#9670;&#160;</a></span>onDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">Component</a> .</p>
+
+</div>
+</div>
+<a id="ad43b1fbcd8f355c3f312fa47fb3be914" name="ad43b1fbcd8f355c3f312fa47fb3be914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43b1fbcd8f355c3f312fa47fb3be914">&#9670;&#160;</a></span>onDetach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onDetach </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616">Component</a> .</p>
+
+</div>
+</div>
+<a id="a62c5b2c91580204a54e2d32e9594e6e9" name="a62c5b2c91580204a54e2d32e9594e6e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c5b2c91580204a54e2d32e9594e6e9">&#9670;&#160;</a></span>onStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>首次 update 前执行一次 </p>
+
+<p>被 <a class="el" href="class_shit_1_1_animation_component.html#a14127bfdcd55437a44ca5a76b916d899">AnimationComponent</a> 重载.</p>
+
+</div>
+</div>
+<a id="ac521702842354e4c4c71d4cf28b1db0b" name="ac521702842354e4c4c71d4cf28b1db0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac521702842354e4c4c71d4cf28b1db0b">&#9670;&#160;</a></span>onUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每帧执行 </p>
+
+<p>被 <a class="el" href="class_shit_1_1_animation_component.html#ae15f5dc3626bedd435b05d234dabcb85">AnimationComponent</a> 重载.</p>
+
+</div>
+</div>
+<a id="aa28282f574997057b62d336af9198bb2" name="aa28282f574997057b62d336af9198bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28282f574997057b62d336af9198bb2">&#9670;&#160;</a></span>setStarted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setStarted </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isStarted</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="a00df87c957d8f7ee0fc51f07a0542f4a" name="a00df87c957d8f7ee0fc51f07a0542f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00df87c957d8f7ee0fc51f07a0542f4a">&#9670;&#160;</a></span>GameObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_shit_1_1_game_object.html">GameObject</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a04b5b6d3587350e5f8834fedeb9cab9e" name="a04b5b6d3587350e5f8834fedeb9cab9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b5b6d3587350e5f8834fedeb9cab9e">&#9670;&#160;</a></span>m_isStarted</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool m_isStarted = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Component/<a class="el" href="_behavior_8h_source.html">Behavior.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

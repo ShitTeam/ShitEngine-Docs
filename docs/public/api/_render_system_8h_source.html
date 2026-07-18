@@ -1,0 +1,205 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: include/ShitEngine/Render/RenderSystem.h 源文件</title>
+<!--BEGIN PROJECT_ICON-->
+<link rel="icon" href="$projecticon" type="image/x-icon" />
+<!--END PROJECT_ICON-->
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<!--BEGIN HTML_DYNAMIC_SECTIONS-->
+<script type="text/javascript" src="dynsections.js"></script>
+<!--END HTML_DYNAMIC_SECTIONS-->
+<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript" src="codefolding.js"></script>
+<!--END HTML_CODE_FOLDING-->
+<!--BEGIN COPY_CLIPBOARD-->
+<script type="text/javascript" src="clipboard.js"></script>
+<!--END COPY_CLIPBOARD-->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+$mermaidjs
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_render_system_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RenderSystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_render_system_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../Core/Core.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../Math.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_system_8h.html">ShitEngine/System/System.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">struct </span>SDL_Renderer;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">class </span>CameraComponent;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">class </span>RendererComponent;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_render_system.html">RenderSystem</a> final : <span class="keyword">public</span> <a class="code hl_class" href="class_shit_1_1_system.html">System</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html#a0344b84022584b4fe5672c893f31af00">   20</a></span>        <a class="code hl_function" href="class_shit_1_1_render_system.html#a0344b84022584b4fe5672c893f31af00">RenderSystem</a>(<span class="keywordtype">int</span> priority = 100);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html#ad70b1fecf294edfec1302add14c488f9">   21</a></span>        <a class="code hl_function" href="class_shit_1_1_render_system.html#ad70b1fecf294edfec1302add14c488f9">~RenderSystem</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html#a44137bb65de2396875934e48a6ee5099">   23</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_render_system.html#a44137bb65de2396875934e48a6ee5099">update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html#ae1cf30cae681d95a94934492ae7ea627">   24</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_render_system.html#ae1cf30cae681d95a94934492ae7ea627">destroy</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html#ad8f82ce398f9a548a07a5530876fcb08">   26</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_render_system.html#ad8f82ce398f9a548a07a5530876fcb08">registerRenderer</a>(<a class="code hl_class" href="class_shit_1_1_renderer_component.html">RendererComponent</a> *renderer);   </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html#a0ccb6e65947aae847f77d3ad1dcc1343">   27</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_render_system.html#a0ccb6e65947aae847f77d3ad1dcc1343">unregisterRenderer</a>(<a class="code hl_class" href="class_shit_1_1_renderer_component.html">RendererComponent</a> *renderer); </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html#ad5267b789c11ef525f9c8377eaa9b54b">   28</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_render_system.html#ad5267b789c11ef525f9c8377eaa9b54b">registerCamera</a>(<a class="code hl_class" href="class_shit_1_1_camera_component.html">CameraComponent</a> *camera);         </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_shit_1_1_render_system.html#a3a6ea09f465a894d37a326bd7e58b0ff">   29</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_render_system.html#a3a6ea09f465a894d37a326bd7e58b0ff">unregisterCamera</a>(<a class="code hl_class" href="class_shit_1_1_camera_component.html">CameraComponent</a> *camera);       </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        SDL_Renderer* m_renderer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        std::vector&lt;RendererComponent*&gt; m_renderers;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">bool</span> m_isRenderersNeedSort = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::vector&lt;CameraComponent*&gt; m_cameras;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">bool</span> m_isCamerasNeedSort = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    };</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
+<div class="ttc" id="a_system_8h_html"><div class="ttname"><a href="_system_8h.html">System.h</a></div></div>
+<div class="ttc" id="aclass_shit_1_1_camera_component_html"><div class="ttname"><a href="class_shit_1_1_camera_component.html">Shit::CameraComponent</a></div><div class="ttdoc">相机组件，定义&quot;从哪个角度观察世界&quot;</div><div class="ttdef"><b>Definition</b> CameraComponent.h:15</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html"><div class="ttname"><a href="class_shit_1_1_render_system.html">Shit::RenderSystem</a></div><div class="ttdoc">渲染系统</div><div class="ttdef"><b>Definition</b> RenderSystem.h:18</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html_a0344b84022584b4fe5672c893f31af00"><div class="ttname"><a href="class_shit_1_1_render_system.html#a0344b84022584b4fe5672c893f31af00">Shit::RenderSystem::RenderSystem</a></div><div class="ttdeci">RenderSystem(int priority=100)</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html_a0ccb6e65947aae847f77d3ad1dcc1343"><div class="ttname"><a href="class_shit_1_1_render_system.html#a0ccb6e65947aae847f77d3ad1dcc1343">Shit::RenderSystem::unregisterRenderer</a></div><div class="ttdeci">void unregisterRenderer(RendererComponent *renderer)</div><div class="ttdoc">注销渲染组件</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html_a3a6ea09f465a894d37a326bd7e58b0ff"><div class="ttname"><a href="class_shit_1_1_render_system.html#a3a6ea09f465a894d37a326bd7e58b0ff">Shit::RenderSystem::unregisterCamera</a></div><div class="ttdeci">void unregisterCamera(CameraComponent *camera)</div><div class="ttdoc">注销相机</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html_a44137bb65de2396875934e48a6ee5099"><div class="ttname"><a href="class_shit_1_1_render_system.html#a44137bb65de2396875934e48a6ee5099">Shit::RenderSystem::update</a></div><div class="ttdeci">void update() override</div><div class="ttdoc">每帧更新（纯虚）</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html_ad5267b789c11ef525f9c8377eaa9b54b"><div class="ttname"><a href="class_shit_1_1_render_system.html#ad5267b789c11ef525f9c8377eaa9b54b">Shit::RenderSystem::registerCamera</a></div><div class="ttdeci">void registerCamera(CameraComponent *camera)</div><div class="ttdoc">注册相机</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html_ad70b1fecf294edfec1302add14c488f9"><div class="ttname"><a href="class_shit_1_1_render_system.html#ad70b1fecf294edfec1302add14c488f9">Shit::RenderSystem::~RenderSystem</a></div><div class="ttdeci">~RenderSystem() override</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html_ad8f82ce398f9a548a07a5530876fcb08"><div class="ttname"><a href="class_shit_1_1_render_system.html#ad8f82ce398f9a548a07a5530876fcb08">Shit::RenderSystem::registerRenderer</a></div><div class="ttdeci">void registerRenderer(RendererComponent *renderer)</div><div class="ttdoc">注册渲染组件</div></div>
+<div class="ttc" id="aclass_shit_1_1_render_system_html_ae1cf30cae681d95a94934492ae7ea627"><div class="ttname"><a href="class_shit_1_1_render_system.html#ae1cf30cae681d95a94934492ae7ea627">Shit::RenderSystem::destroy</a></div><div class="ttdeci">void destroy() override</div><div class="ttdoc">销毁（纯虚）</div></div>
+<div class="ttc" id="aclass_shit_1_1_renderer_component_html"><div class="ttname"><a href="class_shit_1_1_renderer_component.html">Shit::RendererComponent</a></div><div class="ttdoc">渲染组件基类</div><div class="ttdef"><b>Definition</b> RendererComponent.h:18</div></div>
+<div class="ttc" id="aclass_shit_1_1_system_html"><div class="ttname"><a href="class_shit_1_1_system.html">Shit::System</a></div><div class="ttdoc">System 基类</div><div class="ttdef"><b>Definition</b> System.h:15</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_e20fa15f4ad40cb643df26f8adb886b0.html">Render</a></li><li class="navelem"><a class="el" href="_render_system_8h.html">RenderSystem.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

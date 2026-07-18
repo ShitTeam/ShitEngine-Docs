@@ -1,0 +1,895 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: GameObject类 参考</title>
+<!--BEGIN PROJECT_ICON-->
+<link rel="icon" href="$projecticon" type="image/x-icon" />
+<!--END PROJECT_ICON-->
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<!--BEGIN HTML_DYNAMIC_SECTIONS-->
+<script type="text/javascript" src="dynsections.js"></script>
+<!--END HTML_DYNAMIC_SECTIONS-->
+<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript" src="codefolding.js"></script>
+<!--END HTML_CODE_FOLDING-->
+<!--BEGIN COPY_CLIPBOARD-->
+<script type="text/javascript" src="clipboard.js"></script>
+<!--END COPY_CLIPBOARD-->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+$mermaidjs
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_shit_1_1_game_object.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_shit_1_1_game_object-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">GameObject类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>游戏物体类  
+ <a href="class_shit_1_1_game_object.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_object_8h_source.html">GameObject.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a017e00b45eb2e288dadbc4100f023993" id="r_a017e00b45eb2e288dadbc4100f023993"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a017e00b45eb2e288dadbc4100f023993">~GameObject</a> ()=default</td></tr>
+<tr class="separator:a017e00b45eb2e288dadbc4100f023993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb07140ebe8805277f8a0076dfe0b541" id="r_aeb07140ebe8805277f8a0076dfe0b541"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#aeb07140ebe8805277f8a0076dfe0b541">GameObject</a> (const <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;)=delete</td></tr>
+<tr class="separator:aeb07140ebe8805277f8a0076dfe0b541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f541a7914dfb4850ce4d27f90e7dfa2" id="r_a4f541a7914dfb4850ce4d27f90e7dfa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a4f541a7914dfb4850ce4d27f90e7dfa2">operator=</a> (const <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;)=delete</td></tr>
+<tr class="separator:a4f541a7914dfb4850ce4d27f90e7dfa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8035eae20f4d90aa3e2e044fa9fd845" id="r_af8035eae20f4d90aa3e2e044fa9fd845"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#af8035eae20f4d90aa3e2e044fa9fd845">GameObject</a> (<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:af8035eae20f4d90aa3e2e044fa9fd845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6630dbb84ec77ba85f7a6e4fd9050b5a" id="r_a6630dbb84ec77ba85f7a6e4fd9050b5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a6630dbb84ec77ba85f7a6e4fd9050b5a">operator=</a> (<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a6630dbb84ec77ba85f7a6e4fd9050b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a80b6032f86a56bec74609034b3246f" id="r_a3a80b6032f86a56bec74609034b3246f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a3a80b6032f86a56bec74609034b3246f">destroy</a> ()</td></tr>
+<tr class="memdesc:a3a80b6032f86a56bec74609034b3246f"><td class="mdescLeft">&#160;</td><td class="mdescRight">标记为待销毁（帧末由 <a class="el" href="class_shit_1_1_scene.html" title="场景类">Scene</a> 统一清理）；级联标记所有子物体  <br /></td></tr>
+<tr class="separator:a3a80b6032f86a56bec74609034b3246f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f0413882a431ba59905fc2e3b59b01" id="r_a03f0413882a431ba59905fc2e3b59b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a03f0413882a431ba59905fc2e3b59b01">setParent</a> (<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *parent)</td></tr>
+<tr class="memdesc:a03f0413882a431ba59905fc2e3b59b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置父物体  <br /></td></tr>
+<tr class="separator:a03f0413882a431ba59905fc2e3b59b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5adb8c6bcab6353e781579c0c9240e03" id="r_a5adb8c6bcab6353e781579c0c9240e03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a5adb8c6bcab6353e781579c0c9240e03">getParent</a> () const</td></tr>
+<tr class="memdesc:a5adb8c6bcab6353e781579c0c9240e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取父物体  <br /></td></tr>
+<tr class="separator:a5adb8c6bcab6353e781579c0c9240e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2619c8ab3a893aaec60458343051b17d" id="r_a2619c8ab3a893aaec60458343051b17d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a2619c8ab3a893aaec60458343051b17d">getChildren</a> () const</td></tr>
+<tr class="memdesc:a2619c8ab3a893aaec60458343051b17d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取子物体列表  <br /></td></tr>
+<tr class="separator:a2619c8ab3a893aaec60458343051b17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06dad5895582cbe8aee4c182fc533c68" id="r_a06dad5895582cbe8aee4c182fc533c68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a06dad5895582cbe8aee4c182fc533c68">addChild</a> (<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *child)</td></tr>
+<tr class="memdesc:a06dad5895582cbe8aee4c182fc533c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加子物体（等价于 child-&gt;setParent(this)）  <br /></td></tr>
+<tr class="separator:a06dad5895582cbe8aee4c182fc533c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd7335faa33dce2f87c7e50eef3e294" id="r_a3fd7335faa33dce2f87c7e50eef3e294"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a3fd7335faa33dce2f87c7e50eef3e294">getName</a> () const</td></tr>
+<tr class="separator:a3fd7335faa33dce2f87c7e50eef3e294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83d38d84c66cc8ea7a83659d941a323" id="r_af83d38d84c66cc8ea7a83659d941a323"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#af83d38d84c66cc8ea7a83659d941a323">getTag</a> () const</td></tr>
+<tr class="separator:af83d38d84c66cc8ea7a83659d941a323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c36c4965240371f43c896f8d6af7feb" id="r_a0c36c4965240371f43c896f8d6af7feb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a0c36c4965240371f43c896f8d6af7feb">getScene</a> () const</td></tr>
+<tr class="separator:a0c36c4965240371f43c896f8d6af7feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c9255af4b284a0b456483acbfe1b0e" id="r_af9c9255af4b284a0b456483acbfe1b0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#af9c9255af4b284a0b456483acbfe1b0e">isNeedDestroy</a> () const</td></tr>
+<tr class="separator:af9c9255af4b284a0b456483acbfe1b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3a2685df23b5e7cbf59c19c4a1f9b5" id="r_a9d3a2685df23b5e7cbf59c19c4a1f9b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a9d3a2685df23b5e7cbf59c19c4a1f9b5">setName</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a9d3a2685df23b5e7cbf59c19c4a1f9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f57a9ed979c10c89eb81e09136718a5" id="r_a7f57a9ed979c10c89eb81e09136718a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a7f57a9ed979c10c89eb81e09136718a5">setTag</a> (const std::string &amp;tag)</td></tr>
+<tr class="memdesc:a7f57a9ed979c10c89eb81e09136718a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置标签（用于分类，如 "enemy"、"player"）  <br /></td></tr>
+<tr class="separator:a7f57a9ed979c10c89eb81e09136718a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f2aa21e8b3898775462d2a378d2e0f" id="r_a36f2aa21e8b3898775462d2a378d2e0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a36f2aa21e8b3898775462d2a378d2e0f">setScene</a> (<a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memdesc:a36f2aa21e8b3898775462d2a378d2e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置所属场景（同时触发未注册组件的 onAttach）  <br /></td></tr>
+<tr class="separator:a36f2aa21e8b3898775462d2a378d2e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03eb988617fc41944c0de1bbf62a8abf" id="r_a03eb988617fc41944c0de1bbf62a8abf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a03eb988617fc41944c0de1bbf62a8abf">setNeedDestroy</a> (bool needDestroy)</td></tr>
+<tr class="separator:a03eb988617fc41944c0de1bbf62a8abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec3a8d4557c78eebb2cafef428070c3" id="r_a8ec3a8d4557c78eebb2cafef428070c3"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::type_index, std::unique_ptr&lt; <a class="el" href="class_shit_1_1_component.html">Component</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a8ec3a8d4557c78eebb2cafef428070c3">getComponents</a> ()</td></tr>
+<tr class="memdesc:a8ec3a8d4557c78eebb2cafef428070c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取全部组件（按 type_index 索引）  <br /></td></tr>
+<tr class="separator:a8ec3a8d4557c78eebb2cafef428070c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4cb35ac024fe4a08a4c23b4e24484e5" id="r_ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> , typename... Args&gt; </td></tr>
+<tr class="memitem:ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#ac4cb35ac024fe4a08a4c23b4e24484e5">addComponent</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加组件  <br /></td></tr>
+<tr class="separator:ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3fc709644a6ee3ffe6496d8fe2fe521" id="r_af3fc709644a6ee3ffe6496d8fe2fe521"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </td></tr>
+<tr class="memitem:af3fc709644a6ee3ffe6496d8fe2fe521"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#af3fc709644a6ee3ffe6496d8fe2fe521">getComponent</a> ()</td></tr>
+<tr class="memdesc:af3fc709644a6ee3ffe6496d8fe2fe521"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取组件  <br /></td></tr>
+<tr class="separator:af3fc709644a6ee3ffe6496d8fe2fe521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe100a1d418965113893d4aead521a7c" id="r_abe100a1d418965113893d4aead521a7c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </td></tr>
+<tr class="memitem:abe100a1d418965113893d4aead521a7c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#abe100a1d418965113893d4aead521a7c">hasComponent</a> ()</td></tr>
+<tr class="memdesc:abe100a1d418965113893d4aead521a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否存在某个组件  <br /></td></tr>
+<tr class="separator:abe100a1d418965113893d4aead521a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3a4076579262cdc6d8b88ee4e609d8" id="r_a7e3a4076579262cdc6d8b88ee4e609d8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </td></tr>
+<tr class="memitem:a7e3a4076579262cdc6d8b88ee4e609d8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8">removeComponent</a> ()</td></tr>
+<tr class="memdesc:a7e3a4076579262cdc6d8b88ee4e609d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除某个组件  <br /></td></tr>
+<tr class="separator:a7e3a4076579262cdc6d8b88ee4e609d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a032858ae1fe02d2d1170981c2af2d67c" id="r_a032858ae1fe02d2d1170981c2af2d67c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html#a032858ae1fe02d2d1170981c2af2d67c">Scene</a></td></tr>
+<tr class="separator:a032858ae1fe02d2d1170981c2af2d67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>游戏物体类 </p>
+<p>构造函数私有，只能通过 <a class="el" href="class_shit_1_1_scene.html#a9f4ae128a66f2c918b57e58ed9534677" title="创建并添加 GameObject">Scene::createGameObject</a> 或 <a class="el" href="class_shit_1_1_scene.html#aacfe102452215e81fe047bfe6de8e4d0" title="从预制体实例化">Scene::instantiate</a> 创建。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a017e00b45eb2e288dadbc4100f023993" name="a017e00b45eb2e288dadbc4100f023993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017e00b45eb2e288dadbc4100f023993">&#9670;&#160;</a></span>~GameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb07140ebe8805277f8a0076dfe0b541" name="aeb07140ebe8805277f8a0076dfe0b541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb07140ebe8805277f8a0076dfe0b541">&#9670;&#160;</a></span>GameObject() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8035eae20f4d90aa3e2e044fa9fd845" name="af8035eae20f4d90aa3e2e044fa9fd845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8035eae20f4d90aa3e2e044fa9fd845">&#9670;&#160;</a></span>GameObject() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a06dad5895582cbe8aee4c182fc533c68" name="a06dad5895582cbe8aee4c182fc533c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06dad5895582cbe8aee4c182fc533c68">&#9670;&#160;</a></span>addChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加子物体（等价于 child-&gt;setParent(this)） </p>
+
+</div>
+</div>
+<a id="ac4cb35ac024fe4a08a4c23b4e24484e5" name="ac4cb35ac024fe4a08a4c23b4e24484e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4cb35ac024fe4a08a4c23b4e24484e5">&#9670;&#160;</a></span>addComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> * addComponent </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加组件 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>组件类型（须继承 Component） </td></tr>
+    <tr><td class="paramname">Args</td><td>构造参数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>传递给组件构造函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>组件指针（若已存在则返回已有的） </dd></dl>
+
+</div>
+</div>
+<a id="a3a80b6032f86a56bec74609034b3246f" name="a3a80b6032f86a56bec74609034b3246f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a80b6032f86a56bec74609034b3246f">&#9670;&#160;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>标记为待销毁（帧末由 <a class="el" href="class_shit_1_1_scene.html" title="场景类">Scene</a> 统一清理）；级联标记所有子物体 </p>
+
+</div>
+</div>
+<a id="a2619c8ab3a893aaec60458343051b17d" name="a2619c8ab3a893aaec60458343051b17d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2619c8ab3a893aaec60458343051b17d">&#9670;&#160;</a></span>getChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> * &gt; &amp; getChildren </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取子物体列表 </p>
+
+</div>
+</div>
+<a id="af3fc709644a6ee3ffe6496d8fe2fe521" name="af3fc709644a6ee3ffe6496d8fe2fe521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3fc709644a6ee3ffe6496d8fe2fe521">&#9670;&#160;</a></span>getComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> * getComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取组件 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>组件类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>组件裸指针 </dd></dl>
+
+</div>
+</div>
+<a id="a8ec3a8d4557c78eebb2cafef428070c3" name="a8ec3a8d4557c78eebb2cafef428070c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec3a8d4557c78eebb2cafef428070c3">&#9670;&#160;</a></span>getComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::type_index, std::unique_ptr&lt; <a class="el" href="class_shit_1_1_component.html">Component</a> &gt; &gt; &amp; getComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取全部组件（按 type_index 索引） </p>
+
+</div>
+</div>
+<a id="a3fd7335faa33dce2f87c7e50eef3e294" name="a3fd7335faa33dce2f87c7e50eef3e294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd7335faa33dce2f87c7e50eef3e294">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5adb8c6bcab6353e781579c0c9240e03" name="a5adb8c6bcab6353e781579c0c9240e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5adb8c6bcab6353e781579c0c9240e03">&#9670;&#160;</a></span>getParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> * getParent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取父物体 </p>
+
+</div>
+</div>
+<a id="a0c36c4965240371f43c896f8d6af7feb" name="a0c36c4965240371f43c896f8d6af7feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c36c4965240371f43c896f8d6af7feb">&#9670;&#160;</a></span>getScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_scene.html">Scene</a> * getScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af83d38d84c66cc8ea7a83659d941a323" name="af83d38d84c66cc8ea7a83659d941a323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af83d38d84c66cc8ea7a83659d941a323">&#9670;&#160;</a></span>getTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; getTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe100a1d418965113893d4aead521a7c" name="abe100a1d418965113893d4aead521a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe100a1d418965113893d4aead521a7c">&#9670;&#160;</a></span>hasComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查是否存在某个组件 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>组件类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否存在组件 </dd></dl>
+
+</div>
+</div>
+<a id="af9c9255af4b284a0b456483acbfe1b0e" name="af9c9255af4b284a0b456483acbfe1b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c9255af4b284a0b456483acbfe1b0e">&#9670;&#160;</a></span>isNeedDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isNeedDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f541a7914dfb4850ce4d27f90e7dfa2" name="a4f541a7914dfb4850ce4d27f90e7dfa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f541a7914dfb4850ce4d27f90e7dfa2">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6630dbb84ec77ba85f7a6e4fd9050b5a" name="a6630dbb84ec77ba85f7a6e4fd9050b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6630dbb84ec77ba85f7a6e4fd9050b5a">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e3a4076579262cdc6d8b88ee4e609d8" name="a7e3a4076579262cdc6d8b88ee4e609d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3a4076579262cdc6d8b88ee4e609d8">&#9670;&#160;</a></span>removeComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除某个组件 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>组件类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>生命周期调用顺序：onDetach → onDestroy </p>
+
+</div>
+</div>
+<a id="a9d3a2685df23b5e7cbf59c19c4a1f9b5" name="a9d3a2685df23b5e7cbf59c19c4a1f9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3a2685df23b5e7cbf59c19c4a1f9b5">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03eb988617fc41944c0de1bbf62a8abf" name="a03eb988617fc41944c0de1bbf62a8abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03eb988617fc41944c0de1bbf62a8abf">&#9670;&#160;</a></span>setNeedDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setNeedDestroy </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>needDestroy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03f0413882a431ba59905fc2e3b59b01" name="a03f0413882a431ba59905fc2e3b59b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f0413882a431ba59905fc2e3b59b01">&#9670;&#160;</a></span>setParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setParent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td>
+          <td class="paramname"><em>parent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置父物体 </p>
+<p>自动从旧父物体的子列表中移除自己，并加入新父物体的子列表。 传入 nullptr 即解除当前父子关系。跨 <a class="el" href="class_shit_1_1_scene.html" title="场景类">Scene</a> 的父子关系将被拒绝并记 WARN。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>新父物体（可为 nullptr） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a36f2aa21e8b3898775462d2a378d2e0f" name="a36f2aa21e8b3898775462d2a378d2e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f2aa21e8b3898775462d2a378d2e0f">&#9670;&#160;</a></span>setScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setScene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置所属场景（同时触发未注册组件的 onAttach） </p>
+
+</div>
+</div>
+<a id="a7f57a9ed979c10c89eb81e09136718a5" name="a7f57a9ed979c10c89eb81e09136718a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f57a9ed979c10c89eb81e09136718a5">&#9670;&#160;</a></span>setTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTag </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置标签（用于分类，如 "enemy"、"player"） </p>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="a032858ae1fe02d2d1170981c2af2d67c" name="a032858ae1fe02d2d1170981c2af2d67c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032858ae1fe02d2d1170981c2af2d67c">&#9670;&#160;</a></span>Scene</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_shit_1_1_scene.html">Scene</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/GameObject/<a class="el" href="_game_object_8h_source.html">GameObject.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

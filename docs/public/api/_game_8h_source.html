@@ -1,0 +1,204 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: include/ShitEngine/Core/Game.h 源文件</title>
+<!--BEGIN PROJECT_ICON-->
+<link rel="icon" href="$projecticon" type="image/x-icon" />
+<!--END PROJECT_ICON-->
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<!--BEGIN HTML_DYNAMIC_SECTIONS-->
+<script type="text/javascript" src="dynsections.js"></script>
+<!--END HTML_DYNAMIC_SECTIONS-->
+<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript" src="codefolding.js"></script>
+<!--END HTML_CODE_FOLDING-->
+<!--BEGIN COPY_CLIPBOARD-->
+<script type="text/javascript" src="clipboard.js"></script>
+<!--END COPY_CLIPBOARD-->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+$mermaidjs
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_game_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Game.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8h.html">Core.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_game.html">Game</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#a98d87ba6bde3f389e92664a2ef9bfcb1">   18</a></span>        <a class="code hl_function" href="class_shit_1_1_game.html#a98d87ba6bde3f389e92664a2ef9bfcb1">Game</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#ac168f724bc6694d4f9d4c87f8c0189ba">   19</a></span>        <a class="code hl_function" href="class_shit_1_1_game.html#ac168f724bc6694d4f9d4c87f8c0189ba">~Game</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#aee8048628ff2b5c026c9e15acdcaacb8">   21</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_game.html#aee8048628ff2b5c026c9e15acdcaacb8">init</a>();    </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#a13a43e6d814de94978c515cb084873b1">   22</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game.html#a13a43e6d814de94978c515cb084873b1">run</a>();     </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">// --- 静态API ---</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#abd5c78a9612b6bea2c24643c48b4743b">   25</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="class_shit_1_1_game.html">Game</a>&amp; <a class="code hl_function" href="class_shit_1_1_game.html#abd5c78a9612b6bea2c24643c48b4743b">GetInstance</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">   26</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Init</a>() { <span class="keywordflow">return</span> GetInstance().init(); }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#abcf24ae9fc270d7a9e1664d94ba02900">   27</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game.html#abcf24ae9fc270d7a9e1664d94ba02900">Run</a>() { GetInstance().run(); }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#a62a73aff7afffe2fba7c2e47e07d9134">   28</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_game.html#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a>();                      </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f">   29</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f">IsRunning</a>() { <span class="keywordflow">return</span> GetInstance().m_isRunning; } </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#a23532d6f55d03a64a5bcb462d5a83958">   31</a></span>        <a class="code hl_function" href="class_shit_1_1_game.html#a23532d6f55d03a64a5bcb462d5a83958">Game</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_game.html">Game</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#a13ce32219b6e08b9446c8df000395d1c">   32</a></span>        <a class="code hl_class" href="class_shit_1_1_game.html">Game</a>&amp; <a class="code hl_function" href="class_shit_1_1_game.html#a13ce32219b6e08b9446c8df000395d1c">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_shit_1_1_game.html">Game</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#aeec9479d38309fa8c258404832402d3f">   33</a></span>        <a class="code hl_function" href="class_shit_1_1_game.html#aeec9479d38309fa8c258404832402d3f">Game</a>(<a class="code hl_class" href="class_shit_1_1_game.html">Game</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_game.html#a0e7f12794b31440192880422d30d2c44">   34</a></span>        <a class="code hl_class" href="class_shit_1_1_game.html">Game</a>&amp; <a class="code hl_function" href="class_shit_1_1_game.html#a0e7f12794b31440192880422d30d2c44">operator=</a>(<a class="code hl_class" href="class_shit_1_1_game.html">Game</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">bool</span> m_isRunning = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">bool</span> m_isInited = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    };</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+</div>
+</div>
+<div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html"><div class="ttname"><a href="class_shit_1_1_game.html">Shit::Game</a></div><div class="ttdoc">引擎主控类</div><div class="ttdef"><b>Definition</b> Game.h:16</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_a0e7f12794b31440192880422d30d2c44"><div class="ttname"><a href="class_shit_1_1_game.html#a0e7f12794b31440192880422d30d2c44">Shit::Game::operator=</a></div><div class="ttdeci">Game &amp; operator=(Game &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_a13a43e6d814de94978c515cb084873b1"><div class="ttname"><a href="class_shit_1_1_game.html#a13a43e6d814de94978c515cb084873b1">Shit::Game::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启动主循环（阻塞直至窗口关闭）</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_a13ce32219b6e08b9446c8df000395d1c"><div class="ttname"><a href="class_shit_1_1_game.html#a13ce32219b6e08b9446c8df000395d1c">Shit::Game::operator=</a></div><div class="ttdeci">Game &amp; operator=(const Game &amp;)=delete</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_a23532d6f55d03a64a5bcb462d5a83958"><div class="ttname"><a href="class_shit_1_1_game.html#a23532d6f55d03a64a5bcb462d5a83958">Shit::Game::Game</a></div><div class="ttdeci">Game(const Game &amp;)=delete</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_a62a73aff7afffe2fba7c2e47e07d9134"><div class="ttname"><a href="class_shit_1_1_game.html#a62a73aff7afffe2fba7c2e47e07d9134">Shit::Game::Destroy</a></div><div class="ttdeci">static void Destroy()</div><div class="ttdoc">反初始化，按依赖逆序清理子系统</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_a98d87ba6bde3f389e92664a2ef9bfcb1"><div class="ttname"><a href="class_shit_1_1_game.html#a98d87ba6bde3f389e92664a2ef9bfcb1">Shit::Game::Game</a></div><div class="ttdeci">Game()</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_abac80b6e5030ccd8245ed2cd0edaf51f"><div class="ttname"><a href="class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f">Shit::Game::IsRunning</a></div><div class="ttdeci">static bool IsRunning()</div><div class="ttdoc">主循环是否仍在运行</div><div class="ttdef"><b>Definition</b> Game.h:29</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_abcf24ae9fc270d7a9e1664d94ba02900"><div class="ttname"><a href="class_shit_1_1_game.html#abcf24ae9fc270d7a9e1664d94ba02900">Shit::Game::Run</a></div><div class="ttdeci">static void Run()</div><div class="ttdef"><b>Definition</b> Game.h:27</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_abd5c78a9612b6bea2c24643c48b4743b"><div class="ttname"><a href="class_shit_1_1_game.html#abd5c78a9612b6bea2c24643c48b4743b">Shit::Game::GetInstance</a></div><div class="ttdeci">static Game &amp; GetInstance()</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_ac168f724bc6694d4f9d4c87f8c0189ba"><div class="ttname"><a href="class_shit_1_1_game.html#ac168f724bc6694d4f9d4c87f8c0189ba">Shit::Game::~Game</a></div><div class="ttdeci">~Game()</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_ae596c367662c7f3b19b6626b89ffc08b"><div class="ttname"><a href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::Game::Init</a></div><div class="ttdeci">static bool Init()</div><div class="ttdef"><b>Definition</b> Game.h:26</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_aee8048628ff2b5c026c9e15acdcaacb8"><div class="ttname"><a href="class_shit_1_1_game.html#aee8048628ff2b5c026c9e15acdcaacb8">Shit::Game::init</a></div><div class="ttdeci">bool init()</div><div class="ttdoc">初始化引擎所有子系统</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_aeec9479d38309fa8c258404832402d3f"><div class="ttname"><a href="class_shit_1_1_game.html#aeec9479d38309fa8c258404832402d3f">Shit::Game::Game</a></div><div class="ttdeci">Game(Game &amp;&amp;)=delete</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_dfa7a918fb106898484ac3316f589b4e.html">Core</a></li><li class="navelem"><a class="el" href="_game_8h.html">Game.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

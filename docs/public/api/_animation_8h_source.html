@@ -1,0 +1,201 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: include/ShitEngine/Render/Animation.h 源文件</title>
+<!--BEGIN PROJECT_ICON-->
+<link rel="icon" href="$projecticon" type="image/x-icon" />
+<!--END PROJECT_ICON-->
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<!--BEGIN HTML_DYNAMIC_SECTIONS-->
+<script type="text/javascript" src="dynsections.js"></script>
+<!--END HTML_DYNAMIC_SECTIONS-->
+<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript" src="codefolding.js"></script>
+<!--END HTML_CODE_FOLDING-->
+<!--BEGIN COPY_CLIPBOARD-->
+<script type="text/javascript" src="clipboard.js"></script>
+<!--END COPY_CLIPBOARD-->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+$mermaidjs
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_animation_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Animation.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_animation_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../Core/Core.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;SDL3/SDL_rect.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a>{</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_animation.html">Animation</a> final {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#a58936f4cd9797c6b52d287c172b90756">   18</a></span>        <a class="code hl_function" href="class_shit_1_1_animation.html#a58936f4cd9797c6b52d287c172b90756">Animation</a>(<span class="keywordtype">float</span> duration = 0.1f, <span class="keywordtype">bool</span> loop = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#aee6bf19aac7ec2c3616d44496f7bed5b">   19</a></span>        <a class="code hl_function" href="class_shit_1_1_animation.html#aee6bf19aac7ec2c3616d44496f7bed5b">~Animation</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#af73ed4af698e8d2f6edd8190f67c91a2">   21</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_animation.html#af73ed4af698e8d2f6edd8190f67c91a2">addFrame</a>(<span class="keyword">const</span> SDL_FRect&amp; frame);      </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#aba968763860730661f2fabb8ab934629">   22</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_animation.html#aba968763860730661f2fabb8ab934629">addFrames</a>(<span class="keyword">const</span> std::vector&lt;SDL_FRect&gt;&amp; frames); </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#a2683bd69f50c551f54cb35e8b83f4c6b">   24</a></span>        SDL_FRect <a class="code hl_function" href="class_shit_1_1_animation.html#a2683bd69f50c551f54cb35e8b83f4c6b">getFrame</a>(<span class="keywordtype">float</span> elapsedTime) <span class="keyword">const</span>; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">// --- getter &amp; setter ---</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#aa029c7e4c1ad0858c1a7e7e7309e1cb2">   27</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_animation.html#aa029c7e4c1ad0858c1a7e7e7309e1cb2">setLoop</a>(<span class="keywordtype">bool</span> loop) { m_loop = loop; }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#a8439272c49d21d8b6362f4cc9dc0e040">   28</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_animation.html#a8439272c49d21d8b6362f4cc9dc0e040">setDuration</a>(<span class="keywordtype">float</span> duration) { m_duration = duration; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#a78155a2b0119ac92d377fa404e348a98">   30</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_animation.html#a78155a2b0119ac92d377fa404e348a98">isLooping</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_loop; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#a1b376b64bd225fd20c4d5e502437eced">   31</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="class_shit_1_1_animation.html#a1b376b64bd225fd20c4d5e502437eced">getDuration</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_duration; }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shit_1_1_animation.html#a020bc01fe5af38371c152924e10e817e">   32</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_shit_1_1_animation.html#a020bc01fe5af38371c152924e10e817e">getFrameCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(m_frames.size()); }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        std::vector&lt;SDL_FRect&gt; m_frames;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">float</span> m_duration;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">bool</span> m_loop = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>Definition</b> Core.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html"><div class="ttname"><a href="class_shit_1_1_animation.html">Shit::Animation</a></div><div class="ttdoc">逐帧动画数据</div><div class="ttdef"><b>Definition</b> Animation.h:16</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_a020bc01fe5af38371c152924e10e817e"><div class="ttname"><a href="class_shit_1_1_animation.html#a020bc01fe5af38371c152924e10e817e">Shit::Animation::getFrameCount</a></div><div class="ttdeci">int getFrameCount() const</div><div class="ttdef"><b>Definition</b> Animation.h:32</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_a1b376b64bd225fd20c4d5e502437eced"><div class="ttname"><a href="class_shit_1_1_animation.html#a1b376b64bd225fd20c4d5e502437eced">Shit::Animation::getDuration</a></div><div class="ttdeci">float getDuration() const</div><div class="ttdef"><b>Definition</b> Animation.h:31</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_a2683bd69f50c551f54cb35e8b83f4c6b"><div class="ttname"><a href="class_shit_1_1_animation.html#a2683bd69f50c551f54cb35e8b83f4c6b">Shit::Animation::getFrame</a></div><div class="ttdeci">SDL_FRect getFrame(float elapsedTime) const</div><div class="ttdoc">根据已播放时间返回当前帧的源矩形</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_a58936f4cd9797c6b52d287c172b90756"><div class="ttname"><a href="class_shit_1_1_animation.html#a58936f4cd9797c6b52d287c172b90756">Shit::Animation::Animation</a></div><div class="ttdeci">Animation(float duration=0.1f, bool loop=true)</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_a78155a2b0119ac92d377fa404e348a98"><div class="ttname"><a href="class_shit_1_1_animation.html#a78155a2b0119ac92d377fa404e348a98">Shit::Animation::isLooping</a></div><div class="ttdeci">bool isLooping() const</div><div class="ttdef"><b>Definition</b> Animation.h:30</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_a8439272c49d21d8b6362f4cc9dc0e040"><div class="ttname"><a href="class_shit_1_1_animation.html#a8439272c49d21d8b6362f4cc9dc0e040">Shit::Animation::setDuration</a></div><div class="ttdeci">void setDuration(float duration)</div><div class="ttdef"><b>Definition</b> Animation.h:28</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_aa029c7e4c1ad0858c1a7e7e7309e1cb2"><div class="ttname"><a href="class_shit_1_1_animation.html#aa029c7e4c1ad0858c1a7e7e7309e1cb2">Shit::Animation::setLoop</a></div><div class="ttdeci">void setLoop(bool loop)</div><div class="ttdef"><b>Definition</b> Animation.h:27</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_aba968763860730661f2fabb8ab934629"><div class="ttname"><a href="class_shit_1_1_animation.html#aba968763860730661f2fabb8ab934629">Shit::Animation::addFrames</a></div><div class="ttdeci">void addFrames(const std::vector&lt; SDL_FRect &gt; &amp;frames)</div><div class="ttdoc">批量添加帧</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_aee6bf19aac7ec2c3616d44496f7bed5b"><div class="ttname"><a href="class_shit_1_1_animation.html#aee6bf19aac7ec2c3616d44496f7bed5b">Shit::Animation::~Animation</a></div><div class="ttdeci">~Animation()</div></div>
+<div class="ttc" id="aclass_shit_1_1_animation_html_af73ed4af698e8d2f6edd8190f67c91a2"><div class="ttname"><a href="class_shit_1_1_animation.html#af73ed4af698e8d2f6edd8190f67c91a2">Shit::Animation::addFrame</a></div><div class="ttdeci">void addFrame(const SDL_FRect &amp;frame)</div><div class="ttdoc">添加单帧</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>Definition</b> AudioPlayer.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_e20fa15f4ad40cb643df26f8adb886b0.html">Render</a></li><li class="navelem"><a class="el" href="_animation_8h.html">Animation.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

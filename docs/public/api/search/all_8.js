@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['i_0',['I',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0dadd7536794b63bf90eccfd37f9b147d7f',1,'Shit']]],
+  ['info_1',['Info',['../class_shit_1_1_log.html#acf6dbc55a4e25bb21b715e55fad247b2',1,'Shit::Log']]],
+  ['init_2',['init',['../class_shit_1_1_config.html#ae596c367662c7f3b19b6626b89ffc08b',1,'Shit::Config::Init()'],['../class_shit_1_1_resource_manager.html#a1716946dffd7f7f6a9c8f46406ab0732',1,'Shit::ResourceManager::Init()'],['../class_shit_1_1_renderer.html#ae596c367662c7f3b19b6626b89ffc08b',1,'Shit::Renderer::Init()'],['../class_shit_1_1_window.html#ae596c367662c7f3b19b6626b89ffc08b',1,'Shit::Window::Init()'],['../class_shit_1_1_time.html#a1716946dffd7f7f6a9c8f46406ab0732',1,'Shit::Time::Init()'],['../class_shit_1_1_log.html#ae596c367662c7f3b19b6626b89ffc08b',1,'Shit::Log::Init()'],['../class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b',1,'Shit::Game::Init()'],['../class_shit_1_1_audio_player.html#ae596c367662c7f3b19b6626b89ffc08b',1,'Shit::AudioPlayer::Init()'],['../class_shit_1_1_system.html#a9339772ec5ac9fa929938109207f2863',1,'Shit::System::init()'],['../class_shit_1_1_scene.html#a9339772ec5ac9fa929938109207f2863',1,'Shit::Scene::init()'],['../class_shit_1_1_game.html#aee8048628ff2b5c026c9e15acdcaacb8',1,'Shit::Game::init()'],['../class_shit_1_1_config.html#aee8048628ff2b5c026c9e15acdcaacb8',1,'Shit::Config::init()']]],
+  ['input_3',['Input',['../class_shit_1_1_input.html',1,'Shit']]],
+  ['input_2eh_4',['Input.h',['../_input_8h.html',1,'']]],
+  ['insert_5',['Insert',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0daa458be0f08b7e4ff3c0f633c100176c0',1,'Shit']]],
+  ['instantiate_6',['instantiate',['../class_shit_1_1_scene.html#aacfe102452215e81fe047bfe6de8e4d0',1,'Shit::Scene']]],
+  ['isfinished_7',['isFinished',['../class_shit_1_1_audio_track.html#a489985f47db5f016d8ee9629140f1854',1,'Shit::AudioTrack']]],
+  ['isflipped_8',['isflipped',['../class_shit_1_1_sprite.html#af1579f186eb2eb6413a1a9c312a9f020',1,'Shit::Sprite::isFlipped()'],['../class_shit_1_1_sprite_renderer.html#af1579f186eb2eb6413a1a9c312a9f020',1,'Shit::SpriteRenderer::isFlipped()'],['../class_shit_1_1_u_i_image.html#af1579f186eb2eb6413a1a9c312a9f020',1,'Shit::UIImage::isFlipped()']]],
+  ['isinteractable_9',['isInteractable',['../class_shit_1_1_u_i_button.html#ab53a6879a1b1f59360eca8a98ed03b1f',1,'Shit::UIButton']]],
+  ['iskeydown_10',['iskeydown',['../class_shit_1_1_input.html#a093050f41930bae8c8c882fa2c0cef2a',1,'Shit::Input::IsKeyDown(const KeyCode code)'],['../class_shit_1_1_input.html#a64b0c57f68d9b5f2a17b2b2c5db5f8cd',1,'Shit::Input::isKeyDown(const KeyCode code)']]],
+  ['iskeypressed_11',['iskeypressed',['../class_shit_1_1_input.html#ab252507282f307b4176f37ba41db71d4',1,'Shit::Input::isKeyPressed(const KeyCode code)'],['../class_shit_1_1_input.html#a4218e82307996d899231669d6f41a3b9',1,'Shit::Input::IsKeyPressed(const KeyCode code)']]],
+  ['iskeyreleased_12',['iskeyreleased',['../class_shit_1_1_input.html#a5cfa354e655bf910f04bd751ce8a6829',1,'Shit::Input::IsKeyReleased(const KeyCode code)'],['../class_shit_1_1_input.html#abc5a9ef0828871364194d7008ee1ec41',1,'Shit::Input::isKeyReleased(const KeyCode code)']]],
+  ['islooping_13',['isLooping',['../class_shit_1_1_animation.html#a78155a2b0119ac92d377fa404e348a98',1,'Shit::Animation']]],
+  ['ismousebuttondown_14',['ismousebuttondown',['../class_shit_1_1_input.html#a5db434d2ece1a338c132167274fca2d8',1,'Shit::Input::IsMouseButtonDown(const MouseButton code)'],['../class_shit_1_1_input.html#a5c8715ddb384e6d179b4b7ff46236496',1,'Shit::Input::isMouseButtonDown(const MouseButton code)']]],
+  ['ismousebuttonpressed_15',['ismousebuttonpressed',['../class_shit_1_1_input.html#a38fccbadb69091e6a2d62003db20c164',1,'Shit::Input::isMouseButtonPressed(const MouseButton code)'],['../class_shit_1_1_input.html#aeec62dee2b23582b51ca21b66cce14d4',1,'Shit::Input::IsMouseButtonPressed(const MouseButton code)']]],
+  ['ismousebuttonreleased_16',['ismousebuttonreleased',['../class_shit_1_1_input.html#ac650944a5bf0c77c2303294851425028',1,'Shit::Input::IsMouseButtonReleased(const MouseButton code)'],['../class_shit_1_1_input.html#a97d5542ddc3fd3a89972a5265d61c21f',1,'Shit::Input::isMouseButtonReleased(const MouseButton code)']]],
+  ['isneeddestroy_17',['isNeedDestroy',['../class_shit_1_1_game_object.html#af9c9255af4b284a0b456483acbfe1b0e',1,'Shit::GameObject']]],
+  ['isopen_18',['IsOpen',['../class_shit_1_1_window.html#a9216f2c6587e4405c4f1821f3a35f69d',1,'Shit::Window']]],
+  ['ispaused_19',['ispaused',['../class_shit_1_1_audio_track.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AudioTrack::isPaused()'],['../class_shit_1_1_animation_component.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AnimationComponent::isPaused()']]],
+  ['isplaying_20',['isplaying',['../class_shit_1_1_audio_track.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AudioTrack::isPlaying()'],['../class_shit_1_1_animation_component.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AnimationComponent::isPlaying()']]],
+  ['isregistered_21',['isRegistered',['../class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246',1,'Shit::Component']]],
+  ['isrunning_22',['IsRunning',['../class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f',1,'Shit::Game']]],
+  ['isstarted_23',['isStarted',['../class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781',1,'Shit::Behavior']]],
+  ['isvisible_24',['isvisible',['../class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::RendererComponent::isVisible()'],['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent::isVisible()']]]
+];
