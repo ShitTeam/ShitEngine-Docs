@@ -1,0 +1,4 @@
+fix: 站内链接改为 /api/（VitePress public 目录）
+
+- 导航栏和侧边栏的 API 参考链接从外部站改为 /api/
+- 配合 docs.yml CI 将 API 文档推送到 docs/public/api/
