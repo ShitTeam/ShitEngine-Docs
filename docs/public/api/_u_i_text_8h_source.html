@@ -4,31 +4,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: include/ShitEngine/UI/UIText.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<!--BEGIN HTML_DYNAMIC_SECTIONS-->
-<script type="text/javascript" src="dynsections.js"></script>
-<!--END HTML_DYNAMIC_SECTIONS-->
-<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="codefolding.js"></script>
-<!--END HTML_CODE_FOLDING-->
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
 <!--BEGIN MATHJAX-->
 <!--END MATHJAX-->
 <!--BEGIN DARKMODE-->
 <!--END DARKMODE-->
 <!--BEGIN MERMAID-->
-$mermaidjs
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <!--END MERMAID-->
 <link href="custom.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
@@ -63,6 +65,7 @@ $mermaidjs
 </script>
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -74,34 +77,30 @@ $mermaidjs
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
     <div id="nav-tree-contents">
       <div id="nav-sync" class="sync"></div>
@@ -112,11 +111,24 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('_u_i_text_8h_source.html',''); initResizable(true); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_u_i_text_8h_source.html','',''); });
 </script>
-<div id="doc-content">
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -153,7 +165,7 @@ $(function(){initNavTree('_u_i_text_8h_source.html',''); initResizable(true); })
 <div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_text.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_function" href="class_shit_1_1_u_i_text.html#a2980048638fd8eddd32afd2e26e3a19c">UIText</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_shit_1_1_u_i_renderer_component.html#aa8115cc4430d4879d11ade1d62666ec1">UIRendererComponent</a> {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a4f1f6016fc9f3f2353c0cc7c67b292bd">   19</a></span>        <span class="keyword">enum class</span> <a class="code hl_enumeration" href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411">TextAnchor</a> { <a class="code hl_enumvalue" href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a945d5e233cf7d6240f6b783b36a374ff">Left</a>, <a class="code hl_enumvalue" href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a4f1f6016fc9f3f2353c0cc7c67b292bd">Center</a>, <a class="code hl_enumvalue" href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a92b09c7c48c520c3c55e497875da437c">Right</a> };</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a4f1f6016fc9f3f2353c0cc7c67b292bd">   19</a></span>        <span class="keyword">enum class</span> <a class="code hl_enumeration" href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411">TextAnchor</a> { <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0da945d5e233cf7d6240f6b783b36a374ff">Left</a>, Center, <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0da92b09c7c48c520c3c55e497875da437c">Right</a> };</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_text.html#a2980048638fd8eddd32afd2e26e3a19c">   21</a></span>        <a class="code hl_function" href="class_shit_1_1_u_i_text.html#a2980048638fd8eddd32afd2e26e3a19c">UIText</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shit_1_1_u_i_text.html#a13a2f499c95c8c83180db6d10b1faacb">   22</a></span>        <a class="code hl_function" href="class_shit_1_1_u_i_text.html#a13a2f499c95c8c83180db6d10b1faacb">UIText</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keyword">const</span> std::string&amp; fontPath, <span class="keywordtype">float</span> fontSize);</div>
@@ -206,9 +218,6 @@ $(function(){initNavTree('_u_i_text_8h_source.html',''); initResizable(true); })
 <div class="ttc" id="aclass_shit_1_1_u_i_text_html_a358226741faaee4a1bc2b83bc93b9291"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a358226741faaee4a1bc2b83bc93b9291">Shit::UIText::setAnchor</a></div><div class="ttdeci">void setAnchor(TextAnchor anchor)</div><div class="ttdef"><b>定义</b> UIText.h:42</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_html_a518eaa08866d5abe9e686d1ccf476eec"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a518eaa08866d5abe9e686d1ccf476eec">Shit::UIText::setColor</a></div><div class="ttdeci">void setColor(const Color &amp;color)</div><div class="ttdef"><b>定义</b> UIText.h:39</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_html_a6267fbee9150f6e40b576f0e29517411"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411">Shit::UIText::TextAnchor</a></div><div class="ttdeci">TextAnchor</div><div class="ttdef"><b>定义</b> UIText.h:19</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_text_html_a6267fbee9150f6e40b576f0e29517411a4f1f6016fc9f3f2353c0cc7c67b292bd"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a4f1f6016fc9f3f2353c0cc7c67b292bd">Shit::UIText::TextAnchor::Center</a></div><div class="ttdeci">@ Center</div><div class="ttdef"><b>定义</b> UIText.h:19</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_text_html_a6267fbee9150f6e40b576f0e29517411a92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a92b09c7c48c520c3c55e497875da437c">Shit::UIText::TextAnchor::Right</a></div><div class="ttdeci">@ Right</div><div class="ttdef"><b>定义</b> UIText.h:19</div></div>
-<div class="ttc" id="aclass_shit_1_1_u_i_text_html_a6267fbee9150f6e40b576f0e29517411a945d5e233cf7d6240f6b783b36a374ff"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a6267fbee9150f6e40b576f0e29517411a945d5e233cf7d6240f6b783b36a374ff">Shit::UIText::TextAnchor::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdef"><b>定义</b> UIText.h:19</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_html_a68d3ab9331c4b1086e0692b0288e89c0"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a68d3ab9331c4b1086e0692b0288e89c0">Shit::UIText::getFontPath</a></div><div class="ttdeci">const std::string &amp; getFontPath() const</div><div class="ttdef"><b>定义</b> UIText.h:32</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_html_a902009b3327ae6ee6314dc0a8cabf0b1"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a902009b3327ae6ee6314dc0a8cabf0b1">Shit::UIText::setFontPath</a></div><div class="ttdeci">void setFontPath(const std::string &amp;fontPath)</div><div class="ttdef"><b>定义</b> UIText.h:33</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_html_a9fd9d70ab49def64c539759ad6268b68"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#a9fd9d70ab49def64c539759ad6268b68">Shit::UIText::getAnchor</a></div><div class="ttdeci">TextAnchor getAnchor() const</div><div class="ttdef"><b>定义</b> UIText.h:41</div></div>
@@ -216,15 +225,18 @@ $(function(){initNavTree('_u_i_text_8h_source.html',''); initResizable(true); })
 <div class="ttc" id="aclass_shit_1_1_u_i_text_html_ac1ae51949d41ee9054634be5967d91b8"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#ac1ae51949d41ee9054634be5967d91b8">Shit::UIText::setText</a></div><div class="ttdeci">void setText(const std::string &amp;text)</div><div class="ttdef"><b>定义</b> UIText.h:30</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_html_aee7be93617a6078496df31830d454990"><div class="ttname"><a href="class_shit_1_1_u_i_text.html#aee7be93617a6078496df31830d454990">Shit::UIText::onDestroy</a></div><div class="ttdeci">void onDestroy() override</div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0da92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0da92b09c7c48c520c3c55e497875da437c">Shit::KeyCode::Right</a></div><div class="ttdeci">@ Right</div><div class="ttdef"><b>定义</b> KeyCode.h:97</div></div>
+<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0da945d5e233cf7d6240f6b783b36a374ff"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0da945d5e233cf7d6240f6b783b36a374ff">Shit::KeyCode::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdef"><b>定义</b> KeyCode.h:98</div></div>
 <div class="ttc" id="astruct_shit_1_1_color_html"><div class="ttname"><a href="struct_shit_1_1_color.html">Shit::Color</a></div><div class="ttdoc">RGBA 颜色（每通道 8 位）</div><div class="ttdef"><b>定义</b> Core.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- HTML footer for doxygen 1.17.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a class="el" href="dir_314d3b5bfda03e759c3ddc64f23ac135.html">UI</a></li><li class="navelem"><a class="el" href="_u_i_text_8h.html">UIText.h</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a href="dir_314d3b5bfda03e759c3ddc64f23ac135.html">UI</a></li><li class="navelem"><a href="_u_i_text_8h.html">UIText.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

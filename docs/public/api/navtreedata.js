@@ -66,5 +66,6 @@ var NAVTREEINDEX =
 "functions_c.html"
 ];
 
-var SYNCONMSG = '点击 关闭 面板同步';
-var SYNCOFFMSG = '点击 开启 面板同步';
+const SYNCONMSG = '点击 关闭 面板同步';
+const SYNCOFFMSG = '点击 开启 面板同步';
+const LISTOFALLMEMBERS = '所有成员列表';

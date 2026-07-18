@@ -6,7 +6,7 @@ var hierarchy =
     [ "AudioTrack", "class_shit_1_1_audio_track.html", null ],
     [ "AudioTrackGroup", "class_shit_1_1_audio_track_group.html", null ],
     [ "Color", "struct_shit_1_1_color.html", null ],
-    [ "ColorBlock", "struct_shit_1_1_u_i_button_1_1_color_block.html", null ],
+    [ "UIButton::ColorBlock", "struct_shit_1_1_u_i_button_1_1_color_block.html", null ],
     [ "Component", "class_shit_1_1_component.html", [
       [ "Behavior", "class_shit_1_1_behavior.html", [
         [ "AnimationComponent", "class_shit_1_1_animation_component.html", null ]

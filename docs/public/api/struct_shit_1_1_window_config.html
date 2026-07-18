@@ -4,31 +4,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: WindowConfig结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<!--BEGIN HTML_DYNAMIC_SECTIONS-->
-<script type="text/javascript" src="dynsections.js"></script>
-<!--END HTML_DYNAMIC_SECTIONS-->
-<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="codefolding.js"></script>
-<!--END HTML_CODE_FOLDING-->
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
 <!--BEGIN MATHJAX-->
 <!--END MATHJAX-->
 <!--BEGIN DARKMODE-->
 <!--END DARKMODE-->
 <!--BEGIN MERMAID-->
-$mermaidjs
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <!--END MERMAID-->
 <link href="custom.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
@@ -63,6 +65,7 @@ $mermaidjs
 </script>
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -74,34 +77,30 @@ $mermaidjs
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
     <div id="nav-tree-contents">
       <div id="nav-sync" class="sync"></div>
@@ -112,11 +111,24 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('struct_shit_1_1_window_config.html',''); initResizable(true); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_shit_1_1_window_config.html','','struct_shit_1_1_window_config-members'); });
 </script>
-<div id="doc-content">
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -139,9 +151,6 @@ $(function(){initNavTree('struct_shit_1_1_window_config.html',''); initResizable
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Public 属性</a> &#124;
-<a href="struct_shit_1_1_window_config-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">WindowConfig结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
@@ -151,24 +160,20 @@ $(function(){initNavTree('struct_shit_1_1_window_config.html',''); initResizable
 
 <p><code>#include &lt;<a class="el" href="_config_8h_source.html">Config.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:ac30fed21fe991cc8475ce543929f8b72" id="r_ac30fed21fe991cc8475ce543929f8b72"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac30fed21fe991cc8475ce543929f8b72">title</a> = &quot;Example&quot;</td></tr>
+<tr class="memitem:ac30fed21fe991cc8475ce543929f8b72" id="r_ac30fed21fe991cc8475ce543929f8b72"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ac30fed21fe991cc8475ce543929f8b72">title</a> = &quot;Example&quot;</td></tr>
 <tr class="memdesc:ac30fed21fe991cc8475ce543929f8b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">窗口标题  <br /></td></tr>
-<tr class="separator:ac30fed21fe991cc8475ce543929f8b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca34d28e3d8bcbcadb8edb4e3af24f8c" id="r_aca34d28e3d8bcbcadb8edb4e3af24f8c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a> = 1280</td></tr>
+<tr class="memitem:aca34d28e3d8bcbcadb8edb4e3af24f8c" id="r_aca34d28e3d8bcbcadb8edb4e3af24f8c"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a> = 1280</td></tr>
 <tr class="memdesc:aca34d28e3d8bcbcadb8edb4e3af24f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">逻辑分辨率宽度  <br /></td></tr>
-<tr class="separator:aca34d28e3d8bcbcadb8edb4e3af24f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2e78c61905b4419fcc7b4cfc500fe85" id="r_ab2e78c61905b4419fcc7b4cfc500fe85"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2e78c61905b4419fcc7b4cfc500fe85">height</a> = 720</td></tr>
+<tr class="memitem:ab2e78c61905b4419fcc7b4cfc500fe85" id="r_ab2e78c61905b4419fcc7b4cfc500fe85"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#ab2e78c61905b4419fcc7b4cfc500fe85">height</a> = 720</td></tr>
 <tr class="memdesc:ab2e78c61905b4419fcc7b4cfc500fe85"><td class="mdescLeft">&#160;</td><td class="mdescRight">逻辑分辨率高度  <br /></td></tr>
-<tr class="separator:ab2e78c61905b4419fcc7b4cfc500fe85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8705191cbc0ffb20367a9ef2ba000194" id="r_a8705191cbc0ffb20367a9ef2ba000194"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8705191cbc0ffb20367a9ef2ba000194">targetFPS</a> = 144</td></tr>
+<tr class="memitem:a8705191cbc0ffb20367a9ef2ba000194" id="r_a8705191cbc0ffb20367a9ef2ba000194"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a8705191cbc0ffb20367a9ef2ba000194">targetFPS</a> = 144</td></tr>
 <tr class="memdesc:a8705191cbc0ffb20367a9ef2ba000194"><td class="mdescLeft">&#160;</td><td class="mdescRight">帧率上限  <br /></td></tr>
-<tr class="separator:a8705191cbc0ffb20367a9ef2ba000194"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>窗口配置 </p>
-</div><h2 class="groupheader">类成员变量说明</h2>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
 <a id="ab2e78c61905b4419fcc7b4cfc500fe85" name="ab2e78c61905b4419fcc7b4cfc500fe85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2e78c61905b4419fcc7b4cfc500fe85">&#9670;&#160;</a></span>height</h2>
 
@@ -238,12 +243,20 @@ Public 属性</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- HTML footer for doxygen 1.17.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="struct_shit_1_1_window_config.html">WindowConfig</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="struct_shit_1_1_window_config.html">WindowConfig</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

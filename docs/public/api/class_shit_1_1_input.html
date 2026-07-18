@@ -4,31 +4,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: Input类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<!--BEGIN HTML_DYNAMIC_SECTIONS-->
-<script type="text/javascript" src="dynsections.js"></script>
-<!--END HTML_DYNAMIC_SECTIONS-->
-<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="codefolding.js"></script>
-<!--END HTML_CODE_FOLDING-->
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
 <!--BEGIN MATHJAX-->
 <!--END MATHJAX-->
 <!--BEGIN DARKMODE-->
 <!--END DARKMODE-->
 <!--BEGIN MERMAID-->
-$mermaidjs
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <!--END MERMAID-->
 <link href="custom.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
@@ -63,6 +65,7 @@ $mermaidjs
 </script>
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -74,34 +77,30 @@ $mermaidjs
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
     <div id="nav-tree-contents">
       <div id="nav-sync" class="sync"></div>
@@ -112,11 +111,24 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_shit_1_1_input.html',''); initResizable(true); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_input.html','','class_shit_1_1_input-members'); });
 </script>
-<div id="doc-content">
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -139,10 +151,6 @@ $(function(){initNavTree('class_shit_1_1_input.html',''); initResizable(true); }
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="class_shit_1_1_input-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">Input类 参考</div></div>
 </div><!--header-->
 <div class="contents">
@@ -152,64 +160,45 @@ $(function(){initNavTree('class_shit_1_1_input.html',''); initResizable(true); }
 
 <p><code>#include &lt;<a class="el" href="_input_8h_source.html">Input.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a64b0c57f68d9b5f2a17b2b2c5db5f8cd" id="r_a64b0c57f68d9b5f2a17b2b2c5db5f8cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b0c57f68d9b5f2a17b2b2c5db5f8cd">isKeyDown</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
+<tr class="memitem:a64b0c57f68d9b5f2a17b2b2c5db5f8cd" id="r_a64b0c57f68d9b5f2a17b2b2c5db5f8cd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a64b0c57f68d9b5f2a17b2b2c5db5f8cd">isKeyDown</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
 <tr class="memdesc:a64b0c57f68d9b5f2a17b2b2c5db5f8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">按键刚按下（仅一帧为 true）  <br /></td></tr>
-<tr class="separator:a64b0c57f68d9b5f2a17b2b2c5db5f8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab252507282f307b4176f37ba41db71d4" id="r_ab252507282f307b4176f37ba41db71d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab252507282f307b4176f37ba41db71d4">isKeyPressed</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
+<tr class="memitem:ab252507282f307b4176f37ba41db71d4" id="r_ab252507282f307b4176f37ba41db71d4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab252507282f307b4176f37ba41db71d4">isKeyPressed</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
 <tr class="memdesc:ab252507282f307b4176f37ba41db71d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">按键被持续按住  <br /></td></tr>
-<tr class="separator:ab252507282f307b4176f37ba41db71d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc5a9ef0828871364194d7008ee1ec41" id="r_abc5a9ef0828871364194d7008ee1ec41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc5a9ef0828871364194d7008ee1ec41">isKeyReleased</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
+<tr class="memitem:abc5a9ef0828871364194d7008ee1ec41" id="r_abc5a9ef0828871364194d7008ee1ec41"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abc5a9ef0828871364194d7008ee1ec41">isKeyReleased</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
 <tr class="memdesc:abc5a9ef0828871364194d7008ee1ec41"><td class="mdescLeft">&#160;</td><td class="mdescRight">按键刚松开  <br /></td></tr>
-<tr class="separator:abc5a9ef0828871364194d7008ee1ec41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c8715ddb384e6d179b4b7ff46236496" id="r_a5c8715ddb384e6d179b4b7ff46236496"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c8715ddb384e6d179b4b7ff46236496">isMouseButtonDown</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
+<tr class="memitem:a5c8715ddb384e6d179b4b7ff46236496" id="r_a5c8715ddb384e6d179b4b7ff46236496"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5c8715ddb384e6d179b4b7ff46236496">isMouseButtonDown</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
 <tr class="memdesc:a5c8715ddb384e6d179b4b7ff46236496"><td class="mdescLeft">&#160;</td><td class="mdescRight">鼠标按键刚按下  <br /></td></tr>
-<tr class="separator:a5c8715ddb384e6d179b4b7ff46236496"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38fccbadb69091e6a2d62003db20c164" id="r_a38fccbadb69091e6a2d62003db20c164"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38fccbadb69091e6a2d62003db20c164">isMouseButtonPressed</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
+<tr class="memitem:a38fccbadb69091e6a2d62003db20c164" id="r_a38fccbadb69091e6a2d62003db20c164"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a38fccbadb69091e6a2d62003db20c164">isMouseButtonPressed</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
 <tr class="memdesc:a38fccbadb69091e6a2d62003db20c164"><td class="mdescLeft">&#160;</td><td class="mdescRight">鼠标按键持续按住  <br /></td></tr>
-<tr class="separator:a38fccbadb69091e6a2d62003db20c164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97d5542ddc3fd3a89972a5265d61c21f" id="r_a97d5542ddc3fd3a89972a5265d61c21f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97d5542ddc3fd3a89972a5265d61c21f">isMouseButtonReleased</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
+<tr class="memitem:a97d5542ddc3fd3a89972a5265d61c21f" id="r_a97d5542ddc3fd3a89972a5265d61c21f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a97d5542ddc3fd3a89972a5265d61c21f">isMouseButtonReleased</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
 <tr class="memdesc:a97d5542ddc3fd3a89972a5265d61c21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">鼠标按键刚松开  <br /></td></tr>
-<tr class="separator:a97d5542ddc3fd3a89972a5265d61c21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfbd398e0ffbf567f47ab2cdd424c4bf" id="r_adfbd398e0ffbf567f47ab2cdd424c4bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfbd398e0ffbf567f47ab2cdd424c4bf">getMousePosition</a> ()</td></tr>
+<tr class="memitem:adfbd398e0ffbf567f47ab2cdd424c4bf" id="r_adfbd398e0ffbf567f47ab2cdd424c4bf"><td class="memItemLeft"><a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&#160;</td><td class="memItemRight"><a class="el" href="#adfbd398e0ffbf567f47ab2cdd424c4bf">getMousePosition</a> ()</td></tr>
 <tr class="memdesc:adfbd398e0ffbf567f47ab2cdd424c4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">鼠标当前位置  <br /></td></tr>
-<tr class="separator:adfbd398e0ffbf567f47ab2cdd424c4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725" id="r_ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
+<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725" id="r_ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
 <tr class="memdesc:ac5c54df7ed3b930268c8d7752c101725"><td class="mdescLeft">&#160;</td><td class="mdescRight">帧末更新，把当前帧状态移入上一帧  <br /></td></tr>
-<tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5293921cbd2f72d61bf1098cba9c87c" id="r_ac5293921cbd2f72d61bf1098cba9c87c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5293921cbd2f72d61bf1098cba9c87c">handleEvent</a> (const SDL_Event &amp;event)</td></tr>
+<tr class="memitem:ac5293921cbd2f72d61bf1098cba9c87c" id="r_ac5293921cbd2f72d61bf1098cba9c87c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac5293921cbd2f72d61bf1098cba9c87c">handleEvent</a> (const SDL_Event &amp;event)</td></tr>
 <tr class="memdesc:ac5293921cbd2f72d61bf1098cba9c87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理 SDL 输入事件  <br /></td></tr>
-<tr class="separator:ac5293921cbd2f72d61bf1098cba9c87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a29ccf3bca672c084ffb606a91a1f4a93" id="r_a29ccf3bca672c084ffb606a91a1f4a93"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_shit_1_1_input.html">Input</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29ccf3bca672c084ffb606a91a1f4a93">GetInstance</a> ()</td></tr>
-<tr class="separator:a29ccf3bca672c084ffb606a91a1f4a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a093050f41930bae8c8c882fa2c0cef2a" id="r_a093050f41930bae8c8c882fa2c0cef2a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a093050f41930bae8c8c882fa2c0cef2a">IsKeyDown</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
-<tr class="separator:a093050f41930bae8c8c882fa2c0cef2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4218e82307996d899231669d6f41a3b9" id="r_a4218e82307996d899231669d6f41a3b9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4218e82307996d899231669d6f41a3b9">IsKeyPressed</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
-<tr class="separator:a4218e82307996d899231669d6f41a3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cfa354e655bf910f04bd751ce8a6829" id="r_a5cfa354e655bf910f04bd751ce8a6829"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cfa354e655bf910f04bd751ce8a6829">IsKeyReleased</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
-<tr class="separator:a5cfa354e655bf910f04bd751ce8a6829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5db434d2ece1a338c132167274fca2d8" id="r_a5db434d2ece1a338c132167274fca2d8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5db434d2ece1a338c132167274fca2d8">IsMouseButtonDown</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
-<tr class="separator:a5db434d2ece1a338c132167274fca2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeec62dee2b23582b51ca21b66cce14d4" id="r_aeec62dee2b23582b51ca21b66cce14d4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeec62dee2b23582b51ca21b66cce14d4">IsMouseButtonPressed</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
-<tr class="separator:aeec62dee2b23582b51ca21b66cce14d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac650944a5bf0c77c2303294851425028" id="r_ac650944a5bf0c77c2303294851425028"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac650944a5bf0c77c2303294851425028">IsMouseButtonReleased</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
-<tr class="separator:ac650944a5bf0c77c2303294851425028"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef5d8fcadcba402ea54a6a655a400dae" id="r_aef5d8fcadcba402ea54a6a655a400dae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef5d8fcadcba402ea54a6a655a400dae">HandleEvent</a> (const SDL_Event &amp;event)</td></tr>
-<tr class="separator:aef5d8fcadcba402ea54a6a655a400dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a554d0f30ae93d2787435dca9a46c6c5d" id="r_a554d0f30ae93d2787435dca9a46c6c5d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a554d0f30ae93d2787435dca9a46c6c5d">Update</a> ()</td></tr>
-<tr class="separator:a554d0f30ae93d2787435dca9a46c6c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac00b45c4f900b83fb737520008e23e4f" id="r_ac00b45c4f900b83fb737520008e23e4f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac00b45c4f900b83fb737520008e23e4f">GetMousePosition</a> ()</td></tr>
-<tr class="separator:ac00b45c4f900b83fb737520008e23e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ccf3bca672c084ffb606a91a1f4a93" id="r_a29ccf3bca672c084ffb606a91a1f4a93"><td class="memItemLeft">static Input &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a29ccf3bca672c084ffb606a91a1f4a93">GetInstance</a> ()</td></tr>
+<tr class="memitem:a093050f41930bae8c8c882fa2c0cef2a" id="r_a093050f41930bae8c8c882fa2c0cef2a"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a093050f41930bae8c8c882fa2c0cef2a">IsKeyDown</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
+<tr class="memitem:a4218e82307996d899231669d6f41a3b9" id="r_a4218e82307996d899231669d6f41a3b9"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a4218e82307996d899231669d6f41a3b9">IsKeyPressed</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
+<tr class="memitem:a5cfa354e655bf910f04bd751ce8a6829" id="r_a5cfa354e655bf910f04bd751ce8a6829"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a5cfa354e655bf910f04bd751ce8a6829">IsKeyReleased</a> (const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> code)</td></tr>
+<tr class="memitem:a5db434d2ece1a338c132167274fca2d8" id="r_a5db434d2ece1a338c132167274fca2d8"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a5db434d2ece1a338c132167274fca2d8">IsMouseButtonDown</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
+<tr class="memitem:aeec62dee2b23582b51ca21b66cce14d4" id="r_aeec62dee2b23582b51ca21b66cce14d4"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#aeec62dee2b23582b51ca21b66cce14d4">IsMouseButtonPressed</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
+<tr class="memitem:ac650944a5bf0c77c2303294851425028" id="r_ac650944a5bf0c77c2303294851425028"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ac650944a5bf0c77c2303294851425028">IsMouseButtonReleased</a> (const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a> code)</td></tr>
+<tr class="memitem:aef5d8fcadcba402ea54a6a655a400dae" id="r_aef5d8fcadcba402ea54a6a655a400dae"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aef5d8fcadcba402ea54a6a655a400dae">HandleEvent</a> (const SDL_Event &amp;event)</td></tr>
+<tr class="memitem:a554d0f30ae93d2787435dca9a46c6c5d" id="r_a554d0f30ae93d2787435dca9a46c6c5d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a554d0f30ae93d2787435dca9a46c6c5d">Update</a> ()</td></tr>
+<tr class="memitem:ac00b45c4f900b83fb737520008e23e4f" id="r_ac00b45c4f900b83fb737520008e23e4f"><td class="memItemLeft">static <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac00b45c4f900b83fb737520008e23e4f">GetMousePosition</a> ()</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>输入管理类（单例） </p>
 <p>提供键盘鼠标的三态检测（Down / Pressed / Released）和鼠标位置查询。 所有 API 均为静态方法。</p>
 <p>命名提醒： IsKeyDown = 刚按下（瞬间） IsKeyPressed = 持续按住（每帧 true 直至松开） IsKeyReleased= 松开（瞬间） </p>
-</div><h2 class="groupheader">成员函数说明</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
 <a id="a29ccf3bca672c084ffb606a91a1f4a93" name="a29ccf3bca672c084ffb606a91a1f4a93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29ccf3bca672c084ffb606a91a1f4a93">&#9670;&#160;</a></span>GetInstance()</h2>
 
@@ -220,7 +209,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_shit_1_1_input.html">Input</a> &amp; GetInstance </td>
+          <td class="memname">Input &amp; GetInstance </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -245,7 +234,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> GetMousePosition </td>
+          <td class="memname"><a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> GetMousePosition </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -289,7 +278,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void HandleEvent </td>
+          <td class="memname">void HandleEvent </td>
           <td>(</td>
           <td class="paramtype">const SDL_Event &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
           <td></td>
@@ -333,7 +322,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool IsKeyDown </td>
+          <td class="memname">bool IsKeyDown </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
           <td></td>
@@ -377,7 +366,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool IsKeyPressed </td>
+          <td class="memname">bool IsKeyPressed </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
           <td></td>
@@ -421,7 +410,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool IsKeyReleased </td>
+          <td class="memname">bool IsKeyReleased </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
           <td></td>
@@ -465,7 +454,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool IsMouseButtonDown </td>
+          <td class="memname">bool IsMouseButtonDown </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
           <td></td>
@@ -509,7 +498,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool IsMouseButtonPressed </td>
+          <td class="memname">bool IsMouseButtonPressed </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
           <td></td>
@@ -553,7 +542,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool IsMouseButtonReleased </td>
+          <td class="memname">bool IsMouseButtonReleased </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">MouseButton</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
           <td></td>
@@ -597,7 +586,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Update </td>
+          <td class="memname">void Update </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -636,12 +625,20 @@ Public 成员函数</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- HTML footer for doxygen 1.17.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_input.html">Input</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_input.html">Input</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

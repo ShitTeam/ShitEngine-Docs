@@ -4,31 +4,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: Log类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<!--BEGIN HTML_DYNAMIC_SECTIONS-->
-<script type="text/javascript" src="dynsections.js"></script>
-<!--END HTML_DYNAMIC_SECTIONS-->
-<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="codefolding.js"></script>
-<!--END HTML_CODE_FOLDING-->
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
 <!--BEGIN MATHJAX-->
 <!--END MATHJAX-->
 <!--BEGIN DARKMODE-->
 <!--END DARKMODE-->
 <!--BEGIN MERMAID-->
-$mermaidjs
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <!--END MERMAID-->
 <link href="custom.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
@@ -63,6 +65,7 @@ $mermaidjs
 </script>
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -74,34 +77,30 @@ $mermaidjs
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
     <div id="nav-tree-contents">
       <div id="nav-sync" class="sync"></div>
@@ -112,11 +111,24 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_shit_1_1_log.html',''); initResizable(true); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_log.html','','class_shit_1_1_log-members'); });
 </script>
-<div id="doc-content">
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -139,9 +151,6 @@ $(function(){initNavTree('class_shit_1_1_log.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="class_shit_1_1_log-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">Log类 参考</div></div>
 </div><!--header-->
 <div class="contents">
@@ -151,36 +160,27 @@ $(function(){initNavTree('class_shit_1_1_log.html',''); initResizable(true); });
 
 <p><code>#include &lt;<a class="el" href="_log_8h_source.html">Log.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:ae596c367662c7f3b19b6626b89ffc08b" id="r_ae596c367662c7f3b19b6626b89ffc08b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae596c367662c7f3b19b6626b89ffc08b">Init</a> ()</td></tr>
-<tr class="separator:ae596c367662c7f3b19b6626b89ffc08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae596c367662c7f3b19b6626b89ffc08b" id="r_ae596c367662c7f3b19b6626b89ffc08b"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ae596c367662c7f3b19b6626b89ffc08b">Init</a> ()</td></tr>
 <tr class="memitem:a24db4d83b8dddf7b919548e19a2a912a" id="r_a24db4d83b8dddf7b919548e19a2a912a"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a24db4d83b8dddf7b919548e19a2a912a"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a24db4d83b8dddf7b919548e19a2a912a">Trace</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
-<tr class="separator:a24db4d83b8dddf7b919548e19a2a912a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24db4d83b8dddf7b919548e19a2a912a template"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a24db4d83b8dddf7b919548e19a2a912a">Trace</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memitem:a2a6e532e31b365cddf9aea61d33608c7" id="r_a2a6e532e31b365cddf9aea61d33608c7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a2a6e532e31b365cddf9aea61d33608c7"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2a6e532e31b365cddf9aea61d33608c7">Debug</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
-<tr class="separator:a2a6e532e31b365cddf9aea61d33608c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6e532e31b365cddf9aea61d33608c7 template"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2a6e532e31b365cddf9aea61d33608c7">Debug</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memitem:acf6dbc55a4e25bb21b715e55fad247b2" id="r_acf6dbc55a4e25bb21b715e55fad247b2"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:acf6dbc55a4e25bb21b715e55fad247b2"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acf6dbc55a4e25bb21b715e55fad247b2">Info</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
-<tr class="separator:acf6dbc55a4e25bb21b715e55fad247b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6dbc55a4e25bb21b715e55fad247b2 template"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#acf6dbc55a4e25bb21b715e55fad247b2">Info</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memitem:a4528dd1a9ea25fb4b3ef47b77de0122b" id="r_a4528dd1a9ea25fb4b3ef47b77de0122b"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a4528dd1a9ea25fb4b3ef47b77de0122b"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4528dd1a9ea25fb4b3ef47b77de0122b">Warn</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
-<tr class="separator:a4528dd1a9ea25fb4b3ef47b77de0122b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4528dd1a9ea25fb4b3ef47b77de0122b template"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4528dd1a9ea25fb4b3ef47b77de0122b">Warn</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memitem:a38d349d74eb6ca356a7a9e5b29b0bdc8" id="r_a38d349d74eb6ca356a7a9e5b29b0bdc8"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a38d349d74eb6ca356a7a9e5b29b0bdc8"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a38d349d74eb6ca356a7a9e5b29b0bdc8">Error</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
-<tr class="separator:a38d349d74eb6ca356a7a9e5b29b0bdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d349d74eb6ca356a7a9e5b29b0bdc8 template"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a38d349d74eb6ca356a7a9e5b29b0bdc8">Error</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memitem:af1b37d13d7b417be80c6280d5f5240e8" id="r_af1b37d13d7b417be80c6280d5f5240e8"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:af1b37d13d7b417be80c6280d5f5240e8"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af1b37d13d7b417be80c6280d5f5240e8">Critical</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
-<tr class="separator:af1b37d13d7b417be80c6280d5f5240e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ebea9df52ba5c8e0d2b43e0c445a7fb" id="r_a0ebea9df52ba5c8e0d2b43e0c445a7fb"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; spdlog::logger &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ebea9df52ba5c8e0d2b43e0c445a7fb">GetCoreLogger</a> ()</td></tr>
-<tr class="separator:a0ebea9df52ba5c8e0d2b43e0c445a7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a605bee20f22c9abb0f919d9f6e696a79" id="r_a605bee20f22c9abb0f919d9f6e696a79"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; spdlog::logger &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a605bee20f22c9abb0f919d9f6e696a79">GetClientLogger</a> ()</td></tr>
-<tr class="separator:a605bee20f22c9abb0f919d9f6e696a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b37d13d7b417be80c6280d5f5240e8 template"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#af1b37d13d7b417be80c6280d5f5240e8">Critical</a> (fmt::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a0ebea9df52ba5c8e0d2b43e0c445a7fb" id="r_a0ebea9df52ba5c8e0d2b43e0c445a7fb"><td class="memItemLeft">static std::shared_ptr&lt; spdlog::logger &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0ebea9df52ba5c8e0d2b43e0c445a7fb">GetCoreLogger</a> ()</td></tr>
+<tr class="memitem:a605bee20f22c9abb0f919d9f6e696a79" id="r_a605bee20f22c9abb0f919d9f6e696a79"><td class="memItemLeft">static std::shared_ptr&lt; spdlog::logger &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a605bee20f22c9abb0f919d9f6e696a79">GetClientLogger</a> ()</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>日志封装类 </p>
-</div><h2 class="groupheader">成员函数说明</h2>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
 <a id="af1b37d13d7b417be80c6280d5f5240e8" name="af1b37d13d7b417be80c6280d5f5240e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1b37d13d7b417be80c6280d5f5240e8">&#9670;&#160;</a></span>Critical()</h2>
 
@@ -193,7 +193,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Critical </td>
+          <td class="memname">void Critical </td>
           <td>(</td>
           <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
         </tr>
@@ -224,7 +224,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Debug </td>
+          <td class="memname">void Debug </td>
           <td>(</td>
           <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
         </tr>
@@ -255,7 +255,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Error </td>
+          <td class="memname">void Error </td>
           <td>(</td>
           <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
         </tr>
@@ -284,7 +284,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetClientLogger </td>
+          <td class="memname">std::shared_ptr&lt; spdlog::logger &gt; &amp; GetClientLogger </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -309,7 +309,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetCoreLogger </td>
+          <td class="memname">std::shared_ptr&lt; spdlog::logger &gt; &amp; GetCoreLogger </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -336,7 +336,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Info </td>
+          <td class="memname">void Info </td>
           <td>(</td>
           <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
         </tr>
@@ -365,7 +365,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool Init </td>
+          <td class="memname">bool Init </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -392,7 +392,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Trace </td>
+          <td class="memname">void Trace </td>
           <td>(</td>
           <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
         </tr>
@@ -423,7 +423,7 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Warn </td>
+          <td class="memname">void Warn </td>
           <td>(</td>
           <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
         </tr>
@@ -447,12 +447,20 @@ template&lt;typename... Args&gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- HTML footer for doxygen 1.17.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_log.html">Log</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_log.html">Log</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

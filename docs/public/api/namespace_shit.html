@@ -4,31 +4,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: Shit 命名空间参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<!--BEGIN HTML_DYNAMIC_SECTIONS-->
-<script type="text/javascript" src="dynsections.js"></script>
-<!--END HTML_DYNAMIC_SECTIONS-->
-<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="codefolding.js"></script>
-<!--END HTML_CODE_FOLDING-->
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
 <!--BEGIN MATHJAX-->
 <!--END MATHJAX-->
 <!--BEGIN DARKMODE-->
 <!--END DARKMODE-->
 <!--BEGIN MERMAID-->
-$mermaidjs
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <!--END MERMAID-->
 <link href="custom.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
@@ -63,6 +65,7 @@ $mermaidjs
 </script>
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -74,34 +77,30 @@ $mermaidjs
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
     <div id="nav-tree-contents">
       <div id="nav-sync" class="sync"></div>
@@ -112,11 +111,24 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('namespace_shit.html',''); initResizable(true); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit.html','',''); });
 </script>
-<div id="doc-content">
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -139,151 +151,102 @@ $(function(){initNavTree('namespace_shit.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">类</a> &#124;
-<a href="#typedef-members">类型定义</a> &#124;
-<a href="#enum-members">枚举</a>  </div>
   <div class="headertitle"><div class="title">Shit 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_animation.html">Animation</a></td></tr>
+<tr class="memitem:Animation" id="r_Animation"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_animation.html">Animation</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">逐帧动画数据  <a href="class_shit_1_1_animation.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_animation_component.html">AnimationComponent</a></td></tr>
+<tr class="memitem:AnimationComponent" id="r_AnimationComponent"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_animation_component.html">AnimationComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">动画组件  <a href="class_shit_1_1_animation_component.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_audio_manager.html">AudioManager</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_audio_player.html">AudioPlayer</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_audio_track.html">AudioTrack</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a></td></tr>
+<tr class="memitem:AudioManager" id="r_AudioManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_audio_manager.html">AudioManager</a></td></tr>
+<tr class="memitem:AudioPlayer" id="r_AudioPlayer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_audio_player.html">AudioPlayer</a></td></tr>
+<tr class="memitem:AudioTrack" id="r_AudioTrack"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_audio_track.html">AudioTrack</a></td></tr>
+<tr class="memitem:AudioTrackGroup" id="r_AudioTrackGroup"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a></td></tr>
+<tr class="memitem:Behavior" id="r_Behavior"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html">Behavior</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">行为基类 —— 用于编写自定义游戏逻辑  <a href="class_shit_1_1_behavior.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_behavior_system.html">BehaviorSystem</a></td></tr>
+<tr class="memitem:BehaviorSystem" id="r_BehaviorSystem"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior_system.html">BehaviorSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑">Behavior</a> 驱动系统  <a href="class_shit_1_1_behavior_system.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_camera_component.html">CameraComponent</a></td></tr>
+<tr class="memitem:CameraComponent" id="r_CameraComponent"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_camera_component.html">CameraComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机组件，定义"从哪个角度观察世界"  <a href="class_shit_1_1_camera_component.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_shit_1_1_color.html">Color</a></td></tr>
+<tr class="memitem:Color" id="r_Color"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_shit_1_1_color.html">Color</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBA 颜色（每通道 8 位）  <a href="struct_shit_1_1_color.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:Component" id="r_Component"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件基类  <a href="class_shit_1_1_component.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_config.html">Config</a></td></tr>
+<tr class="memitem:Config" id="r_Config"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_config.html">Config</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置管理类  <a href="class_shit_1_1_config.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_shit_1_1_event.html">Event</a></td></tr>
+<tr class="memitem:Event" id="r_Event"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_shit_1_1_event.html">Event</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件基类，所有自定义事件须继承此结构体  <a href="struct_shit_1_1_event.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_event_bus.html">EventBus</a></td></tr>
+<tr class="memitem:EventBus" id="r_EventBus"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_event_bus.html">EventBus</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件总线，缓冲队列模式  <a href="class_shit_1_1_event_bus.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_font_manager.html">FontManager</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game.html">Game</a></td></tr>
+<tr class="memitem:FontManager" id="r_FontManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_font_manager.html">FontManager</a></td></tr>
+<tr class="memitem:Game" id="r_Game"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_game.html">Game</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">引擎主控类  <a href="class_shit_1_1_game.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a></td></tr>
+<tr class="memitem:GameObject" id="r_GameObject"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">游戏物体类  <a href="class_shit_1_1_game_object.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_input.html">Input</a></td></tr>
+<tr class="memitem:Input" id="r_Input"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_input.html">Input</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">输入管理类（单例）  <a href="class_shit_1_1_input.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_log.html">Log</a></td></tr>
+<tr class="memitem:Log" id="r_Log"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_log.html">Log</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志封装类  <a href="class_shit_1_1_log.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_prefab.html">Prefab</a></td></tr>
+<tr class="memitem:Prefab" id="r_Prefab"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_prefab.html">Prefab</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">预制体，可重复生成相同配置的 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a>  <a href="class_shit_1_1_prefab.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_shit_1_1_project_config.html">ProjectConfig</a></td></tr>
+<tr class="memitem:ProjectConfig" id="r_ProjectConfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_shit_1_1_project_config.html">ProjectConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">项目配置  <a href="struct_shit_1_1_project_config.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_renderer.html">Renderer</a></td></tr>
+<tr class="memitem:Renderer" id="r_Renderer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer.html">Renderer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染器，封装 SDL3 绘制 API  <a href="class_shit_1_1_renderer.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_renderer_component.html">RendererComponent</a></td></tr>
+<tr class="memitem:RendererComponent" id="r_RendererComponent"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html">RendererComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染组件基类  <a href="class_shit_1_1_renderer_component.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_render_system.html">RenderSystem</a></td></tr>
+<tr class="memitem:RenderSystem" id="r_RenderSystem"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_render_system.html">RenderSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染系统  <a href="class_shit_1_1_render_system.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_resource_manager.html">ResourceManager</a></td></tr>
+<tr class="memitem:ResourceManager" id="r_ResourceManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_resource_manager.html">ResourceManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">资源管理器（单例）  <a href="class_shit_1_1_resource_manager.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene.html">Scene</a></td></tr>
+<tr class="memitem:Scene" id="r_Scene"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_scene.html">Scene</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">场景类  <a href="class_shit_1_1_scene.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a></td></tr>
+<tr class="memitem:SceneManager" id="r_SceneManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">场景管理器（单例）  <a href="class_shit_1_1_scene_manager.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite.html">Sprite</a></td></tr>
+<tr class="memitem:Sprite" id="r_Sprite"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_sprite.html">Sprite</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">精灵数据，描述"画什么"  <a href="class_shit_1_1_sprite.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_renderer.html">SpriteRenderer</a></td></tr>
+<tr class="memitem:SpriteRenderer" id="r_SpriteRenderer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_sprite_renderer.html">SpriteRenderer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">精灵组件  <a href="class_shit_1_1_sprite_renderer.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a></td></tr>
+<tr class="memitem:SpriteSheet" id="r_SpriteSheet"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">精灵图集（sprite-sheet）网格切割器  <a href="class_shit_1_1_sprite_sheet.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
+<tr class="memitem:System" id="r_System"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_shit_1_1_system.html" title="System 基类">System</a> 基类  <a href="class_shit_1_1_system.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_texture_manager.html">TextureManager</a></td></tr>
+<tr class="memitem:TextureManager" id="r_TextureManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_texture_manager.html">TextureManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">纹理管理器  <a href="class_shit_1_1_texture_manager.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_time.html">Time</a></td></tr>
+<tr class="memitem:Time" id="r_Time"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_time.html">Time</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间管理类  <a href="class_shit_1_1_time.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_transform_component.html">TransformComponent</a></td></tr>
+<tr class="memitem:TransformComponent" id="r_TransformComponent"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_transform_component.html">TransformComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">变换组件，决定 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 的位置 / 缩放 / 旋转  <a href="class_shit_1_1_transform_component.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_button.html">UIButton</a></td></tr>
+<tr class="memitem:UIButton" id="r_UIButton"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_button.html">UIButton</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI 按钮控件，基于鼠标 Raycasting 触发交互  <a href="class_shit_1_1_u_i_button.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a></td></tr>
+<tr class="memitem:UICanvas" id="r_UICanvas"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI 层级根节点  <a href="class_shit_1_1_u_i_canvas.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_image.html">UIImage</a></td></tr>
+<tr class="memitem:UIImage" id="r_UIImage"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_image.html">UIImage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI 图片控件，在屏幕空间绘制一张精灵  <a href="class_shit_1_1_u_i_image.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:UIRendererComponent" id="r_UIRendererComponent"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI 渲染控件基类（对应游戏世界的 RendererComponent）  <a href="class_shit_1_1_u_i_renderer_component.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_render_system.html">UIRenderSystem</a></td></tr>
+<tr class="memitem:UIRenderSystem" id="r_UIRenderSystem"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_render_system.html">UIRenderSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI 渲染系统  <a href="class_shit_1_1_u_i_render_system.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_text.html">UIText</a></td></tr>
+<tr class="memitem:UIText" id="r_UIText"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text.html">UIText</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI 文字控件，使用 SDL_ttf 渲染文字到纹理  <a href="class_shit_1_1_u_i_text.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_transform.html">UITransform</a></td></tr>
+<tr class="memitem:UITransform" id="r_UITransform"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_transform.html">UITransform</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI 专用变换组件（参考 Unity RectTransform，但不引入 Canvas Scaler）  <a href="class_shit_1_1_u_i_transform.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_window.html">Window</a></td></tr>
+<tr class="memitem:Window" id="r_Window"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_window.html">Window</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">窗口管理类  <a href="class_shit_1_1_window.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_shit_1_1_window_config.html">WindowConfig</a></td></tr>
+<tr class="memitem:WindowConfig" id="r_WindowConfig"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_shit_1_1_window_config.html">WindowConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">窗口配置  <a href="struct_shit_1_1_window_config.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 类型定义</h2></td></tr>
-<tr class="memitem:af13a1979f9e8f62c101433fac6511cc6" id="r_af13a1979f9e8f62c101433fac6511cc6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af13a1979f9e8f62c101433fac6511cc6">Json</a> = nlohmann::json</td></tr>
-<tr class="separator:af13a1979f9e8f62c101433fac6511cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab13fcf529046c79a4544246bf8e28741" id="r_ab13fcf529046c79a4544246bf8e28741"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab13fcf529046c79a4544246bf8e28741">Vector2</a> = glm::vec2</td></tr>
-<tr class="separator:ab13fcf529046c79a4544246bf8e28741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af13a1979f9e8f62c101433fac6511cc6" id="r_af13a1979f9e8f62c101433fac6511cc6"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#af13a1979f9e8f62c101433fac6511cc6">Json</a> = nlohmann::json</td></tr>
+<tr class="memitem:ab13fcf529046c79a4544246bf8e28741" id="r_ab13fcf529046c79a4544246bf8e28741"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ab13fcf529046c79a4544246bf8e28741">Vector2</a> = glm::vec2</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
-<tr class="memitem:a94b769a2899b14202ace87b550519a0d" id="r_a94b769a2899b14202ace87b550519a0d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94b769a2899b14202ace87b550519a0d">KeyCode</a> : int { <br />
+<tr class="memitem:a94b769a2899b14202ace87b550519a0d" id="r_a94b769a2899b14202ace87b550519a0d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a94b769a2899b14202ace87b550519a0d">KeyCode</a> : int { <br />
 &#160;&#160;<a class="el" href="#a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a> = SDL_SCANCODE_UNKNOWN
 , <a class="el" href="#a94b769a2899b14202ace87b550519a0da7fc56270e7a70fa81a5935b72eacbe29">A</a> = SDL_SCANCODE_A
 , <br />
@@ -485,8 +448,7 @@ $(function(){initNavTree('namespace_shit.html',''); initResizable(true); });
 &#160;&#160;<a class="el" href="#a94b769a2899b14202ace87b550519a0dae93f994f01c537c4e2f7d8528c3eb5e9">Count</a> = SDL_SCANCODE_COUNT
 <br />
  }</td></tr>
-<tr class="separator:a94b769a2899b14202ace87b550519a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a826ef52e881054fee6a2055e382950b4" id="r_a826ef52e881054fee6a2055e382950b4"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a826ef52e881054fee6a2055e382950b4">MouseButton</a> : int { <br />
+<tr class="memitem:a826ef52e881054fee6a2055e382950b4" id="r_a826ef52e881054fee6a2055e382950b4"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a826ef52e881054fee6a2055e382950b4">MouseButton</a> : int { <br />
 &#160;&#160;<a class="el" href="#a826ef52e881054fee6a2055e382950b4a945d5e233cf7d6240f6b783b36a374ff">Left</a> = SDL_BUTTON_LEFT
 , <a class="el" href="#a826ef52e881054fee6a2055e382950b4a92b09c7c48c520c3c55e497875da437c">Right</a> = SDL_BUTTON_RIGHT
 , <br />
@@ -497,9 +459,8 @@ $(function(){initNavTree('namespace_shit.html',''); initResizable(true); });
 , <a class="el" href="#a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a> = 6
 <br />
  }</td></tr>
-<tr class="separator:a826ef52e881054fee6a2055e382950b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">类型定义说明</h2>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
 <a id="af13a1979f9e8f62c101433fac6511cc6" name="af13a1979f9e8f62c101433fac6511cc6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af13a1979f9e8f62c101433fac6511cc6">&#9670;&#160;</a></span>Json</h2>
 
@@ -528,7 +489,7 @@ $(function(){initNavTree('namespace_shit.html',''); initResizable(true); });
 
 </div>
 </div>
-<h2 class="groupheader">枚举类型说明</h2>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
 <a id="a94b769a2899b14202ace87b550519a0d" name="a94b769a2899b14202ace87b550519a0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94b769a2899b14202ace87b550519a0d">&#9670;&#160;</a></span>KeyCode</h2>
 
@@ -718,12 +679,20 @@ $(function(){initNavTree('namespace_shit.html',''); initResizable(true); });
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- HTML footer for doxygen 1.17.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

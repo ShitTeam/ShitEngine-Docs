@@ -4,31 +4,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: UIText类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<!--BEGIN HTML_DYNAMIC_SECTIONS-->
-<script type="text/javascript" src="dynsections.js"></script>
-<!--END HTML_DYNAMIC_SECTIONS-->
-<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="codefolding.js"></script>
-<!--END HTML_CODE_FOLDING-->
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
 <!--BEGIN MATHJAX-->
 <!--END MATHJAX-->
 <!--BEGIN DARKMODE-->
 <!--END DARKMODE-->
 <!--BEGIN MERMAID-->
-$mermaidjs
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <!--END MERMAID-->
 <link href="custom.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
@@ -63,6 +65,7 @@ $mermaidjs
 </script>
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -74,34 +77,30 @@ $mermaidjs
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
     <div id="nav-tree-contents">
       <div id="nav-sync" class="sync"></div>
@@ -112,11 +111,24 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_shit_1_1_u_i_text.html',''); initResizable(true); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_u_i_text.html','','class_shit_1_1_u_i_text-members'); });
 </script>
-<div id="doc-content">
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -139,10 +151,6 @@ $(function(){initNavTree('class_shit_1_1_u_i_text.html',''); initResizable(true)
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-types">Public 类型</a> &#124;
-<a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="class_shit_1_1_u_i_text-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">UIText类 参考</div></div>
 </div><!--header-->
 <div class="contents">
@@ -162,113 +170,74 @@ $(function(){initNavTree('class_shit_1_1_u_i_text.html',''); initResizable(true)
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public 类型</h2></td></tr>
-<tr class="memitem:a6267fbee9150f6e40b576f0e29517411" id="r_a6267fbee9150f6e40b576f0e29517411"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6267fbee9150f6e40b576f0e29517411">TextAnchor</a> { <br />
+<tr class="memitem:a6267fbee9150f6e40b576f0e29517411" id="r_a6267fbee9150f6e40b576f0e29517411"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a6267fbee9150f6e40b576f0e29517411">TextAnchor</a> { <br />
 &#160;&#160;<a class="el" href="#a6267fbee9150f6e40b576f0e29517411a945d5e233cf7d6240f6b783b36a374ff">Left</a>
 , <a class="el" href="#a6267fbee9150f6e40b576f0e29517411a4f1f6016fc9f3f2353c0cc7c67b292bd">Center</a>
 , <br />
 &#160;&#160;<a class="el" href="#a6267fbee9150f6e40b576f0e29517411a92b09c7c48c520c3c55e497875da437c">Right</a>
 <br />
  }</td></tr>
-<tr class="separator:a6267fbee9150f6e40b576f0e29517411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a2980048638fd8eddd32afd2e26e3a19c" id="r_a2980048638fd8eddd32afd2e26e3a19c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2980048638fd8eddd32afd2e26e3a19c">UIText</a> ()=default</td></tr>
-<tr class="separator:a2980048638fd8eddd32afd2e26e3a19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13a2f499c95c8c83180db6d10b1faacb" id="r_a13a2f499c95c8c83180db6d10b1faacb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13a2f499c95c8c83180db6d10b1faacb">UIText</a> (const std::string &amp;text, const std::string &amp;fontPath, float fontSize)</td></tr>
-<tr class="separator:a13a2f499c95c8c83180db6d10b1faacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2397a89c4b542bbee0af960e3d9a9ff6" id="r_a2397a89c4b542bbee0af960e3d9a9ff6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2397a89c4b542bbee0af960e3d9a9ff6">~UIText</a> () override</td></tr>
-<tr class="separator:a2397a89c4b542bbee0af960e3d9a9ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e739ff12d1cf50a1139791b2a425d58" id="r_a2e739ff12d1cf50a1139791b2a425d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e739ff12d1cf50a1139791b2a425d58">onRender</a> (SDL_Renderer *renderer, const SDL_FRect &amp;screenRect) override</td></tr>
+<tr class="memitem:a2980048638fd8eddd32afd2e26e3a19c" id="r_a2980048638fd8eddd32afd2e26e3a19c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2980048638fd8eddd32afd2e26e3a19c">UIText</a> ()=default</td></tr>
+<tr class="memitem:a13a2f499c95c8c83180db6d10b1faacb" id="r_a13a2f499c95c8c83180db6d10b1faacb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a13a2f499c95c8c83180db6d10b1faacb">UIText</a> (const std::string &amp;text, const std::string &amp;fontPath, float fontSize)</td></tr>
+<tr class="memitem:a2397a89c4b542bbee0af960e3d9a9ff6" id="r_a2397a89c4b542bbee0af960e3d9a9ff6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2397a89c4b542bbee0af960e3d9a9ff6">~UIText</a> () override</td></tr>
+<tr class="memitem:a2e739ff12d1cf50a1139791b2a425d58" id="r_a2e739ff12d1cf50a1139791b2a425d58"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e739ff12d1cf50a1139791b2a425d58">onRender</a> (SDL_Renderer *renderer, const SDL_FRect &amp;screenRect) override</td></tr>
 <tr class="memdesc:a2e739ff12d1cf50a1139791b2a425d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身  <br /></td></tr>
-<tr class="separator:a2e739ff12d1cf50a1139791b2a425d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
-<tr class="separator:aee7be93617a6078496df31830d454990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dfac7d5a90b7c54fb0b0f34450988ee" id="r_a2dfac7d5a90b7c54fb0b0f34450988ee"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dfac7d5a90b7c54fb0b0f34450988ee">getText</a> () const</td></tr>
-<tr class="separator:a2dfac7d5a90b7c54fb0b0f34450988ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1ae51949d41ee9054634be5967d91b8" id="r_ac1ae51949d41ee9054634be5967d91b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1ae51949d41ee9054634be5967d91b8">setText</a> (const std::string &amp;text)</td></tr>
-<tr class="separator:ac1ae51949d41ee9054634be5967d91b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d3ab9331c4b1086e0692b0288e89c0" id="r_a68d3ab9331c4b1086e0692b0288e89c0"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68d3ab9331c4b1086e0692b0288e89c0">getFontPath</a> () const</td></tr>
-<tr class="separator:a68d3ab9331c4b1086e0692b0288e89c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a902009b3327ae6ee6314dc0a8cabf0b1" id="r_a902009b3327ae6ee6314dc0a8cabf0b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a902009b3327ae6ee6314dc0a8cabf0b1">setFontPath</a> (const std::string &amp;fontPath)</td></tr>
-<tr class="separator:a902009b3327ae6ee6314dc0a8cabf0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04d14d037f00dc9ed6bfa3b7efff33fd" id="r_a04d14d037f00dc9ed6bfa3b7efff33fd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d14d037f00dc9ed6bfa3b7efff33fd">getFontSize</a> () const</td></tr>
-<tr class="separator:a04d14d037f00dc9ed6bfa3b7efff33fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab30b5fdc3e433e5af1dacb7e4ee1834f" id="r_ab30b5fdc3e433e5af1dacb7e4ee1834f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab30b5fdc3e433e5af1dacb7e4ee1834f">setFontSize</a> (float fontSize)</td></tr>
-<tr class="separator:ab30b5fdc3e433e5af1dacb7e4ee1834f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d29d190f51d53f05574fd2bc57adf2d" id="r_a0d29d190f51d53f05574fd2bc57adf2d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d29d190f51d53f05574fd2bc57adf2d">getColor</a> () const</td></tr>
-<tr class="separator:a0d29d190f51d53f05574fd2bc57adf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a518eaa08866d5abe9e686d1ccf476eec" id="r_a518eaa08866d5abe9e686d1ccf476eec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a518eaa08866d5abe9e686d1ccf476eec">setColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
-<tr class="separator:a518eaa08866d5abe9e686d1ccf476eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fd9d70ab49def64c539759ad6268b68" id="r_a9fd9d70ab49def64c539759ad6268b68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6267fbee9150f6e40b576f0e29517411">TextAnchor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fd9d70ab49def64c539759ad6268b68">getAnchor</a> () const</td></tr>
-<tr class="separator:a9fd9d70ab49def64c539759ad6268b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a358226741faaee4a1bc2b83bc93b9291" id="r_a358226741faaee4a1bc2b83bc93b9291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a358226741faaee4a1bc2b83bc93b9291">setAnchor</a> (<a class="el" href="#a6267fbee9150f6e40b576f0e29517411">TextAnchor</a> anchor)</td></tr>
-<tr class="separator:a358226741faaee4a1bc2b83bc93b9291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
-<tr class="memitem:aa8115cc4430d4879d11ade1d62666ec1 inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_aa8115cc4430d4879d11ade1d62666ec1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#aa8115cc4430d4879d11ade1d62666ec1">UIRendererComponent</a> ()</td></tr>
-<tr class="separator:aa8115cc4430d4879d11ade1d62666ec1 inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00ae90e38d862640edc9e480efde5852 inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a00ae90e38d862640edc9e480efde5852"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a00ae90e38d862640edc9e480efde5852">~UIRendererComponent</a> () override=default</td></tr>
-<tr class="separator:a00ae90e38d862640edc9e480efde5852 inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbef2688cd43fd22241759f89fe12d28 inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
-<tr class="separator:acbef2688cd43fd22241759f89fe12d28 inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914 inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
-<tr class="separator:ad43b1fbcd8f355c3f312fa47fb3be914 inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54bac52aa663b2cfa92d215d590cda45 inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a54bac52aa663b2cfa92d215d590cda45"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a54bac52aa663b2cfa92d215d590cda45">containsPoint</a> (const SDL_FRect &amp;screenRect, const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;point) const</td></tr>
-<tr class="memdesc:a54bac52aa663b2cfa92d215d590cda45 inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">点击命中检测：默认矩形内即命中，子类可覆写为更精确的形状  <br /></td></tr>
-<tr class="separator:a54bac52aa663b2cfa92d215d590cda45 inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad51138fd45b987bf8edbc766b4875122 inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ad51138fd45b987bf8edbc766b4875122"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ad51138fd45b987bf8edbc766b4875122">getZIndex</a> () const</td></tr>
-<tr class="separator:ad51138fd45b987bf8edbc766b4875122 inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac303f527d4eeb6055c6e1d3575dbdf7a inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ac303f527d4eeb6055c6e1d3575dbdf7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac303f527d4eeb6055c6e1d3575dbdf7a">setZIndex</a> (int zIndex)</td></tr>
-<tr class="separator:ac303f527d4eeb6055c6e1d3575dbdf7a inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d8a6cfb13917785c143e74d40e4e2be inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a9d8a6cfb13917785c143e74d40e4e2be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be">isVisible</a> () const</td></tr>
-<tr class="separator:a9d8a6cfb13917785c143e74d40e4e2be inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18e44e30b31525a243960ca3928125aa inherit pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a18e44e30b31525a243960ca3928125aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a18e44e30b31525a243960ca3928125aa">setVisible</a> (bool visible)</td></tr>
-<tr class="separator:a18e44e30b31525a243960ca3928125aa inherit pub_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
-<tr class="memitem:a0171e1571f18dc6a27c8b041de55feec inherit pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
-<tr class="separator:a0171e1571f18dc6a27c8b041de55feec inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8905908be361c6fce216879f4739d98 inherit pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
-<tr class="separator:ab8905908be361c6fce216879f4739d98 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58db3b5933199c866796fade5e1ad722 inherit pub_methods_class_shit_1_1_component" id="r_a58db3b5933199c866796fade5e1ad722"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722">onCreate</a> ()</td></tr>
-<tr class="separator:a58db3b5933199c866796fade5e1ad722 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054 inherit pub_methods_class_shit_1_1_component" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const <a class="el" href="class_shit_1_1_component.html">Component</a> &amp;)=delete</td></tr>
-<tr class="separator:a7a86c1a5c9cb8bc0be998d276c438054 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace504c89f605c2e53f2450021ebca56e inherit pub_methods_class_shit_1_1_component" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_component.html">Component</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="class_shit_1_1_component.html">Component</a> &amp;)=delete</td></tr>
-<tr class="separator:ace504c89f605c2e53f2450021ebca56e inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa85c694df3855843a20a64cb0fc17233 inherit pub_methods_class_shit_1_1_component" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> &amp;&amp;)=delete</td></tr>
-<tr class="separator:aa85c694df3855843a20a64cb0fc17233 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34f2dae077ca6d1b6e3a39201c79c796 inherit pub_methods_class_shit_1_1_component" id="r_a34f2dae077ca6d1b6e3a39201c79c796"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_component.html">Component</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> &amp;&amp;)=delete</td></tr>
-<tr class="separator:a34f2dae077ca6d1b6e3a39201c79c796 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b36b6de005b18dd7c77687d8621774a inherit pub_methods_class_shit_1_1_component" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
-<tr class="separator:a9b36b6de005b18dd7c77687d8621774a inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246 inherit pub_methods_class_shit_1_1_component" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
-<tr class="separator:ab3318796ce9f4c658aa5cd5b65719246 inherit pub_methods_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:a2dfac7d5a90b7c54fb0b0f34450988ee" id="r_a2dfac7d5a90b7c54fb0b0f34450988ee"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2dfac7d5a90b7c54fb0b0f34450988ee">getText</a> () const</td></tr>
+<tr class="memitem:ac1ae51949d41ee9054634be5967d91b8" id="r_ac1ae51949d41ee9054634be5967d91b8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac1ae51949d41ee9054634be5967d91b8">setText</a> (const std::string &amp;text)</td></tr>
+<tr class="memitem:a68d3ab9331c4b1086e0692b0288e89c0" id="r_a68d3ab9331c4b1086e0692b0288e89c0"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a68d3ab9331c4b1086e0692b0288e89c0">getFontPath</a> () const</td></tr>
+<tr class="memitem:a902009b3327ae6ee6314dc0a8cabf0b1" id="r_a902009b3327ae6ee6314dc0a8cabf0b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a902009b3327ae6ee6314dc0a8cabf0b1">setFontPath</a> (const std::string &amp;fontPath)</td></tr>
+<tr class="memitem:a04d14d037f00dc9ed6bfa3b7efff33fd" id="r_a04d14d037f00dc9ed6bfa3b7efff33fd"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a04d14d037f00dc9ed6bfa3b7efff33fd">getFontSize</a> () const</td></tr>
+<tr class="memitem:ab30b5fdc3e433e5af1dacb7e4ee1834f" id="r_ab30b5fdc3e433e5af1dacb7e4ee1834f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab30b5fdc3e433e5af1dacb7e4ee1834f">setFontSize</a> (float fontSize)</td></tr>
+<tr class="memitem:a0d29d190f51d53f05574fd2bc57adf2d" id="r_a0d29d190f51d53f05574fd2bc57adf2d"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0d29d190f51d53f05574fd2bc57adf2d">getColor</a> () const</td></tr>
+<tr class="memitem:a518eaa08866d5abe9e686d1ccf476eec" id="r_a518eaa08866d5abe9e686d1ccf476eec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a518eaa08866d5abe9e686d1ccf476eec">setColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memitem:a9fd9d70ab49def64c539759ad6268b68" id="r_a9fd9d70ab49def64c539759ad6268b68"><td class="memItemLeft"><a class="el" href="#a6267fbee9150f6e40b576f0e29517411">TextAnchor</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9fd9d70ab49def64c539759ad6268b68">getAnchor</a> () const</td></tr>
+<tr class="memitem:a358226741faaee4a1bc2b83bc93b9291" id="r_a358226741faaee4a1bc2b83bc93b9291"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a358226741faaee4a1bc2b83bc93b9291">setAnchor</a> (<a class="el" href="#a6267fbee9150f6e40b576f0e29517411">TextAnchor</a> anchor)</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:aa8115cc4430d4879d11ade1d62666ec1 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_aa8115cc4430d4879d11ade1d62666ec1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#aa8115cc4430d4879d11ade1d62666ec1">UIRendererComponent</a> ()</td></tr>
+<tr class="memitem:a00ae90e38d862640edc9e480efde5852 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a00ae90e38d862640edc9e480efde5852"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a00ae90e38d862640edc9e480efde5852">~UIRendererComponent</a> () override=default</td></tr>
+<tr class="memitem:acbef2688cd43fd22241759f89fe12d28 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
+<tr class="memitem:a54bac52aa663b2cfa92d215d590cda45 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a54bac52aa663b2cfa92d215d590cda45"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a54bac52aa663b2cfa92d215d590cda45">containsPoint</a> (const SDL_FRect &amp;screenRect, const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;point) const</td></tr>
+<tr class="memdesc:a54bac52aa663b2cfa92d215d590cda45 pub_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">点击命中检测：默认矩形内即命中，子类可覆写为更精确的形状  <br /></td></tr>
+<tr class="memitem:ad51138fd45b987bf8edbc766b4875122 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ad51138fd45b987bf8edbc766b4875122"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ad51138fd45b987bf8edbc766b4875122">getZIndex</a> () const</td></tr>
+<tr class="memitem:ac303f527d4eeb6055c6e1d3575dbdf7a pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ac303f527d4eeb6055c6e1d3575dbdf7a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac303f527d4eeb6055c6e1d3575dbdf7a">setZIndex</a> (int zIndex)</td></tr>
+<tr class="memitem:a9d8a6cfb13917785c143e74d40e4e2be pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a9d8a6cfb13917785c143e74d40e4e2be"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be">isVisible</a> () const</td></tr>
+<tr class="memitem:a18e44e30b31525a243960ca3928125aa pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a18e44e30b31525a243960ca3928125aa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a18e44e30b31525a243960ca3928125aa">setVisible</a> (bool visible)</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a0171e1571f18dc6a27c8b041de55feec pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
+<tr class="memitem:ab8905908be361c6fce216879f4739d98 pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
+<tr class="memitem:a58db3b5933199c866796fade5e1ad722 pub_methods_class_shit_1_1_component" id="r_a58db3b5933199c866796fade5e1ad722"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722">onCreate</a> ()</td></tr>
+<tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054 pub_methods_class_shit_1_1_component" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const Component &amp;)=delete</td></tr>
+<tr class="memitem:ace504c89f605c2e53f2450021ebca56e pub_methods_class_shit_1_1_component" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;)=delete</td></tr>
+<tr class="memitem:aa85c694df3855843a20a64cb0fc17233 pub_methods_class_shit_1_1_component" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a> (Component &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a34f2dae077ca6d1b6e3a39201c79c796 pub_methods_class_shit_1_1_component" id="r_a34f2dae077ca6d1b6e3a39201c79c796"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a> (<a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a9b36b6de005b18dd7c77687d8621774a pub_methods_class_shit_1_1_component" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
+<tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246 pub_methods_class_shit_1_1_component" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pro_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
-<tr class="memitem:ac6eb6cd5c4468fe1c73fad58e704dda8 inherit pro_methods_class_shit_1_1_u_i_renderer_component" id="r_ac6eb6cd5c4468fe1c73fad58e704dda8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac6eb6cd5c4468fe1c73fad58e704dda8">requestSort</a> ()</td></tr>
-<tr class="memdesc:ac6eb6cd5c4468fe1c73fad58e704dda8 inherit pro_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">components变更后通知系统重排（实例：zIndex 变化）  <br /></td></tr>
-<tr class="separator:ac6eb6cd5c4468fe1c73fad58e704dda8 inherit pro_methods_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_shit_1_1_u_i_renderer_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_shit_1_1_u_i_renderer_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
-<tr class="memitem:a2b31866ba7ed40c82edd92abe0081948 inherit pro_attribs_class_shit_1_1_u_i_renderer_component" id="r_a2b31866ba7ed40c82edd92abe0081948"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948">m_zIndex</a> = 0</td></tr>
-<tr class="memdesc:a2b31866ba7ed40c82edd92abe0081948 inherit pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染层级（值越大越靠上）  <br /></td></tr>
-<tr class="separator:a2b31866ba7ed40c82edd92abe0081948 inherit pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace177fa285e5e88a6ba132129f89b73c inherit pro_attribs_class_shit_1_1_u_i_renderer_component" id="r_ace177fa285e5e88a6ba132129f89b73c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ace177fa285e5e88a6ba132129f89b73c">m_isVisible</a> = true</td></tr>
-<tr class="memdesc:ace177fa285e5e88a6ba132129f89b73c inherit pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否参与渲染与命中  <br /></td></tr>
-<tr class="separator:ace177fa285e5e88a6ba132129f89b73c inherit pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_shit_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
-<tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 inherit pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
-<tr class="separator:aa1aee3acda958839f017f93f6ed1bbb3 inherit pro_attribs_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a inherit pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
-<tr class="separator:ae8fd281c96362b5079bc11b6ae10007a inherit pro_attribs_class_shit_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:ac6eb6cd5c4468fe1c73fad58e704dda8 pro_methods_class_shit_1_1_u_i_renderer_component" id="r_ac6eb6cd5c4468fe1c73fad58e704dda8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac6eb6cd5c4468fe1c73fad58e704dda8">requestSort</a> ()</td></tr>
+<tr class="memdesc:ac6eb6cd5c4468fe1c73fad58e704dda8 pro_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">components变更后通知系统重排（实例：zIndex 变化）  <br /></td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_u_i_renderer_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:a2b31866ba7ed40c82edd92abe0081948 pro_attribs_class_shit_1_1_u_i_renderer_component" id="r_a2b31866ba7ed40c82edd92abe0081948"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948">m_zIndex</a> = 0</td></tr>
+<tr class="memdesc:a2b31866ba7ed40c82edd92abe0081948 pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染层级（值越大越靠上）  <br /></td></tr>
+<tr class="memitem:ace177fa285e5e88a6ba132129f89b73c pro_attribs_class_shit_1_1_u_i_renderer_component" id="r_ace177fa285e5e88a6ba132129f89b73c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ace177fa285e5e88a6ba132129f89b73c">m_isVisible</a> = true</td></tr>
+<tr class="memdesc:ace177fa285e5e88a6ba132129f89b73c pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否参与渲染与命中  <br /></td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
+<tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>UI 文字控件，使用 SDL_ttf 渲染文字到纹理 </p>
 <p>纹理缓存策略：setText / setFontSize / setColor 置 dirty， 下次 onRender 用 TTF_RenderText_Blended 重新生成 SDL_Texture。 onDestroy 释放缓存的纹理。字体按 path+size 加载并缓存于进程级映射。 对齐方式（左 / 中 / 右）相对 <a class="el" href="class_shit_1_1_u_i_transform.html" title="UI 专用变换组件（参考 Unity RectTransform，但不引入 Canvas Scaler）">UITransform</a> 的屏幕矩形。 </p>
-</div><h2 class="groupheader">成员枚举类型说明</h2>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">成员枚举类型说明</h2>
 <a id="a6267fbee9150f6e40b576f0e29517411" name="a6267fbee9150f6e40b576f0e29517411"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6267fbee9150f6e40b576f0e29517411">&#9670;&#160;</a></span>TextAnchor</h2>
 
@@ -296,7 +265,7 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">构造及析构函数说明</h2>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a2980048638fd8eddd32afd2e26e3a19c" name="a2980048638fd8eddd32afd2e26e3a19c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2980048638fd8eddd32afd2e26e3a19c">&#9670;&#160;</a></span>UIText() <span class="overload">[1/2]</span></h2>
 
@@ -307,7 +276,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_shit_1_1_u_i_text.html">UIText</a> </td>
+          <td class="memname">UIText </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -329,7 +298,7 @@ Public 成员函数</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_shit_1_1_u_i_text.html">UIText</a> </td>
+          <td class="memname">UIText </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
         </tr>
@@ -358,7 +327,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">~<a class="el" href="class_shit_1_1_u_i_text.html">UIText</a> </td>
+          <td class="memname">~<a class="el" href="#a2980048638fd8eddd32afd2e26e3a19c">UIText</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -373,7 +342,7 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">成员函数说明</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
 <a id="a9fd9d70ab49def64c539759ad6268b68" name="a9fd9d70ab49def64c539759ad6268b68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fd9d70ab49def64c539759ad6268b68">&#9670;&#160;</a></span>getAnchor()</h2>
 
@@ -689,12 +658,20 @@ Public 成员函数</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- HTML footer for doxygen 1.17.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_u_i_text.html">UIText</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_u_i_text.html">UIText</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>

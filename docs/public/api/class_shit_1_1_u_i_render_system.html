@@ -4,31 +4,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ShitEngine: UIRenderSystem类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<!--BEGIN HTML_DYNAMIC_SECTIONS-->
-<script type="text/javascript" src="dynsections.js"></script>
-<!--END HTML_DYNAMIC_SECTIONS-->
-<!--BEGIN HTML_CODE_FOLDING-->
+<script type="text/javascript">var page_layout=1;</script>
 <script type="text/javascript" src="codefolding.js"></script>
-<!--END HTML_CODE_FOLDING-->
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
 <!--BEGIN MATHJAX-->
 <!--END MATHJAX-->
 <!--BEGIN DARKMODE-->
 <!--END DARKMODE-->
 <!--BEGIN MERMAID-->
-$mermaidjs
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <!--END MERMAID-->
 <link href="custom.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
@@ -63,6 +65,7 @@ $mermaidjs
 </script>
 </head>
 <body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
@@ -74,34 +77,30 @@ $mermaidjs
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
  </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.17.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded', codefold.init);
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('',true,false,'search.php','搜索',true);
-  $(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
     <div id="nav-tree-contents">
       <div id="nav-sync" class="sync"></div>
@@ -112,11 +111,24 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_shit_1_1_u_i_render_system.html',''); initResizable(true); });
-/* @license-end */
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_u_i_render_system.html','','class_shit_1_1_u_i_render_system-members'); });
 </script>
-<div id="doc-content">
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -139,9 +151,6 @@ $(function(){initNavTree('class_shit_1_1_u_i_render_system.html',''); initResiza
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="class_shit_1_1_u_i_render_system-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">UIRenderSystem类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
@@ -160,68 +169,50 @@ $(function(){initNavTree('class_shit_1_1_u_i_render_system.html',''); initResiza
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a3d5052933839c96d4daffe3d961723e8" id="r_a3d5052933839c96d4daffe3d961723e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d5052933839c96d4daffe3d961723e8">UIRenderSystem</a> (int priority=200)</td></tr>
-<tr class="separator:a3d5052933839c96d4daffe3d961723e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1407caffc6620c32273d150dd0f4d4fa" id="r_a1407caffc6620c32273d150dd0f4d4fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1407caffc6620c32273d150dd0f4d4fa">~UIRenderSystem</a> () override</td></tr>
-<tr class="separator:a1407caffc6620c32273d150dd0f4d4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44137bb65de2396875934e48a6ee5099" id="r_a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
+<tr class="memitem:a3d5052933839c96d4daffe3d961723e8" id="r_a3d5052933839c96d4daffe3d961723e8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3d5052933839c96d4daffe3d961723e8">UIRenderSystem</a> (int priority=200)</td></tr>
+<tr class="memitem:a1407caffc6620c32273d150dd0f4d4fa" id="r_a1407caffc6620c32273d150dd0f4d4fa"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1407caffc6620c32273d150dd0f4d4fa">~UIRenderSystem</a> () override</td></tr>
+<tr class="memitem:a44137bb65de2396875934e48a6ee5099" id="r_a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
 <tr class="memdesc:a44137bb65de2396875934e48a6ee5099"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧更新（纯虚）  <br /></td></tr>
-<tr class="separator:a44137bb65de2396875934e48a6ee5099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1cf30cae681d95a94934492ae7ea627" id="r_ae1cf30cae681d95a94934492ae7ea627"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1cf30cae681d95a94934492ae7ea627">destroy</a> () override</td></tr>
+<tr class="memitem:ae1cf30cae681d95a94934492ae7ea627" id="r_ae1cf30cae681d95a94934492ae7ea627"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae1cf30cae681d95a94934492ae7ea627">destroy</a> () override</td></tr>
 <tr class="memdesc:ae1cf30cae681d95a94934492ae7ea627"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁（纯虚）  <br /></td></tr>
-<tr class="separator:ae1cf30cae681d95a94934492ae7ea627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfd8a6e39a45febe5d000d51477c96b0" id="r_abfd8a6e39a45febe5d000d51477c96b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfd8a6e39a45febe5d000d51477c96b0">registerUIRenderer</a> (<a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a> *renderer)</td></tr>
+<tr class="memitem:abfd8a6e39a45febe5d000d51477c96b0" id="r_abfd8a6e39a45febe5d000d51477c96b0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abfd8a6e39a45febe5d000d51477c96b0">registerUIRenderer</a> (<a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a> *renderer)</td></tr>
 <tr class="memdesc:abfd8a6e39a45febe5d000d51477c96b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册 UI 渲染控件  <br /></td></tr>
-<tr class="separator:abfd8a6e39a45febe5d000d51477c96b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61982b0ee0dc5d77ca209acbfaa59b85" id="r_a61982b0ee0dc5d77ca209acbfaa59b85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61982b0ee0dc5d77ca209acbfaa59b85">unregisterUIRenderer</a> (<a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a> *renderer)</td></tr>
+<tr class="memitem:a61982b0ee0dc5d77ca209acbfaa59b85" id="r_a61982b0ee0dc5d77ca209acbfaa59b85"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61982b0ee0dc5d77ca209acbfaa59b85">unregisterUIRenderer</a> (<a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a> *renderer)</td></tr>
 <tr class="memdesc:a61982b0ee0dc5d77ca209acbfaa59b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销 UI 渲染控件  <br /></td></tr>
-<tr class="separator:a61982b0ee0dc5d77ca209acbfaa59b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a145cd67b1d4a87fb248b8cca4210d48e" id="r_a145cd67b1d4a87fb248b8cca4210d48e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a145cd67b1d4a87fb248b8cca4210d48e">registerCanvas</a> (<a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a> *canvas)</td></tr>
+<tr class="memitem:a145cd67b1d4a87fb248b8cca4210d48e" id="r_a145cd67b1d4a87fb248b8cca4210d48e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a145cd67b1d4a87fb248b8cca4210d48e">registerCanvas</a> (<a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a> *canvas)</td></tr>
 <tr class="memdesc:a145cd67b1d4a87fb248b8cca4210d48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册 Canvas  <br /></td></tr>
-<tr class="separator:a145cd67b1d4a87fb248b8cca4210d48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58f823292f7a2b7a988d7c1d16ea7544" id="r_a58f823292f7a2b7a988d7c1d16ea7544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58f823292f7a2b7a988d7c1d16ea7544">unregisterCanvas</a> (<a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a> *canvas)</td></tr>
+<tr class="memitem:a58f823292f7a2b7a988d7c1d16ea7544" id="r_a58f823292f7a2b7a988d7c1d16ea7544"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a58f823292f7a2b7a988d7c1d16ea7544">unregisterCanvas</a> (<a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a> *canvas)</td></tr>
 <tr class="memdesc:a58f823292f7a2b7a988d7c1d16ea7544"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销 Canvas  <br /></td></tr>
-<tr class="separator:a58f823292f7a2b7a988d7c1d16ea7544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acced817981e41bab560b75cd40612c68" id="r_acced817981e41bab560b75cd40612c68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acced817981e41bab560b75cd40612c68">markSortDirty</a> ()</td></tr>
+<tr class="memitem:acced817981e41bab560b75cd40612c68" id="r_acced817981e41bab560b75cd40612c68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acced817981e41bab560b75cd40612c68">markSortDirty</a> ()</td></tr>
 <tr class="memdesc:acced817981e41bab560b75cd40612c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">标记需要重排（zIndex 变更时调用）  <br /></td></tr>
-<tr class="separator:acced817981e41bab560b75cd40612c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_shit_1_1_system"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_shit_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
-<tr class="memitem:a5034f7aabb39aa71406a18f57af4971e inherit pub_methods_class_shit_1_1_system" id="r_a5034f7aabb39aa71406a18f57af4971e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#a5034f7aabb39aa71406a18f57af4971e">System</a> (int priority=0)</td></tr>
-<tr class="separator:a5034f7aabb39aa71406a18f57af4971e inherit pub_methods_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7229e118bb766e4752281389b321ed6 inherit pub_methods_class_shit_1_1_system" id="r_aa7229e118bb766e4752281389b321ed6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#aa7229e118bb766e4752281389b321ed6">~System</a> ()</td></tr>
-<tr class="separator:aa7229e118bb766e4752281389b321ed6 inherit pub_methods_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9339772ec5ac9fa929938109207f2863 inherit pub_methods_class_shit_1_1_system" id="r_a9339772ec5ac9fa929938109207f2863"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#a9339772ec5ac9fa929938109207f2863">init</a> ()</td></tr>
-<tr class="memdesc:a9339772ec5ac9fa929938109207f2863 inherit pub_methods_class_shit_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化（可覆写）  <br /></td></tr>
-<tr class="separator:a9339772ec5ac9fa929938109207f2863 inherit pub_methods_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c36c4965240371f43c896f8d6af7feb inherit pub_methods_class_shit_1_1_system" id="r_a0c36c4965240371f43c896f8d6af7feb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#a0c36c4965240371f43c896f8d6af7feb">getScene</a> () const</td></tr>
-<tr class="separator:a0c36c4965240371f43c896f8d6af7feb inherit pub_methods_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36f2aa21e8b3898775462d2a378d2e0f inherit pub_methods_class_shit_1_1_system" id="r_a36f2aa21e8b3898775462d2a378d2e0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#a36f2aa21e8b3898775462d2a378d2e0f">setScene</a> (<a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene)</td></tr>
-<tr class="separator:a36f2aa21e8b3898775462d2a378d2e0f inherit pub_methods_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad65045bcc70661e1e745edbb1da0377b inherit pub_methods_class_shit_1_1_system" id="r_ad65045bcc70661e1e745edbb1da0377b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#ad65045bcc70661e1e745edbb1da0377b">getPriority</a> () const</td></tr>
-<tr class="separator:ad65045bcc70661e1e745edbb1da0377b inherit pub_methods_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a257fc8f8148265762ab350a6a8563ffc inherit pub_methods_class_shit_1_1_system" id="r_a257fc8f8148265762ab350a6a8563ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#a257fc8f8148265762ab350a6a8563ffc">setPriority</a> (int priority)</td></tr>
-<tr class="separator:a257fc8f8148265762ab350a6a8563ffc inherit pub_methods_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_system"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
+<tr class="memitem:a5034f7aabb39aa71406a18f57af4971e pub_methods_class_shit_1_1_system" id="r_a5034f7aabb39aa71406a18f57af4971e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a5034f7aabb39aa71406a18f57af4971e">System</a> (int priority=0)</td></tr>
+<tr class="memitem:aa7229e118bb766e4752281389b321ed6 pub_methods_class_shit_1_1_system" id="r_aa7229e118bb766e4752281389b321ed6"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#aa7229e118bb766e4752281389b321ed6">~System</a> ()</td></tr>
+<tr class="memitem:a9339772ec5ac9fa929938109207f2863 pub_methods_class_shit_1_1_system" id="r_a9339772ec5ac9fa929938109207f2863"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a9339772ec5ac9fa929938109207f2863">init</a> ()</td></tr>
+<tr class="memdesc:a9339772ec5ac9fa929938109207f2863 pub_methods_class_shit_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化（可覆写）  <br /></td></tr>
+<tr class="memitem:a0c36c4965240371f43c896f8d6af7feb pub_methods_class_shit_1_1_system" id="r_a0c36c4965240371f43c896f8d6af7feb"><td class="memItemLeft"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a0c36c4965240371f43c896f8d6af7feb">getScene</a> () const</td></tr>
+<tr class="memitem:a36f2aa21e8b3898775462d2a378d2e0f pub_methods_class_shit_1_1_system" id="r_a36f2aa21e8b3898775462d2a378d2e0f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a36f2aa21e8b3898775462d2a378d2e0f">setScene</a> (<a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memitem:ad65045bcc70661e1e745edbb1da0377b pub_methods_class_shit_1_1_system" id="r_ad65045bcc70661e1e745edbb1da0377b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#ad65045bcc70661e1e745edbb1da0377b">getPriority</a> () const</td></tr>
+<tr class="memitem:a257fc8f8148265762ab350a6a8563ffc pub_methods_class_shit_1_1_system" id="r_a257fc8f8148265762ab350a6a8563ffc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a257fc8f8148265762ab350a6a8563ffc">setPriority</a> (int priority)</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pro_attribs_class_shit_1_1_system"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_shit_1_1_system')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
-<tr class="memitem:aebd544741012b3bab43cfbbc4e9d28f3 inherit pro_attribs_class_shit_1_1_system" id="r_aebd544741012b3bab43cfbbc4e9d28f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#aebd544741012b3bab43cfbbc4e9d28f3">m_priority</a></td></tr>
-<tr class="memdesc:aebd544741012b3bab43cfbbc4e9d28f3 inherit pro_attribs_class_shit_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">优先级（小值先执行）  <br /></td></tr>
-<tr class="separator:aebd544741012b3bab43cfbbc4e9d28f3 inherit pro_attribs_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d9ce218dfa1f5f2645b9b4c2abea6ca inherit pro_attribs_class_shit_1_1_system" id="r_a6d9ce218dfa1f5f2645b9b4c2abea6ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shit_1_1_system.html#a6d9ce218dfa1f5f2645b9b4c2abea6ca">m_scene</a> = nullptr</td></tr>
-<tr class="memdesc:a6d9ce218dfa1f5f2645b9b4c2abea6ca inherit pro_attribs_class_shit_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">所属场景  <br /></td></tr>
-<tr class="separator:a6d9ce218dfa1f5f2645b9b4c2abea6ca inherit pro_attribs_class_shit_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_system"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
+<tr class="memitem:aebd544741012b3bab43cfbbc4e9d28f3 pro_attribs_class_shit_1_1_system" id="r_aebd544741012b3bab43cfbbc4e9d28f3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#aebd544741012b3bab43cfbbc4e9d28f3">m_priority</a></td></tr>
+<tr class="memdesc:aebd544741012b3bab43cfbbc4e9d28f3 pro_attribs_class_shit_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">优先级（小值先执行）  <br /></td></tr>
+<tr class="memitem:a6d9ce218dfa1f5f2645b9b4c2abea6ca pro_attribs_class_shit_1_1_system" id="r_a6d9ce218dfa1f5f2645b9b4c2abea6ca"><td class="memItemLeft"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a6d9ce218dfa1f5f2645b9b4c2abea6ca">m_scene</a> = nullptr</td></tr>
+<tr class="memdesc:a6d9ce218dfa1f5f2645b9b4c2abea6ca pro_attribs_class_shit_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">所属场景  <br /></td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>UI 渲染系统 </p>
 <p>每帧执行两件事：</p><ol type="1">
 <li>输入 Raycasting：按 zIndex 从上到下检测鼠标命中的 UI 元素，驱动其上的 <a class="el" href="class_shit_1_1_u_i_button.html" title="UI 按钮控件，基于鼠标 Raycasting 触发交互">UIButton</a> 状态；</li>
 <li>UI 渲染：按 zIndex 从下到上调用各 <a class="el" href="class_shit_1_1_u_i_renderer_component.html" title="UI 渲染控件基类（对应游戏世界的 RendererComponent）">UIRendererComponent</a> 的 onRender，叠在游戏世界之上。</li>
 </ol>
 <p><a class="el" href="class_shit_1_1_u_i_renderer_component.html" title="UI 渲染控件基类（对应游戏世界的 RendererComponent）">UIRendererComponent</a> 与 <a class="el" href="class_shit_1_1_u_i_canvas.html" title="UI 层级根节点">UICanvas</a> 的 onAttach / onDetach 自动注册 / 注销。 priority 默认 200，晚于 RenderSystem(100)，确保 UI 绘制在游戏世界之后。 </p>
-</div><h2 class="groupheader">构造及析构函数说明</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a3d5052933839c96d4daffe3d961723e8" name="a3d5052933839c96d4daffe3d961723e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d5052933839c96d4daffe3d961723e8">&#9670;&#160;</a></span>UIRenderSystem()</h2>
 
@@ -229,7 +220,7 @@ Public 成员函数</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_shit_1_1_u_i_render_system.html">UIRenderSystem</a> </td>
+          <td class="memname">UIRenderSystem </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>priority</em></span><span class="paramdefsep"> = </span><span class="paramdefval">200</span></td><td>)</td>
           <td></td>
@@ -249,7 +240,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">~<a class="el" href="class_shit_1_1_u_i_render_system.html">UIRenderSystem</a> </td>
+          <td class="memname">~<a class="el" href="#a3d5052933839c96d4daffe3d961723e8">UIRenderSystem</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -264,7 +255,7 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">成员函数说明</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
 <a id="ae1cf30cae681d95a94934492ae7ea627" name="ae1cf30cae681d95a94934492ae7ea627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1cf30cae681d95a94934492ae7ea627">&#9670;&#160;</a></span>destroy()</h2>
 
@@ -431,12 +422,20 @@ Public 成员函数</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- HTML footer for doxygen 1.17.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_shit.html">Shit</a></li><li class="navelem"><a class="el" href="class_shit_1_1_u_i_render_system.html">UIRenderSystem</a></li>
-    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_u_i_render_system.html">UIRenderSystem</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>
 </body>
