@@ -43,6 +43,36 @@ add_executable(MyGame main.cpp)
 target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
 ```
 
+### 其他下载方式
+
+除了上面从源码编译，还有两种方式拿到引擎 SDK：
+
+**GitHub Actions 产物** — 每个推送到 `main` 分支的提交都会自动构建并上传引擎包，包含 Release + Debug 库和所有依赖。去 [Actions 页面](https://github.com/ShitTeam/ShitEngine/actions/workflows/build.yml) 点开最新一次的绿色运行，在页面底部找到 Artifacts：
+
+| 产物名 | 平台 | 编译器 | 格式 |
+|---|---|---|---|
+| `ShitEngine-windows-mingw` | Windows | MinGW | zip |
+| `ShitEngine-windows-msvc` | Windows | MSVC | zip |
+| `ShitEngine-linux` | Linux | GCC | tar.gz |
+| `ShitEngine-macos` | macOS | Clang | tar.gz |
+
+下载解压后用 `find_package` 引用，跳过本地编译：
+
+```cmake
+cmake_minimum_required(VERSION 3.20)
+project(MyGame)
+
+# 假设 SDK 解压到 ShitEngineSDK/ 目录
+find_package(ShitEngine REQUIRED
+    PATHS ShitEngineSDK/lib/cmake/ShitEngine
+    NO_DEFAULT_PATH)
+
+add_executable(MyGame main.cpp)
+target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
+```
+
+**GitHub Release** — 当引擎发布正式版本时，可以在 [Releases 页面](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的压缩包。用法同上，解压后 `find_package` 即可。目前还没正式发布第一个版本，保持关注。<!-- 有 Release 后删掉这句 -->
+
 ### main.cpp
 
 引擎的启停代码是固定模板，先把它写上：
