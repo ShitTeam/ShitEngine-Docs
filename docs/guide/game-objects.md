@@ -63,6 +63,11 @@ go->isNeedDestroy();     // 是否已被标记
 | **CameraComponent** | 定义视口，控制视角 |
 | **AnimationComponent** | 逐帧动画驱动 |
 | **Behavior** | 供你继承写自定义脚本 |
+| **UITransform** | UI 屏幕空间定位（锚点 + 轴心 + 尺寸） |
+| **UIImage** | UI 图片显示控件 |
+| **UIText** | UI 文字显示控件（SDL_ttf 渲染） |
+| **UIButton** | UI 按钮（ColorTint 状态过渡 + onClick） |
+| **UICanvas** | UI 层级根节点 |
 
 ### 添加和获取组件
 
@@ -230,7 +235,12 @@ GameObject           挂载 → Component（多种）
   │   ├─ onStart()         首次更新前
   │   ├─ onUpdate()        每帧执行
   │   └─ AnimationComponent 逐帧动画
-  └─ CameraComponent       视口、缩放
+  ├─ CameraComponent       视口、缩放
+  ├─ UICanvas              UI 层级根
+  └─ UI 控件（需挂 UITransform）
+      ├─ UIImage           图片显示
+      ├─ UIText            文字显示
+      └─ UIButton          可交互按钮
 ```
 
 **System 驱动**：
@@ -239,5 +249,6 @@ GameObject           挂载 → Component（多种）
 |---|---|---|
 | BehaviorSystem | 所有 Behavior 的 onStart/onUpdate | 0 |
 | RenderSystem | 所有 RendererComponent 的 onRender | 100 |
+| UIRenderSystem | 所有 UIRendererComponent 的 onRender + Raycasting | 200 |
 
 优先级数字越小越先执行。你可以在场景中注册自定义 System 插在中间。

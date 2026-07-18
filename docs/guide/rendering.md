@@ -172,25 +172,37 @@ cam->setPriority(10);  // UI 层，盖在上面
 每帧的铁打流程：
 
 ```
-1. ClearScreen()         — 清屏
-2. 排序相机（按优先级）
-3. 排序精灵（按 Z-Index）
-4. 对每个相机：
-   a. 设置视口
-   b. 计算裁剪区域
-   c. 逐个渲染可见精灵
-5. Present()             — 显示结果
+1. ClearScreen()                        — 清屏
+2. BehaviorSystem::update()             — 游戏逻辑（优先级 0）
+3. RenderSystem::update()               — 游戏世界渲染（优先级 100）
+   a. 排序相机（按优先级）
+   b. 排序精灵（按 Z-Index）
+   c. 对每个相机：设置视口 → 裁剪 → 渲染可见精灵
+   d. 恢复裁剪和视口，为 UI 做准备
+4. UIRenderSystem::update()             — UI 系统叠加渲染（优先级 200）
+   a. 输入 Raycasting
+   b. 按钮状态更新
+   c. 按 zIndex 从下到上绘制所有 UI 控件
+5. Renderer::Present()                  — 统一显示结果（在 Game::run 末尾）
 ```
+
+引擎的 Present 统一在 `Game::run()` 的末尾执行——游戏世界和 UI 同框只交换一次缓冲区。
 
 Z-Index 控制谁盖在谁上面：
 
 ```cpp
-sprite->setZIndex(10);  // 值越大越靠上
+sprite->setZIndex(10);  // 值越大越靠上，游戏世界内有效
 ```
 
-## 直接绘制（UI 场景）
+## UI 系统
 
-除了挂载 `SpriteRenderer`，也可以直接在屏幕上画精灵——适合 UI 元素（血条、分数、图标）：
+引擎内置了一套完整的 **Retained-Mode UI 系统**（Canvas / UIImage / UIText / UIButton），走独立的 `UIRenderSystem`，不受相机/视口影响，自动在游戏世界之上叠加绘制。
+
+详见 [UI 系统](/guide/ui)。
+
+## 直接绘制（旧式 HUD）
+
+除了 UI 系统和挂载 `SpriteRenderer`，也可以用静态方法直接在屏幕上画精灵——适合简单的血条、分数、图标：
 
 ```cpp
 // 在屏幕坐标 (100, 50) 画一个 200×40 的 UI 元素
@@ -198,5 +210,5 @@ Shit::Sprite uiSprite("ui/healthbar.png");
 Renderer::DrawSprite(uiSprite, {100.0f, 50.0f}, {200.0f, 40.0f});
 ```
 
-`DrawSprite` 是静态方法，不依赖 GameObject/Camera 体系，直接在屏幕像素坐标上绘制。
+`DrawSprite` 不依赖 GameObject/Camera 体系，直接在屏幕像素坐标上绘制。但需要你自己管理每帧的绘制调用，**推荐优先使用 UI 系统**。
 

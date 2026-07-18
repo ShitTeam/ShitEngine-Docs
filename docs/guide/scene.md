@@ -22,7 +22,7 @@ auto scene = std::make_unique<Shit::Scene>("level1");
 scene->init();
 ```
 
-`init()` 帮你注册了俩默认系统：`BehaviorSystem`（跑脚本）和 `RenderSystem`（画画面）。你要有自己的系统，就在这里注册。
+`init()` 帮你注册了三个默认系统：`BehaviorSystem`（跑脚本）、`RenderSystem`（画游戏世界）、`UIRenderSystem`（画 UI）。你要有自己的系统，就在这里注册。
 
 如果你想在场景初始化时做点自己的事，继承它就行：
 
@@ -96,10 +96,11 @@ Shit::SceneManager::PopScene();
 ```cpp
 scene->registerSystem<BehaviorSystem>();   // 默认已注册，优先级 0
 scene->registerSystem<RenderSystem>();      // 默认已注册，优先级 100
+scene->registerSystem<UIRenderSystem>();    // 默认已注册，优先级 200
 scene->registerSystem<MyCustomSystem>(50);  // 插在中间
 ```
 
-顺序是：BehaviorSystem（0）→ 你的系统（50）→ RenderSystem（100）。逻辑先跑、渲染在后，天经地义。
+顺序是：BehaviorSystem（0）→ 你的系统（50）→ RenderSystem（100）→ UIRenderSystem（200）。逻辑先跑、游戏世界渲染、UI 叠在最上面。
 
 ### 写一个自己的系统
 
