@@ -181,10 +181,6 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:abfd8a6e39a45febe5d000d51477c96b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册 UI 渲染控件  <br /></td></tr>
 <tr class="memitem:a61982b0ee0dc5d77ca209acbfaa59b85" id="r_a61982b0ee0dc5d77ca209acbfaa59b85"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a61982b0ee0dc5d77ca209acbfaa59b85">unregisterUIRenderer</a> (<a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a> *renderer)</td></tr>
 <tr class="memdesc:a61982b0ee0dc5d77ca209acbfaa59b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销 UI 渲染控件  <br /></td></tr>
-<tr class="memitem:a145cd67b1d4a87fb248b8cca4210d48e" id="r_a145cd67b1d4a87fb248b8cca4210d48e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a145cd67b1d4a87fb248b8cca4210d48e">registerCanvas</a> (<a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a> *canvas)</td></tr>
-<tr class="memdesc:a145cd67b1d4a87fb248b8cca4210d48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册 Canvas  <br /></td></tr>
-<tr class="memitem:a58f823292f7a2b7a988d7c1d16ea7544" id="r_a58f823292f7a2b7a988d7c1d16ea7544"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a58f823292f7a2b7a988d7c1d16ea7544">unregisterCanvas</a> (<a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a> *canvas)</td></tr>
-<tr class="memdesc:a58f823292f7a2b7a988d7c1d16ea7544"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销 Canvas  <br /></td></tr>
 <tr class="memitem:acced817981e41bab560b75cd40612c68" id="r_acced817981e41bab560b75cd40612c68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acced817981e41bab560b75cd40612c68">markSortDirty</a> ()</td></tr>
 <tr class="memdesc:acced817981e41bab560b75cd40612c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">标记需要重排（zIndex 变更时调用）  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_shit_1_1_system"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
@@ -211,7 +207,7 @@ Public 成员函数</h2></td></tr>
 <li>输入 Raycasting：按 zIndex 从上到下检测鼠标命中的 UI 元素，驱动其上的 <a class="el" href="class_shit_1_1_u_i_button.html" title="UI 按钮控件，基于鼠标 Raycasting 触发交互">UIButton</a> 状态；</li>
 <li>UI 渲染：按 zIndex 从下到上调用各 <a class="el" href="class_shit_1_1_u_i_renderer_component.html" title="UI 渲染控件基类（对应游戏世界的 RendererComponent）">UIRendererComponent</a> 的 onRender，叠在游戏世界之上。</li>
 </ol>
-<p><a class="el" href="class_shit_1_1_u_i_renderer_component.html" title="UI 渲染控件基类（对应游戏世界的 RendererComponent）">UIRendererComponent</a> 与 <a class="el" href="class_shit_1_1_u_i_canvas.html" title="UI 层级根节点">UICanvas</a> 的 onAttach / onDetach 自动注册 / 注销。 priority 默认 200，晚于 RenderSystem(100)，确保 UI 绘制在游戏世界之后。 </p>
+<p><a class="el" href="class_shit_1_1_u_i_renderer_component.html" title="UI 渲染控件基类（对应游戏世界的 RendererComponent）">UIRendererComponent</a> 的 onAttach / onDetach 自动注册 / 注销。 priority 默认 200，晚于 RenderSystem(100)，确保 UI 绘制在游戏世界之后。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a3d5052933839c96d4daffe3d961723e8" name="a3d5052933839c96d4daffe3d961723e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d5052933839c96d4daffe3d961723e8">&#9670;&#160;</a></span>UIRenderSystem()</h2>
@@ -312,25 +308,6 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a145cd67b1d4a87fb248b8cca4210d48e" name="a145cd67b1d4a87fb248b8cca4210d48e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a145cd67b1d4a87fb248b8cca4210d48e">&#9670;&#160;</a></span>registerCanvas()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void registerCanvas </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a> *</td>          <td class="paramname"><span class="paramname"><em>canvas</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>注册 Canvas </p>
-
-</div>
-</div>
 <a id="abfd8a6e39a45febe5d000d51477c96b0" name="abfd8a6e39a45febe5d000d51477c96b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abfd8a6e39a45febe5d000d51477c96b0">&#9670;&#160;</a></span>registerUIRenderer()</h2>
 
@@ -347,25 +324,6 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>注册 UI 渲染控件 </p>
-
-</div>
-</div>
-<a id="a58f823292f7a2b7a988d7c1d16ea7544" name="a58f823292f7a2b7a988d7c1d16ea7544"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58f823292f7a2b7a988d7c1d16ea7544">&#9670;&#160;</a></span>unregisterCanvas()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void unregisterCanvas </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_u_i_canvas.html">UICanvas</a> *</td>          <td class="paramname"><span class="paramname"><em>canvas</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>注销 Canvas </p>
 
 </div>
 </div>
