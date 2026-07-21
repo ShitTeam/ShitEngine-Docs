@@ -20,7 +20,11 @@ var hierarchy =
       [ "UIRendererComponent", "class_shit_1_1_u_i_renderer_component.html", [
         [ "UIButton", "class_shit_1_1_u_i_button.html", null ],
         [ "UIImage", "class_shit_1_1_u_i_image.html", null ],
-        [ "UIText", "class_shit_1_1_u_i_text.html", null ]
+        [ "UIText", "class_shit_1_1_u_i_text.html", null ],
+        [ "UITextInput", "class_shit_1_1_u_i_text_input.html", [
+          [ "UITextArea", "class_shit_1_1_u_i_text_area.html", null ],
+          [ "UITextBox", "class_shit_1_1_u_i_text_box.html", null ]
+        ] ]
       ] ],
       [ "UITransform", "class_shit_1_1_u_i_transform.html", null ]
     ] ],
@@ -45,6 +49,7 @@ var hierarchy =
       [ "RenderSystem", "class_shit_1_1_render_system.html", null ],
       [ "UIRenderSystem", "class_shit_1_1_u_i_render_system.html", null ]
     ] ],
+    [ "TextInputGate", "class_shit_1_1_text_input_gate.html", null ],
     [ "TextureManager", "class_shit_1_1_texture_manager.html", null ],
     [ "Time", "class_shit_1_1_time.html", null ],
     [ "Window", "class_shit_1_1_window.html", null ],

@@ -32,6 +32,7 @@ var annotated_dup =
       [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", "class_shit_1_1_sprite_renderer" ],
       [ "SpriteSheet", "class_shit_1_1_sprite_sheet.html", "class_shit_1_1_sprite_sheet" ],
       [ "System", "class_shit_1_1_system.html", "class_shit_1_1_system" ],
+      [ "TextInputGate", "class_shit_1_1_text_input_gate.html", "class_shit_1_1_text_input_gate" ],
       [ "TextureManager", "class_shit_1_1_texture_manager.html", "class_shit_1_1_texture_manager" ],
       [ "Time", "class_shit_1_1_time.html", "class_shit_1_1_time" ],
       [ "TransformComponent", "class_shit_1_1_transform_component.html", "class_shit_1_1_transform_component" ],
@@ -41,6 +42,9 @@ var annotated_dup =
       [ "UIRendererComponent", "class_shit_1_1_u_i_renderer_component.html", "class_shit_1_1_u_i_renderer_component" ],
       [ "UIRenderSystem", "class_shit_1_1_u_i_render_system.html", "class_shit_1_1_u_i_render_system" ],
       [ "UIText", "class_shit_1_1_u_i_text.html", "class_shit_1_1_u_i_text" ],
+      [ "UITextArea", "class_shit_1_1_u_i_text_area.html", "class_shit_1_1_u_i_text_area" ],
+      [ "UITextBox", "class_shit_1_1_u_i_text_box.html", "class_shit_1_1_u_i_text_box" ],
+      [ "UITextInput", "class_shit_1_1_u_i_text_input.html", "class_shit_1_1_u_i_text_input" ],
       [ "UITransform", "class_shit_1_1_u_i_transform.html", "class_shit_1_1_u_i_transform" ],
       [ "Window", "class_shit_1_1_window.html", "class_shit_1_1_window" ],
       [ "WindowConfig", "struct_shit_1_1_window_config.html", "struct_shit_1_1_window_config" ]

@@ -27,6 +27,9 @@ var searchData=
   ['_7euirenderercomponent_24',['~UIRendererComponent',['../class_shit_1_1_u_i_renderer_component.html#a00ae90e38d862640edc9e480efde5852',1,'Shit::UIRendererComponent']]],
   ['_7euirendersystem_25',['~UIRenderSystem',['../class_shit_1_1_u_i_render_system.html#a1407caffc6620c32273d150dd0f4d4fa',1,'Shit::UIRenderSystem']]],
   ['_7euitext_26',['~UIText',['../class_shit_1_1_u_i_text.html#a2397a89c4b542bbee0af960e3d9a9ff6',1,'Shit::UIText']]],
-  ['_7euitransform_27',['~UITransform',['../class_shit_1_1_u_i_transform.html#a129168c0d2c7597fd9a7be69a7b3a623',1,'Shit::UITransform']]],
-  ['_7ewindow_28',['~Window',['../class_shit_1_1_window.html#a0124c7e88186e79f35666a69d6cc3547',1,'Shit::Window']]]
+  ['_7euitextarea_27',['~UITextArea',['../class_shit_1_1_u_i_text_area.html#ac550ffe7b6c77e25c8bcb685356be811',1,'Shit::UITextArea']]],
+  ['_7euitextbox_28',['~UITextBox',['../class_shit_1_1_u_i_text_box.html#aebf4244735741a45077ac2be8864a004',1,'Shit::UITextBox']]],
+  ['_7euitextinput_29',['~UITextInput',['../class_shit_1_1_u_i_text_input.html#ad579d52a5f1442144ce1ee292d89edc0',1,'Shit::UITextInput']]],
+  ['_7euitransform_30',['~UITransform',['../class_shit_1_1_u_i_transform.html#a129168c0d2c7597fd9a7be69a7b3a623',1,'Shit::UITransform']]],
+  ['_7ewindow_31',['~Window',['../class_shit_1_1_window.html#a0124c7e88186e79f35666a69d6cc3547',1,'Shit::Window']]]
 ];

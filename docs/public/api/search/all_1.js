@@ -10,5 +10,6 @@ var searchData=
   ['bit_7',['BIT',['../_core_8h.html#ad27cc17b25bb93134368d5eb21126eae',1,'Core.h']]],
   ['blue_8',['blue',['../struct_shit_1_1_color.html#acbbe77d2a1d416eb0f5621ab9e911324',1,'Shit::Color']]],
   ['build_9',['Build',['../class_shit_1_1_prefab.html#a1d22abc417cff2c10acf747b6c1ee93d',1,'Shit::Prefab']]],
-  ['builder_10',['Builder',['../class_shit_1_1_prefab.html#a5a22acdc42fdb4f1a122b2321f6e952b',1,'Shit::Prefab']]]
+  ['builder_10',['Builder',['../class_shit_1_1_prefab.html#a5a22acdc42fdb4f1a122b2321f6e952b',1,'Shit::Prefab']]],
+  ['bytetochar_11',['byteToChar',['../class_shit_1_1_u_i_text_input.html#a8e15e04aabe3a4ea141af363506dbb04',1,'Shit::UITextInput']]]
 ];

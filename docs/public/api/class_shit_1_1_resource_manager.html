@@ -181,9 +181,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a95a2051da3dd8154854122a27c9714f7" id="r_a95a2051da3dd8154854122a27c9714f7"><td class="memItemLeft">static MIX_Audio *&#160;</td><td class="memItemRight"><a class="el" href="#a95a2051da3dd8154854122a27c9714f7">GetAudio</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:a293d58b1556dce47af8451475db7e5db" id="r_a293d58b1556dce47af8451475db7e5db"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a293d58b1556dce47af8451475db7e5db">UnloadAudio</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:a132d07a4ffd0097f21c351066eecf3fb" id="r_a132d07a4ffd0097f21c351066eecf3fb"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a132d07a4ffd0097f21c351066eecf3fb">ClearAudio</a> ()</td></tr>
-<tr class="memitem:a2538639fb4799d3000d4a2efbdd81b4d" id="r_a2538639fb4799d3000d4a2efbdd81b4d"><td class="memItemLeft">static TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="#a2538639fb4799d3000d4a2efbdd81b4d">LoadFont</a> (const std::string &amp;filePath)</td></tr>
-<tr class="memitem:a0a59c0a4ebedc8850b3cee678884e671" id="r_a0a59c0a4ebedc8850b3cee678884e671"><td class="memItemLeft">static TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="#a0a59c0a4ebedc8850b3cee678884e671">GetFont</a> (const std::string &amp;filePath)</td></tr>
-<tr class="memitem:a4cc4dfed4b04252861f2afd6edca979e" id="r_a4cc4dfed4b04252861f2afd6edca979e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4cc4dfed4b04252861f2afd6edca979e">UnloadFont</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memitem:a8426d7a8cba1df3df1f08189e750ea8f" id="r_a8426d7a8cba1df3df1f08189e750ea8f"><td class="memItemLeft">static TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="#a8426d7a8cba1df3df1f08189e750ea8f">LoadFont</a> (const std::string &amp;filePath, float fontSize)</td></tr>
+<tr class="memitem:a55d4aa393669181ec5dcf3073cd78ae3" id="r_a55d4aa393669181ec5dcf3073cd78ae3"><td class="memItemLeft">static TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="#a55d4aa393669181ec5dcf3073cd78ae3">GetFont</a> (const std::string &amp;filePath, float fontSize)</td></tr>
+<tr class="memitem:a38fdd8f7ea8ff98e4e10f911fb2a7304" id="r_a38fdd8f7ea8ff98e4e10f911fb2a7304"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a38fdd8f7ea8ff98e4e10f911fb2a7304">UnloadFont</a> (const std::string &amp;filePath, float fontSize)</td></tr>
 <tr class="memitem:a48cba22a6a68c7adc5ae8672eab58250" id="r_a48cba22a6a68c7adc5ae8672eab58250"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a48cba22a6a68c7adc5ae8672eab58250">ClearFont</a> ()</td></tr>
 <tr class="memitem:a8394950c01f3467de9329b92ec611f07" id="r_a8394950c01f3467de9329b92ec611f07"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8394950c01f3467de9329b92ec611f07">SetAudioMixer</a> (struct MIX_Mixer *mixer)</td></tr>
 </table>
@@ -376,8 +376,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a0a59c0a4ebedc8850b3cee678884e671" name="a0a59c0a4ebedc8850b3cee678884e671"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a59c0a4ebedc8850b3cee678884e671">&#9670;&#160;</a></span>GetFont()</h2>
+<a id="a55d4aa393669181ec5dcf3073cd78ae3" name="a55d4aa393669181ec5dcf3073cd78ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d4aa393669181ec5dcf3073cd78ae3">&#9670;&#160;</a></span>GetFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,8 +388,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">TTF_Font * GetFont </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fontSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -501,8 +505,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a2538639fb4799d3000d4a2efbdd81b4d" name="a2538639fb4799d3000d4a2efbdd81b4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2538639fb4799d3000d4a2efbdd81b4d">&#9670;&#160;</a></span>LoadFont()</h2>
+<a id="a8426d7a8cba1df3df1f08189e750ea8f" name="a8426d7a8cba1df3df1f08189e750ea8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8426d7a8cba1df3df1f08189e750ea8f">&#9670;&#160;</a></span>LoadFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,8 +517,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">TTF_Font * LoadFont </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fontSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -651,8 +659,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a4cc4dfed4b04252861f2afd6edca979e" name="a4cc4dfed4b04252861f2afd6edca979e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cc4dfed4b04252861f2afd6edca979e">&#9670;&#160;</a></span>UnloadFont()</h2>
+<a id="a38fdd8f7ea8ff98e4e10f911fb2a7304" name="a38fdd8f7ea8ff98e4e10f911fb2a7304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38fdd8f7ea8ff98e4e10f911fb2a7304">&#9670;&#160;</a></span>UnloadFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -663,8 +671,12 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void UnloadFont </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fontSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

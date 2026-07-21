@@ -1,0 +1,505 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: UITextArea类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_u_i_text_area.html','','class_shit_1_1_u_i_text_area-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UITextArea类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>多行文本输入区域  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_u_i_text_area_8h_source.html">UITextArea.h</a>&gt;</code></p>
+<div class="dynheader">
+类 UITextArea 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_shit_1_1_u_i_text_area.png" usemap="#UITextArea_map" alt=""/>
+  <map id="UITextArea_map" name="UITextArea_map">
+<area href="class_shit_1_1_u_i_text_input.html" title="文本输入控件抽象基类" alt="UITextInput" shape="rect" coords="0,112,139,136"/>
+<area href="class_shit_1_1_u_i_renderer_component.html" title="UI 渲染控件基类（对应游戏世界的 RendererComponent）" alt="UIRendererComponent" shape="rect" coords="0,56,139,80"/>
+<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="0,0,139,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a63cddb228edf6e767eefdd98f34e2516" id="r_a63cddb228edf6e767eefdd98f34e2516"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a63cddb228edf6e767eefdd98f34e2516">UITextArea</a> ()</td></tr>
+<tr class="memitem:ac550ffe7b6c77e25c8bcb685356be811" id="r_ac550ffe7b6c77e25c8bcb685356be811"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac550ffe7b6c77e25c8bcb685356be811">~UITextArea</a> () override=default</td></tr>
+<tr class="memitem:a412a26808fd971e0441d501e140c20af" id="r_a412a26808fd971e0441d501e140c20af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a412a26808fd971e0441d501e140c20af">setWordWrap</a> (bool enabled)</td></tr>
+<tr class="memitem:a52b12a2d7b5e2fec7478e3715c98c315" id="r_a52b12a2d7b5e2fec7478e3715c98c315"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a52b12a2d7b5e2fec7478e3715c98c315">isWordWrap</a> () const</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_u_i_text_input"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_text_input.html">UITextInput</a></td></tr>
+<tr class="memitem:a4323c909c02ea45b95344e08ce1a6e24 pub_methods_class_shit_1_1_u_i_text_input" id="r_a4323c909c02ea45b95344e08ce1a6e24"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a4323c909c02ea45b95344e08ce1a6e24">UITextInput</a> ()=default</td></tr>
+<tr class="memitem:ad579d52a5f1442144ce1ee292d89edc0 pub_methods_class_shit_1_1_u_i_text_input" id="r_ad579d52a5f1442144ce1ee292d89edc0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ad579d52a5f1442144ce1ee292d89edc0">~UITextInput</a> () override</td></tr>
+<tr class="memitem:a2dfac7d5a90b7c54fb0b0f34450988ee pub_methods_class_shit_1_1_u_i_text_input" id="r_a2dfac7d5a90b7c54fb0b0f34450988ee"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a2dfac7d5a90b7c54fb0b0f34450988ee">getText</a> () const</td></tr>
+<tr class="memitem:abcc31618c2701589d453ee7ec2198b15 pub_methods_class_shit_1_1_u_i_text_input" id="r_abcc31618c2701589d453ee7ec2198b15"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#abcc31618c2701589d453ee7ec2198b15">setText</a> (const std::string &amp;text)</td></tr>
+<tr class="memitem:aba3f650a11bf50e676377bb7601b0b44 pub_methods_class_shit_1_1_u_i_text_input" id="r_aba3f650a11bf50e676377bb7601b0b44"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aba3f650a11bf50e676377bb7601b0b44">getPlaceholder</a> () const</td></tr>
+<tr class="memitem:abab5cd0e42c632ffc53abc41e9048a78 pub_methods_class_shit_1_1_u_i_text_input" id="r_abab5cd0e42c632ffc53abc41e9048a78"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#abab5cd0e42c632ffc53abc41e9048a78">setPlaceholder</a> (const std::string &amp;placeholder)</td></tr>
+<tr class="memitem:a68d3ab9331c4b1086e0692b0288e89c0 pub_methods_class_shit_1_1_u_i_text_input" id="r_a68d3ab9331c4b1086e0692b0288e89c0"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a68d3ab9331c4b1086e0692b0288e89c0">getFontPath</a> () const</td></tr>
+<tr class="memitem:a902009b3327ae6ee6314dc0a8cabf0b1 pub_methods_class_shit_1_1_u_i_text_input" id="r_a902009b3327ae6ee6314dc0a8cabf0b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a902009b3327ae6ee6314dc0a8cabf0b1">setFontPath</a> (const std::string &amp;fontPath)</td></tr>
+<tr class="memitem:a04d14d037f00dc9ed6bfa3b7efff33fd pub_methods_class_shit_1_1_u_i_text_input" id="r_a04d14d037f00dc9ed6bfa3b7efff33fd"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a04d14d037f00dc9ed6bfa3b7efff33fd">getFontSize</a> () const</td></tr>
+<tr class="memitem:ab30b5fdc3e433e5af1dacb7e4ee1834f pub_methods_class_shit_1_1_u_i_text_input" id="r_ab30b5fdc3e433e5af1dacb7e4ee1834f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ab30b5fdc3e433e5af1dacb7e4ee1834f">setFontSize</a> (float fontSize)</td></tr>
+<tr class="memitem:ab6290c5dcc3b5716d29ead2a86670753 pub_methods_class_shit_1_1_u_i_text_input" id="r_ab6290c5dcc3b5716d29ead2a86670753"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ab6290c5dcc3b5716d29ead2a86670753">getFontHeight</a> () const</td></tr>
+<tr class="memitem:a233434431abbd3c5469b55493efcc99b pub_methods_class_shit_1_1_u_i_text_input" id="r_a233434431abbd3c5469b55493efcc99b"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a233434431abbd3c5469b55493efcc99b">getTextColor</a> () const</td></tr>
+<tr class="memitem:a2f158681edd898361ae8951f66cfda55 pub_methods_class_shit_1_1_u_i_text_input" id="r_a2f158681edd898361ae8951f66cfda55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a2f158681edd898361ae8951f66cfda55">setTextColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memitem:ab26532f5785cae73973ad3050a0ffe38 pub_methods_class_shit_1_1_u_i_text_input" id="r_ab26532f5785cae73973ad3050a0ffe38"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ab26532f5785cae73973ad3050a0ffe38">getPlaceholderColor</a> () const</td></tr>
+<tr class="memitem:a494317da0b081a21aa666c2e6ebc27d7 pub_methods_class_shit_1_1_u_i_text_input" id="r_a494317da0b081a21aa666c2e6ebc27d7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a494317da0b081a21aa666c2e6ebc27d7">setPlaceholderColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memitem:a0868e4aa344cd21b905d15bcebdeccfc pub_methods_class_shit_1_1_u_i_text_input" id="r_a0868e4aa344cd21b905d15bcebdeccfc"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a0868e4aa344cd21b905d15bcebdeccfc">getCursorColor</a> () const</td></tr>
+<tr class="memitem:aac9677b5833bf85e4a51e6f841a062fb pub_methods_class_shit_1_1_u_i_text_input" id="r_aac9677b5833bf85e4a51e6f841a062fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aac9677b5833bf85e4a51e6f841a062fb">setCursorColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memitem:a441f2c8ed1686b5044c74a05124a41fc pub_methods_class_shit_1_1_u_i_text_input" id="r_a441f2c8ed1686b5044c74a05124a41fc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a441f2c8ed1686b5044c74a05124a41fc">isFocused</a> () const</td></tr>
+<tr class="memitem:a15d22962f85802c13bbb42e19e4a9a16 pub_methods_class_shit_1_1_u_i_text_input" id="r_a15d22962f85802c13bbb42e19e4a9a16"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a15d22962f85802c13bbb42e19e4a9a16">isMultiline</a> () const</td></tr>
+<tr class="memitem:a832f9bb296437eac26af3d4ab7d77e89 pub_methods_class_shit_1_1_u_i_text_input" id="r_a832f9bb296437eac26af3d4ab7d77e89"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a832f9bb296437eac26af3d4ab7d77e89">onTextInput</a> (const char *utf8Text)</td></tr>
+<tr class="memitem:a3815d3d07b9d43c522b59a7a9cff6a44 pub_methods_class_shit_1_1_u_i_text_input" id="r_a3815d3d07b9d43c522b59a7a9cff6a44"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a3815d3d07b9d43c522b59a7a9cff6a44">onTextEditing</a> (const char *utf8Text, int start, int length)</td></tr>
+<tr class="memitem:aab691187cf2dfce02ae9b089b370a550 pub_methods_class_shit_1_1_u_i_text_input" id="r_aab691187cf2dfce02ae9b089b370a550"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aab691187cf2dfce02ae9b089b370a550">setFocused</a> (bool focused)</td></tr>
+<tr class="memdesc:aab691187cf2dfce02ae9b089b370a550 pub_methods_class_shit_1_1_u_i_text_input"><td class="mdescLeft">&#160;</td><td class="mdescRight">由 <a class="el" href="class_shit_1_1_u_i_render_system.html" title="UI 渲染系统">UIRenderSystem</a> 在命中时调用，切换聚焦  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:aa8115cc4430d4879d11ade1d62666ec1 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_aa8115cc4430d4879d11ade1d62666ec1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#aa8115cc4430d4879d11ade1d62666ec1">UIRendererComponent</a> ()</td></tr>
+<tr class="memitem:a00ae90e38d862640edc9e480efde5852 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a00ae90e38d862640edc9e480efde5852"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a00ae90e38d862640edc9e480efde5852">~UIRendererComponent</a> () override=default</td></tr>
+<tr class="memitem:acbef2688cd43fd22241759f89fe12d28 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
+<tr class="memitem:a54bac52aa663b2cfa92d215d590cda45 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a54bac52aa663b2cfa92d215d590cda45"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a54bac52aa663b2cfa92d215d590cda45">containsPoint</a> (const SDL_FRect &amp;screenRect, const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;point) const</td></tr>
+<tr class="memdesc:a54bac52aa663b2cfa92d215d590cda45 pub_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">点击命中检测：默认矩形内即命中，子类可覆写为更精确的形状  <br /></td></tr>
+<tr class="memitem:ad51138fd45b987bf8edbc766b4875122 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ad51138fd45b987bf8edbc766b4875122"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ad51138fd45b987bf8edbc766b4875122">getZIndex</a> () const</td></tr>
+<tr class="memitem:ac303f527d4eeb6055c6e1d3575dbdf7a pub_methods_class_shit_1_1_u_i_renderer_component" id="r_ac303f527d4eeb6055c6e1d3575dbdf7a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac303f527d4eeb6055c6e1d3575dbdf7a">setZIndex</a> (int zIndex)</td></tr>
+<tr class="memitem:a9d8a6cfb13917785c143e74d40e4e2be pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a9d8a6cfb13917785c143e74d40e4e2be"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be">isVisible</a> () const</td></tr>
+<tr class="memitem:a18e44e30b31525a243960ca3928125aa pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a18e44e30b31525a243960ca3928125aa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a18e44e30b31525a243960ca3928125aa">setVisible</a> (bool visible)</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a0171e1571f18dc6a27c8b041de55feec pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
+<tr class="memitem:ab8905908be361c6fce216879f4739d98 pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
+<tr class="memitem:a58db3b5933199c866796fade5e1ad722 pub_methods_class_shit_1_1_component" id="r_a58db3b5933199c866796fade5e1ad722"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722">onCreate</a> ()</td></tr>
+<tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054 pub_methods_class_shit_1_1_component" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const Component &amp;)=delete</td></tr>
+<tr class="memitem:ace504c89f605c2e53f2450021ebca56e pub_methods_class_shit_1_1_component" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;)=delete</td></tr>
+<tr class="memitem:aa85c694df3855843a20a64cb0fc17233 pub_methods_class_shit_1_1_component" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a> (Component &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a34f2dae077ca6d1b6e3a39201c79c796 pub_methods_class_shit_1_1_component" id="r_a34f2dae077ca6d1b6e3a39201c79c796"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a> (<a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a9b36b6de005b18dd7c77687d8621774a pub_methods_class_shit_1_1_component" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
+<tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246 pub_methods_class_shit_1_1_component" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a2e739ff12d1cf50a1139791b2a425d58" id="r_a2e739ff12d1cf50a1139791b2a425d58"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e739ff12d1cf50a1139791b2a425d58">onRender</a> (SDL_Renderer *renderer, const SDL_FRect &amp;screenRect) override</td></tr>
+<tr class="memdesc:a2e739ff12d1cf50a1139791b2a425d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身  <br /></td></tr>
+<tr class="memitem:a2dd1febbc896f7ef20da9da6a2807919" id="r_a2dd1febbc896f7ef20da9da6a2807919"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2dd1febbc896f7ef20da9da6a2807919">onKeyDown</a> (SDL_Scancode scancode, bool shift, bool ctrl) override</td></tr>
+<tr class="memdesc:a2dd1febbc896f7ef20da9da6a2807919"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车）  <br /></td></tr>
+<tr class="memitem:ac717c35a0270efeda965d8c421e6b4e4" id="r_ac717c35a0270efeda965d8c421e6b4e4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac717c35a0270efeda965d8c421e6b4e4">insertNewline</a> () override</td></tr>
+<tr class="memdesc:ac717c35a0270efeda965d8c421e6b4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：当前选区是否被替换为换行（UITextBox 拒绝）  <br /></td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_u_i_text_input"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_text_input.html">UITextInput</a></td></tr>
+<tr class="memitem:a6c06654383aa646d4a6e7976fad6fd51 pro_methods_class_shit_1_1_u_i_text_input" id="r_a6c06654383aa646d4a6e7976fad6fd51"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a6c06654383aa646d4a6e7976fad6fd51">insertText</a> (const std::string &amp;utf8)</td></tr>
+<tr class="memdesc:a6c06654383aa646d4a6e7976fad6fd51 pro_methods_class_shit_1_1_u_i_text_input"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：向缓冲插入一段 UTF-8 文本  <br /></td></tr>
+<tr class="memitem:aef02e686edd7299eef004c09052c98f3 pro_methods_class_shit_1_1_u_i_text_input" id="r_aef02e686edd7299eef004c09052c98f3"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aef02e686edd7299eef004c09052c98f3">getCharacterCount</a> () const</td></tr>
+<tr class="memdesc:aef02e686edd7299eef004c09052c98f3 pro_methods_class_shit_1_1_u_i_text_input"><td class="mdescLeft">&#160;</td><td class="mdescRight">以"字符"计算文本长度  <br /></td></tr>
+<tr class="memitem:a3eb72dbc9ad35c67e4435afb840c2d8b pro_methods_class_shit_1_1_u_i_text_input" id="r_a3eb72dbc9ad35c67e4435afb840c2d8b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a3eb72dbc9ad35c67e4435afb840c2d8b">markDirty</a> ()</td></tr>
+<tr class="memdesc:a3eb72dbc9ad35c67e4435afb840c2d8b pro_methods_class_shit_1_1_u_i_text_input"><td class="mdescLeft">&#160;</td><td class="mdescRight">标记脏位（下一帧重建纹理/布局）  <br /></td></tr>
+<tr class="memitem:ab65cba211d6486cd375ae0c9dad0b059 pro_methods_class_shit_1_1_u_i_text_input" id="r_ab65cba211d6486cd375ae0c9dad0b059"><td class="memItemLeft">TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ab65cba211d6486cd375ae0c9dad0b059">acquireFont</a> ()</td></tr>
+<tr class="memdesc:ab65cba211d6486cd375ae0c9dad0b059 pro_methods_class_shit_1_1_u_i_text_input"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取或加载字体（进程级缓存，跨 UITextInput/UITextBox/UITextArea 共享）  <br /></td></tr>
+<tr class="memitem:ac4bf2d612c3382d03d1424f83cfc8625 pro_methods_class_shit_1_1_u_i_text_input" id="r_ac4bf2d612c3382d03d1424f83cfc8625"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ac4bf2d612c3382d03d1424f83cfc8625">deleteSelection</a> ()</td></tr>
+<tr class="memitem:a9e55f123e1e534abe4c64ebf2a6231a4 pro_methods_class_shit_1_1_u_i_text_input" id="r_a9e55f123e1e534abe4c64ebf2a6231a4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a9e55f123e1e534abe4c64ebf2a6231a4">moveCursor</a> (int deltaChars, bool selecting)</td></tr>
+<tr class="memitem:ad4564c96d588002d412aa6c347d7f750 pro_methods_class_shit_1_1_u_i_text_input" id="r_ad4564c96d588002d412aa6c347d7f750"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ad4564c96d588002d412aa6c347d7f750">moveCursorToBoundary</a> (bool toStart, bool selecting)</td></tr>
+<tr class="memitem:a9952698f624131a4d1e58d13139ba41e pro_methods_class_shit_1_1_u_i_text_input" id="r_a9952698f624131a4d1e58d13139ba41e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a9952698f624131a4d1e58d13139ba41e">clampCursor</a> ()</td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:ac6eb6cd5c4468fe1c73fad58e704dda8 pro_methods_class_shit_1_1_u_i_renderer_component" id="r_ac6eb6cd5c4468fe1c73fad58e704dda8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac6eb6cd5c4468fe1c73fad58e704dda8">requestSort</a> ()</td></tr>
+<tr class="memdesc:ac6eb6cd5c4468fe1c73fad58e704dda8 pro_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">components变更后通知系统重排（实例：zIndex 变化）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_static_methods_class_shit_1_1_u_i_text_input"><td colspan="2">静态 Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_text_input.html">UITextInput</a></td></tr>
+<tr class="memitem:a4d1dfdc2cb04cba41969cf7b87a8ecba pro_static_methods_class_shit_1_1_u_i_text_input" id="r_a4d1dfdc2cb04cba41969cf7b87a8ecba"><td class="memItemLeft">static size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a4d1dfdc2cb04cba41969cf7b87a8ecba">charToByte</a> (const std::string &amp;s, size_t charIdx)</td></tr>
+<tr class="memitem:a8e15e04aabe3a4ea141af363506dbb04 pro_static_methods_class_shit_1_1_u_i_text_input" id="r_a8e15e04aabe3a4ea141af363506dbb04"><td class="memItemLeft">static size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a8e15e04aabe3a4ea141af363506dbb04">byteToChar</a> (const std::string &amp;s, size_t byteOff)</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_u_i_text_input"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_u_i_text_input.html">UITextInput</a></td></tr>
+<tr class="memitem:aca23c0af6eb03dee60ce43358c566f8b pro_attribs_class_shit_1_1_u_i_text_input" id="r_aca23c0af6eb03dee60ce43358c566f8b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aca23c0af6eb03dee60ce43358c566f8b">m_isFocused</a> = false</td></tr>
+<tr class="memitem:a2030cb6d4dc0a9bad899c7930549826b pro_attribs_class_shit_1_1_u_i_text_input" id="r_a2030cb6d4dc0a9bad899c7930549826b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a2030cb6d4dc0a9bad899c7930549826b">m_isMultiline</a> = false</td></tr>
+<tr class="memitem:aa15b95dc40e2d916d40df17f5dea8ed4 pro_attribs_class_shit_1_1_u_i_text_input" id="r_aa15b95dc40e2d916d40df17f5dea8ed4"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aa15b95dc40e2d916d40df17f5dea8ed4">m_text</a></td></tr>
+<tr class="memitem:ae4e48e7613e2cc5c0ff8b67ec846e6b2 pro_attribs_class_shit_1_1_u_i_text_input" id="r_ae4e48e7613e2cc5c0ff8b67ec846e6b2"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ae4e48e7613e2cc5c0ff8b67ec846e6b2">m_placeholder</a></td></tr>
+<tr class="memitem:ae9964148c0b74ea072f3253793c6bcf2 pro_attribs_class_shit_1_1_u_i_text_input" id="r_ae9964148c0b74ea072f3253793c6bcf2"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ae9964148c0b74ea072f3253793c6bcf2">m_fontPath</a></td></tr>
+<tr class="memitem:a9d77e0b08aad7f25ae87d63d83f422ed pro_attribs_class_shit_1_1_u_i_text_input" id="r_a9d77e0b08aad7f25ae87d63d83f422ed"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a9d77e0b08aad7f25ae87d63d83f422ed">m_fontSize</a> = 24.0f</td></tr>
+<tr class="memitem:a064c5603add19251ab8389c4601cca60 pro_attribs_class_shit_1_1_u_i_text_input" id="r_a064c5603add19251ab8389c4601cca60"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a064c5603add19251ab8389c4601cca60">m_fontHeight</a> = 0.0f</td></tr>
+<tr class="memitem:a0d5f58d7273aff0d7a1dbb33172d8528 pro_attribs_class_shit_1_1_u_i_text_input" id="r_a0d5f58d7273aff0d7a1dbb33172d8528"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a0d5f58d7273aff0d7a1dbb33172d8528">m_textColor</a> { 30, 30, 30, 255 }</td></tr>
+<tr class="memitem:ae83c798b2852f1bf170bff7922a400a8 pro_attribs_class_shit_1_1_u_i_text_input" id="r_ae83c798b2852f1bf170bff7922a400a8"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ae83c798b2852f1bf170bff7922a400a8">m_placeholderColor</a> { 140, 140, 140, 255 }</td></tr>
+<tr class="memitem:a2443d09673934b4527c64cf2a857276e pro_attribs_class_shit_1_1_u_i_text_input" id="r_a2443d09673934b4527c64cf2a857276e"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a2443d09673934b4527c64cf2a857276e">m_cursorColor</a> { 80, 140, 220, 255 }</td></tr>
+<tr class="memitem:afb7039dd5c56c4af61b88af0ad1755b5 pro_attribs_class_shit_1_1_u_i_text_input" id="r_afb7039dd5c56c4af61b88af0ad1755b5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#afb7039dd5c56c4af61b88af0ad1755b5">m_isDirty</a> = true</td></tr>
+<tr class="memitem:aa813bd03e0d5fec301fcc77d825008d2 pro_attribs_class_shit_1_1_u_i_text_input" id="r_aa813bd03e0d5fec301fcc77d825008d2"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aa813bd03e0d5fec301fcc77d825008d2">m_cursor</a> = 0</td></tr>
+<tr class="memitem:a4c8e96d9a266161128cde1ab31f91208 pro_attribs_class_shit_1_1_u_i_text_input" id="r_a4c8e96d9a266161128cde1ab31f91208"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a4c8e96d9a266161128cde1ab31f91208">m_selectionAnchor</a> = 0</td></tr>
+<tr class="memitem:a980e3cb951c3d50008c4e6ba92ac9074 pro_attribs_class_shit_1_1_u_i_text_input" id="r_a980e3cb951c3d50008c4e6ba92ac9074"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a980e3cb951c3d50008c4e6ba92ac9074">m_preedit</a></td></tr>
+<tr class="memitem:ac5ebb2c5955cf49ab6d6d77a092ca930 pro_attribs_class_shit_1_1_u_i_text_input" id="r_ac5ebb2c5955cf49ab6d6d77a092ca930"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ac5ebb2c5955cf49ab6d6d77a092ca930">m_preeditStart</a> = 0</td></tr>
+<tr class="memitem:a6c722ef4358d626c3725e13080739005 pro_attribs_class_shit_1_1_u_i_text_input" id="r_a6c722ef4358d626c3725e13080739005"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a6c722ef4358d626c3725e13080739005">m_preeditLength</a> = 0</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_u_i_renderer_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:a2b31866ba7ed40c82edd92abe0081948 pro_attribs_class_shit_1_1_u_i_renderer_component" id="r_a2b31866ba7ed40c82edd92abe0081948"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948">m_zIndex</a> = 0</td></tr>
+<tr class="memdesc:a2b31866ba7ed40c82edd92abe0081948 pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染层级（值越大越靠上）  <br /></td></tr>
+<tr class="memitem:ace177fa285e5e88a6ba132129f89b73c pro_attribs_class_shit_1_1_u_i_renderer_component" id="r_ace177fa285e5e88a6ba132129f89b73c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ace177fa285e5e88a6ba132129f89b73c">m_isVisible</a> = true</td></tr>
+<tr class="memdesc:ace177fa285e5e88a6ba132129f89b73c pro_attribs_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否参与渲染与命中  <br /></td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
+<tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>多行文本输入区域 </p>
+<p>支持换行（Enter 插入 '<br  />
+'），自动换行由后续版本支持；当前为软包裹可选。 上下方向键按"逻辑行"移动光标（按 '<br  />
+' 切分文本）。</p>
+<p>用法与 <a class="el" href="class_shit_1_1_u_i_text_box.html" title="单行文本输入框">UITextBox</a> 一致，构造即可用。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a63cddb228edf6e767eefdd98f34e2516" name="a63cddb228edf6e767eefdd98f34e2516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cddb228edf6e767eefdd98f34e2516">&#9670;&#160;</a></span>UITextArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UITextArea </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac550ffe7b6c77e25c8bcb685356be811" name="ac550ffe7b6c77e25c8bcb685356be811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac550ffe7b6c77e25c8bcb685356be811">&#9670;&#160;</a></span>~UITextArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a63cddb228edf6e767eefdd98f34e2516">UITextArea</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ac717c35a0270efeda965d8c421e6b4e4" name="ac717c35a0270efeda965d8c421e6b4e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac717c35a0270efeda965d8c421e6b4e4">&#9670;&#160;</a></span>insertNewline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void insertNewline </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>子类可覆写：当前选区是否被替换为换行（UITextBox 拒绝） </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_u_i_text_input.html#a8732d4dd1ea8c421808f3595087995a7">UITextInput</a> .</p>
+
+</div>
+</div>
+<a id="a52b12a2d7b5e2fec7478e3715c98c315" name="a52b12a2d7b5e2fec7478e3715c98c315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b12a2d7b5e2fec7478e3715c98c315">&#9670;&#160;</a></span>isWordWrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isWordWrap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dd1febbc896f7ef20da9da6a2807919" name="a2dd1febbc896f7ef20da9da6a2807919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd1febbc896f7ef20da9da6a2807919">&#9670;&#160;</a></span>onKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool onKeyDown </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Scancode</td>          <td class="paramname"><span class="paramname"><em>scancode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>shift</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车） </p>
+<dl class="section return"><dt>返回</dt><dd>true 表示已处理该按键，不继续传播 </dd></dl>
+
+<p>重载 <a class="el" href="class_shit_1_1_u_i_text_input.html#a97e1640618356c0fd8b5103ca391d767">UITextInput</a> .</p>
+
+</div>
+</div>
+<a id="a2e739ff12d1cf50a1139791b2a425d58" name="a2e739ff12d1cf50a1139791b2a425d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e739ff12d1cf50a1139791b2a425d58">&#9670;&#160;</a></span>onRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onRender </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>screenRect</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>子类实现：在给定屏幕矩形内绘制自身 </p>
+
+<p>实现了 <a class="el" href="class_shit_1_1_u_i_text_input.html#a130411c209107fe5bb351c0db6b17248">UITextInput</a>.</p>
+
+</div>
+</div>
+<a id="a412a26808fd971e0441d501e140c20af" name="a412a26808fd971e0441d501e140c20af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412a26808fd971e0441d501e140c20af">&#9670;&#160;</a></span>setWordWrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setWordWrap </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/UI/<a class="el" href="_u_i_text_area_8h_source.html">UITextArea.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_u_i_text_area.html">UITextArea</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

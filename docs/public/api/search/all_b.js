@@ -7,7 +7,7 @@ var searchData=
   ['leftbracket_4',['LeftBracket',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da481c09f513474b2d31ba5c2992947b17',1,'Shit']]],
   ['lgui_5',['LGui',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0dafefd8998f6e031552da872b5cbe47c4f',1,'Shit']]],
   ['loadaudio_6',['LoadAudio',['../class_shit_1_1_resource_manager.html#a029bd523f3b16c95c42c64fb90a609c1',1,'Shit::ResourceManager']]],
-  ['loadfont_7',['LoadFont',['../class_shit_1_1_resource_manager.html#a2538639fb4799d3000d4a2efbdd81b4d',1,'Shit::ResourceManager']]],
+  ['loadfont_7',['LoadFont',['../class_shit_1_1_resource_manager.html#a8426d7a8cba1df3df1f08189e750ea8f',1,'Shit::ResourceManager']]],
   ['loadfromjson_8',['loadFromJson',['../class_shit_1_1_config.html#af061be3a4cb4f6095c8f35912f912560',1,'Shit::Config']]],
   ['loadtexture_9',['LoadTexture',['../class_shit_1_1_resource_manager.html#ad725872fe5683084c429452249fc1e7e',1,'Shit::ResourceManager']]],
   ['log_10',['Log',['../class_shit_1_1_log.html',1,'Shit']]],
