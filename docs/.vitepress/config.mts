@@ -58,7 +58,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/ShitTeam/ShitEngine/edit/main/docs/:path'
+      pattern: 'https://github.com/ShitTeam/ShitEngine-Docs/edit/main/docs/:path'
     }
   }
 })
