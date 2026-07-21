@@ -93,8 +93,8 @@ tf->setAnchorMin({0.0f, 0.0f});
 tf->setAnchorMax({0.25f, 1.0f});
 
 // 底部分隔栏（锚在底部，占满宽度）
-tf->setAnchorMin({0.0f, 0.0f});
-tf->setAnchorMax({1.0f, 0.1f});
+tf->setAnchorMin({0.0f, 0.9f});
+tf->setAnchorMax({1.0f, 1.0f});
 ```
 
 ### 父子层级
