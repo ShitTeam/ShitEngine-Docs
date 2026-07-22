@@ -9,5 +9,7 @@ var searchData=
   ['disabled_6',['Disabled',['../class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8ab9f5c797ebbf55adccdd8539a65a0241',1,'Shit::UIButton']]],
   ['disabledcolor_7',['disabledColor',['../struct_shit_1_1_u_i_button_1_1_color_block.html#a6714329941f6a3660e68a65a6e0c515a',1,'Shit::UIButton::ColorBlock']]],
   ['down_8',['Down',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da08a38277b0309070706f6652eeae9a53',1,'Shit']]],
-  ['drawsprite_9',['DrawSprite',['../class_shit_1_1_renderer.html#a4fdb65e37b1d8c3a170fab28fe818fe0',1,'Shit::Renderer']]]
+  ['drawsprite_9',['DrawSprite',['../class_shit_1_1_renderer.html#a4fdb65e37b1d8c3a170fab28fe818fe0',1,'Shit::Renderer']]],
+  ['drawtexture_10',['DrawTexture',['../class_shit_1_1_renderer.html#a8a4709d0c3fd54a97b962e0ddb6a43b8',1,'Shit::Renderer']]],
+  ['drawtexturerotated_11',['DrawTextureRotated',['../class_shit_1_1_renderer.html#a3e26375150450d206d32ae6c690b5fba',1,'Shit::Renderer']]]
 ];

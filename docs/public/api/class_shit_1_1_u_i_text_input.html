@@ -220,8 +220,8 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
-<tr class="memitem:a130411c209107fe5bb351c0db6b17248" id="r_a130411c209107fe5bb351c0db6b17248"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a130411c209107fe5bb351c0db6b17248">onRender</a> (SDL_Renderer *renderer, const SDL_FRect &amp;screenRect) override=0</td></tr>
-<tr class="memdesc:a130411c209107fe5bb351c0db6b17248"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身  <br /></td></tr>
+<tr class="memitem:a795d8967288a69be0eaec2890881a96c" id="r_a795d8967288a69be0eaec2890881a96c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a795d8967288a69be0eaec2890881a96c">onRender</a> (const SDL_FRect &amp;screenRect) override=0</td></tr>
+<tr class="memdesc:a795d8967288a69be0eaec2890881a96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身（通过 <a class="el" href="class_shit_1_1_renderer.html" title="渲染器，封装 SDL3 绘制 API">Renderer</a> 静态 API 绘制）  <br /></td></tr>
 <tr class="memitem:a97e1640618356c0fd8b5103ca391d767" id="r_a97e1640618356c0fd8b5103ca391d767"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a97e1640618356c0fd8b5103ca391d767">onKeyDown</a> (SDL_Scancode scancode, bool shift, bool ctrl)</td></tr>
 <tr class="memdesc:a97e1640618356c0fd8b5103ca391d767"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车）  <br /></td></tr>
 <tr class="memitem:a6c06654383aa646d4a6e7976fad6fd51" id="r_a6c06654383aa646d4a6e7976fad6fd51"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6c06654383aa646d4a6e7976fad6fd51">insertText</a> (const std::string &amp;utf8)</td></tr>
@@ -246,6 +246,9 @@ Protected 成员函数</h2></td></tr>
 静态 Protected 成员函数</h2></td></tr>
 <tr class="memitem:a4d1dfdc2cb04cba41969cf7b87a8ecba" id="r_a4d1dfdc2cb04cba41969cf7b87a8ecba"><td class="memItemLeft">static size_t&#160;</td><td class="memItemRight"><a class="el" href="#a4d1dfdc2cb04cba41969cf7b87a8ecba">charToByte</a> (const std::string &amp;s, size_t charIdx)</td></tr>
 <tr class="memitem:a8e15e04aabe3a4ea141af363506dbb04" id="r_a8e15e04aabe3a4ea141af363506dbb04"><td class="memItemLeft">static size_t&#160;</td><td class="memItemRight"><a class="el" href="#a8e15e04aabe3a4ea141af363506dbb04">byteToChar</a> (const std::string &amp;s, size_t byteOff)</td></tr>
+<tr class="inherit_header pro_static_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2">静态 Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:acd9be94033c0cc9329ee561083b8d112 pro_static_methods_class_shit_1_1_u_i_renderer_component" id="r_acd9be94033c0cc9329ee561083b8d112"><td class="memItemLeft">static SDL_Color&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#acd9be94033c0cc9329ee561083b8d112">toSDLColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:acd9be94033c0cc9329ee561083b8d112 pro_static_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_shit_1_1_color.html" title="RGBA 颜色（每通道 8 位）">Color</a> → SDL_Color 边界转换（供 <a class="el" href="class_shit_1_1_u_i_text.html" title="UI 文字控件，使用 SDL_ttf 渲染文字到纹理">UIText</a> / <a class="el" href="class_shit_1_1_u_i_text_input.html" title="文本输入控件抽象基类">UITextInput</a> 系列传给 SDL_ttf 用）  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
@@ -934,8 +937,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a130411c209107fe5bb351c0db6b17248" name="a130411c209107fe5bb351c0db6b17248"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a130411c209107fe5bb351c0db6b17248">&#9670;&#160;</a></span>onRender()</h2>
+<a id="a795d8967288a69be0eaec2890881a96c" name="a795d8967288a69be0eaec2890881a96c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a795d8967288a69be0eaec2890881a96c">&#9670;&#160;</a></span>onRender()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -946,12 +949,8 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">void onRender </td>
           <td>(</td>
-          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>screenRect</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>screenRect</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -961,11 +960,11 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>子类实现：在给定屏幕矩形内绘制自身 </p>
+<p>子类实现：在给定屏幕矩形内绘制自身（通过 <a class="el" href="class_shit_1_1_renderer.html" title="渲染器，封装 SDL3 绘制 API">Renderer</a> 静态 API 绘制） </p>
 
-<p>实现了 <a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac2c1c3e429580f4cca1c963ea4e0fd65">UIRendererComponent</a>.</p>
+<p>实现了 <a class="el" href="class_shit_1_1_u_i_renderer_component.html#a583ec28df81a630cd82b1d4e53158a51">UIRendererComponent</a>.</p>
 
-<p>在 <a class="el" href="class_shit_1_1_u_i_text_area.html#a2e739ff12d1cf50a1139791b2a425d58">UITextArea</a> , 以及 <a class="el" href="class_shit_1_1_u_i_text_box.html#a2e739ff12d1cf50a1139791b2a425d58">UITextBox</a> 内被实现.</p>
+<p>在 <a class="el" href="class_shit_1_1_u_i_text_area.html#a8adfc83bac4d4f3cef97c20208350515">UITextArea</a> , 以及 <a class="el" href="class_shit_1_1_u_i_text_box.html#a8adfc83bac4d4f3cef97c20208350515">UITextBox</a> 内被实现.</p>
 
 </div>
 </div>

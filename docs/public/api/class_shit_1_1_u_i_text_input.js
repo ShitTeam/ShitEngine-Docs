@@ -22,7 +22,7 @@ var class_shit_1_1_u_i_text_input =
     [ "moveCursor", "class_shit_1_1_u_i_text_input.html#a9e55f123e1e534abe4c64ebf2a6231a4", null ],
     [ "moveCursorToBoundary", "class_shit_1_1_u_i_text_input.html#ad4564c96d588002d412aa6c347d7f750", null ],
     [ "onKeyDown", "class_shit_1_1_u_i_text_input.html#a97e1640618356c0fd8b5103ca391d767", null ],
-    [ "onRender", "class_shit_1_1_u_i_text_input.html#a130411c209107fe5bb351c0db6b17248", null ],
+    [ "onRender", "class_shit_1_1_u_i_text_input.html#a795d8967288a69be0eaec2890881a96c", null ],
     [ "onTextEditing", "class_shit_1_1_u_i_text_input.html#a3815d3d07b9d43c522b59a7a9cff6a44", null ],
     [ "onTextInput", "class_shit_1_1_u_i_text_input.html#a832f9bb296437eac26af3d4ab7d77e89", null ],
     [ "setCursorColor", "class_shit_1_1_u_i_text_input.html#aac9677b5833bf85e4a51e6f841a062fb", null ],

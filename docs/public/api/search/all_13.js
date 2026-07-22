@@ -11,7 +11,8 @@ var searchData=
   ['time_8',['Time',['../class_shit_1_1_time.html',1,'Time'],['../class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5',1,'Shit::Time::Time(const Time &amp;)=delete'],['../class_shit_1_1_time.html#a3cd15566d901c8904f275f8f3b828bf5',1,'Shit::Time::Time(Time &amp;&amp;)=delete']]],
   ['time_2eh_9',['Time.h',['../_time_8h.html',1,'']]],
   ['title_10',['title',['../struct_shit_1_1_window_config.html#ac30fed21fe991cc8475ce543929f8b72',1,'Shit::WindowConfig']]],
-  ['trace_11',['Trace',['../class_shit_1_1_log.html#a24db4d83b8dddf7b919548e19a2a912a',1,'Shit::Log']]],
-  ['transformcomponent_12',['TransformComponent',['../class_shit_1_1_transform_component.html',1,'TransformComponent'],['../class_shit_1_1_transform_component.html#a666d167dbdf85cdc16b62d17d0201e73',1,'Shit::TransformComponent::TransformComponent()']]],
-  ['transformcomponent_2eh_13',['TransformComponent.h',['../_transform_component_8h.html',1,'']]]
+  ['tosdlcolor_11',['toSDLColor',['../class_shit_1_1_u_i_renderer_component.html#acd9be94033c0cc9329ee561083b8d112',1,'Shit::UIRendererComponent']]],
+  ['trace_12',['Trace',['../class_shit_1_1_log.html#a24db4d83b8dddf7b919548e19a2a912a',1,'Shit::Log']]],
+  ['transformcomponent_13',['TransformComponent',['../class_shit_1_1_transform_component.html',1,'TransformComponent'],['../class_shit_1_1_transform_component.html#a666d167dbdf85cdc16b62d17d0201e73',1,'Shit::TransformComponent::TransformComponent()']]],
+  ['transformcomponent_2eh_14',['TransformComponent.h',['../_transform_component_8h.html',1,'']]]
 ];

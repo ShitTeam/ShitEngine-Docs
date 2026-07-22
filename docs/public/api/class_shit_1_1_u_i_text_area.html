@@ -175,8 +175,6 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a63cddb228edf6e767eefdd98f34e2516" id="r_a63cddb228edf6e767eefdd98f34e2516"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a63cddb228edf6e767eefdd98f34e2516">UITextArea</a> ()</td></tr>
 <tr class="memitem:ac550ffe7b6c77e25c8bcb685356be811" id="r_ac550ffe7b6c77e25c8bcb685356be811"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac550ffe7b6c77e25c8bcb685356be811">~UITextArea</a> () override=default</td></tr>
-<tr class="memitem:a412a26808fd971e0441d501e140c20af" id="r_a412a26808fd971e0441d501e140c20af"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a412a26808fd971e0441d501e140c20af">setWordWrap</a> (bool enabled)</td></tr>
-<tr class="memitem:a52b12a2d7b5e2fec7478e3715c98c315" id="r_a52b12a2d7b5e2fec7478e3715c98c315"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a52b12a2d7b5e2fec7478e3715c98c315">isWordWrap</a> () const</td></tr>
 <tr class="inherit_header pub_methods_class_shit_1_1_u_i_text_input"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_text_input.html">UITextInput</a></td></tr>
 <tr class="memitem:a4323c909c02ea45b95344e08ce1a6e24 pub_methods_class_shit_1_1_u_i_text_input" id="r_a4323c909c02ea45b95344e08ce1a6e24"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a4323c909c02ea45b95344e08ce1a6e24">UITextInput</a> ()=default</td></tr>
 <tr class="memitem:ad579d52a5f1442144ce1ee292d89edc0 pub_methods_class_shit_1_1_u_i_text_input" id="r_ad579d52a5f1442144ce1ee292d89edc0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ad579d52a5f1442144ce1ee292d89edc0">~UITextInput</a> () override</td></tr>
@@ -224,8 +222,8 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
-<tr class="memitem:a2e739ff12d1cf50a1139791b2a425d58" id="r_a2e739ff12d1cf50a1139791b2a425d58"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e739ff12d1cf50a1139791b2a425d58">onRender</a> (SDL_Renderer *renderer, const SDL_FRect &amp;screenRect) override</td></tr>
-<tr class="memdesc:a2e739ff12d1cf50a1139791b2a425d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身  <br /></td></tr>
+<tr class="memitem:a8adfc83bac4d4f3cef97c20208350515" id="r_a8adfc83bac4d4f3cef97c20208350515"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8adfc83bac4d4f3cef97c20208350515">onRender</a> (const SDL_FRect &amp;screenRect) override</td></tr>
+<tr class="memdesc:a8adfc83bac4d4f3cef97c20208350515"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身（通过 <a class="el" href="class_shit_1_1_renderer.html" title="渲染器，封装 SDL3 绘制 API">Renderer</a> 静态 API 绘制）  <br /></td></tr>
 <tr class="memitem:a2dd1febbc896f7ef20da9da6a2807919" id="r_a2dd1febbc896f7ef20da9da6a2807919"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2dd1febbc896f7ef20da9da6a2807919">onKeyDown</a> (SDL_Scancode scancode, bool shift, bool ctrl) override</td></tr>
 <tr class="memdesc:a2dd1febbc896f7ef20da9da6a2807919"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车）  <br /></td></tr>
 <tr class="memitem:ac717c35a0270efeda965d8c421e6b4e4" id="r_ac717c35a0270efeda965d8c421e6b4e4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac717c35a0270efeda965d8c421e6b4e4">insertNewline</a> () override</td></tr>
@@ -252,6 +250,9 @@ Protected 成员函数</h2></td></tr>
 <tr class="inherit_header pro_static_methods_class_shit_1_1_u_i_text_input"><td colspan="2">静态 Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_text_input.html">UITextInput</a></td></tr>
 <tr class="memitem:a4d1dfdc2cb04cba41969cf7b87a8ecba pro_static_methods_class_shit_1_1_u_i_text_input" id="r_a4d1dfdc2cb04cba41969cf7b87a8ecba"><td class="memItemLeft">static size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a4d1dfdc2cb04cba41969cf7b87a8ecba">charToByte</a> (const std::string &amp;s, size_t charIdx)</td></tr>
 <tr class="memitem:a8e15e04aabe3a4ea141af363506dbb04 pro_static_methods_class_shit_1_1_u_i_text_input" id="r_a8e15e04aabe3a4ea141af363506dbb04"><td class="memItemLeft">static size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a8e15e04aabe3a4ea141af363506dbb04">byteToChar</a> (const std::string &amp;s, size_t byteOff)</td></tr>
+<tr class="inherit_header pro_static_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2">静态 Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
+<tr class="memitem:acd9be94033c0cc9329ee561083b8d112 pro_static_methods_class_shit_1_1_u_i_renderer_component" id="r_acd9be94033c0cc9329ee561083b8d112"><td class="memItemLeft">static SDL_Color&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#acd9be94033c0cc9329ee561083b8d112">toSDLColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:acd9be94033c0cc9329ee561083b8d112 pro_static_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_shit_1_1_color.html" title="RGBA 颜色（每通道 8 位）">Color</a> → SDL_Color 边界转换（供 <a class="el" href="class_shit_1_1_u_i_text.html" title="UI 文字控件，使用 SDL_ttf 渲染文字到纹理">UIText</a> / <a class="el" href="class_shit_1_1_u_i_text_input.html" title="文本输入控件抽象基类">UITextInput</a> 系列传给 SDL_ttf 用）  <br /></td></tr>
 <tr class="inherit_header pro_attribs_class_shit_1_1_u_i_text_input"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_u_i_text_input.html">UITextInput</a></td></tr>
 <tr class="memitem:aca23c0af6eb03dee60ce43358c566f8b pro_attribs_class_shit_1_1_u_i_text_input" id="r_aca23c0af6eb03dee60ce43358c566f8b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aca23c0af6eb03dee60ce43358c566f8b">m_isFocused</a> = false</td></tr>
 <tr class="memitem:a2030cb6d4dc0a9bad899c7930549826b pro_attribs_class_shit_1_1_u_i_text_input" id="r_a2030cb6d4dc0a9bad899c7930549826b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a2030cb6d4dc0a9bad899c7930549826b">m_isMultiline</a> = false</td></tr>
@@ -281,7 +282,7 @@ Protected 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>多行文本输入区域 </p>
 <p>支持换行（Enter 插入 '<br  />
-'），自动换行由后续版本支持；当前为软包裹可选。 上下方向键按"逻辑行"移动光标（按 '<br  />
+'）。自动换行（按宽度软包裹）尚未实现。 上下方向键按"逻辑行"移动光标（按 '<br  />
 ' 切分文本）。</p>
 <p>用法与 <a class="el" href="class_shit_1_1_u_i_text_box.html" title="单行文本输入框">UITextBox</a> 一致，构造即可用。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
@@ -357,31 +358,6 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a52b12a2d7b5e2fec7478e3715c98c315" name="a52b12a2d7b5e2fec7478e3715c98c315"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52b12a2d7b5e2fec7478e3715c98c315">&#9670;&#160;</a></span>isWordWrap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isWordWrap </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a2dd1febbc896f7ef20da9da6a2807919" name="a2dd1febbc896f7ef20da9da6a2807919"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2dd1febbc896f7ef20da9da6a2807919">&#9670;&#160;</a></span>onKeyDown()</h2>
 
@@ -421,8 +397,8 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a2e739ff12d1cf50a1139791b2a425d58" name="a2e739ff12d1cf50a1139791b2a425d58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e739ff12d1cf50a1139791b2a425d58">&#9670;&#160;</a></span>onRender()</h2>
+<a id="a8adfc83bac4d4f3cef97c20208350515" name="a8adfc83bac4d4f3cef97c20208350515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8adfc83bac4d4f3cef97c20208350515">&#9670;&#160;</a></span>onRender()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -433,12 +409,8 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void onRender </td>
           <td>(</td>
-          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>screenRect</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>screenRect</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -448,34 +420,9 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>子类实现：在给定屏幕矩形内绘制自身 </p>
+<p>子类实现：在给定屏幕矩形内绘制自身（通过 <a class="el" href="class_shit_1_1_renderer.html" title="渲染器，封装 SDL3 绘制 API">Renderer</a> 静态 API 绘制） </p>
 
-<p>实现了 <a class="el" href="class_shit_1_1_u_i_text_input.html#a130411c209107fe5bb351c0db6b17248">UITextInput</a>.</p>
-
-</div>
-</div>
-<a id="a412a26808fd971e0441d501e140c20af" name="a412a26808fd971e0441d501e140c20af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a412a26808fd971e0441d501e140c20af">&#9670;&#160;</a></span>setWordWrap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setWordWrap </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>实现了 <a class="el" href="class_shit_1_1_u_i_text_input.html#a795d8967288a69be0eaec2890881a96c">UITextInput</a>.</p>
 
 </div>
 </div>

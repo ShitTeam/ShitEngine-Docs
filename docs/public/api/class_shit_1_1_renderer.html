@@ -184,6 +184,26 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:ad903053e03f7af1de814d044f7b0dcb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">逻辑分辨率高度  <br /></td></tr>
 <tr class="memitem:a4fdb65e37b1d8c3a170fab28fe818fe0" id="r_a4fdb65e37b1d8c3a170fab28fe818fe0"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4fdb65e37b1d8c3a170fab28fe818fe0">DrawSprite</a> (const <a class="el" href="class_shit_1_1_sprite.html">Sprite</a> &amp;sprite, const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;position, const std::optional&lt; <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &gt; &amp;size=std::nullopt)</td></tr>
 <tr class="memdesc:a4fdb65e37b1d8c3a170fab28fe818fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">在屏幕坐标直接绘制精灵（UI 场景用）  <br /></td></tr>
+<tr class="memitem:a4bf39df4e2bd09e3399345aad194b1d0" id="r_a4bf39df4e2bd09e3399345aad194b1d0"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4bf39df4e2bd09e3399345aad194b1d0">SetDrawColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:a4bf39df4e2bd09e3399345aad194b1d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置绘制颜色（SDL_SetRenderDrawColor）  <br /></td></tr>
+<tr class="memitem:aacf4d1b45f776aa52b859912cdaad0ab" id="r_aacf4d1b45f776aa52b859912cdaad0ab"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aacf4d1b45f776aa52b859912cdaad0ab">FillRect</a> (const SDL_FRect &amp;rect)</td></tr>
+<tr class="memdesc:aacf4d1b45f776aa52b859912cdaad0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">实心矩形（SDL_RenderFillRect）  <br /></td></tr>
+<tr class="memitem:ad61fae862369fe45487f8d6931c1a194" id="r_ad61fae862369fe45487f8d6931c1a194"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ad61fae862369fe45487f8d6931c1a194">SetClipRect</a> (const SDL_Rect *rect)</td></tr>
+<tr class="memdesc:ad61fae862369fe45487f8d6931c1a194"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置裁剪矩形（传 nullptr 清除）  <br /></td></tr>
+<tr class="memitem:a475137dafa350eeaca6719b1ab00911f" id="r_a475137dafa350eeaca6719b1ab00911f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a475137dafa350eeaca6719b1ab00911f">ClearClipRect</a> ()</td></tr>
+<tr class="memdesc:a475137dafa350eeaca6719b1ab00911f"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除裁剪矩形  <br /></td></tr>
+<tr class="memitem:a533af979c1edf00b613b76e0ea98761c" id="r_a533af979c1edf00b613b76e0ea98761c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a533af979c1edf00b613b76e0ea98761c">SetViewport</a> (const SDL_Rect *viewport)</td></tr>
+<tr class="memdesc:a533af979c1edf00b613b76e0ea98761c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置视口（传 nullptr 恢复全屏）  <br /></td></tr>
+<tr class="memitem:aa8f0aec99b74d1c19829d76d462a6203" id="r_aa8f0aec99b74d1c19829d76d462a6203"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa8f0aec99b74d1c19829d76d462a6203">ClearViewport</a> ()</td></tr>
+<tr class="memdesc:aa8f0aec99b74d1c19829d76d462a6203"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复全屏视口  <br /></td></tr>
+<tr class="memitem:a8a4709d0c3fd54a97b962e0ddb6a43b8" id="r_a8a4709d0c3fd54a97b962e0ddb6a43b8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8a4709d0c3fd54a97b962e0ddb6a43b8">DrawTexture</a> (SDL_Texture *texture, const SDL_FRect *src, const SDL_FRect &amp;dst)</td></tr>
+<tr class="memdesc:a8a4709d0c3fd54a97b962e0ddb6a43b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制纹理（SDL_RenderTexture）  <br /></td></tr>
+<tr class="memitem:a3e26375150450d206d32ae6c690b5fba" id="r_a3e26375150450d206d32ae6c690b5fba"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3e26375150450d206d32ae6c690b5fba">DrawTextureRotated</a> (SDL_Texture *texture, const SDL_FRect *src, const SDL_FRect &amp;dst, double angle, const SDL_FPoint *center, SDL_FlipMode flip)</td></tr>
+<tr class="memdesc:a3e26375150450d206d32ae6c690b5fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">旋转/翻转绘制（SDL_RenderTextureRotated）  <br /></td></tr>
+<tr class="memitem:aa05b5fb98ba57463ca875bbbbcf7e0ab" id="r_aa05b5fb98ba57463ca875bbbbcf7e0ab"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa05b5fb98ba57463ca875bbbbcf7e0ab">RenderCoordinatesToWindow</a> (float x, float y, float *winX, float *winY)</td></tr>
+<tr class="memdesc:aa05b5fb98ba57463ca875bbbbcf7e0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">逻辑坐标 → 窗口物理像素坐标  <br /></td></tr>
+<tr class="memitem:abf1929c1d6d2ec95c3aeafebb70b4ccd" id="r_abf1929c1d6d2ec95c3aeafebb70b4ccd"><td class="memItemLeft">static SDL_Texture *&#160;</td><td class="memItemRight"><a class="el" href="#abf1929c1d6d2ec95c3aeafebb70b4ccd">CreateTextureFromSurface</a> (SDL_Surface *surface)</td></tr>
+<tr class="memdesc:abf1929c1d6d2ec95c3aeafebb70b4ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">surface → texture（SDL_CreateTextureFromSurface）  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>渲染器，封装 SDL3 绘制 API </p>
@@ -240,6 +260,33 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a475137dafa350eeaca6719b1ab00911f" name="a475137dafa350eeaca6719b1ab00911f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475137dafa350eeaca6719b1ab00911f">&#9670;&#160;</a></span>ClearClipRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearClipRect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清除裁剪矩形 </p>
+
+</div>
+</div>
 <a id="a00cf1a2e31eb12524052a36227c81c8d" name="a00cf1a2e31eb12524052a36227c81c8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00cf1a2e31eb12524052a36227c81c8d">&#9670;&#160;</a></span>ClearScreen()</h2>
 
@@ -264,6 +311,60 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>清屏（每帧开头调用） </p>
+
+</div>
+</div>
+<a id="aa8f0aec99b74d1c19829d76d462a6203" name="aa8f0aec99b74d1c19829d76d462a6203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8f0aec99b74d1c19829d76d462a6203">&#9670;&#160;</a></span>ClearViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearViewport </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>恢复全屏视口 </p>
+
+</div>
+</div>
+<a id="abf1929c1d6d2ec95c3aeafebb70b4ccd" name="abf1929c1d6d2ec95c3aeafebb70b4ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1929c1d6d2ec95c3aeafebb70b4ccd">&#9670;&#160;</a></span>CreateTextureFromSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * CreateTextureFromSurface </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *</td>          <td class="paramname"><span class="paramname"><em>surface</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>surface → texture（SDL_CreateTextureFromSurface） </p>
 
 </div>
 </div>
@@ -308,6 +409,120 @@ Public 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8a4709d0c3fd54a97b962e0ddb6a43b8" name="a8a4709d0c3fd54a97b962e0ddb6a43b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4709d0c3fd54a97b962e0ddb6a43b8">&#9670;&#160;</a></span>DrawTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawTexture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *</td>          <td class="paramname"><span class="paramname"><em>texture</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_FRect *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绘制纹理（SDL_RenderTexture） </p>
+
+</div>
+</div>
+<a id="a3e26375150450d206d32ae6c690b5fba" name="a3e26375150450d206d32ae6c690b5fba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e26375150450d206d32ae6c690b5fba">&#9670;&#160;</a></span>DrawTextureRotated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawTextureRotated </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *</td>          <td class="paramname"><span class="paramname"><em>texture</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_FRect *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>angle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_FPoint *</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_FlipMode</td>          <td class="paramname"><span class="paramname"><em>flip</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>旋转/翻转绘制（SDL_RenderTextureRotated） </p>
+
+</div>
+</div>
+<a id="aacf4d1b45f776aa52b859912cdaad0ab" name="aacf4d1b45f776aa52b859912cdaad0ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf4d1b45f776aa52b859912cdaad0ab">&#9670;&#160;</a></span>FillRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FillRect </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_FRect &amp;</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实心矩形（SDL_RenderFillRect） </p>
 
 </div>
 </div>
@@ -518,6 +733,128 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>交换缓冲区（每帧末尾调用） </p>
+
+</div>
+</div>
+<a id="aa05b5fb98ba57463ca875bbbbcf7e0ab" name="aa05b5fb98ba57463ca875bbbbcf7e0ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05b5fb98ba57463ca875bbbbcf7e0ab">&#9670;&#160;</a></span>RenderCoordinatesToWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderCoordinatesToWindow </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>winX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>winY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逻辑坐标 → 窗口物理像素坐标 </p>
+
+</div>
+</div>
+<a id="ad61fae862369fe45487f8d6931c1a194" name="ad61fae862369fe45487f8d6931c1a194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61fae862369fe45487f8d6931c1a194">&#9670;&#160;</a></span>SetClipRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetClipRect </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_Rect *</td>          <td class="paramname"><span class="paramname"><em>rect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置裁剪矩形（传 nullptr 清除） </p>
+
+</div>
+</div>
+<a id="a4bf39df4e2bd09e3399345aad194b1d0" name="a4bf39df4e2bd09e3399345aad194b1d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf39df4e2bd09e3399345aad194b1d0">&#9670;&#160;</a></span>SetDrawColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDrawColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置绘制颜色（SDL_SetRenderDrawColor） </p>
+
+</div>
+</div>
+<a id="a533af979c1edf00b613b76e0ea98761c" name="a533af979c1edf00b613b76e0ea98761c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533af979c1edf00b613b76e0ea98761c">&#9670;&#160;</a></span>SetViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetViewport </td>
+          <td>(</td>
+          <td class="paramtype">const SDL_Rect *</td>          <td class="paramname"><span class="paramname"><em>viewport</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置视口（传 nullptr 恢复全屏） </p>
 
 </div>
 </div>

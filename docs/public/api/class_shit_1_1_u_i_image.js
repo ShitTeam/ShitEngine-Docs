@@ -8,7 +8,7 @@ var class_shit_1_1_u_i_image =
     [ "getTexturePath", "class_shit_1_1_u_i_image.html#ab666c41ebea083a5c6604ce593b59e17", null ],
     [ "isFlipped", "class_shit_1_1_u_i_image.html#af1579f186eb2eb6413a1a9c312a9f020", null ],
     [ "onDestroy", "class_shit_1_1_u_i_image.html#aee7be93617a6078496df31830d454990", null ],
-    [ "onRender", "class_shit_1_1_u_i_image.html#a2e739ff12d1cf50a1139791b2a425d58", null ],
+    [ "onRender", "class_shit_1_1_u_i_image.html#a8adfc83bac4d4f3cef97c20208350515", null ],
     [ "setColor", "class_shit_1_1_u_i_image.html#a518eaa08866d5abe9e686d1ccf476eec", null ],
     [ "setFlipped", "class_shit_1_1_u_i_image.html#ad34a52d954a18c0f9aa8e99bd02104f0", null ],
     [ "setSourceRect", "class_shit_1_1_u_i_image.html#a793a0745c1b76fe461518367f1ed7199", null ],

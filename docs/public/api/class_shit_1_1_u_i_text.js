@@ -14,7 +14,7 @@ var class_shit_1_1_u_i_text =
     [ "getFontSize", "class_shit_1_1_u_i_text.html#a04d14d037f00dc9ed6bfa3b7efff33fd", null ],
     [ "getText", "class_shit_1_1_u_i_text.html#a2dfac7d5a90b7c54fb0b0f34450988ee", null ],
     [ "onDestroy", "class_shit_1_1_u_i_text.html#aee7be93617a6078496df31830d454990", null ],
-    [ "onRender", "class_shit_1_1_u_i_text.html#a2e739ff12d1cf50a1139791b2a425d58", null ],
+    [ "onRender", "class_shit_1_1_u_i_text.html#a8adfc83bac4d4f3cef97c20208350515", null ],
     [ "setAnchor", "class_shit_1_1_u_i_text.html#a358226741faaee4a1bc2b83bc93b9291", null ],
     [ "setColor", "class_shit_1_1_u_i_text.html#a518eaa08866d5abe9e686d1ccf476eec", null ],
     [ "setFontPath", "class_shit_1_1_u_i_text.html#a902009b3327ae6ee6314dc0a8cabf0b1", null ],

@@ -25,6 +25,7 @@ var searchData=
   ['f7_22',['F7',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da47489eb597b7db34caa24b1fc78fc839',1,'Shit']]],
   ['f8_23',['F8',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da4787509ad9f9d747a81a30e9dde3d4a7',1,'Shit']]],
   ['f9_24',['F9',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da892a245e287c163080b23db737d3c4c9',1,'Shit']]],
-  ['fontmanager_25',['FontManager',['../class_shit_1_1_font_manager.html',1,'FontManager'],['../class_shit_1_1_font_manager.html#a5520f17d8d70b43bceaaba0085ee5905',1,'Shit::FontManager::FontManager(const FontManager &amp;)=delete'],['../class_shit_1_1_font_manager.html#a0315701b5ee6b96d3fae9de3c71c7eae',1,'Shit::FontManager::FontManager(FontManager &amp;&amp;)=default']]],
-  ['fontmanager_2eh_26',['FontManager.h',['../_font_manager_8h.html',1,'']]]
+  ['fillrect_25',['FillRect',['../class_shit_1_1_renderer.html#aacf4d1b45f776aa52b859912cdaad0ab',1,'Shit::Renderer']]],
+  ['fontmanager_26',['FontManager',['../class_shit_1_1_font_manager.html',1,'FontManager'],['../class_shit_1_1_font_manager.html#a5520f17d8d70b43bceaaba0085ee5905',1,'Shit::FontManager::FontManager(const FontManager &amp;)=delete'],['../class_shit_1_1_font_manager.html#a0315701b5ee6b96d3fae9de3c71c7eae',1,'Shit::FontManager::FontManager(FontManager &amp;&amp;)=default']]],
+  ['fontmanager_2eh_27',['FontManager.h',['../_font_manager_8h.html',1,'']]]
 ];

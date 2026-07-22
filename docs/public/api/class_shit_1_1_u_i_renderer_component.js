@@ -8,7 +8,7 @@ var class_shit_1_1_u_i_renderer_component =
     [ "onAttach", "class_shit_1_1_u_i_renderer_component.html#acbef2688cd43fd22241759f89fe12d28", null ],
     [ "onDestroy", "class_shit_1_1_u_i_renderer_component.html#aee7be93617a6078496df31830d454990", null ],
     [ "onDetach", "class_shit_1_1_u_i_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914", null ],
-    [ "onRender", "class_shit_1_1_u_i_renderer_component.html#ac2c1c3e429580f4cca1c963ea4e0fd65", null ],
+    [ "onRender", "class_shit_1_1_u_i_renderer_component.html#a583ec28df81a630cd82b1d4e53158a51", null ],
     [ "requestSort", "class_shit_1_1_u_i_renderer_component.html#ac6eb6cd5c4468fe1c73fad58e704dda8", null ],
     [ "setVisible", "class_shit_1_1_u_i_renderer_component.html#a18e44e30b31525a243960ca3928125aa", null ],
     [ "setZIndex", "class_shit_1_1_u_i_renderer_component.html#ac303f527d4eeb6055c6e1d3575dbdf7a", null ],

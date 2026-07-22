@@ -31,6 +31,5 @@ var searchData=
   ['isregistered_28',['isRegistered',['../class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246',1,'Shit::Component']]],
   ['isrunning_29',['IsRunning',['../class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f',1,'Shit::Game']]],
   ['isstarted_30',['isStarted',['../class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781',1,'Shit::Behavior']]],
-  ['isvisible_31',['isVisible',['../class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::RendererComponent::isVisible()'],['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent::isVisible()']]],
-  ['iswordwrap_32',['isWordWrap',['../class_shit_1_1_u_i_text_area.html#a52b12a2d7b5e2fec7478e3715c98c315',1,'Shit::UITextArea']]]
+  ['isvisible_31',['isVisible',['../class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::RendererComponent::isVisible()'],['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent::isVisible()']]]
 ];
