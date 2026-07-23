@@ -1,10 +1,12 @@
 var hierarchy =
 [
+    [ "ActionBinding", "struct_shit_1_1_action_binding.html", null ],
     [ "Animation", "class_shit_1_1_animation.html", null ],
     [ "AudioManager", "class_shit_1_1_audio_manager.html", null ],
     [ "AudioPlayer", "class_shit_1_1_audio_player.html", null ],
     [ "AudioTrack", "class_shit_1_1_audio_track.html", null ],
     [ "AudioTrackGroup", "class_shit_1_1_audio_track_group.html", null ],
+    [ "AxisBinding", "struct_shit_1_1_axis_binding.html", null ],
     [ "Color", "struct_shit_1_1_color.html", null ],
     [ "UIButton::ColorBlock", "struct_shit_1_1_u_i_button_1_1_color_block.html", null ],
     [ "Component", "class_shit_1_1_component.html", [
@@ -35,6 +37,7 @@ var hierarchy =
     [ "Game", "class_shit_1_1_game.html", null ],
     [ "GameObject", "class_shit_1_1_game_object.html", null ],
     [ "Input", "class_shit_1_1_input.html", null ],
+    [ "InputMappingsConfig", "struct_shit_1_1_input_mappings_config.html", null ],
     [ "Log", "class_shit_1_1_log.html", null ],
     [ "Prefab", "class_shit_1_1_prefab.html", null ],
     [ "ProjectConfig", "struct_shit_1_1_project_config.html", null ],

@@ -1,11 +1,13 @@
 var namespace_shit =
 [
+    [ "ActionBinding", "struct_shit_1_1_action_binding.html", "struct_shit_1_1_action_binding" ],
     [ "Animation", "class_shit_1_1_animation.html", "class_shit_1_1_animation" ],
     [ "AnimationComponent", "class_shit_1_1_animation_component.html", "class_shit_1_1_animation_component" ],
     [ "AudioManager", "class_shit_1_1_audio_manager.html", "class_shit_1_1_audio_manager" ],
     [ "AudioPlayer", "class_shit_1_1_audio_player.html", "class_shit_1_1_audio_player" ],
     [ "AudioTrack", "class_shit_1_1_audio_track.html", "class_shit_1_1_audio_track" ],
     [ "AudioTrackGroup", "class_shit_1_1_audio_track_group.html", "class_shit_1_1_audio_track_group" ],
+    [ "AxisBinding", "struct_shit_1_1_axis_binding.html", "struct_shit_1_1_axis_binding" ],
     [ "Behavior", "class_shit_1_1_behavior.html", "class_shit_1_1_behavior" ],
     [ "BehaviorSystem", "class_shit_1_1_behavior_system.html", "class_shit_1_1_behavior_system" ],
     [ "CameraComponent", "class_shit_1_1_camera_component.html", "class_shit_1_1_camera_component" ],
@@ -18,6 +20,7 @@ var namespace_shit =
     [ "Game", "class_shit_1_1_game.html", "class_shit_1_1_game" ],
     [ "GameObject", "class_shit_1_1_game_object.html", "class_shit_1_1_game_object" ],
     [ "Input", "class_shit_1_1_input.html", "class_shit_1_1_input" ],
+    [ "InputMappingsConfig", "struct_shit_1_1_input_mappings_config.html", "struct_shit_1_1_input_mappings_config" ],
     [ "Log", "class_shit_1_1_log.html", null ],
     [ "Prefab", "class_shit_1_1_prefab.html", "class_shit_1_1_prefab" ],
     [ "ProjectConfig", "struct_shit_1_1_project_config.html", "struct_shit_1_1_project_config" ],
