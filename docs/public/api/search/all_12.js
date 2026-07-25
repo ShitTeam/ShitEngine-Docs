@@ -60,7 +60,7 @@ var searchData=
   ['setzindex_57',['setZIndex',['../class_shit_1_1_u_i_renderer_component.html#ac303f527d4eeb6055c6e1d3575dbdf7a',1,'Shit::UIRendererComponent::setZIndex()'],['../class_shit_1_1_u_i_transform.html#ac303f527d4eeb6055c6e1d3575dbdf7a',1,'Shit::UITransform::setZIndex()']]],
   ['shit_58',['Shit',['../namespace_shit.html',1,'']]],
   ['shit_5fapi_59',['SHIT_API',['../_core_8h.html#a58974cbf2d8d9423b235379fdafb8380',1,'Core.h']]],
-  ['shit_5fclass_60',['SHIT_CLASS',['../_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d',1,'SHIT_CLASS:&#160;Macros.h'],['../namespace_shit.html#ac4d5857b0a23da25f5e7fec3335f8296',1,'Shit::SHIT_CLASS()']]],
+  ['shit_5fclass_60',['SHIT_CLASS',['../_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d',1,'SHIT_CLASS:&#160;Macros.h'],['../namespace_shit.html#a276d3740dc6403fa70d0db6c475ae1a1',1,'Shit::SHIT_CLASS()']]],
   ['shit_5fdetail_5fannotate_61',['SHIT_DETAIL_ANNOTATE',['../_macros_8h.html#a64852d86c9c3f67893c3c26c30ca96dc',1,'Macros.h']]],
   ['shit_5fmeta_62',['SHIT_META',['../_macros_8h.html#abda51617d4152febb4da2bb01b57703b',1,'Macros.h']]],
   ['shit_5freflect_63',['SHIT_REFLECT',['../_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa',1,'Macros.h']]],

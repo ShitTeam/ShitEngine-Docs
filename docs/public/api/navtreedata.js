@@ -65,7 +65,7 @@ var NAVTREEINDEX =
 "class_shit_1_1_scene.html#a9d3a2685df23b5e7cbf59c19c4a1f9b5",
 "class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8ad78a68f6a85421ae121c2cb5b73a1040",
 "class_shit_1_1_u_i_text_input.html#ac4bf2d612c3382d03d1424f83cfc8625",
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0dab6ac6f84bcb33f9b5186bda6b4c8b399"
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0dab213ce22ca6ad4eda8db82966b9b6e5a"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

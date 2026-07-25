@@ -198,5 +198,5 @@ var namespace_shit =
     [ "DemangleTypeName", "namespace_shit.html#afe671363a5ef5f405485e38c225e0885", null ],
     [ "memberOffset", "namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13", null ],
     [ "ReflectType", "namespace_shit.html#a2e911473ec7d41ed241324aba861713b", null ],
-    [ "SHIT_CLASS", "namespace_shit.html#ac4d5857b0a23da25f5e7fec3335f8296", null ]
+    [ "SHIT_CLASS", "namespace_shit.html#a276d3740dc6403fa70d0db6c475ae1a1", null ]
 ];

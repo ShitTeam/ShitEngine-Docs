@@ -162,17 +162,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_camera_compon
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_define" href="_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d">SHIT_CLASS</a>(CameraComponent, Fields) : public Component {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_function" href="namespace_shit.html#a276d3740dc6403fa70d0db6c475ae1a1">SHIT_CLASS</a>(CameraComponent, Fields) : <span class="keyword">public</span> Component {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_define" href="_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa">SHIT_REFLECT</a>(CameraComponent)</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    public:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        CameraComponent();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">void</span> onAttach() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">void</span> onDetach() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">// 坐标转换</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> worldToScreen(<span class="keyword">const</span> <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&amp; worldPosition) <span class="keyword">const</span>;  </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> screenToWorld(<span class="keyword">const</span> <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&amp; screenPosition) <span class="keyword">const</span>;  </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> worldToScreen(<span class="keyword">const</span> Vector2&amp; worldPosition) <span class="keyword">const</span>;  </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> screenToWorld(<span class="keyword">const</span> Vector2&amp; screenPosition) <span class="keyword">const</span>;  </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> getPosition() <span class="keyword">const</span>;             </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> getSize()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_worldSize; }       </div>
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_camera_compon
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">int</span> getPriority()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_priority; }        </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">float</span> getPixelPerUnit() <span class="keyword">const</span>;                         </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> setSize(<span class="keyword">const</span> <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&amp; worldSize) { m_worldSize = worldSize; }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> setSize(<span class="keyword">const</span> Vector2&amp; worldSize) { m_worldSize = worldSize; }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> setZoom(<span class="keywordtype">float</span> zoom) { m_zoom = zoom; }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> setPriority(<span class="keywordtype">int</span> priority) { m_priority = priority; }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
@@ -197,10 +197,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_camera_compon
 <div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
 <div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
 <div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
-<div class="ttc" id="a_macros_8h_html_a70a3feb6ddefff69ff8d6f754b6d253d"><div class="ttname"><a href="_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d">SHIT_CLASS</a></div><div class="ttdeci">#define SHIT_CLASS(Type, Mode)</div><div class="ttdef"><b>定义</b> Macros.h:49</div></div>
-<div class="ttc" id="a_macros_8h_html_ae660673a2433b0eab89c55d7273f9bfa"><div class="ttname"><a href="_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa">SHIT_REFLECT</a></div><div class="ttdeci">#define SHIT_REFLECT(Type)</div><div class="ttdef"><b>定义</b> Macros.h:55</div></div>
+<div class="ttc" id="a_macros_8h_html_ae660673a2433b0eab89c55d7273f9bfa"><div class="ttname"><a href="_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa">SHIT_REFLECT</a></div><div class="ttdeci">#define SHIT_REFLECT(Type)</div><div class="ttdef"><b>定义</b> Macros.h:57</div></div>
 <div class="ttc" id="a_math_8h_html"><div class="ttname"><a href="_math_8h.html">Math.h</a></div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:9</div></div>
+<div class="ttc" id="anamespace_shit_html_a276d3740dc6403fa70d0db6c475ae1a1"><div class="ttname"><a href="namespace_shit.html#a276d3740dc6403fa70d0db6c475ae1a1">Shit::SHIT_CLASS</a></div><div class="ttdeci">class SHIT_CLASS(Component, Fields)</div><div class="ttdoc">组件基类</div><div class="ttdef"><b>定义</b> Component.h:19</div></div>
 <div class="ttc" id="anamespace_shit_html_ab13fcf529046c79a4544246bf8e28741"><div class="ttname"><a href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Shit::Vector2</a></div><div class="ttdeci">glm::vec2 Vector2</div><div class="ttdef"><b>定义</b> Math.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

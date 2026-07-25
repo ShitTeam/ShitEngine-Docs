@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0dab213ce22ca6ad4eda8db82966b9b6e5a":[1,0,0,52,64],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0dab6ac6f84bcb33f9b5186bda6b4c8b399":[1,0,0,52,49],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3":[1,0,0,52,20],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0dabacb69a042a9fdc268a672919052d1f2":[1,0,0,52,27],
@@ -39,7 +40,6 @@ var NAVTREEINDEX5 =
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0daffb2ce8868d49c78376bf7e76c88fd52":[1,0,0,52,95],
 "namespace_shit.html#ab13fcf529046c79a4544246bf8e28741":[1,0,0,51],
 "namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13":[1,0,0,55],
-"namespace_shit.html#ac4d5857b0a23da25f5e7fec3335f8296":[1,0,0,57],
 "namespace_shit.html#af13a1979f9e8f62c101433fac6511cc6":[1,0,0,50],
 "namespace_shit.html#afe671363a5ef5f405485e38c225e0885":[1,0,0,54],
 "namespacemembers.html":[1,1,0],
