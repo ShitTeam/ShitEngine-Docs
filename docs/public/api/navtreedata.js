@@ -30,6 +30,7 @@ var NAVTREE =
       [ "命名空间列表", "namespaces.html", "namespaces_dup" ],
       [ "命名空间成员", "namespacemembers.html", [
         [ "全部", "namespacemembers.html", null ],
+        [ "函数", "namespacemembers_func.html", null ],
         [ "类型定义", "namespacemembers_type.html", null ],
         [ "枚举", "namespacemembers_enum.html", null ]
       ] ]
@@ -60,11 +61,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_animation_8h.html",
-"class_shit_1_1_behavior.html#a505b38eb8ed0bab19cf378f5e35854d9",
-"class_shit_1_1_render_system.html#a3a6ea09f465a894d37a326bd7e58b0ff",
-"class_shit_1_1_texture_manager.html#a54c1252abc87a78a301e6b6984470408",
-"class_shit_1_1_u_i_text_input.html#a2f158681edd898361ae8951f66cfda55",
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0da4e98cb54aeee7205dd16a2a054810be0"
+"class_shit_1_1_audio_track_group.html#af25123b00bc5b424d5a76caca903c939",
+"class_shit_1_1_scene.html#a9d3a2685df23b5e7cbf59c19c4a1f9b5",
+"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8ad78a68f6a85421ae121c2cb5b73a1040",
+"class_shit_1_1_u_i_text_input.html#ac4bf2d612c3382d03d1424f83cfc8625",
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0dab6ac6f84bcb33f9b5186bda6b4c8b399"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

@@ -1,0 +1,10 @@
+var struct_shit_1_1_type_info =
+[
+    [ "Create", "struct_shit_1_1_type_info.html#a47297c01cebacf041817f7cd518bd228", null ],
+    [ "baseType", "struct_shit_1_1_type_info.html#aff89ef7dbe02b1d33c7fdd81bd9bc0f7", null ],
+    [ "factory", "struct_shit_1_1_type_info.html#afbf4c89df61d39024dd5f68bea8847db", null ],
+    [ "fields", "struct_shit_1_1_type_info.html#a47ad6d79041d9e9286e6760690d83f70", null ],
+    [ "name", "struct_shit_1_1_type_info.html#a9b45b3e13bd9167aab02e17e08916231", null ],
+    [ "size", "struct_shit_1_1_type_info.html#a854352f53b148adc24983a58a1866d66", null ],
+    [ "typeIndex", "struct_shit_1_1_type_info.html#a179500c846c41a50dfc9fd26d174f458", null ]
+];

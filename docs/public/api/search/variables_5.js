@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['keys_0',['keys',['../struct_shit_1_1_action_binding.html#aa97499ee2d1b88d53a6da452d4e5029a',1,'Shit::ActionBinding']]]
+  ['height_0',['height',['../struct_shit_1_1_window_config.html#ab2e78c61905b4419fcc7b4cfc500fe85',1,'Shit::WindowConfig']]],
+  ['highlightedcolor_1',['highlightedColor',['../struct_shit_1_1_u_i_button_1_1_color_block.html#a0eee6163238f99489e3f416052512c79',1,'Shit::UIButton::ColorBlock']]]
 ];

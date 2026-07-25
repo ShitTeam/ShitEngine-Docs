@@ -1,0 +1,641 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: TypeRegistry类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_type_registry.html','','class_shit_1_1_type_registry-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TypeRegistry类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_type_registry_8h_source.html">TypeRegistry.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa85f3125942d3ebe0508b809344f9573" id="r_aa85f3125942d3ebe0508b809344f9573"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa85f3125942d3ebe0508b809344f9573">registerType</a> (<a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> info)</td></tr>
+<tr class="memitem:af85ffa8990355f8fdefa13500e12b765" id="r_af85ffa8990355f8fdefa13500e12b765"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af85ffa8990355f8fdefa13500e12b765">initBuiltinTypes</a> ()</td></tr>
+<tr class="memitem:a4dbc8fd831469be88939a5f090c6210e" id="r_a4dbc8fd831469be88939a5f090c6210e"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4dbc8fd831469be88939a5f090c6210e">getType</a> (std::string_view name) const</td></tr>
+<tr class="memitem:acd9689760f3ae13dc4e4d238e5771e85" id="r_acd9689760f3ae13dc4e4d238e5771e85"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:acd9689760f3ae13dc4e4d238e5771e85 template"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#acd9689760f3ae13dc4e4d238e5771e85">getType</a> () const</td></tr>
+<tr class="memitem:ab741f61fd936cb1fea75d452931d33ea" id="r_ab741f61fd936cb1fea75d452931d33ea"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab741f61fd936cb1fea75d452931d33ea">forEach</a> (std::function&lt; void(const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> &amp;)&gt; callback) const</td></tr>
+<tr class="memitem:a63a27d5d9ad6ab74fc8ed14c76f9cd08" id="r_a63a27d5d9ad6ab74fc8ed14c76f9cd08"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a63a27d5d9ad6ab74fc8ed14c76f9cd08">count</a> () const</td></tr>
+<tr class="memitem:a8fb345584b509941f28e6c820566d04b" id="r_a8fb345584b509941f28e6c820566d04b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> (const TypeRegistry &amp;)=delete</td></tr>
+<tr class="memitem:a2a8b726adc34d6e3d332b1d34bf81e5d" id="r_a2a8b726adc34d6e3d332b1d34bf81e5d"><td class="memItemLeft"><a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2a8b726adc34d6e3d332b1d34bf81e5d">operator=</a> (const <a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp;)=delete</td></tr>
+<tr class="memitem:ab5bba81829c886b8714a3bda049f7519" id="r_ab5bba81829c886b8714a3bda049f7519"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab5bba81829c886b8714a3bda049f7519">TypeRegistry</a> (TypeRegistry &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a57605e52c1f97bec4b34bcb19ed7de80" id="r_a57605e52c1f97bec4b34bcb19ed7de80"><td class="memItemLeft"><a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a57605e52c1f97bec4b34bcb19ed7de80">operator=</a> (<a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:abe3d5613f27c44514e0c503737deb60d" id="r_abe3d5613f27c44514e0c503737deb60d"><td class="memItemLeft">static <a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abe3d5613f27c44514e0c503737deb60d">GetInstance</a> ()</td></tr>
+<tr class="memitem:a4b6992d253528ad77e8f43820dac2a52" id="r_a4b6992d253528ad77e8f43820dac2a52"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4b6992d253528ad77e8f43820dac2a52">Register</a> (<a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> info)</td></tr>
+<tr class="memitem:aa46470dfed703e124e3092fbaff64c90" id="r_aa46470dfed703e124e3092fbaff64c90"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa46470dfed703e124e3092fbaff64c90">InitBuiltinTypes</a> ()</td></tr>
+<tr class="memitem:a1d39c27eec2e796611800f76df4390b8" id="r_a1d39c27eec2e796611800f76df4390b8"><td class="memItemLeft">static const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1d39c27eec2e796611800f76df4390b8">Get</a> (std::string_view name)</td></tr>
+<tr class="memitem:a9e6c3f2bdaf242a6a981bc3141673af1" id="r_a9e6c3f2bdaf242a6a981bc3141673af1"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a9e6c3f2bdaf242a6a981bc3141673af1 template"><td class="memItemLeft">static const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9e6c3f2bdaf242a6a981bc3141673af1">Get</a> ()</td></tr>
+<tr class="memitem:a95d41ba8e879cbd5ed1eb9d1967587d8" id="r_a95d41ba8e879cbd5ed1eb9d1967587d8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a95d41ba8e879cbd5ed1eb9d1967587d8">ForEach</a> (std::function&lt; void(const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> &amp;)&gt; callback)</td></tr>
+<tr class="memitem:a117b691f2615b7c22d522492c1553db8" id="r_a117b691f2615b7c22d522492c1553db8"><td class="memItemLeft">static size_t&#160;</td><td class="memItemRight"><a class="el" href="#a117b691f2615b7c22d522492c1553db8">Count</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a206b044745b4ae1ec69f6595acfce573" id="r_a206b044745b4ae1ec69f6595acfce573"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a206b044745b4ae1ec69f6595acfce573">TypeInfoBuilder</a></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a8fb345584b509941f28e6c820566d04b" name="a8fb345584b509941f28e6c820566d04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb345584b509941f28e6c820566d04b">&#9670;&#160;</a></span>TypeRegistry() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeRegistry </td>
+          <td>(</td>
+          <td class="paramtype">const TypeRegistry &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5bba81829c886b8714a3bda049f7519" name="ab5bba81829c886b8714a3bda049f7519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5bba81829c886b8714a3bda049f7519">&#9670;&#160;</a></span>TypeRegistry() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeRegistry </td>
+          <td>(</td>
+          <td class="paramtype">TypeRegistry &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a117b691f2615b7c22d522492c1553db8" name="a117b691f2615b7c22d522492c1553db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117b691f2615b7c22d522492c1553db8">&#9670;&#160;</a></span>Count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63a27d5d9ad6ab74fc8ed14c76f9cd08" name="a63a27d5d9ad6ab74fc8ed14c76f9cd08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63a27d5d9ad6ab74fc8ed14c76f9cd08">&#9670;&#160;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95d41ba8e879cbd5ed1eb9d1967587d8" name="a95d41ba8e879cbd5ed1eb9d1967587d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d41ba8e879cbd5ed1eb9d1967587d8">&#9670;&#160;</a></span>ForEach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ForEach </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> &amp;)&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab741f61fd936cb1fea75d452931d33ea" name="ab741f61fd936cb1fea75d452931d33ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab741f61fd936cb1fea75d452931d33ea">&#9670;&#160;</a></span>forEach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void forEach </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> &amp;)&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e6c3f2bdaf242a6a981bc3141673af1" name="a9e6c3f2bdaf242a6a981bc3141673af1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6c3f2bdaf242a6a981bc3141673af1">&#9670;&#160;</a></span>Get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> * Get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d39c27eec2e796611800f76df4390b8" name="a1d39c27eec2e796611800f76df4390b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d39c27eec2e796611800f76df4390b8">&#9670;&#160;</a></span>Get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> * Get </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe3d5613f27c44514e0c503737deb60d" name="abe3d5613f27c44514e0c503737deb60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3d5613f27c44514e0c503737deb60d">&#9670;&#160;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp; GetInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd9689760f3ae13dc4e4d238e5771e85" name="acd9689760f3ae13dc4e4d238e5771e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9689760f3ae13dc4e4d238e5771e85">&#9670;&#160;</a></span>getType() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> * getType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dbc8fd831469be88939a5f090c6210e" name="a4dbc8fd831469be88939a5f090c6210e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbc8fd831469be88939a5f090c6210e">&#9670;&#160;</a></span>getType() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> * getType </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa46470dfed703e124e3092fbaff64c90" name="aa46470dfed703e124e3092fbaff64c90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa46470dfed703e124e3092fbaff64c90">&#9670;&#160;</a></span>InitBuiltinTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitBuiltinTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af85ffa8990355f8fdefa13500e12b765" name="af85ffa8990355f8fdefa13500e12b765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85ffa8990355f8fdefa13500e12b765">&#9670;&#160;</a></span>initBuiltinTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initBuiltinTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a8b726adc34d6e3d332b1d34bf81e5d" name="a2a8b726adc34d6e3d332b1d34bf81e5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8b726adc34d6e3d332b1d34bf81e5d">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57605e52c1f97bec4b34bcb19ed7de80" name="a57605e52c1f97bec4b34bcb19ed7de80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57605e52c1f97bec4b34bcb19ed7de80">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a8fb345584b509941f28e6c820566d04b">TypeRegistry</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b6992d253528ad77e8f43820dac2a52" name="a4b6992d253528ad77e8f43820dac2a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6992d253528ad77e8f43820dac2a52">&#9670;&#160;</a></span>Register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a></td>          <td class="paramname"><span class="paramname"><em>info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa85f3125942d3ebe0508b809344f9573" name="aa85f3125942d3ebe0508b809344f9573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa85f3125942d3ebe0508b809344f9573">&#9670;&#160;</a></span>registerType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void registerType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a></td>          <td class="paramname"><span class="paramname"><em>info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="a206b044745b4ae1ec69f6595acfce573" name="a206b044745b4ae1ec69f6595acfce573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206b044745b4ae1ec69f6595acfce573">&#9670;&#160;</a></span>TypeInfoBuilder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class TypeInfoBuilder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Reflection/<a class="el" href="_type_registry_8h_source.html">TypeRegistry.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_type_registry.html">TypeRegistry</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

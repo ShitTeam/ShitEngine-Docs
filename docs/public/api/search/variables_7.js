@@ -1,6 +1,24 @@
 var searchData=
 [
-  ['name_0',['name',['../struct_shit_1_1_project_config.html#a9b45b3e13bd9167aab02e17e08916231',1,'Shit::ProjectConfig']]],
-  ['negative_1',['negative',['../struct_shit_1_1_axis_binding.html#a43d8af75751c69d69cde59f60acd42a1',1,'Shit::AxisBinding']]],
-  ['normalcolor_2',['normalColor',['../struct_shit_1_1_u_i_button_1_1_color_block.html#ab1503d57b018fba5b8ec4c31a66a61f5',1,'Shit::UIButton::ColorBlock']]]
+  ['m_5fcursor_0',['m_cursor',['../class_shit_1_1_u_i_text_input.html#aa813bd03e0d5fec301fcc77d825008d2',1,'Shit::UITextInput']]],
+  ['m_5fcursorcolor_1',['m_cursorColor',['../class_shit_1_1_u_i_text_input.html#a2443d09673934b4527c64cf2a857276e',1,'Shit::UITextInput']]],
+  ['m_5ffontheight_2',['m_fontHeight',['../class_shit_1_1_u_i_text_input.html#a064c5603add19251ab8389c4601cca60',1,'Shit::UITextInput']]],
+  ['m_5ffontpath_3',['m_fontPath',['../class_shit_1_1_u_i_text_input.html#ae9964148c0b74ea072f3253793c6bcf2',1,'Shit::UITextInput']]],
+  ['m_5ffontsize_4',['m_fontSize',['../class_shit_1_1_u_i_text_input.html#a9d77e0b08aad7f25ae87d63d83f422ed',1,'Shit::UITextInput']]],
+  ['m_5fisdirty_5',['m_isDirty',['../class_shit_1_1_u_i_text_input.html#afb7039dd5c56c4af61b88af0ad1755b5',1,'Shit::UITextInput']]],
+  ['m_5fisfocused_6',['m_isFocused',['../class_shit_1_1_u_i_text_input.html#aca23c0af6eb03dee60ce43358c566f8b',1,'Shit::UITextInput']]],
+  ['m_5fismultiline_7',['m_isMultiline',['../class_shit_1_1_u_i_text_input.html#a2030cb6d4dc0a9bad899c7930549826b',1,'Shit::UITextInput']]],
+  ['m_5fisstarted_8',['m_isStarted',['../class_shit_1_1_behavior.html#a04b5b6d3587350e5f8834fedeb9cab9e',1,'Shit::Behavior']]],
+  ['m_5fisvisible_9',['m_isVisible',['../class_shit_1_1_u_i_renderer_component.html#ace177fa285e5e88a6ba132129f89b73c',1,'Shit::UIRendererComponent']]],
+  ['m_5fplaceholder_10',['m_placeholder',['../class_shit_1_1_u_i_text_input.html#ae4e48e7613e2cc5c0ff8b67ec846e6b2',1,'Shit::UITextInput']]],
+  ['m_5fplaceholdercolor_11',['m_placeholderColor',['../class_shit_1_1_u_i_text_input.html#ae83c798b2852f1bf170bff7922a400a8',1,'Shit::UITextInput']]],
+  ['m_5fpreedit_12',['m_preedit',['../class_shit_1_1_u_i_text_input.html#a980e3cb951c3d50008c4e6ba92ac9074',1,'Shit::UITextInput']]],
+  ['m_5fpreeditlength_13',['m_preeditLength',['../class_shit_1_1_u_i_text_input.html#a6c722ef4358d626c3725e13080739005',1,'Shit::UITextInput']]],
+  ['m_5fpreeditstart_14',['m_preeditStart',['../class_shit_1_1_u_i_text_input.html#ac5ebb2c5955cf49ab6d6d77a092ca930',1,'Shit::UITextInput']]],
+  ['m_5fpriority_15',['m_priority',['../class_shit_1_1_system.html#aebd544741012b3bab43cfbbc4e9d28f3',1,'Shit::System']]],
+  ['m_5fscene_16',['m_scene',['../class_shit_1_1_system.html#a6d9ce218dfa1f5f2645b9b4c2abea6ca',1,'Shit::System']]],
+  ['m_5fselectionanchor_17',['m_selectionAnchor',['../class_shit_1_1_u_i_text_input.html#a4c8e96d9a266161128cde1ab31f91208',1,'Shit::UITextInput']]],
+  ['m_5ftext_18',['m_text',['../class_shit_1_1_u_i_text_input.html#aa15b95dc40e2d916d40df17f5dea8ed4',1,'Shit::UITextInput']]],
+  ['m_5ftextcolor_19',['m_textColor',['../class_shit_1_1_u_i_text_input.html#a0d5f58d7273aff0d7a1dbb33172d8528',1,'Shit::UITextInput']]],
+  ['m_5fzindex_20',['m_zIndex',['../class_shit_1_1_u_i_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948',1,'Shit::UIRendererComponent']]]
 ];

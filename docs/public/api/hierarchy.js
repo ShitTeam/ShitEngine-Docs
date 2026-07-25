@@ -9,15 +9,10 @@ var hierarchy =
     [ "AxisBinding", "struct_shit_1_1_axis_binding.html", null ],
     [ "Color", "struct_shit_1_1_color.html", null ],
     [ "UIButton::ColorBlock", "struct_shit_1_1_u_i_button_1_1_color_block.html", null ],
-    [ "Component", "class_shit_1_1_component.html", [
+    [ "Component", null, [
       [ "Behavior", "class_shit_1_1_behavior.html", [
         [ "AnimationComponent", "class_shit_1_1_animation_component.html", null ]
       ] ],
-      [ "CameraComponent", "class_shit_1_1_camera_component.html", null ],
-      [ "RendererComponent", "class_shit_1_1_renderer_component.html", [
-        [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", null ]
-      ] ],
-      [ "TransformComponent", "class_shit_1_1_transform_component.html", null ],
       [ "UICanvas", "class_shit_1_1_u_i_canvas.html", null ],
       [ "UIRendererComponent", "class_shit_1_1_u_i_renderer_component.html", [
         [ "UIButton", "class_shit_1_1_u_i_button.html", null ],
@@ -33,6 +28,7 @@ var hierarchy =
     [ "Config", "class_shit_1_1_config.html", null ],
     [ "Event", "struct_shit_1_1_event.html", null ],
     [ "EventBus", "class_shit_1_1_event_bus.html", null ],
+    [ "FieldInfo", "struct_shit_1_1_field_info.html", null ],
     [ "FontManager", "class_shit_1_1_font_manager.html", null ],
     [ "Game", "class_shit_1_1_game.html", null ],
     [ "GameObject", "class_shit_1_1_game_object.html", null ],
@@ -42,6 +38,9 @@ var hierarchy =
     [ "Prefab", "class_shit_1_1_prefab.html", null ],
     [ "ProjectConfig", "struct_shit_1_1_project_config.html", null ],
     [ "Renderer", "class_shit_1_1_renderer.html", null ],
+    [ "RendererComponent", null, [
+      [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", null ]
+    ] ],
     [ "ResourceManager", "class_shit_1_1_resource_manager.html", null ],
     [ "Scene", "class_shit_1_1_scene.html", null ],
     [ "SceneManager", "class_shit_1_1_scene_manager.html", null ],
@@ -55,6 +54,9 @@ var hierarchy =
     [ "TextInputGate", "class_shit_1_1_text_input_gate.html", null ],
     [ "TextureManager", "class_shit_1_1_texture_manager.html", null ],
     [ "Time", "class_shit_1_1_time.html", null ],
+    [ "TypeInfo", "struct_shit_1_1_type_info.html", null ],
+    [ "TypeInfoBuilder", "class_shit_1_1_type_info_builder.html", null ],
+    [ "TypeRegistry", "class_shit_1_1_type_registry.html", null ],
     [ "Window", "class_shit_1_1_window.html", null ],
     [ "WindowConfig", "struct_shit_1_1_window_config.html", null ]
 ];

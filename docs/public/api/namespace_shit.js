@@ -10,12 +10,11 @@ var namespace_shit =
     [ "AxisBinding", "struct_shit_1_1_axis_binding.html", "struct_shit_1_1_axis_binding" ],
     [ "Behavior", "class_shit_1_1_behavior.html", "class_shit_1_1_behavior" ],
     [ "BehaviorSystem", "class_shit_1_1_behavior_system.html", "class_shit_1_1_behavior_system" ],
-    [ "CameraComponent", "class_shit_1_1_camera_component.html", "class_shit_1_1_camera_component" ],
     [ "Color", "struct_shit_1_1_color.html", "struct_shit_1_1_color" ],
-    [ "Component", "class_shit_1_1_component.html", "class_shit_1_1_component" ],
     [ "Config", "class_shit_1_1_config.html", "class_shit_1_1_config" ],
     [ "Event", "struct_shit_1_1_event.html", "struct_shit_1_1_event" ],
     [ "EventBus", "class_shit_1_1_event_bus.html", "class_shit_1_1_event_bus" ],
+    [ "FieldInfo", "struct_shit_1_1_field_info.html", "struct_shit_1_1_field_info" ],
     [ "FontManager", "class_shit_1_1_font_manager.html", "class_shit_1_1_font_manager" ],
     [ "Game", "class_shit_1_1_game.html", "class_shit_1_1_game" ],
     [ "GameObject", "class_shit_1_1_game_object.html", "class_shit_1_1_game_object" ],
@@ -25,7 +24,6 @@ var namespace_shit =
     [ "Prefab", "class_shit_1_1_prefab.html", "class_shit_1_1_prefab" ],
     [ "ProjectConfig", "struct_shit_1_1_project_config.html", "struct_shit_1_1_project_config" ],
     [ "Renderer", "class_shit_1_1_renderer.html", "class_shit_1_1_renderer" ],
-    [ "RendererComponent", "class_shit_1_1_renderer_component.html", "class_shit_1_1_renderer_component" ],
     [ "RenderSystem", "class_shit_1_1_render_system.html", "class_shit_1_1_render_system" ],
     [ "ResourceManager", "class_shit_1_1_resource_manager.html", "class_shit_1_1_resource_manager" ],
     [ "Scene", "class_shit_1_1_scene.html", "class_shit_1_1_scene" ],
@@ -37,7 +35,9 @@ var namespace_shit =
     [ "TextInputGate", "class_shit_1_1_text_input_gate.html", "class_shit_1_1_text_input_gate" ],
     [ "TextureManager", "class_shit_1_1_texture_manager.html", "class_shit_1_1_texture_manager" ],
     [ "Time", "class_shit_1_1_time.html", "class_shit_1_1_time" ],
-    [ "TransformComponent", "class_shit_1_1_transform_component.html", "class_shit_1_1_transform_component" ],
+    [ "TypeInfo", "struct_shit_1_1_type_info.html", "struct_shit_1_1_type_info" ],
+    [ "TypeInfoBuilder", "class_shit_1_1_type_info_builder.html", "class_shit_1_1_type_info_builder" ],
+    [ "TypeRegistry", "class_shit_1_1_type_registry.html", "class_shit_1_1_type_registry" ],
     [ "UIButton", "class_shit_1_1_u_i_button.html", "class_shit_1_1_u_i_button" ],
     [ "UICanvas", "class_shit_1_1_u_i_canvas.html", "class_shit_1_1_u_i_canvas" ],
     [ "UIImage", "class_shit_1_1_u_i_image.html", "class_shit_1_1_u_i_image" ],
@@ -194,5 +194,9 @@ var namespace_shit =
       [ "XButton1", "namespace_shit.html#a826ef52e881054fee6a2055e382950b4aac8e5aa1a680bd64e6fb9313db5b4428", null ],
       [ "XButton2", "namespace_shit.html#a826ef52e881054fee6a2055e382950b4a7af9d9a16f813c045a3dbe8068a13f4d", null ],
       [ "Count", "namespace_shit.html#a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9", null ]
-    ] ]
+    ] ],
+    [ "DemangleTypeName", "namespace_shit.html#afe671363a5ef5f405485e38c225e0885", null ],
+    [ "memberOffset", "namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13", null ],
+    [ "ReflectType", "namespace_shit.html#a2e911473ec7d41ed241324aba861713b", null ],
+    [ "SHIT_CLASS", "namespace_shit.html#ac4d5857b0a23da25f5e7fec3335f8296", null ]
 ];

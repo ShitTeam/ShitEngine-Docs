@@ -1,16 +1,21 @@
 var searchData=
 [
   ['shit_5fapi_0',['SHIT_API',['../_core_8h.html#a58974cbf2d8d9423b235379fdafb8380',1,'Core.h']]],
-  ['st_5fcore_5fcritical_1',['ST_CORE_CRITICAL',['../_log_8h.html#a304ac95c5017efaabaca729e1dadcb5f',1,'Log.h']]],
-  ['st_5fcore_5fdebug_2',['ST_CORE_DEBUG',['../_log_8h.html#afe6cc112769b2b8ca030f3a2d26f6452',1,'Log.h']]],
-  ['st_5fcore_5ferror_3',['ST_CORE_ERROR',['../_log_8h.html#abf3849fe584d46510e5470f930e2eda0',1,'Log.h']]],
-  ['st_5fcore_5finfo_4',['ST_CORE_INFO',['../_log_8h.html#a96339747663a68b687d0662cf327e668',1,'Log.h']]],
-  ['st_5fcore_5ftrace_5',['ST_CORE_TRACE',['../_log_8h.html#ac379c2e7c01d6e578fa1dff97428de87',1,'Log.h']]],
-  ['st_5fcore_5fwarn_6',['ST_CORE_WARN',['../_log_8h.html#a1e6b79023cc055b13e1a06e6e005cd70',1,'Log.h']]],
-  ['st_5fcritical_7',['ST_CRITICAL',['../_log_8h.html#a43f1d9c5642d86a618a90d58351084ed',1,'Log.h']]],
-  ['st_5fdebug_8',['ST_DEBUG',['../_log_8h.html#a2f37c549a03eedd6ae4b72dd74b9fdaf',1,'Log.h']]],
-  ['st_5ferror_9',['ST_ERROR',['../_log_8h.html#a654de4379e17adb39550e7ee2e0e29f9',1,'Log.h']]],
-  ['st_5finfo_10',['ST_INFO',['../_log_8h.html#a7a4d584307a18bc66e8dad1f9ad8625b',1,'Log.h']]],
-  ['st_5ftrace_11',['ST_TRACE',['../_log_8h.html#aff815259ef2e2e22ca8d0c723bd9b180',1,'Log.h']]],
-  ['st_5fwarn_12',['ST_WARN',['../_log_8h.html#a7f435c61107a128a0edc0a952a94c619',1,'Log.h']]]
+  ['shit_5fclass_1',['SHIT_CLASS',['../_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d',1,'Macros.h']]],
+  ['shit_5fdetail_5fannotate_2',['SHIT_DETAIL_ANNOTATE',['../_macros_8h.html#a64852d86c9c3f67893c3c26c30ca96dc',1,'Macros.h']]],
+  ['shit_5fmeta_3',['SHIT_META',['../_macros_8h.html#abda51617d4152febb4da2bb01b57703b',1,'Macros.h']]],
+  ['shit_5freflect_4',['SHIT_REFLECT',['../_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa',1,'Macros.h']]],
+  ['shit_5fstruct_5',['SHIT_STRUCT',['../_macros_8h.html#a0764e242fc12fed1d62d0d7c4ea9787d',1,'Macros.h']]],
+  ['st_5fcore_5fcritical_6',['ST_CORE_CRITICAL',['../_log_8h.html#a304ac95c5017efaabaca729e1dadcb5f',1,'Log.h']]],
+  ['st_5fcore_5fdebug_7',['ST_CORE_DEBUG',['../_log_8h.html#afe6cc112769b2b8ca030f3a2d26f6452',1,'Log.h']]],
+  ['st_5fcore_5ferror_8',['ST_CORE_ERROR',['../_log_8h.html#abf3849fe584d46510e5470f930e2eda0',1,'Log.h']]],
+  ['st_5fcore_5finfo_9',['ST_CORE_INFO',['../_log_8h.html#a96339747663a68b687d0662cf327e668',1,'Log.h']]],
+  ['st_5fcore_5ftrace_10',['ST_CORE_TRACE',['../_log_8h.html#ac379c2e7c01d6e578fa1dff97428de87',1,'Log.h']]],
+  ['st_5fcore_5fwarn_11',['ST_CORE_WARN',['../_log_8h.html#a1e6b79023cc055b13e1a06e6e005cd70',1,'Log.h']]],
+  ['st_5fcritical_12',['ST_CRITICAL',['../_log_8h.html#a43f1d9c5642d86a618a90d58351084ed',1,'Log.h']]],
+  ['st_5fdebug_13',['ST_DEBUG',['../_log_8h.html#a2f37c549a03eedd6ae4b72dd74b9fdaf',1,'Log.h']]],
+  ['st_5ferror_14',['ST_ERROR',['../_log_8h.html#a654de4379e17adb39550e7ee2e0e29f9',1,'Log.h']]],
+  ['st_5finfo_15',['ST_INFO',['../_log_8h.html#a7a4d584307a18bc66e8dad1f9ad8625b',1,'Log.h']]],
+  ['st_5ftrace_16',['ST_TRACE',['../_log_8h.html#aff815259ef2e2e22ca8d0c723bd9b180',1,'Log.h']]],
+  ['st_5fwarn_17',['ST_WARN',['../_log_8h.html#a7f435c61107a128a0edc0a952a94c619',1,'Log.h']]]
 ];
