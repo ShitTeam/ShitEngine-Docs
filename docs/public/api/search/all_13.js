@@ -13,12 +13,13 @@ var searchData=
   ['title_10',['title',['../struct_shit_1_1_window_config.html#ac30fed21fe991cc8475ce543929f8b72',1,'Shit::WindowConfig']]],
   ['tosdlcolor_11',['toSDLColor',['../class_shit_1_1_u_i_renderer_component.html#acd9be94033c0cc9329ee561083b8d112',1,'Shit::UIRendererComponent']]],
   ['trace_12',['Trace',['../class_shit_1_1_log.html#a24db4d83b8dddf7b919548e19a2a912a',1,'Shit::Log']]],
-  ['transformcomponent_2eh_13',['TransformComponent.h',['../_transform_component_8h.html',1,'']]],
-  ['typeindex_14',['typeIndex',['../struct_shit_1_1_type_info.html#a179500c846c41a50dfc9fd26d174f458',1,'Shit::TypeInfo']]],
-  ['typeinfo_15',['TypeInfo',['../struct_shit_1_1_type_info.html',1,'Shit']]],
-  ['typeinfo_2eh_16',['TypeInfo.h',['../_type_info_8h.html',1,'']]],
-  ['typeinfobuilder_17',['TypeInfoBuilder',['../class_shit_1_1_type_info_builder.html',1,'TypeInfoBuilder'],['../class_shit_1_1_type_registry.html#a206b044745b4ae1ec69f6595acfce573',1,'Shit::TypeRegistry::TypeInfoBuilder()']]],
-  ['typename_18',['typeName',['../struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::FieldInfo']]],
-  ['typeregistry_19',['TypeRegistry',['../class_shit_1_1_type_registry.html',1,'TypeRegistry'],['../class_shit_1_1_type_registry.html#a8fb345584b509941f28e6c820566d04b',1,'Shit::TypeRegistry::TypeRegistry(const TypeRegistry &amp;)=delete'],['../class_shit_1_1_type_registry.html#ab5bba81829c886b8714a3bda049f7519',1,'Shit::TypeRegistry::TypeRegistry(TypeRegistry &amp;&amp;)=delete']]],
-  ['typeregistry_2eh_20',['TypeRegistry.h',['../_type_registry_8h.html',1,'']]]
+  ['transformcomponent_13',['TransformComponent',['../class_shit_1_1_transform_component.html',1,'TransformComponent'],['../class_shit_1_1_transform_component.html#a666d167dbdf85cdc16b62d17d0201e73',1,'Shit::TransformComponent::TransformComponent()']]],
+  ['transformcomponent_2eh_14',['TransformComponent.h',['../_transform_component_8h.html',1,'']]],
+  ['typeindex_15',['typeIndex',['../struct_shit_1_1_type_info.html#a179500c846c41a50dfc9fd26d174f458',1,'Shit::TypeInfo']]],
+  ['typeinfo_16',['TypeInfo',['../struct_shit_1_1_type_info.html',1,'Shit']]],
+  ['typeinfo_2eh_17',['TypeInfo.h',['../_type_info_8h.html',1,'']]],
+  ['typeinfobuilder_18',['TypeInfoBuilder',['../class_shit_1_1_type_info_builder.html',1,'TypeInfoBuilder'],['../class_shit_1_1_type_registry.html#a206b044745b4ae1ec69f6595acfce573',1,'Shit::TypeRegistry::TypeInfoBuilder()']]],
+  ['typename_19',['typeName',['../struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::FieldInfo']]],
+  ['typeregistry_20',['TypeRegistry',['../class_shit_1_1_type_registry.html',1,'TypeRegistry'],['../class_shit_1_1_type_registry.html#a8fb345584b509941f28e6c820566d04b',1,'Shit::TypeRegistry::TypeRegistry(const TypeRegistry &amp;)=delete'],['../class_shit_1_1_type_registry.html#ab5bba81829c886b8714a3bda049f7519',1,'Shit::TypeRegistry::TypeRegistry(TypeRegistry &amp;&amp;)=delete']]],
+  ['typeregistry_2eh_21',['TypeRegistry.h',['../_type_registry_8h.html',1,'']]]
 ];

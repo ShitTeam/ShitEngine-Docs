@@ -5,5 +5,6 @@ var searchData=
   ['time_2',['Time',['../class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5',1,'Shit::Time::Time(const Time &amp;)=delete'],['../class_shit_1_1_time.html#a3cd15566d901c8904f275f8f3b828bf5',1,'Shit::Time::Time(Time &amp;&amp;)=delete']]],
   ['tosdlcolor_3',['toSDLColor',['../class_shit_1_1_u_i_renderer_component.html#acd9be94033c0cc9329ee561083b8d112',1,'Shit::UIRendererComponent']]],
   ['trace_4',['Trace',['../class_shit_1_1_log.html#a24db4d83b8dddf7b919548e19a2a912a',1,'Shit::Log']]],
-  ['typeregistry_5',['TypeRegistry',['../class_shit_1_1_type_registry.html#a8fb345584b509941f28e6c820566d04b',1,'Shit::TypeRegistry::TypeRegistry(const TypeRegistry &amp;)=delete'],['../class_shit_1_1_type_registry.html#ab5bba81829c886b8714a3bda049f7519',1,'Shit::TypeRegistry::TypeRegistry(TypeRegistry &amp;&amp;)=delete']]]
+  ['transformcomponent_5',['TransformComponent',['../class_shit_1_1_transform_component.html#a666d167dbdf85cdc16b62d17d0201e73',1,'Shit::TransformComponent']]],
+  ['typeregistry_6',['TypeRegistry',['../class_shit_1_1_type_registry.html#a8fb345584b509941f28e6c820566d04b',1,'Shit::TypeRegistry::TypeRegistry(const TypeRegistry &amp;)=delete'],['../class_shit_1_1_type_registry.html#ab5bba81829c886b8714a3bda049f7519',1,'Shit::TypeRegistry::TypeRegistry(TypeRegistry &amp;&amp;)=delete']]]
 ];

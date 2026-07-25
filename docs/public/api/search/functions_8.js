@@ -38,7 +38,8 @@ var searchData=
   ['isopen_35',['IsOpen',['../class_shit_1_1_window.html#a9216f2c6587e4405c4f1821f3a35f69d',1,'Shit::Window']]],
   ['ispaused_36',['isPaused',['../class_shit_1_1_audio_track.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AudioTrack::isPaused()'],['../class_shit_1_1_animation_component.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AnimationComponent::isPaused()']]],
   ['isplaying_37',['isPlaying',['../class_shit_1_1_audio_track.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AudioTrack::isPlaying()'],['../class_shit_1_1_animation_component.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AnimationComponent::isPlaying()']]],
-  ['isrunning_38',['IsRunning',['../class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f',1,'Shit::Game']]],
-  ['isstarted_39',['isStarted',['../class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781',1,'Shit::Behavior']]],
-  ['isvisible_40',['isVisible',['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent']]]
+  ['isregistered_38',['isRegistered',['../class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246',1,'Shit::Component']]],
+  ['isrunning_39',['IsRunning',['../class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f',1,'Shit::Game']]],
+  ['isstarted_40',['isStarted',['../class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781',1,'Shit::Behavior']]],
+  ['isvisible_41',['isVisible',['../class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::RendererComponent::isVisible()'],['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent::isVisible()']]]
 ];

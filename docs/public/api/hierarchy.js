@@ -9,10 +9,15 @@ var hierarchy =
     [ "AxisBinding", "struct_shit_1_1_axis_binding.html", null ],
     [ "Color", "struct_shit_1_1_color.html", null ],
     [ "UIButton::ColorBlock", "struct_shit_1_1_u_i_button_1_1_color_block.html", null ],
-    [ "Component", null, [
+    [ "Component", "class_shit_1_1_component.html", [
       [ "Behavior", "class_shit_1_1_behavior.html", [
         [ "AnimationComponent", "class_shit_1_1_animation_component.html", null ]
       ] ],
+      [ "CameraComponent", "class_shit_1_1_camera_component.html", null ],
+      [ "RendererComponent", "class_shit_1_1_renderer_component.html", [
+        [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", null ]
+      ] ],
+      [ "TransformComponent", "class_shit_1_1_transform_component.html", null ],
       [ "UICanvas", "class_shit_1_1_u_i_canvas.html", null ],
       [ "UIRendererComponent", "class_shit_1_1_u_i_renderer_component.html", [
         [ "UIButton", "class_shit_1_1_u_i_button.html", null ],
@@ -38,9 +43,6 @@ var hierarchy =
     [ "Prefab", "class_shit_1_1_prefab.html", null ],
     [ "ProjectConfig", "struct_shit_1_1_project_config.html", null ],
     [ "Renderer", "class_shit_1_1_renderer.html", null ],
-    [ "RendererComponent", null, [
-      [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", null ]
-    ] ],
     [ "ResourceManager", "class_shit_1_1_resource_manager.html", null ],
     [ "Scene", "class_shit_1_1_scene.html", null ],
     [ "SceneManager", "class_shit_1_1_scene_manager.html", null ],

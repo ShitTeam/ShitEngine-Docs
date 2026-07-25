@@ -10,7 +10,9 @@ var namespace_shit =
     [ "AxisBinding", "struct_shit_1_1_axis_binding.html", "struct_shit_1_1_axis_binding" ],
     [ "Behavior", "class_shit_1_1_behavior.html", "class_shit_1_1_behavior" ],
     [ "BehaviorSystem", "class_shit_1_1_behavior_system.html", "class_shit_1_1_behavior_system" ],
+    [ "CameraComponent", "class_shit_1_1_camera_component.html", "class_shit_1_1_camera_component" ],
     [ "Color", "struct_shit_1_1_color.html", "struct_shit_1_1_color" ],
+    [ "Component", "class_shit_1_1_component.html", "class_shit_1_1_component" ],
     [ "Config", "class_shit_1_1_config.html", "class_shit_1_1_config" ],
     [ "Event", "struct_shit_1_1_event.html", "struct_shit_1_1_event" ],
     [ "EventBus", "class_shit_1_1_event_bus.html", "class_shit_1_1_event_bus" ],
@@ -24,6 +26,7 @@ var namespace_shit =
     [ "Prefab", "class_shit_1_1_prefab.html", "class_shit_1_1_prefab" ],
     [ "ProjectConfig", "struct_shit_1_1_project_config.html", "struct_shit_1_1_project_config" ],
     [ "Renderer", "class_shit_1_1_renderer.html", "class_shit_1_1_renderer" ],
+    [ "RendererComponent", "class_shit_1_1_renderer_component.html", "class_shit_1_1_renderer_component" ],
     [ "RenderSystem", "class_shit_1_1_render_system.html", "class_shit_1_1_render_system" ],
     [ "ResourceManager", "class_shit_1_1_resource_manager.html", "class_shit_1_1_resource_manager" ],
     [ "Scene", "class_shit_1_1_scene.html", "class_shit_1_1_scene" ],
@@ -35,6 +38,7 @@ var namespace_shit =
     [ "TextInputGate", "class_shit_1_1_text_input_gate.html", "class_shit_1_1_text_input_gate" ],
     [ "TextureManager", "class_shit_1_1_texture_manager.html", "class_shit_1_1_texture_manager" ],
     [ "Time", "class_shit_1_1_time.html", "class_shit_1_1_time" ],
+    [ "TransformComponent", "class_shit_1_1_transform_component.html", "class_shit_1_1_transform_component" ],
     [ "TypeInfo", "struct_shit_1_1_type_info.html", "struct_shit_1_1_type_info" ],
     [ "TypeInfoBuilder", "class_shit_1_1_type_info_builder.html", "class_shit_1_1_type_info_builder" ],
     [ "TypeRegistry", "class_shit_1_1_type_registry.html", "class_shit_1_1_type_registry" ],
@@ -197,6 +201,5 @@ var namespace_shit =
     ] ],
     [ "DemangleTypeName", "namespace_shit.html#afe671363a5ef5f405485e38c225e0885", null ],
     [ "memberOffset", "namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13", null ],
-    [ "ReflectType", "namespace_shit.html#a2e911473ec7d41ed241324aba861713b", null ],
-    [ "SHIT_CLASS", "namespace_shit.html#a276d3740dc6403fa70d0db6c475ae1a1", null ]
+    [ "ReflectType", "namespace_shit.html#a2e911473ec7d41ed241324aba861713b", null ]
 ];
