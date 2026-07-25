@@ -33,6 +33,7 @@ export default defineConfig({
           { text: '游戏对象与组件', link: '/guide/game-objects' },
           { text: '场景与系统', link: '/guide/scene' },
           { text: 'UI 系统', link: '/guide/ui' },
+          { text: '反射系统', link: '/guide/reflection' },
           { text: '渲染与相机', link: '/guide/rendering' },
           { text: '输入系统', link: '/guide/input' },
           { text: '逐帧动画', link: '/guide/animation' },
