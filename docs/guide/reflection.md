@@ -121,10 +121,12 @@ ReflectionScanner \
     --input Engine/include/ShitEngine/Component \
     --output Engine/generated/reflection \
     --include Engine/include \
-    --include Engine/external/SDL/include \
-    --include Engine/external/glm \
+    --include <glm_source_dir> \
+    --include <sdl3_source_dir>/include \
     --include-root Engine/include
 ```
+
+> 说明：`<glm_source_dir>` 和 `<sdl3_source_dir>` 的实际路径由 CMake FetchContent 决定，通常为 `${CMAKE_BINARY_DIR}/_deps/glm-src` 和 `${CMAKE_BINARY_DIR}/_deps/sdl3-src`。新版 CMake 集成（见下节）会自动处理这些路径。
 
 参数说明：
 
@@ -137,17 +139,58 @@ ReflectionScanner \
 | `--include-root` | 从 `sourceFile` 路径中移除的前缀，默认 input 的父目录 |
 | `--resource-dir` | libClang resource 目录（含 builtin headers） |
 
-### CMake 集成
+### CMake 集成（新版）
+
+项目使用 `setup_reflection_scan()` 函数配置 Scanner 调用。该函数由 `Tools/ReflectionScanner/ReflectionScanSetup.cmake` 定义，**须在第三方依赖配置完成后调用**，以便传入 glm 和 SDL3 的 include 路径：
 
 ```cmake
-# 将生成目录加入 include path
-target_include_directories(ShitEngine PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/generated>
-)
+# Engine/CMakeLists.txt 中（依赖配置后）
+if(BUILD_TOOLS)
+    FetchContent_GetProperties(glm)
+    FetchContent_GetProperties(SDL3)
+    set(_ENGINE_REFLECT_INCS "")
+    if(glm_SOURCE_DIR)
+        list(APPEND _ENGINE_REFLECT_INCS "${glm_SOURCE_DIR}")
+    endif()
+    if(SDL3_SOURCE_DIR)
+        list(APPEND _ENGINE_REFLECT_INCS "${SDL3_SOURCE_DIR}/include")
+    endif()
+    setup_reflection_scan(engine
+        "${CMAKE_CURRENT_SOURCE_DIR}/include/ShitEngine"
+        "${CMAKE_CURRENT_SOURCE_DIR}/generated/reflection"
+        "${CMAKE_CURRENT_SOURCE_DIR}/include"
+        ${_ENGINE_REFLECT_INCS}
+    )
+endif()
+```
 
-# 在 Game::init() 中注册
-TypeRegistry::InitBuiltinTypes();   // 内置类型
-RegisterAllReflectedTypes();        // 自动生成的引擎类型
+该命令会创建 `reflect-${scope}`（增量）和 `run-reflectionscanner-${scope}`（强制）两个 CMake 目标：
+
+```bash
+cmake --build . --target reflect-engine       # Engine 增量扫描
+cmake --build . --target run-reflectionscanner # 各作用域全部强制扫描
+cmake --build . --target reflect               # 伞形目标（engine + examples）
+```
+
+### 运行时注册
+
+在引擎启动时调用生成的注册函数：
+
+```cpp
+// Game::init() 中
+TypeRegistry::InitBuiltinTypes();   // 注册 int、float 等内置类型
+RegisterAllReflectedTypes();        // 注册 Scanner 扫描到的所有类型
+```
+
+`RegisterAllReflectedTypes()` 由 `ReflectionRegisterAll.h`（scanner 自动生成）提供，该文件会 include 各模块的 `.gen.h`。
+
+### 构建目录与 Include 路径
+
+自动生成的 `.gen.h` 文件位于各模块的 `generated/reflection/` 目录下，已通过 CMake 的 `target_include_directories` 加入 include 路径：
+
+```cmake
+target_include_directories(ShitEngine PRIVATE
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/generated>)
 ```
 
 ## 架构说明
