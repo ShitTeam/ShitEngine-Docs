@@ -196,16 +196,19 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_macros_8h_sou
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// 消除类名重复。clang 要求 annotate 在 struct/class 关键字之后。</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// 用法：</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//   SHIT_CLASS(MyComponent, Fields) SHIT_API : public Base { ... };</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//   SHIT_API SHIT_CLASS(MyComponent, Fields) : public Base { ... };</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//   SHIT_STRUCT(MyStruct, Fields)                { ... };</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_macros_8h.html#a0764e242fc12fed1d62d0d7c4ea9787d">   45</a></span><span class="preprocessor">#define SHIT_STRUCT(Type, Mode) struct SHIT_DETAIL_ANNOTATE(&quot;shit-struct:&quot; #Mode) Type</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d">   46</a></span><span class="preprocessor">#define SHIT_CLASS(Type, Mode)  class  SHIT_DETAIL_ANNOTATE(&quot;shit-class:&quot;  #Mode) Type</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// 字段级注解（仅 WhiteListFields 模式用）</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">   49</a></span><span class="preprocessor">#define SHIT_META(...) SHIT_DETAIL_ANNOTATE(&quot;shit-meta&quot;)</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">//</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// 注意：SHIT_API（__declspec）必须在宏之前——GCC 的 -fdeclspec 不接受</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// __declspec 出现在类名与 { 之间。放在 class 关键字前是 MSVC/GCC 通用位置。</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="_macros_8h.html#a0764e242fc12fed1d62d0d7c4ea9787d">   48</a></span><span class="preprocessor">#define SHIT_STRUCT(Type, Mode) struct SHIT_DETAIL_ANNOTATE(&quot;shit-struct:&quot; #Mode) Type</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d">   49</a></span><span class="preprocessor">#define SHIT_CLASS(Type, Mode)  class  SHIT_DETAIL_ANNOTATE(&quot;shit-class:&quot;  #Mode) Type</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// friend 授权宏（运行期需要，不可去除）</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa">   52</a></span><span class="preprocessor">#define SHIT_REFLECT(Type) friend bool Register_##Type();</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// 字段级注解（仅 WhiteListFields 模式用）</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">   52</a></span><span class="preprocessor">#define SHIT_META(...) SHIT_DETAIL_ANNOTATE(&quot;shit-meta&quot;)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// friend 授权宏（运行期需要，不可去除）</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa">   55</a></span><span class="preprocessor">#define SHIT_REFLECT(Type) friend bool Register_##Type();</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
