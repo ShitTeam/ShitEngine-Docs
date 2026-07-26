@@ -5,5 +5,6 @@ var searchData=
   ['semicolon_2',['Semicolon',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da9806fa37a3ecd39bf637c203aa011ed0',1,'Shit']]],
   ['slash_3',['Slash',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da358cfe58715d680d9ab09f82e4010cbc',1,'Shit']]],
   ['sleep_4',['Sleep',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da243924bfd56a682be235638b53961e09',1,'Shit']]],
-  ['space_5',['Space',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0dad511f8439ecde36647437fbba67a4394',1,'Shit']]]
+  ['space_5',['Space',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0dad511f8439ecde36647437fbba67a4394',1,'Shit']]],
+  ['static_6',['Static',['../class_shit_1_1_rigid_body2_d.html#a1d1cfd8ffb84e947f82999c682b666a7a84a8921b25f505d0d2077aeb5db4bc16',1,'Shit::RigidBody2D']]]
 ];

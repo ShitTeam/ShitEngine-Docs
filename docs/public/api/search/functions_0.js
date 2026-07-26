@@ -10,8 +10,11 @@ var searchData=
   ['animation_7',['Animation',['../class_shit_1_1_animation.html#a58936f4cd9797c6b52d287c172b90756',1,'Shit::Animation']]],
   ['animationcomponent_8',['AnimationComponent',['../class_shit_1_1_animation_component.html#ace67d3c9fe243d83ff4a3b49d5754d88',1,'Shit::AnimationComponent']]],
   ['apply_9',['apply',['../class_shit_1_1_prefab.html#a6b1eb934cd47f9b035aa2dabd4644900',1,'Shit::Prefab']]],
-  ['applytrackgain_10',['ApplyTrackGain',['../class_shit_1_1_audio_player.html#aa89cb3cfdbdd384a906bf1fc873f3ab7',1,'Shit::AudioPlayer']]],
-  ['audiomanager_11',['AudioManager',['../class_shit_1_1_audio_manager.html#a6c9b10afa36efd5acc683e19d15cd968',1,'Shit::AudioManager::AudioManager(const AudioManager &amp;)=delete'],['../class_shit_1_1_audio_manager.html#a80272ef45a7324adeff5a67cb57c7cfb',1,'Shit::AudioManager::AudioManager(AudioManager &amp;&amp;)=default']]],
-  ['audioplayer_12',['AudioPlayer',['../class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b',1,'Shit::AudioPlayer::AudioPlayer(const AudioPlayer &amp;)=delete'],['../class_shit_1_1_audio_player.html#ab4db3ae581702270e3031456a247fc4a',1,'Shit::AudioPlayer::AudioPlayer(AudioPlayer &amp;&amp;)=delete']]],
-  ['audiotrack_13',['AudioTrack',['../class_shit_1_1_audio_track.html#ae261c483b247655d209b9eed08880e42',1,'Shit::AudioTrack::AudioTrack(const AudioTrack &amp;)=delete'],['../class_shit_1_1_audio_track.html#aa3a03ab113c0336438e6a982b9ac89c9',1,'Shit::AudioTrack::AudioTrack(AudioTrack &amp;&amp;) noexcept']]]
+  ['applyforce_10',['applyForce',['../class_shit_1_1_rigid_body2_d.html#ab2551db530127140a4e3b8a945484b4e',1,'Shit::RigidBody2D']]],
+  ['applyforcetocenter_11',['applyForceToCenter',['../class_shit_1_1_rigid_body2_d.html#a447828d982edf5ab6d9cd30582359c0e',1,'Shit::RigidBody2D']]],
+  ['applyimpulse_12',['applyImpulse',['../class_shit_1_1_rigid_body2_d.html#aa0586e44431d50620112f6a020fd2c7b',1,'Shit::RigidBody2D']]],
+  ['applytrackgain_13',['ApplyTrackGain',['../class_shit_1_1_audio_player.html#aa89cb3cfdbdd384a906bf1fc873f3ab7',1,'Shit::AudioPlayer']]],
+  ['audiomanager_14',['AudioManager',['../class_shit_1_1_audio_manager.html#a6c9b10afa36efd5acc683e19d15cd968',1,'Shit::AudioManager::AudioManager(const AudioManager &amp;)=delete'],['../class_shit_1_1_audio_manager.html#a80272ef45a7324adeff5a67cb57c7cfb',1,'Shit::AudioManager::AudioManager(AudioManager &amp;&amp;)=default']]],
+  ['audioplayer_15',['AudioPlayer',['../class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b',1,'Shit::AudioPlayer::AudioPlayer(const AudioPlayer &amp;)=delete'],['../class_shit_1_1_audio_player.html#ab4db3ae581702270e3031456a247fc4a',1,'Shit::AudioPlayer::AudioPlayer(AudioPlayer &amp;&amp;)=delete']]],
+  ['audiotrack_16',['AudioTrack',['../class_shit_1_1_audio_track.html#ae261c483b247655d209b9eed08880e42',1,'Shit::AudioTrack::AudioTrack(const AudioTrack &amp;)=delete'],['../class_shit_1_1_audio_track.html#aa3a03ab113c0336438e6a982b9ac89c9',1,'Shit::AudioTrack::AudioTrack(AudioTrack &amp;&amp;) noexcept']]]
 ];

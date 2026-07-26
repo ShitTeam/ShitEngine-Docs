@@ -1,8 +1,9 @@
 var searchData=
 [
   ['cameracomponent_0',['CameraComponent',['../class_shit_1_1_camera_component.html',1,'Shit']]],
-  ['color_1',['Color',['../struct_shit_1_1_color.html',1,'Shit']]],
-  ['colorblock_2',['ColorBlock',['../struct_shit_1_1_u_i_button_1_1_color_block.html',1,'Shit::UIButton']]],
-  ['component_3',['Component',['../class_shit_1_1_component.html',1,'Shit']]],
-  ['config_4',['Config',['../class_shit_1_1_config.html',1,'Shit']]]
+  ['circlecollider2d_1',['CircleCollider2D',['../class_shit_1_1_circle_collider2_d.html',1,'Shit']]],
+  ['color_2',['Color',['../struct_shit_1_1_color.html',1,'Shit']]],
+  ['colorblock_3',['ColorBlock',['../struct_shit_1_1_u_i_button_1_1_color_block.html',1,'Shit::UIButton']]],
+  ['component_4',['Component',['../class_shit_1_1_component.html',1,'Shit']]],
+  ['config_5',['Config',['../class_shit_1_1_config.html',1,'Shit']]]
 ];

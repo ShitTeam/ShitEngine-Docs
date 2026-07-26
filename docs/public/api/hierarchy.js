@@ -13,10 +13,13 @@ var hierarchy =
       [ "Behavior", "class_shit_1_1_behavior.html", [
         [ "AnimationComponent", "class_shit_1_1_animation_component.html", null ]
       ] ],
+      [ "BoxCollider2D", "class_shit_1_1_box_collider2_d.html", null ],
       [ "CameraComponent", "class_shit_1_1_camera_component.html", null ],
+      [ "CircleCollider2D", "class_shit_1_1_circle_collider2_d.html", null ],
       [ "RendererComponent", "class_shit_1_1_renderer_component.html", [
         [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", null ]
       ] ],
+      [ "RigidBody2D", "class_shit_1_1_rigid_body2_d.html", null ],
       [ "TransformComponent", "class_shit_1_1_transform_component.html", null ],
       [ "UICanvas", "class_shit_1_1_u_i_canvas.html", null ],
       [ "UIRendererComponent", "class_shit_1_1_u_i_renderer_component.html", [
@@ -50,6 +53,7 @@ var hierarchy =
     [ "SpriteSheet", "class_shit_1_1_sprite_sheet.html", null ],
     [ "System", "class_shit_1_1_system.html", [
       [ "BehaviorSystem", "class_shit_1_1_behavior_system.html", null ],
+      [ "PhysicsSystem2D", "class_shit_1_1_physics_system2_d.html", null ],
       [ "RenderSystem", "class_shit_1_1_render_system.html", null ],
       [ "UIRenderSystem", "class_shit_1_1_u_i_render_system.html", null ]
     ] ],
