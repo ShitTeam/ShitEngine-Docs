@@ -104,7 +104,9 @@ tf->setAnchorMax({1.0f, 1.0f});
 ```cpp
 // Canvas 是根
 auto* canvas = scene->createGameObject("Canvas");
-canvas->addComponent<Shit::UITransform>(0, 0, Renderer::GetLogicalWidth(), Renderer::GetLogicalHeight());
+canvas->addComponent<Shit::UITransform>(0.0f, 0.0f,
+    static_cast<float>(Shit::Renderer::GetLogicalWidth()),
+    static_cast<float>(Shit::Renderer::GetLogicalHeight()));
 canvas->addComponent<Shit::UICanvas>();
 
 auto* btn = scene->createGameObject("Button");

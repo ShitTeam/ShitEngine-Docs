@@ -71,8 +71,12 @@ EventBus::Emit(PlayerDeathEvent{playerId, killer});
 
 ```cpp
 void MyGame::run() {
+    SDL_Event event;
     while (Window::IsOpen()) {
-        Window::HandleEvent();
+        while (SDL_PollEvent(&event)) {
+            Window::HandleEvent(event);
+            Input::HandleEvent(event);
+        }
         Input::Update();
         SceneManager::Update();
         EventBus::ProcessEvents();   // 派发本帧事件

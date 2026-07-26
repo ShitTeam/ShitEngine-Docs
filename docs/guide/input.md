@@ -191,7 +191,7 @@ Shit::Vector2 scroll = Shit::Input::GetMouseScroll();
 void Clickable::onUpdate() {
     if (Shit::Input::IsMouseButtonDown(Shit::MouseButton::Left)) {
         Shit::Vector2 mouse = Shit::Input::GetMousePosition();
-        SDL_FRect bounds = getOwner()->getComponent<SpriteRenderer>()->getGlobalBounds();
+        SDL_FRect bounds = getOwner()->getComponent<Shit::SpriteRenderer>()->getGlobalBounds();
 
         if (mouse.x >= bounds.x && mouse.x <= bounds.x + bounds.w &&
             mouse.y >= bounds.y && mouse.y <= bounds.y + bounds.h) {

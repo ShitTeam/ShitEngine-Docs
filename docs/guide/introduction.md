@@ -44,6 +44,9 @@ auto* player = scene->createGameObject("player");
 - `CameraComponent` — 从哪个角度观察世界
 - `AnimationComponent` — 让 sprite 动起来
 - `Behavior` — 你自己的游戏逻辑——继承它，重写 `onUpdate`
+- `UITransform` / `UIImage` / `UIText` — UI 控件三件套
+- `UIButton` — 可交互按钮
+- `UITextBox` / `UITextArea` — 文本输入（含 IME 中文）
 
 每种组件**只能挂一个**（一个对象不会有两份 Transform）。`addComponent<T>()` 如果已存在就返回已有的。
 
@@ -52,8 +55,9 @@ auto* player = scene->createGameObject("player");
 组件是积木块，System 是那条流水线。`BehaviorSystem` 每帧对所有 Behavior 调 `onUpdate`，`RenderSystem` 排好序后逐个渲染。System 有优先级，数值小的先执行。
 
 ```
-优先级 0:  BehaviorSystem  →  跑游戏逻辑
-优先级 100: RenderSystem    →  画画面
+优先级 0:   BehaviorSystem  →  跑游戏逻辑
+优先级 100: RenderSystem    →  画游戏世界
+优先级 200: UIRenderSystem  →  画 UI
 ```
 
 你完全可以写自己的 System 插到中间——物理、寻路、AI，随你。
