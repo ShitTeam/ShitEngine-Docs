@@ -15,37 +15,39 @@ ShitEngine 提供一套基于 **libClang** 的编译期反射系统。开发者�
 
 ### SHIT_CLASS / SHIT_STRUCT
 
-标记需要反射的类型，展开为带 `__attribute__((annotate))` 的类/结构体声明。libClang 在 AST 中通过 `CXCursor_AnnotateAttr` 读取该注解。
+标记需要反射的类型。宏展开为带 `__attribute__((annotate))` 的属性声明，替换类名位置。libClang 在 AST 中通过 `CXCursor_AnnotateAttr` 读取该注解。
+
+**宏只展开为 annotate 属性 + 类型名**，不包含 `class`/`struct` 关键字。你需要自己书写关键字和 `SHIT_API`：
 
 ```cpp
-// 反射所有字段
-SHIT_CLASS(Player, Fields) SHIT_API : public Component {
+// Fields 模式：反射所有字段
+class SHIT_API SHIT_CLASS(Player, Fields) : public Component {
     SHIT_REFLECT(Player)  // 授权成员指针访问 private
 public:
     int hp;
     float speed;
 };
 
-// 白名单模式：仅反射标记的字段
-SHIT_STRUCT(PlayerConfig, WhiteListFields) {
+// WhiteListFields 模式：仅反射被 SHIT_META 标记的字段
+struct SHIT_STRUCT(PlayerConfig, WhiteListFields) {
     SHIT_REFLECT(PlayerConfig)
 
-    SHIT_META(Enable)
+    SHIT_META()
     float volume = 1.0f;  // 会被反射
 
     int cacheVersion = 0;  // 不会被反射
 };
 ```
 
-- **Mode**: `Fields`（反射所有字段）| `WhiteListFields`（只反射 `SHIT_META(Enable)` 的字段）
+- **Mode**: `Fields`（反射所有字段）| `WhiteListFields`（只反射带 `SHIT_META` 的字段）
 - **`SHIT_REFLECT(Type)`**: 放在类体内，展开为 `friend bool Register_Type();`。授予生成的注册代码访问 private/protected 成员的权限（通过成员指针取 offset，ABI 安全，不依赖 libClang 的数值偏移量）
 
 ### SHIT_META
 
-白名单模式下标记需要反射的字段。展开为 `__attribute__((annotate("shit-meta")))`。
+白名单模式下标记需要反射的字段。展开为 `__attribute__((annotate("shit-meta")))`。参数内容无实际作用，纯为可读标记。
 
 ```cpp
-SHIT_META(Enable)
+SHIT_META()
 float health;
 ```
 
@@ -58,26 +60,43 @@ float health;
 ### TypeRegistry
 
 ```cpp
-// 初始化内置类型（int、float、std::string 等，在 Game::Init() 中自动调用）
+// 初始化内置类型（int、float、std::string 等），在 Game::Init() 中自动调用
 TypeRegistry::InitBuiltinTypes();
 
 // 查询
-const TypeInfo* t = TypeRegistry::Get("Player");       // 按名称
-const TypeInfo* t = TypeRegistry::Get<Player>();        // 按 type_index (模板)
-size_t count      = TypeRegistry::Count();              // 注册总数
-TypeRegistry::ForEach([](const TypeInfo& info) { ... }); // 遍历
+const TypeInfo* t = TypeRegistry::Get("Player");           // 按名称（string_view）
+const TypeInfo* t = TypeRegistry::Get<Player>();            // 按 type_index（模板）
+size_t count      = TypeRegistry::Count();                  // 注册总数
+TypeRegistry::ForEach([](const TypeInfo& info) { ... });    // 遍历
+```
 
-// 手动注册（当没有运行 Scanner 或运行时构造类型时）
+手动注册（当没有运行 Scanner 或在运行时构造类型时）：
+
+```cpp
 Shit::ReflectType("Player", sizeof(Player))
     .Base(TypeRegistry::Get("Component"))
-    .Field("m_hp",    offsetof(Player, m_hp),    sizeof(int),        "int")
-    .Field("m_speed", offsetof(Player, m_speed), sizeof(float),      "float")
+    .Field("m_hp",    offsetof(Player, m_hp),    sizeof(int),   "int")
+    .Field("m_speed", offsetof(Player, m_speed), sizeof(float), "float")
     .Register<Player>();
 ```
 
-手动注册提供的两种 `Field` 重载：
-- `Field(name, &T::member, "typeName")` — 成员指针方式（需要 rpa friend 授权）
-- `Field(name, offset, size, "typeName")` — 数值偏移方式（无孽授权要求）
+`Field()` 提供三组重载：
+
+| 重载 | 说明 |
+|---|---|
+| `Field(name, offset, size, typeName)` | 数值偏移方式（无 friend 授权要求） |
+| `Field(name, &T::member)` | 成员指针方式，自动推导偏移+大小+类型名（ABI 安全，需 `SHIT_REFLECT` 授权） |
+| `Field(name, &T::member, typeName)` | 成员指针方式，显式指定类型名字符串 |
+
+`Base()` 同样有两种形式：
+
+```cpp
+// 通过基类指针
+.Base(TypeRegistry::Get("Component"))
+
+// 通过模板参数自动查找（需基类已在 TypeRegistry 中注册）
+.Base<Component>()
+```
 
 ### TypeInfo / FieldInfo
 
@@ -94,8 +113,19 @@ struct TypeInfo {
     size_t       size;         // sizeof(T)
     const TypeInfo* baseType;  // 基类（若有）
     std::vector<FieldInfo> fields;
-    std::function<void*(void*)> factory;  // 工厂函数
+    std::type_index typeIndex;                   // 用于 Get<T>() 模板查询
+    std::function<void*(void*)> factory;          // 工厂函数（P1-2）
 };
+```
+
+field 支持运行时读写：
+
+```cpp
+void*  ptr = field.GetFieldPtr(obj);            // 字段指针
+void   field.GetValue(obj, outBuffer);          // 拷贝到缓冲区
+void   field.SetValue(obj, value);              // 从缓冲区写入
+void*  instance = typeInfo.Create(nullptr);     // 堆构造
+void*  instance = typeInfo.Create(&buffer);     // placement new 到指定内存
 ```
 
 ### 成员指针绑定（P1-3）
@@ -104,7 +134,7 @@ struct TypeInfo {
 
 ```cpp
 // Scanner 生成的注册代码（hasReflect=true 时）
-ReflectType("Player", sizeof(Player))
+Shit::ReflectType("Player", sizeof(Player))
     .Field("m_hp", &Player::m_hp, "int")
     .Field("m_speed", &Player::m_speed, "float")
     .Register<Player>();
@@ -114,7 +144,23 @@ ReflectType("Player", sizeof(Player))
 
 ### Demangle
 
-GCC/MinGW 环境下 `typeid(T).name()` 返回的是 ABI mangled 名。`DemangleTypeName()` 使用 `abi::__cxa_demangle` 将其还原为可读名称，MSVC 下直接返回原名。
+`DemangleTypeName()` 是 `namespace Shit` 下的 free 函数，用于将 `typeid(T).name()` 返回的 ABI mangled 名还原为可读名称。GCC/MinGW 下使用 `abi::__cxa_demangle`，MSVC 下直接返回原名。
+
+### 工厂创建（P1-2）
+
+TypeInfo 支持通过 `Factory<T>()` 注册工厂函数，调用 `typeInfo.Create()` 构造类型实例：
+
+```cpp
+Shit::ReflectType("Player", sizeof(Player))
+    .Factory<Player>()          // 注册无参构造工厂
+    .Register<Player>();
+
+// 使用
+void* instance = TypeRegistry::Get("Player")->Create();
+// 或 placement new 到指定内存
+char buffer[sizeof(Player)];
+void* instance = TypeRegistry::Get("Player")->Create(buffer);
+```
 
 ## 构建集成
 
@@ -130,8 +176,6 @@ ReflectionScanner \
     --include-root Engine/include
 ```
 
-> 说明：`<glm_source_dir>` 和 `<sdl3_source_dir>` 的实际路径由 CMake FetchContent 决定，通常为 `${CMAKE_BINARY_DIR}/_deps/glm-src` 和 `${CMAKE_BINARY_DIR}/_deps/sdl3-src`。新版 CMake 集成（见下节）会自动处理这些路径。
-
 参数说明：
 
 | 参数 | 说明 |
@@ -143,7 +187,9 @@ ReflectionScanner \
 | `--include-root` | 从 `sourceFile` 路径中移除的前缀，默认 input 的父目录 |
 | `--resource-dir` | libClang resource 目录（含 builtin headers） |
 
-### CMake 集成（新版）
+> 说明：第三方库的 include 路径（glm、SDL3）由 CMake FetchContent 决定，CMake 集成（见下节）会自动传入。
+
+### CMake 集成
 
 项目使用 `setup_reflection_scan()` 函数配置 Scanner 调用。该函数由 `Tools/ReflectionScanner/ReflectionScanSetup.cmake` 定义，**须在第三方依赖配置完成后调用**，以便传入 glm 和 SDL3 的 include 路径：
 
@@ -168,12 +214,13 @@ if(BUILD_TOOLS)
 endif()
 ```
 
-该命令会创建 `reflect-${scope}`（增量）和 `run-reflectionscanner-${scope}`（强制）两个 CMake 目标：
+该命令会创建 `reflect-${scope}`（增量）和 `run-reflectionscanner-${scope}`（强制重扫）两个 CMake 目标：
 
 ```bash
-cmake --build . --target reflect-engine       # Engine 增量扫描
-cmake --build . --target run-reflectionscanner # 各作用域全部强制扫描
-cmake --build . --target reflect               # 伞形目标（engine + examples）
+cmake --build . --target reflect-engine                    # Engine 增量扫描
+cmake --build . --target run-reflectionscanner-engine       # Engine 强制重扫
+cmake --build . --target reflect-examples                   # Examples 增量扫描
+cmake --build . --target run-reflectionscanner-examples     # Examples 强制重扫
 ```
 
 ### 运行时注册
@@ -186,7 +233,7 @@ TypeRegistry::InitBuiltinTypes();   // 注册 int、float 等内置类型
 RegisterAllReflectedTypes();        // 注册 Scanner 扫描到的所有类型
 ```
 
-`RegisterAllReflectedTypes()` 由 `ReflectionRegisterAll.h`（scanner 自动生成）提供，该文件会 include 各模块的 `.gen.h`。
+`RegisterAllReflectedTypes()` 由 `ReflectionRegisterAll.h`（Scanner 自动生成）提供，该文件 include 了各模块的 `.gen.h` 并调用内部的注册函数。
 
 ### 构建目录与 Include 路径
 
@@ -229,12 +276,58 @@ TypeRegistry (单例)
 
 `std::list` 保证元素地址稳定，不因后续插入而失效。
 
+### 生成的 .gen.h 结构
+
+以 `TransformComponent` 为例，Scanner 生成的 `TransformComponent.gen.h`：
+
+```cpp
+#pragma once
+
+#include <ShitEngine/Component/TransformComponent.h>
+#include <ShitEngine/Reflection/TypeRegistry.h>
+
+namespace Shit {
+inline bool Register_TransformComponent() {
+    const auto* base = Shit::TypeRegistry::Get("Component");
+    Shit::ReflectType("TransformComponent", sizeof(TransformComponent))
+        .Base(base)
+        .Field("m_position", &Shit::TransformComponent::m_position, "Vector2")
+        .Field("m_scale",    &Shit::TransformComponent::m_scale,    "Vector2")
+        .Field("m_rotation", &Shit::TransformComponent::m_rotation, "float")
+        .Register<TransformComponent>();
+    return true;
+}
+} // namespace Shit
+```
+
+`ReflectionRegisterAll.h` 统一包含所有 `.gen.h` 并调用其注册函数：
+
+```cpp
+inline void RegisterAllReflectedTypes() {
+    Shit::Register_CameraComponent();
+    Shit::Register_Component();
+    Shit::Register_RendererComponent();
+    Shit::Register_TransformComponent();
+}
+```
+
+## 引擎内置组件的反射标记
+
+引擎核心组件已使用反射宏标记，可通过 `TypeRegistry` 查询：
+
+| 组件 | 标记方式 |
+|---|---|
+| `Component` | `class SHIT_CLASS(Component, Fields) : ...` |
+| `TransformComponent` | `class SHIT_API SHIT_CLASS(TransformComponent, Fields) : public Component` |
+| `RendererComponent` | `class SHIT_API SHIT_CLASS(RendererComponent, Fields) : public Component` |
+| `CameraComponent` | `class SHIT_API SHIT_CLASS(CameraComponent, Fields) : public Component` |
+
 ## 限制
 
-- **Scanner 工具链要求**: 需要安装 LLVM/libClang（项目依赖 MinGW 或系统 GCC 编译器）。全头文件解析失败时会自动报告并阻断构建
+- **Scanner 工具链要求**: 需要安装 LLVM/libClang 并与项目的 MinGW/GCC 编译器版本兼容。全部头文件解析失败时会自动报告并阻断构建
 - **枚举不反射**: 当前仅支持 class/struct 标记的反射，enum 不在范围内（与 Piccolo 一致）
-- **匿名命名空间不支持**: 若将反射类型放在匿名命名空间中，扫描器将跳过注册
-- **`Get<T>()` 与匿名命名空间冲突**: 匿名命名空间中的类型具有内部链接，同名类型会导致 `type_index` 冲突。需将反射类型放在命名命名空间中即可正常使用（包括模板泛型查找）
+- **匿名命名空间不支持**: 若将反射类型放在匿名命名空间中，扫描器将跳过注册（`Get<T>()` 模板查询也会因匿名命名空间的内部链接而导致 type_index 冲突）
+- **命名空间剥离**: 基类名从 Scanner 输出时会剥离命名空间前缀（`Shit::Component` → `Component`），要求基类以简短的名字在 TypeRegistry 中注册
 
 ## 参考
 
