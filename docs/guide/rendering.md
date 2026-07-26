@@ -158,15 +158,16 @@ cam->setPriority(10);  // UI 层，盖在上面
 ```
 1. ClearScreen()                        — 清屏
 2. BehaviorSystem::update()             — 游戏逻辑（优先级 0）
-3. RenderSystem::update()               — 游戏世界渲染（优先级 100）
+3. PhysicsSystem2D::update()            — 物理步进（优先级 50，可选）
+4. RenderSystem::update()               — 游戏世界渲染（优先级 100）
    a. 排序相机（按优先级）
    b. 排序精灵（按 Z-Index）
    c. 对每个相机：设置视口 → 裁剪 → 渲染可见精灵
-4. UIRenderSystem::update()             — UI 系统叠在最上层（优先级 200）
+5. UIRenderSystem::update()             — UI 系统叠在最上层（优先级 200）
    a. 输入 Raycasting
    b. 按钮状态更新
    c. 按 zIndex 从下到上绘制所有 UI 控件
-5. Renderer::Present()                  — 统一显示结果（在 Game::run() 末尾）
+6. Renderer::Present()                  — 统一显示结果（在 Game::run() 末尾）
 ```
 
 引擎的 Present 统一在 `Game::run()` 的末尾执行——游戏世界和 UI 同框只交换一次缓冲区。
