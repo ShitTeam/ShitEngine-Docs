@@ -19,13 +19,13 @@ hero:
 
 features:
   - title: 组件化架构
-    details: GameObject 挂载 Component，System 统一驱动生命周期。逻辑与渲染分离，职责清晰。
+    details: GameObject 对象挂载 Component，System 统一驱动生命周期。逻辑与渲染分离，职责清晰。
   - title: 多相机渲染管线
     details: 支持分屏、比例视口、Z-Index 排序与 Letterbox 等比缩放。一套场景多视角自由组合。
-  - title: 像素级渲染品质
-    details: 固定逻辑分辨率、最近邻缩放、逐帧像素对齐。在任何窗口尺寸下保持清晰。
-  - title: 逐帧动画系统
-    details: SpriteSheet 网格切割图集，AnimationComponent 以帧索引数组定义动画，每帧自动回写源矩形。
+  - title: 内置 UI 系统
+    details: Retained-Mode 屏幕空间 UI，锚点定位、按钮、文字、输入框，支持中文 IME。独立渲染通道叠加画面。
+  - title: 编译期反射
+    details: 基于 libClang 的标注扫描，自动生成类型注册代码。运行时按名称或 type_index 查询字段与基类元信息。
   - title: 分层音频系统
     details: AudioPlayer 驱动 Track / TrackGroup 两级管理，增益层设计为 master × group × track。
   - title: 类型安全事件总线

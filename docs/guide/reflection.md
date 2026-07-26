@@ -58,22 +58,26 @@ float health;
 ### TypeRegistry
 
 ```cpp
-// 初始化内置类型（int、float、std::string 等）
+// 初始化内置类型（int、float、std::string 等，在 Game::Init() 中自动调用）
 TypeRegistry::InitBuiltinTypes();
 
 // 查询
 const TypeInfo* t = TypeRegistry::Get("Player");       // 按名称
-const TypeInfo* t = TypeRegistry::Get<Player>();        // 按 type_index
+const TypeInfo* t = TypeRegistry::Get<Player>();        // 按 type_index (模板)
 size_t count      = TypeRegistry::Count();              // 注册总数
 TypeRegistry::ForEach([](const TypeInfo& info) { ... }); // 遍历
 
-// 手动注册（当没有运行 Scanner 时）
+// 手动注册（当没有运行 Scanner 或运行时构造类型时）
 Shit::ReflectType("Player", sizeof(Player))
     .Base(TypeRegistry::Get("Component"))
     .Field("m_hp",    offsetof(Player, m_hp),    sizeof(int),        "int")
     .Field("m_speed", offsetof(Player, m_speed), sizeof(float),      "float")
     .Register<Player>();
 ```
+
+手动注册提供的两种 `Field` 重载：
+- `Field(name, &T::member, "typeName")` — 成员指针方式（需要 rpa friend 授权）
+- `Field(name, offset, size, "typeName")` — 数值偏移方式（无孽授权要求）
 
 ### TypeInfo / FieldInfo
 
@@ -227,9 +231,10 @@ TypeRegistry (单例)
 
 ## 限制
 
-- **Scanner 工具链要求**: 需要安装 LLVM/libClang 并匹配项目的 MinGW 编译器。libClang 版本与 MinGW GCC 版本不匹配时可能出现系统头文件解析冲突
-- **枚举不反射**: 枚举类型不被反射系统支持（与 Piccolo 一致）
-- **跨命名空间继承**: 基类名会剥离命名空间前缀（`Shit::Component` → `Component`），前提是基类已在 TypeRegistry 中注册
+- **Scanner 工具链要求**: 需要安装 LLVM/libClang（项目依赖 MinGW 或系统 GCC 编译器）。全头文件解析失败时会自动报告并阻断构建
+- **枚举不反射**: 当前仅支持 class/struct 标记的反射，enum 不在范围内（与 Piccolo 一致）
+- **匿名命名空间不支持**: 若将反射类型放在匿名命名空间中，扫描器将跳过注册
+- **`Get<T>()` 与匿名命名空间冲突**: 匿名命名空间中的类型具有内部链接，同名类型会导致 `type_index` 冲突。需将反射类型放在命名命名空间中即可正常使用（包括模板泛型查找）
 
 ## 参考
 

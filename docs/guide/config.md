@@ -50,6 +50,26 @@ ShitEngine 使用一个 JSON 文件来管理项目和窗口配置。没有配置
 | `height` | uint | `720` | 逻辑分辨率高度 |
 | `targetFPS` | uint | `144` | 帧率上限 |
 
+### InputMapping
+
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| `actions` | object | 动作名 → 绑定键列表（如 `"Jump": ["Space"]`） |
+| `axes` | object | 轴名 → `{ negative: [...], positive: [...] }`（如横轴 A/D） |
+
+详见 [输入系统](/guide/input) 中的配置示例与 API。上述字段均为完整 JSON，完整格式示例：
+
+```json
+{
+  "project": { "name": "My Game" },
+  "window": { "title": "My Game", "width": 1920, "height": 1080, "targetFPS": 60 },
+  "inputMappings": {
+    "actions": { "Jump": ["Space"], "Sprint": ["LeftShift"] },
+    "axes": { "Horizontal": { "negative": ["A"], "positive": ["D"] } }
+  }
+}
+```
+
 ---
 
 ## 在代码中读取配置

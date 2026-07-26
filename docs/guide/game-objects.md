@@ -59,14 +59,17 @@ go->isNeedDestroy();     // 是否已被标记
 | 组件 | 功能 |
 |---|---|
 | **TransformComponent** | 位置 (x, y)、缩放、旋转 |
-| **SpriteRenderer** | 渲染精灵纹理，支持源矩形裁剪 |
-| **CameraComponent** | 定义视口，控制视角 |
-| **AnimationComponent** | 逐帧动画驱动 |
+| **SpriteRenderer** | 渲染精灵纹理，支持源矩形裁剪与水平翻转 |
+| **CameraComponent** | 定义视口与缩放，控制视角 |
+| **AnimationComponent** | 逐帧动画驱动，基于 SpriteSheet 自动回写源矩形 |
 | **Behavior** | 供你继承写自定义脚本 |
 | **UITransform** | UI 屏幕空间定位（锚点 + 轴心 + 尺寸） |
-| **UIImage** | UI 图片显示控件 |
+| **UIImage** | UI 图片显示控件，支持颜色叠加 |
 | **UIText** | UI 文字显示控件（SDL_ttf 渲染） |
-| **UIButton** | UI 按钮（ColorTint 状态过渡 + onClick） |
+| **UIButton** | UI 交互按钮（ColorTint 状态过渡 + onClick 回调） |
+| **UITextInput** | 文本输入基类（IME、光标、选区） |
+| **UITextBox** | 单行输入框（字符限制、占位符） |
+| **UITextArea** | 多行输入区域（换行、跨行选区） |
 | **UICanvas** | UI 层级根节点 |
 
 ### 添加和获取组件
@@ -93,19 +96,18 @@ go->removeComponent<Shit::SpriteRenderer>();
 `SpriteRenderer` 支持可选源矩形，用于精灵图集（sprite-sheet）的局部渲染：
 
 ```cpp
-sprite->setSourceRect({0.0f, 0.0f, 32.0f, 32.0f});  // 只裁剪 32×32 区域
+sprite->setSourceRect({0.0f, 0.0f, 32.0f, 32.0f});  // 只裁剪 32x32 区域
 sprite->setSourceRect(std::nullopt);                   // 恢复整图渲染
 ```
 
-也可以直接用 `Sprite::setFrame` 从 SpriteSheet 里取帧：
+也可以直接从 SpriteSheet 取帧：
 
 ```cpp
 Shit::SpriteSheet sheet(4, 8, 32, 32);
-sprite->setSourceRect(sheet.getFrameRect(5));  // 等价于下面这种手动写法
-// ↑ AnimationComponent 用的就是这个接口，你一般不需要手动调
+sprite->setSourceRect(sheet.getFrameRect(5));  // AnimationComponent 也走这个接口
 ```
 
-SpriteRenderer 也支持翻转渲染：
+翻转渲染：
 
 ```cpp
 sprite->setFlipped(true);   // 水平翻转
@@ -126,7 +128,7 @@ onCreate → onAttach → (运行中…) → onDetach → onDestroy
 |---|---|---|
 | `onCreate` | `addComponent` 时，有 owner、尚未挂场景 | 轻量初始化，访问 owner |
 | `onAttach` | GameObject 进入场景时 | **注册到 System**，获取系统资源 |
-| `onDetach` | 组件被移除时（在 onDestroy 前） | **从 System 注销**，清理场景级别资源 |
+| `onDetach` | 组件被移除时（在 onDestroy 前） | **从 System 注销**，清理场景级资源 |
 | `onDestroy` | 组件销毁时 | 最终清理 |
 
 ### 典型流程
@@ -155,7 +157,7 @@ go->removeComponent<MyComponent>();
 
 ## Behavior — 写你自己的游戏逻辑
 
-`Behavior` 是组件体系中最重要的一个——它是让你写自定义脚本的地方。`Behavior` 继承自 `Component`，在 `onCreate/onAttach/onDetach/onDestroy` 的基础上加了两个额外阶段：
+`Behavior` 是组件体系中最重要的一个——它是让你写自定义脚本的地方。它继承自 `Component`，额外加了两个阶段：
 
 ```
 onCreate → onAttach → onStart → onUpdate(每帧) → onDetach → onDestroy
@@ -192,15 +194,15 @@ class Player : public Shit::Behavior {
 ShitEngine 中 `IsKeyPressed` = 持续按住（适合移动），`IsKeyDown` = 按下瞬间（适合跳跃）。这和 Unity/Godot 相反，详见[输入系统](/guide/input)。
 :::
 
-挂到 GameObject 上之后，BehaviorSystem 每帧会自动驱动它。不需要你手动调用。
+挂到 GameObject 上之后，BehaviorSystem 每帧会自动驱动它。
 
 ```cpp
 player->addComponent<Player>();
 ```
 
-### 系统注册
+### 自动注册
 
-`Behavior` 的 `onAttach` 会自动将它注册到 `BehaviorSystem`，`onDetach` 自动注销。同样，`RendererComponent` 的 `onAttach` / `onDetach` 自动与 `RenderSystem` 注册/注销。这一切对你透明。
+`Behavior` 的 `onAttach` 自动将它注册到 `BehaviorSystem`，`onDetach` 自动注销。同样 `UIRendererComponent` 子类（UIImage/UIText/UIButton/UITextInput）会自动向 `UIRenderSystem` 注册/注销。这一切对你透明。
 
 ---
 
@@ -221,34 +223,16 @@ auto* e2 = scene->instantiate(enemyPrefab, "enemy_2");
 auto* e3 = scene->instantiate(enemyPrefab, "enemy_3");
 ```
 
-Prefab 的 Builder 接收一个 `GameObject*`，你在回调里给这个对象挂组件、设属性。每次 `instantiate` 都执行同一套配置。
+每次 `instantiate` 都执行同一套配置。
 
 ---
 
-## 架构一览
-
-```
-GameObject           挂载 → Component（多种）
-  ├─ TransformComponent    位置/缩放/旋转
-  ├─ SpriteRenderer        精灵纹理渲染
-  ├─ Behavior              用户自定义脚本
-  │   ├─ onStart()         首次更新前
-  │   ├─ onUpdate()        每帧执行
-  │   └─ AnimationComponent 逐帧动画
-  ├─ CameraComponent       视口、缩放
-  ├─ UICanvas              UI 层级根
-  └─ UI 控件（需挂 UITransform）
-      ├─ UIImage           图片显示
-      ├─ UIText            文字显示
-      └─ UIButton          可交互按钮
-```
-
-**System 驱动**：
+## System 驱动
 
 | System | 驱动什么 | 优先级 |
 |---|---|---|
 | BehaviorSystem | 所有 Behavior 的 onStart/onUpdate | 0 |
 | RenderSystem | 所有 RendererComponent 的 onRender | 100 |
-| UIRenderSystem | 所有 UIRendererComponent 的 onRender + Raycasting | 200 |
+| UIRenderSystem | 所有 UIRendererComponent 的 onRender + Raycasting + 聚焦 | 200 |
 
 优先级数字越小越先执行。你可以在场景中注册自定义 System 插在中间。
