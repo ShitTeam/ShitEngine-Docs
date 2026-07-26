@@ -19,5 +19,6 @@ var class_shit_1_1_u_i_button =
     [ "onRender", "class_shit_1_1_u_i_button.html#a42132399d3a0721b34e49aa28def7217", null ],
     [ "setColors", "class_shit_1_1_u_i_button.html#ad54d68d07977d973c25f61af585b32c9", null ],
     [ "setInteractable", "class_shit_1_1_u_i_button.html#a816248a75d12c6837a7cc23529e9cba2", null ],
-    [ "setOnClick", "class_shit_1_1_u_i_button.html#af598ca580f93cedcaeaa4933446123e2", null ]
+    [ "setOnClick", "class_shit_1_1_u_i_button.html#af598ca580f93cedcaeaa4933446123e2", null ],
+    [ "wasPointerDown", "class_shit_1_1_u_i_button.html#a3184fc3a9bb45fc19c464dc38e4d5638", null ]
 ];

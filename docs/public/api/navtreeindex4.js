@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"class_shit_1_1_u_i_text.html#a9fd9d70ab49def64c539759ad6268b68":[1,0,0,47,4],
+"class_shit_1_1_u_i_text.html#a9fd9d70ab49def64c539759ad6268b68":[2,0,0,47,4],
 "class_shit_1_1_u_i_text.html#ab30b5fdc3e433e5af1dacb7e4ee1834f":[1,0,0,47,14],
 "class_shit_1_1_u_i_text.html#ab30b5fdc3e433e5af1dacb7e4ee1834f":[2,0,0,47,14],
 "class_shit_1_1_u_i_text.html#ac1ae51949d41ee9054634be5967d91b8":[1,0,0,47,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "functions_s.html":[2,3,0,16],
 "functions_t.html":[2,3,0,17],
 "functions_type.html":[2,3,3],
-"functions_u.html":[2,3,0,18],
-"functions_vars.html":[2,3,2],
-"functions_w.html":[2,3,0,19]
+"functions_u.html":[2,3,0,18]
 };
