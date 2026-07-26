@@ -12,6 +12,7 @@ var class_shit_1_1_u_i_text_input =
     [ "getFontSize", "class_shit_1_1_u_i_text_input.html#a04d14d037f00dc9ed6bfa3b7efff33fd", null ],
     [ "getPlaceholder", "class_shit_1_1_u_i_text_input.html#aba3f650a11bf50e676377bb7601b0b44", null ],
     [ "getPlaceholderColor", "class_shit_1_1_u_i_text_input.html#ab26532f5785cae73973ad3050a0ffe38", null ],
+    [ "getSelectionColor", "class_shit_1_1_u_i_text_input.html#a6cebb922575115d480cc431c1f76d5fd", null ],
     [ "getText", "class_shit_1_1_u_i_text_input.html#a2dfac7d5a90b7c54fb0b0f34450988ee", null ],
     [ "getTextColor", "class_shit_1_1_u_i_text_input.html#a233434431abbd3c5469b55493efcc99b", null ],
     [ "insertNewline", "class_shit_1_1_u_i_text_input.html#a8732d4dd1ea8c421808f3595087995a7", null ],
@@ -21,7 +22,7 @@ var class_shit_1_1_u_i_text_input =
     [ "markDirty", "class_shit_1_1_u_i_text_input.html#a3eb72dbc9ad35c67e4435afb840c2d8b", null ],
     [ "moveCursor", "class_shit_1_1_u_i_text_input.html#a9e55f123e1e534abe4c64ebf2a6231a4", null ],
     [ "moveCursorToBoundary", "class_shit_1_1_u_i_text_input.html#ad4564c96d588002d412aa6c347d7f750", null ],
-    [ "onKeyDown", "class_shit_1_1_u_i_text_input.html#a97e1640618356c0fd8b5103ca391d767", null ],
+    [ "onKeyDown", "class_shit_1_1_u_i_text_input.html#a3013744ec64769bafe61cd2c8b385ecd", null ],
     [ "onRender", "class_shit_1_1_u_i_text_input.html#a795d8967288a69be0eaec2890881a96c", null ],
     [ "onTextEditing", "class_shit_1_1_u_i_text_input.html#a3815d3d07b9d43c522b59a7a9cff6a44", null ],
     [ "onTextInput", "class_shit_1_1_u_i_text_input.html#a832f9bb296437eac26af3d4ab7d77e89", null ],
@@ -31,6 +32,7 @@ var class_shit_1_1_u_i_text_input =
     [ "setFontSize", "class_shit_1_1_u_i_text_input.html#ab30b5fdc3e433e5af1dacb7e4ee1834f", null ],
     [ "setPlaceholder", "class_shit_1_1_u_i_text_input.html#abab5cd0e42c632ffc53abc41e9048a78", null ],
     [ "setPlaceholderColor", "class_shit_1_1_u_i_text_input.html#a494317da0b081a21aa666c2e6ebc27d7", null ],
+    [ "setSelectionColor", "class_shit_1_1_u_i_text_input.html#a94a13b425cc5cd8b1392f0f7fa30fdb1", null ],
     [ "setText", "class_shit_1_1_u_i_text_input.html#abcc31618c2701589d453ee7ec2198b15", null ],
     [ "setTextColor", "class_shit_1_1_u_i_text_input.html#a2f158681edd898361ae8951f66cfda55", null ],
     [ "TextInputGate", "class_shit_1_1_u_i_text_input.html#acca9c1d16ec4f28fb260c6875094b07d", null ],
@@ -48,6 +50,7 @@ var class_shit_1_1_u_i_text_input =
     [ "m_preeditLength", "class_shit_1_1_u_i_text_input.html#a6c722ef4358d626c3725e13080739005", null ],
     [ "m_preeditStart", "class_shit_1_1_u_i_text_input.html#ac5ebb2c5955cf49ab6d6d77a092ca930", null ],
     [ "m_selectionAnchor", "class_shit_1_1_u_i_text_input.html#a4c8e96d9a266161128cde1ab31f91208", null ],
+    [ "m_selectionColor", "class_shit_1_1_u_i_text_input.html#a96669b3101e41160a45755dd7e67e589", null ],
     [ "m_text", "class_shit_1_1_u_i_text_input.html#aa15b95dc40e2d916d40df17f5dea8ed4", null ],
     [ "m_textColor", "class_shit_1_1_u_i_text_input.html#a0d5f58d7273aff0d7a1dbb33172d8528", null ]
 ];

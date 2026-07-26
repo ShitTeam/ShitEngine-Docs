@@ -193,6 +193,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a494317da0b081a21aa666c2e6ebc27d7 pub_methods_class_shit_1_1_u_i_text_input" id="r_a494317da0b081a21aa666c2e6ebc27d7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a494317da0b081a21aa666c2e6ebc27d7">setPlaceholderColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
 <tr class="memitem:a0868e4aa344cd21b905d15bcebdeccfc pub_methods_class_shit_1_1_u_i_text_input" id="r_a0868e4aa344cd21b905d15bcebdeccfc"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a0868e4aa344cd21b905d15bcebdeccfc">getCursorColor</a> () const</td></tr>
 <tr class="memitem:aac9677b5833bf85e4a51e6f841a062fb pub_methods_class_shit_1_1_u_i_text_input" id="r_aac9677b5833bf85e4a51e6f841a062fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aac9677b5833bf85e4a51e6f841a062fb">setCursorColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memitem:a6cebb922575115d480cc431c1f76d5fd pub_methods_class_shit_1_1_u_i_text_input" id="r_a6cebb922575115d480cc431c1f76d5fd"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a6cebb922575115d480cc431c1f76d5fd">getSelectionColor</a> () const</td></tr>
+<tr class="memitem:a94a13b425cc5cd8b1392f0f7fa30fdb1 pub_methods_class_shit_1_1_u_i_text_input" id="r_a94a13b425cc5cd8b1392f0f7fa30fdb1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a94a13b425cc5cd8b1392f0f7fa30fdb1">setSelectionColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
 <tr class="memitem:a441f2c8ed1686b5044c74a05124a41fc pub_methods_class_shit_1_1_u_i_text_input" id="r_a441f2c8ed1686b5044c74a05124a41fc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a441f2c8ed1686b5044c74a05124a41fc">isFocused</a> () const</td></tr>
 <tr class="memitem:a15d22962f85802c13bbb42e19e4a9a16 pub_methods_class_shit_1_1_u_i_text_input" id="r_a15d22962f85802c13bbb42e19e4a9a16"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a15d22962f85802c13bbb42e19e4a9a16">isMultiline</a> () const</td></tr>
 <tr class="memitem:a832f9bb296437eac26af3d4ab7d77e89 pub_methods_class_shit_1_1_u_i_text_input" id="r_a832f9bb296437eac26af3d4ab7d77e89"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a832f9bb296437eac26af3d4ab7d77e89">onTextInput</a> (const char *utf8Text)</td></tr>
@@ -224,8 +226,8 @@ Public 成员函数</h2></td></tr>
 Protected 成员函数</h2></td></tr>
 <tr class="memitem:a8adfc83bac4d4f3cef97c20208350515" id="r_a8adfc83bac4d4f3cef97c20208350515"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8adfc83bac4d4f3cef97c20208350515">onRender</a> (const SDL_FRect &amp;screenRect) override</td></tr>
 <tr class="memdesc:a8adfc83bac4d4f3cef97c20208350515"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身（通过 <a class="el" href="class_shit_1_1_renderer.html" title="渲染器，封装 SDL3 绘制 API">Renderer</a> 静态 API 绘制）  <br /></td></tr>
-<tr class="memitem:a2dd1febbc896f7ef20da9da6a2807919" id="r_a2dd1febbc896f7ef20da9da6a2807919"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2dd1febbc896f7ef20da9da6a2807919">onKeyDown</a> (SDL_Scancode scancode, bool shift, bool ctrl) override</td></tr>
-<tr class="memdesc:a2dd1febbc896f7ef20da9da6a2807919"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车）  <br /></td></tr>
+<tr class="memitem:a1e024fef3917d7ab9c955482de5d9648" id="r_a1e024fef3917d7ab9c955482de5d9648"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1e024fef3917d7ab9c955482de5d9648">onKeyDown</a> (<a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> key, bool shift, bool ctrl) override</td></tr>
+<tr class="memdesc:a1e024fef3917d7ab9c955482de5d9648"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车）  <br /></td></tr>
 <tr class="memitem:ac717c35a0270efeda965d8c421e6b4e4" id="r_ac717c35a0270efeda965d8c421e6b4e4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac717c35a0270efeda965d8c421e6b4e4">insertNewline</a> () override</td></tr>
 <tr class="memdesc:ac717c35a0270efeda965d8c421e6b4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：当前选区是否被替换为换行（UITextBox 拒绝）  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_shit_1_1_u_i_text_input"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_text_input.html">UITextInput</a></td></tr>
@@ -264,6 +266,7 @@ Protected 成员函数</h2></td></tr>
 <tr class="memitem:a0d5f58d7273aff0d7a1dbb33172d8528 pro_attribs_class_shit_1_1_u_i_text_input" id="r_a0d5f58d7273aff0d7a1dbb33172d8528"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a0d5f58d7273aff0d7a1dbb33172d8528">m_textColor</a> { 30, 30, 30, 255 }</td></tr>
 <tr class="memitem:ae83c798b2852f1bf170bff7922a400a8 pro_attribs_class_shit_1_1_u_i_text_input" id="r_ae83c798b2852f1bf170bff7922a400a8"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#ae83c798b2852f1bf170bff7922a400a8">m_placeholderColor</a> { 140, 140, 140, 255 }</td></tr>
 <tr class="memitem:a2443d09673934b4527c64cf2a857276e pro_attribs_class_shit_1_1_u_i_text_input" id="r_a2443d09673934b4527c64cf2a857276e"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a2443d09673934b4527c64cf2a857276e">m_cursorColor</a> { 80, 140, 220, 255 }</td></tr>
+<tr class="memitem:a96669b3101e41160a45755dd7e67e589 pro_attribs_class_shit_1_1_u_i_text_input" id="r_a96669b3101e41160a45755dd7e67e589"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a96669b3101e41160a45755dd7e67e589">m_selectionColor</a> { 80, 140, 220, 120 }</td></tr>
 <tr class="memitem:afb7039dd5c56c4af61b88af0ad1755b5 pro_attribs_class_shit_1_1_u_i_text_input" id="r_afb7039dd5c56c4af61b88af0ad1755b5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#afb7039dd5c56c4af61b88af0ad1755b5">m_isDirty</a> = true</td></tr>
 <tr class="memitem:aa813bd03e0d5fec301fcc77d825008d2 pro_attribs_class_shit_1_1_u_i_text_input" id="r_aa813bd03e0d5fec301fcc77d825008d2"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#aa813bd03e0d5fec301fcc77d825008d2">m_cursor</a> = 0</td></tr>
 <tr class="memitem:a4c8e96d9a266161128cde1ab31f91208 pro_attribs_class_shit_1_1_u_i_text_input" id="r_a4c8e96d9a266161128cde1ab31f91208"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_text_input.html#a4c8e96d9a266161128cde1ab31f91208">m_selectionAnchor</a> = 0</td></tr>
@@ -358,8 +361,8 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a2dd1febbc896f7ef20da9da6a2807919" name="a2dd1febbc896f7ef20da9da6a2807919"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dd1febbc896f7ef20da9da6a2807919">&#9670;&#160;</a></span>onKeyDown()</h2>
+<a id="a1e024fef3917d7ab9c955482de5d9648" name="a1e024fef3917d7ab9c955482de5d9648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e024fef3917d7ab9c955482de5d9648">&#9670;&#160;</a></span>onKeyDown()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -370,7 +373,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">bool onKeyDown </td>
           <td>(</td>
-          <td class="paramtype">SDL_Scancode</td>          <td class="paramname"><span class="paramname"><em>scancode</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -393,7 +396,7 @@ Protected 成员函数</h2></td></tr>
 <p>子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车） </p>
 <dl class="section return"><dt>返回</dt><dd>true 表示已处理该按键，不继续传播 </dd></dl>
 
-<p>重载 <a class="el" href="class_shit_1_1_u_i_text_input.html#a97e1640618356c0fd8b5103ca391d767">UITextInput</a> .</p>
+<p>重载 <a class="el" href="class_shit_1_1_u_i_text_input.html#a3013744ec64769bafe61cd2c8b385ecd">UITextInput</a> .</p>
 
 </div>
 </div>

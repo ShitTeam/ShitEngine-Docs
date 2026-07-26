@@ -20,7 +20,8 @@ var searchData=
   ['m_5fpriority_17',['m_priority',['../class_shit_1_1_system.html#aebd544741012b3bab43cfbbc4e9d28f3',1,'Shit::System']]],
   ['m_5fscene_18',['m_scene',['../class_shit_1_1_system.html#a6d9ce218dfa1f5f2645b9b4c2abea6ca',1,'Shit::System']]],
   ['m_5fselectionanchor_19',['m_selectionAnchor',['../class_shit_1_1_u_i_text_input.html#a4c8e96d9a266161128cde1ab31f91208',1,'Shit::UITextInput']]],
-  ['m_5ftext_20',['m_text',['../class_shit_1_1_u_i_text_input.html#aa15b95dc40e2d916d40df17f5dea8ed4',1,'Shit::UITextInput']]],
-  ['m_5ftextcolor_21',['m_textColor',['../class_shit_1_1_u_i_text_input.html#a0d5f58d7273aff0d7a1dbb33172d8528',1,'Shit::UITextInput']]],
-  ['m_5fzindex_22',['m_zIndex',['../class_shit_1_1_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948',1,'Shit::RendererComponent::m_zIndex'],['../class_shit_1_1_u_i_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948',1,'Shit::UIRendererComponent::m_zIndex']]]
+  ['m_5fselectioncolor_20',['m_selectionColor',['../class_shit_1_1_u_i_text_input.html#a96669b3101e41160a45755dd7e67e589',1,'Shit::UITextInput']]],
+  ['m_5ftext_21',['m_text',['../class_shit_1_1_u_i_text_input.html#aa15b95dc40e2d916d40df17f5dea8ed4',1,'Shit::UITextInput']]],
+  ['m_5ftextcolor_22',['m_textColor',['../class_shit_1_1_u_i_text_input.html#a0d5f58d7273aff0d7a1dbb33172d8528',1,'Shit::UITextInput']]],
+  ['m_5fzindex_23',['m_zIndex',['../class_shit_1_1_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948',1,'Shit::RendererComponent::m_zIndex'],['../class_shit_1_1_u_i_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948',1,'Shit::UIRendererComponent::m_zIndex']]]
 ];

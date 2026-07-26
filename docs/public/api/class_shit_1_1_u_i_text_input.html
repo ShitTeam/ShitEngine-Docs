@@ -191,6 +191,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a494317da0b081a21aa666c2e6ebc27d7" id="r_a494317da0b081a21aa666c2e6ebc27d7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a494317da0b081a21aa666c2e6ebc27d7">setPlaceholderColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
 <tr class="memitem:a0868e4aa344cd21b905d15bcebdeccfc" id="r_a0868e4aa344cd21b905d15bcebdeccfc"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0868e4aa344cd21b905d15bcebdeccfc">getCursorColor</a> () const</td></tr>
 <tr class="memitem:aac9677b5833bf85e4a51e6f841a062fb" id="r_aac9677b5833bf85e4a51e6f841a062fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aac9677b5833bf85e4a51e6f841a062fb">setCursorColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
+<tr class="memitem:a6cebb922575115d480cc431c1f76d5fd" id="r_a6cebb922575115d480cc431c1f76d5fd"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a6cebb922575115d480cc431c1f76d5fd">getSelectionColor</a> () const</td></tr>
+<tr class="memitem:a94a13b425cc5cd8b1392f0f7fa30fdb1" id="r_a94a13b425cc5cd8b1392f0f7fa30fdb1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a94a13b425cc5cd8b1392f0f7fa30fdb1">setSelectionColor</a> (const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;color)</td></tr>
 <tr class="memitem:a441f2c8ed1686b5044c74a05124a41fc" id="r_a441f2c8ed1686b5044c74a05124a41fc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a441f2c8ed1686b5044c74a05124a41fc">isFocused</a> () const</td></tr>
 <tr class="memitem:a15d22962f85802c13bbb42e19e4a9a16" id="r_a15d22962f85802c13bbb42e19e4a9a16"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a15d22962f85802c13bbb42e19e4a9a16">isMultiline</a> () const</td></tr>
 <tr class="memitem:a832f9bb296437eac26af3d4ab7d77e89" id="r_a832f9bb296437eac26af3d4ab7d77e89"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a832f9bb296437eac26af3d4ab7d77e89">onTextInput</a> (const char *utf8Text)</td></tr>
@@ -222,8 +224,8 @@ Public 成员函数</h2></td></tr>
 Protected 成员函数</h2></td></tr>
 <tr class="memitem:a795d8967288a69be0eaec2890881a96c" id="r_a795d8967288a69be0eaec2890881a96c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a795d8967288a69be0eaec2890881a96c">onRender</a> (const SDL_FRect &amp;screenRect) override=0</td></tr>
 <tr class="memdesc:a795d8967288a69be0eaec2890881a96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类实现：在给定屏幕矩形内绘制自身（通过 <a class="el" href="class_shit_1_1_renderer.html" title="渲染器，封装 SDL3 绘制 API">Renderer</a> 静态 API 绘制）  <br /></td></tr>
-<tr class="memitem:a97e1640618356c0fd8b5103ca391d767" id="r_a97e1640618356c0fd8b5103ca391d767"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a97e1640618356c0fd8b5103ca391d767">onKeyDown</a> (SDL_Scancode scancode, bool shift, bool ctrl)</td></tr>
-<tr class="memdesc:a97e1640618356c0fd8b5103ca391d767"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车）  <br /></td></tr>
+<tr class="memitem:a3013744ec64769bafe61cd2c8b385ecd" id="r_a3013744ec64769bafe61cd2c8b385ecd"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a3013744ec64769bafe61cd2c8b385ecd">onKeyDown</a> (<a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a> key, bool shift, bool ctrl)</td></tr>
+<tr class="memdesc:a3013744ec64769bafe61cd2c8b385ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车）  <br /></td></tr>
 <tr class="memitem:a6c06654383aa646d4a6e7976fad6fd51" id="r_a6c06654383aa646d4a6e7976fad6fd51"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6c06654383aa646d4a6e7976fad6fd51">insertText</a> (const std::string &amp;utf8)</td></tr>
 <tr class="memdesc:a6c06654383aa646d4a6e7976fad6fd51"><td class="mdescLeft">&#160;</td><td class="mdescRight">子类可覆写：向缓冲插入一段 UTF-8 文本  <br /></td></tr>
 <tr class="memitem:a8732d4dd1ea8c421808f3595087995a7" id="r_a8732d4dd1ea8c421808f3595087995a7"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8732d4dd1ea8c421808f3595087995a7">insertNewline</a> ()</td></tr>
@@ -262,6 +264,7 @@ Protected 属性</h2></td></tr>
 <tr class="memitem:a0d5f58d7273aff0d7a1dbb33172d8528" id="r_a0d5f58d7273aff0d7a1dbb33172d8528"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0d5f58d7273aff0d7a1dbb33172d8528">m_textColor</a> { 30, 30, 30, 255 }</td></tr>
 <tr class="memitem:ae83c798b2852f1bf170bff7922a400a8" id="r_ae83c798b2852f1bf170bff7922a400a8"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae83c798b2852f1bf170bff7922a400a8">m_placeholderColor</a> { 140, 140, 140, 255 }</td></tr>
 <tr class="memitem:a2443d09673934b4527c64cf2a857276e" id="r_a2443d09673934b4527c64cf2a857276e"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2443d09673934b4527c64cf2a857276e">m_cursorColor</a> { 80, 140, 220, 255 }</td></tr>
+<tr class="memitem:a96669b3101e41160a45755dd7e67e589" id="r_a96669b3101e41160a45755dd7e67e589"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_color.html">Color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a96669b3101e41160a45755dd7e67e589">m_selectionColor</a> { 80, 140, 220, 120 }</td></tr>
 <tr class="memitem:afb7039dd5c56c4af61b88af0ad1755b5" id="r_afb7039dd5c56c4af61b88af0ad1755b5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afb7039dd5c56c4af61b88af0ad1755b5">m_isDirty</a> = true</td></tr>
 <tr class="memitem:aa813bd03e0d5fec301fcc77d825008d2" id="r_aa813bd03e0d5fec301fcc77d825008d2"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#aa813bd03e0d5fec301fcc77d825008d2">m_cursor</a> = 0</td></tr>
 <tr class="memitem:a4c8e96d9a266161128cde1ab31f91208" id="r_a4c8e96d9a266161128cde1ab31f91208"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a4c8e96d9a266161128cde1ab31f91208">m_selectionAnchor</a> = 0</td></tr>
@@ -655,6 +658,31 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a6cebb922575115d480cc431c1f76d5fd" name="a6cebb922575115d480cc431c1f76d5fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cebb922575115d480cc431c1f76d5fd">&#9670;&#160;</a></span>getSelectionColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp; getSelectionColor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2dfac7d5a90b7c54fb0b0f34450988ee" name="a2dfac7d5a90b7c54fb0b0f34450988ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2dfac7d5a90b7c54fb0b0f34450988ee">&#9670;&#160;</a></span>getText()</h2>
 
@@ -898,8 +926,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a97e1640618356c0fd8b5103ca391d767" name="a97e1640618356c0fd8b5103ca391d767"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97e1640618356c0fd8b5103ca391d767">&#9670;&#160;</a></span>onKeyDown()</h2>
+<a id="a3013744ec64769bafe61cd2c8b385ecd" name="a3013744ec64769bafe61cd2c8b385ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3013744ec64769bafe61cd2c8b385ecd">&#9670;&#160;</a></span>onKeyDown()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -910,7 +938,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="memname">virtual bool onKeyDown </td>
           <td>(</td>
-          <td class="paramtype">SDL_Scancode</td>          <td class="paramname"><span class="paramname"><em>scancode</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">KeyCode</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -933,7 +961,7 @@ Protected 属性</h2></td></tr>
 <p>子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车） </p>
 <dl class="section return"><dt>返回</dt><dd>true 表示已处理该按键，不继续传播 </dd></dl>
 
-<p>被 <a class="el" href="class_shit_1_1_u_i_text_area.html#a2dd1febbc896f7ef20da9da6a2807919">UITextArea</a> 重载.</p>
+<p>被 <a class="el" href="class_shit_1_1_u_i_text_area.html#a1e024fef3917d7ab9c955482de5d9648">UITextArea</a> 重载.</p>
 
 </div>
 </div>
@@ -1141,6 +1169,31 @@ Protected 属性</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void setPlaceholderColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94a13b425cc5cd8b1392f0f7fa30fdb1" name="a94a13b425cc5cd8b1392f0f7fa30fdb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a13b425cc5cd8b1392f0f7fa30fdb1">&#9670;&#160;</a></span>setSelectionColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSelectionColor </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_shit_1_1_color.html">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
           <td></td>
@@ -1526,6 +1579,28 @@ Protected 属性</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">size_t m_selectionAnchor = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96669b3101e41160a45755dd7e67e589" name="a96669b3101e41160a45755dd7e67e589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96669b3101e41160a45755dd7e67e589">&#9670;&#160;</a></span>m_selectionColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_shit_1_1_color.html">Color</a> m_selectionColor { 80, 140, 220, 120 }</td>
         </tr>
       </table>
   </td>
