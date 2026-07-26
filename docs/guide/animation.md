@@ -11,7 +11,7 @@ ShitEngine 的逐帧动画系统让你用**精灵图集（sprite-sheet）** + **
 
 ## SpriteSheet — 切图工具
 
-把一张按行列排列的大图切成单帧。比如一张 4 行 8 列、每帧 32×32 的角色图集：
+把一张按行列排列的大图切成单帧。比如一张 4 行 8 列、每帧 32x32 的角色图集：
 
 ```cpp
 // 参数：行数，列数，每帧宽，每帧高，留白（可选，默认 0），间距（可选，默认 0）
@@ -46,7 +46,6 @@ auto walk = std::make_unique<Shit::Animation>(0.1f, true);
 // 添加帧
 walk->addFrame(sheet.getFrameRect(0));
 walk->addFrame(sheet.getFrameRect(1));
-walk->addFrame(sheet.getFrameRect(2));
 
 // 或一次加一组
 walk->addFrames({ sheet.getFrameRect(0), sheet.getFrameRect(1), sheet.getFrameRect(2) });
@@ -65,27 +64,23 @@ float dur = walk->getDuration();
 ```cpp
 #include <ShitEngine.h>
 
-auto* sprite = go->addComponent<Shit::SpriteRenderer>();
-sprite->setTexturePath("textures/player.png");
-
 auto* anim = go->addComponent<Shit::AnimationComponent>();
 
 Shit::SpriteSheet sheet(4, 8, 32, 32);
 
-// ── 用帧索引数组直接定义并播放 ──
+// 用帧索引数组直接定义并播放
 // 参数：名字，图集，帧序列，每帧时长，是否循环
 anim->play("walk",   sheet, {0, 1, 2, 3, 4, 5},    0.1f,  true);
 anim->play("jump",   sheet, {24, 25, 26},            0.08f, false);
-anim->play("attack", sheet, {16, 17, 19, 20, 23},   0.06f, false);
 ```
 
-帧索引可以不连续、可以跳帧——`{16, 17, 19, 20, 23}` 完全合法。
+帧索引可以不连续——`{16, 17, 19, 20, 23}` 完全合法。
 
 播放控制：
 
 ```cpp
 anim->play("walk");     // 切到行走动画
-anim->stop();           // 停在当前帧，恢复整图
+anim->stop();           // 停在当前帧
 anim->pause();          // 暂停
 anim->resume();         // 继续
 
@@ -107,7 +102,7 @@ onCreate → onAttach → onStart → onUpdate(每帧推进时间+回写源矩�
 
 ## 工作原理
 
-1. `play()` 时，`SpriteSheet::getFrameRect(idx)` 把帧索引转成 `SDL_FRect`
+1. `play()` 时利用 `SpriteSheet::getFrameRect(idx)` 把帧索引转成 `SDL_FRect`
 2. 每帧 `onUpdate()` 累加 `Time::GetDeltaTime()` 推进播放时间
 3. `Animation::getFrame(elapsedTime)` 算出当前帧的 `SDL_FRect`
 4. 通过 `applyCurrentFrame()` 把源矩形回写到 `SpriteRenderer::setSourceRect()`
@@ -115,29 +110,23 @@ onCreate → onAttach → onStart → onUpdate(每帧推进时间+回写源矩�
 
 ### 非循环动画自动结束
 
-播完最后一帧后自动停止并停在那帧。`m_isPlaying` 变为 false，不会自动切回整图。
+播放完最后一帧后自动停止并停在那帧上。`m_isPlaying` 变为 false。
 
 ### 手动停止
 
 ```cpp
-anim->stop();
+anim->stop();   // 停在当前帧，不会自动切回整图
 ```
-
-恢复 `SpriteRenderer` 为整图渲染（清除源矩形）。
 
 ## 完整示例
 
 ```cpp
 // 在 Behavior::onStart() 里
-auto* sprite = getOwner()->getComponent<Shit::SpriteRenderer>();
-sprite->setTexturePath("textures/hero.png");
-
 auto* anim = getOwner()->addComponent<Shit::AnimationComponent>();
 Shit::SpriteSheet sheet(4, 8, 32, 32);
 
 anim->play("idle",  sheet, {0, 1, 2, 3}, 0.15f, true);
 anim->play("run",   sheet, {4, 5, 6, 7}, 0.1f,  true);
-anim->play("jump",  sheet, {8, 9, 10},    0.08f, false);
 
 anim->play("idle");
 

@@ -9,7 +9,7 @@ lang: zh_CN
 
 ## 逻辑分辨率
 
-ShitEngine 默认用 **1280×720** 作为逻辑坐标空间。你写代码时永远在这个"理想屏幕"上思考，渲染器会自动适配到真实窗口，多出的部分用黑边填满（Letterbox）。
+ShitEngine 默认用 **1280x720** 作为逻辑坐标空间。你写代码时永远在这个"理想屏幕"上思考，渲染器会自动适配到真实窗口，多出的部分用黑边填满（Letterbox）。
 
 逻辑分辨率可以通过 `settings.json` 修改：
 
@@ -26,8 +26,8 @@ ShitEngine 默认用 **1280×720** 作为逻辑坐标空间。你写代码时永
 
 ```cpp
 // 也可以在代码中查询当前逻辑分辨率
-float w = Renderer::GetLogicalWidth();   // → 1280.0
-float h = Renderer::GetLogicalHeight();  // → 720.0
+int w = Renderer::GetLogicalWidth();    // 返回 int
+int h = Renderer::GetLogicalHeight();   // 返回 int
 ```
 
 ## 精灵渲染
@@ -62,12 +62,12 @@ sprite->setSourceRect(std::nullopt);
 `Sprite` 是一个纯数据容器，描述"画什么"：
 
 ```cpp
-Shit::Sprite sprite("player.png", {0, 0, 32, 32});
+Shit::Sprite sprite("player.png", SDL_FRect{0, 0, 32, 32});
 sprite.setFlipped(true);
 
 // 从 SpriteSheet 快速取帧
 Shit::SpriteSheet sheet(4, 8, 32, 32);
-sprite.setFrame(sheet, 5);  // 等价于 setSourceRect(sheet.getFrameRect(5))
+sprite.setFrame(sheet, 5);    // 等价于 setSourceRect(sheet.getFrameRect(5))
 ```
 
 ### 显示与隐藏
@@ -75,17 +75,8 @@ sprite.setFrame(sheet, 5);  // 等价于 setSourceRect(sheet.getFrameRect(5))
 `RendererComponent` 支持运行时隐藏，不渲染但保留组件状态：
 
 ```cpp
-sprite->setVisible(false);  // 隐藏
-sprite->isVisible();       // → false
-```
-
-### 包围盒
-
-获取精灵在世界坐标系下的轴对齐包围盒（AABB），可用于碰撞检测或裁剪：
-
-```cpp
-SDL_FRect bounds = sprite->getGlobalBounds();
-// → { x, y, width * scaleX, height * scaleY }
+sprite->setVisible(false);
+sprite->isVisible();       // 返回 bool
 ```
 
 ## 相机
@@ -100,12 +91,12 @@ camera->addComponent<Shit::TransformComponent>();
 camera->addComponent<Shit::CameraComponent>();
 ```
 
-相机的**位置**由 TransformComponent 决定，**视口尺寸**由 CameraComponent 控制：
+相机的**位置**由 TransformComponent 决定，**缩放**由 CameraComponent 控制：
 
 ```cpp
 auto* cam = camera->getComponent<Shit::CameraComponent>();
-cam->setZoom(5.0f);          // 放大，像素风游戏必备
-cam->setSize({ 320, 180 });  // 世界大小（逻辑分辨率单位）
+cam->setZoom(5.0f);           // 放大，像素风游戏必备
+cam->setSize({ 320, 180 });   // 世界大小（逻辑分辨率单位）
 ```
 
 ### 坐标转换
@@ -122,18 +113,11 @@ Vector2 worldPos = camera->screenToWorld(screenPos);
 
 ### 像素单位比（PixelPerUnit）
 
-`CameraComponent` 暴露了 `getPixelPerUnit()`，表示一个逻辑单位对应多少像素：
-
-```cpp
-float ppu = camera->getPixelPerUnit();
-// SpriteRenderer 渲染时自动用这个值缩放精灵
-```
-
-`setZoom()` 改变的是视口大小，`getPixelPerUnit()` 会随之变化，从而自动缩放所有精灵。
+`CameraComponent` 暴露了 `getPixelPerUnit()`，表示一个逻辑单位对应多少像素。`setZoom()` 改变的是视口大小，`getPixelPerUnit()` 会随之变化，从而自动缩放所有精灵。
 
 ### 多相机分屏
 
-这是 ShitEngine 的特色。多个相机可以共享同一个场景，各画各的：
+多个相机可以共享同一个场景，各画各的：
 
 ```cpp
 // 玩家 1 视口：左半边
@@ -165,7 +149,7 @@ cam->setPriority(10);  // UI 层，盖在上面
 
 ### 裁剪
 
-超出相机视野范围的精灵不会被渲染——这是视锥体裁剪，引擎自动做，你不需要写一行代码。
+超出相机视野范围的精灵不会被渲染。
 
 ## 渲染流程
 
@@ -178,12 +162,11 @@ cam->setPriority(10);  // UI 层，盖在上面
    a. 排序相机（按优先级）
    b. 排序精灵（按 Z-Index）
    c. 对每个相机：设置视口 → 裁剪 → 渲染可见精灵
-   d. 恢复裁剪和视口，为 UI 做准备
-4. UIRenderSystem::update()             — UI 系统叠加渲染（优先级 200）
+4. UIRenderSystem::update()             — UI 系统叠在最上层（优先级 200）
    a. 输入 Raycasting
    b. 按钮状态更新
    c. 按 zIndex 从下到上绘制所有 UI 控件
-5. Renderer::Present()                  — 统一显示结果（在 Game::run 末尾）
+5. Renderer::Present()                  — 统一显示结果（在 Game::run() 末尾）
 ```
 
 引擎的 Present 统一在 `Game::run()` 的末尾执行——游戏世界和 UI 同框只交换一次缓冲区。
@@ -196,19 +179,21 @@ sprite->setZIndex(10);  // 值越大越靠上，游戏世界内有效
 
 ## UI 系统
 
-引擎内置了一套完整的 **Retained-Mode UI 系统**（Canvas / UIImage / UIText / UIButton），走独立的 `UIRenderSystem`，不受相机/视口影响，自动在游戏世界之上叠加绘制。
+引擎内置了一套完整的 **Retained-Mode UI 系统**（Canvas / UIImage / UIText / UIButton / UITextInput），走独立的 `UIRenderSystem`，不受相机/视口影响，自动在游戏世界之上叠加绘制。
 
 详见 [UI 系统](/guide/ui)。
 
-## 直接绘制（旧式 HUD）
+## 直接绘制（DrawSprite）
 
-除了 UI 系统和挂载 `SpriteRenderer`，也可以用静态方法直接在屏幕上画精灵——适合简单的血条、分数、图标：
+除了 UI 系统和挂载 `SpriteRenderer`，也可以用静态方法直接在屏幕上画精灵：
 
 ```cpp
-// 在屏幕坐标 (100, 50) 画一个 200×40 的 UI 元素
+// 在屏幕坐标 (100, 50) 画一个精灵，自动使用纹理原始尺寸
 Shit::Sprite uiSprite("ui/healthbar.png");
-Renderer::DrawSprite(uiSprite, {100.0f, 50.0f}, {200.0f, 40.0f});
+Renderer::DrawSprite(uiSprite, {100.0f, 50.0f});
+
+// 指定目标尺寸
+Renderer::DrawSprite(uiSprite, {100.0f, 50.0f}, Vector2{200.0f, 40.0f});
 ```
 
 `DrawSprite` 不依赖 GameObject/Camera 体系，直接在屏幕像素坐标上绘制。但需要你自己管理每帧的绘制调用，**推荐优先使用 UI 系统**。
-

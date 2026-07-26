@@ -47,7 +47,7 @@ target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
 
 除了上面从源码编译，还有两种方式拿到引擎 SDK：
 
-**GitHub Actions 产物** — 每个推送到 `main` 分支的提交都会自动构建并上传引擎包，包含 Release + Debug 库和所有依赖。去 [Actions 页面](https://github.com/ShitTeam/ShitEngine/actions/workflows/build.yml) 点开最新一次的绿色运行，在页面底部找到 Artifacts：
+**GitHub Actions 产物** — 每个提交都会自动构建并上传引擎包。去 [Actions 页面](https://github.com/ShitTeam/ShitEngine/actions/workflows/build.yml) 点开最新一次的绿色运行，在页面底部找到 Artifacts：
 
 | 产物名 | 平台 | 编译器 | 格式 |
 |---|---|---|---|
@@ -71,7 +71,7 @@ add_executable(MyGame main.cpp)
 target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
 ```
 
-**GitHub Release** — 当引擎发布正式版本时，可以在 [Releases 页面](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的压缩包。用法同上，解压后 `find_package` 即可。目前还没正式发布第一个版本，保持关注。<!-- 有 Release 后删掉这句 -->
+**GitHub Release** — 当引擎发布正式版本时，可以在 [Releases 页面](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的压缩包。用法同上，解压后 `find_package` 即可。目前还没正式发布第一个版本。<!-- 有 Release 后删掉这句 -->
 
 ### main.cpp
 
@@ -82,7 +82,6 @@ target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
 
 int main() {
     if (Shit::Game::Init()) {
-        // 游戏逻辑写在这里
         Shit::Game::Run();
     }
     Shit::Game::Destroy();
@@ -105,7 +104,7 @@ cmake --build build
 
 ```cpp
 auto scene = std::make_unique<Shit::Scene>("my game");
-scene->init();  // 这行注册了 BehaviorSystem（跑脚本）和 RenderSystem（画画面）
+scene->init();  // 注册了 BehaviorSystem + RenderSystem + UIRenderSystem
 ```
 
 先别把场景塞进引擎——等我们把东西放进去再说。
@@ -117,7 +116,7 @@ scene->init();  // 这行注册了 BehaviorSystem（跑脚本）和 RenderSystem
 GameObject 只能通过 `scene->createGameObject()` 创建：
 
 ```cpp
-// 场景创建玩家
+// 创建玩家
 auto* player = scene->createGameObject("player");
 
 // 挂上位置组件
@@ -142,19 +141,17 @@ sprite->setTexturePath("textures/player.png");
 
 ## 四、让他动起来（Behavior）
 
-玩家的运动逻辑用 **Behavior** 来写。继承它，重写 `onUpdate`：
+玩家的运动逻辑用 **Behavior** 来写。继承它，重写 `onStart()` 和 `onUpdate()`：
 
 ```cpp
 class Player : public Shit::Behavior {
     Shit::TransformComponent* transform = nullptr;
     float speed = 200.0f;
 
-    // onStart 在第一次 update 前执行一次，适合做缓存
     void onStart() override {
         transform = getOwner()->getComponent<Shit::TransformComponent>();
     }
 
-    // onUpdate 每帧执行
     void onUpdate() override {
         Shit::Vector2 pos = transform->getPosition();
         if (Shit::Input::IsKeyPressed(Shit::KeyCode::W)) pos.y -= speed * Shit::Time::GetDeltaTime();
@@ -175,7 +172,7 @@ player->addComponent<Player>();
 BehaviorSystem 每帧会自动找到这个组件并调用它的 `onUpdate`。不需要你手动管理。
 
 ::: warning 命名提醒
-ShitEngine 的 `IsKeyPressed` = 持续按住（适合移动），`IsKeyDown` = 按下瞬间（适合跳跃）。这和 Unity/Godot 的习惯相反，注意区分。详见[输入系统](/guide/input)。
+ShitEngine 中 `IsKeyPressed` = 持续按住（适合移动），`IsKeyDown` = 按下瞬间（适合跳跃）。这和 Unity/Godot 相反，注意区分。详见[输入系统](/guide/input)。
 :::
 
 ::: info 生命周期小结
@@ -228,22 +225,18 @@ class Player : public Shit::Behavior {
 
 int main() {
     if (Shit::Game::Init()) {
-        // 创建场景
         auto scene = std::make_unique<Shit::Scene>("demo");
         scene->init();
 
-        // 创建玩家
         auto* player = scene->createGameObject("player");
         player->addComponent<Shit::TransformComponent>();
         player->addComponent<Shit::SpriteRenderer>()->setTexturePath("player.png");
         player->addComponent<Player>();
 
-        // 创建相机
         auto* camera = scene->createGameObject("camera");
         camera->addComponent<Shit::TransformComponent>();
         camera->addComponent<Shit::CameraComponent>()->setZoom(5.0f);
 
-        // 开跑
         Shit::SceneManager::PushScene(std::move(scene));
         Shit::Game::Run();
     }
@@ -273,7 +266,7 @@ bgm->setLooping(-1);  // 无限循环
 
 ```cpp
 auto* anim = player->addComponent<Shit::AnimationComponent>();
-Shit::SpriteSheet sheet(4, 8, 32, 32);  // 4行8列，每帧32×32
+Shit::SpriteSheet sheet(4, 8, 32, 32);  // 4行8列，每帧32x32
 
 // 用帧索引数组定义"跑"的动画
 anim->play("run", sheet, {0, 1, 2, 3, 4, 5}, 0.1f, true);
@@ -293,7 +286,7 @@ struct ScoreEvent : public Shit::Event { int points; };
 // 2. 订阅
 uint64_t token = Shit::EventBus::Subscribe<ScoreEvent>(
     [](const ScoreEvent& e) {
-        // 更新 UI、播音效、其他
+        // 更新 UI、播音效……
     }
 );
 
@@ -304,7 +297,7 @@ EventBus::Emit(ScoreEvent{100});
 EventBus::Unsubscribe<ScoreEvent>(token);
 ```
 
-事件不会立即触发，而是排队等待 `ProcessEvents` 统一派发。引擎在主循环中已自动调用，你一般不需要手动处理。
+事件不会立即触发，而是排队等待 `ProcessEvents` 统一派发。引擎在主循环中已调用 `SceneManager::Update`，无需手动处理。
 
 ## 继续深入
 

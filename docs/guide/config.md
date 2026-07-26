@@ -7,7 +7,7 @@ lang: zh_CN
 
 > 不改代码就能改游戏参数——这就是配置系统的意义。
 
-ShitEngine 使用一个 JSON 文件来管理项目和窗口配置。没有配置文件时，引擎会用默认值正常运行。
+ShitEngine 使用一个 JSON 文件来管理项目、窗口和输入映射配置。没有配置文件时，引擎会用默认值正常运行。
 
 ---
 
@@ -25,6 +25,16 @@ ShitEngine 使用一个 JSON 文件来管理项目和窗口配置。没有配置
     "width": 1920,
     "height": 1080,
     "targetFPS": 60
+  },
+  "inputMappings": {
+    "actions": {
+      "Jump":   ["Space"],
+      "Attack": ["J", "E"]
+    },
+    "axes": {
+      "Horizontal": { "negative": ["A"], "positive": ["D"] },
+      "Vertical":   { "negative": ["S"], "positive": ["W"] }
+    }
   }
 }
 ```
@@ -41,49 +51,36 @@ ShitEngine 使用一个 JSON 文件来管理项目和窗口配置。没有配置
 |---|---|---|---|
 | `name` | string | `"Example"` | 项目名称 |
 
+```cpp
+std::string name = Config::GetProjectConfig().name;
+```
+
 ### WindowConfig
 
 | 字段 | 类型 | 默认值 | 说明 |
 |---|---|---|---|
 | `title` | string | `"Example"` | 窗口标题 |
-| `width` | uint | `1280` | 逻辑分辨率宽度 |
-| `height` | uint | `720` | 逻辑分辨率高度 |
-| `targetFPS` | uint | `144` | 帧率上限 |
+| `width` | unsigned int | `1280` | 逻辑分辨率宽度 |
+| `height` | unsigned int | `720` | 逻辑分辨率高度 |
+| `targetFPS` | unsigned int | `144` | 帧率上限 |
 
-### InputMapping
+```cpp
+auto& win = Config::GetWindowConfig();
+unsigned int fps = win.targetFPS;   // → 144
+int w = win.width;                  // → 1280
+std::string title = win.title;      // → "Example"
+```
+
+### InputMappings（输入映射）
 
 | 字段 | 类型 | 说明 |
 |---|---|---|
-| `actions` | object | 动作名 → 绑定键列表（如 `"Jump": ["Space"]`） |
-| `axes` | object | 轴名 → `{ negative: [...], positive: [...] }`（如横轴 A/D） |
+| `actions` | object | 动作名 → 绑定键列表，如 `"Jump": ["Space"]` |
+| `axes` | object | 轴名 → `{ negative: [...], positive: [...] }` |
 
-详见 [输入系统](/guide/input) 中的配置示例与 API。上述字段均为完整 JSON，完整格式示例：
+键名使用 SDL 官方 scancode 名。也接受无空格别名（`LeftShift` → `Left Shift`）。鼠标用 `MouseButton.Left`/`Right`/`Middle`/`XButton1`/`XButton2`。
 
-```json
-{
-  "project": { "name": "My Game" },
-  "window": { "title": "My Game", "width": 1920, "height": 1080, "targetFPS": 60 },
-  "inputMappings": {
-    "actions": { "Jump": ["Space"], "Sprint": ["LeftShift"] },
-    "axes": { "Horizontal": { "negative": ["A"], "positive": ["D"] } }
-  }
-}
-```
-
----
-
-## 在代码中读取配置
-
-```cpp
-// 项目名称
-std::string name = Config::GetProjectConfig().name;
-
-// 窗口参数
-auto& win = Config::GetWindowConfig();
-unsigned int fps = win.targetFPS;       // → 144
-unsigned int w = win.width;             // → 1280
-std::string title = win.title;          // → "Example"
-```
+详见 [输入系统](/guide/input)。
 
 ---
 
@@ -127,7 +124,7 @@ unsigned int current = Time::GetTargetFPS();
 }
 ```
 
-这意味着你的游戏代码永远在 640×480 的坐标空间里写——窗口怎么拖拽、怎么缩放都不影响。
+这意味着你的游戏代码永远在 640x480 的坐标空间里写——窗口怎么拖拽全都没影响。
 
 ---
 

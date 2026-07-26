@@ -11,7 +11,7 @@ lang: zh_CN
 
 - **C++20 编译器** — GCC 10+、Clang 11+、MSVC 2019+
 - **CMake 3.20+**
-- **Ninja**（推荐，Ninja 比 make 快，这不是错觉）
+- **Ninja**（推荐）
 
 ## 创建项目
 
@@ -48,7 +48,7 @@ SDL3、spdlog、glm、nlohmann_json……全自动下载。你什么都不用装
 
 ### main.cpp
 
-最最最小的起手式：
+最小起手式：
 
 ```cpp
 #include <ShitEngine.h>
@@ -82,7 +82,7 @@ cmake --build build
 
 ```cpp
 auto scene = std::make_unique<Shit::Scene>("my game");
-scene->init();  // 注册 BehaviorSystem + RenderSystem
+scene->init();  // 注册 BehaviorSystem + RenderSystem + UIRenderSystem
 ```
 
 ### 2. 创建游戏对象
@@ -103,7 +103,7 @@ player->getComponent<Shit::SpriteRenderer>()
     ->setTexturePath("textures/player.png");
 ```
 
-### 3. 让场面跑起来
+### 3. 让画面跑起来
 
 ```cpp
 Shit::SceneManager::PushScene(std::move(scene));
@@ -143,7 +143,7 @@ player->addComponent<Player>();
 ```
 
 ::: tip
-`IsKeyPressed` 检测的是**持续按住**，适合移动。如果是跳跃这类单次触发，用 `IsKeyDown`。命名和 Unity 相反，注意区分（详见[输入系统](/guide/input)）。
+`IsKeyPressed` 检测的是**持续按住**，适合移动。如果是跳跃这类单次触发，用 `IsKeyDown`。详见[输入系统](/guide/input)。
 :::
 
 ## 再加个相机
@@ -207,7 +207,7 @@ int main() {
 - [引擎核心架构](/guide/introduction)
 - [游戏对象与组件](/guide/game-objects) — 组件生命周期、Behavior、Prefab
 - [场景管理](/guide/scene) — 多场景切换、叠加菜单
-- [渲染与相机](/guide/rendering) — 多相机分屏、UI 直接绘制
+- [渲染与相机](/guide/rendering) — 多相机分屏、UI 层级
 - [输入系统](/guide/input) — 键盘鼠标三态检测
 - [逐帧动画](/guide/animation) — 让 sprite 动得更花哨
 - [事件系统](/guide/events) — 模块间通信不耦合

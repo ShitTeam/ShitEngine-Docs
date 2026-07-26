@@ -39,25 +39,20 @@ class MyScene : public Shit::Scene {
 
 ## 场景栈
 
-SceneManager 用栈管场景。任何时候**只有栈顶的场景在活跃**——想象一盘叠叠乐：
+SceneManager 用栈管场景。任何时候**只有栈顶的场景在活跃**：
 
 ```cpp
 // 压入主菜单
 Shit::SceneManager::PushScene(std::move(menuScene));
-// ↕ 现在是菜单
 
 // 玩家点击"开始游戏"：直接替换
 Shit::SceneManager::ReplaceScene(std::move(gameScene));
-// ↕ 现在是游戏
 
-// 按暂停：压入暂停菜单
+// 按暂停：压入暂停菜单，下面的游戏场景保留
 Shit::SceneManager::PushScene(std::move(pauseScene));
-// ↕ 暂停菜单
-// ↩ 游戏在下面等着
 
 // 恢复：弹走暂停菜单
 Shit::SceneManager::PopScene();
-// ↕ 游戏回来了
 
 // 清空所有
 Shit::SceneManager::ClearScene();
@@ -69,38 +64,37 @@ Shit::SceneManager::ClearScene();
 
 ```cpp
 auto menu = std::make_unique<MenuScene>("menu");
-// 画 UI，等点击……
-Shit::SceneManager::PushScene(std::move(menu));
-Shit::Game::Run();
+SceneManager::PushScene(std::move(menu));
+Game::Run();
 
 // 玩家点了"开始"：
-Shit::SceneManager::ReplaceScene(std::make_unique<GameScene>("game"));
+SceneManager::ReplaceScene(std::make_unique<GameScene>("game"));
 ```
 
 **暂停时叠一层 UI**：
 
 ```cpp
 // 游戏中按 ESC：
-Shit::SceneManager::PushScene(std::make_unique<PauseScene>("pause"));
+SceneManager::PushScene(std::make_unique<PauseScene>("pause"));
 
 // 恢复：
-Shit::SceneManager::PopScene();
+SceneManager::PopScene();
 ```
 
-这套机制让你轻松实现"主菜单→游戏→暂停"等流程，切换时下面被压住的场景不会销毁，回来时状态全在。
+切换时下面被压住的场景不会销毁，回来时状态全在。
 
 ## 系统（System）
 
-系统按优先级每帧统一更新。数字越小越先跑：
+系统按优先级每帧统一更新。优先级由 System 构造函数的参数决定，数字越小越先跑：
 
 ```cpp
-scene->registerSystem<BehaviorSystem>();   // 默认已注册，优先级 0
-scene->registerSystem<RenderSystem>();      // 默认已注册，优先级 100
-scene->registerSystem<UIRenderSystem>();    // 默认已注册，优先级 200
-scene->registerSystem<MyCustomSystem>(50);  // 插在中间
+scene->registerSystem<BehaviorSystem>();   // 默认注册，优先级 0
+scene->registerSystem<RenderSystem>();      // 默认注册，优先级 100
+scene->registerSystem<UIRenderSystem>();    // 默认注册，优先级 200
+scene->registerSystem<MyCustomSystem>();     // 你自己的系统
 ```
 
-顺序是：BehaviorSystem（0）→ 你的系统（50）→ RenderSystem（100）→ UIRenderSystem（200）。逻辑先跑、游戏世界渲染、UI 叠在最上面。
+顺序是：BehaviorSystem（0）→ 你的系统 → RenderSystem（100）→ UIRenderSystem（200）。逻辑先跑、游戏世界渲染、UI 叠在最上面。
 
 ### 写一个自己的系统
 
@@ -112,7 +106,6 @@ class PhysicsSystem : public Shit::System {
 
     void update() override {
         // 每帧遍历场景对象，更新物理
-        // PhysicsComponent 是你自己定义的组件，引擎不内置物理系统
         for (auto& obj : getScene()->getGameObjects()) {
             auto* physics = obj->getComponent<PhysicsComponent>();
             if (physics) physics->tick();
@@ -130,10 +123,10 @@ class PhysicsSystem : public Shit::System {
 不要在迭代过程中增删对象——会崩。ShitEngine 把操作推迟到帧末统一处理：
 
 ```cpp
-scene->addGameObject(std::move(obj));    // 排入待添加队列
-scene->removeGameObject(objPtr);         // 标记为待销毁（按指针）
-scene->removeGameObjectByName("enemy");  // 标记为待销毁（按名字）
-scene->unregisterSystem<RenderSystem>();  // 排入待移除队列
+scene->addGameObject(std::move(obj));       // 排入待添加队列
+scene->removeGameObject(objPtr);            // 标记为待销毁（按指针）
+scene->removeGameObjectByName("enemy");     // 按名字标记为待销毁
+scene->unregisterSystem<T>();               // 排入待移除队列
 ```
 
 这些操作不会立即生效，但在 `Scene::update()` 结尾会被统一处理。对你透明，对迭代器安全。
