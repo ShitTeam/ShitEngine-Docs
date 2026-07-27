@@ -44,7 +44,7 @@ struct SHIT_STRUCT(PlayerConfig, WhiteListFields) {
 
 ### SHIT_META
 
-白名单模式下标记需要反射的字段。展开为 `__attribute__((annotate("shit-meta")))`。接受一个可选参数（兼容旧代码），但内容被忽略。
+白名单模式下标记需要反射的字段。展开为 `__attribute__((annotate("shit-meta:Enable")))`，参数嵌入到注解字符串内，后续可扩展为 `SHIT_META(Disable)`、`SHIT_META(EditorOnly)` 等。
 
 ```cpp
 SHIT_META()
