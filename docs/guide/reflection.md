@@ -144,7 +144,7 @@ Shit::ReflectType("Player", sizeof(Player))
 
 ### Demangle
 
-`DemangleTypeName()` 是 `namespace Shit` 下的 free 函数，用于将 `typeid(T).name()` 返回的 ABI mangled 名还原为可读名称。GCC/MinGW 下使用 `abi::__cxa_demangle`，MSVC 下直接返回原名。
+`DemangleTypeName(const char* mangled)` 是 `namespace Shit` 下的 free 函数，用于将 `typeid(T).name()` 返回的 ABI mangled 名还原为可读名称。GCC/MinGW 下使用 `abi::__cxa_demangle`，MSVC 下直接返回原名。
 
 ### 工厂创建（P1-2）
 
@@ -291,9 +291,12 @@ inline bool Register_TransformComponent() {
     const auto* base = Shit::TypeRegistry::Get("Component");
     Shit::ReflectType("TransformComponent", sizeof(TransformComponent))
         .Base(base)
-        .Field("m_position", &Shit::TransformComponent::m_position, "Vector2")
-        .Field("m_scale",    &Shit::TransformComponent::m_scale,    "Vector2")
-        .Field("m_rotation", &Shit::TransformComponent::m_rotation, "float")
+        .Field("m_position",
+            &Shit::TransformComponent::m_position, "Vector2")
+        .Field("m_scale",
+            &Shit::TransformComponent::m_scale, "Vector2")
+        .Field("m_rotation",
+            &Shit::TransformComponent::m_rotation, "float")
         .Register<TransformComponent>();
     return true;
 }
@@ -303,6 +306,11 @@ inline bool Register_TransformComponent() {
 `ReflectionRegisterAll.h` 统一包含所有 `.gen.h` 并调用其注册函数：
 
 ```cpp
+#include "CameraComponent.gen.h"
+#include "Component.gen.h"
+#include "RendererComponent.gen.h"
+#include "TransformComponent.gen.h"
+
 inline void RegisterAllReflectedTypes() {
     Shit::Register_CameraComponent();
     Shit::Register_Component();

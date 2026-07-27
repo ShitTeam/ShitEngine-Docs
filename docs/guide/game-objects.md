@@ -63,6 +63,9 @@ go->isNeedDestroy();     // 是否已被标记
 | **CameraComponent** | 定义视口与缩放，控制视角 |
 | **AnimationComponent** | 逐帧动画驱动，基于 SpriteSheet 自动回写源矩形 |
 | **Behavior** | 供你继承写自定义脚本 |
+| **RigidBody2D** | 2D 物理刚体（Static / Kinematic / Dynamic） |
+| **BoxCollider2D** | 矩形碰撞体（像素尺寸） |
+| **CircleCollider2D** | 圆形碰撞体（像素半径） |
 | **UITransform** | UI 屏幕空间定位（锚点 + 轴心 + 尺寸） |
 | **UIImage** | UI 图片显示控件，支持颜色叠加 |
 | **UIText** | UI 文字显示控件（SDL_ttf 渲染） |
@@ -232,6 +235,7 @@ auto* e3 = scene->instantiate(enemyPrefab, "enemy_3");
 | System | 驱动什么 | 优先级 |
 |---|---|---|
 | BehaviorSystem | 所有 Behavior 的 onStart/onUpdate | 0 |
+| PhysicsSystem2D | 2D 物理刚体模拟（可选，按需注册） | 50 |
 | RenderSystem | 所有 RendererComponent 的 onRender | 100 |
 | UIRenderSystem | 所有 UIRendererComponent 的 onRender + Raycasting + 聚焦 | 200 |
 
