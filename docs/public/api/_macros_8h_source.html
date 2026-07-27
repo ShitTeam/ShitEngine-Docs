@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_macros_8h_sou
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//   访问 private/protected 成员的权限（供成员指针取 offset，ABI 安全）。</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//   注意：必须保留，annotate 无法替代 friend 的运行期授权作用。</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// SHIT_META(Enable)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// SHIT_META()</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//   放在字段上方（仅 WhiteListFields 模式需要）。展开为</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//   __attribute__((annotate(&quot;shit-meta&quot;)))，附着到紧随其后的字段声明。</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//   Scanner 据此判断该字段启用反射。</span></div>
@@ -207,10 +207,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_macros_8h_sou
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d">   51</a></span><span class="preprocessor">#define SHIT_CLASS(Type, Mode)  SHIT_DETAIL_ANNOTATE(&quot;shit-class:&quot;  #Mode) Type</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// 字段级注解（仅 WhiteListFields 模式用）</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">   54</a></span><span class="preprocessor">#define SHIT_META(...) SHIT_DETAIL_ANNOTATE(&quot;shit-meta&quot;)</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// friend 授权宏（运行期需要，不可去除）</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa">   57</a></span><span class="preprocessor">#define SHIT_REFLECT(Type) friend bool Register_##Type();</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// 变参接受兼容旧代码的 SHIT_META(Enable) 写法，参数内容被忽略</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">   55</a></span><span class="preprocessor">#define SHIT_META(...) SHIT_DETAIL_ANNOTATE(&quot;shit-meta&quot;)</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">// friend 授权宏（运行期需要，不可去除）</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa">   58</a></span><span class="preprocessor">#define SHIT_REFLECT(Type) friend bool Register_##Type();</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
