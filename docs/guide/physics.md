@@ -36,7 +36,7 @@ scene->registerSystem<Shit::PhysicsSystem2D>();
 4. onAttach → 查找同 GameObject 的 RigidBody2D → b2CreatePolygonShape
 ```
 
-> **⚠️ 重要**：碰撞体的尺寸/半径必须在构造时传入，如 `addComponent<BoxCollider2D>(Shit::Vector2{750, 30})`。`setSize` / `setRadius` 需在 `addComponent` **之前**设值才有效（因为 `onAttach` 在 `addComponent` 内立即触发）。
+> **💡 提示**：碰撞体的尺寸/半径也可以在构造后随时修改——`setSize` / `setRadius` / `setDensity` / `setFriction` / `setRestitution` 均会实时同步到 Box2D 物理形状。
 
 ## 用法示例
 
@@ -167,12 +167,12 @@ sr->setTexturePath("resource/box.png");
 
 ## 底层 API 访问
 
-所有组件暴露底层 Box2D 句柄的拆解字段，用于高级操作：
+各组件通过 getter 方法暴露底层 Box2D 句柄的拆解字段，用于高级操作：
 
 - `RigidBody2D::getBodyIndex()` / `getBodyWorld0()` / `getBodyGeneration()` → 可重构为 `b2BodyId`
-- `PhysicsSystem2D` 的 `m_worldIndex` / `m_worldGeneration`（内部，friend 类可访问）
+- `PhysicsSystem2D` 的 `m_worldIndex` / `m_worldGeneration` 可通过 `friend` 类访问
 
-若需要 Box2D 原生 API（关节、射线检测、传感器等），在 .cpp 中包含 `<box2d/box2d.h>` 并用拆解字段重构 ID。
+若需要 Box2D 原生 API（关节、射线检测、传感器等），在 `.cpp` 中包含 `<box2d/box2d.h>` 并用拆解字段重构 ID。
 
 ## 进阶（v1 范围外）
 
