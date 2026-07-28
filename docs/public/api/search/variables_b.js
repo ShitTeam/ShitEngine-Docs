@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['red_0',['red',['../struct_shit_1_1_color.html#a45e552d62e007d0108ae0010be74c466',1,'Shit::Color']]]
+  ['offset_0',['offset',['../struct_shit_1_1_field_info.html#aadb6d6eb83e646653a1402032e45dcab',1,'Shit::FieldInfo']]]
 ];

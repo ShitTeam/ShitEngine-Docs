@@ -64,9 +64,9 @@ var NAVTREEINDEX =
 "class_shit_1_1_audio_track_group.html#a8ae0e710d094445dec14dd3f9fed4d9f",
 "class_shit_1_1_game_object.html#a3a80b6032f86a56bec74609034b3246f",
 "class_shit_1_1_scene.html#ab4a3a27e9b74cb9cca5a7cded635aad6",
-"class_shit_1_1_u_i_button.html#a217b542e0375e611a5769521238c2838",
-"class_shit_1_1_u_i_text_input.html#aa813bd03e0d5fec301fcc77d825008d2",
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0da8cf04a9734132302f96da8e113e80ce5"
+"class_shit_1_1_type_registry.html#af85ffa8990355f8fdefa13500e12b765",
+"class_shit_1_1_u_i_text_input.html#a980e3cb951c3d50008c4e6ba92ac9074",
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da7e89a79bbb017bfcaff80ff820a15d8a"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

@@ -160,6 +160,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:aae9fa60965f9cb33b70d162dc6849272" id="r_aae9fa60965f9cb33b70d162dc6849272"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aae9fa60965f9cb33b70d162dc6849272">Base</a> (const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *baseType)</td></tr>
+<tr class="memitem:a5acd047fb91b4345d28ce584fb8c4d55" id="r_a5acd047fb91b4345d28ce584fb8c4d55"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5acd047fb91b4345d28ce584fb8c4d55">Base</a> (const char *name)</td></tr>
+<tr class="memdesc:a5acd047fb91b4345d28ce584fb8c4d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">按名称指定基类（延迟解析，消除 SIOF） <a class="el" href="#a9bfe6d7f6157040f0a5f83c29249a2ae">Register()</a> 时尝试解析，ResolveBases() 时再次尝试  <br /></td></tr>
 <tr class="memitem:a8a334e73ebffe40a339dab9819fb699d" id="r_a8a334e73ebffe40a339dab9819fb699d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a8a334e73ebffe40a339dab9819fb699d template"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8a334e73ebffe40a339dab9819fb699d">Base</a> ()</td></tr>
 <tr class="memitem:a0b31aa3f3447cfbbe50030bb67c38b95" id="r_a0b31aa3f3447cfbbe50030bb67c38b95"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0b31aa3f3447cfbbe50030bb67c38b95">Field</a> (const char *name, size_t offset, size_t size, const char *typeName)</td></tr>
@@ -167,6 +169,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a99bfc462a60029586cd557a7267ccc69 template"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a99bfc462a60029586cd557a7267ccc69">Field</a> (const char *name, M T::*member)</td></tr>
 <tr class="memitem:ad9bddf767863da08b9d8e611acd50a3f" id="r_ad9bddf767863da08b9d8e611acd50a3f"><td class="memTemplParams" colspan="2">template&lt;typename T, typename M&gt; </td></tr>
 <tr class="memitem:ad9bddf767863da08b9d8e611acd50a3f template"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad9bddf767863da08b9d8e611acd50a3f">Field</a> (const char *name, M T::*member, const char *typeName)</td></tr>
+<tr class="memitem:ad22578c2cb5176da8b5ac26503cceddf" id="r_ad22578c2cb5176da8b5ac26503cceddf"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad22578c2cb5176da8b5ac26503cceddf">Meta</a> (const <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &amp;meta)</td></tr>
+<tr class="memitem:aee8ed17f906a476b727596eae5b54487" id="r_aee8ed17f906a476b727596eae5b54487"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aee8ed17f906a476b727596eae5b54487">Value</a> (const char *name, int64_t val)</td></tr>
 <tr class="memitem:a868904b119a9e894dcc5c66871d39ae9" id="r_a868904b119a9e894dcc5c66871d39ae9"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a868904b119a9e894dcc5c66871d39ae9 template"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a868904b119a9e894dcc5c66871d39ae9">Factory</a> ()</td></tr>
 <tr class="memitem:a9bfe6d7f6157040f0a5f83c29249a2ae" id="r_a9bfe6d7f6157040f0a5f83c29249a2ae"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -178,7 +182,7 @@ Public 成员函数</h2></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
 <a id="a8a334e73ebffe40a339dab9819fb699d" name="a8a334e73ebffe40a339dab9819fb699d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a334e73ebffe40a339dab9819fb699d">&#9670;&#160;</a></span>Base() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a334e73ebffe40a339dab9819fb699d">&#9670;&#160;</a></span>Base() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,8 +208,35 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a5acd047fb91b4345d28ce584fb8c4d55" name="a5acd047fb91b4345d28ce584fb8c4d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5acd047fb91b4345d28ce584fb8c4d55">&#9670;&#160;</a></span>Base() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeInfoBuilder &amp; Base </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>按名称指定基类（延迟解析，消除 SIOF） <a class="el" href="#a9bfe6d7f6157040f0a5f83c29249a2ae">Register()</a> 时尝试解析，ResolveBases() 时再次尝试 </p>
+
+</div>
+</div>
 <a id="aae9fa60965f9cb33b70d162dc6849272" name="aae9fa60965f9cb33b70d162dc6849272"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae9fa60965f9cb33b70d162dc6849272">&#9670;&#160;</a></span>Base() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aae9fa60965f9cb33b70d162dc6849272">&#9670;&#160;</a></span>Base() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,6 +393,31 @@ template&lt;typename T, typename M&gt; </div>
 
 </div>
 </div>
+<a id="ad22578c2cb5176da8b5ac26503cceddf" name="ad22578c2cb5176da8b5ac26503cceddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22578c2cb5176da8b5ac26503cceddf">&#9670;&#160;</a></span>Meta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeInfoBuilder &amp; Meta </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>meta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9bfe6d7f6157040f0a5f83c29249a2ae" name="a9bfe6d7f6157040f0a5f83c29249a2ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bfe6d7f6157040f0a5f83c29249a2ae">&#9670;&#160;</a></span>Register()</h2>
 
@@ -378,6 +434,35 @@ template&lt;typename T&gt; </div>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee8ed17f906a476b727596eae5b54487" name="aee8ed17f906a476b727596eae5b54487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8ed17f906a476b727596eae5b54487">&#9670;&#160;</a></span>Value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeInfoBuilder &amp; Value </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

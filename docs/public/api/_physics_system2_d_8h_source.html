@@ -190,16 +190,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_physics_syste
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> m_gravity{ 0.0f, 320.0f };</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::vector&lt;RigidBody2D*&gt; m_bodies;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// b2WorldId = {uint16_t index1; uint16_t generation;}</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        uint16_t m_worldIndex = 0;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        uint16_t m_worldGeneration = 0;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">bool</span> m_initialized = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">static</span> <span class="keywordtype">float</span> s_pixelsPerMeter;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">float</span> m_accumulator = 0.0f; <span class="comment">// 物理固定步长累积器</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="comment">// b2WorldId = {uint16_t index1; uint16_t generation;}</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        uint16_t m_worldIndex = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        uint16_t m_worldGeneration = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">bool</span> m_initialized = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">static</span> <span class="keywordtype">float</span> s_pixelsPerMeter;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    };</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 <div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
 <div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
 <div class="ttc" id="a_math_8h_html"><div class="ttname"><a href="_math_8h.html">Math.h</a></div></div>

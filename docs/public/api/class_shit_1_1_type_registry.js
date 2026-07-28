@@ -10,5 +10,7 @@ var class_shit_1_1_type_registry =
     [ "operator=", "class_shit_1_1_type_registry.html#a2a8b726adc34d6e3d332b1d34bf81e5d", null ],
     [ "operator=", "class_shit_1_1_type_registry.html#a57605e52c1f97bec4b34bcb19ed7de80", null ],
     [ "registerType", "class_shit_1_1_type_registry.html#aa85f3125942d3ebe0508b809344f9573", null ],
+    [ "resolveBases", "class_shit_1_1_type_registry.html#a01470a60234f474fdfecd5378ee916a9", null ],
+    [ "unregisterType", "class_shit_1_1_type_registry.html#a87db5675288cbd35da682ae90a35589e", null ],
     [ "TypeInfoBuilder", "class_shit_1_1_type_registry.html#a206b044745b4ae1ec69f6595acfce573", null ]
 ];

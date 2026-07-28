@@ -9,9 +9,10 @@ var searchData=
   ['destroy_6',['destroy',['../class_shit_1_1_game_object.html#a3a80b6032f86a56bec74609034b3246f',1,'Shit::GameObject::destroy()'],['../class_shit_1_1_physics_system2_d.html#ae1cf30cae681d95a94934492ae7ea627',1,'Shit::PhysicsSystem2D::destroy()'],['../class_shit_1_1_render_system.html#ae1cf30cae681d95a94934492ae7ea627',1,'Shit::RenderSystem::destroy()'],['../class_shit_1_1_scene.html#aed2d208f4d304cc6def0a15b73f115bf',1,'Shit::Scene::destroy()'],['../class_shit_1_1_behavior_system.html#ae1cf30cae681d95a94934492ae7ea627',1,'Shit::BehaviorSystem::destroy()'],['../class_shit_1_1_system.html#af79997318d96497d77015571261ec88b',1,'Shit::System::destroy()'],['../class_shit_1_1_u_i_render_system.html#ae1cf30cae681d95a94934492ae7ea627',1,'Shit::UIRenderSystem::destroy()']]],
   ['disabled_7',['Disabled',['../class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8ab9f5c797ebbf55adccdd8539a65a0241',1,'Shit::UIButton']]],
   ['disabledcolor_8',['disabledColor',['../struct_shit_1_1_u_i_button_1_1_color_block.html#a6714329941f6a3660e68a65a6e0c515a',1,'Shit::UIButton::ColorBlock']]],
-  ['down_9',['Down',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da08a38277b0309070706f6652eeae9a53',1,'Shit']]],
-  ['drawsprite_10',['DrawSprite',['../class_shit_1_1_renderer.html#a4fdb65e37b1d8c3a170fab28fe818fe0',1,'Shit::Renderer']]],
-  ['drawtexture_11',['DrawTexture',['../class_shit_1_1_renderer.html#a8a4709d0c3fd54a97b962e0ddb6a43b8',1,'Shit::Renderer']]],
-  ['drawtexturerotated_12',['DrawTextureRotated',['../class_shit_1_1_renderer.html#a3e26375150450d206d32ae6c690b5fba',1,'Shit::Renderer']]],
-  ['dynamic_13',['Dynamic',['../class_shit_1_1_rigid_body2_d.html#a1d1cfd8ffb84e947f82999c682b666a7a971fd8cc345d8bd9f92e9f7d88fdf20c',1,'Shit::RigidBody2D']]]
+  ['displayname_9',['displayName',['../struct_shit_1_1_field_meta.html#abd54db44deb77f599f600479aea631a3',1,'Shit::FieldMeta']]],
+  ['down_10',['Down',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da08a38277b0309070706f6652eeae9a53',1,'Shit']]],
+  ['drawsprite_11',['DrawSprite',['../class_shit_1_1_renderer.html#a4fdb65e37b1d8c3a170fab28fe818fe0',1,'Shit::Renderer']]],
+  ['drawtexture_12',['DrawTexture',['../class_shit_1_1_renderer.html#a8a4709d0c3fd54a97b962e0ddb6a43b8',1,'Shit::Renderer']]],
+  ['drawtexturerotated_13',['DrawTextureRotated',['../class_shit_1_1_renderer.html#a3e26375150450d206d32ae6c690b5fba',1,'Shit::Renderer']]],
+  ['dynamic_14',['Dynamic',['../class_shit_1_1_rigid_body2_d.html#a1d1cfd8ffb84e947f82999c682b666a7a971fd8cc345d8bd9f92e9f7d88fdf20c',1,'Shit::RigidBody2D']]]
 ];

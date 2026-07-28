@@ -1,11 +1,11 @@
 var searchData=
 [
   ['shit_5fapi_0',['SHIT_API',['../_core_8h.html#a58974cbf2d8d9423b235379fdafb8380',1,'Core.h']]],
-  ['shit_5fclass_1',['SHIT_CLASS',['../_macros_8h.html#a70a3feb6ddefff69ff8d6f754b6d253d',1,'Macros.h']]],
-  ['shit_5fdetail_5fannotate_2',['SHIT_DETAIL_ANNOTATE',['../_macros_8h.html#a64852d86c9c3f67893c3c26c30ca96dc',1,'Macros.h']]],
+  ['shit_5fdetail_5fannotate_1',['SHIT_DETAIL_ANNOTATE',['../_macros_8h.html#a64852d86c9c3f67893c3c26c30ca96dc',1,'Macros.h']]],
+  ['shit_5fenum_2',['SHIT_ENUM',['../_macros_8h.html#a1b3a79dade80bae9109455ee7347ebd2',1,'Macros.h']]],
   ['shit_5fmeta_3',['SHIT_META',['../_macros_8h.html#abda51617d4152febb4da2bb01b57703b',1,'Macros.h']]],
-  ['shit_5freflect_4',['SHIT_REFLECT',['../_macros_8h.html#ae660673a2433b0eab89c55d7273f9bfa',1,'Macros.h']]],
-  ['shit_5fstruct_5',['SHIT_STRUCT',['../_macros_8h.html#a0764e242fc12fed1d62d0d7c4ea9787d',1,'Macros.h']]],
+  ['shit_5freflect_4',['SHIT_REFLECT',['../_macros_8h.html#a87a97ecacfee8e95dc16f195eb87a4f4',1,'Macros.h']]],
+  ['shit_5freflect_5fbody_5',['SHIT_REFLECT_BODY',['../_macros_8h.html#a38f21dc4a597fb3558ab7f67bfb7ae38',1,'Macros.h']]],
   ['st_5fcore_5fcritical_6',['ST_CORE_CRITICAL',['../_log_8h.html#a304ac95c5017efaabaca729e1dadcb5f',1,'Log.h']]],
   ['st_5fcore_5fdebug_7',['ST_CORE_DEBUG',['../_log_8h.html#afe6cc112769b2b8ca030f3a2d26f6452',1,'Log.h']]],
   ['st_5fcore_5ferror_8',['ST_CORE_ERROR',['../_log_8h.html#abf3849fe584d46510e5470f930e2eda0',1,'Log.h']]],

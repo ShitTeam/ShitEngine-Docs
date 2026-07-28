@@ -29,10 +29,11 @@ var searchData=
   ['factory_26',['factory',['../struct_shit_1_1_type_info.html#afbf4c89df61d39024dd5f68bea8847db',1,'Shit::TypeInfo']]],
   ['field_27',['Field',['../class_shit_1_1_type_info_builder.html#a0b31aa3f3447cfbbe50030bb67c38b95',1,'Shit::TypeInfoBuilder::Field(const char *name, size_t offset, size_t size, const char *typeName)'],['../class_shit_1_1_type_info_builder.html#a99bfc462a60029586cd557a7267ccc69',1,'Shit::TypeInfoBuilder::Field(const char *name, M T::*member)'],['../class_shit_1_1_type_info_builder.html#ad9bddf767863da08b9d8e611acd50a3f',1,'Shit::TypeInfoBuilder::Field(const char *name, M T::*member, const char *typeName)']]],
   ['fieldinfo_28',['FieldInfo',['../struct_shit_1_1_field_info.html',1,'Shit']]],
-  ['fields_29',['fields',['../struct_shit_1_1_type_info.html#a47ad6d79041d9e9286e6760690d83f70',1,'Shit::TypeInfo']]],
-  ['fillrect_30',['FillRect',['../class_shit_1_1_renderer.html#aacf4d1b45f776aa52b859912cdaad0ab',1,'Shit::Renderer']]],
-  ['fontmanager_31',['FontManager',['../class_shit_1_1_font_manager.html',1,'FontManager'],['../class_shit_1_1_font_manager.html#a5520f17d8d70b43bceaaba0085ee5905',1,'Shit::FontManager::FontManager(const FontManager &amp;)=delete'],['../class_shit_1_1_font_manager.html#a0315701b5ee6b96d3fae9de3c71c7eae',1,'Shit::FontManager::FontManager(FontManager &amp;&amp;)=default']]],
-  ['fontmanager_2eh_32',['FontManager.h',['../_font_manager_8h.html',1,'']]],
-  ['foreach_33',['ForEach',['../class_shit_1_1_type_registry.html#a95d41ba8e879cbd5ed1eb9d1967587d8',1,'Shit::TypeRegistry']]],
-  ['foreach_34',['forEach',['../class_shit_1_1_type_registry.html#ab741f61fd936cb1fea75d452931d33ea',1,'Shit::TypeRegistry']]]
+  ['fieldmeta_29',['FieldMeta',['../struct_shit_1_1_field_meta.html',1,'Shit']]],
+  ['fields_30',['fields',['../struct_shit_1_1_type_info.html#a47ad6d79041d9e9286e6760690d83f70',1,'Shit::TypeInfo']]],
+  ['fillrect_31',['FillRect',['../class_shit_1_1_renderer.html#aacf4d1b45f776aa52b859912cdaad0ab',1,'Shit::Renderer']]],
+  ['fontmanager_32',['FontManager',['../class_shit_1_1_font_manager.html',1,'FontManager'],['../class_shit_1_1_font_manager.html#a5520f17d8d70b43bceaaba0085ee5905',1,'Shit::FontManager::FontManager(const FontManager &amp;)=delete'],['../class_shit_1_1_font_manager.html#a0315701b5ee6b96d3fae9de3c71c7eae',1,'Shit::FontManager::FontManager(FontManager &amp;&amp;)=default']]],
+  ['fontmanager_2eh_33',['FontManager.h',['../_font_manager_8h.html',1,'']]],
+  ['foreach_34',['ForEach',['../class_shit_1_1_type_registry.html#a95d41ba8e879cbd5ed1eb9d1967587d8',1,'Shit::TypeRegistry']]],
+  ['foreach_35',['forEach',['../class_shit_1_1_type_registry.html#ab741f61fd936cb1fea75d452931d33ea',1,'Shit::TypeRegistry']]]
 ];

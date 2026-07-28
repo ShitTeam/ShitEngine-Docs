@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['green_0',['green',['../struct_shit_1_1_color.html#a1340af5d91b49bf9ea982e53e029e275',1,'Shit::Color']]]
+  ['enumvalues_0',['enumValues',['../struct_shit_1_1_type_info.html#a839122a2fb9abd7ea226998c8d94c94c',1,'Shit::TypeInfo']]]
 ];

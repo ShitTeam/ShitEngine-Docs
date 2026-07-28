@@ -2,6 +2,8 @@ var struct_shit_1_1_type_info =
 [
     [ "Create", "struct_shit_1_1_type_info.html#a47297c01cebacf041817f7cd518bd228", null ],
     [ "baseType", "struct_shit_1_1_type_info.html#aff89ef7dbe02b1d33c7fdd81bd9bc0f7", null ],
+    [ "baseTypeName", "struct_shit_1_1_type_info.html#a96d05ef683ebb2c63aef32f614bd2af0", null ],
+    [ "enumValues", "struct_shit_1_1_type_info.html#a839122a2fb9abd7ea226998c8d94c94c", null ],
     [ "factory", "struct_shit_1_1_type_info.html#afbf4c89df61d39024dd5f68bea8847db", null ],
     [ "fields", "struct_shit_1_1_type_info.html#a47ad6d79041d9e9286e6760690d83f70", null ],
     [ "name", "struct_shit_1_1_type_info.html#a9b45b3e13bd9167aab02e17e08916231", null ],
