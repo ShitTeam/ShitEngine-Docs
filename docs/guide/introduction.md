@@ -47,20 +47,25 @@ auto* player = scene->createGameObject("player");
 - `UITransform` / `UIImage` / `UIText` — UI 控件三件套
 - `UIButton` — 可交互按钮
 - `UITextBox` / `UITextArea` — 文本输入（含 IME 中文）
-
-每种组件**只能挂一个**（一个对象不会有两份 Transform）。`addComponent<T>()` 如果已存在就返回已有的。
+- `RigidBody2D` / `BoxCollider2D` / `CircleCollider2D` — 刚体和碰撞体
+- 所有组件通过 `addComponent<T>()` 按类型索引，每种一个实例
 
 ### ⚙️ System — 车间流水线
 
 组件是积木块，System 是那条流水线。`BehaviorSystem` 每帧对所有 Behavior 调 `onUpdate`，`RenderSystem` 排好序后逐个渲染。System 有优先级，数值小的先执行。
 
 ```
-优先级 0:   BehaviorSystem  →  跑游戏逻辑
-优先级 100: RenderSystem    →  画游戏世界
-优先级 200: UIRenderSystem  →  画 UI
+优先级 0:   BehaviorSystem   →  跑游戏逻辑
+优先级 50:  PhysicsSystem2D  →  跑物理模拟
+优先级 100: RenderSystem     →  画游戏世界
+优先级 200: UIRenderSystem   →  画 UI
 ```
 
 你完全可以写自己的 System 插到中间——物理、寻路、AI，随你。
+
+### 🔍 Reflection — 窥探组件内幕
+
+ShitEngine 内置了一套**编译期反射系统**，通过 libClang 解析源码生成注册代码，调 `TypeRegistry::Get("TransformComponent")` 就能拿到所有字段的元信息——类型名、大小、偏移、编辑器显示名和数值范围。这是未来引擎编辑器的基础。
 
 ## 核心系统一览
 
@@ -68,16 +73,27 @@ auto* player = scene->createGameObject("player");
 |---|---|
 | **Game** | 引擎总开关：Init / Run / Destroy |
 | **Window** | 窗口管理，别让它关了就行 |
-| **Renderer** | 逻辑分辨率、缩放、绘制 API 封装 |
-| **Time** | 告诉你上一帧花了多久（DeltaTime） |
-| **Input** | 键盘鼠标 Down / Pressed / Released 三态检测 |
+| **Renderer** | 逻辑分辨率、缩放、渲染 API 封装 |
+| **Time** | 告诉你上一帧花了多久（DeltaTime）|
+| **Input** | 键盘鼠标 Down / Pressed / Released 三态 + 动作轴映射 |
 | **Config** | `settings.json` 读配置，没有就默认 |
 | **ResourceManager** | 纹理/音频/字体自动缓存，不重复加载 |
 | **AudioPlayer** | 分层音频：master × group × track |
-| **EventBus** | 类型安全的事件通信，缓冲队列派发 |
-| **SceneManager** | 场景栈，推拉替换全延迟执行 |
+| **EventBus** | 事件缓冲区，统一时刻派发 |
+| **SceneManager** | 场景栈，推拉替换 |
+| **ReflectionSystem** | 编译期解析 AST，运行时查询类型信息 |
+| **PhysicsSystem2D** | Box2D 封装：刚体、碰撞形状、积分器 |
+
+## 版本历史
+
+| 版本 | 亮点 |
+|------|------|
+| v1.1 | 基础架构：Game/Scene/Component/System、SDL3 渲染管线、输入、音频、配置 |
+| v1.2 | UI 系统：UITransform、UIImage/IUText、UIButton、UITextBox/UITextArea；物理系统（Box2D）；DLL 插件架构 |
+| v1.3 | 反射系统：SHIT_REFLECT/SHIT_ENUM、设计化的元数据、WhiteList/BlackList、static_assert 编译检查；SDL3 迁移 |
 
 ## 链接
 
 - [GitHub](https://github.com/ShitTeam)
-- 许可证：Apache License 2.0
+- [API 参考 (Doxygen)](https://engine.shitteam.top/api/)
+- 许可协议：Apache License 2.0
