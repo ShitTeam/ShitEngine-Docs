@@ -330,6 +330,10 @@ input->setCharacterLimit(16);  // 最多输入 16 个 UTF-8 字符
 
 超出限制时新字符被静默拒绝，删除或选区替换后才允许继续输入。`limit = 0` 表示不限制。
 
+### 编辑器反射支持
+
+所有 UI 组件已添加 `SHIT_REFLECT(BlackList)` + `SHIT_META` 标记，可在编辑器的属性面板中直接编辑 UI 组件的属性（位置、尺寸、颜色、文字等）。内部实现细节字段（纹理缓存、脏标记、运行时状态）已通过 `SHIT_META(Disable)` 排除，不在编辑器中暴露。
+
 ### 注意事项
 
 - **字体**：显示中文需要加载支持 CJK 字形的字体（如 NotoSansSC、SourceHanSans 等），默认的 Roboto 不含中文字形。

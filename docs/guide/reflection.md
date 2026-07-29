@@ -230,6 +230,30 @@ for (auto& v : ti->enumValues)
 | `RigidBody2D` | `m_bodyIndex`, `m_bodyWorld0`, `m_bodyGeneration`, `m_bodyValid` | `m_type`, `m_gravityScale`, `m_linearDamping`, `m_fixedRotation` |
 | `BoxCollider2D` | `m_shapeIndex`, `m_shapeWorld0`, `m_shapeGeneration`, `m_shapeValid` | `m_size`, `m_density`, `m_friction`, `m_restitution` |
 | `CircleCollider2D` | `m_shapeIndex`, `m_shapeWorld0`, `m_shapeGeneration`, `m_shapeValid` | `m_radius`, `m_density`, `m_friction`, `m_restitution` |
+| `UITransform` | — | `m_anchorMin`, `m_anchorMax`, `m_pivot`, `m_anchoredPosition`, `m_width`, `m_height`, `m_zIndex` |
+| `UICanvas` | — | `m_sortOrder` |
+| `UIRendererComponent` | — | `m_zIndex`, `m_isVisible` |
+| `UIImage` | — | `m_sprite` (readOnly), `m_color` |
+| `UIText` | `m_cachedTexture`, `m_isDirty` | `m_text`, `m_fontPath`, `m_fontSize`, `m_color`, `m_anchor` |
+| `UIButton` | `m_state`, `m_isPointerInside`, `m_isPressed`, `m_colors`, `m_onClick` | `m_interactable` |
+| `UITextInput` | `m_isFocused`, `m_isMultiline`, `m_fontHeight`, `m_isDirty`, `m_cursor`, `m_selectionAnchor`, `m_preedit`, `m_preeditStart`, `m_preeditLength` | `m_text`, `m_placeholder`, `m_fontPath`, `m_fontSize`, `m_textColor`, `m_placeholderColor`, `m_cursorColor`, `m_selectionColor` |
+| `UITextArea` | `m_scrollY` | — |
+| `UITextBox` | — | `m_characterLimit` |
+
+## 编译期校验（Static Assertions）
+
+从 v1.3 开始，`ReflectionScanner` 会在生成的 `.gen.h` 中注入 `static_assert` 语句，在编译时验证反射数据与 C++ 结构体布局的一致性：
+
+```cpp
+static_assert(sizeof(UITextInput) == 216,
+    "UITextInput: size mismatch - regenerate reflection data");
+static_assert(offsetof(UITextInput, m_text) == 32,
+    "UITextInput::m_text: offset mismatch - regenerate reflection data");
+```
+
+如果你修改了结构体字段（增/删/重排）但忘记重新运行 Scanner，编译会直接报错并指出哪个字段偏移不匹配。
+
+> **注意**：对包含 `glm::vec2`（`Vector2`）等外部库类型的结构体，libClang 无法准确计算字段偏移，Scanner 会自动跳过这些类型的 `static_assert` 生成。运行时成员指针路径不受影响。|
 
 ## 构建集成
 
