@@ -173,9 +173,12 @@ Public 成员函数</h2></td></tr>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:ab162670d6701eb22f1aaacd30b589e2e" id="r_ab162670d6701eb22f1aaacd30b589e2e"><td class="memItemLeft">static <a class="el" href="#a6a2f2dfe18eed126c72be99972c02236">ResourceManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab162670d6701eb22f1aaacd30b589e2e">GetInstance</a> ()</td></tr>
 <tr class="memitem:a1716946dffd7f7f6a9c8f46406ab0732" id="r_a1716946dffd7f7f6a9c8f46406ab0732"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1716946dffd7f7f6a9c8f46406ab0732">Init</a> ()</td></tr>
+<tr class="memitem:a62a73aff7afffe2fba7c2e47e07d9134" id="r_a62a73aff7afffe2fba7c2e47e07d9134"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a> ()</td></tr>
+<tr class="memdesc:a62a73aff7afffe2fba7c2e47e07d9134"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放所有资源缓存（必须在 SDL_Quit 之前调用）  <br /></td></tr>
 <tr class="memitem:ad725872fe5683084c429452249fc1e7e" id="r_ad725872fe5683084c429452249fc1e7e"><td class="memItemLeft">static SDL_Texture *&#160;</td><td class="memItemRight"><a class="el" href="#ad725872fe5683084c429452249fc1e7e">LoadTexture</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:aafc43012f24df717203acec29d7dd8c6" id="r_aafc43012f24df717203acec29d7dd8c6"><td class="memItemLeft">static SDL_Texture *&#160;</td><td class="memItemRight"><a class="el" href="#aafc43012f24df717203acec29d7dd8c6">GetTexture</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:a0a6525d07e3b6d71c53350c43e31eb59" id="r_a0a6525d07e3b6d71c53350c43e31eb59"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0a6525d07e3b6d71c53350c43e31eb59">UnloadTexture</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memitem:a27a8cdbe1a72f6bdce598110066f3734" id="r_a27a8cdbe1a72f6bdce598110066f3734"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a27a8cdbe1a72f6bdce598110066f3734">ClearAllTextures</a> ()</td></tr>
 <tr class="memitem:a51a1a1592ed7b9526cc062cd2425cd95" id="r_a51a1a1592ed7b9526cc062cd2425cd95"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a51a1a1592ed7b9526cc062cd2425cd95">ClearTexture</a> ()</td></tr>
 <tr class="memitem:a029bd523f3b16c95c42c64fb90a609c1" id="r_a029bd523f3b16c95c42c64fb90a609c1"><td class="memItemLeft">static MIX_Audio *&#160;</td><td class="memItemRight"><a class="el" href="#a029bd523f3b16c95c42c64fb90a609c1">LoadAudio</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:a95a2051da3dd8154854122a27c9714f7" id="r_a95a2051da3dd8154854122a27c9714f7"><td class="memItemLeft">static MIX_Audio *&#160;</td><td class="memItemRight"><a class="el" href="#a95a2051da3dd8154854122a27c9714f7">GetAudio</a> (const std::string &amp;filePath)</td></tr>
@@ -183,7 +186,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a132d07a4ffd0097f21c351066eecf3fb" id="r_a132d07a4ffd0097f21c351066eecf3fb"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a132d07a4ffd0097f21c351066eecf3fb">ClearAudio</a> ()</td></tr>
 <tr class="memitem:a8426d7a8cba1df3df1f08189e750ea8f" id="r_a8426d7a8cba1df3df1f08189e750ea8f"><td class="memItemLeft">static TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="#a8426d7a8cba1df3df1f08189e750ea8f">LoadFont</a> (const std::string &amp;filePath, float fontSize)</td></tr>
 <tr class="memitem:a55d4aa393669181ec5dcf3073cd78ae3" id="r_a55d4aa393669181ec5dcf3073cd78ae3"><td class="memItemLeft">static TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="#a55d4aa393669181ec5dcf3073cd78ae3">GetFont</a> (const std::string &amp;filePath, float fontSize)</td></tr>
-<tr class="memitem:a38fdd8f7ea8ff98e4e10f911fb2a7304" id="r_a38fdd8f7ea8ff98e4e10f911fb2a7304"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a38fdd8f7ea8ff98e4e10f911fb2a7304">UnloadFont</a> (const std::string &amp;filePath, float fontSize)</td></tr>
+<tr class="memitem:a7d6350463ce65b6a712496cc56146173" id="r_a7d6350463ce65b6a712496cc56146173"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a7d6350463ce65b6a712496cc56146173">ClearAllFonts</a> ()</td></tr>
 <tr class="memitem:a48cba22a6a68c7adc5ae8672eab58250" id="r_a48cba22a6a68c7adc5ae8672eab58250"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a48cba22a6a68c7adc5ae8672eab58250">ClearFont</a> ()</td></tr>
 <tr class="memitem:a8394950c01f3467de9329b92ec611f07" id="r_a8394950c01f3467de9329b92ec611f07"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8394950c01f3467de9329b92ec611f07">SetAudioMixer</a> (struct MIX_Mixer *mixer)</td></tr>
 </table>
@@ -276,6 +279,56 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a7d6350463ce65b6a712496cc56146173" name="a7d6350463ce65b6a712496cc56146173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d6350463ce65b6a712496cc56146173">&#9670;&#160;</a></span>ClearAllFonts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearAllFonts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27a8cdbe1a72f6bdce598110066f3734" name="a27a8cdbe1a72f6bdce598110066f3734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a8cdbe1a72f6bdce598110066f3734">&#9670;&#160;</a></span>ClearAllTextures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearAllTextures </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a132d07a4ffd0097f21c351066eecf3fb" name="a132d07a4ffd0097f21c351066eecf3fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a132d07a4ffd0097f21c351066eecf3fb">&#9670;&#160;</a></span>ClearAudio()</h2>
 
@@ -348,6 +401,33 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62a73aff7afffe2fba7c2e47e07d9134" name="a62a73aff7afffe2fba7c2e47e07d9134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a73aff7afffe2fba7c2e47e07d9134">&#9670;&#160;</a></span>Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Destroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>释放所有资源缓存（必须在 SDL_Quit 之前调用） </p>
 
 </div>
 </div>
@@ -648,35 +728,6 @@ Public 成员函数</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a38fdd8f7ea8ff98e4e10f911fb2a7304" name="a38fdd8f7ea8ff98e4e10f911fb2a7304"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38fdd8f7ea8ff98e4e10f911fb2a7304">&#9670;&#160;</a></span>UnloadFont()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UnloadFont </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fontSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

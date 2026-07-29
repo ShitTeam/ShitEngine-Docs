@@ -172,6 +172,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a7155169a884952f261026adcda51e928" id="r_a7155169a884952f261026adcda51e928"><td class="memItemLeft">static <a class="el" href="#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7155169a884952f261026adcda51e928">GetInstance</a> ()</td></tr>
 <tr class="memitem:ae596c367662c7f3b19b6626b89ffc08b" id="r_ae596c367662c7f3b19b6626b89ffc08b"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ae596c367662c7f3b19b6626b89ffc08b">Init</a> ()</td></tr>
 <tr class="memdesc:ae596c367662c7f3b19b6626b89ffc08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化渲染器  <br /></td></tr>
+<tr class="memitem:a62a73aff7afffe2fba7c2e47e07d9134" id="r_a62a73aff7afffe2fba7c2e47e07d9134"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a> ()</td></tr>
+<tr class="memdesc:a62a73aff7afffe2fba7c2e47e07d9134"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构渲染器（必须在 SDL_Quit 之前调用）  <br /></td></tr>
 <tr class="memitem:a00cf1a2e31eb12524052a36227c81c8d" id="r_a00cf1a2e31eb12524052a36227c81c8d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a00cf1a2e31eb12524052a36227c81c8d">ClearScreen</a> ()</td></tr>
 <tr class="memdesc:a00cf1a2e31eb12524052a36227c81c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">清屏（每帧开头调用）  <br /></td></tr>
 <tr class="memitem:abdc592736185addda2799dbabfee82f6" id="r_abdc592736185addda2799dbabfee82f6"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#abdc592736185addda2799dbabfee82f6">Present</a> ()</td></tr>
@@ -365,6 +367,33 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>surface → texture（SDL_CreateTextureFromSurface） </p>
+
+</div>
+</div>
+<a id="a62a73aff7afffe2fba7c2e47e07d9134" name="a62a73aff7afffe2fba7c2e47e07d9134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a73aff7afffe2fba7c2e47e07d9134">&#9670;&#160;</a></span>Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Destroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构渲染器（必须在 SDL_Quit 之前调用） </p>
 
 </div>
 </div>
