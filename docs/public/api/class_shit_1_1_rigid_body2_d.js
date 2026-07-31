@@ -28,5 +28,6 @@ var class_shit_1_1_rigid_body2_d =
     [ "setGravityScale", "class_shit_1_1_rigid_body2_d.html#a3ce110fee82e70844f1c5ecacf520f9f", null ],
     [ "setLinearDamping", "class_shit_1_1_rigid_body2_d.html#a5be82ed7c89df5559745fa63fa069ba1", null ],
     [ "setLinearVelocity", "class_shit_1_1_rigid_body2_d.html#a5a8515394193e66af4b64b065dfd72ec", null ],
+    [ "setTransform", "class_shit_1_1_rigid_body2_d.html#a3933c92420acf57e28ead30dd87d14b8", null ],
     [ "PhysicsSystem2D", "class_shit_1_1_rigid_body2_d.html#a9f71b50edf6a50133e776adef89f7dd0", null ]
 ];

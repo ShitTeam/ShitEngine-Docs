@@ -201,6 +201,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:afa28e595d125123c032f30be9fa710af" id="r_afa28e595d125123c032f30be9fa710af"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_u_i_button_1_1_color_block.html">ColorBlock</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afa28e595d125123c032f30be9fa710af">getColors</a> () const</td></tr>
 <tr class="memitem:ad54d68d07977d973c25f61af585b32c9" id="r_ad54d68d07977d973c25f61af585b32c9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad54d68d07977d973c25f61af585b32c9">setColors</a> (const <a class="el" href="struct_shit_1_1_u_i_button_1_1_color_block.html">ColorBlock</a> &amp;colors)</td></tr>
 <tr class="memitem:af598ca580f93cedcaeaa4933446123e2" id="r_af598ca580f93cedcaeaa4933446123e2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af598ca580f93cedcaeaa4933446123e2">setOnClick</a> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a0a345030f4496973cffb1ea2e9ffb4aa" id="r_a0a345030f4496973cffb1ea2e9ffb4aa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0a345030f4496973cffb1ea2e9ffb4aa">resetPressed</a> ()</td></tr>
+<tr class="memdesc:a0a345030f4496973cffb1ea2e9ffb4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">复位残留的按下状态（按钮在按下后离开 visible 未收到 onPointerUp 时使用），不触发 onClick  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
 <tr class="memitem:aa8115cc4430d4879d11ade1d62666ec1 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_aa8115cc4430d4879d11ade1d62666ec1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#aa8115cc4430d4879d11ade1d62666ec1">UIRendererComponent</a> ()</td></tr>
 <tr class="memitem:a00ae90e38d862640edc9e480efde5852 pub_methods_class_shit_1_1_u_i_renderer_component" id="r_a00ae90e38d862640edc9e480efde5852"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#a00ae90e38d862640edc9e480efde5852">~UIRendererComponent</a> () override=default</td></tr>
@@ -499,6 +501,25 @@ Protected 成员函数</h2></td></tr>
 <p>子类实现：在给定屏幕矩形内绘制自身（通过 <a class="el" href="class_shit_1_1_renderer.html" title="渲染器，封装 SDL3 绘制 API">Renderer</a> 静态 API 绘制） </p>
 
 <p>实现了 <a class="el" href="class_shit_1_1_u_i_renderer_component.html#a583ec28df81a630cd82b1d4e53158a51">UIRendererComponent</a>.</p>
+
+</div>
+</div>
+<a id="a0a345030f4496973cffb1ea2e9ffb4aa" name="a0a345030f4496973cffb1ea2e9ffb4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a345030f4496973cffb1ea2e9ffb4aa">&#9670;&#160;</a></span>resetPressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetPressed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>复位残留的按下状态（按钮在按下后离开 visible 未收到 onPointerUp 时使用），不触发 onClick </p>
 
 </div>
 </div>

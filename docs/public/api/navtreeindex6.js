@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da766b4a88cba7645629bac70fd01d8275":[1,0,0,63,88],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da77e9eee7c579eef5f3731ecf1053c02e":[1,0,0,63,109],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da786deffd1b8656ff4c64758a735c6ac2":[1,0,0,63,81],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da7d7902d5e2998e4fb2b8694a2de4ff65":[1,0,0,63,68],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da7e89a79bbb017bfcaff80ff820a15d8a":[1,0,0,63,31],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da7fa06ead699fcbd63132370ffe13335a":[1,0,0,63,110],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da7fc56270e7a70fa81a5935b72eacbe29":[1,0,0,63,1],

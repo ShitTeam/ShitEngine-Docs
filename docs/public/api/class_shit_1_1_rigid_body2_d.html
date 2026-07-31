@@ -200,6 +200,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aa0586e44431d50620112f6a020fd2c7b" id="r_aa0586e44431d50620112f6a020fd2c7b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa0586e44431d50620112f6a020fd2c7b">applyImpulse</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;impulse, bool wake=true)</td></tr>
 <tr class="memitem:a5a8515394193e66af4b64b065dfd72ec" id="r_a5a8515394193e66af4b64b065dfd72ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5a8515394193e66af4b64b065dfd72ec">setLinearVelocity</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;velocity)</td></tr>
 <tr class="memitem:a0247d583fec416ff2525a2c6b4d2f419" id="r_a0247d583fec416ff2525a2c6b4d2f419"><td class="memItemLeft"><a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0247d583fec416ff2525a2c6b4d2f419">getLinearVelocity</a> () const</td></tr>
+<tr class="memitem:a3933c92420acf57e28ead30dd87d14b8" id="r_a3933c92420acf57e28ead30dd87d14b8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3933c92420acf57e28ead30dd87d14b8">setTransform</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;position, float rotationDegrees)</td></tr>
+<tr class="memdesc:a3933c92420acf57e28ead30dd87d14b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">传送/设置刚体位置与旋转（角度制，度）。Dynamic/Kinematic 会同时唤醒。  <br /></td></tr>
 <tr class="memitem:aab0d57dd9c879d057ad83ae1977915a2" id="r_aab0d57dd9c879d057ad83ae1977915a2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aab0d57dd9c879d057ad83ae1977915a2">hasValidBody</a> () const</td></tr>
 <tr class="memdesc:aab0d57dd9c879d057ad83ae1977915a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理体是否已创建  <br /></td></tr>
 <tr class="memitem:a205c0c39138a49b1466c2c308a7f2ea3" id="r_a205c0c39138a49b1466c2c308a7f2ea3"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#a205c0c39138a49b1466c2c308a7f2ea3">getBodyIndex</a> () const</td></tr>
@@ -801,6 +803,30 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3933c92420acf57e28ead30dd87d14b8" name="a3933c92420acf57e28ead30dd87d14b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3933c92420acf57e28ead30dd87d14b8">&#9670;&#160;</a></span>setTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTransform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rotationDegrees</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>传送/设置刚体位置与旋转（角度制，度）。Dynamic/Kinematic 会同时唤醒。 </p>
+<dl class="section note"><dt>注解</dt><dd>与 <a class="el" href="class_shit_1_1_transform_component.html" title="变换组件，决定 GameObject 的位置 / 缩放 / 旋转">TransformComponent</a> 互相同步：此接口直接驱动 Box2D 刚体， 下一帧物理步进后会回写 Transform。若仅移动 Transform 而不调本接口， Kinematic/Dynamic 刚体会被每帧物理回写还原。 </dd></dl>
 
 </div>
 </div>

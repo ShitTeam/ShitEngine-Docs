@@ -176,8 +176,8 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:aca6ef77e85c02d02c759b73dc49f605f" id="r_aca6ef77e85c02d02c759b73dc49f605f"><td class="memItemLeft">static <a class="el" href="#a49ba567f7ee8f78445aed20b6bbf8e99">TextInputGate</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aca6ef77e85c02d02c759b73dc49f605f">GetInstance</a> ()</td></tr>
-<tr class="memitem:aef5d8fcadcba402ea54a6a655a400dae" id="r_aef5d8fcadcba402ea54a6a655a400dae"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aef5d8fcadcba402ea54a6a655a400dae">HandleEvent</a> (const SDL_Event &amp;event)</td></tr>
-<tr class="memdesc:aef5d8fcadcba402ea54a6a655a400dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取原生事件转发入口（由 <a class="el" href="class_shit_1_1_input.html" title="输入管理（单例）">Input</a> 系统在 PollEvent 后调用）  <br /></td></tr>
+<tr class="memitem:a8454b043aae083a4a2860c6e7be04e17" id="r_a8454b043aae083a4a2860c6e7be04e17"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a8454b043aae083a4a2860c6e7be04e17">HandleEvent</a> (const SDL_Event &amp;event)</td></tr>
+<tr class="memdesc:a8454b043aae083a4a2860c6e7be04e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取原生事件转发入口（由 <a class="el" href="class_shit_1_1_game.html" title="引擎主控类">Game</a> 在 PollEvent 后调用）  <br /></td></tr>
 <tr class="memitem:ae84c045c5df6ca08c2f48127d9f5ae1b" id="r_ae84c045c5df6ca08c2f48127d9f5ae1b"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ae84c045c5df6ca08c2f48127d9f5ae1b">HasFocus</a> ()</td></tr>
 <tr class="memdesc:ae84c045c5df6ca08c2f48127d9f5ae1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前是否有聚焦控件  <br /></td></tr>
 </table>
@@ -260,8 +260,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="aef5d8fcadcba402ea54a6a655a400dae" name="aef5d8fcadcba402ea54a6a655a400dae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef5d8fcadcba402ea54a6a655a400dae">&#9670;&#160;</a></span>HandleEvent()</h2>
+<a id="a8454b043aae083a4a2860c6e7be04e17" name="a8454b043aae083a4a2860c6e7be04e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8454b043aae083a4a2860c6e7be04e17">&#9670;&#160;</a></span>HandleEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,7 +270,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void HandleEvent </td>
+          <td class="memname">bool HandleEvent </td>
           <td>(</td>
           <td class="paramtype">const SDL_Event &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
           <td></td>
@@ -283,7 +283,8 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>获取原生事件转发入口（由 <a class="el" href="class_shit_1_1_input.html" title="输入管理（单例）">Input</a> 系统在 PollEvent 后调用） </p>
+<p>获取原生事件转发入口（由 <a class="el" href="class_shit_1_1_game.html" title="引擎主控类">Game</a> 在 PollEvent 后调用） </p>
+<dl class="section return"><dt>返回</dt><dd>true 表示事件已被聚焦控件消费（调用方应跳过 <a class="el" href="class_shit_1_1_input.html" title="输入管理（单例）">Input</a> 处理） </dd></dl>
 
 </div>
 </div>
