@@ -14,13 +14,11 @@ ShitEngine 是一个基于 **C++20** 的轻量级 2D 游戏引擎。它不依赖
 
 那些 "随手用 Unity 拖个 sprite" 的方案，在像素风下要么图糊了，要么位置抖了。ShitEngine 固定逻辑分辨率 + 最近邻缩放 + 每帧像素对齐，像素画怎么画出来的，游戏里就是什么样。
 
-**因为 CMake FetchContent 只需要一行。**
+**因为 ShitEngine SDK 下载即用。**
 
-```cmake
-FetchContent_MakeAvailable(ShitEngine)
-```
+从 GitHub Release 下载对应平台的预编译包解压即得 ShitEngine SDK（引擎库 + 头文件 + CMake 配置），`find_package` 一行接入，SDL3 等第三方依赖全部自带。不需要源码编译、不需要开会对齐环境。
 
-所有依赖自动下载，不用装任何 SDK。你的队友 pull 完代码，cmake 一跑，编译，跑。不需要开会对齐环境。
+> 🚧 **ShitEngine 编辑器（开发中）**：未来的开发方式是通过 SDK 附带的编辑器创建与管理项目，像 Unity/Godot 一样可视化开发，无需手写 CMake。
 
 ## 核心架构
 

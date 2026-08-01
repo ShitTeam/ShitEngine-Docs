@@ -23,28 +23,34 @@ MyGame/
 └── main.cpp
 ```
 
+### 安装 ShitEngine SDK
+
+从 [GitHub Release](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的预编译包并解压，即得 **ShitEngine SDK**：
+
+```
+ShitEngine/
+├── bin/          # ShitEngine.dll (Release) + ShitEngine-d.dll (Debug) + 第三方 DLL
+├── lib/          # 导入库 + ShitEngineConfig.cmake
+└── include/      # 头文件
+```
+
 ### CMakeLists.txt
 
-这一行魔法把 ShitEngine 和你需要的所有东西拉到你的项目里：
+通过 `find_package` 引用 SDK：
 
 ```cmake
 cmake_minimum_required(VERSION 3.20)
 project(MyGame)
 
-include(FetchContent)
-FetchContent_Declare(
-    ShitEngine
-    GIT_REPOSITORY https://github.com/ShitTeam/ShitEngine.git
-    GIT_TAG main
-    GIT_SHALLOW TRUE
-)
-FetchContent_MakeAvailable(ShitEngine)
+find_package(ShitEngine REQUIRED
+    PATHS /path/to/ShitEngine/lib/cmake
+    NO_DEFAULT_PATH)
 
 add_executable(MyGame main.cpp)
 target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
 ```
 
-SDL3、spdlog、glm、nlohmann_json……全自动下载。你什么都不用装。
+`ShitEngineConfig.cmake` 会按 `CMAKE_BUILD_TYPE` 自动选择 Debug（`-d` 后缀）或 Release 导入库。预编译包自带 SDL3、spdlog、glm 等第三方动态库，无需额外安装。
 
 ### main.cpp
 

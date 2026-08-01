@@ -11,10 +11,38 @@ lang: zh_CN
 
 - **C++20 编译器** — GCC 10+、Clang 11+、MSVC 2019+
 - **CMake 3.20+**
-
-就这些。SDL3、spdlog、glm 那些东西，CMake 自动帮你下载。
+- **ShitEngine SDK** — 见下方"获取 ShitEngine SDK"
 
 ## 一、搭项目骨架
+
+### 获取 ShitEngine SDK
+
+从 **GitHub Actions 产物**或 **GitHub Release** 下载对应平台的预编译包解压，即得 SDK。
+
+**GitHub Actions 产物** — 每个提交都会自动构建并上传引擎包。去 [Actions 页面](https://github.com/ShitTeam/ShitEngine/actions/workflows/build.yml) 点开最新一次的绿色运行，在页面底部找到 Artifacts：
+
+| 产物名 | 平台 | 编译器 | 格式 |
+|---|---|---|---|
+| `ShitEngine-windows-mingw` | Windows | MinGW | zip |
+| `ShitEngine-windows-msvc` | Windows | MSVC | zip |
+| `ShitEngine-linux` | Linux | GCC | tar.gz |
+| `ShitEngine-macos` | macOS | Clang | tar.gz |
+
+**GitHub Release** — 当引擎发布正式版本时，可以在 [Releases 页面](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的压缩包。目前还没正式发布第一个版本。<!-- 有 Release 后删掉这句 -->
+
+解压得到 SDK 结构：
+
+```
+ShitEngine/
+├── bin/          # ShitEngine.dll + 第三方 DLL
+├── lib/          # 导入库 + ShitEngineConfig.cmake
+└── include/      # 头文件
+```
+
+> **Linux 用户**：运行前需设置动态库路径：
+> ```bash
+> export LD_LIBRARY_PATH=/path/to/ShitEngine/lib:$LD_LIBRARY_PATH
+> ```
 
 新建一个文件夹，里面放两个文件：
 
@@ -26,52 +54,30 @@ MyGame/
 
 ### CMakeLists.txt
 
-```cmake
-cmake_minimum_required(VERSION 3.20)
-project(MyGame)
-
-include(FetchContent)
-FetchContent_Declare(
-    ShitEngine
-    GIT_REPOSITORY https://github.com/ShitTeam/ShitEngine.git
-    GIT_TAG main
-    GIT_SHALLOW TRUE
-)
-FetchContent_MakeAvailable(ShitEngine)
-
-add_executable(MyGame main.cpp)
-target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
-```
-
-### 其他下载方式
-
-除了上面从源码编译，还有两种方式拿到引擎 SDK：
-
-**GitHub Actions 产物** — 每个提交都会自动构建并上传引擎包。去 [Actions 页面](https://github.com/ShitTeam/ShitEngine/actions/workflows/build.yml) 点开最新一次的绿色运行，在页面底部找到 Artifacts：
-
-| 产物名 | 平台 | 编译器 | 格式 |
-|---|---|---|---|
-| `ShitEngine-windows-mingw` | Windows | MinGW | zip |
-| `ShitEngine-windows-msvc` | Windows | MSVC | zip |
-| `ShitEngine-linux` | Linux | GCC | tar.gz |
-| `ShitEngine-macos` | macOS | Clang | tar.gz |
-
-下载解压后用 `find_package` 引用，跳过本地编译：
+通过 `find_package` 引用 SDK：
 
 ```cmake
 cmake_minimum_required(VERSION 3.20)
 project(MyGame)
 
-# 假设 SDK 解压到 ShitEngineSDK/ 目录
 find_package(ShitEngine REQUIRED
-    PATHS ShitEngineSDK/lib/cmake/ShitEngine
+    PATHS /path/to/ShitEngine/lib/cmake
     NO_DEFAULT_PATH)
 
 add_executable(MyGame main.cpp)
 target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
 ```
 
-**GitHub Release** — 当引擎发布正式版本时，可以在 [Releases 页面](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的压缩包。用法同上，解压后 `find_package` 即可。目前还没正式发布第一个版本。<!-- 有 Release 后删掉这句 -->
+`ShitEngineConfig.cmake` 会按 `CMAKE_BUILD_TYPE` 自动选择 Debug（`-d` 后缀）或 Release 导入库，第三方动态库随包自带。
+
+### 从源码构建（可选）
+
+如果你克隆了 ShitEngine 源码（比如想贡献代码），可以直接用 `add_subdirectory` 引用源码：
+
+```cmake
+add_subdirectory("path/to/ShitEngine" "${CMAKE_BINARY_DIR}/ShitEngine_Build")
+target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
+```
 
 ### main.cpp
 
@@ -306,7 +312,7 @@ EventBus::Unsubscribe<ScoreEvent>(token);
 | 模块 | 去这里 |
 |---|---|
 | GameObject、组件生命周期、Behavior、Prefab | [游戏对象与组件](/guide/game-objects) |
-| 场景切换、场景栈、自定义 System | [场景管理](/guide/scene) |
+| 场景切换（LoadScene）、自定义 System | [场景管理](/guide/scene) |
 | 多相机分屏、渲染流程、UI 直接绘制 | [渲染与相机](/guide/rendering) |
 | 键盘鼠标三态检测、鼠标位置 | [输入系统](/guide/input) |
 | SpriteSheet、动画生命周期 | [逐帧动画](/guide/animation) |
