@@ -211,42 +211,30 @@ player->addComponent<Player>();
 
 ## Prefab — 预制体
 
-当你需要重复生成相同配置的游戏对象时，用 **Prefab** 定义模板：
+当你需要重复生成相同配置的游戏对象时，用 **Prefab** 定义模板。
 
-```cpp
-// 定义模板
-auto enemyPrefab = Shit::Prefab::Build([](Shit::GameObject* go) {
-    go->addComponent<Shit::TransformComponent>();
-    go->addComponent<Shit::SpriteRenderer>()->setTexturePath("enemy.png");
-});
-
-// 批量实例化
-auto* e1 = scene->instantiate(enemyPrefab, "enemy_1");
-auto* e2 = scene->instantiate(enemyPrefab, "enemy_2");
-auto* e3 = scene->instantiate(enemyPrefab, "enemy_3");
-```
-
-每次 `instantiate` 都执行同一套配置。
-
-### 数据驱动（v1.3+）
-
-Prefab 支持**反射克隆 + JSON 序列化**——从现有 GameObject 捕获组件字段，可保存/加载到文件（编辑器预制体管线的基础）：
+Prefab 是**数据驱动**的——通过反射捕获现有 GameObject 的组件字段，可序列化为 JSON，实例化时用反射工厂重建：
 
 ```cpp
 // ① 捕获：把场景中已配置好的对象存成预制体
-auto prefab = Shit::Prefab::Capture(heroGO);
+auto enemyPrefab = Shit::Prefab::Capture(enemyGO);
 
-// ② 序列化 / 反序列化（JSON）
-std::string jsonStr = prefab.toJson().dump();      // 可落盘
-auto prefab2 = Shit::Prefab::FromJson(nlohmann::json::parse(jsonStr));
+// ② 批量实例化：反射工厂重建组件，字段值保持一致
+auto* e1 = enemyPrefab.instantiate(scene, "enemy_1");
+auto* e2 = enemyPrefab.instantiate(scene, "enemy_2");
+auto* e3 = enemyPrefab.instantiate(scene, "enemy_3");
+```
 
-// ③ 实例化：反射工厂重建组件，字段值保持一致
-auto* clone = prefab.instantiate(scene, "hero_clone");
+序列化 / 反序列化（可落盘，编辑器保存/加载预制体）：
+
+```cpp
+std::string jsonStr = enemyPrefab.toJson().dump();      // 序列化
+auto prefab2 = Shit::Prefab::FromJson(nlohmann::json::parse(jsonStr));  // 反序列化
 ```
 
 - 捕获全部反射组件（跳过 `readOnly` 运行时状态与不可序列化类型）
 - `Vector2` / `Color` / 数值 / 字符串 / 枚举 均可序列化
-- `Prefab::Build(lambda)` 旧用法仍保留
+- 实例化后自动确保有 `TransformComponent`
 
 ---
 
