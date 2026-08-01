@@ -81,8 +81,30 @@ ShitEngine 内置了一套**编译期反射系统**，通过 libClang 解析源�
 | **AudioPlayer** | 分层音频：master × group × track |
 | **EventBus** | 事件缓冲区，统一时刻派发 |
 | **SceneManager** | 场景栈，推拉替换 |
+| **EngineContext** | 持有全部子系统实例的容器，支持多实例（编辑器预览/测试）|
 | **ReflectionSystem** | 编译期解析 AST，运行时查询类型信息 |
 | **PhysicsSystem2D** | Box2D 封装：刚体、碰撞形状、积分器 |
+
+### 🧰 EngineContext — 多实例引擎
+
+从 v1.3 起，引擎不再是"进程内只能有一个"。全部子系统（窗口、输入、渲染器、场景栈、事件总线……）被收进 `EngineContext` 容器，静态 API 转发到当前上下文：
+
+```cpp
+// 单实例（默认）—— 用法与之前完全一致
+Shit::Game::Init();
+Shit::Game::Run();
+Shit::Game::Destroy();
+
+// 多实例（编辑器进程内预览 / 单元测试）
+Shit::EngineContext preview;                 // 开一个独立的引擎实例
+Shit::EngineContext::setCurrent(&preview);
+Shit::Game::Init();                          // 初始化 preview 的子系统
+// ... 运行预览 ...
+Shit::Game::Destroy();
+Shit::EngineContext::setCurrent(&editorCtx); // 切回编辑器上下文
+```
+
+每个 `EngineContext` 拥有独立的窗口、输入状态、场景栈与资源缓存，互不干扰。`Log` 保持全局（日志天然进程级）。
 
 ## 版本历史
 
