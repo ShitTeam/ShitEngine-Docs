@@ -24,6 +24,8 @@ scene->init();
 
 `init()` 帮你注册了三个默认系统：`BehaviorSystem`（跑脚本）、`RenderSystem`（画游戏世界）、`UIRenderSystem`（画 UI）。你要有自己的系统，就在这里注册。
 
+> **💡 v1.3+**：`scene->init()` 现在是**可选**的。`SceneManager` 在 `PushScene`/`ReplaceScene` 时若检测到场景还没有任何系统，会自动调用 `init()`——忘记调也不会得到空场景。`init()` 本身幂等，手动调用 + 自动调用不会重复注册系统。自定义 `init()` 覆写仍需调用父类 `Shit::Scene::init()` 以获得默认系统。
+
 如果你想在场景初始化时做点自己的事，继承它就行：
 
 ```cpp
