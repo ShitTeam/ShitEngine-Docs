@@ -55,6 +55,8 @@ Shit::SceneManager::LoadScene(std::move(gameScene));
 
 `LoadScene` 同帧生效，会自动 `init()` 未初始化的场景。
 
+> **⚠️ update 期间的 LoadScene 延迟生效**：若在场景 update 的某帧内（如 `Behavior::onUpdate`、按钮回调里）调用 `LoadScene`，切换会**推迟到本帧 update 结束后**才执行——防止当前场景在更新中途自毁导致 use-after-free。行为上仍是"同帧完成"，只是不中断正在执行的更新循环。
+
 ### 暂停
 
 暂停不是场景操作——用全局暂停标志冻结游戏逻辑，UI 叠层照常响应：
