@@ -60,6 +60,7 @@ var namespace_shit =
     [ "UITextBox", "class_shit_1_1_u_i_text_box.html", "class_shit_1_1_u_i_text_box" ],
     [ "UITextInput", "class_shit_1_1_u_i_text_input.html", "class_shit_1_1_u_i_text_input" ],
     [ "UITransform", "class_shit_1_1_u_i_transform.html", "class_shit_1_1_u_i_transform" ],
+    [ "WeakComponentRef", "class_shit_1_1_weak_component_ref.html", "class_shit_1_1_weak_component_ref" ],
     [ "Window", "class_shit_1_1_window.html", "class_shit_1_1_window" ],
     [ "WindowConfig", "struct_shit_1_1_window_config.html", "struct_shit_1_1_window_config" ],
     [ "Json", "namespace_shit.html#af13a1979f9e8f62c101433fac6511cc6", null ],

@@ -15,6 +15,7 @@ var class_shit_1_1_game_object =
     [ "getParent", "class_shit_1_1_game_object.html#a5adb8c6bcab6353e781579c0c9240e03", null ],
     [ "getScene", "class_shit_1_1_game_object.html#a0c36c4965240371f43c896f8d6af7feb", null ],
     [ "getTag", "class_shit_1_1_game_object.html#af83d38d84c66cc8ea7a83659d941a323", null ],
+    [ "getWeakRef", "class_shit_1_1_game_object.html#aec9022828862661155e679aeacd5301b", null ],
     [ "hasComponent", "class_shit_1_1_game_object.html#abe100a1d418965113893d4aead521a7c", null ],
     [ "isNeedDestroy", "class_shit_1_1_game_object.html#af9c9255af4b284a0b456483acbfe1b0e", null ],
     [ "operator=", "class_shit_1_1_game_object.html#a4f541a7914dfb4850ce4d27f90e7dfa2", null ],

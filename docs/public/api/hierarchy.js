@@ -68,6 +68,7 @@ var hierarchy =
     [ "TypeInfo", "struct_shit_1_1_type_info.html", null ],
     [ "TypeInfoBuilder", "class_shit_1_1_type_info_builder.html", null ],
     [ "TypeRegistry", "class_shit_1_1_type_registry.html", null ],
+    [ "WeakComponentRef&lt; T &gt;", "class_shit_1_1_weak_component_ref.html", null ],
     [ "Window", "class_shit_1_1_window.html", null ],
     [ "WindowConfig", "struct_shit_1_1_window_config.html", null ]
 ];

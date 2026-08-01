@@ -192,6 +192,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a83fda332b3e926aae80bd38bb1766aad" id="r_a83fda332b3e926aae80bd38bb1766aad"><td class="memTemplParams" colspan="2">template&lt;typename Fn&gt; </td></tr>
 <tr class="memitem:a83fda332b3e926aae80bd38bb1766aad template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83fda332b3e926aae80bd38bb1766aad">forEachComponent</a> (Fn &amp;&amp;fn)</td></tr>
 <tr class="memdesc:a83fda332b3e926aae80bd38bb1766aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">只读遍历全部组件（供系统补扫等使用，避免暴露内部可变 map）  <br /></td></tr>
+<tr class="memitem:aec9022828862661155e679aeacd5301b" id="r_aec9022828862661155e679aeacd5301b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:aec9022828862661155e679aeacd5301b template"><td class="memItemLeft"><a class="el" href="class_shit_1_1_weak_component_ref.html">WeakComponentRef</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aec9022828862661155e679aeacd5301b">getWeakRef</a> ()</td></tr>
+<tr class="memdesc:aec9022828862661155e679aeacd5301b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建指向本对象上 T 组件的弱引用（组件被移除/对象销毁后自动失效）  <br /></td></tr>
 <tr class="memitem:a51ac371861e87dea45be6bb117cbcbcf" id="r_a51ac371861e87dea45be6bb117cbcbcf"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a51ac371861e87dea45be6bb117cbcbcf">addComponentInstance</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *component)</td></tr>
 <tr class="memdesc:a51ac371861e87dea45be6bb117cbcbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加组件  <br /></td></tr>
 <tr class="memitem:ac4cb35ac024fe4a08a4c23b4e24484e5" id="r_ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
@@ -621,6 +624,35 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec9022828862661155e679aeacd5301b" name="aec9022828862661155e679aeacd5301b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec9022828862661155e679aeacd5301b">&#9670;&#160;</a></span>getWeakRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_weak_component_ref.html">WeakComponentRef</a>&lt; T &gt; getWeakRef </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建指向本对象上 T 组件的弱引用（组件被移除/对象销毁后自动失效） </p>
 
 </div>
 </div>
