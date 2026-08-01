@@ -185,35 +185,38 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_scene_manager
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">   35</a></span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">ReplaceScene</a>(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene) { <a class="code hl_function" href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a>().replaceScene(std::move(scene)); } </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="class_shit_1_1_scene_manager.html">SceneManager</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_class" href="class_shit_1_1_scene_manager.html">~SceneManager</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">void</span> pushScene(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> popScene();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> clearScene();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> replaceScene(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">void</span> update();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">void</span> destroy();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">void</span> processPendingActions();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> processPushScene(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> processPopScene();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">void</span> processClearScene();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> processReplaceScene(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>* getCurrentScene() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">enum class</span> StackAction { None, Push, Pop, Clear, Replace };</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">struct </span>PendingAction {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            StackAction action;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            std::unique_ptr&lt;Scene&gt; scene;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        };</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        std::vector&lt;std::unique_ptr&lt;Scene&gt;&gt; m_sceneStack;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::vector&lt;PendingAction&gt; m_pendingActions;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    };</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_shit_1_1_scene_manager.html#accacedc6f06871ee6fdc08c2fcce841c">   38</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_shit_1_1_scene_manager.html#accacedc6f06871ee6fdc08c2fcce841c">EngineContext</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_function" href="class_shit_1_1_scene_manager.html#a56e74084b96a4960cbac4c377472e5ad">~SceneManager</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> pushScene(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> popScene();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> clearScene();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> replaceScene(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">void</span> update();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">void</span> destroy();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> processPendingActions();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> processPushScene(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">void</span> processPopScene();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> processClearScene();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">void</span> processReplaceScene(std::unique_ptr&lt;Scene&gt;&amp;&amp; scene);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>* getCurrentScene() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">enum class</span> StackAction { None, Push, Pop, Clear, Replace };</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">struct </span>PendingAction {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            StackAction action;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            std::unique_ptr&lt;Scene&gt; scene;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        };</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::vector&lt;std::unique_ptr&lt;Scene&gt;&gt; m_sceneStack;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        std::vector&lt;PendingAction&gt; m_pendingActions;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    };</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+</div>
 </div>
 </div>
 </div>
@@ -223,7 +226,6 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_scene_manager
 <div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
 <div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_html"><div class="ttname"><a href="class_shit_1_1_scene.html">Shit::Scene</a></div><div class="ttdoc">场景类</div><div class="ttdef"><b>定义</b> Scene.h:34</div></div>
-<div class="ttc" id="aclass_shit_1_1_scene_manager_html"><div class="ttname"><a href="class_shit_1_1_scene_manager.html">Shit::SceneManager</a></div><div class="ttdoc">场景管理器（单例）</div><div class="ttdef"><b>定义</b> SceneManager.h:19</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a04bbcf4e6db0801aeeda962157cc2673"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a04bbcf4e6db0801aeeda962157cc2673">Shit::SceneManager::operator=</a></div><div class="ttdeci">SceneManager &amp; operator=(const SceneManager &amp;)=delete</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a2eaa093e982c488a420d60ff3233902d"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a2eaa093e982c488a420d60ff3233902d">Shit::SceneManager::ReplaceScene</a></div><div class="ttdeci">static void ReplaceScene(std::unique_ptr&lt; Scene &gt; &amp;&amp;scene)</div><div class="ttdoc">替换栈顶场景</div><div class="ttdef"><b>定义</b> SceneManager.h:35</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a554d0f30ae93d2787435dca9a46c6c5d"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">Shit::SceneManager::Update</a></div><div class="ttdeci">static void Update()</div><div class="ttdoc">更新当前场景</div><div class="ttdef"><b>定义</b> SceneManager.h:30</div></div>
@@ -233,6 +235,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_scene_manager
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a6a428410da43a236f1ffc3dde15508d9"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a6a428410da43a236f1ffc3dde15508d9">Shit::SceneManager::PushScene</a></div><div class="ttdeci">static void PushScene(std::unique_ptr&lt; Scene &gt; &amp;&amp;scene)</div><div class="ttdoc">压入新场景（下个帧循环生效）</div><div class="ttdef"><b>定义</b> SceneManager.h:32</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a6a68462bb7a8de13b69c762bb0dc4439"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a6a68462bb7a8de13b69c762bb0dc4439">Shit::SceneManager::SceneManager</a></div><div class="ttdeci">SceneManager(SceneManager &amp;&amp;)=delete</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_a9fafde24f44fcc9f1adc352297541434"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#a9fafde24f44fcc9f1adc352297541434">Shit::SceneManager::ClearScene</a></div><div class="ttdeci">static void ClearScene()</div><div class="ttdoc">清空场景栈</div><div class="ttdef"><b>定义</b> SceneManager.h:34</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_manager_html_accacedc6f06871ee6fdc08c2fcce841c"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#accacedc6f06871ee6fdc08c2fcce841c">Shit::SceneManager::EngineContext</a></div><div class="ttdeci">friend class EngineContext</div><div class="ttdef"><b>定义</b> SceneManager.h:38</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_aee88db8ba5649a8b071cdd7b3742b99c"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#aee88db8ba5649a8b071cdd7b3742b99c">Shit::SceneManager::GetInstance</a></div><div class="ttdeci">static SceneManager &amp; GetInstance()</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_manager_html_af01af0eef584ecb24ded0e75bc3f4c24"><div class="ttname"><a href="class_shit_1_1_scene_manager.html#af01af0eef584ecb24ded0e75bc3f4c24">Shit::SceneManager::operator=</a></div><div class="ttdeci">SceneManager &amp; operator=(SceneManager &amp;&amp;)=delete</div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:10</div></div>

@@ -1,0 +1,625 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: EngineContext类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_engine_context.html','','class_shit_1_1_engine_context-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EngineContext类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>引擎上下文：持有全部子系统实例  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_engine_context_8h_source.html">EngineContext.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5a20d4ed32047f5296df0bd839ed93ec" id="r_a5a20d4ed32047f5296df0bd839ed93ec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> ()=default</td></tr>
+<tr class="memitem:aff2b895bbd5cc518f6f897160d6300a5" id="r_aff2b895bbd5cc518f6f897160d6300a5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aff2b895bbd5cc518f6f897160d6300a5">~EngineContext</a> ()=default</td></tr>
+<tr class="memitem:ad3fae41481dc707c105524e25d6f9454" id="r_ad3fae41481dc707c105524e25d6f9454"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad3fae41481dc707c105524e25d6f9454">EngineContext</a> (const EngineContext &amp;)=delete</td></tr>
+<tr class="memitem:a9a6edaf5cb8e3c432ca7d1a53cdc3e5f" id="r_a9a6edaf5cb8e3c432ca7d1a53cdc3e5f"><td class="memItemLeft"><a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9a6edaf5cb8e3c432ca7d1a53cdc3e5f">operator=</a> (const <a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp;)=delete</td></tr>
+<tr class="memitem:a2d982d00b22a5212e4170b672e02bd4d" id="r_a2d982d00b22a5212e4170b672e02bd4d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2d982d00b22a5212e4170b672e02bd4d">EngineContext</a> (EngineContext &amp;&amp;)=delete</td></tr>
+<tr class="memitem:aa45399ea3ca8ecb76a680009b5ea53eb" id="r_aa45399ea3ca8ecb76a680009b5ea53eb"><td class="memItemLeft"><a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa45399ea3ca8ecb76a680009b5ea53eb">operator=</a> (<a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp;&amp;)=delete</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:af0e1bdbd649066b432fcbb19a041a923" id="r_af0e1bdbd649066b432fcbb19a041a923"><td class="memItemLeft">static <a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af0e1bdbd649066b432fcbb19a041a923">current</a> ()</td></tr>
+<tr class="memdesc:af0e1bdbd649066b432fcbb19a041a923"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前活动上下文；未设置时懒创建一个进程默认上下文（与旧单例行为一致）  <br /></td></tr>
+<tr class="memitem:a76e2d0e9fb1e3bcd97e9c5bd4784a4b3" id="r_a76e2d0e9fb1e3bcd97e9c5bd4784a4b3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a76e2d0e9fb1e3bcd97e9c5bd4784a4b3">setCurrent</a> (<a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> *ctx)</td></tr>
+<tr class="memdesc:a76e2d0e9fb1e3bcd97e9c5bd4784a4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">切换到指定上下文（多实例/编辑器预览用）  <br /></td></tr>
+<tr class="memitem:a1be9f9a05418373676bf80f348399420" id="r_a1be9f9a05418373676bf80f348399420"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1be9f9a05418373676bf80f348399420">resetCurrent</a> ()</td></tr>
+<tr class="memdesc:a1be9f9a05418373676bf80f348399420"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复进程默认上下文  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ac6a5ed6191fcf3a5bf0445921feb4f48" id="r_ac6a5ed6191fcf3a5bf0445921feb4f48"><td class="memItemLeft"><a class="el" href="class_shit_1_1_game.html">Game</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac6a5ed6191fcf3a5bf0445921feb4f48">game</a></td></tr>
+<tr class="memitem:a4a8dd3a2de125b72d4fe6251a0a271b5" id="r_a4a8dd3a2de125b72d4fe6251a0a271b5"><td class="memItemLeft"><a class="el" href="class_shit_1_1_config.html">Config</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4a8dd3a2de125b72d4fe6251a0a271b5">config</a></td></tr>
+<tr class="memitem:ac5b0b3c19d476a314bb68af9bc4a0ee0" id="r_ac5b0b3c19d476a314bb68af9bc4a0ee0"><td class="memItemLeft"><a class="el" href="class_shit_1_1_window.html">Window</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac5b0b3c19d476a314bb68af9bc4a0ee0">window</a></td></tr>
+<tr class="memitem:ada213df0f23833509981179817b7beab" id="r_ada213df0f23833509981179817b7beab"><td class="memItemLeft"><a class="el" href="class_shit_1_1_time.html">Time</a>&#160;</td><td class="memItemRight"><a class="el" href="#ada213df0f23833509981179817b7beab">time</a></td></tr>
+<tr class="memitem:af66f2c76efa2d73abacb2576c04beea7" id="r_af66f2c76efa2d73abacb2576c04beea7"><td class="memItemLeft"><a class="el" href="class_shit_1_1_text_input_gate.html">TextInputGate</a>&#160;</td><td class="memItemRight"><a class="el" href="#af66f2c76efa2d73abacb2576c04beea7">textInputGate</a></td></tr>
+<tr class="memitem:ad4db59ccea8946af2bb70f8269e99eeb" id="r_ad4db59ccea8946af2bb70f8269e99eeb"><td class="memItemLeft"><a class="el" href="class_shit_1_1_input.html">Input</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad4db59ccea8946af2bb70f8269e99eeb">input</a></td></tr>
+<tr class="memitem:a96120bdea31dc797b1f3acbb8cf5a322" id="r_a96120bdea31dc797b1f3acbb8cf5a322"><td class="memItemLeft"><a class="el" href="class_shit_1_1_renderer.html">Renderer</a>&#160;</td><td class="memItemRight"><a class="el" href="#a96120bdea31dc797b1f3acbb8cf5a322">renderer</a></td></tr>
+<tr class="memitem:adf52e6fb40da58a4226e1daa543fba12" id="r_adf52e6fb40da58a4226e1daa543fba12"><td class="memItemLeft"><a class="el" href="class_shit_1_1_resource_manager.html">ResourceManager</a>&#160;</td><td class="memItemRight"><a class="el" href="#adf52e6fb40da58a4226e1daa543fba12">resources</a></td></tr>
+<tr class="memitem:a60d32a659fa4b833c92ab1e9cb2d4009" id="r_a60d32a659fa4b833c92ab1e9cb2d4009"><td class="memItemLeft"><a class="el" href="class_shit_1_1_audio_player.html">AudioPlayer</a>&#160;</td><td class="memItemRight"><a class="el" href="#a60d32a659fa4b833c92ab1e9cb2d4009">audio</a></td></tr>
+<tr class="memitem:a62fbe3fc750d9394c8188c85aaf3717c" id="r_a62fbe3fc750d9394c8188c85aaf3717c"><td class="memItemLeft"><a class="el" href="class_shit_1_1_event_bus.html">EventBus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a62fbe3fc750d9394c8188c85aaf3717c">eventBus</a></td></tr>
+<tr class="memitem:a9b68e0a0516c26a87a9c42a12e248d01" id="r_a9b68e0a0516c26a87a9c42a12e248d01"><td class="memItemLeft"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9b68e0a0516c26a87a9c42a12e248d01">sceneManager</a></td></tr>
+<tr class="memitem:a9417290b37c4a38af77a107c65a702a0" id="r_a9417290b37c4a38af77a107c65a702a0"><td class="memItemLeft"><a class="el" href="class_shit_1_1_type_registry.html">TypeRegistry</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9417290b37c4a38af77a107c65a702a0">typeRegistry</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>引擎上下文：持有全部子系统实例 </p>
+<p>替代原先 12 个进程级单例的"引擎只能有一个实例"限制。一个进程可创建多个 EngineContext（编辑器进程内预览、多实例对比、单元测试），每个拥有独立的 Window/Input/Renderer/SceneManager 等完整子系统。静态门面（如 Shit::Input::IsKeyDown）转发到当前上下文（EngineContext::current()）。</p>
+<p>用法： // 单实例（默认，行为与旧单例一致）——无需手动创建，第一次 <a class="el" href="#af0e1bdbd649066b432fcbb19a041a923" title="当前活动上下文；未设置时懒创建一个进程默认上下文（与旧单例行为一致）">current()</a> 时懒创建 <a class="el" href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::Game::Init()</a>; <a class="el" href="class_shit_1_1_game.html#abcf24ae9fc270d7a9e1664d94ba02900">Shit::Game::Run()</a>; <a class="el" href="class_shit_1_1_game.html#a62a73aff7afffe2fba7c2e47e07d9134" title="反初始化，按依赖逆序清理子系统">Shit::Game::Destroy()</a>;</p>
+<p>// 多实例（编辑器预览） <a class="el" href="class_shit_1_1_engine_context.html" title="引擎上下文：持有全部子系统实例">Shit::EngineContext</a> preview; Shit::EngineContext::setCurrent(&amp;preview); <a class="el" href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::Game::Init()</a>; // 初始化 preview 的子系统 // ... 运行 ... <a class="el" href="class_shit_1_1_game.html#a62a73aff7afffe2fba7c2e47e07d9134" title="反初始化，按依赖逆序清理子系统">Shit::Game::Destroy()</a>; Shit::EngineContext::setCurrent(&amp;editorCtx); // 切回编辑器上下文 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a5a20d4ed32047f5296df0bd839ed93ec" name="a5a20d4ed32047f5296df0bd839ed93ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a20d4ed32047f5296df0bd839ed93ec">&#9670;&#160;</a></span>EngineContext() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EngineContext </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff2b895bbd5cc518f6f897160d6300a5" name="aff2b895bbd5cc518f6f897160d6300a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff2b895bbd5cc518f6f897160d6300a5">&#9670;&#160;</a></span>~EngineContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3fae41481dc707c105524e25d6f9454" name="ad3fae41481dc707c105524e25d6f9454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fae41481dc707c105524e25d6f9454">&#9670;&#160;</a></span>EngineContext() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EngineContext </td>
+          <td>(</td>
+          <td class="paramtype">const EngineContext &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d982d00b22a5212e4170b672e02bd4d" name="a2d982d00b22a5212e4170b672e02bd4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d982d00b22a5212e4170b672e02bd4d">&#9670;&#160;</a></span>EngineContext() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EngineContext </td>
+          <td>(</td>
+          <td class="paramtype">EngineContext &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="af0e1bdbd649066b432fcbb19a041a923" name="af0e1bdbd649066b432fcbb19a041a923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e1bdbd649066b432fcbb19a041a923">&#9670;&#160;</a></span>current()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp; current </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前活动上下文；未设置时懒创建一个进程默认上下文（与旧单例行为一致） </p>
+
+</div>
+</div>
+<a id="a9a6edaf5cb8e3c432ca7d1a53cdc3e5f" name="a9a6edaf5cb8e3c432ca7d1a53cdc3e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6edaf5cb8e3c432ca7d1a53cdc3e5f">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa45399ea3ca8ecb76a680009b5ea53eb" name="aa45399ea3ca8ecb76a680009b5ea53eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45399ea3ca8ecb76a680009b5ea53eb">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1be9f9a05418373676bf80f348399420" name="a1be9f9a05418373676bf80f348399420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be9f9a05418373676bf80f348399420">&#9670;&#160;</a></span>resetCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetCurrent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>恢复进程默认上下文 </p>
+
+</div>
+</div>
+<a id="a76e2d0e9fb1e3bcd97e9c5bd4784a4b3" name="a76e2d0e9fb1e3bcd97e9c5bd4784a4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e2d0e9fb1e3bcd97e9c5bd4784a4b3">&#9670;&#160;</a></span>setCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCurrent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5a20d4ed32047f5296df0bd839ed93ec">EngineContext</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>切换到指定上下文（多实例/编辑器预览用） </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a60d32a659fa4b833c92ab1e9cb2d4009" name="a60d32a659fa4b833c92ab1e9cb2d4009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d32a659fa4b833c92ab1e9cb2d4009">&#9670;&#160;</a></span>audio</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_audio_player.html">AudioPlayer</a> audio</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a8dd3a2de125b72d4fe6251a0a271b5" name="a4a8dd3a2de125b72d4fe6251a0a271b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8dd3a2de125b72d4fe6251a0a271b5">&#9670;&#160;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_config.html">Config</a> config</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62fbe3fc750d9394c8188c85aaf3717c" name="a62fbe3fc750d9394c8188c85aaf3717c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62fbe3fc750d9394c8188c85aaf3717c">&#9670;&#160;</a></span>eventBus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_event_bus.html">EventBus</a> eventBus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6a5ed6191fcf3a5bf0445921feb4f48" name="ac6a5ed6191fcf3a5bf0445921feb4f48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a5ed6191fcf3a5bf0445921feb4f48">&#9670;&#160;</a></span>game</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_game.html">Game</a> game</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4db59ccea8946af2bb70f8269e99eeb" name="ad4db59ccea8946af2bb70f8269e99eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4db59ccea8946af2bb70f8269e99eeb">&#9670;&#160;</a></span>input</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_input.html">Input</a> input</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96120bdea31dc797b1f3acbb8cf5a322" name="a96120bdea31dc797b1f3acbb8cf5a322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96120bdea31dc797b1f3acbb8cf5a322">&#9670;&#160;</a></span>renderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_renderer.html">Renderer</a> renderer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf52e6fb40da58a4226e1daa543fba12" name="adf52e6fb40da58a4226e1daa543fba12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf52e6fb40da58a4226e1daa543fba12">&#9670;&#160;</a></span>resources</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_resource_manager.html">ResourceManager</a> resources</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b68e0a0516c26a87a9c42a12e248d01" name="a9b68e0a0516c26a87a9c42a12e248d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b68e0a0516c26a87a9c42a12e248d01">&#9670;&#160;</a></span>sceneManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_scene_manager.html">SceneManager</a> sceneManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af66f2c76efa2d73abacb2576c04beea7" name="af66f2c76efa2d73abacb2576c04beea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66f2c76efa2d73abacb2576c04beea7">&#9670;&#160;</a></span>textInputGate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_text_input_gate.html">TextInputGate</a> textInputGate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada213df0f23833509981179817b7beab" name="ada213df0f23833509981179817b7beab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada213df0f23833509981179817b7beab">&#9670;&#160;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_time.html">Time</a> time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9417290b37c4a38af77a107c65a702a0" name="a9417290b37c4a38af77a107c65a702a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9417290b37c4a38af77a107c65a702a0">&#9670;&#160;</a></span>typeRegistry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_type_registry.html">TypeRegistry</a> typeRegistry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5b0b3c19d476a314bb68af9bc4a0ee0" name="ac5b0b3c19d476a314bb68af9bc4a0ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b0b3c19d476a314bb68af9bc4a0ee0">&#9670;&#160;</a></span>window</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_window.html">Window</a> window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Core/<a class="el" href="_engine_context_8h_source.html">EngineContext.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_engine_context.html">EngineContext</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

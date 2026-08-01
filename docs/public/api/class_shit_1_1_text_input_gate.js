@@ -5,5 +5,6 @@ var class_shit_1_1_text_input_gate =
     [ "operator=", "class_shit_1_1_text_input_gate.html#ac16a75b43ed7ac98bffa76b0d2fa4af1", null ],
     [ "releaseFocus", "class_shit_1_1_text_input_gate.html#ad18c098ea6599af73a194bc0b17f3489", null ],
     [ "requestFocus", "class_shit_1_1_text_input_gate.html#a338aeab3e192f99db4461e1806765aa0", null ],
-    [ "updateCursorRect", "class_shit_1_1_text_input_gate.html#a207f5dfa313b0628e65bb524f77de953", null ]
+    [ "updateCursorRect", "class_shit_1_1_text_input_gate.html#a207f5dfa313b0628e65bb524f77de953", null ],
+    [ "EngineContext", "class_shit_1_1_text_input_gate.html#accacedc6f06871ee6fdc08c2fcce841c", null ]
 ];

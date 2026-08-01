@@ -189,9 +189,13 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a03eb988617fc41944c0de1bbf62a8abf" id="r_a03eb988617fc41944c0de1bbf62a8abf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a03eb988617fc41944c0de1bbf62a8abf">setNeedDestroy</a> (bool needDestroy)</td></tr>
 <tr class="memitem:a8ec3a8d4557c78eebb2cafef428070c3" id="r_a8ec3a8d4557c78eebb2cafef428070c3"><td class="memItemLeft">std::unordered_map&lt; std::type_index, std::unique_ptr&lt; <a class="el" href="class_shit_1_1_component.html">Component</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8ec3a8d4557c78eebb2cafef428070c3">getComponents</a> ()</td></tr>
 <tr class="memdesc:a8ec3a8d4557c78eebb2cafef428070c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取全部组件（按 type_index 索引）  <br /></td></tr>
+<tr class="memitem:a83fda332b3e926aae80bd38bb1766aad" id="r_a83fda332b3e926aae80bd38bb1766aad"><td class="memTemplParams" colspan="2">template&lt;typename Fn&gt; </td></tr>
+<tr class="memitem:a83fda332b3e926aae80bd38bb1766aad template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83fda332b3e926aae80bd38bb1766aad">forEachComponent</a> (Fn &amp;&amp;fn)</td></tr>
+<tr class="memdesc:a83fda332b3e926aae80bd38bb1766aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">只读遍历全部组件（供系统补扫等使用，避免暴露内部可变 map）  <br /></td></tr>
+<tr class="memitem:a51ac371861e87dea45be6bb117cbcbcf" id="r_a51ac371861e87dea45be6bb117cbcbcf"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a51ac371861e87dea45be6bb117cbcbcf">addComponentInstance</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *component)</td></tr>
+<tr class="memdesc:a51ac371861e87dea45be6bb117cbcbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加组件  <br /></td></tr>
 <tr class="memitem:ac4cb35ac024fe4a08a4c23b4e24484e5" id="r_ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
 <tr class="memitem:ac4cb35ac024fe4a08a4c23b4e24484e5 template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#ac4cb35ac024fe4a08a4c23b4e24484e5">addComponent</a> (Args &amp;&amp;... args)</td></tr>
-<tr class="memdesc:ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加组件  <br /></td></tr>
 <tr class="memitem:af3fc709644a6ee3ffe6496d8fe2fe521" id="r_af3fc709644a6ee3ffe6496d8fe2fe521"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:af3fc709644a6ee3ffe6496d8fe2fe521 template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#af3fc709644a6ee3ffe6496d8fe2fe521">getComponent</a> ()</td></tr>
 <tr class="memdesc:af3fc709644a6ee3ffe6496d8fe2fe521"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取组件  <br /></td></tr>
@@ -338,6 +342,23 @@ template&lt;typename T, typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a51ac371861e87dea45be6bb117cbcbcf" name="a51ac371861e87dea45be6bb117cbcbcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ac371861e87dea45be6bb117cbcbcf">&#9670;&#160;</a></span>addComponentInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_component.html">Component</a> * addComponentInstance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_component.html">Component</a> *</td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>添加组件 </p>
 <dl class="tparams"><dt>模板参数</dt><dd>
   <table class="tparams">
@@ -352,7 +373,14 @@ template&lt;typename T, typename... Args&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>组件指针（若已存在则返回已有的） </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>组件指针（若已存在则返回已有的）</dd></dl>
+<p>动态添加组件实例（Prefab 实例化等反射场景用，所有权转移给 GameObject） </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>已通过反射工厂创建的组件实例 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加后的组件指针（若已存在同类型，则丢弃传入实例并返回已有的） </dd></dl>
 
 </div>
 </div>
@@ -372,6 +400,35 @@ template&lt;typename T, typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>标记为待销毁（帧末由 <a class="el" href="class_shit_1_1_scene.html" title="场景类">Scene</a> 统一清理）；级联标记所有子物体 </p>
+
+</div>
+</div>
+<a id="a83fda332b3e926aae80bd38bb1766aad" name="a83fda332b3e926aae80bd38bb1766aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fda332b3e926aae80bd38bb1766aad">&#9670;&#160;</a></span>forEachComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fn&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void forEachComponent </td>
+          <td>(</td>
+          <td class="paramtype">Fn &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>只读遍历全部组件（供系统补扫等使用，避免暴露内部可变 map） </p>
 
 </div>
 </div>

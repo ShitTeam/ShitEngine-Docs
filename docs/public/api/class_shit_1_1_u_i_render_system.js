@@ -4,6 +4,8 @@ var class_shit_1_1_u_i_render_system =
     [ "~UIRenderSystem", "class_shit_1_1_u_i_render_system.html#a1407caffc6620c32273d150dd0f4d4fa", null ],
     [ "destroy", "class_shit_1_1_u_i_render_system.html#ae1cf30cae681d95a94934492ae7ea627", null ],
     [ "markSortDirty", "class_shit_1_1_u_i_render_system.html#acced817981e41bab560b75cd40612c68", null ],
+    [ "onComponentAttached", "class_shit_1_1_u_i_render_system.html#a783a7e369bc1d8c5dc998d08e3e956c1", null ],
+    [ "onComponentDetached", "class_shit_1_1_u_i_render_system.html#a7d186d8169496a0f410a29378f23942b", null ],
     [ "registerUIRenderer", "class_shit_1_1_u_i_render_system.html#abfd8a6e39a45febe5d000d51477c96b0", null ],
     [ "unregisterUIRenderer", "class_shit_1_1_u_i_render_system.html#a61982b0ee0dc5d77ca209acbfaa59b85", null ],
     [ "update", "class_shit_1_1_u_i_render_system.html#a44137bb65de2396875934e48a6ee5099", null ]

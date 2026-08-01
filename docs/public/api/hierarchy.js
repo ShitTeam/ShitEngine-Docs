@@ -33,7 +33,9 @@ var hierarchy =
       ] ],
       [ "UITransform", "class_shit_1_1_u_i_transform.html", null ]
     ] ],
+    [ "Prefab::ComponentData", "struct_shit_1_1_prefab_1_1_component_data.html", null ],
     [ "Config", "class_shit_1_1_config.html", null ],
+    [ "EngineContext", "class_shit_1_1_engine_context.html", null ],
     [ "EnumValue", "struct_shit_1_1_enum_value.html", null ],
     [ "Event", "struct_shit_1_1_event.html", null ],
     [ "EventBus", "class_shit_1_1_event_bus.html", null ],

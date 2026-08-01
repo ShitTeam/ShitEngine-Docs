@@ -182,6 +182,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a99b02345a8a15d3c5ea2844a2253f510"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧更新（纯虚）  <br /></td></tr>
 <tr class="memitem:af79997318d96497d77015571261ec88b" id="r_af79997318d96497d77015571261ec88b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af79997318d96497d77015571261ec88b">destroy</a> ()=0</td></tr>
 <tr class="memdesc:af79997318d96497d77015571261ec88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁（纯虚）  <br /></td></tr>
+<tr class="memitem:a625597d2a7c656f37a74e438810d9f81" id="r_a625597d2a7c656f37a74e438810d9f81"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a625597d2a7c656f37a74e438810d9f81">onComponentAttached</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *component)</td></tr>
+<tr class="memdesc:a625597d2a7c656f37a74e438810d9f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件挂载时调用。返回 true 表示本系统认领并处理了该组件（组件据此确定已注册）。  <br /></td></tr>
+<tr class="memitem:a0c306ca92cdab985597e091fa3f804f9" id="r_a0c306ca92cdab985597e091fa3f804f9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0c306ca92cdab985597e091fa3f804f9">onComponentDetached</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *component)</td></tr>
+<tr class="memdesc:a0c306ca92cdab985597e091fa3f804f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件卸下时调用。  <br /></td></tr>
 <tr class="memitem:a0c36c4965240371f43c896f8d6af7feb" id="r_a0c36c4965240371f43c896f8d6af7feb"><td class="memItemLeft"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0c36c4965240371f43c896f8d6af7feb">getScene</a> () const</td></tr>
 <tr class="memitem:a36f2aa21e8b3898775462d2a378d2e0f" id="r_a36f2aa21e8b3898775462d2a378d2e0f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a36f2aa21e8b3898775462d2a378d2e0f">setScene</a> (<a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene)</td></tr>
 <tr class="memitem:ad65045bcc70661e1e745edbb1da0377b" id="r_ad65045bcc70661e1e745edbb1da0377b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad65045bcc70661e1e745edbb1da0377b">getPriority</a> () const</td></tr>
@@ -346,6 +350,64 @@ Protected 属性</h2></td></tr>
 <p>初始化（可覆写） </p>
 
 <p>被 <a class="el" href="class_shit_1_1_physics_system2_d.html#ad72eef1561c7a53b19b048397d4ef570">PhysicsSystem2D</a> 重载.</p>
+
+</div>
+</div>
+<a id="a625597d2a7c656f37a74e438810d9f81" name="a625597d2a7c656f37a74e438810d9f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a625597d2a7c656f37a74e438810d9f81">&#9670;&#160;</a></span>onComponentAttached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool onComponentAttached </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_component.html">Component</a> *</td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>组件挂载时调用。返回 true 表示本系统认领并处理了该组件（组件据此确定已注册）。 </p>
+
+<p>被 <a class="el" href="class_shit_1_1_behavior_system.html#a783a7e369bc1d8c5dc998d08e3e956c1">BehaviorSystem</a>, <a class="el" href="class_shit_1_1_physics_system2_d.html#a783a7e369bc1d8c5dc998d08e3e956c1">PhysicsSystem2D</a>, <a class="el" href="class_shit_1_1_render_system.html#a783a7e369bc1d8c5dc998d08e3e956c1">RenderSystem</a> , 以及 <a class="el" href="class_shit_1_1_u_i_render_system.html#a783a7e369bc1d8c5dc998d08e3e956c1">UIRenderSystem</a> 重载.</p>
+
+</div>
+</div>
+<a id="a0c306ca92cdab985597e091fa3f804f9" name="a0c306ca92cdab985597e091fa3f804f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c306ca92cdab985597e091fa3f804f9">&#9670;&#160;</a></span>onComponentDetached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onComponentDetached </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_component.html">Component</a> *</td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>组件卸下时调用。 </p>
+
+<p>被 <a class="el" href="class_shit_1_1_behavior_system.html#a7d186d8169496a0f410a29378f23942b">BehaviorSystem</a>, <a class="el" href="class_shit_1_1_physics_system2_d.html#a7d186d8169496a0f410a29378f23942b">PhysicsSystem2D</a>, <a class="el" href="class_shit_1_1_render_system.html#a7d186d8169496a0f410a29378f23942b">RenderSystem</a> , 以及 <a class="el" href="class_shit_1_1_u_i_render_system.html#a7d186d8169496a0f410a29378f23942b">UIRenderSystem</a> 重载.</p>
 
 </div>
 </div>

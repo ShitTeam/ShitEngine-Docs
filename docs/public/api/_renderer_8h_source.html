@@ -210,24 +210,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_renderer_8h_s
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#abf1929c1d6d2ec95c3aeafebb70b4ccd">   58</a></span>        <span class="keyword">static</span> SDL_Texture* <a class="code hl_function" href="class_shit_1_1_renderer.html#abf1929c1d6d2ec95c3aeafebb70b4ccd">CreateTextureFromSurface</a>(SDL_Surface* surface); </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">~Renderer</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">bool</span> init();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">void</span> clearScreen();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">void</span> present();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">struct </span>SDLRendererDeleter {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordtype">void</span> operator()(SDL_Renderer* renderer)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">if</span> (renderer) SDL_DestroyRenderer(renderer);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        };</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::unique_ptr&lt;SDL_Renderer, SDLRendererDeleter&gt; m_renderer;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">int</span> m_logicalWidth = 1280;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordtype">int</span> m_logicalHeight = 720;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    };</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_shit_1_1_renderer.html#accacedc6f06871ee6fdc08c2fcce841c">   61</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_shit_1_1_renderer.html#accacedc6f06871ee6fdc08c2fcce841c">EngineContext</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">Renderer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_function" href="class_shit_1_1_renderer.html#a7f8773f951a66de0e9e63c55f9b4611b">~Renderer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">bool</span> init();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">void</span> clearScreen();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span> present();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">struct </span>SDLRendererDeleter {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">void</span> operator()(SDL_Renderer* renderer)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">if</span> (renderer) SDL_DestroyRenderer(renderer);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        };</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        std::unique_ptr&lt;SDL_Renderer, SDLRendererDeleter&gt; m_renderer;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordtype">int</span> m_logicalWidth = 1280;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordtype">int</span> m_logicalHeight = 720;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    };</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
 </div>
 </div>
 </div>
@@ -260,6 +261,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_renderer_8h_s
 <div class="ttc" id="aclass_shit_1_1_renderer_html_ab41bacdc8fc4a5f995d01cc99c62c0ab"><div class="ttname"><a href="class_shit_1_1_renderer.html#ab41bacdc8fc4a5f995d01cc99c62c0ab">Shit::Renderer::GetLogicalWidth</a></div><div class="ttdeci">static int GetLogicalWidth()</div><div class="ttdoc">逻辑分辨率宽度</div><div class="ttdef"><b>定义</b> Renderer.h:36</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_abdc592736185addda2799dbabfee82f6"><div class="ttname"><a href="class_shit_1_1_renderer.html#abdc592736185addda2799dbabfee82f6">Shit::Renderer::Present</a></div><div class="ttdeci">static void Present()</div><div class="ttdoc">交换缓冲区（每帧末尾调用）</div><div class="ttdef"><b>定义</b> Renderer.h:33</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_abf1929c1d6d2ec95c3aeafebb70b4ccd"><div class="ttname"><a href="class_shit_1_1_renderer.html#abf1929c1d6d2ec95c3aeafebb70b4ccd">Shit::Renderer::CreateTextureFromSurface</a></div><div class="ttdeci">static SDL_Texture * CreateTextureFromSurface(SDL_Surface *surface)</div><div class="ttdoc">surface → texture（SDL_CreateTextureFromSurface）</div></div>
+<div class="ttc" id="aclass_shit_1_1_renderer_html_accacedc6f06871ee6fdc08c2fcce841c"><div class="ttname"><a href="class_shit_1_1_renderer.html#accacedc6f06871ee6fdc08c2fcce841c">Shit::Renderer::EngineContext</a></div><div class="ttdeci">friend class EngineContext</div><div class="ttdef"><b>定义</b> Renderer.h:61</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_ad61fae862369fe45487f8d6931c1a194"><div class="ttname"><a href="class_shit_1_1_renderer.html#ad61fae862369fe45487f8d6931c1a194">Shit::Renderer::SetClipRect</a></div><div class="ttdeci">static void SetClipRect(const SDL_Rect *rect)</div><div class="ttdoc">设置裁剪矩形（传 nullptr 清除）</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_ad903053e03f7af1de814d044f7b0dcb4"><div class="ttname"><a href="class_shit_1_1_renderer.html#ad903053e03f7af1de814d044f7b0dcb4">Shit::Renderer::GetLogicalHeight</a></div><div class="ttdeci">static int GetLogicalHeight()</div><div class="ttdoc">逻辑分辨率高度</div><div class="ttdef"><b>定义</b> Renderer.h:37</div></div>
 <div class="ttc" id="aclass_shit_1_1_renderer_html_ae596c367662c7f3b19b6626b89ffc08b"><div class="ttname"><a href="class_shit_1_1_renderer.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::Renderer::Init</a></div><div class="ttdeci">static bool Init()</div><div class="ttdoc">初始化渲染器</div><div class="ttdef"><b>定义</b> Renderer.h:30</div></div>

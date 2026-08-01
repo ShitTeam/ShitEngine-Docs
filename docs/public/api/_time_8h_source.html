@@ -185,19 +185,20 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_time_8h_sourc
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">   28</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">SetTargetFPS</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fps);  </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">~Time</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> init();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> update();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">float</span> m_deltaTime = 0.0f;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">double</span> m_totalTime = 0.0f;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        Uint64 m_lastTime = 0;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        Uint64 m_currentTime = 0;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_targetFPS = 144;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_time.html#accacedc6f06871ee6fdc08c2fcce841c">   31</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_shit_1_1_time.html#accacedc6f06871ee6fdc08c2fcce841c">EngineContext</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">Time</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_function" href="class_shit_1_1_time.html#a29d35748d7e4bdde4b013cd9744926f5">~Time</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> init();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> update();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">float</span> m_deltaTime = 0.0f;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">double</span> m_totalTime = 0.0f;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        Uint64 m_lastTime = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        Uint64 m_currentTime = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_targetFPS = 144;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
 </div>
 </div>
 </div>
@@ -218,6 +219,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_time_8h_sourc
 <div class="ttc" id="aclass_shit_1_1_time_html_a770f074d363f8963cc3cf17db74604c7"><div class="ttname"><a href="class_shit_1_1_time.html#a770f074d363f8963cc3cf17db74604c7">Shit::Time::operator=</a></div><div class="ttdeci">Time &amp; operator=(const Time &amp;)=delete</div></div>
 <div class="ttc" id="aclass_shit_1_1_time_html_a80811a4413d7819a39947fc37c91a685"><div class="ttname"><a href="class_shit_1_1_time.html#a80811a4413d7819a39947fc37c91a685">Shit::Time::GetDeltaTime</a></div><div class="ttdeci">static float GetDeltaTime()</div><div class="ttdoc">上一帧耗时（秒）</div><div class="ttdef"><b>定义</b> Time.h:25</div></div>
 <div class="ttc" id="aclass_shit_1_1_time_html_aa2fab026580d6f14280c2ffb8063a314"><div class="ttname"><a href="class_shit_1_1_time.html#aa2fab026580d6f14280c2ffb8063a314">Shit::Time::Game</a></div><div class="ttdeci">friend class Game</div><div class="ttdef"><b>定义</b> Time.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_time_html_accacedc6f06871ee6fdc08c2fcce841c"><div class="ttname"><a href="class_shit_1_1_time.html#accacedc6f06871ee6fdc08c2fcce841c">Shit::Time::EngineContext</a></div><div class="ttdeci">friend class EngineContext</div><div class="ttdef"><b>定义</b> Time.h:31</div></div>
 <div class="ttc" id="aclass_shit_1_1_time_html_aefe4538733c9ee5538c5432698a85397"><div class="ttname"><a href="class_shit_1_1_time.html#aefe4538733c9ee5538c5432698a85397">Shit::Time::SetTargetFPS</a></div><div class="ttdeci">static void SetTargetFPS(unsigned int fps)</div><div class="ttdoc">设帧率上限（0=不限）</div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->

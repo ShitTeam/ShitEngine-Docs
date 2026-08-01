@@ -165,7 +165,13 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a01470a60234f474fdfecd5378ee916a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析所有未解析的基类引用（消除 SIOF）  <br /></td></tr>
 <tr class="memitem:a87db5675288cbd35da682ae90a35589e" id="r_a87db5675288cbd35da682ae90a35589e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a87db5675288cbd35da682ae90a35589e">unregisterType</a> (std::string_view name)</td></tr>
 <tr class="memdesc:a87db5675288cbd35da682ae90a35589e"><td class="mdescLeft">&#160;</td><td class="mdescRight">按名称卸载类型  <br /></td></tr>
+<tr class="memitem:a94ff67ce97491c2bbb110891f182c7e6" id="r_a94ff67ce97491c2bbb110891f182c7e6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a94ff67ce97491c2bbb110891f182c7e6">setRegistrationSource</a> (std::string_view source)</td></tr>
+<tr class="memdesc:a94ff67ce97491c2bbb110891f182c7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置后续注册类型的来源标记（空 = 引擎内置，插件注册前设为插件名）  <br /></td></tr>
+<tr class="memitem:affa6bce88f1ce899fd0d3b5cd17f5310" id="r_affa6bce88f1ce899fd0d3b5cd17f5310"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#affa6bce88f1ce899fd0d3b5cd17f5310">unregisterTypesBySource</a> (std::string_view source)</td></tr>
+<tr class="memdesc:affa6bce88f1ce899fd0d3b5cd17f5310"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载指定来源注册的全部类型（插件卸载前调用，防止 factory 悬垂）  <br /></td></tr>
 <tr class="memitem:a4dbc8fd831469be88939a5f090c6210e" id="r_a4dbc8fd831469be88939a5f090c6210e"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4dbc8fd831469be88939a5f090c6210e">getType</a> (std::string_view name) const</td></tr>
+<tr class="memitem:afa246c7edbd1f16b730d6f5bf30b11e4" id="r_afa246c7edbd1f16b730d6f5bf30b11e4"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#afa246c7edbd1f16b730d6f5bf30b11e4">getType</a> (std::type_index ti) const</td></tr>
+<tr class="memdesc:afa246c7edbd1f16b730d6f5bf30b11e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">按 type_index 查询（Prefab 动态克隆等场景用）  <br /></td></tr>
 <tr class="memitem:acd9689760f3ae13dc4e4d238e5771e85" id="r_acd9689760f3ae13dc4e4d238e5771e85"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:acd9689760f3ae13dc4e4d238e5771e85 template"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#acd9689760f3ae13dc4e4d238e5771e85">getType</a> () const</td></tr>
 <tr class="memitem:ab741f61fd936cb1fea75d452931d33ea" id="r_ab741f61fd936cb1fea75d452931d33ea"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab741f61fd936cb1fea75d452931d33ea">forEach</a> (std::function&lt; void(const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> &amp;)&gt; callback) const</td></tr>
@@ -182,7 +188,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aa46470dfed703e124e3092fbaff64c90" id="r_aa46470dfed703e124e3092fbaff64c90"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa46470dfed703e124e3092fbaff64c90">InitBuiltinTypes</a> ()</td></tr>
 <tr class="memitem:ab6328102bdac96cb24af322c8f5d128e" id="r_ab6328102bdac96cb24af322c8f5d128e"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ab6328102bdac96cb24af322c8f5d128e">ResolveBases</a> ()</td></tr>
 <tr class="memitem:a89e0731d1b2594dc2c86c092f6dfd939" id="r_a89e0731d1b2594dc2c86c092f6dfd939"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a89e0731d1b2594dc2c86c092f6dfd939">UnregisterType</a> (std::string_view name)</td></tr>
+<tr class="memitem:a3ecc8b999ab86ec50ca8ecbdffea2efd" id="r_a3ecc8b999ab86ec50ca8ecbdffea2efd"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3ecc8b999ab86ec50ca8ecbdffea2efd">SetRegistrationSource</a> (std::string_view source)</td></tr>
+<tr class="memitem:abc3f934e62b51debcec39d2ff78d31ad" id="r_abc3f934e62b51debcec39d2ff78d31ad"><td class="memItemLeft">static size_t&#160;</td><td class="memItemRight"><a class="el" href="#abc3f934e62b51debcec39d2ff78d31ad">UnregisterTypesBySource</a> (std::string_view source)</td></tr>
 <tr class="memitem:a1d39c27eec2e796611800f76df4390b8" id="r_a1d39c27eec2e796611800f76df4390b8"><td class="memItemLeft">static const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1d39c27eec2e796611800f76df4390b8">Get</a> (std::string_view name)</td></tr>
+<tr class="memitem:a50d78d29f6d313bbcf1fa8e5ddbf244d" id="r_a50d78d29f6d313bbcf1fa8e5ddbf244d"><td class="memItemLeft">static const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a50d78d29f6d313bbcf1fa8e5ddbf244d">Get</a> (std::type_index ti)</td></tr>
 <tr class="memitem:a9e6c3f2bdaf242a6a981bc3141673af1" id="r_a9e6c3f2bdaf242a6a981bc3141673af1"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a9e6c3f2bdaf242a6a981bc3141673af1 template"><td class="memItemLeft">static const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9e6c3f2bdaf242a6a981bc3141673af1">Get</a> ()</td></tr>
 <tr class="memitem:a95d41ba8e879cbd5ed1eb9d1967587d8" id="r_a95d41ba8e879cbd5ed1eb9d1967587d8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a95d41ba8e879cbd5ed1eb9d1967587d8">ForEach</a> (std::function&lt; void(const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> &amp;)&gt; callback)</td></tr>
@@ -190,6 +199,7 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
+<tr class="memitem:accacedc6f06871ee6fdc08c2fcce841c" id="r_accacedc6f06871ee6fdc08c2fcce841c"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#accacedc6f06871ee6fdc08c2fcce841c">EngineContext</a></td></tr>
 <tr class="memitem:a206b044745b4ae1ec69f6595acfce573" id="r_a206b044745b4ae1ec69f6595acfce573"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a206b044745b4ae1ec69f6595acfce573">TypeInfoBuilder</a></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
@@ -337,7 +347,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a id="a9e6c3f2bdaf242a6a981bc3141673af1" name="a9e6c3f2bdaf242a6a981bc3141673af1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e6c3f2bdaf242a6a981bc3141673af1">&#9670;&#160;</a></span>Get() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6c3f2bdaf242a6a981bc3141673af1">&#9670;&#160;</a></span>Get() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +374,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="a1d39c27eec2e796611800f76df4390b8" name="a1d39c27eec2e796611800f76df4390b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d39c27eec2e796611800f76df4390b8">&#9670;&#160;</a></span>Get() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d39c27eec2e796611800f76df4390b8">&#9670;&#160;</a></span>Get() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -376,6 +386,31 @@ template&lt;typename T&gt; </div>
           <td class="memname">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> * Get </td>
           <td>(</td>
           <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50d78d29f6d313bbcf1fa8e5ddbf244d" name="a50d78d29f6d313bbcf1fa8e5ddbf244d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d78d29f6d313bbcf1fa8e5ddbf244d">&#9670;&#160;</a></span>Get() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> * Get </td>
+          <td>(</td>
+          <td class="paramtype">std::type_index</td>          <td class="paramname"><span class="paramname"><em>ti</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -414,7 +449,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="acd9689760f3ae13dc4e4d238e5771e85" name="acd9689760f3ae13dc4e4d238e5771e85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd9689760f3ae13dc4e4d238e5771e85">&#9670;&#160;</a></span>getType() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9689760f3ae13dc4e4d238e5771e85">&#9670;&#160;</a></span>getType() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +476,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="a4dbc8fd831469be88939a5f090c6210e" name="a4dbc8fd831469be88939a5f090c6210e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dbc8fd831469be88939a5f090c6210e">&#9670;&#160;</a></span>getType() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbc8fd831469be88939a5f090c6210e">&#9670;&#160;</a></span>getType() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -462,6 +497,33 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa246c7edbd1f16b730d6f5bf30b11e4" name="afa246c7edbd1f16b730d6f5bf30b11e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa246c7edbd1f16b730d6f5bf30b11e4">&#9670;&#160;</a></span>getType() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_type_info.html">TypeInfo</a> * getType </td>
+          <td>(</td>
+          <td class="paramtype">std::type_index</td>          <td class="paramname"><span class="paramname"><em>ti</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>按 type_index 查询（Prefab 动态克隆等场景用） </p>
 
 </div>
 </div>
@@ -643,6 +705,50 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a3ecc8b999ab86ec50ca8ecbdffea2efd" name="a3ecc8b999ab86ec50ca8ecbdffea2efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ecc8b999ab86ec50ca8ecbdffea2efd">&#9670;&#160;</a></span>SetRegistrationSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetRegistrationSource </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94ff67ce97491c2bbb110891f182c7e6" name="a94ff67ce97491c2bbb110891f182c7e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ff67ce97491c2bbb110891f182c7e6">&#9670;&#160;</a></span>setRegistrationSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRegistrationSource </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置后续注册类型的来源标记（空 = 引擎内置，插件注册前设为插件名） </p>
+
+</div>
+</div>
 <a id="a89e0731d1b2594dc2c86c092f6dfd939" name="a89e0731d1b2594dc2c86c092f6dfd939"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89e0731d1b2594dc2c86c092f6dfd939">&#9670;&#160;</a></span>UnregisterType()</h2>
 
@@ -687,7 +793,73 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="abc3f934e62b51debcec39d2ff78d31ad" name="abc3f934e62b51debcec39d2ff78d31ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3f934e62b51debcec39d2ff78d31ad">&#9670;&#160;</a></span>UnregisterTypesBySource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UnregisterTypesBySource </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affa6bce88f1ce899fd0d3b5cd17f5310" name="affa6bce88f1ce899fd0d3b5cd17f5310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa6bce88f1ce899fd0d3b5cd17f5310">&#9670;&#160;</a></span>unregisterTypesBySource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t unregisterTypesBySource </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>卸载指定来源注册的全部类型（插件卸载前调用，防止 factory 悬垂） </p>
+
+</div>
+</div>
 <a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="accacedc6f06871ee6fdc08c2fcce841c" name="accacedc6f06871ee6fdc08c2fcce841c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accacedc6f06871ee6fdc08c2fcce841c">&#9670;&#160;</a></span>EngineContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class EngineContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a206b044745b4ae1ec69f6595acfce573" name="a206b044745b4ae1ec69f6595acfce573"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a206b044745b4ae1ec69f6595acfce573">&#9670;&#160;</a></span>TypeInfoBuilder</h2>
 

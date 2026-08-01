@@ -16,10 +16,12 @@ var class_shit_1_1_scene =
     [ "instantiate", "class_shit_1_1_scene.html#aacfe102452215e81fe047bfe6de8e4d0", null ],
     [ "operator=", "class_shit_1_1_scene.html#a022dd9625fc47205f10ec978727b90d0", null ],
     [ "operator=", "class_shit_1_1_scene.html#af09f0b2d48bd4461b96f47a768f4aa3a", null ],
+    [ "registerComponent", "class_shit_1_1_scene.html#afdb7daaadb64de3fdfaee6d08c1cb950", null ],
     [ "registerSystem", "class_shit_1_1_scene.html#ad0d534f5199d8706d236fd00679450d9", null ],
     [ "removeGameObject", "class_shit_1_1_scene.html#a476333bb647cc4e1f5a6085a4a8abf00", null ],
     [ "removeGameObjectByName", "class_shit_1_1_scene.html#a3b509c9a28035513d2eb716fd3ab91d4", null ],
     [ "setName", "class_shit_1_1_scene.html#a9d3a2685df23b5e7cbf59c19c4a1f9b5", null ],
+    [ "unregisterComponent", "class_shit_1_1_scene.html#a5d063a69d1203a6038dd3a1f7e08761f", null ],
     [ "unregisterSystem", "class_shit_1_1_scene.html#ab4e8eb9227833b905a437e3c31fa2d07", null ],
     [ "update", "class_shit_1_1_scene.html#ac5c54df7ed3b930268c8d7752c101725", null ]
 ];

@@ -186,6 +186,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a476333bb647cc4e1f5a6085a4a8abf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">按指针标记销毁  <br /></td></tr>
 <tr class="memitem:a3b509c9a28035513d2eb716fd3ab91d4" id="r_a3b509c9a28035513d2eb716fd3ab91d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b509c9a28035513d2eb716fd3ab91d4">removeGameObjectByName</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a3b509c9a28035513d2eb716fd3ab91d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">按名称标记销毁  <br /></td></tr>
+<tr class="memitem:afdb7daaadb64de3fdfaee6d08c1cb950" id="r_afdb7daaadb64de3fdfaee6d08c1cb950"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#afdb7daaadb64de3fdfaee6d08c1cb950">registerComponent</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *component)</td></tr>
+<tr class="memdesc:afdb7daaadb64de3fdfaee6d08c1cb950"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件挂载广播（组件 onAttach 调用）。分发给可处理的系统，返回是否有系统认领。  <br /></td></tr>
+<tr class="memitem:a5d063a69d1203a6038dd3a1f7e08761f" id="r_a5d063a69d1203a6038dd3a1f7e08761f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5d063a69d1203a6038dd3a1f7e08761f">unregisterComponent</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *component)</td></tr>
+<tr class="memdesc:a5d063a69d1203a6038dd3a1f7e08761f"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件卸下广播（组件 onDetach 调用）。  <br /></td></tr>
 <tr class="memitem:ad0d534f5199d8706d236fd00679450d9" id="r_ad0d534f5199d8706d236fd00679450d9"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ad0d534f5199d8706d236fd00679450d9 template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#ad0d534f5199d8706d236fd00679450d9">registerSystem</a> ()</td></tr>
 <tr class="memitem:ab4e8eb9227833b905a437e3c31fa2d07" id="r_ab4e8eb9227833b905a437e3c31fa2d07"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -592,6 +596,25 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="afdb7daaadb64de3fdfaee6d08c1cb950" name="afdb7daaadb64de3fdfaee6d08c1cb950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb7daaadb64de3fdfaee6d08c1cb950">&#9670;&#160;</a></span>registerComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool registerComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_component.html">Component</a> *</td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>组件挂载广播（组件 onAttach 调用）。分发给可处理的系统，返回是否有系统认领。 </p>
+
+</div>
+</div>
 <a id="ad0d534f5199d8706d236fd00679450d9" name="ad0d534f5199d8706d236fd00679450d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0d534f5199d8706d236fd00679450d9">&#9670;&#160;</a></span>registerSystem()</h2>
 
@@ -679,6 +702,25 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d063a69d1203a6038dd3a1f7e08761f" name="a5d063a69d1203a6038dd3a1f7e08761f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d063a69d1203a6038dd3a1f7e08761f">&#9670;&#160;</a></span>unregisterComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unregisterComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_component.html">Component</a> *</td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>组件卸下广播（组件 onDetach 调用）。 </p>
 
 </div>
 </div>

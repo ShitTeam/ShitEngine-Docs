@@ -250,10 +250,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_type_info_8h_
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_shit_1_1_type_info.html#afbf4c89df61d39024dd5f68bea8847db">factory</a>(memory);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
 </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="struct_shit_1_1_type_info.html#a14ee39a9a59b08e6fad497e78e450f7e">   87</a></span>    std::string <a class="code hl_variable" href="struct_shit_1_1_type_info.html#a14ee39a9a59b08e6fad497e78e450f7e">source</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>} <span class="comment">// namespace Shit</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>} <span class="comment">// namespace Shit</span></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:10</div></div>
 <div class="ttc" id="astruct_shit_1_1_enum_value_html"><div class="ttname"><a href="struct_shit_1_1_enum_value.html">Shit::EnumValue</a></div><div class="ttdoc">枚举常量</div><div class="ttdef"><b>定义</b> TypeInfo.h:59</div></div>
 <div class="ttc" id="astruct_shit_1_1_enum_value_html_a9b45b3e13bd9167aab02e17e08916231"><div class="ttname"><a href="struct_shit_1_1_enum_value.html#a9b45b3e13bd9167aab02e17e08916231">Shit::EnumValue::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">枚举项名称（如 &quot;None&quot;、&quot;Left&quot;））</div><div class="ttdef"><b>定义</b> TypeInfo.h:60</div></div>
@@ -280,6 +282,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_type_info_8h_
 <div class="ttc" id="astruct_shit_1_1_range_meta_html_a306b5ca364bf842a8ff5bbfc0b4d4a4b"><div class="ttname"><a href="struct_shit_1_1_range_meta.html#a306b5ca364bf842a8ff5bbfc0b4d4a4b">Shit::RangeMeta::max</a></div><div class="ttdeci">float max</div><div class="ttdef"><b>定义</b> TypeInfo.h:14</div></div>
 <div class="ttc" id="astruct_shit_1_1_range_meta_html_ad2e88d75f808e6d4e78d48bceb10c336"><div class="ttname"><a href="struct_shit_1_1_range_meta.html#ad2e88d75f808e6d4e78d48bceb10c336">Shit::RangeMeta::min</a></div><div class="ttdeci">float min</div><div class="ttdef"><b>定义</b> TypeInfo.h:13</div></div>
 <div class="ttc" id="astruct_shit_1_1_type_info_html"><div class="ttname"><a href="struct_shit_1_1_type_info.html">Shit::TypeInfo</a></div><div class="ttdef"><b>定义</b> TypeInfo.h:64</div></div>
+<div class="ttc" id="astruct_shit_1_1_type_info_html_a14ee39a9a59b08e6fad497e78e450f7e"><div class="ttname"><a href="struct_shit_1_1_type_info.html#a14ee39a9a59b08e6fad497e78e450f7e">Shit::TypeInfo::source</a></div><div class="ttdeci">std::string source</div><div class="ttdoc">注册来源（空 = 引擎内置，否则为插件名，用于卸载时批量清理）</div><div class="ttdef"><b>定义</b> TypeInfo.h:87</div></div>
 <div class="ttc" id="astruct_shit_1_1_type_info_html_a179500c846c41a50dfc9fd26d174f458"><div class="ttname"><a href="struct_shit_1_1_type_info.html#a179500c846c41a50dfc9fd26d174f458">Shit::TypeInfo::typeIndex</a></div><div class="ttdeci">std::type_index typeIndex</div><div class="ttdef"><b>定义</b> TypeInfo.h:73</div></div>
 <div class="ttc" id="astruct_shit_1_1_type_info_html_a47297c01cebacf041817f7cd518bd228"><div class="ttname"><a href="struct_shit_1_1_type_info.html#a47297c01cebacf041817f7cd518bd228">Shit::TypeInfo::Create</a></div><div class="ttdeci">void * Create(void *memory=nullptr) const</div><div class="ttdoc">创建类型实例。传入 nullptr 则堆分配（new），否则 placement new 到给定地址</div><div class="ttdef"><b>定义</b> TypeInfo.h:81</div></div>
 <div class="ttc" id="astruct_shit_1_1_type_info_html_a47ad6d79041d9e9286e6760690d83f70"><div class="ttname"><a href="struct_shit_1_1_type_info.html#a47ad6d79041d9e9286e6760690d83f70">Shit::TypeInfo::fields</a></div><div class="ttdeci">std::vector&lt; FieldInfo &gt; fields</div><div class="ttdef"><b>定义</b> TypeInfo.h:69</div></div>

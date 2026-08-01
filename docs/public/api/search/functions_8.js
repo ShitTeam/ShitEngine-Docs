@@ -9,7 +9,7 @@ var searchData=
   ['initmappings_6',['initMappings',['../class_shit_1_1_input.html#a0f983677802989b2572c043fd0d9352e',1,'Shit::Input']]],
   ['insertnewline_7',['insertNewline',['../class_shit_1_1_u_i_text_area.html#ac717c35a0270efeda965d8c421e6b4e4',1,'Shit::UITextArea::insertNewline()'],['../class_shit_1_1_u_i_text_input.html#a8732d4dd1ea8c421808f3595087995a7',1,'Shit::UITextInput::insertNewline()']]],
   ['inserttext_8',['insertText',['../class_shit_1_1_u_i_text_box.html#ad6fea922262713b5024c8e471a35d8ea',1,'Shit::UITextBox::insertText()'],['../class_shit_1_1_u_i_text_input.html#a6c06654383aa646d4a6e7976fad6fd51',1,'Shit::UITextInput::insertText()']]],
-  ['instantiate_9',['instantiate',['../class_shit_1_1_scene.html#aacfe102452215e81fe047bfe6de8e4d0',1,'Shit::Scene']]],
+  ['instantiate_9',['instantiate',['../class_shit_1_1_prefab.html#addb342782463746fbb8874544632e9f5',1,'Shit::Prefab::instantiate()'],['../class_shit_1_1_scene.html#aacfe102452215e81fe047bfe6de8e4d0',1,'Shit::Scene::instantiate()']]],
   ['isactiondown_10',['IsActionDown',['../class_shit_1_1_input.html#ab51d40d6d9bd4690cfe0405373d229e1',1,'Shit::Input']]],
   ['isactiondown_11',['isActionDown',['../class_shit_1_1_input.html#af41a9ab6a963c4afdbc7dc4889605865',1,'Shit::Input']]],
   ['isactionpressed_12',['IsActionPressed',['../class_shit_1_1_input.html#ac6d5b047776ef71639b042447fed43c9',1,'Shit::Input']]],

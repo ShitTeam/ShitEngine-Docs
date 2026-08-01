@@ -17,6 +17,7 @@ var annotated_dup =
       [ "Color", "struct_shit_1_1_color.html", "struct_shit_1_1_color" ],
       [ "Component", "class_shit_1_1_component.html", "class_shit_1_1_component" ],
       [ "Config", "class_shit_1_1_config.html", "class_shit_1_1_config" ],
+      [ "EngineContext", "class_shit_1_1_engine_context.html", "class_shit_1_1_engine_context" ],
       [ "EnumValue", "struct_shit_1_1_enum_value.html", "struct_shit_1_1_enum_value" ],
       [ "Event", "struct_shit_1_1_event.html", "struct_shit_1_1_event" ],
       [ "EventBus", "class_shit_1_1_event_bus.html", "class_shit_1_1_event_bus" ],

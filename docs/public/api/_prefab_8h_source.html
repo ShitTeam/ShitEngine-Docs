@@ -156,46 +156,62 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_prefab_8h_sou
 <div class="contents">
 <a href="_prefab_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_game_object_8h.html">GameObject.h</a>&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html">   21</a></span><span class="keyword">class </span>Prefab {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a5a22acdc42fdb4f1a122b2321f6e952b">   23</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="class_shit_1_1_prefab.html#a5a22acdc42fdb4f1a122b2321f6e952b">Builder</a> = std::function&lt;void(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>*)&gt;;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a1d22abc417cff2c10acf747b6c1ee93d">   25</a></span>    <span class="keyword">static</span> Prefab <a class="code hl_function" href="class_shit_1_1_prefab.html#a1d22abc417cff2c10acf747b6c1ee93d">Build</a>(<a class="code hl_typedef" href="class_shit_1_1_prefab.html#a5a22acdc42fdb4f1a122b2321f6e952b">Builder</a> builder) {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        Prefab p;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        p.m_builder = std::move(builder);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> p;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html">   22</a></span><span class="keyword">class </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> Prefab {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_shit_1_1_prefab_1_1_component_data.html">   25</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_shit_1_1_prefab_1_1_component_data.html">ComponentData</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_shit_1_1_prefab_1_1_component_data.html#a3f13bbbf7a2e3a9357c1053612ecb0ff">   26</a></span>        std::string <a class="code hl_variable" href="struct_shit_1_1_prefab_1_1_component_data.html#a3f13bbbf7a2e3a9357c1053612ecb0ff">typeName</a>;        </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_shit_1_1_prefab_1_1_component_data.html#a1270691d17b8925654c325b68abefba1">   27</a></span>        nlohmann::json <a class="code hl_variable" href="struct_shit_1_1_prefab_1_1_component_data.html#a1270691d17b8925654c325b68abefba1">fields</a>;       </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
 </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a6b1eb934cd47f9b035aa2dabd4644900">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_prefab.html#a6b1eb934cd47f9b035aa2dabd4644900">apply</a>(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* go)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span> (m_builder) m_builder(go);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a197aba683421ee20faa46f8aa115807d">   31</a></span>    <span class="keyword">static</span> Prefab <a class="code hl_function" href="class_shit_1_1_prefab.html#a197aba683421ee20faa46f8aa115807d">Capture</a>(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* source);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a7799270796d824226f9daafb14463bad">   34</a></span>    <span class="keyword">static</span> Prefab <a class="code hl_function" href="class_shit_1_1_prefab.html#a7799270796d824226f9daafb14463bad">FromJson</a>(<span class="keyword">const</span> nlohmann::json&amp; j);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a098007f3dd2a938824a819aa09423ca9">   37</a></span>    nlohmann::json <a class="code hl_function" href="class_shit_1_1_prefab.html#a098007f3dd2a938824a819aa09423ca9">toJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a6b1eb934cd47f9b035aa2dabd4644900">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_prefab.html#a6b1eb934cd47f9b035aa2dabd4644900">apply</a>(<a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* go) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#addb342782463746fbb8874544632e9f5">   43</a></span>    <a class="code hl_class" href="class_shit_1_1_game_object.html">GameObject</a>* <a class="code hl_function" href="class_shit_1_1_prefab.html#addb342782463746fbb8874544632e9f5">instantiate</a>(<a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>* scene, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a314b19ebe3b2ce78e9df49fee95c21dd">   46</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_prefab.html#a314b19ebe3b2ce78e9df49fee95c21dd">hasData</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !m_components.empty(); }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_shit_1_1_prefab.html#a225402847efa28d43fb8bb861a1b06ae">   49</a></span>    <span class="keyword">const</span> std::vector&lt;ComponentData&gt;&amp; <a class="code hl_function" href="class_shit_1_1_prefab.html#a225402847efa28d43fb8bb861a1b06ae">getComponents</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_components; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="class_shit_1_1_prefab.html">Prefab</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::vector&lt;ComponentData&gt; m_components;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="class_shit_1_1_prefab.html">Prefab</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_typedef" href="class_shit_1_1_prefab.html#a5a22acdc42fdb4f1a122b2321f6e952b">Builder</a> m_builder;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
-</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// namespace Shit</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace Shit</span></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
 <div class="ttc" id="a_game_object_8h_html"><div class="ttname"><a href="_game_object_8h.html">GameObject.h</a></div></div>
 <div class="ttc" id="aclass_shit_1_1_game_object_html"><div class="ttname"><a href="class_shit_1_1_game_object.html">Shit::GameObject</a></div><div class="ttdoc">游戏物体类</div><div class="ttdef"><b>定义</b> GameObject.h:22</div></div>
-<div class="ttc" id="aclass_shit_1_1_prefab_html"><div class="ttname"><a href="class_shit_1_1_prefab.html">Shit::Prefab</a></div><div class="ttdoc">预制体，可重复生成相同配置的 GameObject</div><div class="ttdef"><b>定义</b> Prefab.h:21</div></div>
-<div class="ttc" id="aclass_shit_1_1_prefab_html_a1d22abc417cff2c10acf747b6c1ee93d"><div class="ttname"><a href="class_shit_1_1_prefab.html#a1d22abc417cff2c10acf747b6c1ee93d">Shit::Prefab::Build</a></div><div class="ttdeci">static Prefab Build(Builder builder)</div><div class="ttdef"><b>定义</b> Prefab.h:25</div></div>
-<div class="ttc" id="aclass_shit_1_1_prefab_html_a5a22acdc42fdb4f1a122b2321f6e952b"><div class="ttname"><a href="class_shit_1_1_prefab.html#a5a22acdc42fdb4f1a122b2321f6e952b">Shit::Prefab::Builder</a></div><div class="ttdeci">std::function&lt; void(GameObject *)&gt; Builder</div><div class="ttdef"><b>定义</b> Prefab.h:23</div></div>
-<div class="ttc" id="aclass_shit_1_1_prefab_html_a6b1eb934cd47f9b035aa2dabd4644900"><div class="ttname"><a href="class_shit_1_1_prefab.html#a6b1eb934cd47f9b035aa2dabd4644900">Shit::Prefab::apply</a></div><div class="ttdeci">void apply(GameObject *go) const</div><div class="ttdef"><b>定义</b> Prefab.h:31</div></div>
+<div class="ttc" id="aclass_shit_1_1_prefab_html"><div class="ttname"><a href="class_shit_1_1_prefab.html">Shit::Prefab</a></div><div class="ttdoc">预制体，可重复生成相同配置的 GameObject</div><div class="ttdef"><b>定义</b> Prefab.h:22</div></div>
+<div class="ttc" id="aclass_shit_1_1_prefab_html_a098007f3dd2a938824a819aa09423ca9"><div class="ttname"><a href="class_shit_1_1_prefab.html#a098007f3dd2a938824a819aa09423ca9">Shit::Prefab::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdoc">序列化为 JSON</div></div>
+<div class="ttc" id="aclass_shit_1_1_prefab_html_a197aba683421ee20faa46f8aa115807d"><div class="ttname"><a href="class_shit_1_1_prefab.html#a197aba683421ee20faa46f8aa115807d">Shit::Prefab::Capture</a></div><div class="ttdeci">static Prefab Capture(GameObject *source)</div><div class="ttdoc">从现有 GameObject 捕获组件与字段（跳过 readOnly 字段与不可序列化类型）</div></div>
+<div class="ttc" id="aclass_shit_1_1_prefab_html_a225402847efa28d43fb8bb861a1b06ae"><div class="ttname"><a href="class_shit_1_1_prefab.html#a225402847efa28d43fb8bb861a1b06ae">Shit::Prefab::getComponents</a></div><div class="ttdeci">const std::vector&lt; ComponentData &gt; &amp; getComponents() const</div><div class="ttdoc">已捕获的组件数据（只读，供编辑器序列化/预览）</div><div class="ttdef"><b>定义</b> Prefab.h:49</div></div>
+<div class="ttc" id="aclass_shit_1_1_prefab_html_a314b19ebe3b2ce78e9df49fee95c21dd"><div class="ttname"><a href="class_shit_1_1_prefab.html#a314b19ebe3b2ce78e9df49fee95c21dd">Shit::Prefab::hasData</a></div><div class="ttdeci">bool hasData() const</div><div class="ttdoc">是否包含反射数据</div><div class="ttdef"><b>定义</b> Prefab.h:46</div></div>
+<div class="ttc" id="aclass_shit_1_1_prefab_html_a6b1eb934cd47f9b035aa2dabd4644900"><div class="ttname"><a href="class_shit_1_1_prefab.html#a6b1eb934cd47f9b035aa2dabd4644900">Shit::Prefab::apply</a></div><div class="ttdeci">void apply(GameObject *go) const</div><div class="ttdoc">把此预制体应用到已有 GameObject（反射克隆）</div></div>
+<div class="ttc" id="aclass_shit_1_1_prefab_html_a7799270796d824226f9daafb14463bad"><div class="ttname"><a href="class_shit_1_1_prefab.html#a7799270796d824226f9daafb14463bad">Shit::Prefab::FromJson</a></div><div class="ttdeci">static Prefab FromJson(const nlohmann::json &amp;j)</div><div class="ttdoc">从 JSON 反序列化</div></div>
+<div class="ttc" id="aclass_shit_1_1_prefab_html_addb342782463746fbb8874544632e9f5"><div class="ttname"><a href="class_shit_1_1_prefab.html#addb342782463746fbb8874544632e9f5">Shit::Prefab::instantiate</a></div><div class="ttdeci">GameObject * instantiate(Scene *scene, const std::string &amp;name=&quot;&quot;) const</div><div class="ttdoc">创建新 GameObject 并应用此预制体</div></div>
 <div class="ttc" id="aclass_shit_1_1_scene_html"><div class="ttname"><a href="class_shit_1_1_scene.html">Shit::Scene</a></div><div class="ttdoc">场景类</div><div class="ttdef"><b>定义</b> Scene.h:34</div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:10</div></div>
+<div class="ttc" id="astruct_shit_1_1_prefab_1_1_component_data_html"><div class="ttname"><a href="struct_shit_1_1_prefab_1_1_component_data.html">Shit::Prefab::ComponentData</a></div><div class="ttdoc">单个组件的数据（类型名 + 反射字段值，JSON 可序列化）</div><div class="ttdef"><b>定义</b> Prefab.h:25</div></div>
+<div class="ttc" id="astruct_shit_1_1_prefab_1_1_component_data_html_a1270691d17b8925654c325b68abefba1"><div class="ttname"><a href="struct_shit_1_1_prefab_1_1_component_data.html#a1270691d17b8925654c325b68abefba1">Shit::Prefab::ComponentData::fields</a></div><div class="ttdeci">nlohmann::json fields</div><div class="ttdoc">字段名 → 值（仅反射且可序列化的字段）</div><div class="ttdef"><b>定义</b> Prefab.h:27</div></div>
+<div class="ttc" id="astruct_shit_1_1_prefab_1_1_component_data_html_a3f13bbbf7a2e3a9357c1053612ecb0ff"><div class="ttname"><a href="struct_shit_1_1_prefab_1_1_component_data.html#a3f13bbbf7a2e3a9357c1053612ecb0ff">Shit::Prefab::ComponentData::typeName</a></div><div class="ttdeci">std::string typeName</div><div class="ttdoc">组件类型名（TypeRegistry::Get 查询）</div><div class="ttdef"><b>定义</b> Prefab.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
