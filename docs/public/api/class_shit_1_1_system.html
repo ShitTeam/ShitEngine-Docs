@@ -191,6 +191,11 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ad65045bcc70661e1e745edbb1da0377b" id="r_ad65045bcc70661e1e745edbb1da0377b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad65045bcc70661e1e745edbb1da0377b">getPriority</a> () const</td></tr>
 <tr class="memitem:a257fc8f8148265762ab350a6a8563ffc" id="r_a257fc8f8148265762ab350a6a8563ffc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a257fc8f8148265762ab350a6a8563ffc">setPriority</a> (int priority)</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:ac6ca1400b4a293809ff08d79b698cc6f" id="r_ac6ca1400b4a293809ff08d79b698cc6f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac6ca1400b4a293809ff08d79b698cc6f">resetComponent</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *comp)</td></tr>
+<tr class="memdesc:ac6ca1400b4a293809ff08d79b698cc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部：把认领过的组件标记为未注册（系统销毁/注销时调用）。 否则组件 m_isRegistered 残留 true，同类系统重新注册时 <a class="el" href="#a9339772ec5ac9fa929938109207f2863" title="初始化（可覆写）">System::init</a> 补扫会跳过它们， 导致组件永久失去驱动系统。  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
 <tr class="memitem:aebd544741012b3bab43cfbbc4e9d28f3" id="r_aebd544741012b3bab43cfbbc4e9d28f3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aebd544741012b3bab43cfbbc4e9d28f3">m_priority</a></td></tr>
@@ -408,6 +413,33 @@ Protected 属性</h2></td></tr>
 <p>组件卸下时调用。 </p>
 
 <p>被 <a class="el" href="class_shit_1_1_behavior_system.html#a7d186d8169496a0f410a29378f23942b">BehaviorSystem</a>, <a class="el" href="class_shit_1_1_physics_system2_d.html#a7d186d8169496a0f410a29378f23942b">PhysicsSystem2D</a>, <a class="el" href="class_shit_1_1_render_system.html#a7d186d8169496a0f410a29378f23942b">RenderSystem</a> , 以及 <a class="el" href="class_shit_1_1_u_i_render_system.html#a7d186d8169496a0f410a29378f23942b">UIRenderSystem</a> 重载.</p>
+
+</div>
+</div>
+<a id="ac6ca1400b4a293809ff08d79b698cc6f" name="ac6ca1400b4a293809ff08d79b698cc6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ca1400b4a293809ff08d79b698cc6f">&#9670;&#160;</a></span>resetComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_component.html">Component</a> *</td>          <td class="paramname"><span class="paramname"><em>comp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>内部：把认领过的组件标记为未注册（系统销毁/注销时调用）。 否则组件 m_isRegistered 残留 true，同类系统重新注册时 <a class="el" href="#a9339772ec5ac9fa929938109207f2863" title="初始化（可覆写）">System::init</a> 补扫会跳过它们， 导致组件永久失去驱动系统。 </p>
 
 </div>
 </div>

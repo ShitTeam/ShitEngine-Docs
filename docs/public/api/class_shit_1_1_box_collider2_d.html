@@ -177,6 +177,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:acbef2688cd43fd22241759f89fe12d28" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
 <tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
 <tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:ad9713377b12abde3f340627ead8b7d04" id="r_ad9713377b12abde3f340627ead8b7d04"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad9713377b12abde3f340627ead8b7d04">ensureShape</a> ()</td></tr>
+<tr class="memdesc:ad9713377b12abde3f340627ead8b7d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部：若同物体存在有效刚体则创建碰撞形状（幂等）。刚体后置挂载时由物理系统补调。  <br /></td></tr>
 <tr class="memitem:a33fe51395aa3d372a16ccda8df5c7b12" id="r_a33fe51395aa3d372a16ccda8df5c7b12"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a33fe51395aa3d372a16ccda8df5c7b12">setSize</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;size)</td></tr>
 <tr class="memdesc:a33fe51395aa3d372a16ccda8df5c7b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">像素尺寸（宽/高）默认 {32, 32}  <br /></td></tr>
 <tr class="memitem:ac7bc993a045dc8ed0cd6da7983ec92d5" id="r_ac7bc993a045dc8ed0cd6da7983ec92d5"><td class="memItemLeft">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac7bc993a045dc8ed0cd6da7983ec92d5">getSize</a> () const</td></tr>
@@ -202,13 +204,15 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_component"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a215419d22c35be7dec54fc538c1050fd pro_methods_class_shit_1_1_component" id="r_a215419d22c35be7dec54fc538c1050fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a215419d22c35be7dec54fc538c1050fd">setRegistered</a> (bool registered)</td></tr>
 <tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
 <tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
 <tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>盒子碰撞体组件 </p>
-<p>在同 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 上添加一个矩形碰撞形状，附着于其 RigidBody2D。 <a class="el" href="class_shit_1_1_rigid_body2_d.html" title="刚体组件">RigidBody2D</a> 必须在 <a class="el" href="class_shit_1_1_box_collider2_d.html" title="盒子碰撞体组件">BoxCollider2D</a> 之前添加。</p>
+<p>在同 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 上添加一个矩形碰撞形状，附着于其 RigidBody2D。 挂载顺序不敏感：若碰撞体先于 <a class="el" href="class_shit_1_1_rigid_body2_d.html" title="刚体组件">RigidBody2D</a> 挂载，刚体创建后会补建碰撞形状 （由 <a class="el" href="class_shit_1_1_physics_system2_d.html" title="2D 物理系统">PhysicsSystem2D</a> 在 createRigidBody 时调用 ensureShape）。</p>
 <p>使用方式： auto* box = go-&gt;addComponent&lt;Shit::BoxCollider2D&gt;(); box-&gt;setSize({ 64, 64 }); // 像素尺寸 box-&gt;setDensity(1.0f); box-&gt;setFriction(0.3f); </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a0e7717cf390ca2006a3322dae37535c3" name="a0e7717cf390ca2006a3322dae37535c3"></a>
@@ -279,6 +283,25 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ad9713377b12abde3f340627ead8b7d04" name="ad9713377b12abde3f340627ead8b7d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9713377b12abde3f340627ead8b7d04">&#9670;&#160;</a></span>ensureShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ensureShape </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内部：若同物体存在有效刚体则创建碰撞形状（幂等）。刚体后置挂载时由物理系统补调。 </p>
+
+</div>
+</div>
 <a id="a9f45c741b4c738e833fe66fe125592b7" name="a9f45c741b4c738e833fe66fe125592b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f45c741b4c738e833fe66fe125592b7">&#9670;&#160;</a></span>getDensity()</h2>
 

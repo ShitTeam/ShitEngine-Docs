@@ -3,6 +3,7 @@ var class_shit_1_1_box_collider2_d =
     [ "BoxCollider2D", "class_shit_1_1_box_collider2_d.html#a0e7717cf390ca2006a3322dae37535c3", null ],
     [ "BoxCollider2D", "class_shit_1_1_box_collider2_d.html#a85b60691a5da08ef8c0dfbd85c34c79c", null ],
     [ "~BoxCollider2D", "class_shit_1_1_box_collider2_d.html#a913bb68fbece658beaaef0342bb2cdda", null ],
+    [ "ensureShape", "class_shit_1_1_box_collider2_d.html#ad9713377b12abde3f340627ead8b7d04", null ],
     [ "getDensity", "class_shit_1_1_box_collider2_d.html#a9f45c741b4c738e833fe66fe125592b7", null ],
     [ "getFriction", "class_shit_1_1_box_collider2_d.html#a5d8c588ff9002c515832553cabade679", null ],
     [ "getRestitution", "class_shit_1_1_box_collider2_d.html#a7efa18798af97cb843a2c6f6c812b89b", null ],

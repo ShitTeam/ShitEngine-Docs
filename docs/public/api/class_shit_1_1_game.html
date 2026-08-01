@@ -179,14 +179,18 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ae596c367662c7f3b19b6626b89ffc08b" id="r_ae596c367662c7f3b19b6626b89ffc08b"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#ae596c367662c7f3b19b6626b89ffc08b">Init</a> ()</td></tr>
 <tr class="memitem:abcf24ae9fc270d7a9e1664d94ba02900" id="r_abcf24ae9fc270d7a9e1664d94ba02900"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#abcf24ae9fc270d7a9e1664d94ba02900">Run</a> ()</td></tr>
 <tr class="memitem:a62a73aff7afffe2fba7c2e47e07d9134" id="r_a62a73aff7afffe2fba7c2e47e07d9134"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a> ()</td></tr>
-<tr class="memdesc:a62a73aff7afffe2fba7c2e47e07d9134"><td class="mdescLeft">&#160;</td><td class="mdescRight">反初始化，按依赖逆序清理子系统  <br /></td></tr>
+<tr class="memdesc:a62a73aff7afffe2fba7c2e47e07d9134"><td class="mdescLeft">&#160;</td><td class="mdescRight">反初始化，按依赖逆序清理子系统（init 部分失败时也能安全调用）  <br /></td></tr>
 <tr class="memitem:abac80b6e5030ccd8245ed2cd0edaf51f" id="r_abac80b6e5030ccd8245ed2cd0edaf51f"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#abac80b6e5030ccd8245ed2cd0edaf51f">IsRunning</a> ()</td></tr>
 <tr class="memdesc:abac80b6e5030ccd8245ed2cd0edaf51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">主循环是否仍在运行  <br /></td></tr>
+<tr class="memitem:a3dccc49f182dd9488e9e02add177429c" id="r_a3dccc49f182dd9488e9e02add177429c"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3dccc49f182dd9488e9e02add177429c">SetPaused</a> (bool paused)</td></tr>
+<tr class="memdesc:a3dccc49f182dd9488e9e02add177429c"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局暂停（冻结 Behavior/物理，UI 叠层照常）  <br /></td></tr>
+<tr class="memitem:a01a5cc59553cfccf67199028fea8861e" id="r_a01a5cc59553cfccf67199028fea8861e"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a01a5cc59553cfccf67199028fea8861e">IsPaused</a> ()</td></tr>
+<tr class="memdesc:a01a5cc59553cfccf67199028fea8861e"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否处于暂停状态  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>引擎主控类 </p>
 <p>管理引擎的初始化、主循环与销毁。 所有静态方法内聚为单例调用。</p>
-<p>使用方式： <a class="el" href="#ae596c367662c7f3b19b6626b89ffc08b">Game::Init()</a>; <a class="el" href="#abcf24ae9fc270d7a9e1664d94ba02900">Game::Run()</a>; <a class="el" href="#a62a73aff7afffe2fba7c2e47e07d9134" title="反初始化，按依赖逆序清理子系统">Game::Destroy()</a>; </p>
+<p>使用方式： <a class="el" href="#ae596c367662c7f3b19b6626b89ffc08b">Game::Init()</a>; <a class="el" href="#abcf24ae9fc270d7a9e1664d94ba02900">Game::Run()</a>; <a class="el" href="#a62a73aff7afffe2fba7c2e47e07d9134" title="反初始化，按依赖逆序清理子系统（init 部分失败时也能安全调用）">Game::Destroy()</a>; </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a98d87ba6bde3f389e92664a2ef9bfcb1" name="a98d87ba6bde3f389e92664a2ef9bfcb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98d87ba6bde3f389e92664a2ef9bfcb1">&#9670;&#160;</a></span>Game() <span class="overload">[1/3]</span></h2>
@@ -291,12 +295,12 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>反初始化，按依赖逆序清理子系统 </p>
+<p>反初始化，按依赖逆序清理子系统（init 部分失败时也能安全调用） </p>
 
 </div>
 </div>
@@ -366,6 +370,33 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>初始化引擎所有子系统 </p>
+
+</div>
+</div>
+<a id="a01a5cc59553cfccf67199028fea8861e" name="a01a5cc59553cfccf67199028fea8861e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a5cc59553cfccf67199028fea8861e">&#9670;&#160;</a></span>IsPaused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsPaused </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否处于暂停状态 </p>
 
 </div>
 </div>
@@ -487,6 +518,33 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>启动主循环（阻塞直至窗口关闭） </p>
+
+</div>
+</div>
+<a id="a3dccc49f182dd9488e9e02add177429c" name="a3dccc49f182dd9488e9e02add177429c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dccc49f182dd9488e9e02add177429c">&#9670;&#160;</a></span>SetPaused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPaused </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>paused</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全局暂停（冻结 Behavior/物理，UI 叠层照常） </p>
 
 </div>
 </div>

@@ -12,7 +12,9 @@ var class_shit_1_1_component =
     [ "onDetach", "class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616", null ],
     [ "operator=", "class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796", null ],
     [ "operator=", "class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e", null ],
+    [ "setRegistered", "class_shit_1_1_component.html#a215419d22c35be7dec54fc538c1050fd", null ],
     [ "GameObject", "class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a", null ],
+    [ "System", "class_shit_1_1_component.html#af18a9ee98e70982bfe2975391d7221a5", null ],
     [ "m_isRegistered", "class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a", null ],
     [ "m_owner", "class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3", null ]
 ];

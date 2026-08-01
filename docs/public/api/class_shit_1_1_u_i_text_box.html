@@ -246,6 +246,8 @@ Protected 成员函数</h2></td></tr>
 <tr class="inherit_header pro_methods_class_shit_1_1_u_i_renderer_component"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_u_i_renderer_component.html">UIRendererComponent</a></td></tr>
 <tr class="memitem:ac6eb6cd5c4468fe1c73fad58e704dda8 pro_methods_class_shit_1_1_u_i_renderer_component" id="r_ac6eb6cd5c4468fe1c73fad58e704dda8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_u_i_renderer_component.html#ac6eb6cd5c4468fe1c73fad58e704dda8">requestSort</a> ()</td></tr>
 <tr class="memdesc:ac6eb6cd5c4468fe1c73fad58e704dda8 pro_methods_class_shit_1_1_u_i_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">components变更后通知系统重排（实例：zIndex 变化）  <br /></td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_component"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a215419d22c35be7dec54fc538c1050fd pro_methods_class_shit_1_1_component" id="r_a215419d22c35be7dec54fc538c1050fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a215419d22c35be7dec54fc538c1050fd">setRegistered</a> (bool registered)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
@@ -286,7 +288,7 @@ Protected 成员函数</h2></td></tr>
 <div class="textblock"><p>单行文本输入框 </p>
 <p>水平单行布局，不接收换行。聚焦时按 Home/End 跳到行首/行尾，左右方向键逐字移动， Ctrl+Left/Right 跳词（粗略按空格分词）。文字超出可见宽度时自动水平滚动跟随光标。</p>
 <p>用法： auto* go = scene-&gt;createGameObject("Input"); go-&gt;setParent(canvas); go-&gt;addComponent&lt;Shit::UITransform&gt;(...); go-&gt;addComponent&lt;Shit::UIImage&gt;("input_bg.png"); // 背景可选 auto* input = go-&gt;addComponent&lt;Shit::UITextBox&gt;(); input-&gt;setFontPath("fonts/main.ttf"); input-&gt;setPlaceholder("请输入...");</p>
-<p>点击控件即聚焦，点其他地方自动失焦（由 <a class="el" href="class_shit_1_1_u_i_render_system.html" title="UI 渲染系统">UIRenderSystem</a> 驱动）。 </p>
+<p>聚焦管理（由 <a class="el" href="class_shit_1_1_u_i_render_system.html" title="UI 渲染系统">UIRenderSystem</a> 驱动）：点击输入框即聚焦；点击空白区域自动失焦； 点击其他 UI 控件（按钮/图片）不夺走输入框焦点，可同时保持输入状态。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a56c9b7efa4c7fcd0e869e9bdae6288fd" name="a56c9b7efa4c7fcd0e869e9bdae6288fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56c9b7efa4c7fcd0e869e9bdae6288fd">&#9670;&#160;</a></span>UITextBox()</h2>

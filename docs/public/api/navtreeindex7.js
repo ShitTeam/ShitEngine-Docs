@@ -1,5 +1,15 @@
 var NAVTREEINDEX7 =
 {
+"struct_shit_1_1_event.html#ab259bf8791b9706ecd60c91988165e18":[1,0,0,18,0],
+"struct_shit_1_1_event.html#ab259bf8791b9706ecd60c91988165e18":[2,0,0,18,0],
+"struct_shit_1_1_field_info.html":[1,0,0,20],
+"struct_shit_1_1_field_info.html":[2,0,0,20],
+"struct_shit_1_1_field_info.html#a088489ad81830f1d1617cb9e31ef1306":[1,0,0,20,2],
+"struct_shit_1_1_field_info.html#a088489ad81830f1d1617cb9e31ef1306":[2,0,0,20,2],
+"struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff":[1,0,0,20,8],
+"struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff":[2,0,0,20,8],
+"struct_shit_1_1_field_info.html#a62f73e00b6063b31e676d9ad6662fec2":[1,0,0,20,0],
+"struct_shit_1_1_field_info.html#a62f73e00b6063b31e676d9ad6662fec2":[2,0,0,20,0],
 "struct_shit_1_1_field_info.html#a7f7e7151e55400960f53a6fa775ba135":[1,0,0,20,3],
 "struct_shit_1_1_field_info.html#a7f7e7151e55400960f53a6fa775ba135":[2,0,0,20,3],
 "struct_shit_1_1_field_info.html#a8363464886eec1d714f2943132017463":[1,0,0,20,1],

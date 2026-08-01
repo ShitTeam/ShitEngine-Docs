@@ -163,20 +163,21 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:aaece3969ed81b819aa8c9d350b702757" id="r_aaece3969ed81b819aa8c9d350b702757"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aaece3969ed81b819aa8c9d350b702757">WeakComponentRef</a> ()=default</td></tr>
-<tr class="memitem:aa83bdbb986552340ee04e46607b4bb9a" id="r_aa83bdbb986552340ee04e46607b4bb9a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa83bdbb986552340ee04e46607b4bb9a">WeakComponentRef</a> (<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *owner)</td></tr>
+<tr class="memitem:a977bf93153e80df09e73cb63882d433b" id="r_a977bf93153e80df09e73cb63882d433b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a977bf93153e80df09e73cb63882d433b">WeakComponentRef</a> (<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *owner, const std::weak_ptr&lt; void &gt; &amp;lifetime)</td></tr>
 <tr class="memitem:aed182ab5a4742a6fc2f9fe79773c12e1" id="r_aed182ab5a4742a6fc2f9fe79773c12e1"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#aed182ab5a4742a6fc2f9fe79773c12e1">get</a> () const</td></tr>
-<tr class="memdesc:aed182ab5a4742a6fc2f9fe79773c12e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取组件（已被移除/对象已销毁则返回 nullptr）  <br /></td></tr>
+<tr class="memdesc:aed182ab5a4742a6fc2f9fe79773c12e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取组件（组件已移除或对象已销毁则返回 nullptr）  <br /></td></tr>
 <tr class="memitem:a315419f26d3c59fa143b49b90a019049" id="r_a315419f26d3c59fa143b49b90a019049"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a315419f26d3c59fa143b49b90a019049">valid</a> () const</td></tr>
-<tr class="memdesc:a315419f26d3c59fa143b49b90a019049"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件当前是否有效（onAttach 后、removeComponent 前）  <br /></td></tr>
+<tr class="memdesc:a315419f26d3c59fa143b49b90a019049"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件当前是否有效（onAttach 后、removeComponent 前，且 owner 未被销毁）  <br /></td></tr>
 <tr class="memitem:a84e9959608997de8fe4355def47ff45a" id="r_a84e9959608997de8fe4355def47ff45a"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#a84e9959608997de8fe4355def47ff45a">operator-&gt;</a> () const</td></tr>
-<tr class="memdesc:a84e9959608997de8fe4355def47ff45a"><td class="mdescLeft">&#160;</td><td class="mdescRight">便捷解引用（调用前建议先 <a class="el" href="#a315419f26d3c59fa143b49b90a019049" title="组件当前是否有效（onAttach 后、removeComponent 前）">valid()</a> 检查或直接解引用判空）  <br /></td></tr>
+<tr class="memdesc:a84e9959608997de8fe4355def47ff45a"><td class="mdescLeft">&#160;</td><td class="mdescRight">便捷解引用（调用前建议先 <a class="el" href="#a315419f26d3c59fa143b49b90a019049" title="组件当前是否有效（onAttach 后、removeComponent 前，且 owner 未被销毁）">valid()</a> 检查或直接解引用判空）  <br /></td></tr>
 <tr class="memitem:a67b76affb3b5d35fa419ac234144038b" id="r_a67b76affb3b5d35fa419ac234144038b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a67b76affb3b5d35fa419ac234144038b">operator bool</a> () const</td></tr>
 <tr class="memitem:a9b36b6de005b18dd7c77687d8621774a" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
+<tr class="memdesc:a9b36b6de005b18dd7c77687d8621774a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所属 GameObject（可能已被销毁，调用方需自行保证安全）  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class Shit::WeakComponentRef&lt; T &gt;</div><p>组件弱引用 </p>
-<p>安全持有组件引用而不导致悬垂：不存组件指针，只存 owner + 模板类型， 访问时通过 owner-&gt;getComponent&lt;T&gt;() 现查。组件被 removeComponent 移除后， <a class="el" href="#aed182ab5a4742a6fc2f9fe79773c12e1" title="获取组件（已被移除/对象已销毁则返回 nullptr）">get()</a> 返回 nullptr（逻辑已死可检测），不会 use-after-free。</p>
+<p>安全持有组件引用而不导致悬垂：不存组件指针，只存 owner + 生命周期令牌 + 模板类型， 访问时通过 owner-&gt;getComponent&lt;T&gt;() 现查。组件被 removeComponent 移除、或所属 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 被销毁后，get() 返回 nullptr（逻辑已死可检测），不会 use-after-free。</p>
 <p>用法： auto ref = go-&gt;getWeakRef&lt;Shit::UIText&gt;(); button-&gt;setOnClick([ref]() { if (<a class="el" href="class_shit_1_1_u_i_text.html" title="UI 文字控件，使用 SDL_ttf 渲染文字到纹理">Shit::UIText</a>* t = ref.get()) t-&gt;setText("..."); // 已移除则安全跳过 });</p>
 <p>注意：这是"弱引用"不是"强引用"——不能阻止组件销毁，也不延长其生命周期。 若组件必须长期存活，属于生命周期设计问题而非引用问题。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
@@ -207,8 +208,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aa83bdbb986552340ee04e46607b4bb9a" name="aa83bdbb986552340ee04e46607b4bb9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa83bdbb986552340ee04e46607b4bb9a">&#9670;&#160;</a></span>WeakComponentRef() <span class="overload">[2/2]</span></h2>
+<a id="a977bf93153e80df09e73cb63882d433b" name="a977bf93153e80df09e73cb63882d433b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a977bf93153e80df09e73cb63882d433b">&#9670;&#160;</a></span>WeakComponentRef() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,8 +222,12 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">WeakComponentRef </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::weak_ptr&lt; void &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lifetime</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -260,7 +265,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>获取组件（已被移除/对象已销毁则返回 nullptr） </p>
+<p>获取组件（组件已移除或对象已销毁则返回 nullptr） </p>
 
 </div>
 </div>
@@ -288,6 +293,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>获取所属 GameObject（可能已被销毁，调用方需自行保证安全） </p>
 
 </div>
 </div>
@@ -343,7 +350,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>便捷解引用（调用前建议先 <a class="el" href="#a315419f26d3c59fa143b49b90a019049" title="组件当前是否有效（onAttach 后、removeComponent 前）">valid()</a> 检查或直接解引用判空） </p>
+<p>便捷解引用（调用前建议先 <a class="el" href="#a315419f26d3c59fa143b49b90a019049" title="组件当前是否有效（onAttach 后、removeComponent 前，且 owner 未被销毁）">valid()</a> 检查或直接解引用判空） </p>
 
 </div>
 </div>
@@ -372,7 +379,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>组件当前是否有效（onAttach 后、removeComponent 前） </p>
+<p>组件当前是否有效（onAttach 后、removeComponent 前，且 owner 未被销毁） </p>
 
 </div>
 </div>

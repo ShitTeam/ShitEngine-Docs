@@ -193,6 +193,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a9b36b6de005b18dd7c77687d8621774a" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
 <tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a215419d22c35be7dec54fc538c1050fd" id="r_a215419d22c35be7dec54fc538c1050fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a215419d22c35be7dec54fc538c1050fd">setRegistered</a> (bool registered)</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
 <tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
@@ -201,6 +205,7 @@ Protected 属性</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
 <tr class="memitem:a00df87c957d8f7ee0fc51f07a0542f4a" id="r_a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a></td></tr>
+<tr class="memitem:af18a9ee98e70982bfe2975391d7221a5" id="r_af18a9ee98e70982bfe2975391d7221a5"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#af18a9ee98e70982bfe2975391d7221a5">System</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>组件基类 </p>
@@ -508,6 +513,31 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a215419d22c35be7dec54fc538c1050fd" name="a215419d22c35be7dec54fc538c1050fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215419d22c35be7dec54fc538c1050fd">&#9670;&#160;</a></span>setRegistered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setRegistered </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>registered</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
 <a id="a00df87c957d8f7ee0fc51f07a0542f4a" name="a00df87c957d8f7ee0fc51f07a0542f4a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00df87c957d8f7ee0fc51f07a0542f4a">&#9670;&#160;</a></span>GameObject</h2>
@@ -520,6 +550,28 @@ Protected 属性</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">friend class GameObject</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af18a9ee98e70982bfe2975391d7221a5" name="af18a9ee98e70982bfe2975391d7221a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af18a9ee98e70982bfe2975391d7221a5">&#9670;&#160;</a></span>System</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class System</td>
         </tr>
       </table>
   </td>

@@ -37,10 +37,11 @@ var searchData=
   ['ismultiline_34',['isMultiline',['../class_shit_1_1_u_i_text_input.html#a15d22962f85802c13bbb42e19e4a9a16',1,'Shit::UITextInput']]],
   ['isneeddestroy_35',['isNeedDestroy',['../class_shit_1_1_game_object.html#af9c9255af4b284a0b456483acbfe1b0e',1,'Shit::GameObject']]],
   ['isopen_36',['IsOpen',['../class_shit_1_1_window.html#a9216f2c6587e4405c4f1821f3a35f69d',1,'Shit::Window']]],
-  ['ispaused_37',['isPaused',['../class_shit_1_1_audio_track.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AudioTrack::isPaused()'],['../class_shit_1_1_animation_component.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AnimationComponent::isPaused()']]],
-  ['isplaying_38',['isPlaying',['../class_shit_1_1_audio_track.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AudioTrack::isPlaying()'],['../class_shit_1_1_animation_component.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AnimationComponent::isPlaying()']]],
-  ['isregistered_39',['isRegistered',['../class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246',1,'Shit::Component']]],
-  ['isrunning_40',['IsRunning',['../class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f',1,'Shit::Game']]],
-  ['isstarted_41',['isStarted',['../class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781',1,'Shit::Behavior']]],
-  ['isvisible_42',['isVisible',['../class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::RendererComponent::isVisible()'],['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent::isVisible()']]]
+  ['ispaused_37',['IsPaused',['../class_shit_1_1_game.html#a01a5cc59553cfccf67199028fea8861e',1,'Shit::Game']]],
+  ['ispaused_38',['isPaused',['../class_shit_1_1_audio_track.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AudioTrack::isPaused()'],['../class_shit_1_1_animation_component.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AnimationComponent::isPaused()']]],
+  ['isplaying_39',['isPlaying',['../class_shit_1_1_audio_track.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AudioTrack::isPlaying()'],['../class_shit_1_1_animation_component.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AnimationComponent::isPlaying()']]],
+  ['isregistered_40',['isRegistered',['../class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246',1,'Shit::Component']]],
+  ['isrunning_41',['IsRunning',['../class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f',1,'Shit::Game']]],
+  ['isstarted_42',['isStarted',['../class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781',1,'Shit::Behavior']]],
+  ['isvisible_43',['isVisible',['../class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::RendererComponent::isVisible()'],['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent::isVisible()']]]
 ];

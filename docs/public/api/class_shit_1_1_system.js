@@ -8,6 +8,7 @@ var class_shit_1_1_system =
     [ "init", "class_shit_1_1_system.html#a9339772ec5ac9fa929938109207f2863", null ],
     [ "onComponentAttached", "class_shit_1_1_system.html#a625597d2a7c656f37a74e438810d9f81", null ],
     [ "onComponentDetached", "class_shit_1_1_system.html#a0c306ca92cdab985597e091fa3f804f9", null ],
+    [ "resetComponent", "class_shit_1_1_system.html#ac6ca1400b4a293809ff08d79b698cc6f", null ],
     [ "setPriority", "class_shit_1_1_system.html#a257fc8f8148265762ab350a6a8563ffc", null ],
     [ "setScene", "class_shit_1_1_system.html#a36f2aa21e8b3898775462d2a378d2e0f", null ],
     [ "update", "class_shit_1_1_system.html#a99b02345a8a15d3c5ea2844a2253f510", null ],

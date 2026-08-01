@@ -3,6 +3,7 @@ var class_shit_1_1_circle_collider2_d =
     [ "CircleCollider2D", "class_shit_1_1_circle_collider2_d.html#ada7f4a14d66a871d9968fe4c0d0e8c87", null ],
     [ "CircleCollider2D", "class_shit_1_1_circle_collider2_d.html#aeed3a3f0ef6898d0ab4f0c11d4b19c10", null ],
     [ "~CircleCollider2D", "class_shit_1_1_circle_collider2_d.html#a0e66a966f55068c74242dd703bdab2fc", null ],
+    [ "ensureShape", "class_shit_1_1_circle_collider2_d.html#ad9713377b12abde3f340627ead8b7d04", null ],
     [ "getDensity", "class_shit_1_1_circle_collider2_d.html#a9f45c741b4c738e833fe66fe125592b7", null ],
     [ "getFriction", "class_shit_1_1_circle_collider2_d.html#a5d8c588ff9002c515832553cabade679", null ],
     [ "getRadius", "class_shit_1_1_circle_collider2_d.html#a3ec8361c10a46b043072e5efb309ada3", null ],

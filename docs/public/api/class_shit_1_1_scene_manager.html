@@ -170,18 +170,11 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:aee88db8ba5649a8b071cdd7b3742b99c" id="r_aee88db8ba5649a8b071cdd7b3742b99c"><td class="memItemLeft">static <a class="el" href="#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a> ()</td></tr>
+<tr class="memitem:a3dd3fb3f7ca5a03de3ac0fb468288a2f" id="r_a3dd3fb3f7ca5a03de3ac0fb468288a2f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3dd3fb3f7ca5a03de3ac0fb468288a2f">LoadScene</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;scene)</td></tr>
+<tr class="memdesc:a3dd3fb3f7ca5a03de3ac0fb468288a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">切换场景（销毁当前，加载新场景；update 期间调用时延迟到 update 结束后生效）  <br /></td></tr>
 <tr class="memitem:a554d0f30ae93d2787435dca9a46c6c5d" id="r_a554d0f30ae93d2787435dca9a46c6c5d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a554d0f30ae93d2787435dca9a46c6c5d">Update</a> ()</td></tr>
-<tr class="memdesc:a554d0f30ae93d2787435dca9a46c6c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新当前场景  <br /></td></tr>
 <tr class="memitem:a62a73aff7afffe2fba7c2e47e07d9134" id="r_a62a73aff7afffe2fba7c2e47e07d9134"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a> ()</td></tr>
-<tr class="memdesc:a62a73aff7afffe2fba7c2e47e07d9134"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁所有场景  <br /></td></tr>
-<tr class="memitem:a6a428410da43a236f1ffc3dde15508d9" id="r_a6a428410da43a236f1ffc3dde15508d9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a6a428410da43a236f1ffc3dde15508d9">PushScene</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;scene)</td></tr>
-<tr class="memdesc:a6a428410da43a236f1ffc3dde15508d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">压入新场景（下个帧循环生效）  <br /></td></tr>
-<tr class="memitem:a65a98350e821e4029abf45c77074c185" id="r_a65a98350e821e4029abf45c77074c185"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a65a98350e821e4029abf45c77074c185">PopScene</a> ()</td></tr>
-<tr class="memdesc:a65a98350e821e4029abf45c77074c185"><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出栈顶场景（下个帧循环生效）  <br /></td></tr>
-<tr class="memitem:a9fafde24f44fcc9f1adc352297541434" id="r_a9fafde24f44fcc9f1adc352297541434"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9fafde24f44fcc9f1adc352297541434">ClearScene</a> ()</td></tr>
-<tr class="memdesc:a9fafde24f44fcc9f1adc352297541434"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空场景栈  <br /></td></tr>
-<tr class="memitem:a2eaa093e982c488a420d60ff3233902d" id="r_a2eaa093e982c488a420d60ff3233902d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2eaa093e982c488a420d60ff3233902d">ReplaceScene</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;scene)</td></tr>
-<tr class="memdesc:a2eaa093e982c488a420d60ff3233902d"><td class="mdescLeft">&#160;</td><td class="mdescRight">替换栈顶场景  <br /></td></tr>
+<tr class="memitem:ab2f16df8a0e2a6937af9c6b7be04f7d7" id="r_ab2f16df8a0e2a6937af9c6b7be04f7d7"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab2f16df8a0e2a6937af9c6b7be04f7d7">GetCurrentScene</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
@@ -189,8 +182,11 @@ Public 成员函数</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>场景管理器（单例） </p>
-<p>使用栈结构管理场景生命周期。任何时候只有栈顶场景处于活跃状态。 所有操作延迟到 <a class="el" href="#a554d0f30ae93d2787435dca9a46c6c5d" title="更新当前场景">Update()</a> 时执行，保证迭代安全。</p>
-<p>用法： SceneManager::PushScene(std::move(myScene)); SceneManager::ReplaceScene(std::move(gameScene)); <a class="el" href="#a65a98350e821e4029abf45c77074c185" title="弹出栈顶场景（下个帧循环生效）">SceneManager::PopScene()</a>; <a class="el" href="#a9fafde24f44fcc9f1adc352297541434" title="清空场景栈">SceneManager::ClearScene()</a>; </p>
+<p>持有当前活跃场景（单一场景模型，与 Unity/Godot 一致）：</p><ul>
+<li><a class="el" href="#a3dd3fb3f7ca5a03de3ac0fb468288a2f" title="切换场景（销毁当前，加载新场景；update 期间调用时延迟到 update 结束后生效）">LoadScene()</a> 切换场景：销毁旧场景、加载新场景（同帧生效）</li>
+<li>暂停用 <a class="el" href="class_shit_1_1_game.html#a3dccc49f182dd9488e9e02add177429c" title="全局暂停（冻结 Behavior/物理，UI 叠层照常）">Game::SetPaused()</a>：冻结 Behavior/物理，UI 叠层照常响应</li>
+</ul>
+<p>用法： Shit::SceneManager::LoadScene(std::move(levelScene)); Shit::Game::SetPaused(true); // 暂停（冻结行为/物理，UI 菜单照常） </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a56e74084b96a4960cbac4c377472e5ad" name="a56e74084b96a4960cbac4c377472e5ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56e74084b96a4960cbac4c377472e5ad">&#9670;&#160;</a></span>SceneManager() <span class="overload">[1/2]</span></h2>
@@ -243,33 +239,6 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="a9fafde24f44fcc9f1adc352297541434" name="a9fafde24f44fcc9f1adc352297541434"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fafde24f44fcc9f1adc352297541434">&#9670;&#160;</a></span>ClearScene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ClearScene </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>清空场景栈 </p>
-
-</div>
-</div>
 <a id="a62a73aff7afffe2fba7c2e47e07d9134" name="a62a73aff7afffe2fba7c2e47e07d9134"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62a73aff7afffe2fba7c2e47e07d9134">&#9670;&#160;</a></span>Destroy()</h2>
 
@@ -293,7 +262,30 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>销毁所有场景 </p>
+</div>
+</div>
+<a id="ab2f16df8a0e2a6937af9c6b7be04f7d7" name="ab2f16df8a0e2a6937af9c6b7be04f7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f16df8a0e2a6937af9c6b7be04f7d7">&#9670;&#160;</a></span>GetCurrentScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_scene.html">Scene</a> * GetCurrentScene </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -319,6 +311,33 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3dd3fb3f7ca5a03de3ac0fb468288a2f" name="a3dd3fb3f7ca5a03de3ac0fb468288a2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dd3fb3f7ca5a03de3ac0fb468288a2f">&#9670;&#160;</a></span>LoadScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadScene </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>切换场景（销毁当前，加载新场景；update 期间调用时延迟到 update 结束后生效） </p>
 
 </div>
 </div>
@@ -372,87 +391,6 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a65a98350e821e4029abf45c77074c185" name="a65a98350e821e4029abf45c77074c185"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65a98350e821e4029abf45c77074c185">&#9670;&#160;</a></span>PopScene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PopScene </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>弹出栈顶场景（下个帧循环生效） </p>
-
-</div>
-</div>
-<a id="a6a428410da43a236f1ffc3dde15508d9" name="a6a428410da43a236f1ffc3dde15508d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a428410da43a236f1ffc3dde15508d9">&#9670;&#160;</a></span>PushScene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PushScene </td>
-          <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>压入新场景（下个帧循环生效） </p>
-
-</div>
-</div>
-<a id="a2eaa093e982c488a420d60ff3233902d" name="a2eaa093e982c488a420d60ff3233902d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eaa093e982c488a420d60ff3233902d">&#9670;&#160;</a></span>ReplaceScene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ReplaceScene </td>
-          <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>替换栈顶场景 </p>
-
-</div>
-</div>
 <a id="a554d0f30ae93d2787435dca9a46c6c5d" name="a554d0f30ae93d2787435dca9a46c6c5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a554d0f30ae93d2787435dca9a46c6c5d">&#9670;&#160;</a></span>Update()</h2>
 
@@ -475,8 +413,6 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>更新当前场景 </p>
 
 </div>
 </div>
