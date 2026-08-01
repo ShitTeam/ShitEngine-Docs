@@ -6,6 +6,7 @@ var class_shit_1_1_physics_system2_d =
     [ "destroy", "class_shit_1_1_physics_system2_d.html#ae1cf30cae681d95a94934492ae7ea627", null ],
     [ "destroyRigidBody", "class_shit_1_1_physics_system2_d.html#a2cf41b6f810cd96209e298cd79d5edcd", null ],
     [ "getGravity", "class_shit_1_1_physics_system2_d.html#a2d946e2ae9fb5b5279195e252e01e7d9", null ],
+    [ "getPixelsPerMeter", "class_shit_1_1_physics_system2_d.html#a63a9c714254379e849057e5e4c1bb463", null ],
     [ "init", "class_shit_1_1_physics_system2_d.html#ad72eef1561c7a53b19b048397d4ef570", null ],
     [ "onComponentAttached", "class_shit_1_1_physics_system2_d.html#a783a7e369bc1d8c5dc998d08e3e956c1", null ],
     [ "onComponentDetached", "class_shit_1_1_physics_system2_d.html#a7d186d8169496a0f410a29378f23942b", null ],

@@ -188,6 +188,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a2d946e2ae9fb5b5279195e252e01e7d9" id="r_a2d946e2ae9fb5b5279195e252e01e7d9"><td class="memItemLeft">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2d946e2ae9fb5b5279195e252e01e7d9">getGravity</a> () const</td></tr>
 <tr class="memitem:a72cfd28062bbc043bc5df8f086eaaf6c" id="r_a72cfd28062bbc043bc5df8f086eaaf6c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a72cfd28062bbc043bc5df8f086eaaf6c">setPixelsPerMeter</a> (float ppm)</td></tr>
 <tr class="memdesc:a72cfd28062bbc043bc5df8f086eaaf6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置像素↔米比例（必须在 <a class="el" href="#ad72eef1561c7a53b19b048397d4ef570" title="初始化（可覆写）">init()</a> 之前调用），默认 32  <br /></td></tr>
+<tr class="memitem:a63a9c714254379e849057e5e4c1bb463" id="r_a63a9c714254379e849057e5e4c1bb463"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a63a9c714254379e849057e5e4c1bb463">getPixelsPerMeter</a> () const</td></tr>
+<tr class="memdesc:a63a9c714254379e849057e5e4c1bb463"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前像素↔米比例（实例字段，各物理系统独立）  <br /></td></tr>
 <tr class="memitem:a030cec013fe5c9d11c587ca9c71d2625" id="r_a030cec013fe5c9d11c587ca9c71d2625"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a030cec013fe5c9d11c587ca9c71d2625">registerRigidBody</a> (<a class="el" href="#adcad81e9b88ca1a7b55785f6c91b225a">RigidBody2D</a> *body)</td></tr>
 <tr class="memitem:a64ffab0aef8e24653255ddc0dc98399c" id="r_a64ffab0aef8e24653255ddc0dc98399c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a64ffab0aef8e24653255ddc0dc98399c">unregisterRigidBody</a> (<a class="el" href="#adcad81e9b88ca1a7b55785f6c91b225a">RigidBody2D</a> *body)</td></tr>
 <tr class="memitem:a7e0af81cc06660115bea4567f101dede" id="r_a7e0af81cc06660115bea4567f101dede"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7e0af81cc06660115bea4567f101dede">createRigidBody</a> (<a class="el" href="#adcad81e9b88ca1a7b55785f6c91b225a">RigidBody2D</a> *body)</td></tr>
@@ -201,10 +203,6 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a36f2aa21e8b3898775462d2a378d2e0f pub_methods_class_shit_1_1_system" id="r_a36f2aa21e8b3898775462d2a378d2e0f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a36f2aa21e8b3898775462d2a378d2e0f">setScene</a> (<a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene)</td></tr>
 <tr class="memitem:ad65045bcc70661e1e745edbb1da0377b pub_methods_class_shit_1_1_system" id="r_ad65045bcc70661e1e745edbb1da0377b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#ad65045bcc70661e1e745edbb1da0377b">getPriority</a> () const</td></tr>
 <tr class="memitem:a257fc8f8148265762ab350a6a8563ffc pub_methods_class_shit_1_1_system" id="r_a257fc8f8148265762ab350a6a8563ffc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a257fc8f8148265762ab350a6a8563ffc">setPriority</a> (int priority)</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a587b67237dbc23eeb2f9af9431516da7" id="r_a587b67237dbc23eeb2f9af9431516da7"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#a587b67237dbc23eeb2f9af9431516da7">GetPixelsPerMeter</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
@@ -367,8 +365,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a587b67237dbc23eeb2f9af9431516da7" name="a587b67237dbc23eeb2f9af9431516da7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a587b67237dbc23eeb2f9af9431516da7">&#9670;&#160;</a></span>GetPixelsPerMeter()</h2>
+<a id="a63a9c714254379e849057e5e4c1bb463" name="a63a9c714254379e849057e5e4c1bb463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63a9c714254379e849057e5e4c1bb463">&#9670;&#160;</a></span>getPixelsPerMeter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,18 +375,20 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float GetPixelsPerMeter </td>
+          <td class="memname">float getPixelsPerMeter </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>当前像素↔米比例（实例字段，各物理系统独立） </p>
 
 </div>
 </div>

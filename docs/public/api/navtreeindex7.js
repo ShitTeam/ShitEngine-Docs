@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"struct_shit_1_1_field_meta.html#a863c86bdfd96bf9c461846689c2614aa":[1,0,0,21,4],
+"struct_shit_1_1_field_meta.html#a863c86bdfd96bf9c461846689c2614aa":[2,0,0,21,4],
 "struct_shit_1_1_field_meta.html#a96a0d8749397fdee1eb39bb8e9986f07":[1,0,0,21,2],
 "struct_shit_1_1_field_meta.html#a96a0d8749397fdee1eb39bb8e9986f07":[2,0,0,21,2],
 "struct_shit_1_1_field_meta.html#abd54db44deb77f599f600479aea631a3":[1,0,0,21,1],

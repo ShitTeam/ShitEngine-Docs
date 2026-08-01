@@ -67,7 +67,7 @@ var searchData=
   ['getparent_64',['getParent',['../class_shit_1_1_game_object.html#a5adb8c6bcab6353e781579c0c9240e03',1,'Shit::GameObject']]],
   ['getpivot_65',['getPivot',['../class_shit_1_1_u_i_transform.html#a27c1a68a8565d596a8ceec9f6c055142',1,'Shit::UITransform']]],
   ['getpixelperunit_66',['getPixelPerUnit',['../class_shit_1_1_camera_component.html#acf78bf882d3f4bcbecd88e8538c0c66f',1,'Shit::CameraComponent']]],
-  ['getpixelspermeter_67',['GetPixelsPerMeter',['../class_shit_1_1_physics_system2_d.html#a587b67237dbc23eeb2f9af9431516da7',1,'Shit::PhysicsSystem2D']]],
+  ['getpixelspermeter_67',['getPixelsPerMeter',['../class_shit_1_1_physics_system2_d.html#a63a9c714254379e849057e5e4c1bb463',1,'Shit::PhysicsSystem2D']]],
   ['getplaceholder_68',['getPlaceholder',['../class_shit_1_1_u_i_text_input.html#aba3f650a11bf50e676377bb7601b0b44',1,'Shit::UITextInput']]],
   ['getplaceholdercolor_69',['getPlaceholderColor',['../class_shit_1_1_u_i_text_input.html#ab26532f5785cae73973ad3050a0ffe38',1,'Shit::UITextInput']]],
   ['getposition_70',['getPosition',['../class_shit_1_1_camera_component.html#a4f49ac7d5921e6e3595517ffa6dc5971',1,'Shit::CameraComponent::getPosition()'],['../class_shit_1_1_transform_component.html#a2c081df76c94591374823c11e3c59b4f',1,'Shit::TransformComponent::getPosition()']]],
