@@ -228,6 +228,26 @@ auto* e3 = scene->instantiate(enemyPrefab, "enemy_3");
 
 每次 `instantiate` 都执行同一套配置。
 
+### 数据驱动（v1.3+）
+
+Prefab 支持**反射克隆 + JSON 序列化**——从现有 GameObject 捕获组件字段，可保存/加载到文件（编辑器预制体管线的基础）：
+
+```cpp
+// ① 捕获：把场景中已配置好的对象存成预制体
+auto prefab = Shit::Prefab::Capture(heroGO);
+
+// ② 序列化 / 反序列化（JSON）
+std::string jsonStr = prefab.toJson().dump();      // 可落盘
+auto prefab2 = Shit::Prefab::FromJson(nlohmann::json::parse(jsonStr));
+
+// ③ 实例化：反射工厂重建组件，字段值保持一致
+auto* clone = prefab.instantiate(scene, "hero_clone");
+```
+
+- 捕获全部反射组件（跳过 `readOnly` 运行时状态与不可序列化类型）
+- `Vector2` / `Color` / 数值 / 字符串 / 枚举 均可序列化
+- `Prefab::Build(lambda)` 旧用法仍保留
+
 ---
 
 ## System 驱动
