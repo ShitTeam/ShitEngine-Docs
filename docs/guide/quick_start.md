@@ -106,7 +106,7 @@ player->getComponent<Shit::SpriteRenderer>()
 ### 3. 让画面跑起来
 
 ```cpp
-Shit::SceneManager::PushScene(std::move(scene));
+Shit::SceneManager::LoadScene(std::move(scene));
 Shit::Game::Run();
 ```
 
@@ -193,7 +193,7 @@ int main() {
         camera->addComponent<Shit::TransformComponent>();
         camera->addComponent<Shit::CameraComponent>();
 
-        Shit::SceneManager::PushScene(std::move(scene));
+        Shit::SceneManager::LoadScene(std::move(scene));
         Shit::Game::Run();
     }
     Shit::Game::Destroy();

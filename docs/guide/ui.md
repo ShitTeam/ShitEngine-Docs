@@ -427,7 +427,7 @@ int main() {
         input->setPlaceholder("Type here...");
     }
 
-    Shit::SceneManager::PushScene(std::move(scene));
+    Shit::SceneManager::LoadScene(std::move(scene));
     Shit::Game::Run();
     Shit::Game::Destroy();
     return 0;

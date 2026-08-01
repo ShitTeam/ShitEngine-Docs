@@ -24,7 +24,7 @@ scene->init();
 
 `init()` 帮你注册了三个默认系统：`BehaviorSystem`（跑脚本）、`RenderSystem`（画游戏世界）、`UIRenderSystem`（画 UI）。你要有自己的系统，就在这里注册。
 
-> **💡 v1.3+**：`scene->init()` 现在是**可选**的。`SceneManager` 在 `PushScene`/`ReplaceScene` 时若检测到场景还没有任何系统，会自动调用 `init()`——忘记调也不会得到空场景。`init()` 本身幂等，手动调用 + 自动调用不会重复注册系统。自定义 `init()` 覆写仍需调用父类 `Shit::Scene::init()` 以获得默认系统。
+> **💡 v1.3+**：`scene->init()` 现在是**可选**的。`SceneManager` 在 `LoadScene` 时若检测到场景还没有任何系统，会自动调用 `init()`——忘记调也不会得到空场景。`init()` 本身幂等，手动调用 + 自动调用不会重复注册系统。自定义 `init()` 覆写仍需调用父类 `Shit::Scene::init()` 以获得默认系统。
 
 如果你想在场景初始化时做点自己的事，继承它就行：
 
@@ -41,51 +41,58 @@ class MyScene : public Shit::Scene {
 
 > **💡 v1.3+ 组件与系统解耦**：组件不再查询"哪个系统驱动我"。`Behavior`、`RendererComponent`、`RigidBody2D` 等组件挂载时通过 `Scene` 广播给所有系统，由系统用 `dynamic_cast` 认领自己关心的类型。因此**先加组件、后注册系统也能正确挂接**——系统注册时会重扫场景中未注册的组件。新增自定义系统时覆写 `System::onComponentAttached`/`onComponentDetached` 即可认领对应组件。
 
-## 场景栈
+## 场景管理
 
-SceneManager 用栈管场景。任何时候**只有栈顶的场景在活跃**：
+SceneManager 持有**当前活跃场景**（单一场景模型，与 Unity/Godot 一致）。切换场景即销毁旧的、加载新的：
 
 ```cpp
-// 压入主菜单
-Shit::SceneManager::PushScene(std::move(menuScene));
+// 加载主菜单
+Shit::SceneManager::LoadScene(std::move(menuScene));
 
-// 玩家点击"开始游戏"：直接替换
-Shit::SceneManager::ReplaceScene(std::move(gameScene));
-
-// 按暂停：压入暂停菜单，下面的游戏场景保留
-Shit::SceneManager::PushScene(std::move(pauseScene));
-
-// 恢复：弹走暂停菜单
-Shit::SceneManager::PopScene();
-
-// 清空所有
-Shit::SceneManager::ClearScene();
+// 玩家点击"开始游戏"：切换场景（旧场景销毁）
+Shit::SceneManager::LoadScene(std::move(gameScene));
 ```
+
+`LoadScene` 同帧生效，会自动 `init()` 未初始化的场景。
+
+### 暂停
+
+暂停不是场景操作——用全局暂停标志冻结游戏逻辑，UI 叠层照常响应：
+
+```cpp
+// 游戏中按 ESC：暂停
+Shit::Game::SetPaused(true);
+
+// 打开一个 Canvas 当暂停菜单（UI 独立于游戏渲染，叠在游戏之上）
+
+// 恢复
+Shit::Game::SetPaused(false);
+```
+
+暂停时：
+- **`BehaviorSystem`** 冻结 `onUpdate`（`onStart` 仍执行）
+- **`PhysicsSystem2D`** 冻结物理步进
+- **`RenderSystem` / `UIRenderSystem`** 照常——画面冻结在暂停瞬间，UI 菜单可交互
 
 ### 实际场景
 
-**主菜单 → 游戏中**：
+**主菜单 → 游戏中 → 暂停 → 恢复**：
 
 ```cpp
 auto menu = std::make_unique<MenuScene>("menu");
-SceneManager::PushScene(std::move(menu));
+SceneManager::LoadScene(std::move(menu));
 Game::Run();
 
 // 玩家点了"开始"：
-SceneManager::ReplaceScene(std::make_unique<GameScene>("game"));
-```
+SceneManager::LoadScene(std::make_unique<GameScene>("game"));
 
-**暂停时叠一层 UI**：
-
-```cpp
 // 游戏中按 ESC：
-SceneManager::PushScene(std::make_unique<PauseScene>("pause"));
+Game::SetPaused(true);                     // 冻结游戏
+// 显示暂停菜单 Canvas（UIRenderSystem 绘制在游戏之上）
 
 // 恢复：
-SceneManager::PopScene();
+Game::SetPaused(false);                    // 游戏继续
 ```
-
-切换时下面被压住的场景不会销毁，回来时状态全在。
 
 ## 系统（System）
 

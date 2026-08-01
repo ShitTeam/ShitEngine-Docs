@@ -196,7 +196,7 @@ camera->addComponent<Shit::CameraComponent>()->setZoom(5.0f);
 把场景交给 SceneManager，跑起来：
 
 ```cpp
-Shit::SceneManager::PushScene(std::move(scene));
+Shit::SceneManager::LoadScene(std::move(scene));
 Shit::Game::Run();
 ```
 
@@ -237,7 +237,7 @@ int main() {
         camera->addComponent<Shit::TransformComponent>();
         camera->addComponent<Shit::CameraComponent>()->setZoom(5.0f);
 
-        Shit::SceneManager::PushScene(std::move(scene));
+        Shit::SceneManager::LoadScene(std::move(scene));
         Shit::Game::Run();
     }
     Shit::Game::Destroy();
