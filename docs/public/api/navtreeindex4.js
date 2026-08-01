@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"class_shit_1_1_texture_manager.html":[1,0,0,44],
+"class_shit_1_1_texture_manager.html":[2,0,0,44],
 "class_shit_1_1_texture_manager.html#a25cc7de49c31eeb6df51efdef13717d2":[1,0,0,44,1],
 "class_shit_1_1_texture_manager.html#a25cc7de49c31eeb6df51efdef13717d2":[2,0,0,44,1],
 "class_shit_1_1_texture_manager.html#a4e29adea2be507dc2b6510439f6a8de8":[1,0,0,44,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "class_shit_1_1_u_i_text.html#a13a2f499c95c8c83180db6d10b1faacb":[1,0,0,55,2],
 "class_shit_1_1_u_i_text.html#a13a2f499c95c8c83180db6d10b1faacb":[2,0,0,55,2],
 "class_shit_1_1_u_i_text.html#a2397a89c4b542bbee0af960e3d9a9ff6":[1,0,0,55,3],
-"class_shit_1_1_u_i_text.html#a2397a89c4b542bbee0af960e3d9a9ff6":[2,0,0,55,3],
-"class_shit_1_1_u_i_text.html#a2980048638fd8eddd32afd2e26e3a19c":[1,0,0,55,1],
-"class_shit_1_1_u_i_text.html#a2980048638fd8eddd32afd2e26e3a19c":[2,0,0,55,1]
+"class_shit_1_1_u_i_text.html#a2397a89c4b542bbee0af960e3d9a9ff6":[2,0,0,55,3]
 };

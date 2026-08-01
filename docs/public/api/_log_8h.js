@@ -1,6 +1,8 @@
 var _log_8h =
 [
     [ "Log", "class_shit_1_1_log.html", null ],
+    [ "ST_ASSERT", "_log_8h.html#af6131e13b0a7f61ac6c7bc168feb0bda", null ],
+    [ "ST_CORE_ASSERT", "_log_8h.html#a5c63ddbbc5f8f1e6adeaacb59571a387", null ],
     [ "ST_CORE_CRITICAL", "_log_8h.html#a304ac95c5017efaabaca729e1dadcb5f", null ],
     [ "ST_CORE_DEBUG", "_log_8h.html#afe6cc112769b2b8ca030f3a2d26f6452", null ],
     [ "ST_CORE_ERROR", "_log_8h.html#abf3849fe584d46510e5470f930e2eda0", null ],

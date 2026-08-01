@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"functions_func_f.html":[2,3,1,5],
+"functions_func_g.html":[2,3,1,6],
 "functions_func_h.html":[2,3,1,7],
 "functions_func_i.html":[2,3,1,8],
 "functions_func_l.html":[2,3,1,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "struct_shit_1_1_field_meta.html#a1729796f03559082040198b11c08f0ff":[1,0,0,21,6],
 "struct_shit_1_1_field_meta.html#a1729796f03559082040198b11c08f0ff":[2,0,0,21,6],
 "struct_shit_1_1_field_meta.html#a2661d851ae26aa3aeaac87ebf74c779f":[1,0,0,21,3],
-"struct_shit_1_1_field_meta.html#a2661d851ae26aa3aeaac87ebf74c779f":[2,0,0,21,3],
-"struct_shit_1_1_field_meta.html#a830b29afbe8425dad3ae4c16b898b8f6":[1,0,0,21,5],
-"struct_shit_1_1_field_meta.html#a830b29afbe8425dad3ae4c16b898b8f6":[2,0,0,21,5]
+"struct_shit_1_1_field_meta.html#a2661d851ae26aa3aeaac87ebf74c779f":[2,0,0,21,3]
 };
