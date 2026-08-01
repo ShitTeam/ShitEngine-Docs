@@ -39,6 +39,8 @@ class MyScene : public Shit::Scene {
 };
 ```
 
+> **💡 v1.3+ 组件与系统解耦**：组件不再查询"哪个系统驱动我"。`Behavior`、`RendererComponent`、`RigidBody2D` 等组件挂载时通过 `Scene` 广播给所有系统，由系统用 `dynamic_cast` 认领自己关心的类型。因此**先加组件、后注册系统也能正确挂接**——系统注册时会重扫场景中未注册的组件。新增自定义系统时覆写 `System::onComponentAttached`/`onComponentDetached` 即可认领对应组件。
+
 ## 场景栈
 
 SceneManager 用栈管场景。任何时候**只有栈顶的场景在活跃**：
