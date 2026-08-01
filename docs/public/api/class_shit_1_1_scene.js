@@ -11,6 +11,7 @@ var class_shit_1_1_scene =
     [ "getName", "class_shit_1_1_scene.html#a3fd7335faa33dce2f87c7e50eef3e294", null ],
     [ "getSystem", "class_shit_1_1_scene.html#ab4a3a27e9b74cb9cca5a7cded635aad6", null ],
     [ "hasSystem", "class_shit_1_1_scene.html#aea880a156468d35b99e0e49bb0502540", null ],
+    [ "hasSystems", "class_shit_1_1_scene.html#a7904c998322c92e144f5dba063b17e11", null ],
     [ "init", "class_shit_1_1_scene.html#a9339772ec5ac9fa929938109207f2863", null ],
     [ "instantiate", "class_shit_1_1_scene.html#aacfe102452215e81fe047bfe6de8e4d0", null ],
     [ "operator=", "class_shit_1_1_scene.html#a022dd9625fc47205f10ec978727b90d0", null ],
