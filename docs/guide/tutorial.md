@@ -28,7 +28,7 @@ lang: zh_CN
 | `ShitEngine-linux` | Linux | GCC | tar.gz |
 | `ShitEngine-macos` | macOS | Clang | tar.gz |
 
-**GitHub Release** — 当引擎发布正式版本时，可以在 [Releases 页面](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的压缩包。目前还没正式发布第一个版本。<!-- 有 Release 后删掉这句 -->
+**GitHub Release** — 引擎发布正式版本时，可以在 [Releases 页面](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的预编译包。当前已发布 **v1.3.0**（首个正式 Release）。
 
 解压得到 SDK 结构：
 
