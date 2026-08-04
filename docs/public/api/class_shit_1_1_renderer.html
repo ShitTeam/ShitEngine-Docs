@@ -180,6 +180,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:abdc592736185addda2799dbabfee82f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换缓冲区（每帧末尾调用）  <br /></td></tr>
 <tr class="memitem:a46e30e87d3ca42bc3018843f563dfb12" id="r_a46e30e87d3ca42bc3018843f563dfb12"><td class="memItemLeft">static SDL_Renderer *&#160;</td><td class="memItemRight"><a class="el" href="#a46e30e87d3ca42bc3018843f563dfb12">GetRenderer</a> ()</td></tr>
 <tr class="memdesc:a46e30e87d3ca42bc3018843f563dfb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取原生 SDL_Renderer  <br /></td></tr>
+<tr class="memitem:afdb8d066e224d6c701a406e67278e58f" id="r_afdb8d066e224d6c701a406e67278e58f"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#afdb8d066e224d6c701a406e67278e58f">ReadPixels</a> (void *pixels, int pitch)</td></tr>
+<tr class="memdesc:afdb8d066e224d6c701a406e67278e58f"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取渲染缓冲像素（离屏渲染/编辑器预览用）  <br /></td></tr>
 <tr class="memitem:ab41bacdc8fc4a5f995d01cc99c62c0ab" id="r_ab41bacdc8fc4a5f995d01cc99c62c0ab"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ab41bacdc8fc4a5f995d01cc99c62c0ab">GetLogicalWidth</a> ()</td></tr>
 <tr class="memdesc:ab41bacdc8fc4a5f995d01cc99c62c0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">逻辑分辨率宽度  <br /></td></tr>
 <tr class="memitem:ad903053e03f7af1de814d044f7b0dcb4" id="r_ad903053e03f7af1de814d044f7b0dcb4"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ad903053e03f7af1de814d044f7b0dcb4">GetLogicalHeight</a> ()</td></tr>
@@ -766,6 +768,45 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>交换缓冲区（每帧末尾调用） </p>
+
+</div>
+</div>
+<a id="afdb8d066e224d6c701a406e67278e58f" name="afdb8d066e224d6c701a406e67278e58f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb8d066e224d6c701a406e67278e58f">&#9670;&#160;</a></span>ReadPixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReadPixels </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pixels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取渲染缓冲像素（离屏渲染/编辑器预览用） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>输出缓冲区，至少 width*height*4 字节（ARGB8888） </td></tr>
+    <tr><td class="paramname">pitch</td><td>每行字节数（通常 width*4） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回 true </dd></dl>
 
 </div>
 </div>
