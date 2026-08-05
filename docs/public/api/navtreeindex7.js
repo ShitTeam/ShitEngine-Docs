@@ -1,5 +1,9 @@
 var NAVTREEINDEX7 =
 {
+"struct_shit_1_1_enum_value.html#ac072af30c4ffbc834bb4c681f6ecb514":[1,0,0,17,1],
+"struct_shit_1_1_enum_value.html#ac072af30c4ffbc834bb4c681f6ecb514":[2,0,0,17,1],
+"struct_shit_1_1_event.html":[1,0,0,18],
+"struct_shit_1_1_event.html":[2,0,0,18],
 "struct_shit_1_1_event.html#ab259bf8791b9706ecd60c91988165e18":[1,0,0,18,0],
 "struct_shit_1_1_event.html#ab259bf8791b9706ecd60c91988165e18":[2,0,0,18,0],
 "struct_shit_1_1_field_info.html":[1,0,0,20],

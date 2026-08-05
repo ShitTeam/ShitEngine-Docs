@@ -191,6 +191,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ac6fbdf7e9178c78eb3c69f0b041b6abc" id="r_ac6fbdf7e9178c78eb3c69f0b041b6abc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac6fbdf7e9178c78eb3c69f0b041b6abc">setSize</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;worldSize)</td></tr>
 <tr class="memitem:ae0e04ac9c7535158dd7f0d73d9e8501c" id="r_ae0e04ac9c7535158dd7f0d73d9e8501c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae0e04ac9c7535158dd7f0d73d9e8501c">setZoom</a> (float zoom)</td></tr>
 <tr class="memitem:a257fc8f8148265762ab350a6a8563ffc" id="r_a257fc8f8148265762ab350a6a8563ffc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a257fc8f8148265762ab350a6a8563ffc">setPriority</a> (int priority)</td></tr>
+<tr class="memitem:a32b9dc15995ce2538f774b7237d96908" id="r_a32b9dc15995ce2538f774b7237d96908"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a32b9dc15995ce2538f774b7237d96908">setEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:a32b9dc15995ce2538f774b7237d96908"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否参与渲染（编辑器双视图分离用）  <br /></td></tr>
+<tr class="memitem:aacb819fb241851fd9fc045271baa4034" id="r_aacb819fb241851fd9fc045271baa4034"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aacb819fb241851fd9fc045271baa4034">isEnabled</a> () const</td></tr>
 <tr class="memitem:af46f9f1cacade2d0de7f898d8950b9da" id="r_af46f9f1cacade2d0de7f898d8950b9da"><td class="memItemLeft">const SDL_FRect &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af46f9f1cacade2d0de7f898d8950b9da">getViewportRatio</a> () const</td></tr>
 <tr class="memdesc:af46f9f1cacade2d0de7f898d8950b9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">视口比例 (0~1)  <br /></td></tr>
 <tr class="memitem:a0f25b79a5807f94786a01bb8e28932a0" id="r_a0f25b79a5807f94786a01bb8e28932a0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0f25b79a5807f94786a01bb8e28932a0">setViewportRatio</a> (const SDL_FRect &amp;ratio)</td></tr>
@@ -383,6 +386,31 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="aacb819fb241851fd9fc045271baa4034" name="aacb819fb241851fd9fc045271baa4034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb819fb241851fd9fc045271baa4034">&#9670;&#160;</a></span>isEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="acbef2688cd43fd22241759f89fe12d28" name="acbef2688cd43fd22241759f89fe12d28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbef2688cd43fd22241759f89fe12d28">&#9670;&#160;</a></span>onAttach()</h2>
 
@@ -453,6 +481,33 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>屏幕像素坐标 → 世界坐标 </p>
+
+</div>
+</div>
+<a id="a32b9dc15995ce2538f774b7237d96908" name="a32b9dc15995ce2538f774b7237d96908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b9dc15995ce2538f774b7237d96908">&#9670;&#160;</a></span>setEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否参与渲染（编辑器双视图分离用） </p>
 
 </div>
 </div>

@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"classes.html":[2,1],
+"dir_10df154bf4c1851610e82ec74304fc58.html":[3,0,1,0,3],
+"dir_1a3f9a654085d5519d3839c1ac5fe010.html":[3,0,1,0,6],
+"dir_20927711bbdc291e89e3a65fe91dcd48.html":[3,0,1,0,1],
 "dir_314d3b5bfda03e759c3ddc64f23ac135.html":[3,0,1,0,12],
 "dir_44f3ab71c93c73756abb7aac6a9dafbd.html":[3,0,1,0,7],
 "dir_49e56c817e5e54854c35e136979f97ca.html":[3,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "struct_shit_1_1_enum_value.html":[1,0,0,17],
 "struct_shit_1_1_enum_value.html":[2,0,0,17],
 "struct_shit_1_1_enum_value.html#a9b45b3e13bd9167aab02e17e08916231":[1,0,0,17,0],
-"struct_shit_1_1_enum_value.html#a9b45b3e13bd9167aab02e17e08916231":[2,0,0,17,0],
-"struct_shit_1_1_enum_value.html#ac072af30c4ffbc834bb4c681f6ecb514":[1,0,0,17,1],
-"struct_shit_1_1_enum_value.html#ac072af30c4ffbc834bb4c681f6ecb514":[2,0,0,17,1],
-"struct_shit_1_1_event.html":[1,0,0,18],
-"struct_shit_1_1_event.html":[2,0,0,18]
+"struct_shit_1_1_enum_value.html#a9b45b3e13bd9167aab02e17e08916231":[2,0,0,17,0]
 };
