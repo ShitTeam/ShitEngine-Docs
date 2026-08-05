@@ -182,6 +182,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a46e30e87d3ca42bc3018843f563dfb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取原生 SDL_Renderer  <br /></td></tr>
 <tr class="memitem:afdb8d066e224d6c701a406e67278e58f" id="r_afdb8d066e224d6c701a406e67278e58f"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#afdb8d066e224d6c701a406e67278e58f">ReadPixels</a> (void *pixels, int pitch)</td></tr>
 <tr class="memdesc:afdb8d066e224d6c701a406e67278e58f"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取渲染缓冲像素（离屏渲染/编辑器预览用）  <br /></td></tr>
+<tr class="memitem:a04778e80ef30e6fb744cafae1d9f6a98" id="r_a04778e80ef30e6fb744cafae1d9f6a98"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a04778e80ef30e6fb744cafae1d9f6a98">BeginOffscreen</a> ()</td></tr>
+<tr class="memdesc:a04778e80ef30e6fb744cafae1d9f6a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">开始离屏渲染到逻辑尺寸(1280×720)目标纹理（编辑器预览用） 之后 <a class="el" href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">SceneManager::Update</a> 的渲染进该纹理；ReadPixels 读出逻辑尺寸像素， 与相机坐标空间一致（不受窗口物理尺寸影响）。  <br /></td></tr>
+<tr class="memitem:ae1d2740a97f28f8f8c0000149db0e6de" id="r_ae1d2740a97f28f8f8c0000149db0e6de"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae1d2740a97f28f8f8c0000149db0e6de">EndOffscreen</a> ()</td></tr>
 <tr class="memitem:ab41bacdc8fc4a5f995d01cc99c62c0ab" id="r_ab41bacdc8fc4a5f995d01cc99c62c0ab"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ab41bacdc8fc4a5f995d01cc99c62c0ab">GetLogicalWidth</a> ()</td></tr>
 <tr class="memdesc:ab41bacdc8fc4a5f995d01cc99c62c0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">逻辑分辨率宽度  <br /></td></tr>
 <tr class="memitem:ad903053e03f7af1de814d044f7b0dcb4" id="r_ad903053e03f7af1de814d044f7b0dcb4"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ad903053e03f7af1de814d044f7b0dcb4">GetLogicalHeight</a> ()</td></tr>
@@ -268,6 +271,33 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a04778e80ef30e6fb744cafae1d9f6a98" name="a04778e80ef30e6fb744cafae1d9f6a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04778e80ef30e6fb744cafae1d9f6a98">&#9670;&#160;</a></span>BeginOffscreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BeginOffscreen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>开始离屏渲染到逻辑尺寸(1280×720)目标纹理（编辑器预览用） 之后 <a class="el" href="class_shit_1_1_scene_manager.html#a554d0f30ae93d2787435dca9a46c6c5d">SceneManager::Update</a> 的渲染进该纹理；ReadPixels 读出逻辑尺寸像素， 与相机坐标空间一致（不受窗口物理尺寸影响）。 </p>
+
+</div>
+</div>
 <a id="a475137dafa350eeaca6719b1ab00911f" name="a475137dafa350eeaca6719b1ab00911f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a475137dafa350eeaca6719b1ab00911f">&#9670;&#160;</a></span>ClearClipRect()</h2>
 
@@ -531,6 +561,31 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>旋转/翻转绘制（SDL_RenderTextureRotated） </p>
+
+</div>
+</div>
+<a id="ae1d2740a97f28f8f8c0000149db0e6de" name="ae1d2740a97f28f8f8c0000149db0e6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d2740a97f28f8f8c0000149db0e6de">&#9670;&#160;</a></span>EndOffscreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EndOffscreen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
