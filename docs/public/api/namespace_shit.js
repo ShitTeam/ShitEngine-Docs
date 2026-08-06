@@ -39,6 +39,7 @@ var namespace_shit =
     [ "RigidBody2D", "class_shit_1_1_rigid_body2_d.html", "class_shit_1_1_rigid_body2_d" ],
     [ "Scene", "class_shit_1_1_scene.html", "class_shit_1_1_scene" ],
     [ "SceneManager", "class_shit_1_1_scene_manager.html", "class_shit_1_1_scene_manager" ],
+    [ "SceneSerializer", "class_shit_1_1_scene_serializer.html", null ],
     [ "Sprite", "class_shit_1_1_sprite.html", "class_shit_1_1_sprite" ],
     [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", "class_shit_1_1_sprite_renderer" ],
     [ "SpriteSheet", "class_shit_1_1_sprite_sheet.html", "class_shit_1_1_sprite_sheet" ],

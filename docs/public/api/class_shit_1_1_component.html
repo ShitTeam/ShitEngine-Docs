@@ -186,6 +186,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a6f4c9e6fe81d4bffc712d4d0ae4d72ff" id="r_a6f4c9e6fe81d4bffc712d4d0ae4d72ff"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6f4c9e6fe81d4bffc712d4d0ae4d72ff">onAttach</a> ()</td></tr>
 <tr class="memitem:aae1f5204fbabb92a0de013b8f0fd6616" id="r_aae1f5204fbabb92a0de013b8f0fd6616"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aae1f5204fbabb92a0de013b8f0fd6616">onDetach</a> ()</td></tr>
 <tr class="memitem:a448d46f0dcad2b19c77f8a2cc880127c" id="r_a448d46f0dcad2b19c77f8a2cc880127c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a448d46f0dcad2b19c77f8a2cc880127c">onDestroy</a> ()</td></tr>
+<tr class="memitem:ae4c3a7f8b6190c245e7b62b07b4afc66" id="r_ae4c3a7f8b6190c245e7b62b07b4afc66"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae4c3a7f8b6190c245e7b62b07b4afc66">onAfterDeserialize</a> ()</td></tr>
+<tr class="memdesc:ae4c3a7f8b6190c245e7b62b07b4afc66"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。  <br /></td></tr>
 <tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const Component &amp;)=delete</td></tr>
 <tr class="memitem:ace504c89f605c2e53f2450021ebca56e" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft"><a class="el" href="#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;)=delete</td></tr>
 <tr class="memitem:aa85c694df3855843a20a64cb0fc17233" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa85c694df3855843a20a64cb0fc17233">Component</a> (Component &amp;&amp;)=delete</td></tr>
@@ -352,6 +354,35 @@ Protected 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4c3a7f8b6190c245e7b62b07b4afc66" name="ae4c3a7f8b6190c245e7b62b07b4afc66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c3a7f8b6190c245e7b62b07b4afc66">&#9670;&#160;</a></span>onAfterDeserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onAfterDeserialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。 </p>
+
+<p>被 <a class="el" href="class_shit_1_1_sprite_renderer.html#a9270529a4341cf8bf3f6a29a56556366">SpriteRenderer</a> 重载.</p>
 
 </div>
 </div>

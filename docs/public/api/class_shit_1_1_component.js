@@ -6,6 +6,7 @@ var class_shit_1_1_component =
     [ "Component", "class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233", null ],
     [ "getOwner", "class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a", null ],
     [ "isRegistered", "class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246", null ],
+    [ "onAfterDeserialize", "class_shit_1_1_component.html#ae4c3a7f8b6190c245e7b62b07b4afc66", null ],
     [ "onAttach", "class_shit_1_1_component.html#a6f4c9e6fe81d4bffc712d4d0ae4d72ff", null ],
     [ "onCreate", "class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722", null ],
     [ "onDestroy", "class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c", null ],

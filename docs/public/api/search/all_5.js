@@ -37,5 +37,6 @@ var searchData=
   ['foreach_34',['ForEach',['../class_shit_1_1_type_registry.html#a95d41ba8e879cbd5ed1eb9d1967587d8',1,'Shit::TypeRegistry']]],
   ['foreach_35',['forEach',['../class_shit_1_1_type_registry.html#ab741f61fd936cb1fea75d452931d33ea',1,'Shit::TypeRegistry']]],
   ['foreachcomponent_36',['forEachComponent',['../class_shit_1_1_game_object.html#a83fda332b3e926aae80bd38bb1766aad',1,'Shit::GameObject']]],
-  ['fromjson_37',['FromJson',['../class_shit_1_1_prefab.html#a7799270796d824226f9daafb14463bad',1,'Shit::Prefab']]]
+  ['fromjson_37',['FromJson',['../class_shit_1_1_prefab.html#a7799270796d824226f9daafb14463bad',1,'Shit::Prefab']]],
+  ['fromjson_38',['fromJson',['../class_shit_1_1_scene_serializer.html#a92d24a1b1e91ebe5c228b9eb5d879409',1,'Shit::SceneSerializer']]]
 ];

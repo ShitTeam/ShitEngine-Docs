@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"class_shit_1_1_engine_context.html#af66f2c76efa2d73abacb2576c04beea7":[1,0,0,16,14],
+"class_shit_1_1_engine_context.html#af66f2c76efa2d73abacb2576c04beea7":[2,0,0,16,14],
+"class_shit_1_1_engine_context.html#aff2b895bbd5cc518f6f897160d6300a5":[1,0,0,16,1],
+"class_shit_1_1_engine_context.html#aff2b895bbd5cc518f6f897160d6300a5":[2,0,0,16,1],
 "class_shit_1_1_event_bus.html":[1,0,0,19],
 "class_shit_1_1_event_bus.html":[2,0,0,19],
 "class_shit_1_1_event_bus.html#a6c2d6f38a9c25314d460f91f1c2a801c":[1,0,0,19,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "class_shit_1_1_renderer_component.html#ad51138fd45b987bf8edbc766b4875122":[1,0,0,33,3],
 "class_shit_1_1_renderer_component.html#ad51138fd45b987bf8edbc766b4875122":[2,0,0,33,3],
 "class_shit_1_1_renderer_component.html#aee7be93617a6078496df31830d454990":[1,0,0,33,6],
-"class_shit_1_1_renderer_component.html#aee7be93617a6078496df31830d454990":[2,0,0,33,6],
-"class_shit_1_1_resource_manager.html":[1,0,0,35],
-"class_shit_1_1_resource_manager.html":[2,0,0,35],
-"class_shit_1_1_resource_manager.html#a1ed8a99a4569c0bdaa9059fb6b6f9567":[1,0,0,35,3],
-"class_shit_1_1_resource_manager.html#a1ed8a99a4569c0bdaa9059fb6b6f9567":[2,0,0,35,3]
+"class_shit_1_1_renderer_component.html#aee7be93617a6078496df31830d454990":[2,0,0,33,6]
 };

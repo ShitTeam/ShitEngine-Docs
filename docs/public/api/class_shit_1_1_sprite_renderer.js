@@ -6,6 +6,7 @@ var class_shit_1_1_sprite_renderer =
     [ "getSourceRect", "class_shit_1_1_sprite_renderer.html#acc6d59208bb5d18bf9ffd30dc3432169", null ],
     [ "getTexturePath", "class_shit_1_1_sprite_renderer.html#ab666c41ebea083a5c6604ce593b59e17", null ],
     [ "isFlipped", "class_shit_1_1_sprite_renderer.html#af1579f186eb2eb6413a1a9c312a9f020", null ],
+    [ "onAfterDeserialize", "class_shit_1_1_sprite_renderer.html#a9270529a4341cf8bf3f6a29a56556366", null ],
     [ "onRender", "class_shit_1_1_sprite_renderer.html#ad5954d600e7e4fc3341ad4a15cda63ba", null ],
     [ "setFlipped", "class_shit_1_1_sprite_renderer.html#ad34a52d954a18c0f9aa8e99bd02104f0", null ],
     [ "setSourceRect", "class_shit_1_1_sprite_renderer.html#a793a0745c1b76fe461518367f1ed7199", null ],

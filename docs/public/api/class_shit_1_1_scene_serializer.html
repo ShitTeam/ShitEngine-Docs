@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShitEngine: include/ShitEngine/Scene 目录参考</title>
+<title>ShitEngine: SceneSerializer类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('dir_d5658868d660ae747b8df7b66a8ad075.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_scene_serializer.html','','class_shit_1_1_scene_serializer-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -151,16 +151,104 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('dir_d5658868d6
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Scene 目录参考</div></div>
+  <div class="headertitle"><div class="title">SceneSerializer类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>全场景序列化器 —— .scene 文件的事实标准（v2）  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_scene_serializer_8h_source.html">SceneSerializer.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
-文件</h2></td></tr>
-<tr class="memitem:Scene_2Eh" id="r_Scene_2Eh"><td class="memItemLeft"><a href="_scene_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><a class="el" href="_scene_8h.html">Scene.h</a></td></tr>
-<tr class="memitem:SceneManager_2Eh" id="r_SceneManager_2Eh"><td class="memItemLeft"><a href="_scene_manager_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><a class="el" href="_scene_manager_8h.html">SceneManager.h</a></td></tr>
-<tr class="memitem:SceneSerializer_2Eh" id="r_SceneSerializer_2Eh"><td class="memItemLeft"><a href="_scene_serializer_8h_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><a class="el" href="_scene_serializer_8h.html">SceneSerializer.h</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a18fc004d08115675b484ea894778c1bf" id="r_a18fc004d08115675b484ea894778c1bf"><td class="memItemLeft">static nlohmann::json&#160;</td><td class="memItemRight"><a class="el" href="#a18fc004d08115675b484ea894778c1bf">toJson</a> (<a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene, const std::vector&lt; std::string &gt; &amp;excludeNames={})</td></tr>
+<tr class="memdesc:a18fc004d08115675b484ea894778c1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列化整个场景（含层级）为 v2 JSON。被排除的对象（如编辑器相机）不落盘， 其子对象提升为根（parent=-1）。  <br /></td></tr>
+<tr class="memitem:a92d24a1b1e91ebe5c228b9eb5d879409" id="r_a92d24a1b1e91ebe5c228b9eb5d879409"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a92d24a1b1e91ebe5c228b9eb5d879409">fromJson</a> (const nlohmann::json &amp;doc, <a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memdesc:a92d24a1b1e91ebe5c228b9eb5d879409"><td class="mdescLeft">&#160;</td><td class="mdescRight">把 JSON 追加实例化进目标场景（对象 + 组件 + 层级 + 相机兜底）。 调用方负责前置清场（如编辑器"打开"先删旧对象）； 实例化失败仅跳过对应对象，不抛异常、不影响已加载部分。  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>全场景序列化器 —— .scene 文件的事实标准（v2） </p>
+<p>编辑器、Runtime、关卡切换共用同一格式与同一加载器： 编辑（toJson/fromJson）、运行（SceneManager::LoadSceneFromFile）。</p>
+<p>.scene v2 格式： </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;version&quot;: 2,</div>
+<div class="line">  &quot;objects&quot;: [</div>
+<div class="line">    { &quot;name&quot;: &quot;Play_Area&quot;, &quot;parent&quot;: -1, &quot;data&quot;: [ { &quot;type&quot;: &quot;...&quot;, &quot;fields&quot;: {...} } ] },</div>
+<div class="line">    { &quot;name&quot;: &quot;Child&quot;,     &quot;parent&quot;: 0,  &quot;data&quot;: [ ... ] }</div>
+<div class="line">  ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><ul>
+<li><span class="tt">parent</span>：父对象在 objects 数组中的下标，-1 表示根对象（保存时父先于子出现）</li>
+<li><span class="tt">data</span>：组件数组，复用 <a class="el" href="class_shit_1_1_prefab.html" title="预制体，可重复生成相同配置的 GameObject">Prefab</a> 的反射序列化（Prefab::Capture/FromJson）</li>
+<li>兼容 v1：无 version / 对象无 parent 字段 → 全部按根对象加载</li>
+<li>相机兜底：加载后场景内无已启用相机则自动补 <span class="tt">game_camera</span> </li>
+</ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a92d24a1b1e91ebe5c228b9eb5d879409" name="a92d24a1b1e91ebe5c228b9eb5d879409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d24a1b1e91ebe5c228b9eb5d879409">&#9670;&#160;</a></span>fromJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fromJson </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;</td>          <td class="paramname"><span class="paramname"><em>doc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>把 JSON 追加实例化进目标场景（对象 + 组件 + 层级 + 相机兜底）。 调用方负责前置清场（如编辑器"打开"先删旧对象）； 实例化失败仅跳过对应对象，不抛异常、不影响已加载部分。 </p>
+
+</div>
+</div>
+<a id="a18fc004d08115675b484ea894778c1bf" name="a18fc004d08115675b484ea894778c1bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18fc004d08115675b484ea894778c1bf">&#9670;&#160;</a></span>toJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json toJson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_scene.html">Scene</a> *</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>excludeNames</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>序列化整个场景（含层级）为 v2 JSON。被排除的对象（如编辑器相机）不落盘， 其子对象提升为根（parent=-1）。 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Scene/<a class="el" href="_scene_serializer_8h_source.html">SceneSerializer.h</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -175,7 +263,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('dir_d5658868d6
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a href="dir_d5658868d660ae747b8df7b66a8ad075.html">Scene</a></li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_scene_serializer.html">SceneSerializer</a></li>
     <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

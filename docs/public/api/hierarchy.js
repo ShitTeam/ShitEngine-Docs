@@ -54,6 +54,7 @@ var hierarchy =
     [ "ResourceManager", "class_shit_1_1_resource_manager.html", null ],
     [ "Scene", "class_shit_1_1_scene.html", null ],
     [ "SceneManager", "class_shit_1_1_scene_manager.html", null ],
+    [ "SceneSerializer", "class_shit_1_1_scene_serializer.html", null ],
     [ "Sprite", "class_shit_1_1_sprite.html", null ],
     [ "SpriteSheet", "class_shit_1_1_sprite_sheet.html", null ],
     [ "System", "class_shit_1_1_system.html", [

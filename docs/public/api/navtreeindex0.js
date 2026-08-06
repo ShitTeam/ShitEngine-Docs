@@ -87,6 +87,8 @@ var NAVTREEINDEX0 =
 "_scene_8h_source.html":[3,0,1,0,10,0],
 "_scene_manager_8h.html":[3,0,1,0,10,1],
 "_scene_manager_8h_source.html":[3,0,1,0,10,1],
+"_scene_serializer_8h.html":[3,0,1,0,10,2],
+"_scene_serializer_8h_source.html":[3,0,1,0,10,2],
 "_sprite_8h.html":[3,0,1,0,8,3],
 "_sprite_8h_source.html":[3,0,1,0,8,3],
 "_sprite_renderer_8h.html":[3,0,1,0,1,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "class_shit_1_1_audio_track.html#af5bb96b535cca6cb725b5a8ccf4cdec4":[1,0,0,5,9],
 "class_shit_1_1_audio_track.html#af5bb96b535cca6cb725b5a8ccf4cdec4":[2,0,0,5,9],
 "class_shit_1_1_audio_track_group.html":[1,0,0,6],
-"class_shit_1_1_audio_track_group.html":[2,0,0,6],
-"class_shit_1_1_audio_track_group.html#a3fd7335faa33dce2f87c7e50eef3e294":[1,0,0,6,1],
-"class_shit_1_1_audio_track_group.html#a3fd7335faa33dce2f87c7e50eef3e294":[2,0,0,6,1]
+"class_shit_1_1_audio_track_group.html":[2,0,0,6]
 };
