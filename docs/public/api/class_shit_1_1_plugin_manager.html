@@ -1,0 +1,420 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: PluginManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_plugin_manager.html','','class_shit_1_1_plugin_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PluginManager类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>动态插件管理器（引擎级共享：Runtime 与编辑器共用）  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_plugin_manager_8h_source.html">PluginManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:LoadedPlugin" id="r_LoadedPlugin"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html">LoadedPlugin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">已加载的插件信息  <a href="struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a6eed478d6da5b37c95414b0cc8a263c2" id="r_a6eed478d6da5b37c95414b0cc8a263c2"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a6eed478d6da5b37c95414b0cc8a263c2">GetABIVersionFn</a> = int (*)()</td></tr>
+<tr class="memdesc:a6eed478d6da5b37c95414b0cc8a263c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">插件 C ABI 函数指针类型  <br /></td></tr>
+<tr class="memitem:a4b39ceb1791c3d1827144378fee3bf1a" id="r_a4b39ceb1791c3d1827144378fee3bf1a"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a4b39ceb1791c3d1827144378fee3bf1a">GetNameFn</a> = const char* (*)()</td></tr>
+<tr class="memitem:ae03e3794db9a1a396f3b5ddc9cd919ce" id="r_ae03e3794db9a1a396f3b5ddc9cd919ce"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ae03e3794db9a1a396f3b5ddc9cd919ce">GetVersionFn</a> = const char* (*)()</td></tr>
+<tr class="memitem:a7aade3d8f1f1d1061593419f2886be1b" id="r_a7aade3d8f1f1d1061593419f2886be1b"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a7aade3d8f1f1d1061593419f2886be1b">RegisterTypesFn</a> = void (*)()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afc08635322d4879e620ccb5d9ad3191a" id="r_afc08635322d4879e620ccb5d9ad3191a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afc08635322d4879e620ccb5d9ad3191a">~PluginManager</a> ()</td></tr>
+<tr class="memitem:a7ed43db4fb9f9367d73d103334cc5740" id="r_a7ed43db4fb9f9367d73d103334cc5740"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7ed43db4fb9f9367d73d103334cc5740">LoadFromConfig</a> (const std::string &amp;configPath)</td></tr>
+<tr class="memdesc:a7ed43db4fb9f9367d73d103334cc5740"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 JSON 配置文件加载所有插件（config → "plugins": [{"path": ...}]）  <br /></td></tr>
+<tr class="memitem:a9619337610d7f78e5b4372f5993cacd4" id="r_a9619337610d7f78e5b4372f5993cacd4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9619337610d7f78e5b4372f5993cacd4">RegisterAllTypes</a> ()</td></tr>
+<tr class="memdesc:a9619337610d7f78e5b4372f5993cacd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用所有已加载插件的 RegisterPluginTypes() 必须在 <a class="el" href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Game::Init()</a> 之后调用（引擎内置类型已注册）  <br /></td></tr>
+<tr class="memitem:a6a065c6d6417fdad7decee84c778f86d" id="r_a6a065c6d6417fdad7decee84c778f86d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6a065c6d6417fdad7decee84c778f86d">UnloadAll</a> ()</td></tr>
+<tr class="memdesc:a6a065c6d6417fdad7decee84c778f86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载所有插件（FreeLibrary / dlclose）。注意：必须先于引擎销毁执行。  <br /></td></tr>
+<tr class="memitem:aa5d64e7b0857fb39a9837eaac1474a19" id="r_aa5d64e7b0857fb39a9837eaac1474a19"><td class="memItemLeft">const std::vector&lt; <a class="el" href="struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html">LoadedPlugin</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa5d64e7b0857fb39a9837eaac1474a19">GetPlugins</a> () const</td></tr>
+<tr class="memdesc:aa5d64e7b0857fb39a9837eaac1474a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取已加载插件列表  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ac9795d470dd39948d322b6d783d69bcb" id="r_ac9795d470dd39948d322b6d783d69bcb"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#ac9795d470dd39948d322b6d783d69bcb">kAbiVersion</a> = 2</td></tr>
+<tr class="memdesc:ac9795d470dd39948d322b6d783d69bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">插件 ABI 版本（插件侧通过 GetPluginABIVersion() 返回该常量）  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>动态插件管理器（引擎级共享：Runtime 与编辑器共用） </p>
+<p>负责加载/卸载插件 DLL，调用插件的 C ABI 函数，支持从 JSON 配置文件批量加载。</p>
+<p>插件 = 脚本库（ABI v2）：只负责注册反射类型，不搭建场景（场景来自 .scene 文件）。 使用前提：调用前须处于目标 EngineContext（TypeRegistry 按上下文存放）， 插件注册的类型 factory 位于 DLL 内，故 <a class="el" href="#a6a065c6d6417fdad7decee84c778f86d" title="卸载所有插件（FreeLibrary / dlclose）。注意：必须先于引擎销毁执行。">UnloadAll()</a> 必须先于引擎销毁执行。 </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">成员类型定义说明</h2>
+<a id="a6eed478d6da5b37c95414b0cc8a263c2" name="a6eed478d6da5b37c95414b0cc8a263c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eed478d6da5b37c95414b0cc8a263c2">&#9670;&#160;</a></span>GetABIVersionFn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a6eed478d6da5b37c95414b0cc8a263c2">GetABIVersionFn</a> = int (*)()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插件 C ABI 函数指针类型 </p>
+
+</div>
+</div>
+<a id="a4b39ceb1791c3d1827144378fee3bf1a" name="a4b39ceb1791c3d1827144378fee3bf1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b39ceb1791c3d1827144378fee3bf1a">&#9670;&#160;</a></span>GetNameFn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a4b39ceb1791c3d1827144378fee3bf1a">GetNameFn</a> = const char* (*)()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae03e3794db9a1a396f3b5ddc9cd919ce" name="ae03e3794db9a1a396f3b5ddc9cd919ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae03e3794db9a1a396f3b5ddc9cd919ce">&#9670;&#160;</a></span>GetVersionFn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ae03e3794db9a1a396f3b5ddc9cd919ce">GetVersionFn</a> = const char* (*)()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aade3d8f1f1d1061593419f2886be1b" name="a7aade3d8f1f1d1061593419f2886be1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aade3d8f1f1d1061593419f2886be1b">&#9670;&#160;</a></span>RegisterTypesFn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a7aade3d8f1f1d1061593419f2886be1b">RegisterTypesFn</a> = void (*)()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="afc08635322d4879e620ccb5d9ad3191a" name="afc08635322d4879e620ccb5d9ad3191a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc08635322d4879e620ccb5d9ad3191a">&#9670;&#160;</a></span>~PluginManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="class_shit_1_1_plugin_manager.html">PluginManager</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="aa5d64e7b0857fb39a9837eaac1474a19" name="aa5d64e7b0857fb39a9837eaac1474a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5d64e7b0857fb39a9837eaac1474a19">&#9670;&#160;</a></span>GetPlugins()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html">LoadedPlugin</a> &gt; &amp; GetPlugins </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取已加载插件列表 </p>
+
+</div>
+</div>
+<a id="a7ed43db4fb9f9367d73d103334cc5740" name="a7ed43db4fb9f9367d73d103334cc5740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed43db4fb9f9367d73d103334cc5740">&#9670;&#160;</a></span>LoadFromConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadFromConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>configPath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从 JSON 配置文件加载所有插件（config → "plugins": [{"path": ...}]） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configPath</td><td>配置文件路径（相对于 CWD） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9619337610d7f78e5b4372f5993cacd4" name="a9619337610d7f78e5b4372f5993cacd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9619337610d7f78e5b4372f5993cacd4">&#9670;&#160;</a></span>RegisterAllTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RegisterAllTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>调用所有已加载插件的 RegisterPluginTypes() 必须在 <a class="el" href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Game::Init()</a> 之后调用（引擎内置类型已注册） </p>
+
+</div>
+</div>
+<a id="a6a065c6d6417fdad7decee84c778f86d" name="a6a065c6d6417fdad7decee84c778f86d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a065c6d6417fdad7decee84c778f86d">&#9670;&#160;</a></span>UnloadAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnloadAll </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>卸载所有插件（FreeLibrary / dlclose）。注意：必须先于引擎销毁执行。 </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ac9795d470dd39948d322b6d783d69bcb" name="ac9795d470dd39948d322b6d783d69bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9795d470dd39948d322b6d783d69bcb">&#9670;&#160;</a></span>kAbiVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kAbiVersion = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>插件 ABI 版本（插件侧通过 GetPluginABIVersion() 返回该常量） </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Plugin/<a class="el" href="_plugin_manager_8h_source.html">PluginManager.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_plugin_manager.html">PluginManager</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

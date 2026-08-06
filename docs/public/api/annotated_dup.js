@@ -30,6 +30,7 @@ var annotated_dup =
       [ "InputMappingsConfig", "struct_shit_1_1_input_mappings_config.html", "struct_shit_1_1_input_mappings_config" ],
       [ "Log", "class_shit_1_1_log.html", null ],
       [ "PhysicsSystem2D", "class_shit_1_1_physics_system2_d.html", "class_shit_1_1_physics_system2_d" ],
+      [ "PluginManager", "class_shit_1_1_plugin_manager.html", "class_shit_1_1_plugin_manager" ],
       [ "Prefab", "class_shit_1_1_prefab.html", "class_shit_1_1_prefab" ],
       [ "ProjectConfig", "struct_shit_1_1_project_config.html", "struct_shit_1_1_project_config" ],
       [ "RangeMeta", "struct_shit_1_1_range_meta.html", "struct_shit_1_1_range_meta" ],
