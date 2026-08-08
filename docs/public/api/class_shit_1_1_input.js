@@ -14,6 +14,7 @@ var class_shit_1_1_input =
     [ "isMouseButtonDown", "class_shit_1_1_input.html#ab3dc8fcadda41c3e7ed46d15b9a53b57", null ],
     [ "isMouseButtonPressed", "class_shit_1_1_input.html#a5f961312e500b24bdd597345f116a237", null ],
     [ "isMouseButtonReleased", "class_shit_1_1_input.html#ac6e96dbae2987a1eb4767224cae79a29", null ],
+    [ "resetState", "class_shit_1_1_input.html#a755ee993c2d4e9d422c37990b15afa37", null ],
     [ "setMousePosition", "class_shit_1_1_input.html#a68fbb3f28c441d44200abe38d5678a53", null ],
     [ "update", "class_shit_1_1_input.html#ac5c54df7ed3b930268c8d7752c101725", null ],
     [ "EngineContext", "class_shit_1_1_input.html#accacedc6f06871ee6fdc08c2fcce841c", null ]

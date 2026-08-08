@@ -181,6 +181,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ac5293921cbd2f72d61bf1098cba9c87c" id="r_ac5293921cbd2f72d61bf1098cba9c87c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac5293921cbd2f72d61bf1098cba9c87c">handleEvent</a> (const SDL_Event &amp;event)</td></tr>
 <tr class="memitem:a68fbb3f28c441d44200abe38d5678a53" id="r_a68fbb3f28c441d44200abe38d5678a53"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a68fbb3f28c441d44200abe38d5678a53">setMousePosition</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;position)</td></tr>
 <tr class="memdesc:a68fbb3f28c441d44200abe38d5678a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">注入鼠标逻辑坐标（编辑器进程内嵌时由宿主转发 Qt 事件坐标）  <br /></td></tr>
+<tr class="memitem:a755ee993c2d4e9d422c37990b15afa37" id="r_a755ee993c2d4e9d422c37990b15afa37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a755ee993c2d4e9d422c37990b15afa37">resetState</a> ()</td></tr>
+<tr class="memdesc:a755ee993c2d4e9d422c37990b15afa37"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空键鼠三态快照与注入坐标（进入运行态时调用，防遗留按住状态）  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -202,6 +204,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aef5d8fcadcba402ea54a6a655a400dae" id="r_aef5d8fcadcba402ea54a6a655a400dae"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aef5d8fcadcba402ea54a6a655a400dae">HandleEvent</a> (const SDL_Event &amp;event)</td></tr>
 <tr class="memitem:a088a423f3492f617baa5657d58d73c84" id="r_a088a423f3492f617baa5657d58d73c84"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a088a423f3492f617baa5657d58d73c84">SetMousePosition</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;position)</td></tr>
 <tr class="memdesc:a088a423f3492f617baa5657d58d73c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">编辑器注入逻辑坐标（隐藏窗口下 SDL 轮询不到真实鼠标）  <br /></td></tr>
+<tr class="memitem:a1f62712d36cf92aa7b82672a52cd57db" id="r_a1f62712d36cf92aa7b82672a52cd57db"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1f62712d36cf92aa7b82672a52cd57db">ResetState</a> ()</td></tr>
+<tr class="memdesc:a1f62712d36cf92aa7b82672a52cd57db"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空键鼠快照与注入坐标（进入运行态时调用）  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
@@ -829,6 +833,52 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f62712d36cf92aa7b82672a52cd57db" name="a1f62712d36cf92aa7b82672a52cd57db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f62712d36cf92aa7b82672a52cd57db">&#9670;&#160;</a></span>ResetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResetState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空键鼠快照与注入坐标（进入运行态时调用） </p>
+
+</div>
+</div>
+<a id="a755ee993c2d4e9d422c37990b15afa37" name="a755ee993c2d4e9d422c37990b15afa37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a755ee993c2d4e9d422c37990b15afa37">&#9670;&#160;</a></span>resetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清空键鼠三态快照与注入坐标（进入运行态时调用，防遗留按住状态） </p>
 
 </div>
 </div>
