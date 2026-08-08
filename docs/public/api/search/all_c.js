@@ -39,13 +39,14 @@ var searchData=
   ['mediarecord_36',['MediaRecord',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da3c07283997c5468041e4c4cd6de71a41',1,'Shit']]],
   ['mediastop_37',['MediaStop',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da4e98cb54aeee7205dd16a2a054810be0',1,'Shit']]],
   ['memberoffset_38',['memberOffset',['../namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13',1,'Shit']]],
-  ['meta_39',['Meta',['../class_shit_1_1_type_info_builder.html#ad22578c2cb5176da8b5ac26503cceddf',1,'Shit::TypeInfoBuilder']]],
-  ['meta_40',['meta',['../struct_shit_1_1_field_info.html#ae798b5109d23cfc98128b29520eef49d',1,'Shit::FieldInfo']]],
-  ['middle_41',['Middle',['../namespace_shit.html#a826ef52e881054fee6a2055e382950b4ab1ca34f82e83c52b010f86955f264e05',1,'Shit']]],
-  ['min_42',['min',['../struct_shit_1_1_range_meta.html#ad2e88d75f808e6d4e78d48bceb10c336',1,'Shit::RangeMeta']]],
-  ['minus_43',['Minus',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da453fb623e752c5993f65bc410fd74fe5',1,'Shit']]],
-  ['mode_44',['Mode',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da650be61892bf690026089544abbd9d26',1,'Shit']]],
-  ['mousebutton_45',['MouseButton',['../namespace_shit.html#a826ef52e881054fee6a2055e382950b4',1,'Shit']]],
-  ['movecursor_46',['moveCursor',['../class_shit_1_1_u_i_text_input.html#a9e55f123e1e534abe4c64ebf2a6231a4',1,'Shit::UITextInput']]],
-  ['movecursortoboundary_47',['moveCursorToBoundary',['../class_shit_1_1_u_i_text_input.html#ad4564c96d588002d412aa6c347d7f750',1,'Shit::UITextInput']]]
+  ['messagecallback_39',['MessageCallback',['../class_shit_1_1_log.html#aaceb2649b53765286f8eb9310feedc2a',1,'Shit::Log']]],
+  ['meta_40',['Meta',['../class_shit_1_1_type_info_builder.html#ad22578c2cb5176da8b5ac26503cceddf',1,'Shit::TypeInfoBuilder']]],
+  ['meta_41',['meta',['../struct_shit_1_1_field_info.html#ae798b5109d23cfc98128b29520eef49d',1,'Shit::FieldInfo']]],
+  ['middle_42',['Middle',['../namespace_shit.html#a826ef52e881054fee6a2055e382950b4ab1ca34f82e83c52b010f86955f264e05',1,'Shit']]],
+  ['min_43',['min',['../struct_shit_1_1_range_meta.html#ad2e88d75f808e6d4e78d48bceb10c336',1,'Shit::RangeMeta']]],
+  ['minus_44',['Minus',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da453fb623e752c5993f65bc410fd74fe5',1,'Shit']]],
+  ['mode_45',['Mode',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da650be61892bf690026089544abbd9d26',1,'Shit']]],
+  ['mousebutton_46',['MouseButton',['../namespace_shit.html#a826ef52e881054fee6a2055e382950b4',1,'Shit']]],
+  ['movecursor_47',['moveCursor',['../class_shit_1_1_u_i_text_input.html#a9e55f123e1e534abe4c64ebf2a6231a4',1,'Shit::UITextInput']]],
+  ['movecursortoboundary_48',['moveCursorToBoundary',['../class_shit_1_1_u_i_text_input.html#ad4564c96d588002d412aa6c347d7f750',1,'Shit::UITextInput']]]
 ];

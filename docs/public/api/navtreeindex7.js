@@ -1,5 +1,9 @@
 var NAVTREEINDEX7 =
 {
+"namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13":[1,0,0,70],
+"namespace_shit.html#af13a1979f9e8f62c101433fac6511cc6":[1,0,0,65],
+"namespace_shit.html#afe671363a5ef5f405485e38c225e0885":[1,0,0,69],
+"namespacemembers.html":[1,1,0],
 "namespacemembers_enum.html":[1,1,3],
 "namespacemembers_func.html":[1,1,1],
 "namespacemembers_type.html":[1,1,2],

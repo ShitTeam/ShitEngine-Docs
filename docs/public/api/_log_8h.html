@@ -157,6 +157,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_log_8h.html',
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;spdlog/spdlog.h&gt;</code><br />
 <code>#include &lt;spdlog/sinks/stdout_color_sinks.h&gt;</code><br />
 <code>#include &lt;spdlog/fmt/ostr.h&gt;</code><br />
@@ -214,7 +216,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_log_8h.html',
 <div class="line">        lg-&gt;critical(<span class="stringliteral">&quot;ASSERT FAILED: {} -- {}&quot;</span>, std::string(#cond), std::string(msg)); \</div>
 <div class="line">    std::abort(); \</div>
 <div class="line">} } <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="aclass_shit_1_1_log_html_a605bee20f22c9abb0f919d9f6e696a79"><div class="ttname"><a href="class_shit_1_1_log.html#a605bee20f22c9abb0f919d9f6e696a79">Shit::Log::GetClientLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetClientLogger()</div><div class="ttdef"><b>定义</b> Log.h:40</div></div>
+<div class="ttc" id="aclass_shit_1_1_log_html_a605bee20f22c9abb0f919d9f6e696a79"><div class="ttname"><a href="class_shit_1_1_log.html#a605bee20f22c9abb0f919d9f6e696a79">Shit::Log::GetClientLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetClientLogger()</div><div class="ttdef"><b>定义</b> Log.h:42</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -241,7 +243,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_log_8h.html',
 <div class="line">        lg-&gt;critical(<span class="stringliteral">&quot;ASSERT FAILED: {} -- {}&quot;</span>, std::string(#cond), std::string(msg)); \</div>
 <div class="line">    std::abort(); \</div>
 <div class="line">} } <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="aclass_shit_1_1_log_html_a0ebea9df52ba5c8e0d2b43e0c445a7fb"><div class="ttname"><a href="class_shit_1_1_log.html#a0ebea9df52ba5c8e0d2b43e0c445a7fb">Shit::Log::GetCoreLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetCoreLogger()</div><div class="ttdef"><b>定义</b> Log.h:39</div></div>
+<div class="ttc" id="aclass_shit_1_1_log_html_a0ebea9df52ba5c8e0d2b43e0c445a7fb"><div class="ttname"><a href="class_shit_1_1_log.html#a0ebea9df52ba5c8e0d2b43e0c445a7fb">Shit::Log::GetCoreLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; &amp; GetCoreLogger()</div><div class="ttdef"><b>定义</b> Log.h:41</div></div>
 </div><!-- fragment -->
 </div>
 </div>

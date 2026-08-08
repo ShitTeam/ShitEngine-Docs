@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector2_0',['Vector2',['../namespace_shit.html#ab13fcf529046c79a4544246bf8e28741',1,'Shit']]]
+  ['registertypesfn_0',['RegisterTypesFn',['../class_shit_1_1_plugin_manager.html#a7aade3d8f1f1d1061593419f2886be1b',1,'Shit::PluginManager']]]
 ];

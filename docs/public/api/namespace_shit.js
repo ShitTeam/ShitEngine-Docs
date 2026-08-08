@@ -27,7 +27,7 @@ var namespace_shit =
     [ "GameObject", "class_shit_1_1_game_object.html", "class_shit_1_1_game_object" ],
     [ "Input", "class_shit_1_1_input.html", "class_shit_1_1_input" ],
     [ "InputMappingsConfig", "struct_shit_1_1_input_mappings_config.html", "struct_shit_1_1_input_mappings_config" ],
-    [ "Log", "class_shit_1_1_log.html", null ],
+    [ "Log", "class_shit_1_1_log.html", "class_shit_1_1_log" ],
     [ "PhysicsSystem2D", "class_shit_1_1_physics_system2_d.html", "class_shit_1_1_physics_system2_d" ],
     [ "PluginManager", "class_shit_1_1_plugin_manager.html", "class_shit_1_1_plugin_manager" ],
     [ "Prefab", "class_shit_1_1_prefab.html", "class_shit_1_1_prefab" ],
