@@ -30,9 +30,11 @@ var searchData=
   ['audiomanager_2eh_27',['AudioManager.h',['../_audio_manager_8h.html',1,'']]],
   ['audioplayer_28',['AudioPlayer',['../class_shit_1_1_audio_player.html',1,'AudioPlayer'],['../class_shit_1_1_audio_track_group.html#a730923163cee8657080776520dba6a57',1,'Shit::AudioTrackGroup::AudioPlayer()'],['../class_shit_1_1_audio_track.html#a730923163cee8657080776520dba6a57',1,'Shit::AudioTrack::AudioPlayer()'],['../class_shit_1_1_audio_player.html#a71445503ff71241a1394d15d7178441b',1,'Shit::AudioPlayer::AudioPlayer(const AudioPlayer &amp;)=delete'],['../class_shit_1_1_audio_player.html#ab4db3ae581702270e3031456a247fc4a',1,'Shit::AudioPlayer::AudioPlayer(AudioPlayer &amp;&amp;)=delete']]],
   ['audioplayer_2eh_29',['AudioPlayer.h',['../_audio_player_8h.html',1,'']]],
-  ['audiotrack_30',['AudioTrack',['../class_shit_1_1_audio_track.html',1,'AudioTrack'],['../class_shit_1_1_audio_track_group.html#af25123b00bc5b424d5a76caca903c939',1,'Shit::AudioTrackGroup::AudioTrack()'],['../class_shit_1_1_audio_track.html#ae261c483b247655d209b9eed08880e42',1,'Shit::AudioTrack::AudioTrack(const AudioTrack &amp;)=delete'],['../class_shit_1_1_audio_track.html#aa3a03ab113c0336438e6a982b9ac89c9',1,'Shit::AudioTrack::AudioTrack(AudioTrack &amp;&amp;) noexcept']]],
-  ['audiotrack_2eh_31',['AudioTrack.h',['../_audio_track_8h.html',1,'']]],
-  ['audiotrackgroup_32',['AudioTrackGroup',['../class_shit_1_1_audio_track_group.html',1,'AudioTrackGroup'],['../class_shit_1_1_audio_track.html#a2bc59e86369837e9c28a2294669a347a',1,'Shit::AudioTrack::AudioTrackGroup()']]],
-  ['axes_33',['axes',['../struct_shit_1_1_input_mappings_config.html#ab8193d89dbaf5fafe8a96ee39306ee70',1,'Shit::InputMappingsConfig']]],
-  ['axisbinding_34',['AxisBinding',['../struct_shit_1_1_axis_binding.html',1,'Shit']]]
+  ['audiosource_30',['AudioSource',['../class_shit_1_1_audio_source.html',1,'AudioSource'],['../class_shit_1_1_audio_source.html#addd529f5e8f956e6d0d6072d2f4a4c42',1,'Shit::AudioSource::AudioSource()']]],
+  ['audiosource_2eh_31',['AudioSource.h',['../_audio_source_8h.html',1,'']]],
+  ['audiotrack_32',['AudioTrack',['../class_shit_1_1_audio_track.html',1,'AudioTrack'],['../class_shit_1_1_audio_track_group.html#af25123b00bc5b424d5a76caca903c939',1,'Shit::AudioTrackGroup::AudioTrack()'],['../class_shit_1_1_audio_track.html#ae261c483b247655d209b9eed08880e42',1,'Shit::AudioTrack::AudioTrack(const AudioTrack &amp;)=delete'],['../class_shit_1_1_audio_track.html#aa3a03ab113c0336438e6a982b9ac89c9',1,'Shit::AudioTrack::AudioTrack(AudioTrack &amp;&amp;) noexcept']]],
+  ['audiotrack_2eh_33',['AudioTrack.h',['../_audio_track_8h.html',1,'']]],
+  ['audiotrackgroup_34',['AudioTrackGroup',['../class_shit_1_1_audio_track_group.html',1,'AudioTrackGroup'],['../class_shit_1_1_audio_track.html#a2bc59e86369837e9c28a2294669a347a',1,'Shit::AudioTrack::AudioTrackGroup()']]],
+  ['axes_35',['axes',['../struct_shit_1_1_input_mappings_config.html#ab8193d89dbaf5fafe8a96ee39306ee70',1,'Shit::InputMappingsConfig']]],
+  ['axisbinding_36',['AxisBinding',['../struct_shit_1_1_axis_binding.html',1,'Shit']]]
 ];

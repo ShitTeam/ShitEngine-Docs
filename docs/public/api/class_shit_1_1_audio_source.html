@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShitEngine: AnimationComponent类 参考</title>
+<title>ShitEngine: AudioSource类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_animation_component.html','','class_shit_1_1_animation_component-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_audio_source.html','','class_shit_1_1_audio_source-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -151,50 +151,50 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">AnimationComponent类 参考</div></div>
+  <div class="headertitle"><div class="title">AudioSource类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>动画组件  
+<p>音频播放组件 —— 挂在对象上播放场景音频  
  <a href="#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_animation_component_8h_source.html">AnimationComponent.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_audio_source_8h_source.html">AudioSource.h</a>&gt;</code></p>
 <div class="dynheader">
-类 AnimationComponent 继承关系图:</div>
+类 AudioSource 继承关系图:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_shit_1_1_animation_component.png" usemap="#AnimationComponent_map" alt=""/>
-  <map id="AnimationComponent_map" name="AnimationComponent_map">
-<area href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑" alt="Behavior" shape="rect" coords="0,56,130,80"/>
-<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="0,0,130,24"/>
+  <img src="class_shit_1_1_audio_source.png" usemap="#AudioSource_map" alt=""/>
+  <map id="AudioSource_map" name="AudioSource_map">
+<area href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑" alt="Behavior" shape="rect" coords="0,56,86,80"/>
+<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="0,0,86,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:ace67d3c9fe243d83ff4a3b49d5754d88" id="r_ace67d3c9fe243d83ff4a3b49d5754d88"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ace67d3c9fe243d83ff4a3b49d5754d88">AnimationComponent</a> ()</td></tr>
-<tr class="memitem:ab88abaa7bea3a251b829b19ac66da7cc" id="r_ab88abaa7bea3a251b829b19ac66da7cc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab88abaa7bea3a251b829b19ac66da7cc">~AnimationComponent</a> () override</td></tr>
-<tr class="memitem:acbef2688cd43fd22241759f89fe12d28" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
-<tr class="memitem:a14127bfdcd55437a44ca5a76b916d899" id="r_a14127bfdcd55437a44ca5a76b916d899"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14127bfdcd55437a44ca5a76b916d899">onStart</a> () override</td></tr>
-<tr class="memdesc:a14127bfdcd55437a44ca5a76b916d899"><td class="mdescLeft">&#160;</td><td class="mdescRight">首次 update 前执行一次  <br /></td></tr>
-<tr class="memitem:ae15f5dc3626bedd435b05d234dabcb85" id="r_ae15f5dc3626bedd435b05d234dabcb85"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae15f5dc3626bedd435b05d234dabcb85">onUpdate</a> () override</td></tr>
-<tr class="memdesc:ae15f5dc3626bedd435b05d234dabcb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧执行  <br /></td></tr>
-<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
-<tr class="memitem:af45a49555d112977f9b820ddeedfad9e" id="r_af45a49555d112977f9b820ddeedfad9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af45a49555d112977f9b820ddeedfad9e">addAnimation</a> (const std::string &amp;name, std::unique_ptr&lt; <a class="el" href="class_shit_1_1_animation.html">Animation</a> &gt; animation)</td></tr>
-<tr class="memitem:a35603aab48b6df36d41ee5c7b3dccc5a" id="r_a35603aab48b6df36d41ee5c7b3dccc5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a35603aab48b6df36d41ee5c7b3dccc5a">play</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:addd529f5e8f956e6d0d6072d2f4a4c42" id="r_addd529f5e8f956e6d0d6072d2f4a4c42"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#addd529f5e8f956e6d0d6072d2f4a4c42">AudioSource</a> ()=default</td></tr>
+<tr class="memitem:a6e22932f891ad744dc2813c284fe032c" id="r_a6e22932f891ad744dc2813c284fe032c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e22932f891ad744dc2813c284fe032c">setAudioPath</a> (const std::string &amp;path)</td></tr>
+<tr class="memitem:a723dbf50939458d2459ef892725416db" id="r_a723dbf50939458d2459ef892725416db"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a723dbf50939458d2459ef892725416db">getAudioPath</a> () const</td></tr>
+<tr class="memitem:aa029c7e4c1ad0858c1a7e7e7309e1cb2" id="r_aa029c7e4c1ad0858c1a7e7e7309e1cb2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa029c7e4c1ad0858c1a7e7e7309e1cb2">setLoop</a> (bool loop)</td></tr>
+<tr class="memitem:a30d333db489cfc9ba88216625ed37d8b" id="r_a30d333db489cfc9ba88216625ed37d8b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a30d333db489cfc9ba88216625ed37d8b">isLoop</a> () const</td></tr>
+<tr class="memitem:a44dbb438e1b254ef4e9b0f2aab66a433" id="r_a44dbb438e1b254ef4e9b0f2aab66a433"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44dbb438e1b254ef4e9b0f2aab66a433">setVolume</a> (float volume)</td></tr>
+<tr class="memdesc:a44dbb438e1b254ef4e9b0f2aab66a433"><td class="mdescLeft">&#160;</td><td class="mdescRight">音量 0~1  <br /></td></tr>
+<tr class="memitem:adde132ea7b25cca5886eb5f9bcc20f58" id="r_adde132ea7b25cca5886eb5f9bcc20f58"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#adde132ea7b25cca5886eb5f9bcc20f58">getVolume</a> () const</td></tr>
+<tr class="memitem:aae30f23f6c36d7f43b13094a46d86302" id="r_aae30f23f6c36d7f43b13094a46d86302"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aae30f23f6c36d7f43b13094a46d86302">setPlayOnStart</a> (bool playOnStart)</td></tr>
+<tr class="memitem:ac5b18c61e23731410d71f863714776f9" id="r_ac5b18c61e23731410d71f863714776f9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac5b18c61e23731410d71f863714776f9">isPlayOnStart</a> () const</td></tr>
+<tr class="memitem:a6d58098c6cf63c241ed03bc797256bb1" id="r_a6d58098c6cf63c241ed03bc797256bb1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6d58098c6cf63c241ed03bc797256bb1">play</a> ()</td></tr>
+<tr class="memdesc:a6d58098c6cf63c241ed03bc797256bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">按 AudioPath 播放（遵循 Loop / Volume）  <br /></td></tr>
 <tr class="memitem:a8c528baf37154d347366083f0f816846" id="r_a8c528baf37154d347366083f0f816846"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8c528baf37154d347366083f0f816846">stop</a> ()</td></tr>
 <tr class="memitem:a7167f5c196fc5e167bfabde1a730e81d" id="r_a7167f5c196fc5e167bfabde1a730e81d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7167f5c196fc5e167bfabde1a730e81d">pause</a> ()</td></tr>
-<tr class="memitem:a41de8150eff044a237990c271d57ea27" id="r_a41de8150eff044a237990c271d57ea27"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a41de8150eff044a237990c271d57ea27">resume</a> ()</td></tr>
-<tr class="memitem:adbfc61cd3f1ee21a9bb61c6f8d20ff99" id="r_adbfc61cd3f1ee21a9bb61c6f8d20ff99"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adbfc61cd3f1ee21a9bb61c6f8d20ff99">play</a> (const std::string &amp;name, const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;sheet, const std::vector&lt; int &gt; &amp;frames, float duration=0.1f, bool loop=true)</td></tr>
-<tr class="memdesc:adbfc61cd3f1ee21a9bb61c6f8d20ff99"><td class="mdescLeft">&#160;</td><td class="mdescRight">用数字帧索引直接设置并播放一段动画  <br /></td></tr>
-<tr class="memitem:a389ad71786b00ae81f69060f153509d2" id="r_a389ad71786b00ae81f69060f153509d2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a389ad71786b00ae81f69060f153509d2">isPlaying</a> () const</td></tr>
-<tr class="memitem:a48ffb22c4b73bf70c93e036abeab81f2" id="r_a48ffb22c4b73bf70c93e036abeab81f2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a48ffb22c4b73bf70c93e036abeab81f2">isPaused</a> () const</td></tr>
-<tr class="memitem:a1ac952e9527ddb8dfa0f379c5a3a26d5" id="r_a1ac952e9527ddb8dfa0f379c5a3a26d5"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1ac952e9527ddb8dfa0f379c5a3a26d5">getCurrentAnimationName</a> () const</td></tr>
+<tr class="memitem:a14127bfdcd55437a44ca5a76b916d899" id="r_a14127bfdcd55437a44ca5a76b916d899"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14127bfdcd55437a44ca5a76b916d899">onStart</a> () override</td></tr>
+<tr class="memdesc:a14127bfdcd55437a44ca5a76b916d899"><td class="mdescLeft">&#160;</td><td class="mdescRight">首次 update 前执行一次  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_shit_1_1_behavior"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_behavior.html">Behavior</a></td></tr>
 <tr class="memitem:a4f24a7153019bf68d0ec7f99428db90e pub_methods_class_shit_1_1_behavior" id="r_a4f24a7153019bf68d0ec7f99428db90e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a4f24a7153019bf68d0ec7f99428db90e">Behavior</a> ()=default</td></tr>
 <tr class="memitem:a505b38eb8ed0bab19cf378f5e35854d9 pub_methods_class_shit_1_1_behavior" id="r_a505b38eb8ed0bab19cf378f5e35854d9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a505b38eb8ed0bab19cf378f5e35854d9">~Behavior</a> () override=default</td></tr>
 <tr class="memitem:acbe76e0ea44ef342a8c85726573860d4 pub_methods_class_shit_1_1_behavior" id="r_acbe76e0ea44ef342a8c85726573860d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#acbe76e0ea44ef342a8c85726573860d4">onCreate</a> () override</td></tr>
 <tr class="memitem:acbef2688cd43fd22241759f89fe12d28 pub_methods_class_shit_1_1_behavior" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="memitem:ac521702842354e4c4c71d4cf28b1db0b pub_methods_class_shit_1_1_behavior" id="r_ac521702842354e4c4c71d4cf28b1db0b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#ac521702842354e4c4c71d4cf28b1db0b">onUpdate</a> ()</td></tr>
+<tr class="memdesc:ac521702842354e4c4c71d4cf28b1db0b pub_methods_class_shit_1_1_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧执行  <br /></td></tr>
 <tr class="memitem:a062926a9c57f956ba91179747e7b10c5 pub_methods_class_shit_1_1_behavior" id="r_a062926a9c57f956ba91179747e7b10c5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a062926a9c57f956ba91179747e7b10c5">onCollisionEnter</a> (<a class="el" href="class_shit_1_1_behavior.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
 <tr class="memdesc:a062926a9c57f956ba91179747e7b10c5 pub_methods_class_shit_1_1_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">与 other 开始接触（每对象对一次）  <br /></td></tr>
 <tr class="memitem:a3e2b33c4605829c74852add5113d445b pub_methods_class_shit_1_1_behavior" id="r_a3e2b33c4605829c74852add5113d445b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a3e2b33c4605829c74852add5113d445b">onCollisionStay</a> (<a class="el" href="class_shit_1_1_behavior.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
@@ -229,30 +229,12 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>动画组件 </p>
-<p>继承 Behavior，由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 每帧调用 onUpdate 推进当前动画时间， 并把当前帧的源矩形 (SDL_FRect) 回写到同 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 上的 SpriteRenderer。</p>
-<p>典型用法（三点式 sprite-sheet）： <a class="el" href="class_shit_1_1_sprite_sheet.html" title="精灵图集（sprite-sheet）网格切割器">Shit::SpriteSheet</a> sheet(4, 8, 32, 32); // 4行8列，每帧32×32 auto* anim = go-&gt;addComponent&lt;AnimationComponent&gt;(); anim-&gt;play("walk", sheet, {0,1,2,3,4,5}, 0.1f, true); // 全局帧索引数组</p>
-<p>或手工添加已构造好的 Animation： anim-&gt;addAnimation("walk", std::move(walkAnim)); anim-&gt;play("walk"); </p>
+<div class="textblock"><p>音频播放组件 —— 挂在对象上播放场景音频 </p>
+<p>继承 Behavior（与 <a class="el" href="class_shit_1_1_animation_component.html" title="动画组件">AnimationComponent</a> 一致），由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 驱动： onStart 时按 PlayOnStart 自动播放；脚本中也可手动 <a class="el" href="#a6d58098c6cf63c241ed03bc797256bb1" title="按 AudioPath 播放（遵循 Loop / Volume）">play()</a>/stop()/pause()。</p>
+<p>音频路径与纹理同一约定（相对资源目录），播放句柄为共享引用—— 播完引擎自动回收；重新 <a class="el" href="#a6d58098c6cf63c241ed03bc797256bb1" title="按 AudioPath 播放（遵循 Loop / Volume）">play()</a> 新建轨道替换旧句柄。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
-<a id="ace67d3c9fe243d83ff4a3b49d5754d88" name="ace67d3c9fe243d83ff4a3b49d5754d88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace67d3c9fe243d83ff4a3b49d5754d88">&#9670;&#160;</a></span>AnimationComponent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">AnimationComponent </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab88abaa7bea3a251b829b19ac66da7cc" name="ab88abaa7bea3a251b829b19ac66da7cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab88abaa7bea3a251b829b19ac66da7cc">&#9670;&#160;</a></span>~AnimationComponent()</h2>
+<a id="addd529f5e8f956e6d0d6072d2f4a4c42" name="addd529f5e8f956e6d0d6072d2f4a4c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd529f5e8f956e6d0d6072d2f4a4c42">&#9670;&#160;</a></span>AudioSource()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,7 +243,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">~<a class="el" href="#ace67d3c9fe243d83ff4a3b49d5754d88">AnimationComponent</a> </td>
+          <td class="memname">AudioSource </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -269,7 +251,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -277,29 +259,8 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="af45a49555d112977f9b820ddeedfad9e" name="af45a49555d112977f9b820ddeedfad9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af45a49555d112977f9b820ddeedfad9e">&#9670;&#160;</a></span>addAnimation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void addAnimation </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_animation.html">Animation</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>animation</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1ac952e9527ddb8dfa0f379c5a3a26d5" name="a1ac952e9527ddb8dfa0f379c5a3a26d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ac952e9527ddb8dfa0f379c5a3a26d5">&#9670;&#160;</a></span>getCurrentAnimationName()</h2>
+<a id="a723dbf50939458d2459ef892725416db" name="a723dbf50939458d2459ef892725416db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723dbf50939458d2459ef892725416db">&#9670;&#160;</a></span>getAudioPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +269,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; getCurrentAnimationName </td>
+          <td class="memname">const std::string &amp; getAudioPath </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -323,8 +284,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a48ffb22c4b73bf70c93e036abeab81f2" name="a48ffb22c4b73bf70c93e036abeab81f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48ffb22c4b73bf70c93e036abeab81f2">&#9670;&#160;</a></span>isPaused()</h2>
+<a id="adde132ea7b25cca5886eb5f9bcc20f58" name="adde132ea7b25cca5886eb5f9bcc20f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde132ea7b25cca5886eb5f9bcc20f58">&#9670;&#160;</a></span>getVolume()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,7 +294,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isPaused </td>
+          <td class="memname">float getVolume </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -348,8 +309,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a389ad71786b00ae81f69060f153509d2" name="a389ad71786b00ae81f69060f153509d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a389ad71786b00ae81f69060f153509d2">&#9670;&#160;</a></span>isPlaying()</h2>
+<a id="a30d333db489cfc9ba88216625ed37d8b" name="a30d333db489cfc9ba88216625ed37d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d333db489cfc9ba88216625ed37d8b">&#9670;&#160;</a></span>isLoop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,7 +319,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isPlaying </td>
+          <td class="memname">bool isLoop </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -373,8 +334,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="acbef2688cd43fd22241759f89fe12d28" name="acbef2688cd43fd22241759f89fe12d28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbef2688cd43fd22241759f89fe12d28">&#9670;&#160;</a></span>onAttach()</h2>
+<a id="ac5b18c61e23731410d71f863714776f9" name="ac5b18c61e23731410d71f863714776f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b18c61e23731410d71f863714776f9">&#9670;&#160;</a></span>isPlayOnStart()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,47 +344,18 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void onAttach </td>
+          <td class="memname">bool isPlayOnStart </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>重载 <a class="el" href="class_shit_1_1_component.html#a6f4c9e6fe81d4bffc712d4d0ae4d72ff">Component</a> .</p>
-
-</div>
-</div>
-<a id="aee7be93617a6078496df31830d454990" name="aee7be93617a6078496df31830d454990"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee7be93617a6078496df31830d454990">&#9670;&#160;</a></span>onDestroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onDestroy </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>重载 <a class="el" href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">Component</a> .</p>
 
 </div>
 </div>
@@ -456,35 +388,6 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="ae15f5dc3626bedd435b05d234dabcb85" name="ae15f5dc3626bedd435b05d234dabcb85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae15f5dc3626bedd435b05d234dabcb85">&#9670;&#160;</a></span>onUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onUpdate </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>每帧执行 </p>
-
-<p>重载 <a class="el" href="class_shit_1_1_behavior.html#ac521702842354e4c4c71d4cf28b1db0b">Behavior</a> .</p>
-
-</div>
-</div>
 <a id="a7167f5c196fc5e167bfabde1a730e81d" name="a7167f5c196fc5e167bfabde1a730e81d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7167f5c196fc5e167bfabde1a730e81d">&#9670;&#160;</a></span>pause()</h2>
 
@@ -502,86 +405,92 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a35603aab48b6df36d41ee5c7b3dccc5a" name="a35603aab48b6df36d41ee5c7b3dccc5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35603aab48b6df36d41ee5c7b3dccc5a">&#9670;&#160;</a></span>play() <span class="overload">[1/2]</span></h2>
+<a id="a6d58098c6cf63c241ed03bc797256bb1" name="a6d58098c6cf63c241ed03bc797256bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d58098c6cf63c241ed03bc797256bb1">&#9670;&#160;</a></span>play()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void play </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adbfc61cd3f1ee21a9bb61c6f8d20ff99" name="adbfc61cd3f1ee21a9bb61c6f8d20ff99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbfc61cd3f1ee21a9bb61c6f8d20ff99">&#9670;&#160;</a></span>play() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void play </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>frames</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>duration</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.1f</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loop</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>用数字帧索引直接设置并播放一段动画 </p>
-<p>按 frames 中的索引从 sheet 切出条帧，构造一个 <a class="el" href="class_shit_1_1_animation.html" title="逐帧动画数据">Animation</a> 并以 name 登记/覆盖后播放。 若 name 已存在则替换。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>动画名（用作登记与 play 索引） </td></tr>
-    <tr><td class="paramname">sheet</td><td>精灵图集，提供行列网格切割 </td></tr>
-    <tr><td class="paramname">frames</td><td>想要播放的全局帧索引序列（如 {0,1,2,3,5,8}，可不连续） </td></tr>
-    <tr><td class="paramname">duration</td><td>每帧持续时间（秒） </td></tr>
-    <tr><td class="paramname">loop</td><td>是否循环 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a41de8150eff044a237990c271d57ea27" name="a41de8150eff044a237990c271d57ea27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41de8150eff044a237990c271d57ea27">&#9670;&#160;</a></span>resume()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void resume </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>按 AudioPath 播放（遵循 Loop / Volume） </p>
+
+</div>
+</div>
+<a id="a6e22932f891ad744dc2813c284fe032c" name="a6e22932f891ad744dc2813c284fe032c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e22932f891ad744dc2813c284fe032c">&#9670;&#160;</a></span>setAudioPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAudioPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa029c7e4c1ad0858c1a7e7e7309e1cb2" name="aa029c7e4c1ad0858c1a7e7e7309e1cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa029c7e4c1ad0858c1a7e7e7309e1cb2">&#9670;&#160;</a></span>setLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLoop </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>loop</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae30f23f6c36d7f43b13094a46d86302" name="aae30f23f6c36d7f43b13094a46d86302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae30f23f6c36d7f43b13094a46d86302">&#9670;&#160;</a></span>setPlayOnStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPlayOnStart </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>playOnStart</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44dbb438e1b254ef4e9b0f2aab66a433" name="a44dbb438e1b254ef4e9b0f2aab66a433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44dbb438e1b254ef4e9b0f2aab66a433">&#9670;&#160;</a></span>setVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setVolume </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>volume</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>音量 0~1 </p>
 
 </div>
 </div>
@@ -603,7 +512,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>include/ShitEngine/Component/<a class="el" href="_animation_component_8h_source.html">AnimationComponent.h</a></li>
+<li>include/ShitEngine/Audio/<a class="el" href="_audio_source_8h_source.html">AudioSource.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -619,7 +528,7 @@ Public 成员函数</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_animation_component.html">AnimationComponent</a></li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_audio_source.html">AudioSource</a></li>
     <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

@@ -6,6 +6,7 @@ var annotated_dup =
       [ "AnimationComponent", "class_shit_1_1_animation_component.html", "class_shit_1_1_animation_component" ],
       [ "AudioManager", "class_shit_1_1_audio_manager.html", "class_shit_1_1_audio_manager" ],
       [ "AudioPlayer", "class_shit_1_1_audio_player.html", "class_shit_1_1_audio_player" ],
+      [ "AudioSource", "class_shit_1_1_audio_source.html", "class_shit_1_1_audio_source" ],
       [ "AudioTrack", "class_shit_1_1_audio_track.html", "class_shit_1_1_audio_track" ],
       [ "AudioTrackGroup", "class_shit_1_1_audio_track_group.html", "class_shit_1_1_audio_track_group" ],
       [ "AxisBinding", "struct_shit_1_1_axis_binding.html", "struct_shit_1_1_axis_binding" ],

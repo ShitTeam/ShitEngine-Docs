@@ -223,6 +223,7 @@ Public 成员函数</h2></td></tr>
 <div class="textblock"><p>2D 物理系统 </p>
 <p>包装 Box2D 3.x（C 语言 API）物理世界。 默认使用 b2SetLengthUnitsPerMeter(32) 以像素为长度单位， 用户无需手动转换像素↔米。</p>
 <p>使用方式： scene-&gt;registerSystem&lt;Shit::PhysicsSystem2D&gt;();</p>
+<p>物理步进后按接触事件驱动冲突对象的 <a class="el" href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑">Behavior</a> 碰撞回调： onCollisionEnter / onCollisionStay / onCollisionExit(对方 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a>)。</p>
 <p>priority=50，晚于 BehaviorSystem(0) 早于 RenderSystem(100)。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a5a2124f1f32f2d89dfc201b3ce2f00d4" name="a5a2124f1f32f2d89dfc201b3ce2f00d4"></a>

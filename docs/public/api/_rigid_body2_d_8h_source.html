@@ -214,28 +214,30 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_rigid_body2_d
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_shit_1_1_rigid_body2_d.html#a9f71b50edf6a50133e776adef89f7dd0">   76</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_shit_1_1_rigid_body2_d.html#a9f71b50edf6a50133e776adef89f7dd0">PhysicsSystem2D</a>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="comment">// b2BodyId = {int32_t index1; uint16_t world0; uint16_t generation;}</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(Disable)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        int32_t m_bodyIndex = 0;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(Disable)</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        uint16_t m_bodyWorld0 = 0;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">void</span> ensureBody();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment">// b2BodyId = {int32_t index1; uint16_t world0; uint16_t generation;}</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(Disable)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        uint16_t m_bodyGeneration = 0;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        int32_t m_bodyIndex = 0;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(Disable)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">bool</span> m_bodyValid = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(({.displayName = <span class="stringliteral">&quot;Body Type&quot;</span>, .tooltip = <span class="stringliteral">&quot;Static=不动, Kinematic=用户控制, Dynamic=物理驱动&quot;</span>}))</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        Type m_type = Type::Static;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(({.displayName = <span class="stringliteral">&quot;Gravity Scale&quot;</span>, .tooltip = <span class="stringliteral">&quot;重力影响系数&quot;</span>, .range = {0, 10}, .step = 0.1}))</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">float</span> m_gravityScale = 1.0f;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(({.displayName = <span class="stringliteral">&quot;Linear Damping&quot;</span>, .tooltip = <span class="stringliteral">&quot;线性阻尼&quot;</span>, .range = {0, 10}, .step = 0.1}))</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordtype">float</span> m_linearDamping = 0.0f;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(({.displayName = <span class="stringliteral">&quot;Fixed Rotation&quot;</span>, .tooltip = <span class="stringliteral">&quot;锁定旋转&quot;</span>}))</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">bool</span> m_fixedRotation = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    };</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        uint16_t m_bodyWorld0 = 0;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(Disable)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        uint16_t m_bodyGeneration = 0;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(Disable)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">bool</span> m_bodyValid = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(({.displayName = <span class="stringliteral">&quot;Body Type&quot;</span>, .tooltip = <span class="stringliteral">&quot;Static=不动, Kinematic=用户控制, Dynamic=物理驱动&quot;</span>}))</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        Type m_type = Type::Static;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(({.displayName = <span class="stringliteral">&quot;Gravity Scale&quot;</span>, .tooltip = <span class="stringliteral">&quot;重力影响系数&quot;</span>, .range = {0, 10}, .step = 0.1}))</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">float</span> m_gravityScale = 1.0f;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(({.displayName = <span class="stringliteral">&quot;Linear Damping&quot;</span>, .tooltip = <span class="stringliteral">&quot;线性阻尼&quot;</span>, .range = {0, 10}, .step = 0.1}))</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">float</span> m_linearDamping = 0.0f;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_define" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a>(({.displayName = <span class="stringliteral">&quot;Fixed Rotation&quot;</span>, .tooltip = <span class="stringliteral">&quot;锁定旋转&quot;</span>}))</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">bool</span> m_fixedRotation = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    };</div>
 </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
 <div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
 <div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
 <div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
@@ -244,7 +246,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_rigid_body2_d
 <div class="ttc" id="a_macros_8h_html_abda51617d4152febb4da2bb01b57703b"><div class="ttname"><a href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a></div><div class="ttdeci">#define SHIT_META(...)</div><div class="ttdef"><b>定义</b> Macros.h:68</div></div>
 <div class="ttc" id="a_math_8h_html"><div class="ttname"><a href="_math_8h.html">Math.h</a></div></div>
 <div class="ttc" id="aclass_shit_1_1_component_html_a0171e1571f18dc6a27c8b041de55feec"><div class="ttname"><a href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Shit::Component::Component</a></div><div class="ttdeci">Component()</div></div>
-<div class="ttc" id="aclass_shit_1_1_physics_system2_d_html"><div class="ttname"><a href="class_shit_1_1_physics_system2_d.html">Shit::PhysicsSystem2D</a></div><div class="ttdoc">2D 物理系统</div><div class="ttdef"><b>定义</b> PhysicsSystem2D.h:23</div></div>
+<div class="ttc" id="aclass_shit_1_1_physics_system2_d_html"><div class="ttname"><a href="class_shit_1_1_physics_system2_d.html">Shit::PhysicsSystem2D</a></div><div class="ttdoc">2D 物理系统</div><div class="ttdef"><b>定义</b> PhysicsSystem2D.h:28</div></div>
 <div class="ttc" id="aclass_shit_1_1_rigid_body2_d_html_a0247d583fec416ff2525a2c6b4d2f419"><div class="ttname"><a href="class_shit_1_1_rigid_body2_d.html#a0247d583fec416ff2525a2c6b4d2f419">Shit::RigidBody2D::getLinearVelocity</a></div><div class="ttdeci">Vector2 getLinearVelocity() const</div></div>
 <div class="ttc" id="aclass_shit_1_1_rigid_body2_d_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="class_shit_1_1_rigid_body2_d.html#a1d1cfd8ffb84e947f82999c682b666a7">Shit::RigidBody2D::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>定义</b> RigidBody2D.h:27</div></div>
 <div class="ttc" id="aclass_shit_1_1_rigid_body2_d_html_a1eaadc1e86b3688c7430f556b29e3ade"><div class="ttname"><a href="class_shit_1_1_rigid_body2_d.html#a1eaadc1e86b3688c7430f556b29e3ade">Shit::RigidBody2D::isFixedRotation</a></div><div class="ttdeci">bool isFixedRotation() const</div><div class="ttdef"><b>定义</b> RigidBody2D.h:52</div></div>

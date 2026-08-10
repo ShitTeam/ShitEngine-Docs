@@ -10,7 +10,8 @@ var hierarchy =
     [ "UIButton::ColorBlock", "struct_shit_1_1_u_i_button_1_1_color_block.html", null ],
     [ "Component", "class_shit_1_1_component.html", [
       [ "Behavior", "class_shit_1_1_behavior.html", [
-        [ "AnimationComponent", "class_shit_1_1_animation_component.html", null ]
+        [ "AnimationComponent", "class_shit_1_1_animation_component.html", null ],
+        [ "AudioSource", "class_shit_1_1_audio_source.html", null ]
       ] ],
       [ "BoxCollider2D", "class_shit_1_1_box_collider2_d.html", null ],
       [ "CameraComponent", "class_shit_1_1_camera_component.html", null ],

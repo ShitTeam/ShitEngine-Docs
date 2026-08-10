@@ -165,8 +165,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
  <div class="center">
   <img src="class_shit_1_1_behavior.png" usemap="#Behavior_map" alt=""/>
   <map id="Behavior_map" name="Behavior_map">
-<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="0,0,130,24"/>
+<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="70,0,200,24"/>
 <area href="class_shit_1_1_animation_component.html" title="动画组件" alt="AnimationComponent" shape="rect" coords="0,112,130,136"/>
+<area href="class_shit_1_1_audio_source.html" title="音频播放组件 —— 挂在对象上播放场景音频" alt="AudioSource" shape="rect" coords="140,112,270,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -180,6 +181,12 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a62c5b2c91580204a54e2d32e9594e6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">首次 update 前执行一次  <br /></td></tr>
 <tr class="memitem:ac521702842354e4c4c71d4cf28b1db0b" id="r_ac521702842354e4c4c71d4cf28b1db0b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac521702842354e4c4c71d4cf28b1db0b">onUpdate</a> ()</td></tr>
 <tr class="memdesc:ac521702842354e4c4c71d4cf28b1db0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧执行  <br /></td></tr>
+<tr class="memitem:a062926a9c57f956ba91179747e7b10c5" id="r_a062926a9c57f956ba91179747e7b10c5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a062926a9c57f956ba91179747e7b10c5">onCollisionEnter</a> (<a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
+<tr class="memdesc:a062926a9c57f956ba91179747e7b10c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">与 other 开始接触（每对象对一次）  <br /></td></tr>
+<tr class="memitem:a3e2b33c4605829c74852add5113d445b" id="r_a3e2b33c4605829c74852add5113d445b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3e2b33c4605829c74852add5113d445b">onCollisionStay</a> (<a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
+<tr class="memdesc:a3e2b33c4605829c74852add5113d445b"><td class="mdescLeft">&#160;</td><td class="mdescRight">与 other 持续接触（每帧一次）  <br /></td></tr>
+<tr class="memitem:af3224a9dc03556a67ec0b4d3353ccd41" id="r_af3224a9dc03556a67ec0b4d3353ccd41"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af3224a9dc03556a67ec0b4d3353ccd41">onCollisionExit</a> (<a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
+<tr class="memdesc:af3224a9dc03556a67ec0b4d3353ccd41"><td class="mdescLeft">&#160;</td><td class="mdescRight">与 other 结束接触  <br /></td></tr>
 <tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
 <tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
 <tr class="memitem:ac1991ea0e286fbb461b60c8c9299d781" id="r_ac1991ea0e286fbb461b60c8c9299d781"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac1991ea0e286fbb461b60c8c9299d781">isStarted</a> () const</td></tr>
@@ -217,6 +224,7 @@ Protected 属性</h2></td></tr>
 <div class="textblock"><p>行为基类 —— 用于编写自定义游戏逻辑 </p>
 <p>继承自 Component，扩展出 onStart / onUpdate 两个阶段： onCreate → onAttach → onStart → (每帧)onUpdate → onDetach → onDestroy</p>
 <p>onStart 在首次 update 前执行一次，适用于缓存指针。 onUpdate 每帧执行，适用于输入、移动、碰撞检测等。</p>
+<p>碰撞回调（onCollisionEnter/Stay/Exit）由 <a class="el" href="class_shit_1_1_physics_system2_d.html" title="2D 物理系统">PhysicsSystem2D</a> 在物理步进后驱动， 仅已启动（onStart 已执行）的行为收到，参数为碰撞对方的 GameObject。</p>
 <p>挂载后由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 自动驱动，无需手动调用。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a4f24a7153019bf68d0ec7f99428db90e" name="a4f24a7153019bf68d0ec7f99428db90e"></a>
@@ -321,6 +329,87 @@ Protected 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>重载 <a class="el" href="class_shit_1_1_component.html#a6f4c9e6fe81d4bffc712d4d0ae4d72ff">Component</a> .</p>
+
+</div>
+</div>
+<a id="a062926a9c57f956ba91179747e7b10c5" name="a062926a9c57f956ba91179747e7b10c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062926a9c57f956ba91179747e7b10c5">&#9670;&#160;</a></span>onCollisionEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onCollisionEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>与 other 开始接触（每对象对一次） </p>
+
+</div>
+</div>
+<a id="af3224a9dc03556a67ec0b4d3353ccd41" name="af3224a9dc03556a67ec0b4d3353ccd41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3224a9dc03556a67ec0b4d3353ccd41">&#9670;&#160;</a></span>onCollisionExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onCollisionExit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>与 other 结束接触 </p>
+
+</div>
+</div>
+<a id="a3e2b33c4605829c74852add5113d445b" name="a3e2b33c4605829c74852add5113d445b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e2b33c4605829c74852add5113d445b">&#9670;&#160;</a></span>onCollisionStay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onCollisionStay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>与 other 持续接触（每帧一次） </p>
 
 </div>
 </div>
@@ -430,7 +519,7 @@ Protected 属性</h2></td></tr>
 
 <p>首次 update 前执行一次 </p>
 
-<p>被 <a class="el" href="class_shit_1_1_animation_component.html#a14127bfdcd55437a44ca5a76b916d899">AnimationComponent</a> 重载.</p>
+<p>被 <a class="el" href="class_shit_1_1_animation_component.html#a14127bfdcd55437a44ca5a76b916d899">AnimationComponent</a> , 以及 <a class="el" href="class_shit_1_1_audio_source.html#a14127bfdcd55437a44ca5a76b916d899">AudioSource</a> 重载.</p>
 
 </div>
 </div>
