@@ -16,6 +16,7 @@ var namespace_shit =
     [ "CircleCollider2D", "class_shit_1_1_circle_collider2_d.html", "class_shit_1_1_circle_collider2_d" ],
     [ "Color", "struct_shit_1_1_color.html", "struct_shit_1_1_color" ],
     [ "Component", "class_shit_1_1_component.html", "class_shit_1_1_component" ],
+    [ "ComponentRef", "class_shit_1_1_component_ref.html", "class_shit_1_1_component_ref" ],
     [ "Config", "class_shit_1_1_config.html", "class_shit_1_1_config" ],
     [ "EngineContext", "class_shit_1_1_engine_context.html", "class_shit_1_1_engine_context" ],
     [ "EnumValue", "struct_shit_1_1_enum_value.html", "struct_shit_1_1_enum_value" ],
@@ -211,7 +212,9 @@ var namespace_shit =
       [ "XButton2", "namespace_shit.html#a826ef52e881054fee6a2055e382950b4a7af9d9a16f813c045a3dbe8068a13f4d", null ],
       [ "Count", "namespace_shit.html#a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
+    [ "ComponentRefLookup", "namespace_shit.html#a893cf9371fd527345f0a25b524c131d9", null ],
     [ "DemangleTypeName", "namespace_shit.html#afe671363a5ef5f405485e38c225e0885", null ],
+    [ "GenerateComponentUuid", "namespace_shit.html#aed855649b4c02f3c9f517528e8e9427b", null ],
     [ "memberOffset", "namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13", null ],
     [ "ReflectType", "namespace_shit.html#a2e911473ec7d41ed241324aba861713b", null ]
 ];

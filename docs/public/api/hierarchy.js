@@ -34,6 +34,7 @@ var hierarchy =
       [ "UITransform", "class_shit_1_1_u_i_transform.html", null ]
     ] ],
     [ "Prefab::ComponentData", "struct_shit_1_1_prefab_1_1_component_data.html", null ],
+    [ "ComponentRef&lt; T &gt;", "class_shit_1_1_component_ref.html", null ],
     [ "Config", "class_shit_1_1_config.html", null ],
     [ "enable_shared_from_this", null, [
       [ "AudioTrackGroup", "class_shit_1_1_audio_track_group.html", null ]

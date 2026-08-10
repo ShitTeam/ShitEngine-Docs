@@ -1,0 +1,438 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: ComponentRef&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_component_ref.html','','class_shit_1_1_component_ref-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentRef&lt; T &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>可序列化的组件引用（存 UUID，懒解析，自动失效）  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_component_ref_8h_source.html">ComponentRef.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3fdecdcc08f40498601e119656547e6d" id="r_a3fdecdcc08f40498601e119656547e6d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a> ()=default</td></tr>
+<tr class="memitem:aed182ab5a4742a6fc2f9fe79773c12e1" id="r_aed182ab5a4742a6fc2f9fe79773c12e1"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#aed182ab5a4742a6fc2f9fe79773c12e1">get</a> () const</td></tr>
+<tr class="memdesc:aed182ab5a4742a6fc2f9fe79773c12e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析引用（当前场景的 uuid 索引查找 + 类型校验） 目标组件已移除/对象已销毁/类型不符/跨场景时返回 nullptr。  <br /></td></tr>
+<tr class="memitem:a84e9959608997de8fe4355def47ff45a" id="r_a84e9959608997de8fe4355def47ff45a"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#a84e9959608997de8fe4355def47ff45a">operator-&gt;</a> () const</td></tr>
+<tr class="memdesc:a84e9959608997de8fe4355def47ff45a"><td class="mdescLeft">&#160;</td><td class="mdescRight">便捷解引用（目标失效返回 nullptr，调用前可判空）  <br /></td></tr>
+<tr class="memitem:a67b76affb3b5d35fa419ac234144038b" id="r_a67b76affb3b5d35fa419ac234144038b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a67b76affb3b5d35fa419ac234144038b">operator bool</a> () const</td></tr>
+<tr class="memdesc:a67b76affb3b5d35fa419ac234144038b"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用当前是否有效  <br /></td></tr>
+<tr class="memitem:ab6d54768dbdc94c23d77c13ba46f7b24" id="r_ab6d54768dbdc94c23d77c13ba46f7b24"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#ab6d54768dbdc94c23d77c13ba46f7b24">uuid</a> () const</td></tr>
+<tr class="memdesc:ab6d54768dbdc94c23d77c13ba46f7b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标组件 UUID（0 = 空引用；编辑器/序列化用）  <br /></td></tr>
+<tr class="memitem:abab895b8aff7bde6865ec1a74624b0e9" id="r_abab895b8aff7bde6865ec1a74624b0e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abab895b8aff7bde6865ec1a74624b0e9">setUuid</a> (uint64_t uuid)</td></tr>
+<tr class="memdesc:abab895b8aff7bde6865ec1a74624b0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置引用目标（传入 0 清空引用；编辑器拖拽赋引用用）  <br /></td></tr>
+<tr class="memitem:ac50f4bfe977fad98f4e4d6add7ba87d7" id="r_ac50f4bfe977fad98f4e4d6add7ba87d7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac50f4bfe977fad98f4e4d6add7ba87d7">operator==</a> (const <a class="el" href="#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a> &amp;other) const</td></tr>
+<tr class="memitem:a1fc8caf2b9d02f8ea220b7bb3ca4e528" id="r_a1fc8caf2b9d02f8ea220b7bb3ca4e528"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1fc8caf2b9d02f8ea220b7bb3ca4e528">operator!=</a> (const <a class="el" href="#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a> &amp;other) const</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class Shit::ComponentRef&lt; T &gt;</div><p>可序列化的组件引用（存 UUID，懒解析，自动失效） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>目标组件类型（须继承 <a class="el" href="class_shit_1_1_component.html" title="组件基类">Component</a> 的反射类型） </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a3fdecdcc08f40498601e119656547e6d" name="a3fdecdcc08f40498601e119656547e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fdecdcc08f40498601e119656547e6d">&#9670;&#160;</a></span>ComponentRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComponentRef </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="aed182ab5a4742a6fc2f9fe79773c12e1" name="aed182ab5a4742a6fc2f9fe79773c12e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed182ab5a4742a6fc2f9fe79773c12e1">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解析引用（当前场景的 uuid 索引查找 + 类型校验） 目标组件已移除/对象已销毁/类型不符/跨场景时返回 nullptr。 </p>
+
+</div>
+</div>
+<a id="a67b76affb3b5d35fa419ac234144038b" name="a67b76affb3b5d35fa419ac234144038b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b76affb3b5d35fa419ac234144038b">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">operator bool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>引用当前是否有效 </p>
+
+</div>
+</div>
+<a id="a1fc8caf2b9d02f8ea220b7bb3ca4e528" name="a1fc8caf2b9d02f8ea220b7bb3ca4e528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc8caf2b9d02f8ea220b7bb3ca4e528">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84e9959608997de8fe4355def47ff45a" name="a84e9959608997de8fe4355def47ff45a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e9959608997de8fe4355def47ff45a">&#9670;&#160;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>便捷解引用（目标失效返回 nullptr，调用前可判空） </p>
+
+</div>
+</div>
+<a id="ac50f4bfe977fad98f4e4d6add7ba87d7" name="ac50f4bfe977fad98f4e4d6add7ba87d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50f4bfe977fad98f4e4d6add7ba87d7">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abab895b8aff7bde6865ec1a74624b0e9" name="abab895b8aff7bde6865ec1a74624b0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab895b8aff7bde6865ec1a74624b0e9">&#9670;&#160;</a></span>setUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUuid </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>uuid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置引用目标（传入 0 清空引用；编辑器拖拽赋引用用） </p>
+
+</div>
+</div>
+<a id="ab6d54768dbdc94c23d77c13ba46f7b24" name="ab6d54768dbdc94c23d77c13ba46f7b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d54768dbdc94c23d77c13ba46f7b24">&#9670;&#160;</a></span>uuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t uuid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>目标组件 UUID（0 = 空引用；编辑器/序列化用） </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/GameObject/<a class="el" href="_component_ref_8h_source.html">ComponentRef.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_component_ref.html">ComponentRef</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

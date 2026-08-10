@@ -61,13 +61,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_animation_8h.html",
-"class_shit_1_1_audio_track.html#a369fc388c555df006dad6cac4135440f",
-"class_shit_1_1_config.html#aea5728c345bdbe71b0e14a9dcd84ad20",
-"class_shit_1_1_prefab.html#a6b1eb934cd47f9b035aa2dabd4644900",
-"class_shit_1_1_sprite_renderer.html#ad34a52d954a18c0f9aa8e99bd02104f0",
-"class_shit_1_1_u_i_canvas.html#ae2ad0a52130091391d9c6a7e6b4ad84c",
-"class_shit_1_1_u_i_text_input.html#ae4e48e7613e2cc5c0ff8b67ec846e6b2",
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0daa0d353252a1e8d8e5cd953539583bfe9"
+"class_shit_1_1_audio_track.html#a2bc59e86369837e9c28a2294669a347a",
+"class_shit_1_1_component_ref.html#a1fc8caf2b9d02f8ea220b7bb3ca4e528",
+"class_shit_1_1_plugin_manager.html#a4b39ceb1791c3d1827144378fee3bf1a",
+"class_shit_1_1_sprite.html#ad8aed24d6c5a7976bf3ea266fa166367",
+"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8a960b44c579bc2f6818d2daaf9e4c16f0",
+"class_shit_1_1_u_i_text_input.html#ab26532f5785cae73973ad3050a0ffe38",
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da786deffd1b8656ff4c64758a735c6ac2"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

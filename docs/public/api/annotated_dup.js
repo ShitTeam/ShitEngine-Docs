@@ -17,6 +17,7 @@ var annotated_dup =
       [ "CircleCollider2D", "class_shit_1_1_circle_collider2_d.html", "class_shit_1_1_circle_collider2_d" ],
       [ "Color", "struct_shit_1_1_color.html", "struct_shit_1_1_color" ],
       [ "Component", "class_shit_1_1_component.html", "class_shit_1_1_component" ],
+      [ "ComponentRef", "class_shit_1_1_component_ref.html", "class_shit_1_1_component_ref" ],
       [ "Config", "class_shit_1_1_config.html", "class_shit_1_1_config" ],
       [ "EngineContext", "class_shit_1_1_engine_context.html", "class_shit_1_1_engine_context" ],
       [ "EnumValue", "struct_shit_1_1_enum_value.html", "struct_shit_1_1_enum_value" ],

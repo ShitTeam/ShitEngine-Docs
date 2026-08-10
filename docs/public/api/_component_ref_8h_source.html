@@ -1,0 +1,243 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: include/ShitEngine/GameObject/ComponentRef.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_component_ref_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentRef.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_component_ref_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// ═══════════════════════════════════════════════════════════════</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// P20: 组件引用（类似 Unity 的 Object 引用字段）</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//   ComponentRef&lt;T&gt; 是&quot;可序列化的组件引用&quot;：字段内只存目标组件的持久</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//   UUID（64 位，随 .scene 落盘），get() 时经当前场景的 uuid → 组件索引</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//   懒解析。目标组件被移除/所属对象销毁后，get() 返回 nullptr——永不悬垂。</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//   用法（配合反射扫描器，字段自动被识别为引用字段）：</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//     SHIT_FIELD</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//     Shit::ComponentRef&lt;Shit::UIText&gt; coinText;   // 编辑器可拖拽赋引用</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//     if (auto t = coinText.get()) t-&gt;setText(&quot;...&quot;);</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//   与 WeakComponentRef 的区别：WeakComponentRef 是&quot;会话期弱引用&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//   （存 owner + 生命周期令牌，不序列化）；ComponentRef 是&quot;持久引用&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//   （存 UUID，序列化到 .scene，目标销毁自动失效）。</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//   约束：引用仅限同一场景（UUID 索引挂在 Scene 上）；跨场景引用解析为 null。</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// ═══════════════════════════════════════════════════════════════</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_scene.html">Scene</a>;     <span class="comment">// 前向声明</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">class </span><a class="code hl_class" href="class_shit_1_1_component.html">Component</a>; <span class="comment">// 前向声明（dynamic_cast 在实例化点解析）</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="namespace_shit.html#a893cf9371fd527345f0a25b524c131d9">   30</a></span>    <a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_class" href="class_shit_1_1_component.html">Component</a>* <a class="code hl_function" href="namespace_shit.html#a893cf9371fd527345f0a25b524c131d9">ComponentRefLookup</a>(uint64_t uuid);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html">   37</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_shit_1_1_component_ref.html#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html#a3fdecdcc08f40498601e119656547e6d">   39</a></span>        <a class="code hl_function" href="class_shit_1_1_component_ref.html#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html#aed182ab5a4742a6fc2f9fe79773c12e1">   43</a></span>        <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="class_shit_1_1_component_ref.html#aed182ab5a4742a6fc2f9fe79773c12e1">get</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (!m_uuid) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <a class="code hl_class" href="class_shit_1_1_component.html">Component</a>* comp = <a class="code hl_function" href="namespace_shit.html#a893cf9371fd527345f0a25b524c131d9">ComponentRefLookup</a>(m_uuid);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">if</span> (!comp) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span><a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>*<span class="keyword">&gt;</span>(comp);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html#a84e9959608997de8fe4355def47ff45a">   51</a></span>        <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>* <a class="code hl_function" href="class_shit_1_1_component_ref.html#a84e9959608997de8fe4355def47ff45a">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_component_ref.html#aed182ab5a4742a6fc2f9fe79773c12e1">get</a>(); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html#a67b76affb3b5d35fa419ac234144038b">   54</a></span>        <span class="keyword">explicit</span> <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="class_shit_1_1_component_ref.html#aed182ab5a4742a6fc2f9fe79773c12e1">get</a>() != <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html#ab6d54768dbdc94c23d77c13ba46f7b24">   57</a></span>        uint64_t <a class="code hl_function" href="class_shit_1_1_component_ref.html#ab6d54768dbdc94c23d77c13ba46f7b24">uuid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_uuid; }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html#abab895b8aff7bde6865ec1a74624b0e9">   59</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_component_ref.html#abab895b8aff7bde6865ec1a74624b0e9">setUuid</a>(uint64_t <a class="code hl_function" href="class_shit_1_1_component_ref.html#ab6d54768dbdc94c23d77c13ba46f7b24">uuid</a>) { m_uuid = <a class="code hl_function" href="class_shit_1_1_component_ref.html#ab6d54768dbdc94c23d77c13ba46f7b24">uuid</a>; }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html#ac50f4bfe977fad98f4e4d6add7ba87d7">   61</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_component_ref.html#ac50f4bfe977fad98f4e4d6add7ba87d7">operator==</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_component_ref.html#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a>&amp; other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_uuid == other.m_uuid; }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_shit_1_1_component_ref.html#a1fc8caf2b9d02f8ea220b7bb3ca4e528">   62</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shit_1_1_component_ref.html#a1fc8caf2b9d02f8ea220b7bb3ca4e528">operator!=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_shit_1_1_component_ref.html#a3fdecdcc08f40498601e119656547e6d">ComponentRef</a>&amp; other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == other); }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        uint64_t m_uuid = 0; </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    };</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace Shit</span></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html"><div class="ttname"><a href="class_shit_1_1_component.html">Shit::Component</a></div><div class="ttdoc">组件基类</div><div class="ttdef"><b>定义</b> Component.h:25</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_ref_html_a1fc8caf2b9d02f8ea220b7bb3ca4e528"><div class="ttname"><a href="class_shit_1_1_component_ref.html#a1fc8caf2b9d02f8ea220b7bb3ca4e528">Shit::ComponentRef::operator!=</a></div><div class="ttdeci">bool operator!=(const ComponentRef &amp;other) const</div><div class="ttdef"><b>定义</b> ComponentRef.h:62</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_ref_html_a3fdecdcc08f40498601e119656547e6d"><div class="ttname"><a href="class_shit_1_1_component_ref.html#a3fdecdcc08f40498601e119656547e6d">Shit::ComponentRef::ComponentRef</a></div><div class="ttdeci">ComponentRef()=default</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_ref_html_a84e9959608997de8fe4355def47ff45a"><div class="ttname"><a href="class_shit_1_1_component_ref.html#a84e9959608997de8fe4355def47ff45a">Shit::ComponentRef::operator-&gt;</a></div><div class="ttdeci">T * operator-&gt;() const</div><div class="ttdoc">便捷解引用（目标失效返回 nullptr，调用前可判空）</div><div class="ttdef"><b>定义</b> ComponentRef.h:51</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_ref_html_ab6d54768dbdc94c23d77c13ba46f7b24"><div class="ttname"><a href="class_shit_1_1_component_ref.html#ab6d54768dbdc94c23d77c13ba46f7b24">Shit::ComponentRef::uuid</a></div><div class="ttdeci">uint64_t uuid() const</div><div class="ttdoc">目标组件 UUID（0 = 空引用；编辑器/序列化用）</div><div class="ttdef"><b>定义</b> ComponentRef.h:57</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_ref_html_abab895b8aff7bde6865ec1a74624b0e9"><div class="ttname"><a href="class_shit_1_1_component_ref.html#abab895b8aff7bde6865ec1a74624b0e9">Shit::ComponentRef::setUuid</a></div><div class="ttdeci">void setUuid(uint64_t uuid)</div><div class="ttdoc">设置引用目标（传入 0 清空引用；编辑器拖拽赋引用用）</div><div class="ttdef"><b>定义</b> ComponentRef.h:59</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_ref_html_ac50f4bfe977fad98f4e4d6add7ba87d7"><div class="ttname"><a href="class_shit_1_1_component_ref.html#ac50f4bfe977fad98f4e4d6add7ba87d7">Shit::ComponentRef::operator==</a></div><div class="ttdeci">bool operator==(const ComponentRef &amp;other) const</div><div class="ttdef"><b>定义</b> ComponentRef.h:61</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_ref_html_aed182ab5a4742a6fc2f9fe79773c12e1"><div class="ttname"><a href="class_shit_1_1_component_ref.html#aed182ab5a4742a6fc2f9fe79773c12e1">Shit::ComponentRef::get</a></div><div class="ttdeci">T * get() const</div><div class="ttdoc">解析引用（当前场景的 uuid 索引查找 + 类型校验） 目标组件已移除/对象已销毁/类型不符/跨场景时返回 nullptr。</div><div class="ttdef"><b>定义</b> ComponentRef.h:43</div></div>
+<div class="ttc" id="aclass_shit_1_1_scene_html"><div class="ttname"><a href="class_shit_1_1_scene.html">Shit::Scene</a></div><div class="ttdoc">场景类</div><div class="ttdef"><b>定义</b> Scene.h:35</div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:10</div></div>
+<div class="ttc" id="anamespace_shit_html_a893cf9371fd527345f0a25b524c131d9"><div class="ttname"><a href="namespace_shit.html#a893cf9371fd527345f0a25b524c131d9">Shit::ComponentRefLookup</a></div><div class="ttdeci">Component * ComponentRefLookup(uint64_t uuid)</div><div class="ttdoc">内部：从当前上下文的活跃场景按 uuid 查组件（实现在 ComponentRef.cpp，跨 TU/DLL 共享）</div></div>
+<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">Shit::KeyCode::T</a></div><div class="ttdeci">@ T</div><div class="ttdef"><b>定义</b> KeyCode.h:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a href="dir_f2a2c5364f18abe3845af547d1b0be61.html">GameObject</a></li><li class="navelem"><a href="_component_ref_8h.html">ComponentRef.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

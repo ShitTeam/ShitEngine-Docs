@@ -194,6 +194,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a34f2dae077ca6d1b6e3a39201c79c796" id="r_a34f2dae077ca6d1b6e3a39201c79c796"><td class="memItemLeft"><a class="el" href="#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a> (<a class="el" href="#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&amp;)=delete</td></tr>
 <tr class="memitem:a9b36b6de005b18dd7c77687d8621774a" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
 <tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
+<tr class="memitem:a97e301e58185f753feb7a36d6f936393" id="r_a97e301e58185f753feb7a36d6f936393"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a97e301e58185f753feb7a36d6f936393">getUuid</a> () const</td></tr>
+<tr class="memdesc:a97e301e58185f753feb7a36d6f936393"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件持久 ID（随 .scene 序列化，是 <a class="el" href="class_shit_1_1_component_ref.html" title="可序列化的组件引用（存 UUID，懒解析，自动失效）">ComponentRef&lt;T&gt;</a> 引用字段的寻址依据）  <br /></td></tr>
+<tr class="memitem:abab895b8aff7bde6865ec1a74624b0e9" id="r_abab895b8aff7bde6865ec1a74624b0e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abab895b8aff7bde6865ec1a74624b0e9">setUuid</a> (uint64_t uuid)</td></tr>
+<tr class="memdesc:abab895b8aff7bde6865ec1a74624b0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">直接设置组件 ID（仅引擎反序列化/索引维护使用；正常流程由构造函数随机分配）  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
@@ -203,6 +207,8 @@ Protected 成员函数</h2></td></tr>
 Protected 属性</h2></td></tr>
 <tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
 <tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
+<tr class="memitem:a3d8f7ab3c5e355a10d043dc922da7706" id="r_a3d8f7ab3c5e355a10d043dc922da7706"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a3d8f7ab3c5e355a10d043dc922da7706">m_uuid</a> = 0</td></tr>
+<tr class="memdesc:a3d8f7ab3c5e355a10d043dc922da7706"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久 ID（构造时随机分配；0 仅在序列化前尚未赋值时短暂存在）  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
@@ -329,6 +335,33 @@ Protected 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97e301e58185f753feb7a36d6f936393" name="a97e301e58185f753feb7a36d6f936393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e301e58185f753feb7a36d6f936393">&#9670;&#160;</a></span>getUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t getUuid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>组件持久 ID（随 .scene 序列化，是 <a class="el" href="class_shit_1_1_component_ref.html" title="可序列化的组件引用（存 UUID，懒解析，自动失效）">ComponentRef&lt;T&gt;</a> 引用字段的寻址依据） </p>
 
 </div>
 </div>
@@ -569,6 +602,33 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="abab895b8aff7bde6865ec1a74624b0e9" name="abab895b8aff7bde6865ec1a74624b0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab895b8aff7bde6865ec1a74624b0e9">&#9670;&#160;</a></span>setUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUuid </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>uuid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>直接设置组件 ID（仅引擎反序列化/索引维护使用；正常流程由构造函数随机分配） </p>
+
+</div>
+</div>
 <a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
 <a id="a00df87c957d8f7ee0fc51f07a0542f4a" name="a00df87c957d8f7ee0fc51f07a0542f4a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00df87c957d8f7ee0fc51f07a0542f4a">&#9670;&#160;</a></span>GameObject</h2>
@@ -656,6 +716,30 @@ Protected 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d8f7ab3c5e355a10d043dc922da7706" name="a3d8f7ab3c5e355a10d043dc922da7706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d8f7ab3c5e355a10d043dc922da7706">&#9670;&#160;</a></span>m_uuid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t m_uuid = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>持久 ID（构造时随机分配；0 仅在序列化前尚未赋值时短暂存在） </p>
 
 </div>
 </div>

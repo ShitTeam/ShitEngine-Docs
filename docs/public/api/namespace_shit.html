@@ -185,6 +185,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBA 颜色（每通道 8 位）  <a href="struct_shit_1_1_color.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:Component" id="r_Component"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件基类  <a href="class_shit_1_1_component.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:ComponentRef" id="r_ComponentRef"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component_ref.html">ComponentRef</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">可序列化的组件引用（存 UUID，懒解析，自动失效）  <a href="class_shit_1_1_component_ref.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:Config" id="r_Config"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_config.html">Config</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置管理类  <a href="class_shit_1_1_config.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:EngineContext" id="r_EngineContext"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_engine_context.html">EngineContext</a></td></tr>
@@ -504,6 +506,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
+<tr class="memitem:aed855649b4c02f3c9f517528e8e9427b" id="r_aed855649b4c02f3c9f517528e8e9427b"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#aed855649b4c02f3c9f517528e8e9427b">GenerateComponentUuid</a> ()</td></tr>
+<tr class="memdesc:aed855649b4c02f3c9f517528e8e9427b"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成随机组件 UUID（64 位；0 保留为空引用，永不返回 0）  <br /></td></tr>
+<tr class="memitem:a893cf9371fd527345f0a25b524c131d9" id="r_a893cf9371fd527345f0a25b524c131d9"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a893cf9371fd527345f0a25b524c131d9">ComponentRefLookup</a> (uint64_t uuid)</td></tr>
+<tr class="memdesc:a893cf9371fd527345f0a25b524c131d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">内部：从当前上下文的活跃场景按 uuid 查组件（实现在 ComponentRef.cpp，跨 TU/DLL 共享）  <br /></td></tr>
 <tr class="memitem:afe671363a5ef5f405485e38c225e0885" id="r_afe671363a5ef5f405485e38c225e0885"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#afe671363a5ef5f405485e38c225e0885">DemangleTypeName</a> (const char *mangled)</td></tr>
 <tr class="memitem:abb6cad04f9d8dab77b41468f34943c13" id="r_abb6cad04f9d8dab77b41468f34943c13"><td class="memTemplParams" colspan="2">template&lt;typename T, typename M&gt; </td></tr>
 <tr class="memitem:abb6cad04f9d8dab77b41468f34943c13 template"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#abb6cad04f9d8dab77b41468f34943c13">memberOffset</a> (M T::*member)</td></tr>
@@ -728,6 +734,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="a893cf9371fd527345f0a25b524c131d9" name="a893cf9371fd527345f0a25b524c131d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893cf9371fd527345f0a25b524c131d9">&#9670;&#160;</a></span>ComponentRefLookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_component.html">Component</a> * ComponentRefLookup </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>uuid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内部：从当前上下文的活跃场景按 uuid 查组件（实现在 ComponentRef.cpp，跨 TU/DLL 共享） </p>
+
+</div>
+</div>
 <a id="afe671363a5ef5f405485e38c225e0885" name="afe671363a5ef5f405485e38c225e0885"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe671363a5ef5f405485e38c225e0885">&#9670;&#160;</a></span>DemangleTypeName()</h2>
 
@@ -750,6 +775,25 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed855649b4c02f3c9f517528e8e9427b" name="aed855649b4c02f3c9f517528e8e9427b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed855649b4c02f3c9f517528e8e9427b">&#9670;&#160;</a></span>GenerateComponentUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t GenerateComponentUuid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成随机组件 UUID（64 位；0 保留为空引用，永不返回 0） </p>
 
 </div>
 </div>
