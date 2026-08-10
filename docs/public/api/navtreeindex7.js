@@ -1,5 +1,11 @@
 var NAVTREEINDEX7 =
 {
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0daf623e75af30e62bbd73d6df5b50bb7b5":[1,0,0,67,4],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0daf6c6379402dce27659f7cffee6bc1f00":[1,0,0,67,46],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0dafc335adb3d69d3d8270769e1923ea4dc":[1,0,0,67,108],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0dafdcbdc22f7e22388bf5905c290bcfe4b":[1,0,0,67,86],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0dafe5c3684dce76cdd9f7f42430868aa74":[1,0,0,67,56],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0dafefd8998f6e031552da872b5cbe47c4f":[1,0,0,67,125],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0daff44570aca8241914870afbc310cdb85":[1,0,0,67,10],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0daffa5882d1ddcf903bf0d0dbc30bfc604":[1,0,0,67,105],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0daffb2ce8868d49c78376bf7e76c88fd52":[1,0,0,67,95],

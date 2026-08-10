@@ -5,7 +5,6 @@ var hierarchy =
     [ "AudioManager", "class_shit_1_1_audio_manager.html", null ],
     [ "AudioPlayer", "class_shit_1_1_audio_player.html", null ],
     [ "AudioTrack", "class_shit_1_1_audio_track.html", null ],
-    [ "AudioTrackGroup", "class_shit_1_1_audio_track_group.html", null ],
     [ "AxisBinding", "struct_shit_1_1_axis_binding.html", null ],
     [ "Color", "struct_shit_1_1_color.html", null ],
     [ "UIButton::ColorBlock", "struct_shit_1_1_u_i_button_1_1_color_block.html", null ],
@@ -35,6 +34,9 @@ var hierarchy =
     ] ],
     [ "Prefab::ComponentData", "struct_shit_1_1_prefab_1_1_component_data.html", null ],
     [ "Config", "class_shit_1_1_config.html", null ],
+    [ "enable_shared_from_this", null, [
+      [ "AudioTrackGroup", "class_shit_1_1_audio_track_group.html", null ]
+    ] ],
     [ "EngineContext", "class_shit_1_1_engine_context.html", null ],
     [ "EnumValue", "struct_shit_1_1_enum_value.html", null ],
     [ "Event", "struct_shit_1_1_event.html", null ],

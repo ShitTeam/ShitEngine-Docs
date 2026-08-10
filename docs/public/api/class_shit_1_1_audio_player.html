@@ -171,7 +171,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a554d0f30ae93d2787435dca9a46c6c5d" id="r_a554d0f30ae93d2787435dca9a46c6c5d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a554d0f30ae93d2787435dca9a46c6c5d">Update</a> ()</td></tr>
 <tr class="memitem:aa28102fc6628113f8df2bf137a56dbf4" id="r_aa28102fc6628113f8df2bf137a56dbf4"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa28102fc6628113f8df2bf137a56dbf4">CreateTrackGroup</a> (const std::string &amp;name)</td></tr>
 <tr class="memitem:a1808a18d4251b068f5918292e02ee3bd" id="r_a1808a18d4251b068f5918292e02ee3bd"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_audio_track_group.html">AudioTrackGroup</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1808a18d4251b068f5918292e02ee3bd">GetTrackGroup</a> (const std::string &amp;name)</td></tr>
-<tr class="memitem:a13693ec1551b1ac57ae42c52fc5ce02c" id="r_a13693ec1551b1ac57ae42c52fc5ce02c"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_audio_track.html">AudioTrack</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a13693ec1551b1ac57ae42c52fc5ce02c">Play</a> (const std::string &amp;filePath, const std::string &amp;group=&quot;default&quot;)</td></tr>
+<tr class="memitem:ac4a860d3a79749c72ffa21a78752d9e5" id="r_ac4a860d3a79749c72ffa21a78752d9e5"><td class="memItemLeft">static std::shared_ptr&lt; <a class="el" href="class_shit_1_1_audio_track.html">AudioTrack</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac4a860d3a79749c72ffa21a78752d9e5">Play</a> (const std::string &amp;filePath, const std::string &amp;group=&quot;default&quot;)</td></tr>
+<tr class="memdesc:ac4a860d3a79749c72ffa21a78752d9e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">播放音频，返回共享句柄。播放结束后引擎自动回收资源； 调用方保存返回值可安全持有（track 播完后 isFinished()==true， 但对象不会悬垂——引擎释放的是自己的引用，调用方持有期间对象存活）。  <br /></td></tr>
 <tr class="memitem:aa5a1799fb46cab51c9d242d43d06ac20" id="r_aa5a1799fb46cab51c9d242d43d06ac20"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa5a1799fb46cab51c9d242d43d06ac20">SetMasterVolume</a> (float gain)</td></tr>
 <tr class="memitem:ae29e26e89211f70c3f06d7d50b649227" id="r_ae29e26e89211f70c3f06d7d50b649227"><td class="memItemLeft">static float&#160;</td><td class="memItemRight"><a class="el" href="#ae29e26e89211f70c3f06d7d50b649227">GetMasterVolume</a> ()</td></tr>
 <tr class="memitem:aa0fdd77bbc34ecfcd2089fdf8c97505f" id="r_aa0fdd77bbc34ecfcd2089fdf8c97505f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa0fdd77bbc34ecfcd2089fdf8c97505f">PauseAll</a> ()</td></tr>
@@ -490,8 +491,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a13693ec1551b1ac57ae42c52fc5ce02c" name="a13693ec1551b1ac57ae42c52fc5ce02c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13693ec1551b1ac57ae42c52fc5ce02c">&#9670;&#160;</a></span>Play()</h2>
+<a id="ac4a860d3a79749c72ffa21a78752d9e5" name="ac4a860d3a79749c72ffa21a78752d9e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a860d3a79749c72ffa21a78752d9e5">&#9670;&#160;</a></span>Play()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -500,7 +501,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_shit_1_1_audio_track.html">AudioTrack</a> * Play </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_shit_1_1_audio_track.html">AudioTrack</a> &gt; Play </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
         </tr>
@@ -516,6 +517,8 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>播放音频，返回共享句柄。播放结束后引擎自动回收资源； 调用方保存返回值可安全持有（track 播完后 isFinished()==true， 但对象不会悬垂——引擎释放的是自己的引用，调用方持有期间对象存活）。 </p>
 
 </div>
 </div>

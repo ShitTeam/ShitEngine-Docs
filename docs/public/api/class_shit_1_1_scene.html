@@ -176,13 +176,13 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:aed2d208f4d304cc6def0a15b73f115bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁所有对象与系统  <br /></td></tr>
 <tr class="memitem:a7904c998322c92e144f5dba063b17e11" id="r_a7904c998322c92e144f5dba063b17e11"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7904c998322c92e144f5dba063b17e11">hasSystems</a> () const</td></tr>
 <tr class="memdesc:a7904c998322c92e144f5dba063b17e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否已注册任何 System（SceneManager 用于自动初始化，防止漏调 <a class="el" href="#a9339772ec5ac9fa929938109207f2863" title="注册默认系统（BehaviorSystem + RenderSystem + UIRenderSystem），幂等">init()</a> 导致空场景）  <br /></td></tr>
-<tr class="memitem:a011567ea2e90782dc7cffbd962549f88" id="r_a011567ea2e90782dc7cffbd962549f88"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a011567ea2e90782dc7cffbd962549f88">addGameObject</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &gt; &amp;&amp;gameObject)</td></tr>
+<tr class="memitem:a011567ea2e90782dc7cffbd962549f88" id="r_a011567ea2e90782dc7cffbd962549f88"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a011567ea2e90782dc7cffbd962549f88">addGameObject</a> (std::unique_ptr&lt; <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> &gt; &amp;&amp;gameObject)</td></tr>
 <tr class="memdesc:a011567ea2e90782dc7cffbd962549f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">延迟添加 GameObject（帧末生效）  <br /></td></tr>
-<tr class="memitem:a9f4ae128a66f2c918b57e58ed9534677" id="r_a9f4ae128a66f2c918b57e58ed9534677"><td class="memItemLeft"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f4ae128a66f2c918b57e58ed9534677">createGameObject</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a9f4ae128a66f2c918b57e58ed9534677" id="r_a9f4ae128a66f2c918b57e58ed9534677"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f4ae128a66f2c918b57e58ed9534677">createGameObject</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a9f4ae128a66f2c918b57e58ed9534677"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建并添加 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a>  <br /></td></tr>
-<tr class="memitem:aacfe102452215e81fe047bfe6de8e4d0" id="r_aacfe102452215e81fe047bfe6de8e4d0"><td class="memItemLeft"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aacfe102452215e81fe047bfe6de8e4d0">instantiate</a> (const <a class="el" href="class_shit_1_1_prefab.html">Prefab</a> &amp;prefab, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="memitem:aacfe102452215e81fe047bfe6de8e4d0" id="r_aacfe102452215e81fe047bfe6de8e4d0"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aacfe102452215e81fe047bfe6de8e4d0">instantiate</a> (const <a class="el" href="class_shit_1_1_prefab.html">Prefab</a> &amp;prefab, const std::string &amp;name=&quot;&quot;)</td></tr>
 <tr class="memdesc:aacfe102452215e81fe047bfe6de8e4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从预制体实例化  <br /></td></tr>
-<tr class="memitem:a476333bb647cc4e1f5a6085a4a8abf00" id="r_a476333bb647cc4e1f5a6085a4a8abf00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a476333bb647cc4e1f5a6085a4a8abf00">removeGameObject</a> (<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *gameObject)</td></tr>
+<tr class="memitem:a476333bb647cc4e1f5a6085a4a8abf00" id="r_a476333bb647cc4e1f5a6085a4a8abf00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a476333bb647cc4e1f5a6085a4a8abf00">removeGameObject</a> (<a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *gameObject)</td></tr>
 <tr class="memdesc:a476333bb647cc4e1f5a6085a4a8abf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">按指针标记销毁  <br /></td></tr>
 <tr class="memitem:a3b509c9a28035513d2eb716fd3ab91d4" id="r_a3b509c9a28035513d2eb716fd3ab91d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b509c9a28035513d2eb716fd3ab91d4">removeGameObjectByName</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a3b509c9a28035513d2eb716fd3ab91d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">按名称标记销毁  <br /></td></tr>
@@ -199,8 +199,17 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aea880a156468d35b99e0e49bb0502540" id="r_aea880a156468d35b99e0e49bb0502540"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:aea880a156468d35b99e0e49bb0502540 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aea880a156468d35b99e0e49bb0502540">hasSystem</a> ()</td></tr>
 <tr class="memitem:a3fd7335faa33dce2f87c7e50eef3e294" id="r_a3fd7335faa33dce2f87c7e50eef3e294"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3fd7335faa33dce2f87c7e50eef3e294">getName</a> () const</td></tr>
-<tr class="memitem:ae81a7db40b4b7cdc5f0b037e999fd560" id="r_ae81a7db40b4b7cdc5f0b037e999fd560"><td class="memItemLeft">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae81a7db40b4b7cdc5f0b037e999fd560">getGameObjects</a> ()</td></tr>
+<tr class="memitem:ae81a7db40b4b7cdc5f0b037e999fd560" id="r_ae81a7db40b4b7cdc5f0b037e999fd560"><td class="memItemLeft">std::vector&lt; std::unique_ptr&lt; <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae81a7db40b4b7cdc5f0b037e999fd560">getGameObjects</a> ()</td></tr>
 <tr class="memitem:a9d3a2685df23b5e7cbf59c19c4a1f9b5" id="r_a9d3a2685df23b5e7cbf59c19c4a1f9b5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9d3a2685df23b5e7cbf59c19c4a1f9b5">setName</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a09c903ef22a1fcd1e672368ffc96f0f0" id="r_a09c903ef22a1fcd1e672368ffc96f0f0"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a09c903ef22a1fcd1e672368ffc96f0f0">getGeneration</a> () const</td></tr>
+<tr class="memdesc:a09c903ef22a1fcd1e672368ffc96f0f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">场景结构代数：任何对象增删/组件增删/改名/改父都会递增。 编辑器据此判断"场景内容是否变化"，及时重建场景树、校验选中态， 避免播放中对象被游戏逻辑销毁后仍持有悬垂指针。  <br /></td></tr>
+<tr class="memitem:a4df86bf18be1baecc1768d2a53d7c591" id="r_a4df86bf18be1baecc1768d2a53d7c591"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4df86bf18be1baecc1768d2a53d7c591">containsGameObject</a> (const <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *gameObject) const</td></tr>
+<tr class="memdesc:a4df86bf18be1baecc1768d2a53d7c591"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象是否仍在当前场景容器中（地址比较，供编辑器校验旧选中指针）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a00df87c957d8f7ee0fc51f07a0542f4a" id="r_a00df87c957d8f7ee0fc51f07a0542f4a"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a></td></tr>
+<tr class="memdesc:a00df87c957d8f7ee0fc51f07a0542f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 结构变更（组件增删/改名/改父）时通知 bumpGeneration  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>场景类 </p>
@@ -309,13 +318,32 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void addGameObject </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>gameObject</em></span></td><td>)</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>gameObject</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>延迟添加 GameObject（帧末生效） </p>
+
+</div>
+</div>
+<a id="a4df86bf18be1baecc1768d2a53d7c591" name="a4df86bf18be1baecc1768d2a53d7c591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df86bf18be1baecc1768d2a53d7c591">&#9670;&#160;</a></span>containsGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool containsGameObject </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>gameObject</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>对象是否仍在当前场景容器中（地址比较，供编辑器校验旧选中指针） </p>
 
 </div>
 </div>
@@ -326,7 +354,7 @@ Public 成员函数</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> * createGameObject </td>
+          <td class="memname"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> * createGameObject </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
@@ -375,7 +403,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_shit_1_1_game_object.html">GameObject</a> &gt; &gt; &amp; getGameObjects </td>
+          <td class="memname">std::vector&lt; std::unique_ptr&lt; <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> &gt; &gt; &amp; getGameObjects </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -387,6 +415,33 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09c903ef22a1fcd1e672368ffc96f0f0" name="a09c903ef22a1fcd1e672368ffc96f0f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c903ef22a1fcd1e672368ffc96f0f0">&#9670;&#160;</a></span>getGeneration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t getGeneration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>场景结构代数：任何对象增删/组件增删/改名/改父都会递增。 编辑器据此判断"场景内容是否变化"，及时重建场景树、校验选中态， 避免播放中对象被游戏逻辑销毁后仍持有悬垂指针。 </p>
 
 </div>
 </div>
@@ -530,7 +585,7 @@ template&lt;typename T&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> * instantiate </td>
+          <td class="memname"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> * instantiate </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_shit_1_1_prefab.html">Prefab</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>prefab</em></span>, </td>
         </tr>
@@ -651,7 +706,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void removeGameObject </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>gameObject</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>gameObject</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -767,6 +822,31 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>更新所有 <a class="el" href="class_shit_1_1_system.html" title="System 基类">System</a> + 处理延迟操作 </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="a00df87c957d8f7ee0fc51f07a0542f4a" name="a00df87c957d8f7ee0fc51f07a0542f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00df87c957d8f7ee0fc51f07a0542f4a">&#9670;&#160;</a></span>GameObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class GameObject</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 结构变更（组件增删/改名/改父）时通知 bumpGeneration </p>
 
 </div>
 </div>
