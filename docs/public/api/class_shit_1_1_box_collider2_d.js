@@ -11,6 +11,7 @@ var class_shit_1_1_box_collider2_d =
     [ "onAttach", "class_shit_1_1_box_collider2_d.html#acbef2688cd43fd22241759f89fe12d28", null ],
     [ "onDestroy", "class_shit_1_1_box_collider2_d.html#aee7be93617a6078496df31830d454990", null ],
     [ "onDetach", "class_shit_1_1_box_collider2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914", null ],
+    [ "onFieldChanged", "class_shit_1_1_box_collider2_d.html#aadba02841897aadd2819172be6c50058", null ],
     [ "setDensity", "class_shit_1_1_box_collider2_d.html#a0ceeda25e326e99d6e971e980a00bd49", null ],
     [ "setFriction", "class_shit_1_1_box_collider2_d.html#a3c6a7f8229c893b61e7088ded5c3cbe8", null ],
     [ "setRestitution", "class_shit_1_1_box_collider2_d.html#a3e855ebbcb3bc33e4f3650dc1bdda763", null ],

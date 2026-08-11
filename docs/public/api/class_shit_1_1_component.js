@@ -12,6 +12,7 @@ var class_shit_1_1_component =
     [ "onCreate", "class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722", null ],
     [ "onDestroy", "class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c", null ],
     [ "onDetach", "class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616", null ],
+    [ "onFieldChanged", "class_shit_1_1_component.html#a408a2dbeb7e4a239670553c2c6c3f3e3", null ],
     [ "operator=", "class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796", null ],
     [ "operator=", "class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e", null ],
     [ "setRegistered", "class_shit_1_1_component.html#a215419d22c35be7dec54fc538c1050fd", null ],

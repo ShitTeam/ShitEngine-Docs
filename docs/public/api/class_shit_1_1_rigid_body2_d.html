@@ -189,6 +189,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
 <tr class="memitem:a97c38f6c736d313ba0ab5b2849f8a8b9" id="r_a97c38f6c736d313ba0ab5b2849f8a8b9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a97c38f6c736d313ba0ab5b2849f8a8b9">setBodyType</a> (<a class="el" href="#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type)</td></tr>
 <tr class="memitem:ab125f93ac339c4e98ccf75dba465ef47" id="r_ab125f93ac339c4e98ccf75dba465ef47"><td class="memItemLeft"><a class="el" href="#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab125f93ac339c4e98ccf75dba465ef47">getBodyType</a> () const</td></tr>
+<tr class="memitem:aadba02841897aadd2819172be6c50058" id="r_aadba02841897aadd2819172be6c50058"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aadba02841897aadd2819172be6c50058">onFieldChanged</a> (const std::string &amp;fieldName) override</td></tr>
+<tr class="memdesc:aadba02841897aadd2819172be6c50058"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查器直写反射字段后回调：把运行时字段改动同步到已创建的 Box2D 刚体  <br /></td></tr>
 <tr class="memitem:a3ce110fee82e70844f1c5ecacf520f9f" id="r_a3ce110fee82e70844f1c5ecacf520f9f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3ce110fee82e70844f1c5ecacf520f9f">setGravityScale</a> (float scale)</td></tr>
 <tr class="memitem:af3491d30affa348b93c8cdfe0a4dd59e" id="r_af3491d30affa348b93c8cdfe0a4dd59e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af3491d30affa348b93c8cdfe0a4dd59e">getGravityScale</a> () const</td></tr>
 <tr class="memitem:a5be82ed7c89df5559745fa63fa069ba1" id="r_a5be82ed7c89df5559745fa63fa069ba1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5be82ed7c89df5559745fa63fa069ba1">setLinearDamping</a> (float damping)</td></tr>
@@ -704,6 +706,35 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>重载 <a class="el" href="class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616">Component</a> .</p>
+
+</div>
+</div>
+<a id="aadba02841897aadd2819172be6c50058" name="aadba02841897aadd2819172be6c50058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadba02841897aadd2819172be6c50058">&#9670;&#160;</a></span>onFieldChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onFieldChanged </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fieldName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查器直写反射字段后回调：把运行时字段改动同步到已创建的 Box2D 刚体 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a408a2dbeb7e4a239670553c2c6c3f3e3">Component</a> .</p>
 
 </div>
 </div>

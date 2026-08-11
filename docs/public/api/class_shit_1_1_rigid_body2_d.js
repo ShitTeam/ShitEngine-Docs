@@ -23,6 +23,7 @@ var class_shit_1_1_rigid_body2_d =
     [ "onCreate", "class_shit_1_1_rigid_body2_d.html#acbe76e0ea44ef342a8c85726573860d4", null ],
     [ "onDestroy", "class_shit_1_1_rigid_body2_d.html#aee7be93617a6078496df31830d454990", null ],
     [ "onDetach", "class_shit_1_1_rigid_body2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914", null ],
+    [ "onFieldChanged", "class_shit_1_1_rigid_body2_d.html#aadba02841897aadd2819172be6c50058", null ],
     [ "setBodyType", "class_shit_1_1_rigid_body2_d.html#a97c38f6c736d313ba0ab5b2849f8a8b9", null ],
     [ "setFixedRotation", "class_shit_1_1_rigid_body2_d.html#afecea4ddc039135ff73b911f1d2b0176", null ],
     [ "setGravityScale", "class_shit_1_1_rigid_body2_d.html#a3ce110fee82e70844f1c5ecacf520f9f", null ],

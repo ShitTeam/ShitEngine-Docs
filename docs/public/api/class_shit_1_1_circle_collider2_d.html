@@ -182,6 +182,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ad1306b95597699789cd9d1eeb89623ce" id="r_ad1306b95597699789cd9d1eeb89623ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad1306b95597699789cd9d1eeb89623ce">setRadius</a> (float radius)</td></tr>
 <tr class="memdesc:ad1306b95597699789cd9d1eeb89623ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">像素半径，默认 16.0f  <br /></td></tr>
 <tr class="memitem:a3ec8361c10a46b043072e5efb309ada3" id="r_a3ec8361c10a46b043072e5efb309ada3"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a3ec8361c10a46b043072e5efb309ada3">getRadius</a> () const</td></tr>
+<tr class="memitem:aadba02841897aadd2819172be6c50058" id="r_aadba02841897aadd2819172be6c50058"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aadba02841897aadd2819172be6c50058">onFieldChanged</a> (const std::string &amp;fieldName) override</td></tr>
+<tr class="memdesc:aadba02841897aadd2819172be6c50058"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查器直写反射字段后回调：把半径改动同步到已创建的 Box2D 圆形状  <br /></td></tr>
 <tr class="memitem:a0ceeda25e326e99d6e971e980a00bd49" id="r_a0ceeda25e326e99d6e971e980a00bd49"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0ceeda25e326e99d6e971e980a00bd49">setDensity</a> (float density)</td></tr>
 <tr class="memdesc:a0ceeda25e326e99d6e971e980a00bd49"><td class="mdescLeft">&#160;</td><td class="mdescRight">密度，默认 1.0f  <br /></td></tr>
 <tr class="memitem:a9f45c741b4c738e833fe66fe125592b7" id="r_a9f45c741b4c738e833fe66fe125592b7"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a9f45c741b4c738e833fe66fe125592b7">getDensity</a> () const</td></tr>
@@ -488,6 +490,35 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>重载 <a class="el" href="class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616">Component</a> .</p>
+
+</div>
+</div>
+<a id="aadba02841897aadd2819172be6c50058" name="aadba02841897aadd2819172be6c50058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadba02841897aadd2819172be6c50058">&#9670;&#160;</a></span>onFieldChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onFieldChanged </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fieldName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查器直写反射字段后回调：把半径改动同步到已创建的 Box2D 圆形状 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a408a2dbeb7e4a239670553c2c6c3f3e3">Component</a> .</p>
 
 </div>
 </div>
