@@ -49,8 +49,9 @@ var searchData=
   ['ispaused_46',['isPaused',['../class_shit_1_1_audio_track.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AudioTrack::isPaused()'],['../class_shit_1_1_animation_component.html#a48ffb22c4b73bf70c93e036abeab81f2',1,'Shit::AnimationComponent::isPaused()']]],
   ['isplaying_47',['isPlaying',['../class_shit_1_1_audio_track.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AudioTrack::isPlaying()'],['../class_shit_1_1_animation_component.html#a389ad71786b00ae81f69060f153509d2',1,'Shit::AnimationComponent::isPlaying()']]],
   ['isplayonstart_48',['isPlayOnStart',['../class_shit_1_1_audio_source.html#ac5b18c61e23731410d71f863714776f9',1,'Shit::AudioSource']]],
-  ['isregistered_49',['isRegistered',['../class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246',1,'Shit::Component']]],
-  ['isrunning_50',['IsRunning',['../class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f',1,'Shit::Game']]],
-  ['isstarted_51',['isStarted',['../class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781',1,'Shit::Behavior']]],
-  ['isvisible_52',['isVisible',['../class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::RendererComponent::isVisible()'],['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent::isVisible()']]]
+  ['isreference_49',['isReference',['../struct_shit_1_1_field_info.html#a558706ef95f65fdca18e76256cb6aab0',1,'Shit::FieldInfo']]],
+  ['isregistered_50',['isRegistered',['../class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246',1,'Shit::Component']]],
+  ['isrunning_51',['IsRunning',['../class_shit_1_1_game.html#abac80b6e5030ccd8245ed2cd0edaf51f',1,'Shit::Game']]],
+  ['isstarted_52',['isStarted',['../class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781',1,'Shit::Behavior']]],
+  ['isvisible_53',['isVisible',['../class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::RendererComponent::isVisible()'],['../class_shit_1_1_u_i_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be',1,'Shit::UIRendererComponent::isVisible()']]]
 ];

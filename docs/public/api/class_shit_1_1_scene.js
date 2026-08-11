@@ -5,6 +5,7 @@ var class_shit_1_1_scene =
     [ "Scene", "class_shit_1_1_scene.html#aab6ee01f1d7f236d6bd5f105156e2ca9", null ],
     [ "Scene", "class_shit_1_1_scene.html#a91f30edc038f2faa6a57127cb69bb764", null ],
     [ "addGameObject", "class_shit_1_1_scene.html#a011567ea2e90782dc7cffbd962549f88", null ],
+    [ "componentByUuid", "class_shit_1_1_scene.html#a37c73db4fb406e7db9ad0a3acc119c0d", null ],
     [ "containsGameObject", "class_shit_1_1_scene.html#a4df86bf18be1baecc1768d2a53d7c591", null ],
     [ "createGameObject", "class_shit_1_1_scene.html#a9f4ae128a66f2c918b57e58ed9534677", null ],
     [ "destroy", "class_shit_1_1_scene.html#aed2d208f4d304cc6def0a15b73f115bf", null ],

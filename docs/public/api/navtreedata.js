@@ -64,10 +64,10 @@ var NAVTREEINDEX =
 "class_shit_1_1_audio_track.html#a2bc59e86369837e9c28a2294669a347a",
 "class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a",
 "class_shit_1_1_physics_system2_d.html#adcad81e9b88ca1a7b55785f6c91b225a",
-"class_shit_1_1_sprite.html#a637dbaba7024234f1dd304df1706c371",
-"class_shit_1_1_u_i_button.html#a3184fc3a9bb45fc19c464dc38e4d5638",
-"class_shit_1_1_u_i_text_input.html#aa15b95dc40e2d916d40df17f5dea8ed4",
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0da688761c83ec62d30ec1fe269849d42ad"
+"class_shit_1_1_sprite.html#a43fb6e9fc79dbcf1e1c19f5ddd46b705",
+"class_shit_1_1_u_i_button.html#a0a345030f4496973cffb1ea2e9ffb4aa",
+"class_shit_1_1_u_i_text_input.html#a9d77e0b08aad7f25ae87d63d83f422ed",
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da62e75b78c155e8549c5c5edb434a7757"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

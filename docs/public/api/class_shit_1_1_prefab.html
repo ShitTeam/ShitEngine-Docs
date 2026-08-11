@@ -163,14 +163,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:ComponentData" id="r_ComponentData"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_shit_1_1_prefab_1_1_component_data.html">ComponentData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">单个组件的数据（类型名 + 反射字段值，JSON 可序列化）  <a href="struct_shit_1_1_prefab_1_1_component_data.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">单个组件的数据（类型名 + 持久 UUID + 反射字段值，JSON 可序列化）  <a href="struct_shit_1_1_prefab_1_1_component_data.html#details">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a098007f3dd2a938824a819aa09423ca9" id="r_a098007f3dd2a938824a819aa09423ca9"><td class="memItemLeft">nlohmann::json&#160;</td><td class="memItemRight"><a class="el" href="#a098007f3dd2a938824a819aa09423ca9">toJson</a> () const</td></tr>
 <tr class="memdesc:a098007f3dd2a938824a819aa09423ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列化为 JSON  <br /></td></tr>
 <tr class="memitem:a6b1eb934cd47f9b035aa2dabd4644900" id="r_a6b1eb934cd47f9b035aa2dabd4644900"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6b1eb934cd47f9b035aa2dabd4644900">apply</a> (<a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *go) const</td></tr>
-<tr class="memdesc:a6b1eb934cd47f9b035aa2dabd4644900"><td class="mdescLeft">&#160;</td><td class="mdescRight">把此预制体应用到已有 GameObject（反射克隆）  <br /></td></tr>
+<tr class="memdesc:a6b1eb934cd47f9b035aa2dabd4644900"><td class="mdescLeft">&#160;</td><td class="mdescRight">把此预制体应用到已有 GameObject（反射克隆；恢复记录的组件 UUID）  <br /></td></tr>
 <tr class="memitem:addb342782463746fbb8874544632e9f5" id="r_addb342782463746fbb8874544632e9f5"><td class="memItemLeft"><a class="el" href="class_shit_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#addb342782463746fbb8874544632e9f5">instantiate</a> (<a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene, const std::string &amp;name=&quot;&quot;) const</td></tr>
 <tr class="memdesc:addb342782463746fbb8874544632e9f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建新 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 并应用此预制体  <br /></td></tr>
 <tr class="memitem:a314b19ebe3b2ce78e9df49fee95c21dd" id="r_a314b19ebe3b2ce78e9df49fee95c21dd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a314b19ebe3b2ce78e9df49fee95c21dd">hasData</a> () const</td></tr>
@@ -205,7 +205,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>把此预制体应用到已有 GameObject（反射克隆） </p>
+<p>把此预制体应用到已有 GameObject（反射克隆；恢复记录的组件 UUID） </p>
 
 </div>
 </div>

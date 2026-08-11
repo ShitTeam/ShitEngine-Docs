@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_shit_1_
 </div><!--header-->
 <div class="contents">
 
-<p>单个组件的数据（类型名 + 反射字段值，JSON 可序列化）  
+<p>单个组件的数据（类型名 + 持久 UUID + 反射字段值，JSON 可序列化）  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_prefab_8h_source.html">Prefab.h</a>&gt;</code></p>
@@ -164,11 +164,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_shit_1_
 Public 属性</h2></td></tr>
 <tr class="memitem:a3f13bbbf7a2e3a9357c1053612ecb0ff" id="r_a3f13bbbf7a2e3a9357c1053612ecb0ff"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a3f13bbbf7a2e3a9357c1053612ecb0ff">typeName</a></td></tr>
 <tr class="memdesc:a3f13bbbf7a2e3a9357c1053612ecb0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件类型名（TypeRegistry::Get 查询）  <br /></td></tr>
+<tr class="memitem:a39dd6627d886e64fade4f193f5839759" id="r_a39dd6627d886e64fade4f193f5839759"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#a39dd6627d886e64fade4f193f5839759">uuid</a> = 0</td></tr>
+<tr class="memdesc:a39dd6627d886e64fade4f193f5839759"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件持久 ID（0 = 未记录，加载时现场分配）  <br /></td></tr>
 <tr class="memitem:a1270691d17b8925654c325b68abefba1" id="r_a1270691d17b8925654c325b68abefba1"><td class="memItemLeft">nlohmann::json&#160;</td><td class="memItemRight"><a class="el" href="#a1270691d17b8925654c325b68abefba1">fields</a></td></tr>
 <tr class="memdesc:a1270691d17b8925654c325b68abefba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">字段名 → 值（仅反射且可序列化的字段）  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>单个组件的数据（类型名 + 反射字段值，JSON 可序列化） </p>
+<div class="textblock"><p>单个组件的数据（类型名 + 持久 UUID + 反射字段值，JSON 可序列化） </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
 <a id="a1270691d17b8925654c325b68abefba1" name="a1270691d17b8925654c325b68abefba1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1270691d17b8925654c325b68abefba1">&#9670;&#160;</a></span>fields</h2>
@@ -199,6 +201,22 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>组件类型名（TypeRegistry::Get 查询） </p>
+
+</div>
+</div>
+<a id="a39dd6627d886e64fade4f193f5839759" name="a39dd6627d886e64fade4f193f5839759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39dd6627d886e64fade4f193f5839759">&#9670;&#160;</a></span>uuid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t uuid = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>组件持久 ID（0 = 未记录，加载时现场分配） </p>
 
 </div>
 </div>

@@ -159,6 +159,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_shit_1_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
+<tr class="memitem:a558706ef95f65fdca18e76256cb6aab0" id="r_a558706ef95f65fdca18e76256cb6aab0"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a558706ef95f65fdca18e76256cb6aab0">isReference</a> () const</td></tr>
+<tr class="memdesc:a558706ef95f65fdca18e76256cb6aab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否为组件引用字段（ComponentRef&lt;T&gt;）  <br /></td></tr>
 <tr class="memitem:a8363464886eec1d714f2943132017463" id="r_a8363464886eec1d714f2943132017463"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#a8363464886eec1d714f2943132017463">GetFieldPtr</a> (void *obj) const</td></tr>
 <tr class="memdesc:a8363464886eec1d714f2943132017463"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取可变对象中字段的指针（用于 in-place 修改）  <br /></td></tr>
 <tr class="memitem:a62f73e00b6063b31e676d9ad6662fec2" id="r_a62f73e00b6063b31e676d9ad6662fec2"><td class="memItemLeft">const void *&#160;</td><td class="memItemRight"><a class="el" href="#a62f73e00b6063b31e676d9ad6662fec2">GetFieldPtr</a> (const void *obj) const</td></tr>
@@ -176,6 +178,8 @@ Public 属性</h2></td></tr>
 <tr class="memitem:a3f13bbbf7a2e3a9357c1053612ecb0ff" id="r_a3f13bbbf7a2e3a9357c1053612ecb0ff"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a3f13bbbf7a2e3a9357c1053612ecb0ff">typeName</a></td></tr>
 <tr class="memitem:ae798b5109d23cfc98128b29520eef49d" id="r_ae798b5109d23cfc98128b29520eef49d"><td class="memItemLeft">std::vector&lt; <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae798b5109d23cfc98128b29520eef49d">meta</a></td></tr>
 <tr class="memdesc:ae798b5109d23cfc98128b29520eef49d"><td class="mdescLeft">&#160;</td><td class="mdescRight">字段元数据（编辑器属性面板用）  <br /></td></tr>
+<tr class="memitem:a77433187068d7df2d7841a7f652165ab" id="r_a77433187068d7df2d7841a7f652165ab"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a77433187068d7df2d7841a7f652165ab">refType</a></td></tr>
+<tr class="memdesc:a77433187068d7df2d7841a7f652165ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用目标类型名（归一化，无命名空间前缀；空 = 普通字段）  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
 <a id="a62f73e00b6063b31e676d9ad6662fec2" name="a62f73e00b6063b31e676d9ad6662fec2"></a>
@@ -263,6 +267,33 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a558706ef95f65fdca18e76256cb6aab0" name="a558706ef95f65fdca18e76256cb6aab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a558706ef95f65fdca18e76256cb6aab0">&#9670;&#160;</a></span>isReference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isReference </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否为组件引用字段（ComponentRef&lt;T&gt;） </p>
+
+</div>
+</div>
 <a id="a7f7e7151e55400960f53a6fa775ba135" name="a7f7e7151e55400960f53a6fa775ba135"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f7e7151e55400960f53a6fa775ba135">&#9670;&#160;</a></span>SetValue()</h2>
 
@@ -336,6 +367,22 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77433187068d7df2d7841a7f652165ab" name="a77433187068d7df2d7841a7f652165ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77433187068d7df2d7841a7f652165ab">&#9670;&#160;</a></span>refType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string refType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>引用目标类型名（归一化，无命名空间前缀；空 = 普通字段） </p>
 
 </div>
 </div>

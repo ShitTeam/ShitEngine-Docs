@@ -336,86 +336,98 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_type_registry
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
 </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">// ── P3: 枚举常量 ──────────────────────────────────</span></div>
-<div class="foldopen" id="foldopen00169" data-start="{" data-end="}">
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#aee8ed17f906a476b727596eae5b54487">  169</a></span>    TypeInfoBuilder&amp; <a class="code hl_function" href="class_shit_1_1_type_info_builder.html#aee8ed17f906a476b727596eae5b54487">Value</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, int64_t val) {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        m_info.enumValues.push_back({name, val});</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">// ── P20: 组件引用字段标记（ComponentRef&lt;T&gt;，编辑器拖拽引用 + UUID 序列化）──</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="comment">// 由扫描器为 ComponentRef&lt;...&gt; 字段自动生成；普通字段不调用。</span></div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#af2d1260dc3133daf0a7a4a1d9d640581">  170</a></span>    TypeInfoBuilder&amp; <a class="code hl_function" href="class_shit_1_1_type_info_builder.html#af2d1260dc3133daf0a7a4a1d9d640581">Ref</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* refType) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">if</span> (!m_info.fields.empty() &amp;&amp; refType) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            m_info.fields.back().refType = refType;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
 </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="comment">// ── P1-2: 工厂注册 ─────────────────────────────────</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#a868904b119a9e894dcc5c66871d39ae9">  176</a></span>    TypeInfoBuilder&amp; <a class="code hl_function" href="class_shit_1_1_type_info_builder.html#a868904b119a9e894dcc5c66871d39ae9">Factory</a>() {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        m_info.factory = makeFactory&lt;T&gt;(std::is_abstract&lt;T&gt;{});</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">// ── P3: 枚举常量 ──────────────────────────────────</span></div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#aee8ed17f906a476b727596eae5b54487">  178</a></span>    TypeInfoBuilder&amp; <a class="code hl_function" href="class_shit_1_1_type_info_builder.html#aee8ed17f906a476b727596eae5b54487">Value</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, int64_t val) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        m_info.enumValues.push_back({name, val});</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
 </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#a9bfe6d7f6157040f0a5f83c29249a2ae">  182</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_type_info_builder.html#a9bfe6d7f6157040f0a5f83c29249a2ae">Register</a>() {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        m_info.typeIndex = std::type_index(<span class="keyword">typeid</span>(<a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>));</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="comment">// 尝试立即解析 baseTypeName（若已注册则直接链接，未注册时留待 ResolveBases 处理）</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">if</span> (!m_info.baseType &amp;&amp; !m_info.baseTypeName.empty()) {</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="keyword">auto</span>* resolved = <a class="code hl_function" href="class_shit_1_1_type_registry.html#a1d39c27eec2e796611800f76df4390b8">TypeRegistry::Get</a>(m_info.baseTypeName.c_str());</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordflow">if</span> (resolved) {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                m_info.baseType = resolved;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            }</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <a class="code hl_function" href="class_shit_1_1_type_registry.html#a4b6992d253528ad77e8f43820dac2a52">TypeRegistry::Register</a>(std::move(m_info));</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="comment">// ── P1-2: 工厂注册 ─────────────────────────────────</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#a868904b119a9e894dcc5c66871d39ae9">  185</a></span>    TypeInfoBuilder&amp; <a class="code hl_function" href="class_shit_1_1_type_info_builder.html#a868904b119a9e894dcc5c66871d39ae9">Factory</a>() {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        m_info.factory = makeFactory&lt;T&gt;(std::is_abstract&lt;T&gt;{});</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
 </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keyword">friend</span> <a class="code hl_class" href="class_shit_1_1_type_info_builder.html">TypeInfoBuilder</a> <a class="code hl_function" href="namespace_shit.html#a2e911473ec7d41ed241324aba861713b">ReflectType</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_shit_1_1_type_info_builder.html">TypeInfoBuilder</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        : m_info{name, size, nullptr, {}, {}, {}, <span class="keyword">typeid</span>(<span class="keyword">nullptr</span>)} {}</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00191" data-start="{" data-end="}">
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#a9bfe6d7f6157040f0a5f83c29249a2ae">  191</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_type_info_builder.html#a9bfe6d7f6157040f0a5f83c29249a2ae">Register</a>() {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        m_info.typeIndex = std::type_index(<span class="keyword">typeid</span>(<a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>));</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="comment">// 尝试立即解析 baseTypeName（若已注册则直接链接，未注册时留待 ResolveBases 处理）</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">if</span> (!m_info.baseType &amp;&amp; !m_info.baseTypeName.empty()) {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keyword">auto</span>* resolved = <a class="code hl_function" href="class_shit_1_1_type_registry.html#a1d39c27eec2e796611800f76df4390b8">TypeRegistry::Get</a>(m_info.baseTypeName.c_str());</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordflow">if</span> (resolved) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                m_info.baseType = resolved;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        }</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="comment">// ── Factory SFINAE 辅助：抽象类型跳过 factory ──</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">static</span> std::function&lt;<span class="keywordtype">void</span>*(<span class="keywordtype">void</span>*)&gt; makeFactory(std::false_type <span class="comment">/* not abstract */</span>) {</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">return</span> [](<span class="keywordtype">void</span>* mem) -&gt; <span class="keywordtype">void</span>* {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="keywordflow">if</span> (mem) return ::new(mem) <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>();</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>();</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        };</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <a class="code hl_function" href="class_shit_1_1_type_registry.html#a4b6992d253528ad77e8f43820dac2a52">TypeRegistry::Register</a>(std::move(m_info));</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
+</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">friend</span> <a class="code hl_class" href="class_shit_1_1_type_info_builder.html">TypeInfoBuilder</a> <a class="code hl_function" href="namespace_shit.html#a2e911473ec7d41ed241324aba861713b">ReflectType</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_shit_1_1_type_info_builder.html">TypeInfoBuilder</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        : m_info{name, size, nullptr, {}, {}, {}, <span class="keyword">typeid</span>(<span class="keyword">nullptr</span>)} {}</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">static</span> std::function&lt;<span class="keywordtype">void</span>*(<span class="keywordtype">void</span>*)&gt; makeFactory(std::true_type <span class="comment">/* abstract */</span>) {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <a class="code hl_struct" href="struct_shit_1_1_type_info.html">TypeInfo</a> m_info;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>};</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="comment">// ── Factory SFINAE 辅助：抽象类型跳过 factory ──</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keyword">static</span> std::function&lt;<span class="keywordtype">void</span>*(<span class="keywordtype">void</span>*)&gt; makeFactory(std::false_type <span class="comment">/* not abstract */</span>) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordflow">return</span> [](<span class="keywordtype">void</span>* mem) -&gt; <span class="keywordtype">void</span>* {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="keywordflow">if</span> (mem) return ::new(mem) <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_enumvalue" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        };</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    }</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keyword">static</span> std::function&lt;<span class="keywordtype">void</span>*(<span class="keywordtype">void</span>*)&gt; makeFactory(std::true_type <span class="comment">/* abstract */</span>) {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <a class="code hl_struct" href="struct_shit_1_1_type_info.html">TypeInfo</a> m_info;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>};</div>
 </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#a2e911473ec7d41ed241324aba861713b">  219</a></span><span class="keyword">inline</span> TypeInfoBuilder <a class="code hl_friend" href="class_shit_1_1_type_info_builder.html#a2e911473ec7d41ed241324aba861713b">ReflectType</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">return</span> TypeInfoBuilder(name, size);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="class_shit_1_1_type_info_builder.html#a2e911473ec7d41ed241324aba861713b">  228</a></span><span class="keyword">inline</span> TypeInfoBuilder <a class="code hl_friend" href="class_shit_1_1_type_info_builder.html#a2e911473ec7d41ed241324aba861713b">ReflectType</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keywordflow">return</span> TypeInfoBuilder(name, size);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>}</div>
 </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>} <span class="comment">// namespace Shit</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>} <span class="comment">// namespace Shit</span></div>
 <div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
 <div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
 <div class="ttc" id="a_type_info_8h_html"><div class="ttname"><a href="_type_info_8h.html">TypeInfo.h</a></div></div>
 <div class="ttc" id="aclass_shit_1_1_type_info_builder_html"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html">Shit::TypeInfoBuilder</a></div><div class="ttdef"><b>定义</b> TypeRegistry.h:111</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a0b31aa3f3447cfbbe50030bb67c38b95"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a0b31aa3f3447cfbbe50030bb67c38b95">Shit::TypeInfoBuilder::Field</a></div><div class="ttdeci">TypeInfoBuilder &amp; Field(const char *name, size_t offset, size_t size, const char *typeName)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:132</div></div>
-<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a2e911473ec7d41ed241324aba861713b"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a2e911473ec7d41ed241324aba861713b">Shit::TypeInfoBuilder::ReflectType</a></div><div class="ttdeci">friend TypeInfoBuilder ReflectType(const char *name, size_t size)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:219</div></div>
+<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a2e911473ec7d41ed241324aba861713b"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a2e911473ec7d41ed241324aba861713b">Shit::TypeInfoBuilder::ReflectType</a></div><div class="ttdeci">friend TypeInfoBuilder ReflectType(const char *name, size_t size)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:228</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a5acd047fb91b4345d28ce584fb8c4d55"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a5acd047fb91b4345d28ce584fb8c4d55">Shit::TypeInfoBuilder::Base</a></div><div class="ttdeci">TypeInfoBuilder &amp; Base(const char *name)</div><div class="ttdoc">按名称指定基类（延迟解析，消除 SIOF） Register() 时尝试解析，ResolveBases() 时再次尝试</div><div class="ttdef"><b>定义</b> TypeRegistry.h:120</div></div>
-<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a868904b119a9e894dcc5c66871d39ae9"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a868904b119a9e894dcc5c66871d39ae9">Shit::TypeInfoBuilder::Factory</a></div><div class="ttdeci">TypeInfoBuilder &amp; Factory()</div><div class="ttdef"><b>定义</b> TypeRegistry.h:176</div></div>
+<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a868904b119a9e894dcc5c66871d39ae9"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a868904b119a9e894dcc5c66871d39ae9">Shit::TypeInfoBuilder::Factory</a></div><div class="ttdeci">TypeInfoBuilder &amp; Factory()</div><div class="ttdef"><b>定义</b> TypeRegistry.h:185</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a8a334e73ebffe40a339dab9819fb699d"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a8a334e73ebffe40a339dab9819fb699d">Shit::TypeInfoBuilder::Base</a></div><div class="ttdeci">TypeInfoBuilder &amp; Base()</div><div class="ttdef"><b>定义</b> TypeRegistry.h:126</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a99bfc462a60029586cd557a7267ccc69"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a99bfc462a60029586cd557a7267ccc69">Shit::TypeInfoBuilder::Field</a></div><div class="ttdeci">TypeInfoBuilder &amp; Field(const char *name, M T::*member)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:139</div></div>
-<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a9bfe6d7f6157040f0a5f83c29249a2ae"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a9bfe6d7f6157040f0a5f83c29249a2ae">Shit::TypeInfoBuilder::Register</a></div><div class="ttdeci">void Register()</div><div class="ttdef"><b>定义</b> TypeRegistry.h:182</div></div>
+<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_a9bfe6d7f6157040f0a5f83c29249a2ae"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#a9bfe6d7f6157040f0a5f83c29249a2ae">Shit::TypeInfoBuilder::Register</a></div><div class="ttdeci">void Register()</div><div class="ttdef"><b>定义</b> TypeRegistry.h:191</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_info_builder_html_aae9fa60965f9cb33b70d162dc6849272"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#aae9fa60965f9cb33b70d162dc6849272">Shit::TypeInfoBuilder::Base</a></div><div class="ttdeci">TypeInfoBuilder &amp; Base(const TypeInfo *baseType)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:113</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_info_builder_html_ad22578c2cb5176da8b5ac26503cceddf"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#ad22578c2cb5176da8b5ac26503cceddf">Shit::TypeInfoBuilder::Meta</a></div><div class="ttdeci">TypeInfoBuilder &amp; Meta(const FieldMeta &amp;meta)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:161</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_info_builder_html_ad9bddf767863da08b9d8e611acd50a3f"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#ad9bddf767863da08b9d8e611acd50a3f">Shit::TypeInfoBuilder::Field</a></div><div class="ttdeci">TypeInfoBuilder &amp; Field(const char *name, M T::*member, const char *typeName)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:150</div></div>
-<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_aee8ed17f906a476b727596eae5b54487"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#aee8ed17f906a476b727596eae5b54487">Shit::TypeInfoBuilder::Value</a></div><div class="ttdeci">TypeInfoBuilder &amp; Value(const char *name, int64_t val)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:169</div></div>
+<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_aee8ed17f906a476b727596eae5b54487"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#aee8ed17f906a476b727596eae5b54487">Shit::TypeInfoBuilder::Value</a></div><div class="ttdeci">TypeInfoBuilder &amp; Value(const char *name, int64_t val)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:178</div></div>
+<div class="ttc" id="aclass_shit_1_1_type_info_builder_html_af2d1260dc3133daf0a7a4a1d9d640581"><div class="ttname"><a href="class_shit_1_1_type_info_builder.html#af2d1260dc3133daf0a7a4a1d9d640581">Shit::TypeInfoBuilder::Ref</a></div><div class="ttdeci">TypeInfoBuilder &amp; Ref(const char *refType)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:170</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_registry_html_a01470a60234f474fdfecd5378ee916a9"><div class="ttname"><a href="class_shit_1_1_type_registry.html#a01470a60234f474fdfecd5378ee916a9">Shit::TypeRegistry::resolveBases</a></div><div class="ttdeci">void resolveBases()</div><div class="ttdoc">解析所有未解析的基类引用（消除 SIOF）</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_registry_html_a117b691f2615b7c22d522492c1553db8"><div class="ttname"><a href="class_shit_1_1_type_registry.html#a117b691f2615b7c22d522492c1553db8">Shit::TypeRegistry::Count</a></div><div class="ttdeci">static size_t Count()</div><div class="ttdef"><b>定义</b> TypeRegistry.h:66</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_registry_html_a1d39c27eec2e796611800f76df4390b8"><div class="ttname"><a href="class_shit_1_1_type_registry.html#a1d39c27eec2e796611800f76df4390b8">Shit::TypeRegistry::Get</a></div><div class="ttdeci">static const TypeInfo * Get(std::string_view name)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:59</div></div>
@@ -446,13 +458,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_type_registry
 <div class="ttc" id="aclass_shit_1_1_type_registry_html_afa246c7edbd1f16b730d6f5bf30b11e4"><div class="ttname"><a href="class_shit_1_1_type_registry.html#afa246c7edbd1f16b730d6f5bf30b11e4">Shit::TypeRegistry::getType</a></div><div class="ttdeci">const TypeInfo * getType(std::type_index ti) const</div><div class="ttdoc">按 type_index 查询（Prefab 动态克隆等场景用）</div></div>
 <div class="ttc" id="aclass_shit_1_1_type_registry_html_affa6bce88f1ce899fd0d3b5cd17f5310"><div class="ttname"><a href="class_shit_1_1_type_registry.html#affa6bce88f1ce899fd0d3b5cd17f5310">Shit::TypeRegistry::unregisterTypesBySource</a></div><div class="ttdeci">size_t unregisterTypesBySource(std::string_view source)</div><div class="ttdoc">卸载指定来源注册的全部类型（插件卸载前调用，防止 factory 悬垂）</div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AudioPlayer.h:10</div></div>
-<div class="ttc" id="anamespace_shit_html_a2e911473ec7d41ed241324aba861713b"><div class="ttname"><a href="namespace_shit.html#a2e911473ec7d41ed241324aba861713b">Shit::ReflectType</a></div><div class="ttdeci">TypeInfoBuilder ReflectType(const char *name, size_t size)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:219</div></div>
+<div class="ttc" id="anamespace_shit_html_a2e911473ec7d41ed241324aba861713b"><div class="ttname"><a href="namespace_shit.html#a2e911473ec7d41ed241324aba861713b">Shit::ReflectType</a></div><div class="ttdeci">TypeInfoBuilder ReflectType(const char *name, size_t size)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:228</div></div>
 <div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0da69691c7bdcc3ce6d5d8a1361f22d04ac"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0da69691c7bdcc3ce6d5d8a1361f22d04ac">Shit::KeyCode::M</a></div><div class="ttdeci">@ M</div><div class="ttdef"><b>定义</b> KeyCode.h:24</div></div>
 <div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">Shit::KeyCode::T</a></div><div class="ttdeci">@ T</div><div class="ttdef"><b>定义</b> KeyCode.h:31</div></div>
 <div class="ttc" id="anamespace_shit_html_abb6cad04f9d8dab77b41468f34943c13"><div class="ttname"><a href="namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13">Shit::memberOffset</a></div><div class="ttdeci">size_t memberOffset(M T::*member)</div><div class="ttdoc">计算成员指针相对于类基址的偏移量（供反射注册代码使用） 用法: memberOffset(&amp;MyClass::myField) 需要通过 friend 声明获取 private/protected 成员...</div><div class="ttdef"><b>定义</b> TypeRegistry.h:107</div></div>
 <div class="ttc" id="anamespace_shit_html_afe671363a5ef5f405485e38c225e0885"><div class="ttname"><a href="namespace_shit.html#afe671363a5ef5f405485e38c225e0885">Shit::DemangleTypeName</a></div><div class="ttdeci">std::string DemangleTypeName(const char *mangled)</div><div class="ttdef"><b>定义</b> TypeRegistry.h:89</div></div>
 <div class="ttc" id="astruct_shit_1_1_field_meta_html"><div class="ttname"><a href="struct_shit_1_1_field_meta.html">Shit::FieldMeta</a></div><div class="ttdef"><b>定义</b> TypeInfo.h:17</div></div>
-<div class="ttc" id="astruct_shit_1_1_type_info_html"><div class="ttname"><a href="struct_shit_1_1_type_info.html">Shit::TypeInfo</a></div><div class="ttdef"><b>定义</b> TypeInfo.h:64</div></div>
+<div class="ttc" id="astruct_shit_1_1_type_info_html"><div class="ttname"><a href="struct_shit_1_1_type_info.html">Shit::TypeInfo</a></div><div class="ttdef"><b>定义</b> TypeInfo.h:72</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

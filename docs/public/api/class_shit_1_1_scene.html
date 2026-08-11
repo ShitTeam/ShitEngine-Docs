@@ -205,6 +205,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a09c903ef22a1fcd1e672368ffc96f0f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">场景结构代数：任何对象增删/组件增删/改名/改父都会递增。 编辑器据此判断"场景内容是否变化"，及时重建场景树、校验选中态， 避免播放中对象被游戏逻辑销毁后仍持有悬垂指针。  <br /></td></tr>
 <tr class="memitem:a4df86bf18be1baecc1768d2a53d7c591" id="r_a4df86bf18be1baecc1768d2a53d7c591"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4df86bf18be1baecc1768d2a53d7c591">containsGameObject</a> (const <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *gameObject) const</td></tr>
 <tr class="memdesc:a4df86bf18be1baecc1768d2a53d7c591"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象是否仍在当前场景容器中（地址比较，供编辑器校验旧选中指针）  <br /></td></tr>
+<tr class="memitem:a37c73db4fb406e7db9ad0a3acc119c0d" id="r_a37c73db4fb406e7db9ad0a3acc119c0d"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a37c73db4fb406e7db9ad0a3acc119c0d">componentByUuid</a> (uint64_t uuid) const</td></tr>
+<tr class="memdesc:a37c73db4fb406e7db9ad0a3acc119c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">按持久 UUID 查找组件（ComponentRef&lt;T&gt; 懒解析 / 编辑器拖拽引用共用） 组件已移除或对象已销毁后返回 nullptr（UUID 索引随组件生命周期维护）。  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
@@ -325,6 +327,33 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>延迟添加 GameObject（帧末生效） </p>
+
+</div>
+</div>
+<a id="a37c73db4fb406e7db9ad0a3acc119c0d" name="a37c73db4fb406e7db9ad0a3acc119c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c73db4fb406e7db9ad0a3acc119c0d">&#9670;&#160;</a></span>componentByUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_component.html">Component</a> * componentByUuid </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>uuid</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>按持久 UUID 查找组件（ComponentRef&lt;T&gt; 懒解析 / 编辑器拖拽引用共用） 组件已移除或对象已销毁后返回 nullptr（UUID 索引随组件生命周期维护）。 </p>
 
 </div>
 </div>
