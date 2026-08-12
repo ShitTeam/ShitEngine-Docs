@@ -24,7 +24,7 @@ var searchData=
   ['registertypesfn_21',['RegisterTypesFn',['../class_shit_1_1_plugin_manager.html#a7aade3d8f1f1d1061593419f2886be1b',1,'Shit::PluginManager']]],
   ['registeruirenderer_22',['registerUIRenderer',['../class_shit_1_1_u_i_render_system.html#abfd8a6e39a45febe5d000d51477c96b0',1,'Shit::UIRenderSystem']]],
   ['releasefocus_23',['releaseFocus',['../class_shit_1_1_text_input_gate.html#ad18c098ea6599af73a194bc0b17f3489',1,'Shit::TextInputGate']]],
-  ['removecomponent_24',['removeComponent',['../class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8',1,'Shit::GameObject']]],
+  ['removecomponent_24',['removeComponent',['../class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8',1,'Shit::GameObject::removeComponent()'],['../class_shit_1_1_game_object.html#af7558288a60c59e96e153044b5050aac',1,'Shit::GameObject::removeComponent(const std::type_index &amp;typeIndex)']]],
   ['removegameobject_25',['removeGameObject',['../class_shit_1_1_scene.html#a476333bb647cc4e1f5a6085a4a8abf00',1,'Shit::Scene']]],
   ['removegameobjectbyname_26',['removeGameObjectByName',['../class_shit_1_1_scene.html#a3b509c9a28035513d2eb716fd3ab91d4',1,'Shit::Scene']]],
   ['rendercoordinatestowindow_27',['RenderCoordinatesToWindow',['../class_shit_1_1_renderer.html#aa05b5fb98ba57463ca875bbbbcf7e0ab',1,'Shit::Renderer']]],

@@ -21,6 +21,7 @@ var class_shit_1_1_game_object =
     [ "operator=", "class_shit_1_1_game_object.html#a4f541a7914dfb4850ce4d27f90e7dfa2", null ],
     [ "operator=", "class_shit_1_1_game_object.html#a6630dbb84ec77ba85f7a6e4fd9050b5a", null ],
     [ "removeComponent", "class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8", null ],
+    [ "removeComponent", "class_shit_1_1_game_object.html#af7558288a60c59e96e153044b5050aac", null ],
     [ "setName", "class_shit_1_1_game_object.html#a9d3a2685df23b5e7cbf59c19c4a1f9b5", null ],
     [ "setNeedDestroy", "class_shit_1_1_game_object.html#a03eb988617fc41944c0de1bbf62a8abf", null ],
     [ "setParent", "class_shit_1_1_game_object.html#a03f0413882a431ba59905fc2e3b59b01", null ],
