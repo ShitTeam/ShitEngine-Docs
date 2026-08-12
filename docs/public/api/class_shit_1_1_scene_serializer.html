@@ -164,6 +164,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:a18fc004d08115675b484ea894778c1bf" id="r_a18fc004d08115675b484ea894778c1bf"><td class="memItemLeft">static nlohmann::json&#160;</td><td class="memItemRight"><a class="el" href="#a18fc004d08115675b484ea894778c1bf">toJson</a> (<a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene, const std::vector&lt; std::string &gt; &amp;excludeNames={})</td></tr>
 <tr class="memdesc:a18fc004d08115675b484ea894778c1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列化整个场景（含层级）为 v2 JSON。被排除的对象（如编辑器相机）不落盘， 其子对象提升为根（parent=-1）。  <br /></td></tr>
+<tr class="memitem:a30718c9d48bff2ed652de6535d4cb826" id="r_a30718c9d48bff2ed652de6535d4cb826"><td class="memItemLeft">static nlohmann::json&#160;</td><td class="memItemRight"><a class="el" href="#a30718c9d48bff2ed652de6535d4cb826">toJson</a> (<a class="el" href="class_shit_1_1_game_object.html">Shit::GameObject</a> *root)</td></tr>
+<tr class="memdesc:a30718c9d48bff2ed652de6535d4cb826"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列化单个对象及其子树（父先于子，parent 为数组内下标；根对象 parent=-1）—— 编辑器「存为预置」的 .prefab 资产格式（与 .scene 同构，可直接 fromJson 实例化）。  <br /></td></tr>
 <tr class="memitem:a92d24a1b1e91ebe5c228b9eb5d879409" id="r_a92d24a1b1e91ebe5c228b9eb5d879409"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a92d24a1b1e91ebe5c228b9eb5d879409">fromJson</a> (const nlohmann::json &amp;doc, <a class="el" href="class_shit_1_1_scene.html">Scene</a> *scene)</td></tr>
 <tr class="memdesc:a92d24a1b1e91ebe5c228b9eb5d879409"><td class="mdescLeft">&#160;</td><td class="mdescRight">把 JSON 追加实例化进目标场景（对象 + 组件 + 层级 + 相机兜底）。 调用方负责前置清场（如编辑器"打开"先删旧对象）； 实例化失败仅跳过对应对象，不抛异常、不影响已加载部分。  <br /></td></tr>
 </table>
@@ -216,7 +218,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div>
 </div>
 <a id="a18fc004d08115675b484ea894778c1bf" name="a18fc004d08115675b484ea894778c1bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18fc004d08115675b484ea894778c1bf">&#9670;&#160;</a></span>toJson()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a18fc004d08115675b484ea894778c1bf">&#9670;&#160;</a></span>toJson() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,6 +245,33 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div><div class="memdoc">
 
 <p>序列化整个场景（含层级）为 v2 JSON。被排除的对象（如编辑器相机）不落盘， 其子对象提升为根（parent=-1）。 </p>
+
+</div>
+</div>
+<a id="a30718c9d48bff2ed652de6535d4cb826" name="a30718c9d48bff2ed652de6535d4cb826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30718c9d48bff2ed652de6535d4cb826">&#9670;&#160;</a></span>toJson() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json toJson </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_game_object.html">Shit::GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>序列化单个对象及其子树（父先于子，parent 为数组内下标；根对象 parent=-1）—— 编辑器「存为预置」的 .prefab 资产格式（与 .scene 同构，可直接 fromJson 实例化）。 </p>
 
 </div>
 </div>

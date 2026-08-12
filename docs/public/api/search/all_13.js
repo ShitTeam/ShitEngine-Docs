@@ -13,7 +13,7 @@ var searchData=
   ['time_10',['time',['../class_shit_1_1_engine_context.html#ada213df0f23833509981179817b7beab',1,'Shit::EngineContext']]],
   ['time_2eh_11',['Time.h',['../_time_8h.html',1,'']]],
   ['title_12',['title',['../struct_shit_1_1_window_config.html#ac30fed21fe991cc8475ce543929f8b72',1,'Shit::WindowConfig']]],
-  ['tojson_13',['toJson',['../class_shit_1_1_prefab.html#a098007f3dd2a938824a819aa09423ca9',1,'Shit::Prefab::toJson()'],['../class_shit_1_1_scene_serializer.html#a18fc004d08115675b484ea894778c1bf',1,'Shit::SceneSerializer::toJson()']]],
+  ['tojson_13',['toJson',['../class_shit_1_1_prefab.html#a098007f3dd2a938824a819aa09423ca9',1,'Shit::Prefab::toJson()'],['../class_shit_1_1_scene_serializer.html#a18fc004d08115675b484ea894778c1bf',1,'Shit::SceneSerializer::toJson(Scene *scene, const std::vector&lt; std::string &gt; &amp;excludeNames={})'],['../class_shit_1_1_scene_serializer.html#a30718c9d48bff2ed652de6535d4cb826',1,'Shit::SceneSerializer::toJson(Shit::GameObject *root)']]],
   ['tooltip_14',['tooltip',['../struct_shit_1_1_field_meta.html#a830b29afbe8425dad3ae4c16b898b8f6',1,'Shit::FieldMeta']]],
   ['tosdlcolor_15',['toSDLColor',['../class_shit_1_1_u_i_renderer_component.html#acd9be94033c0cc9329ee561083b8d112',1,'Shit::UIRendererComponent']]],
   ['trace_16',['Trace',['../class_shit_1_1_log.html#a24db4d83b8dddf7b919548e19a2a912a',1,'Shit::Log']]],
