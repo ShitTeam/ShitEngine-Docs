@@ -13,7 +13,9 @@ var searchData=
   ['behaviorsystem_2eh_10',['BehaviorSystem.h',['../_behavior_system_8h.html',1,'']]],
   ['bit_11',['BIT',['../_core_8h.html#ad27cc17b25bb93134368d5eb21126eae',1,'Core.h']]],
   ['blue_12',['blue',['../struct_shit_1_1_color.html#acbbe77d2a1d416eb0f5621ab9e911324',1,'Shit::Color']]],
-  ['boxcollider2d_13',['BoxCollider2D',['../class_shit_1_1_box_collider2_d.html',1,'BoxCollider2D'],['../class_shit_1_1_box_collider2_d.html#a0e7717cf390ca2006a3322dae37535c3',1,'Shit::BoxCollider2D::BoxCollider2D()'],['../class_shit_1_1_box_collider2_d.html#a85b60691a5da08ef8c0dfbd85c34c79c',1,'Shit::BoxCollider2D::BoxCollider2D(const Vector2 &amp;size)']]],
-  ['boxcollider2d_2eh_14',['BoxCollider2D.h',['../_box_collider2_d_8h.html',1,'']]],
-  ['bytetochar_15',['byteToChar',['../class_shit_1_1_u_i_text_input.html#a8e15e04aabe3a4ea141af363506dbb04',1,'Shit::UITextInput']]]
+  ['bool_13',['Bool',['../namespace_shit.html#a0ff40449e21004707960b3589989bf05ac26f15e86e3de4c398a8273272aba034',1,'Shit::Bool'],['../namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9ac26f15e86e3de4c398a8273272aba034',1,'Shit::Bool']]],
+  ['boolvalue_14',['boolValue',['../struct_shit_1_1_animator_parameter.html#ad579c5d3a6457b4b220b3864f3afedcc',1,'Shit::AnimatorParameter::boolValue'],['../struct_shit_1_1_animator_transition_condition.html#ad579c5d3a6457b4b220b3864f3afedcc',1,'Shit::AnimatorTransitionCondition::boolValue']]],
+  ['boxcollider2d_15',['BoxCollider2D',['../class_shit_1_1_box_collider2_d.html',1,'BoxCollider2D'],['../class_shit_1_1_box_collider2_d.html#a0e7717cf390ca2006a3322dae37535c3',1,'Shit::BoxCollider2D::BoxCollider2D()'],['../class_shit_1_1_box_collider2_d.html#a85b60691a5da08ef8c0dfbd85c34c79c',1,'Shit::BoxCollider2D::BoxCollider2D(const Vector2 &amp;size)']]],
+  ['boxcollider2d_2eh_16',['BoxCollider2D.h',['../_box_collider2_d_8h.html',1,'']]],
+  ['bytetochar_17',['byteToChar',['../class_shit_1_1_u_i_text_input.html#a8e15e04aabe3a4ea141af363506dbb04',1,'Shit::UITextInput']]]
 ];

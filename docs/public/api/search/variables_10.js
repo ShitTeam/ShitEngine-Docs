@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['targetfps_0',['targetFPS',['../struct_shit_1_1_window_config.html#a8705191cbc0ffb20367a9ef2ba000194',1,'Shit::WindowConfig']]],
-  ['textinputgate_1',['textInputGate',['../class_shit_1_1_engine_context.html#af66f2c76efa2d73abacb2576c04beea7',1,'Shit::EngineContext']]],
-  ['time_2',['time',['../class_shit_1_1_engine_context.html#ada213df0f23833509981179817b7beab',1,'Shit::EngineContext']]],
-  ['title_3',['title',['../struct_shit_1_1_window_config.html#ac30fed21fe991cc8475ce543929f8b72',1,'Shit::WindowConfig']]],
-  ['tooltip_4',['tooltip',['../struct_shit_1_1_field_meta.html#a830b29afbe8425dad3ae4c16b898b8f6',1,'Shit::FieldMeta']]],
-  ['typeindex_5',['typeIndex',['../struct_shit_1_1_type_info.html#a179500c846c41a50dfc9fd26d174f458',1,'Shit::TypeInfo']]],
-  ['typename_6',['typeName',['../struct_shit_1_1_prefab_1_1_component_data.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::Prefab::ComponentData::typeName'],['../struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::FieldInfo::typeName']]],
-  ['typeregistry_7',['typeRegistry',['../class_shit_1_1_engine_context.html#a9417290b37c4a38af77a107c65a702a0',1,'Shit::EngineContext']]]
+  ['range_0',['range',['../struct_shit_1_1_field_meta.html#a96a0d8749397fdee1eb39bb8e9986f07',1,'Shit::FieldMeta']]],
+  ['readonly_1',['readOnly',['../struct_shit_1_1_field_meta.html#a2661d851ae26aa3aeaac87ebf74c779f',1,'Shit::FieldMeta']]],
+  ['red_2',['red',['../struct_shit_1_1_color.html#a45e552d62e007d0108ae0010be74c466',1,'Shit::Color']]],
+  ['reftype_3',['refType',['../struct_shit_1_1_field_info.html#a77433187068d7df2d7841a7f652165ab',1,'Shit::FieldInfo']]],
+  ['registertypes_4',['registerTypes',['../struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html#a5a3d095779b2fee1a14c293f19b6ede7',1,'Shit::PluginManager::LoadedPlugin']]],
+  ['renderer_5',['renderer',['../class_shit_1_1_engine_context.html#a96120bdea31dc797b1f3acbb8cf5a322',1,'Shit::EngineContext']]],
+  ['resources_6',['resources',['../class_shit_1_1_engine_context.html#adf52e6fb40da58a4226e1daa543fba12',1,'Shit::EngineContext']]],
+  ['revolute_7',['Revolute',['../namespace_shit.html#a1ec72dc6509614f6be6e0718187814cf',1,'Shit']]],
+  ['rows_8',['rows',['../struct_shit_1_1_animation_clip.html#a061459acc9e078fa4699e0e349887215',1,'Shit::AnimationClip']]]
 ];

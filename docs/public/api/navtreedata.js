@@ -31,6 +31,7 @@ var NAVTREE =
       [ "命名空间成员", "namespacemembers.html", [
         [ "全部", "namespacemembers.html", null ],
         [ "函数", "namespacemembers_func.html", null ],
+        [ "变量", "namespacemembers_vars.html", null ],
         [ "类型定义", "namespacemembers_type.html", null ],
         [ "枚举", "namespacemembers_enum.html", null ]
       ] ]
@@ -61,13 +62,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_animation_8h.html",
-"class_shit_1_1_audio_track.html#a2bc59e86369837e9c28a2294669a347a",
-"class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a",
-"class_shit_1_1_physics_system2_d.html#ad72eef1561c7a53b19b048397d4ef570",
-"class_shit_1_1_sprite.html#a41da7c464a16ff1588754ddf26068f61",
-"class_shit_1_1_u_i_button.html#a073731fd74c8c6cf6acea20874160a29",
-"class_shit_1_1_u_i_text_input.html#a9952698f624131a4d1e58d13139ba41e",
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0da60e5d1d82b2d0c1287331bfca0ab0061"
+"class_shit_1_1_animator.html#a8edb3de82005015744a16934838ed980",
+"class_shit_1_1_camera_component.html#a4f49ac7d5921e6e3595517ffa6dc5971",
+"class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8",
+"class_shit_1_1_renderer_component.html#a17349359a2bd5bd4fe0ce2c13be0ae5f",
+"class_shit_1_1_sprite_sheet.html#a8a6293e1f2b6fb2f50b41e5d38110ae8",
+"class_shit_1_1_u_i_button.html#a8e52bcaecc271b1b57c4608da2d4b11e",
+"class_shit_1_1_u_i_text_input.html#abab5cd0e42c632ffc53abc41e9048a78",
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da692ed49ff2182a144044181274242db5",
+"struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html#a9f7a63af920d6fb6dd3c7ebfe546dfcf"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

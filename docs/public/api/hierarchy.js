@@ -2,6 +2,11 @@ var hierarchy =
 [
     [ "ActionBinding", "struct_shit_1_1_action_binding.html", null ],
     [ "Animation", "class_shit_1_1_animation.html", null ],
+    [ "AnimationClip", "struct_shit_1_1_animation_clip.html", null ],
+    [ "AnimatorParameter", "struct_shit_1_1_animator_parameter.html", null ],
+    [ "AnimatorState", "struct_shit_1_1_animator_state.html", null ],
+    [ "AnimatorTransition", "struct_shit_1_1_animator_transition.html", null ],
+    [ "AnimatorTransitionCondition", "struct_shit_1_1_animator_transition_condition.html", null ],
     [ "AudioManager", "class_shit_1_1_audio_manager.html", null ],
     [ "AudioPlayer", "class_shit_1_1_audio_player.html", null ],
     [ "AudioTrack", "class_shit_1_1_audio_track.html", null ],
@@ -11,13 +16,16 @@ var hierarchy =
     [ "Component", "class_shit_1_1_component.html", [
       [ "Behavior", "class_shit_1_1_behavior.html", [
         [ "AnimationComponent", "class_shit_1_1_animation_component.html", null ],
+        [ "Animator", "class_shit_1_1_animator.html", null ],
         [ "AudioSource", "class_shit_1_1_audio_source.html", null ]
       ] ],
       [ "BoxCollider2D", "class_shit_1_1_box_collider2_d.html", null ],
       [ "CameraComponent", "class_shit_1_1_camera_component.html", null ],
       [ "CircleCollider2D", "class_shit_1_1_circle_collider2_d.html", null ],
+      [ "Joint2D", "class_shit_1_1_joint2_d.html", null ],
       [ "RendererComponent", "class_shit_1_1_renderer_component.html", [
-        [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", null ]
+        [ "SpriteRenderer", "class_shit_1_1_sprite_renderer.html", null ],
+        [ "Tilemap", "class_shit_1_1_tilemap.html", null ]
       ] ],
       [ "RigidBody2D", "class_shit_1_1_rigid_body2_d.html", null ],
       [ "TransformComponent", "class_shit_1_1_transform_component.html", null ],

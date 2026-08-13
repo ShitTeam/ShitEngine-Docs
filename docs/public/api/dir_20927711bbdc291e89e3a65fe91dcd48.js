@@ -6,5 +6,6 @@ var dir_20927711bbdc291e89e3a65fe91dcd48 =
     [ "Component.h", "_component_8h.html", "_component_8h" ],
     [ "RendererComponent.h", "_renderer_component_8h.html", "_renderer_component_8h" ],
     [ "SpriteRenderer.h", "_sprite_renderer_8h.html", "_sprite_renderer_8h" ],
+    [ "Tilemap.h", "_tilemap_8h.html", "_tilemap_8h" ],
     [ "TransformComponent.h", "_transform_component_8h.html", "_transform_component_8h" ]
 ];

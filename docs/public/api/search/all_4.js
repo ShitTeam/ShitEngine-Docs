@@ -12,9 +12,11 @@ var searchData=
   ['equals_9',['Equals',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da0ccb67e7eaae09d9e4078d161eeca100',1,'Shit']]],
   ['error_10',['Error',['../class_shit_1_1_log.html#a38d349d74eb6ca356a7a9e5b29b0bdc8',1,'Shit::Log']]],
   ['escape_11',['Escape',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da013ec032d3460d4be4431c6ab1f8f224',1,'Shit']]],
-  ['event_12',['Event',['../struct_shit_1_1_event.html',1,'Shit']]],
-  ['event_2eh_13',['Event.h',['../_event_8h.html',1,'']]],
-  ['eventbus_14',['EventBus',['../class_shit_1_1_event_bus.html',1,'EventBus'],['../class_shit_1_1_event_bus.html#aea518fa2333bad9241acb92f499b1c62',1,'Shit::EventBus::EventBus(const EventBus &amp;)=delete'],['../class_shit_1_1_event_bus.html#ab4fc8ca0de8c342fb85269a7d6c21c9b',1,'Shit::EventBus::EventBus(EventBus &amp;&amp;)=delete']]],
-  ['eventbus_15',['eventBus',['../class_shit_1_1_engine_context.html#a62fbe3fc750d9394c8188c85aaf3717c',1,'Shit::EngineContext']]],
-  ['eventbus_2eh_16',['EventBus.h',['../_event_bus_8h.html',1,'']]]
+  ['evaluatetransitions_12',['evaluateTransitions',['../class_shit_1_1_animator.html#a73d6c35e0dc66e9657eba7c45a0b4f47',1,'Shit::Animator']]],
+  ['event_13',['Event',['../struct_shit_1_1_event.html',1,'Shit']]],
+  ['event_2eh_14',['Event.h',['../_event_8h.html',1,'']]],
+  ['eventbus_15',['EventBus',['../class_shit_1_1_event_bus.html',1,'EventBus'],['../class_shit_1_1_event_bus.html#aea518fa2333bad9241acb92f499b1c62',1,'Shit::EventBus::EventBus(const EventBus &amp;)=delete'],['../class_shit_1_1_event_bus.html#ab4fc8ca0de8c342fb85269a7d6c21c9b',1,'Shit::EventBus::EventBus(EventBus &amp;&amp;)=delete']]],
+  ['eventbus_16',['eventBus',['../class_shit_1_1_engine_context.html#a62fbe3fc750d9394c8188c85aaf3717c',1,'Shit::EngineContext']]],
+  ['eventbus_2eh_17',['EventBus.h',['../_event_bus_8h.html',1,'']]],
+  ['exittime_18',['exitTime',['../struct_shit_1_1_animator_transition.html#ae47dbd5b17b8cf39f96efc84d8a7a3dd',1,'Shit::AnimatorTransition']]]
 ];

@@ -1,0 +1,853 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: Tilemap类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_tilemap.html','','class_shit_1_1_tilemap-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Tilemap类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>2D 瓦片地图组件  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_tilemap_8h_source.html">Tilemap.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Tilemap 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_shit_1_1_tilemap.png" usemap="#Tilemap_map" alt=""/>
+  <map id="Tilemap_map" name="Tilemap_map">
+<area href="class_shit_1_1_renderer_component.html" title="渲染组件基类" alt="RendererComponent" shape="rect" coords="0,56,128,80"/>
+<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="0,0,128,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad2033e542abe87a295cce7c0c072b474" id="r_ad2033e542abe87a295cce7c0c072b474"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad2033e542abe87a295cce7c0c072b474">Tilemap</a> ()</td></tr>
+<tr class="memitem:aa43f556320fb0169abd4dbf9d814b5a6" id="r_aa43f556320fb0169abd4dbf9d814b5a6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa43f556320fb0169abd4dbf9d814b5a6">~Tilemap</a> () override</td></tr>
+<tr class="memitem:a9270529a4341cf8bf3f6a29a56556366" id="r_a9270529a4341cf8bf3f6a29a56556366"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9270529a4341cf8bf3f6a29a56556366">onAfterDeserialize</a> () override</td></tr>
+<tr class="memdesc:a9270529a4341cf8bf3f6a29a56556366"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。  <br /></td></tr>
+<tr class="memitem:aadba02841897aadd2819172be6c50058" id="r_aadba02841897aadd2819172be6c50058"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aadba02841897aadd2819172be6c50058">onFieldChanged</a> (const std::string &amp;fieldName) override</td></tr>
+<tr class="memdesc:aadba02841897aadd2819172be6c50058"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查器直接写反射字段后回调（字段名）。用于绕过 setter 的直写完成后 重新同步引擎状态（如 Box2D 刚体/形状）。默认无操作。  <br /></td></tr>
+<tr class="memitem:ad5954d600e7e4fc3341ad4a15cda63ba" id="r_ad5954d600e7e4fc3341ad4a15cda63ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad5954d600e7e4fc3341ad4a15cda63ba">onRender</a> (SDL_Renderer *renderer, const <a class="el" href="class_shit_1_1_camera_component.html">CameraComponent</a> *camera) const override</td></tr>
+<tr class="memdesc:ad5954d600e7e4fc3341ad4a15cda63ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">按相机绘制网格（RendererComponent 纯虚实现）  <br /></td></tr>
+<tr class="memitem:a010f0a0f9ea578d4dce68159ac086233" id="r_a010f0a0f9ea578d4dce68159ac086233"><td class="memItemLeft">SDL_FRect&#160;</td><td class="memItemRight"><a class="el" href="#a010f0a0f9ea578d4dce68159ac086233">getGlobalBounds</a> () override</td></tr>
+<tr class="memdesc:a010f0a0f9ea578d4dce68159ac086233"><td class="mdescLeft">&#160;</td><td class="mdescRight">世界坐标轴对齐包围盒（覆盖整个网格）  <br /></td></tr>
+<tr class="memitem:acfbdcc1fd9b9ef8824f929fd09aa380e" id="r_acfbdcc1fd9b9ef8824f929fd09aa380e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acfbdcc1fd9b9ef8824f929fd09aa380e">setTexturePath</a> (const std::string &amp;path)</td></tr>
+<tr class="memitem:ab666c41ebea083a5c6604ce593b59e17" id="r_ab666c41ebea083a5c6604ce593b59e17"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab666c41ebea083a5c6604ce593b59e17">getTexturePath</a> () const</td></tr>
+<tr class="memitem:a3926b8339e0f76d9552733e2f8e110ca" id="r_a3926b8339e0f76d9552733e2f8e110ca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3926b8339e0f76d9552733e2f8e110ca">setTileSize</a> (int w, int h)</td></tr>
+<tr class="memdesc:a3926b8339e0f76d9552733e2f8e110ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置单个瓦片纹理像素尺寸  <br /></td></tr>
+<tr class="memitem:a064db606ebb0924b666976c4469dae83" id="r_a064db606ebb0924b666976c4469dae83"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a064db606ebb0924b666976c4469dae83">getTileWidth</a> () const</td></tr>
+<tr class="memitem:a1959194ac6bdce6c6a610fcf3c77408a" id="r_a1959194ac6bdce6c6a610fcf3c77408a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1959194ac6bdce6c6a610fcf3c77408a">getTileHeight</a> () const</td></tr>
+<tr class="memitem:a3ebb70b99f18aff9c9e5a542f11ced17" id="r_a3ebb70b99f18aff9c9e5a542f11ced17"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3ebb70b99f18aff9c9e5a542f11ced17">setGridSize</a> (int cols, int rows)</td></tr>
+<tr class="memdesc:a3ebb70b99f18aff9c9e5a542f11ced17"><td class="mdescLeft">&#160;</td><td class="mdescRight">调整网格行列数（保留重叠部分数据）  <br /></td></tr>
+<tr class="memitem:a6898ef28c25c68f6d573d07859791b6b" id="r_a6898ef28c25c68f6d573d07859791b6b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6898ef28c25c68f6d573d07859791b6b">getGridWidth</a> () const</td></tr>
+<tr class="memitem:ab0fd53254581bcb0929a4bdfc2a6067d" id="r_ab0fd53254581bcb0929a4bdfc2a6067d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab0fd53254581bcb0929a4bdfc2a6067d">getGridHeight</a> () const</td></tr>
+<tr class="memitem:a6845f381adfe28772605d1305438307a" id="r_a6845f381adfe28772605d1305438307a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6845f381adfe28772605d1305438307a">setTileWorldSize</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;size)</td></tr>
+<tr class="memdesc:a6845f381adfe28772605d1305438307a"><td class="mdescLeft">&#160;</td><td class="mdescRight">每格世界尺寸（默认=瓦片像素）  <br /></td></tr>
+<tr class="memitem:a396deb7d28660a84a7ac6f236a12996d" id="r_a396deb7d28660a84a7ac6f236a12996d"><td class="memItemLeft">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a396deb7d28660a84a7ac6f236a12996d">getTileWorldSize</a> () const</td></tr>
+<tr class="memitem:a8e7037193f766137bf37e68680b1b5fc" id="r_a8e7037193f766137bf37e68680b1b5fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8e7037193f766137bf37e68680b1b5fc">setTile</a> (int col, int row, int tileId)</td></tr>
+<tr class="memdesc:a8e7037193f766137bf37e68680b1b5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">放置瓦片（-1 擦除）  <br /></td></tr>
+<tr class="memitem:a8d3be76861f399b184895f27e9211d40" id="r_a8d3be76861f399b184895f27e9211d40"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8d3be76861f399b184895f27e9211d40">getTile</a> (int col, int row) const</td></tr>
+<tr class="memdesc:a8d3be76861f399b184895f27e9211d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取瓦片（越界返回 -1）  <br /></td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">全部擦除  <br /></td></tr>
+<tr class="memitem:acf82f9b2937375c7b1cf3dccb3df3312" id="r_acf82f9b2937375c7b1cf3dccb3df3312"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#acf82f9b2937375c7b1cf3dccb3df3312">isEmpty</a> () const</td></tr>
+<tr class="memdesc:acf82f9b2937375c7b1cf3dccb3df3312"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否全空  <br /></td></tr>
+<tr class="memitem:a54803ac030b9783c7bec721e7048fa2e" id="r_a54803ac030b9783c7bec721e7048fa2e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a54803ac030b9783c7bec721e7048fa2e">getTileCount</a> () const</td></tr>
+<tr class="memdesc:a54803ac030b9783c7bec721e7048fa2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前瓦片数量（非空格）  <br /></td></tr>
+<tr class="memitem:a472338b43b7000e614c5af16f15a1adb" id="r_a472338b43b7000e614c5af16f15a1adb"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a472338b43b7000e614c5af16f15a1adb">getGridData</a> () const</td></tr>
+<tr class="memitem:ae99f1c800f9574e5ee610c7bb9531723" id="r_ae99f1c800f9574e5ee610c7bb9531723"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae99f1c800f9574e5ee610c7bb9531723">setGridData</a> (const std::string &amp;data)</td></tr>
+<tr class="memdesc:ae99f1c800f9574e5ee610c7bb9531723"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化用：解析外部字符串（含尺寸头）  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_renderer_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_renderer_component.html">RendererComponent</a></td></tr>
+<tr class="memitem:a17349359a2bd5bd4fe0ce2c13be0ae5f pub_methods_class_shit_1_1_renderer_component" id="r_a17349359a2bd5bd4fe0ce2c13be0ae5f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#a17349359a2bd5bd4fe0ce2c13be0ae5f">RendererComponent</a> ()</td></tr>
+<tr class="memitem:a3752fb4f0e338826c1dec5444631ca75 pub_methods_class_shit_1_1_renderer_component" id="r_a3752fb4f0e338826c1dec5444631ca75"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#a3752fb4f0e338826c1dec5444631ca75">~RendererComponent</a> () override=default</td></tr>
+<tr class="memitem:acbef2688cd43fd22241759f89fe12d28 pub_methods_class_shit_1_1_renderer_component" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914 pub_methods_class_shit_1_1_renderer_component" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
+<tr class="memitem:aee7be93617a6078496df31830d454990 pub_methods_class_shit_1_1_renderer_component" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:ad51138fd45b987bf8edbc766b4875122 pub_methods_class_shit_1_1_renderer_component" id="r_ad51138fd45b987bf8edbc766b4875122"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#ad51138fd45b987bf8edbc766b4875122">getZIndex</a> () const</td></tr>
+<tr class="memdesc:ad51138fd45b987bf8edbc766b4875122 pub_methods_class_shit_1_1_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">渲染层级，值越大越靠上  <br /></td></tr>
+<tr class="memitem:a9d8a6cfb13917785c143e74d40e4e2be pub_methods_class_shit_1_1_renderer_component" id="r_a9d8a6cfb13917785c143e74d40e4e2be"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#a9d8a6cfb13917785c143e74d40e4e2be">isVisible</a> () const</td></tr>
+<tr class="memdesc:a9d8a6cfb13917785c143e74d40e4e2be pub_methods_class_shit_1_1_renderer_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否可见  <br /></td></tr>
+<tr class="memitem:ac303f527d4eeb6055c6e1d3575dbdf7a pub_methods_class_shit_1_1_renderer_component" id="r_ac303f527d4eeb6055c6e1d3575dbdf7a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#ac303f527d4eeb6055c6e1d3575dbdf7a">setZIndex</a> (int zIndex)</td></tr>
+<tr class="memitem:a7e6108ec64a6cb8b2566c8342e50540c pub_methods_class_shit_1_1_renderer_component" id="r_a7e6108ec64a6cb8b2566c8342e50540c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#a7e6108ec64a6cb8b2566c8342e50540c">setVisible</a> (bool isVisible)</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a0171e1571f18dc6a27c8b041de55feec pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
+<tr class="memitem:ab8905908be361c6fce216879f4739d98 pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
+<tr class="memitem:a58db3b5933199c866796fade5e1ad722 pub_methods_class_shit_1_1_component" id="r_a58db3b5933199c866796fade5e1ad722"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722">onCreate</a> ()</td></tr>
+<tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054 pub_methods_class_shit_1_1_component" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const Component &amp;)=delete</td></tr>
+<tr class="memitem:ace504c89f605c2e53f2450021ebca56e pub_methods_class_shit_1_1_component" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;)=delete</td></tr>
+<tr class="memitem:aa85c694df3855843a20a64cb0fc17233 pub_methods_class_shit_1_1_component" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a> (Component &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a34f2dae077ca6d1b6e3a39201c79c796 pub_methods_class_shit_1_1_component" id="r_a34f2dae077ca6d1b6e3a39201c79c796"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a> (<a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a9b36b6de005b18dd7c77687d8621774a pub_methods_class_shit_1_1_component" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
+<tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246 pub_methods_class_shit_1_1_component" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
+<tr class="memitem:a97e301e58185f753feb7a36d6f936393 pub_methods_class_shit_1_1_component" id="r_a97e301e58185f753feb7a36d6f936393"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a97e301e58185f753feb7a36d6f936393">getUuid</a> () const</td></tr>
+<tr class="memdesc:a97e301e58185f753feb7a36d6f936393 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件持久 ID（随 .scene 序列化，是 <a class="el" href="class_shit_1_1_component_ref.html" title="可序列化的组件引用（存 UUID，懒解析，自动失效）">ComponentRef&lt;T&gt;</a> 引用字段的寻址依据）  <br /></td></tr>
+<tr class="memitem:abab895b8aff7bde6865ec1a74624b0e9 pub_methods_class_shit_1_1_component" id="r_abab895b8aff7bde6865ec1a74624b0e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#abab895b8aff7bde6865ec1a74624b0e9">setUuid</a> (uint64_t uuid)</td></tr>
+<tr class="memdesc:abab895b8aff7bde6865ec1a74624b0e9 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">直接设置组件 ID（仅引擎反序列化/索引维护使用；正常流程由构造函数随机分配）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a8dd1a328ce56825c80a7137cc17d2032" id="r_a8dd1a328ce56825c80a7137cc17d2032"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a8dd1a328ce56825c80a7137cc17d2032">TilemapDrawTool</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_component"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a215419d22c35be7dec54fc538c1050fd pro_methods_class_shit_1_1_component" id="r_a215419d22c35be7dec54fc538c1050fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a215419d22c35be7dec54fc538c1050fd">setRegistered</a> (bool registered)</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_renderer_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_renderer_component.html">RendererComponent</a></td></tr>
+<tr class="memitem:a2b31866ba7ed40c82edd92abe0081948 pro_attribs_class_shit_1_1_renderer_component" id="r_a2b31866ba7ed40c82edd92abe0081948"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#a2b31866ba7ed40c82edd92abe0081948">m_zIndex</a> = 0</td></tr>
+<tr class="memitem:ace177fa285e5e88a6ba132129f89b73c pro_attribs_class_shit_1_1_renderer_component" id="r_ace177fa285e5e88a6ba132129f89b73c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_renderer_component.html#ace177fa285e5e88a6ba132129f89b73c">m_isVisible</a> = true</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
+<tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
+<tr class="memitem:a3d8f7ab3c5e355a10d043dc922da7706 pro_attribs_class_shit_1_1_component" id="r_a3d8f7ab3c5e355a10d043dc922da7706"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a3d8f7ab3c5e355a10d043dc922da7706">m_uuid</a> = 0</td></tr>
+<tr class="memdesc:a3d8f7ab3c5e355a10d043dc922da7706 pro_attribs_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久 ID（构造时随机分配；0 仅在序列化前尚未赋值时短暂存在）  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>2D 瓦片地图组件 </p>
+<p>把一张瓦片集纹理（sprite sheet）按 m_gridWidth×m_gridHeight 网格铺排成地图。 网格左上角对齐 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 的 Transform 位置，每个格子从纹理裁取对应瓦片绘制。</p>
+<p>瓦片 id 语义： -1 = 空格（不绘制） ≥0 = 瓦片索引，映射到纹理的 (id % 每行数, id / 每行数) 源矩形</p>
+<p>网格数据以反射字符串字段 m_gridData 持久化（逗号分隔的瓦片 id，序列化器原生 支持 std::string），运行时用 m_tiles（std::vector&lt;int&gt;）高效存储；onAfterDeserialize 把 m_gridData 解析到 m_tiles。编辑器/脚本通过 setTile / resize 修改并自动同步 m_gridData。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ad2033e542abe87a295cce7c0c072b474" name="ad2033e542abe87a295cce7c0c072b474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2033e542abe87a295cce7c0c072b474">&#9670;&#160;</a></span>Tilemap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tilemap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa43f556320fb0169abd4dbf9d814b5a6" name="aa43f556320fb0169abd4dbf9d814b5a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43f556320fb0169abd4dbf9d814b5a6">&#9670;&#160;</a></span>~Tilemap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#ad2033e542abe87a295cce7c0c072b474">Tilemap</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>全部擦除 </p>
+
+</div>
+</div>
+<a id="a010f0a0f9ea578d4dce68159ac086233" name="a010f0a0f9ea578d4dce68159ac086233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010f0a0f9ea578d4dce68159ac086233">&#9670;&#160;</a></span>getGlobalBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_FRect getGlobalBounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>世界坐标轴对齐包围盒（覆盖整个网格） </p>
+
+<p>实现了 <a class="el" href="class_shit_1_1_renderer_component.html#a72e5840ff7ba60365296acc20d995a38">RendererComponent</a>.</p>
+
+</div>
+</div>
+<a id="a472338b43b7000e614c5af16f15a1adb" name="a472338b43b7000e614c5af16f15a1adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472338b43b7000e614c5af16f15a1adb">&#9670;&#160;</a></span>getGridData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; getGridData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0fd53254581bcb0929a4bdfc2a6067d" name="ab0fd53254581bcb0929a4bdfc2a6067d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fd53254581bcb0929a4bdfc2a6067d">&#9670;&#160;</a></span>getGridHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getGridHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6898ef28c25c68f6d573d07859791b6b" name="a6898ef28c25c68f6d573d07859791b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6898ef28c25c68f6d573d07859791b6b">&#9670;&#160;</a></span>getGridWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getGridWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab666c41ebea083a5c6604ce593b59e17" name="ab666c41ebea083a5c6604ce593b59e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab666c41ebea083a5c6604ce593b59e17">&#9670;&#160;</a></span>getTexturePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; getTexturePath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d3be76861f399b184895f27e9211d40" name="a8d3be76861f399b184895f27e9211d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3be76861f399b184895f27e9211d40">&#9670;&#160;</a></span>getTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTile </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取瓦片（越界返回 -1） </p>
+
+</div>
+</div>
+<a id="a54803ac030b9783c7bec721e7048fa2e" name="a54803ac030b9783c7bec721e7048fa2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54803ac030b9783c7bec721e7048fa2e">&#9670;&#160;</a></span>getTileCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTileCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>当前瓦片数量（非空格） </p>
+
+</div>
+</div>
+<a id="a1959194ac6bdce6c6a610fcf3c77408a" name="a1959194ac6bdce6c6a610fcf3c77408a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1959194ac6bdce6c6a610fcf3c77408a">&#9670;&#160;</a></span>getTileHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTileHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a064db606ebb0924b666976c4469dae83" name="a064db606ebb0924b666976c4469dae83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064db606ebb0924b666976c4469dae83">&#9670;&#160;</a></span>getTileWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTileWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a396deb7d28660a84a7ac6f236a12996d" name="a396deb7d28660a84a7ac6f236a12996d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396deb7d28660a84a7ac6f236a12996d">&#9670;&#160;</a></span>getTileWorldSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp; getTileWorldSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf82f9b2937375c7b1cf3dccb3df3312" name="acf82f9b2937375c7b1cf3dccb3df3312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf82f9b2937375c7b1cf3dccb3df3312">&#9670;&#160;</a></span>isEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isEmpty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否全空 </p>
+
+</div>
+</div>
+<a id="a9270529a4341cf8bf3f6a29a56556366" name="a9270529a4341cf8bf3f6a29a56556366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9270529a4341cf8bf3f6a29a56556366">&#9670;&#160;</a></span>onAfterDeserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onAfterDeserialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#ae4c3a7f8b6190c245e7b62b07b4afc66">Component</a> .</p>
+
+</div>
+</div>
+<a id="aadba02841897aadd2819172be6c50058" name="aadba02841897aadd2819172be6c50058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadba02841897aadd2819172be6c50058">&#9670;&#160;</a></span>onFieldChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onFieldChanged </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fieldName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查器直接写反射字段后回调（字段名）。用于绕过 setter 的直写完成后 重新同步引擎状态（如 Box2D 刚体/形状）。默认无操作。 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a408a2dbeb7e4a239670553c2c6c3f3e3">Component</a> .</p>
+
+</div>
+</div>
+<a id="ad5954d600e7e4fc3341ad4a15cda63ba" name="ad5954d600e7e4fc3341ad4a15cda63ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5954d600e7e4fc3341ad4a15cda63ba">&#9670;&#160;</a></span>onRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onRender </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_shit_1_1_camera_component.html">CameraComponent</a> *</td>          <td class="paramname"><span class="paramname"><em>camera</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>按相机绘制网格（RendererComponent 纯虚实现） </p>
+
+<p>实现了 <a class="el" href="class_shit_1_1_renderer_component.html#a6f6c866d92d5553df9d186de5f7ac452">RendererComponent</a>.</p>
+
+</div>
+</div>
+<a id="ae99f1c800f9574e5ee610c7bb9531723" name="ae99f1c800f9574e5ee610c7bb9531723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99f1c800f9574e5ee610c7bb9531723">&#9670;&#160;</a></span>setGridData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setGridData </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>反序列化用：解析外部字符串（含尺寸头） </p>
+
+</div>
+</div>
+<a id="a3ebb70b99f18aff9c9e5a542f11ced17" name="a3ebb70b99f18aff9c9e5a542f11ced17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ebb70b99f18aff9c9e5a542f11ced17">&#9670;&#160;</a></span>setGridSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setGridSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cols</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>调整网格行列数（保留重叠部分数据） </p>
+
+</div>
+</div>
+<a id="acfbdcc1fd9b9ef8824f929fd09aa380e" name="acfbdcc1fd9b9ef8824f929fd09aa380e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfbdcc1fd9b9ef8824f929fd09aa380e">&#9670;&#160;</a></span>setTexturePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTexturePath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e7037193f766137bf37e68680b1b5fc" name="a8e7037193f766137bf37e68680b1b5fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7037193f766137bf37e68680b1b5fc">&#9670;&#160;</a></span>setTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTile </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileId</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>放置瓦片（-1 擦除） </p>
+
+</div>
+</div>
+<a id="a3926b8339e0f76d9552733e2f8e110ca" name="a3926b8339e0f76d9552733e2f8e110ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3926b8339e0f76d9552733e2f8e110ca">&#9670;&#160;</a></span>setTileSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTileSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置单个瓦片纹理像素尺寸 </p>
+
+</div>
+</div>
+<a id="a6845f381adfe28772605d1305438307a" name="a6845f381adfe28772605d1305438307a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6845f381adfe28772605d1305438307a">&#9670;&#160;</a></span>setTileWorldSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTileWorldSize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>每格世界尺寸（默认=瓦片像素） </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="a8dd1a328ce56825c80a7137cc17d2032" name="a8dd1a328ce56825c80a7137cc17d2032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd1a328ce56825c80a7137cc17d2032">&#9670;&#160;</a></span>TilemapDrawTool</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class TilemapDrawTool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Component/<a class="el" href="_tilemap_8h_source.html">Tilemap.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_tilemap.html">Tilemap</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

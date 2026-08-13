@@ -1,0 +1,1003 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: Animator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_animator.html','','class_shit_1_1_animator-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Animator类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>动画状态机 / Animator（P28）  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_animator_8h_source.html">Animator.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Animator 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_shit_1_1_animator.png" usemap="#Animator_map" alt=""/>
+  <map id="Animator_map" name="Animator_map">
+<area href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑" alt="Behavior" shape="rect" coords="0,56,75,80"/>
+<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="0,0,75,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9660682308bc118fef9a9fa39fef3dc2" id="r_a9660682308bc118fef9a9fa39fef3dc2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9660682308bc118fef9a9fa39fef3dc2">Animator</a> ()</td></tr>
+<tr class="memitem:a595954ce03f80953932eebd46181d5c6" id="r_a595954ce03f80953932eebd46181d5c6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a595954ce03f80953932eebd46181d5c6">~Animator</a> () override</td></tr>
+<tr class="memitem:acbef2688cd43fd22241759f89fe12d28" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="memitem:a14127bfdcd55437a44ca5a76b916d899" id="r_a14127bfdcd55437a44ca5a76b916d899"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14127bfdcd55437a44ca5a76b916d899">onStart</a> () override</td></tr>
+<tr class="memdesc:a14127bfdcd55437a44ca5a76b916d899"><td class="mdescLeft">&#160;</td><td class="mdescRight">首次 update 前执行一次  <br /></td></tr>
+<tr class="memitem:ae15f5dc3626bedd435b05d234dabcb85" id="r_ae15f5dc3626bedd435b05d234dabcb85"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae15f5dc3626bedd435b05d234dabcb85">onUpdate</a> () override</td></tr>
+<tr class="memdesc:ae15f5dc3626bedd435b05d234dabcb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧执行  <br /></td></tr>
+<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:a9270529a4341cf8bf3f6a29a56556366" id="r_a9270529a4341cf8bf3f6a29a56556366"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9270529a4341cf8bf3f6a29a56556366">onAfterDeserialize</a> () override</td></tr>
+<tr class="memdesc:a9270529a4341cf8bf3f6a29a56556366"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。  <br /></td></tr>
+<tr class="memitem:aadba02841897aadd2819172be6c50058" id="r_aadba02841897aadd2819172be6c50058"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aadba02841897aadd2819172be6c50058">onFieldChanged</a> (const std::string &amp;fieldName) override</td></tr>
+<tr class="memdesc:aadba02841897aadd2819172be6c50058"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查器直接写反射字段后回调（字段名）。用于绕过 setter 的直写完成后 重新同步引擎状态（如 Box2D 刚体/形状）。默认无操作。  <br /></td></tr>
+<tr class="memitem:aa70559f3ef5342b84faf3c8d8f38e1c1" id="r_aa70559f3ef5342b84faf3c8d8f38e1c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa70559f3ef5342b84faf3c8d8f38e1c1">setFloat</a> (const std::string &amp;name, float value)</td></tr>
+<tr class="memitem:aacc9fa42d9510ebf535c64db9e0c6cbe" id="r_aacc9fa42d9510ebf535c64db9e0c6cbe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aacc9fa42d9510ebf535c64db9e0c6cbe">setBool</a> (const std::string &amp;name, bool value)</td></tr>
+<tr class="memitem:a9dc524ce88a1fdd6f57ebeb6ba863fe4" id="r_a9dc524ce88a1fdd6f57ebeb6ba863fe4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9dc524ce88a1fdd6f57ebeb6ba863fe4">setTrigger</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a4f0efcce025373e5d9577ed5533ddad9" id="r_a4f0efcce025373e5d9577ed5533ddad9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4f0efcce025373e5d9577ed5533ddad9">stateCount</a> () const</td></tr>
+<tr class="memitem:a14b8ffd9e4e405e335fdf6ba70d6e37c" id="r_a14b8ffd9e4e405e335fdf6ba70d6e37c"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_animator_state.html">AnimatorState</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a14b8ffd9e4e405e335fdf6ba70d6e37c">stateAt</a> (int index) const</td></tr>
+<tr class="memitem:a468799df66674013dbcccd311061eeb9" id="r_a468799df66674013dbcccd311061eeb9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a468799df66674013dbcccd311061eeb9">currentStateIndex</a> () const</td></tr>
+<tr class="memitem:a8b7d18646ed8467a73d858ea4a6a96b3" id="r_a8b7d18646ed8467a73d858ea4a6a96b3"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8b7d18646ed8467a73d858ea4a6a96b3">currentStateName</a> () const</td></tr>
+<tr class="memitem:a8edb3de82005015744a16934838ed980" id="r_a8edb3de82005015744a16934838ed980"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8edb3de82005015744a16934838ed980">setCurrentState</a> (int index)</td></tr>
+<tr class="memdesc:a8edb3de82005015744a16934838ed980"><td class="mdescLeft">&#160;</td><td class="mdescRight">强制切到指定状态（编辑器预览/调试用）  <br /></td></tr>
+<tr class="memitem:a73d6c35e0dc66e9657eba7c45a0b4f47" id="r_a73d6c35e0dc66e9657eba7c45a0b4f47"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a73d6c35e0dc66e9657eba7c45a0b4f47">evaluateTransitions</a> ()</td></tr>
+<tr class="memdesc:a73d6c35e0dc66e9657eba7c45a0b4f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">立即求值一次转换（编辑器/运行共用；onUpdate 自动调用）  <br /></td></tr>
+<tr class="memitem:a8da1489d56f6af8891f5df7b3df0e0df" id="r_a8da1489d56f6af8891f5df7b3df0e0df"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a8da1489d56f6af8891f5df7b3df0e0df">paramCount</a> () const</td></tr>
+<tr class="memitem:a44ce81b3bfeb0d4f67520c7070eab59d" id="r_a44ce81b3bfeb0d4f67520c7070eab59d"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_animator_parameter.html">AnimatorParameter</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a44ce81b3bfeb0d4f67520c7070eab59d">paramAt</a> (int index) const</td></tr>
+<tr class="memitem:aa425971ab34ea753828d7ebc882403ef" id="r_aa425971ab34ea753828d7ebc882403ef"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa425971ab34ea753828d7ebc882403ef">addParam</a> (const std::string &amp;name, <a class="el" href="namespace_shit.html#a0ff40449e21004707960b3589989bf05">AnimatorParamType</a> type)</td></tr>
+<tr class="memitem:aebeffa32bf521209a6de0c11ced15685" id="r_aebeffa32bf521209a6de0c11ced15685"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aebeffa32bf521209a6de0c11ced15685">setParam</a> (int index, const <a class="el" href="struct_shit_1_1_animator_parameter.html">AnimatorParameter</a> &amp;param)</td></tr>
+<tr class="memitem:aa9023a442f8e6a7492ff0f62a6a2c609" id="r_aa9023a442f8e6a7492ff0f62a6a2c609"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa9023a442f8e6a7492ff0f62a6a2c609">removeParam</a> (int index)</td></tr>
+<tr class="memitem:af19b885bc2c6cb93159b0575172ad545" id="r_af19b885bc2c6cb93159b0575172ad545"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af19b885bc2c6cb93159b0575172ad545">findParam</a> (const std::string &amp;name) const</td></tr>
+<tr class="memitem:a50bd2b67d4da88a35e8fa8c5f10a99f8" id="r_a50bd2b67d4da88a35e8fa8c5f10a99f8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a50bd2b67d4da88a35e8fa8c5f10a99f8">addState</a> (const std::string &amp;name)</td></tr>
+<tr class="memitem:ad5722c29aa1d9d632334ba3a76213853" id="r_ad5722c29aa1d9d632334ba3a76213853"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad5722c29aa1d9d632334ba3a76213853">setState</a> (int index, const <a class="el" href="struct_shit_1_1_animator_state.html">AnimatorState</a> &amp;state)</td></tr>
+<tr class="memitem:a4baed42a2fd595d0a230afd2927050fe" id="r_a4baed42a2fd595d0a230afd2927050fe"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4baed42a2fd595d0a230afd2927050fe">removeState</a> (int index)</td></tr>
+<tr class="memdesc:a4baed42a2fd595d0a230afd2927050fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">连带清理引用该状态的转换  <br /></td></tr>
+<tr class="memitem:ab3d9a9ec4c934a374c2a699e162db024" id="r_ab3d9a9ec4c934a374c2a699e162db024"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab3d9a9ec4c934a374c2a699e162db024">transitionCount</a> () const</td></tr>
+<tr class="memitem:adca0a465a1556d26b5daa9e3302cd0a7" id="r_adca0a465a1556d26b5daa9e3302cd0a7"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_animator_transition.html">AnimatorTransition</a> *&#160;</td><td class="memItemRight"><a class="el" href="#adca0a465a1556d26b5daa9e3302cd0a7">transitionAt</a> (int index) const</td></tr>
+<tr class="memitem:afe8a61dca898f86d3dcfca0bdac452dc" id="r_afe8a61dca898f86d3dcfca0bdac452dc"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afe8a61dca898f86d3dcfca0bdac452dc">addTransition</a> (int fromState, int toState)</td></tr>
+<tr class="memitem:a720addfa52d7ddff8940632680d9344f" id="r_a720addfa52d7ddff8940632680d9344f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a720addfa52d7ddff8940632680d9344f">setTransition</a> (int index, const <a class="el" href="struct_shit_1_1_animator_transition.html">AnimatorTransition</a> &amp;transition)</td></tr>
+<tr class="memitem:af9b66afbfade0e044aa7169eb395c540" id="r_af9b66afbfade0e044aa7169eb395c540"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af9b66afbfade0e044aa7169eb395c540">removeTransition</a> (int index)</td></tr>
+<tr class="memitem:aa05c1b01df31cc845e8be9a8ac6f6a34" id="r_aa05c1b01df31cc845e8be9a8ac6f6a34"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa05c1b01df31cc845e8be9a8ac6f6a34">syncData</a> ()</td></tr>
+<tr class="memdesc:aa05c1b01df31cc845e8be9a8ac6f6a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">把当前 states/params/transitions 同步到 m_animatorData（编辑器修改后调用）  <br /></td></tr>
+<tr class="memitem:a389ad71786b00ae81f69060f153509d2" id="r_a389ad71786b00ae81f69060f153509d2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a389ad71786b00ae81f69060f153509d2">isPlaying</a> () const</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_behavior"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_behavior.html">Behavior</a></td></tr>
+<tr class="memitem:a4f24a7153019bf68d0ec7f99428db90e pub_methods_class_shit_1_1_behavior" id="r_a4f24a7153019bf68d0ec7f99428db90e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a4f24a7153019bf68d0ec7f99428db90e">Behavior</a> ()=default</td></tr>
+<tr class="memitem:a505b38eb8ed0bab19cf378f5e35854d9 pub_methods_class_shit_1_1_behavior" id="r_a505b38eb8ed0bab19cf378f5e35854d9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a505b38eb8ed0bab19cf378f5e35854d9">~Behavior</a> () override=default</td></tr>
+<tr class="memitem:acbe76e0ea44ef342a8c85726573860d4 pub_methods_class_shit_1_1_behavior" id="r_acbe76e0ea44ef342a8c85726573860d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#acbe76e0ea44ef342a8c85726573860d4">onCreate</a> () override</td></tr>
+<tr class="memitem:acbef2688cd43fd22241759f89fe12d28 pub_methods_class_shit_1_1_behavior" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="memitem:a062926a9c57f956ba91179747e7b10c5 pub_methods_class_shit_1_1_behavior" id="r_a062926a9c57f956ba91179747e7b10c5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a062926a9c57f956ba91179747e7b10c5">onCollisionEnter</a> (<a class="el" href="class_shit_1_1_behavior.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
+<tr class="memdesc:a062926a9c57f956ba91179747e7b10c5 pub_methods_class_shit_1_1_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">与 other 开始接触（每对象对一次）  <br /></td></tr>
+<tr class="memitem:a3e2b33c4605829c74852add5113d445b pub_methods_class_shit_1_1_behavior" id="r_a3e2b33c4605829c74852add5113d445b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a3e2b33c4605829c74852add5113d445b">onCollisionStay</a> (<a class="el" href="class_shit_1_1_behavior.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
+<tr class="memdesc:a3e2b33c4605829c74852add5113d445b pub_methods_class_shit_1_1_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">与 other 持续接触（每帧一次）  <br /></td></tr>
+<tr class="memitem:af3224a9dc03556a67ec0b4d3353ccd41 pub_methods_class_shit_1_1_behavior" id="r_af3224a9dc03556a67ec0b4d3353ccd41"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#af3224a9dc03556a67ec0b4d3353ccd41">onCollisionExit</a> (<a class="el" href="class_shit_1_1_behavior.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
+<tr class="memdesc:af3224a9dc03556a67ec0b4d3353ccd41 pub_methods_class_shit_1_1_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">与 other 结束接触  <br /></td></tr>
+<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914 pub_methods_class_shit_1_1_behavior" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
+<tr class="memitem:aee7be93617a6078496df31830d454990 pub_methods_class_shit_1_1_behavior" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:ac1991ea0e286fbb461b60c8c9299d781 pub_methods_class_shit_1_1_behavior" id="r_ac1991ea0e286fbb461b60c8c9299d781"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#ac1991ea0e286fbb461b60c8c9299d781">isStarted</a> () const</td></tr>
+<tr class="memdesc:ac1991ea0e286fbb461b60c8c9299d781 pub_methods_class_shit_1_1_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">onStart 是否已执行过  <br /></td></tr>
+<tr class="memitem:aa28282f574997057b62d336af9198bb2 pub_methods_class_shit_1_1_behavior" id="r_aa28282f574997057b62d336af9198bb2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#aa28282f574997057b62d336af9198bb2">setStarted</a> (bool isStarted)</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a0171e1571f18dc6a27c8b041de55feec pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
+<tr class="memitem:ab8905908be361c6fce216879f4739d98 pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
+<tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054 pub_methods_class_shit_1_1_component" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const Component &amp;)=delete</td></tr>
+<tr class="memitem:ace504c89f605c2e53f2450021ebca56e pub_methods_class_shit_1_1_component" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;)=delete</td></tr>
+<tr class="memitem:aa85c694df3855843a20a64cb0fc17233 pub_methods_class_shit_1_1_component" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a> (Component &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a34f2dae077ca6d1b6e3a39201c79c796 pub_methods_class_shit_1_1_component" id="r_a34f2dae077ca6d1b6e3a39201c79c796"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a> (<a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a9b36b6de005b18dd7c77687d8621774a pub_methods_class_shit_1_1_component" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
+<tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246 pub_methods_class_shit_1_1_component" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
+<tr class="memitem:a97e301e58185f753feb7a36d6f936393 pub_methods_class_shit_1_1_component" id="r_a97e301e58185f753feb7a36d6f936393"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a97e301e58185f753feb7a36d6f936393">getUuid</a> () const</td></tr>
+<tr class="memdesc:a97e301e58185f753feb7a36d6f936393 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件持久 ID（随 .scene 序列化，是 <a class="el" href="class_shit_1_1_component_ref.html" title="可序列化的组件引用（存 UUID，懒解析，自动失效）">ComponentRef&lt;T&gt;</a> 引用字段的寻址依据）  <br /></td></tr>
+<tr class="memitem:abab895b8aff7bde6865ec1a74624b0e9 pub_methods_class_shit_1_1_component" id="r_abab895b8aff7bde6865ec1a74624b0e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#abab895b8aff7bde6865ec1a74624b0e9">setUuid</a> (uint64_t uuid)</td></tr>
+<tr class="memdesc:abab895b8aff7bde6865ec1a74624b0e9 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">直接设置组件 ID（仅引擎反序列化/索引维护使用；正常流程由构造函数随机分配）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_component"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a215419d22c35be7dec54fc538c1050fd pro_methods_class_shit_1_1_component" id="r_a215419d22c35be7dec54fc538c1050fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a215419d22c35be7dec54fc538c1050fd">setRegistered</a> (bool registered)</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_behavior"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_behavior.html">Behavior</a></td></tr>
+<tr class="memitem:a04b5b6d3587350e5f8834fedeb9cab9e pro_attribs_class_shit_1_1_behavior" id="r_a04b5b6d3587350e5f8834fedeb9cab9e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_behavior.html#a04b5b6d3587350e5f8834fedeb9cab9e">m_isStarted</a> = false</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
+<tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
+<tr class="memitem:a3d8f7ab3c5e355a10d043dc922da7706 pro_attribs_class_shit_1_1_component" id="r_a3d8f7ab3c5e355a10d043dc922da7706"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a3d8f7ab3c5e355a10d043dc922da7706">m_uuid</a> = 0</td></tr>
+<tr class="memdesc:a3d8f7ab3c5e355a10d043dc922da7706 pro_attribs_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久 ID（构造时随机分配；0 仅在序列化前尚未赋值时短暂存在）  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>动画状态机 / Animator（P28） </p>
+<p>继承 Behavior，由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 每帧调用 onUpdate：</p><ol type="1">
+<li>推进当前状态的剪辑播放（Animation 对象），并把当前帧源矩形回写到同 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 的 SpriteRenderer；</li>
+<li>遍历当前状态（及任意 from=-1）的转换，求值条件；满足则切换到目标状态并重启动画。</li>
+</ol>
+<p>条件用参数（setFloat / setBool / setTrigger）驱动——典型场景：角色 idle/run/jump 剪辑 依 speed（float）、grounded（bool）、jump（trigger）切换。</p>
+<p>序列化：状态/参数/转换以反射字符串载体 m_animatorData（JSON）随 .scene 落盘， onAfterDeserialize / onFieldChanged 解析重建；编辑器经 addState/setState/... 修改后 <a class="el" href="#aa05c1b01df31cc845e8be9a8ac6f6a34" title="把当前 states/params/transitions 同步到 m_animatorData（编辑器修改后调用）">syncData()</a>。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a9660682308bc118fef9a9fa39fef3dc2" name="a9660682308bc118fef9a9fa39fef3dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9660682308bc118fef9a9fa39fef3dc2">&#9670;&#160;</a></span>Animator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a595954ce03f80953932eebd46181d5c6" name="a595954ce03f80953932eebd46181d5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595954ce03f80953932eebd46181d5c6">&#9670;&#160;</a></span>~Animator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a9660682308bc118fef9a9fa39fef3dc2">Animator</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="aa425971ab34ea753828d7ebc882403ef" name="aa425971ab34ea753828d7ebc882403ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa425971ab34ea753828d7ebc882403ef">&#9670;&#160;</a></span>addParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int addParam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_shit.html#a0ff40449e21004707960b3589989bf05">AnimatorParamType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50bd2b67d4da88a35e8fa8c5f10a99f8" name="a50bd2b67d4da88a35e8fa8c5f10a99f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50bd2b67d4da88a35e8fa8c5f10a99f8">&#9670;&#160;</a></span>addState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int addState </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe8a61dca898f86d3dcfca0bdac452dc" name="afe8a61dca898f86d3dcfca0bdac452dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe8a61dca898f86d3dcfca0bdac452dc">&#9670;&#160;</a></span>addTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int addTransition </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fromState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>toState</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a468799df66674013dbcccd311061eeb9" name="a468799df66674013dbcccd311061eeb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468799df66674013dbcccd311061eeb9">&#9670;&#160;</a></span>currentStateIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentStateIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b7d18646ed8467a73d858ea4a6a96b3" name="a8b7d18646ed8467a73d858ea4a6a96b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7d18646ed8467a73d858ea4a6a96b3">&#9670;&#160;</a></span>currentStateName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; currentStateName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73d6c35e0dc66e9657eba7c45a0b4f47" name="a73d6c35e0dc66e9657eba7c45a0b4f47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d6c35e0dc66e9657eba7c45a0b4f47">&#9670;&#160;</a></span>evaluateTransitions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool evaluateTransitions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>立即求值一次转换（编辑器/运行共用；onUpdate 自动调用） </p>
+
+</div>
+</div>
+<a id="af19b885bc2c6cb93159b0575172ad545" name="af19b885bc2c6cb93159b0575172ad545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19b885bc2c6cb93159b0575172ad545">&#9670;&#160;</a></span>findParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int findParam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a389ad71786b00ae81f69060f153509d2" name="a389ad71786b00ae81f69060f153509d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a389ad71786b00ae81f69060f153509d2">&#9670;&#160;</a></span>isPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPlaying </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9270529a4341cf8bf3f6a29a56556366" name="a9270529a4341cf8bf3f6a29a56556366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9270529a4341cf8bf3f6a29a56556366">&#9670;&#160;</a></span>onAfterDeserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onAfterDeserialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#ae4c3a7f8b6190c245e7b62b07b4afc66">Component</a> .</p>
+
+</div>
+</div>
+<a id="acbef2688cd43fd22241759f89fe12d28" name="acbef2688cd43fd22241759f89fe12d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbef2688cd43fd22241759f89fe12d28">&#9670;&#160;</a></span>onAttach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onAttach </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a6f4c9e6fe81d4bffc712d4d0ae4d72ff">Component</a> .</p>
+
+</div>
+</div>
+<a id="aee7be93617a6078496df31830d454990" name="aee7be93617a6078496df31830d454990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7be93617a6078496df31830d454990">&#9670;&#160;</a></span>onDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">Component</a> .</p>
+
+</div>
+</div>
+<a id="aadba02841897aadd2819172be6c50058" name="aadba02841897aadd2819172be6c50058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadba02841897aadd2819172be6c50058">&#9670;&#160;</a></span>onFieldChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onFieldChanged </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fieldName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查器直接写反射字段后回调（字段名）。用于绕过 setter 的直写完成后 重新同步引擎状态（如 Box2D 刚体/形状）。默认无操作。 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a408a2dbeb7e4a239670553c2c6c3f3e3">Component</a> .</p>
+
+</div>
+</div>
+<a id="a14127bfdcd55437a44ca5a76b916d899" name="a14127bfdcd55437a44ca5a76b916d899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14127bfdcd55437a44ca5a76b916d899">&#9670;&#160;</a></span>onStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onStart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>首次 update 前执行一次 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_behavior.html#a62c5b2c91580204a54e2d32e9594e6e9">Behavior</a> .</p>
+
+</div>
+</div>
+<a id="ae15f5dc3626bedd435b05d234dabcb85" name="ae15f5dc3626bedd435b05d234dabcb85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae15f5dc3626bedd435b05d234dabcb85">&#9670;&#160;</a></span>onUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每帧执行 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_behavior.html#ac521702842354e4c4c71d4cf28b1db0b">Behavior</a> .</p>
+
+</div>
+</div>
+<a id="a44ce81b3bfeb0d4f67520c7070eab59d" name="a44ce81b3bfeb0d4f67520c7070eab59d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ce81b3bfeb0d4f67520c7070eab59d">&#9670;&#160;</a></span>paramAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_animator_parameter.html">AnimatorParameter</a> * paramAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8da1489d56f6af8891f5df7b3df0e0df" name="a8da1489d56f6af8891f5df7b3df0e0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da1489d56f6af8891f5df7b3df0e0df">&#9670;&#160;</a></span>paramCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int paramCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9023a442f8e6a7492ff0f62a6a2c609" name="aa9023a442f8e6a7492ff0f62a6a2c609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9023a442f8e6a7492ff0f62a6a2c609">&#9670;&#160;</a></span>removeParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool removeParam </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4baed42a2fd595d0a230afd2927050fe" name="a4baed42a2fd595d0a230afd2927050fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4baed42a2fd595d0a230afd2927050fe">&#9670;&#160;</a></span>removeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool removeState </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>连带清理引用该状态的转换 </p>
+
+</div>
+</div>
+<a id="af9b66afbfade0e044aa7169eb395c540" name="af9b66afbfade0e044aa7169eb395c540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b66afbfade0e044aa7169eb395c540">&#9670;&#160;</a></span>removeTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool removeTransition </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aacc9fa42d9510ebf535c64db9e0c6cbe" name="aacc9fa42d9510ebf535c64db9e0c6cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc9fa42d9510ebf535c64db9e0c6cbe">&#9670;&#160;</a></span>setBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBool </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8edb3de82005015744a16934838ed980" name="a8edb3de82005015744a16934838ed980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8edb3de82005015744a16934838ed980">&#9670;&#160;</a></span>setCurrentState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCurrentState </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>强制切到指定状态（编辑器预览/调试用） </p>
+
+</div>
+</div>
+<a id="aa70559f3ef5342b84faf3c8d8f38e1c1" name="aa70559f3ef5342b84faf3c8d8f38e1c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70559f3ef5342b84faf3c8d8f38e1c1">&#9670;&#160;</a></span>setFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFloat </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebeffa32bf521209a6de0c11ced15685" name="aebeffa32bf521209a6de0c11ced15685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebeffa32bf521209a6de0c11ced15685">&#9670;&#160;</a></span>setParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setParam </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_animator_parameter.html">AnimatorParameter</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>param</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5722c29aa1d9d632334ba3a76213853" name="ad5722c29aa1d9d632334ba3a76213853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5722c29aa1d9d632334ba3a76213853">&#9670;&#160;</a></span>setState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setState </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_animator_state.html">AnimatorState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a720addfa52d7ddff8940632680d9344f" name="a720addfa52d7ddff8940632680d9344f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720addfa52d7ddff8940632680d9344f">&#9670;&#160;</a></span>setTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setTransition </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_animator_transition.html">AnimatorTransition</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transition</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dc524ce88a1fdd6f57ebeb6ba863fe4" name="a9dc524ce88a1fdd6f57ebeb6ba863fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc524ce88a1fdd6f57ebeb6ba863fe4">&#9670;&#160;</a></span>setTrigger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setTrigger </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14b8ffd9e4e405e335fdf6ba70d6e37c" name="a14b8ffd9e4e405e335fdf6ba70d6e37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b8ffd9e4e405e335fdf6ba70d6e37c">&#9670;&#160;</a></span>stateAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_animator_state.html">AnimatorState</a> * stateAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f0efcce025373e5d9577ed5533ddad9" name="a4f0efcce025373e5d9577ed5533ddad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0efcce025373e5d9577ed5533ddad9">&#9670;&#160;</a></span>stateCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stateCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa05c1b01df31cc845e8be9a8ac6f6a34" name="aa05c1b01df31cc845e8be9a8ac6f6a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05c1b01df31cc845e8be9a8ac6f6a34">&#9670;&#160;</a></span>syncData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void syncData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>把当前 states/params/transitions 同步到 m_animatorData（编辑器修改后调用） </p>
+
+</div>
+</div>
+<a id="adca0a465a1556d26b5daa9e3302cd0a7" name="adca0a465a1556d26b5daa9e3302cd0a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca0a465a1556d26b5daa9e3302cd0a7">&#9670;&#160;</a></span>transitionAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_animator_transition.html">AnimatorTransition</a> * transitionAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3d9a9ec4c934a374c2a699e162db024" name="ab3d9a9ec4c934a374c2a699e162db024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3d9a9ec4c934a374c2a699e162db024">&#9670;&#160;</a></span>transitionCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int transitionCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Animation/<a class="el" href="_animator_8h_source.html">Animator.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_animator.html">Animator</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

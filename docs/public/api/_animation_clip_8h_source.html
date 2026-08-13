@@ -1,0 +1,222 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: include/ShitEngine/Animation/AnimationClip.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_animation_clip_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AnimationClip.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_animation_clip_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_core_8h.html">../Core/Core.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_sprite_sheet_8h.html">../Render/SpriteSheet.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespace_shit.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_shit.html">Shit</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html">   22</a></span>    <span class="keyword">struct </span><a class="code hl_define" href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a> <a class="code hl_struct" href="struct_shit_1_1_animation_clip.html">AnimationClip</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a9b45b3e13bd9167aab02e17e08916231">   23</a></span>        std::string <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a9b45b3e13bd9167aab02e17e08916231">name</a>;                 </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a317ee047b4a1a39fcbc2e9b0461ef2b1">   24</a></span>        std::string <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a317ee047b4a1a39fcbc2e9b0461ef2b1">texturePath</a>;          </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a061459acc9e078fa4699e0e349887215">   25</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a061459acc9e078fa4699e0e349887215">rows</a> = 0;                     </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a4407a60bc4387adae24cee658711f2d9">   26</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a4407a60bc4387adae24cee658711f2d9">cols</a> = 0;                     </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a4ee78e8942a842be44aa8592bca6a979">   27</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a4ee78e8942a842be44aa8592bca6a979">frameWidth</a> = 0.0f;          </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a56bc3cb64fa74f13ecdf031d44e15a78">   28</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a56bc3cb64fa74f13ecdf031d44e15a78">frameHeight</a> = 0.0f;         </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#aea1419deaadb54e70abae7fe5aada09e">   29</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#aea1419deaadb54e70abae7fe5aada09e">margin</a> = 0.0f;              </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#aedc6398ddf4719ad026969c7a74ab8ba">   30</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#aedc6398ddf4719ad026969c7a74ab8ba">spacing</a> = 0.0f;             </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a66625d8d6c0894b4828b43f826a09b8f">   31</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a66625d8d6c0894b4828b43f826a09b8f">duration</a> = 0.1f;            </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a5ed2b25d9f2f070cb0ee764aa0985308">   32</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a5ed2b25d9f2f070cb0ee764aa0985308">loop</a> = <span class="keyword">true</span>;                 </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a0cf294044cc229207fd8966ede32a9bf">   33</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a0cf294044cc229207fd8966ede32a9bf">isDefault</a> = <span class="keyword">false</span>;           </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a9c46f523f87401a418d5f261ea2b72ea">   34</a></span>        std::vector&lt;int&gt; <a class="code hl_variable" href="struct_shit_1_1_animation_clip.html#a9c46f523f87401a418d5f261ea2b72ea">frames</a>;          </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#a098007f3dd2a938824a819aa09423ca9">   37</a></span>        nlohmann::json <a class="code hl_function" href="struct_shit_1_1_animation_clip.html#a098007f3dd2a938824a819aa09423ca9">toJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_shit_1_1_animation_clip.html#af45795b6689ae3e529abe569e6ef7fd7">   39</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_shit_1_1_animation_clip.html#af45795b6689ae3e529abe569e6ef7fd7">fromJson</a>(<span class="keyword">const</span> nlohmann::json &amp;j);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    };</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
+<div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
+<div class="ttc" id="a_sprite_sheet_8h_html"><div class="ttname"><a href="_sprite_sheet_8h.html">SpriteSheet.h</a></div></div>
+<div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AnimationClip.h:12</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html">Shit::AnimationClip</a></div><div class="ttdoc">动画剪辑（可序列化数据，P28）</div><div class="ttdef"><b>定义</b> AnimationClip.h:22</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a061459acc9e078fa4699e0e349887215"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a061459acc9e078fa4699e0e349887215">Shit::AnimationClip::rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">网格行数</div><div class="ttdef"><b>定义</b> AnimationClip.h:25</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a098007f3dd2a938824a819aa09423ca9"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a098007f3dd2a938824a819aa09423ca9">Shit::AnimationClip::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdoc">序列化到 JSON（载体 / .anim 资产）</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a0cf294044cc229207fd8966ede32a9bf"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a0cf294044cc229207fd8966ede32a9bf">Shit::AnimationClip::isDefault</a></div><div class="ttdeci">bool isDefault</div><div class="ttdoc">是否默认播放（onStart 自动播放）</div><div class="ttdef"><b>定义</b> AnimationClip.h:33</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a317ee047b4a1a39fcbc2e9b0461ef2b1"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a317ee047b4a1a39fcbc2e9b0461ef2b1">Shit::AnimationClip::texturePath</a></div><div class="ttdeci">std::string texturePath</div><div class="ttdoc">精灵表纹理路径（编辑器预览与运行时切帧用）</div><div class="ttdef"><b>定义</b> AnimationClip.h:24</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a4407a60bc4387adae24cee658711f2d9"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a4407a60bc4387adae24cee658711f2d9">Shit::AnimationClip::cols</a></div><div class="ttdeci">int cols</div><div class="ttdoc">网格列数</div><div class="ttdef"><b>定义</b> AnimationClip.h:26</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a4ee78e8942a842be44aa8592bca6a979"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a4ee78e8942a842be44aa8592bca6a979">Shit::AnimationClip::frameWidth</a></div><div class="ttdeci">float frameWidth</div><div class="ttdoc">单帧宽（像素）</div><div class="ttdef"><b>定义</b> AnimationClip.h:27</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a56bc3cb64fa74f13ecdf031d44e15a78"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a56bc3cb64fa74f13ecdf031d44e15a78">Shit::AnimationClip::frameHeight</a></div><div class="ttdeci">float frameHeight</div><div class="ttdoc">单帧高（像素）</div><div class="ttdef"><b>定义</b> AnimationClip.h:28</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a5ed2b25d9f2f070cb0ee764aa0985308"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a5ed2b25d9f2f070cb0ee764aa0985308">Shit::AnimationClip::loop</a></div><div class="ttdeci">bool loop</div><div class="ttdoc">是否循环</div><div class="ttdef"><b>定义</b> AnimationClip.h:32</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a66625d8d6c0894b4828b43f826a09b8f"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a66625d8d6c0894b4828b43f826a09b8f">Shit::AnimationClip::duration</a></div><div class="ttdeci">float duration</div><div class="ttdoc">每帧时长（秒）</div><div class="ttdef"><b>定义</b> AnimationClip.h:31</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a9b45b3e13bd9167aab02e17e08916231"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a9b45b3e13bd9167aab02e17e08916231">Shit::AnimationClip::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">剪辑名（play/索引用）</div><div class="ttdef"><b>定义</b> AnimationClip.h:23</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_a9c46f523f87401a418d5f261ea2b72ea"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#a9c46f523f87401a418d5f261ea2b72ea">Shit::AnimationClip::frames</a></div><div class="ttdeci">std::vector&lt; int &gt; frames</div><div class="ttdoc">全局帧索引序列</div><div class="ttdef"><b>定义</b> AnimationClip.h:34</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_aea1419deaadb54e70abae7fe5aada09e"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#aea1419deaadb54e70abae7fe5aada09e">Shit::AnimationClip::margin</a></div><div class="ttdeci">float margin</div><div class="ttdoc">网格左上留白（像素）</div><div class="ttdef"><b>定义</b> AnimationClip.h:29</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_aedc6398ddf4719ad026969c7a74ab8ba"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#aedc6398ddf4719ad026969c7a74ab8ba">Shit::AnimationClip::spacing</a></div><div class="ttdeci">float spacing</div><div class="ttdoc">帧间距（像素）</div><div class="ttdef"><b>定义</b> AnimationClip.h:30</div></div>
+<div class="ttc" id="astruct_shit_1_1_animation_clip_html_af45795b6689ae3e529abe569e6ef7fd7"><div class="ttname"><a href="struct_shit_1_1_animation_clip.html#af45795b6689ae3e529abe569e6ef7fd7">Shit::AnimationClip::fromJson</a></div><div class="ttdeci">bool fromJson(const nlohmann::json &amp;j)</div><div class="ttdoc">从 JSON 解析（失败返回 false，字段保持默认）</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_c76797f37f06329ec62c77a68991e14f.html">ShitEngine</a></li><li class="navelem"><a href="dir_8fe7968623b5cf40c41026e80c32221d.html">Animation</a></li><li class="navelem"><a href="_animation_clip_8h.html">AnimationClip.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

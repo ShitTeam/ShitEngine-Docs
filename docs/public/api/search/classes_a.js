@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['scene_0',['Scene',['../class_shit_1_1_scene.html',1,'Shit']]],
-  ['scenemanager_1',['SceneManager',['../class_shit_1_1_scene_manager.html',1,'Shit']]],
-  ['sceneserializer_2',['SceneSerializer',['../class_shit_1_1_scene_serializer.html',1,'Shit']]],
-  ['sprite_3',['Sprite',['../class_shit_1_1_sprite.html',1,'Shit']]],
-  ['spriterenderer_4',['SpriteRenderer',['../class_shit_1_1_sprite_renderer.html',1,'Shit']]],
-  ['spritesheet_5',['SpriteSheet',['../class_shit_1_1_sprite_sheet.html',1,'Shit']]],
-  ['system_6',['System',['../class_shit_1_1_system.html',1,'Shit']]]
+  ['rangemeta_0',['RangeMeta',['../struct_shit_1_1_range_meta.html',1,'Shit']]],
+  ['renderer_1',['Renderer',['../class_shit_1_1_renderer.html',1,'Shit']]],
+  ['renderercomponent_2',['RendererComponent',['../class_shit_1_1_renderer_component.html',1,'Shit']]],
+  ['rendersystem_3',['RenderSystem',['../class_shit_1_1_render_system.html',1,'Shit']]],
+  ['resourcemanager_4',['ResourceManager',['../class_shit_1_1_resource_manager.html',1,'Shit']]],
+  ['rigidbody2d_5',['RigidBody2D',['../class_shit_1_1_rigid_body2_d.html',1,'Shit']]]
 ];

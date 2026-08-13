@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['rangemeta_0',['RangeMeta',['../struct_shit_1_1_range_meta.html',1,'Shit']]],
-  ['renderer_1',['Renderer',['../class_shit_1_1_renderer.html',1,'Shit']]],
-  ['renderercomponent_2',['RendererComponent',['../class_shit_1_1_renderer_component.html',1,'Shit']]],
-  ['rendersystem_3',['RenderSystem',['../class_shit_1_1_render_system.html',1,'Shit']]],
-  ['resourcemanager_4',['ResourceManager',['../class_shit_1_1_resource_manager.html',1,'Shit']]],
-  ['rigidbody2d_5',['RigidBody2D',['../class_shit_1_1_rigid_body2_d.html',1,'Shit']]]
+  ['physicssystem2d_0',['PhysicsSystem2D',['../class_shit_1_1_physics_system2_d.html',1,'Shit']]],
+  ['pluginmanager_1',['PluginManager',['../class_shit_1_1_plugin_manager.html',1,'Shit']]],
+  ['prefab_2',['Prefab',['../class_shit_1_1_prefab.html',1,'Shit']]],
+  ['projectconfig_3',['ProjectConfig',['../struct_shit_1_1_project_config.html',1,'Shit']]]
 ];

@@ -1,0 +1,985 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: Joint2D类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_joint2_d.html','','class_shit_1_1_joint2_d-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Joint2D类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>2D 物理关节组件  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_joint2_d_8h_source.html">Joint2D.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Joint2D 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_shit_1_1_joint2_d.png" usemap="#Joint2D_map" alt=""/>
+  <map id="Joint2D_map" name="Joint2D_map">
+<area href="class_shit_1_1_component.html" title="组件基类" alt="Component" shape="rect" coords="0,0,75,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a50d405d9044c1530c1efa5f6cc04d50c" id="r_a50d405d9044c1530c1efa5f6cc04d50c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a50d405d9044c1530c1efa5f6cc04d50c">Joint2D</a> ()</td></tr>
+<tr class="memitem:aef842abffd24df3c50604c4c43c1f6ce" id="r_aef842abffd24df3c50604c4c43c1f6ce"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aef842abffd24df3c50604c4c43c1f6ce">~Joint2D</a> () override</td></tr>
+<tr class="memitem:acbe76e0ea44ef342a8c85726573860d4" id="r_acbe76e0ea44ef342a8c85726573860d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acbe76e0ea44ef342a8c85726573860d4">onCreate</a> () override</td></tr>
+<tr class="memitem:acbef2688cd43fd22241759f89fe12d28" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
+<tr class="memitem:ad43b1fbcd8f355c3f312fa47fb3be914" id="r_ad43b1fbcd8f355c3f312fa47fb3be914"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad43b1fbcd8f355c3f312fa47fb3be914">onDetach</a> () override</td></tr>
+<tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:aadba02841897aadd2819172be6c50058" id="r_aadba02841897aadd2819172be6c50058"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aadba02841897aadd2819172be6c50058">onFieldChanged</a> (const std::string &amp;fieldName) override</td></tr>
+<tr class="memdesc:aadba02841897aadd2819172be6c50058"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查器直写反射字段后回调：把运行时字段改动同步到已创建的 Box2D 关节  <br /></td></tr>
+<tr class="memitem:ac6d7b0995862d68533a05a36771a9423" id="r_ac6d7b0995862d68533a05a36771a9423"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac6d7b0995862d68533a05a36771a9423">setType</a> (<a class="el" href="namespace_shit.html#a115d3259dcff7e1837276d6115ef76df">JointType</a> type)</td></tr>
+<tr class="memitem:a8cb986098d3459c70fb5046a8df498e5" id="r_a8cb986098d3459c70fb5046a8df498e5"><td class="memItemLeft"><a class="el" href="namespace_shit.html#a115d3259dcff7e1837276d6115ef76df">JointType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8cb986098d3459c70fb5046a8df498e5">getType</a> () const</td></tr>
+<tr class="memitem:a479b3600f1eec61c27f896e35978a499" id="r_a479b3600f1eec61c27f896e35978a499"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a479b3600f1eec61c27f896e35978a499">setConnectedBody</a> (<a class="el" href="class_shit_1_1_rigid_body2_d.html">RigidBody2D</a> *body)</td></tr>
+<tr class="memdesc:a479b3600f1eec61c27f896e35978a499"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置另一端刚体（bodyB）。传 nullptr 清空。  <br /></td></tr>
+<tr class="memitem:ab0d9280e66cecc8f1b89bc1f67b75b6d" id="r_ab0d9280e66cecc8f1b89bc1f67b75b6d"><td class="memItemLeft"><a class="el" href="class_shit_1_1_rigid_body2_d.html">RigidBody2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab0d9280e66cecc8f1b89bc1f67b75b6d">getConnectedBody</a> () const</td></tr>
+<tr class="memitem:acb60232d2df17aae81f80027d826cd93" id="r_acb60232d2df17aae81f80027d826cd93"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acb60232d2df17aae81f80027d826cd93">setAnchor</a> (const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;anchor)</td></tr>
+<tr class="memdesc:acb60232d2df17aae81f80027d826cd93"><td class="mdescLeft">&#160;</td><td class="mdescRight">世界锚点（像素）。默认取本刚体位置；revolute/weld/distance 共用心智模型。  <br /></td></tr>
+<tr class="memitem:ab242674c96c605a74d75dc0d9b45a594" id="r_ab242674c96c605a74d75dc0d9b45a594"><td class="memItemLeft">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab242674c96c605a74d75dc0d9b45a594">getAnchor</a> () const</td></tr>
+<tr class="memitem:a9a932443187c77d36ca920b5624784ec" id="r_a9a932443187c77d36ca920b5624784ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9a932443187c77d36ca920b5624784ec">setLength</a> (float length)</td></tr>
+<tr class="memdesc:a9a932443187c77d36ca920b5624784ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">自然长度（像素），默认取两锚点当前距离  <br /></td></tr>
+<tr class="memitem:a7330762d82cdba87643bb5f91a331294" id="r_a7330762d82cdba87643bb5f91a331294"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a7330762d82cdba87643bb5f91a331294">getLength</a> () const</td></tr>
+<tr class="memitem:a0bdcbe8fcf8e1b664f1c65c118701ebd" id="r_a0bdcbe8fcf8e1b664f1c65c118701ebd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0bdcbe8fcf8e1b664f1c65c118701ebd">setEnableSpring</a> (bool enable)</td></tr>
+<tr class="memdesc:a0bdcbe8fcf8e1b664f1c65c118701ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否作为弹簧（false=刚性距离）  <br /></td></tr>
+<tr class="memitem:a816d9cfd4c982ae2ab34d866b3dc47a1" id="r_a816d9cfd4c982ae2ab34d866b3dc47a1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a816d9cfd4c982ae2ab34d866b3dc47a1">setHertz</a> (float hertz)</td></tr>
+<tr class="memdesc:a816d9cfd4c982ae2ab34d866b3dc47a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">弹簧刚度（Hz）  <br /></td></tr>
+<tr class="memitem:a134fd0ee75b067df93b86433f8169267" id="r_a134fd0ee75b067df93b86433f8169267"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a134fd0ee75b067df93b86433f8169267">setDampingRatio</a> (float ratio)</td></tr>
+<tr class="memdesc:a134fd0ee75b067df93b86433f8169267"><td class="mdescLeft">&#160;</td><td class="mdescRight">弹簧阻尼比  <br /></td></tr>
+<tr class="memitem:ab9358ccc8bb1268a9bbe1cbf8425cf63" id="r_ab9358ccc8bb1268a9bbe1cbf8425cf63"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab9358ccc8bb1268a9bbe1cbf8425cf63">setEnableMotor</a> (bool enable)</td></tr>
+<tr class="memitem:a7fb626f441961ed772df212823bd730c" id="r_a7fb626f441961ed772df212823bd730c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7fb626f441961ed772df212823bd730c">setMotorSpeed</a> (float speed)</td></tr>
+<tr class="memdesc:a7fb626f441961ed772df212823bd730c"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标角速度（度/秒）  <br /></td></tr>
+<tr class="memitem:a4d4312b3a1457db23f9e5f8bd6611771" id="r_a4d4312b3a1457db23f9e5f8bd6611771"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4d4312b3a1457db23f9e5f8bd6611771">setMaxMotorTorque</a> (float torque)</td></tr>
+<tr class="memitem:a8bc694936805c3a1df9ee65d101236f2" id="r_a8bc694936805c3a1df9ee65d101236f2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8bc694936805c3a1df9ee65d101236f2">setEnableLimit</a> (bool enable)</td></tr>
+<tr class="memitem:a93c3bc78c89de699d7c2bb99a1d24a1a" id="r_a93c3bc78c89de699d7c2bb99a1d24a1a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a93c3bc78c89de699d7c2bb99a1d24a1a">setLowerAngle</a> (float deg)</td></tr>
+<tr class="memdesc:a93c3bc78c89de699d7c2bb99a1d24a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">角度下限（度）  <br /></td></tr>
+<tr class="memitem:aa21b406e1fd01a8d7788978d8b185192" id="r_aa21b406e1fd01a8d7788978d8b185192"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa21b406e1fd01a8d7788978d8b185192">setUpperAngle</a> (float deg)</td></tr>
+<tr class="memdesc:aa21b406e1fd01a8d7788978d8b185192"><td class="mdescLeft">&#160;</td><td class="mdescRight">角度上限（度）  <br /></td></tr>
+<tr class="memitem:a5cf8f71ab0e57e5c98211e825f2a6b46" id="r_a5cf8f71ab0e57e5c98211e825f2a6b46"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5cf8f71ab0e57e5c98211e825f2a6b46">setAxisAngle</a> (float deg)</td></tr>
+<tr class="memdesc:a5cf8f71ab0e57e5c98211e825f2a6b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">滑动轴方向（度，相对 bodyA 局部）  <br /></td></tr>
+<tr class="memitem:a3cc53b7e9023b834c801ff0f38d7bada" id="r_a3cc53b7e9023b834c801ff0f38d7bada"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3cc53b7e9023b834c801ff0f38d7bada">setLowerTranslation</a> (float v)</td></tr>
+<tr class="memdesc:a3cc53b7e9023b834c801ff0f38d7bada"><td class="mdescLeft">&#160;</td><td class="mdescRight">滑动下限（像素）  <br /></td></tr>
+<tr class="memitem:a510a4ab2e784e03cee5703af2709f19f" id="r_a510a4ab2e784e03cee5703af2709f19f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a510a4ab2e784e03cee5703af2709f19f">setUpperTranslation</a> (float v)</td></tr>
+<tr class="memdesc:a510a4ab2e784e03cee5703af2709f19f"><td class="mdescLeft">&#160;</td><td class="mdescRight">滑动上限（像素）  <br /></td></tr>
+<tr class="memitem:aced111ca05d3d274777e8a6652aeb140" id="r_aced111ca05d3d274777e8a6652aeb140"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aced111ca05d3d274777e8a6652aeb140">setMaxMotorForce</a> (float force)</td></tr>
+<tr class="memitem:ac352234eb70371b28d022e32ef9f601d" id="r_ac352234eb70371b28d022e32ef9f601d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac352234eb70371b28d022e32ef9f601d">hasValidJoint</a> () const</td></tr>
+<tr class="memitem:a70eff87b05c19068d291d5dceba3bcfa" id="r_a70eff87b05c19068d291d5dceba3bcfa"><td class="memItemLeft">int32_t&#160;</td><td class="memItemRight"><a class="el" href="#a70eff87b05c19068d291d5dceba3bcfa">getJointIndex</a> () const</td></tr>
+<tr class="memitem:a6595b0ed87128e88b82472bed32aa0d3" id="r_a6595b0ed87128e88b82472bed32aa0d3"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a6595b0ed87128e88b82472bed32aa0d3">getJointWorld0</a> () const</td></tr>
+<tr class="memitem:a697a0d1d82fcf6c402cc3b16c84946c3" id="r_a697a0d1d82fcf6c402cc3b16c84946c3"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a697a0d1d82fcf6c402cc3b16c84946c3">getJointGeneration</a> () const</td></tr>
+<tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a0171e1571f18dc6a27c8b041de55feec pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
+<tr class="memitem:ab8905908be361c6fce216879f4739d98 pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
+<tr class="memitem:ae4c3a7f8b6190c245e7b62b07b4afc66 pub_methods_class_shit_1_1_component" id="r_ae4c3a7f8b6190c245e7b62b07b4afc66"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae4c3a7f8b6190c245e7b62b07b4afc66">onAfterDeserialize</a> ()</td></tr>
+<tr class="memdesc:ae4c3a7f8b6190c245e7b62b07b4afc66 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。  <br /></td></tr>
+<tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054 pub_methods_class_shit_1_1_component" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const Component &amp;)=delete</td></tr>
+<tr class="memitem:ace504c89f605c2e53f2450021ebca56e pub_methods_class_shit_1_1_component" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;)=delete</td></tr>
+<tr class="memitem:aa85c694df3855843a20a64cb0fc17233 pub_methods_class_shit_1_1_component" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a> (Component &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a34f2dae077ca6d1b6e3a39201c79c796 pub_methods_class_shit_1_1_component" id="r_a34f2dae077ca6d1b6e3a39201c79c796"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a34f2dae077ca6d1b6e3a39201c79c796">operator=</a> (<a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&amp;)=delete</td></tr>
+<tr class="memitem:a9b36b6de005b18dd7c77687d8621774a pub_methods_class_shit_1_1_component" id="r_a9b36b6de005b18dd7c77687d8621774a"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a> () const</td></tr>
+<tr class="memitem:ab3318796ce9f4c658aa5cd5b65719246 pub_methods_class_shit_1_1_component" id="r_ab3318796ce9f4c658aa5cd5b65719246"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab3318796ce9f4c658aa5cd5b65719246">isRegistered</a> () const</td></tr>
+<tr class="memitem:a97e301e58185f753feb7a36d6f936393 pub_methods_class_shit_1_1_component" id="r_a97e301e58185f753feb7a36d6f936393"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a97e301e58185f753feb7a36d6f936393">getUuid</a> () const</td></tr>
+<tr class="memdesc:a97e301e58185f753feb7a36d6f936393 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">组件持久 ID（随 .scene 序列化，是 <a class="el" href="class_shit_1_1_component_ref.html" title="可序列化的组件引用（存 UUID，懒解析，自动失效）">ComponentRef&lt;T&gt;</a> 引用字段的寻址依据）  <br /></td></tr>
+<tr class="memitem:abab895b8aff7bde6865ec1a74624b0e9 pub_methods_class_shit_1_1_component" id="r_abab895b8aff7bde6865ec1a74624b0e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#abab895b8aff7bde6865ec1a74624b0e9">setUuid</a> (uint64_t uuid)</td></tr>
+<tr class="memdesc:abab895b8aff7bde6865ec1a74624b0e9 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">直接设置组件 ID（仅引擎反序列化/索引维护使用；正常流程由构造函数随机分配）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a9f71b50edf6a50133e776adef89f7dd0" id="r_a9f71b50edf6a50133e776adef89f7dd0"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a9f71b50edf6a50133e776adef89f7dd0">PhysicsSystem2D</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_class_shit_1_1_component"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:a215419d22c35be7dec54fc538c1050fd pro_methods_class_shit_1_1_component" id="r_a215419d22c35be7dec54fc538c1050fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a215419d22c35be7dec54fc538c1050fd">setRegistered</a> (bool registered)</td></tr>
+<tr class="inherit_header pro_attribs_class_shit_1_1_component"><td colspan="2">Protected 属性 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
+<tr class="memitem:aa1aee3acda958839f017f93f6ed1bbb3 pro_attribs_class_shit_1_1_component" id="r_aa1aee3acda958839f017f93f6ed1bbb3"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa1aee3acda958839f017f93f6ed1bbb3">m_owner</a> = nullptr</td></tr>
+<tr class="memitem:ae8fd281c96362b5079bc11b6ae10007a pro_attribs_class_shit_1_1_component" id="r_ae8fd281c96362b5079bc11b6ae10007a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae8fd281c96362b5079bc11b6ae10007a">m_isRegistered</a> = false</td></tr>
+<tr class="memitem:a3d8f7ab3c5e355a10d043dc922da7706 pro_attribs_class_shit_1_1_component" id="r_a3d8f7ab3c5e355a10d043dc922da7706"><td class="memItemLeft">uint64_t&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a3d8f7ab3c5e355a10d043dc922da7706">m_uuid</a> = 0</td></tr>
+<tr class="memdesc:a3d8f7ab3c5e355a10d043dc922da7706 pro_attribs_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久 ID（构造时随机分配；0 仅在序列化前尚未赋值时短暂存在）  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>2D 物理关节组件 </p>
+<p>把本 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 上的 RigidBody2D（bodyA）与另一个刚体（bodyB，由 connectedBody 引用字段指定）用 Box2D 关节约束连接。必须挂在一个已挂 <a class="el" href="class_shit_1_1_rigid_body2_d.html" title="刚体组件">RigidBody2D</a> 的 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 上。</p>
+<p>使用方式： auto* joint = go-&gt;addComponent&lt;Shit::Joint2D&gt;(); joint-&gt;setType(Shit::JointType::Revolute); joint-&gt;setConnectedBody(otherBody); // 或编辑器拖拽引用字段 joint-&gt;setAnchor({ 400, 100 }); // 世界锚点</p>
+<p>关节生命周期由 <a class="el" href="class_shit_1_1_physics_system2_d.html" title="2D 物理系统">PhysicsSystem2D</a> 驱动：onAttach 时注册、Box2D joint 创建， 目标刚体缺失时每帧补建（自愈），卸下时销毁。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a50d405d9044c1530c1efa5f6cc04d50c" name="a50d405d9044c1530c1efa5f6cc04d50c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d405d9044c1530c1efa5f6cc04d50c">&#9670;&#160;</a></span>Joint2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Joint2D </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef842abffd24df3c50604c4c43c1f6ce" name="aef842abffd24df3c50604c4c43c1f6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef842abffd24df3c50604c4c43c1f6ce">&#9670;&#160;</a></span>~Joint2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a50d405d9044c1530c1efa5f6cc04d50c">Joint2D</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ab242674c96c605a74d75dc0d9b45a594" name="ab242674c96c605a74d75dc0d9b45a594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab242674c96c605a74d75dc0d9b45a594">&#9670;&#160;</a></span>getAnchor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp; getAnchor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0d9280e66cecc8f1b89bc1f67b75b6d" name="ab0d9280e66cecc8f1b89bc1f67b75b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d9280e66cecc8f1b89bc1f67b75b6d">&#9670;&#160;</a></span>getConnectedBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_rigid_body2_d.html">RigidBody2D</a> * getConnectedBody </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a697a0d1d82fcf6c402cc3b16c84946c3" name="a697a0d1d82fcf6c402cc3b16c84946c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697a0d1d82fcf6c402cc3b16c84946c3">&#9670;&#160;</a></span>getJointGeneration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t getJointGeneration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70eff87b05c19068d291d5dceba3bcfa" name="a70eff87b05c19068d291d5dceba3bcfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70eff87b05c19068d291d5dceba3bcfa">&#9670;&#160;</a></span>getJointIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t getJointIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6595b0ed87128e88b82472bed32aa0d3" name="a6595b0ed87128e88b82472bed32aa0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6595b0ed87128e88b82472bed32aa0d3">&#9670;&#160;</a></span>getJointWorld0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t getJointWorld0 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7330762d82cdba87643bb5f91a331294" name="a7330762d82cdba87643bb5f91a331294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7330762d82cdba87643bb5f91a331294">&#9670;&#160;</a></span>getLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getLength </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cb986098d3459c70fb5046a8df498e5" name="a8cb986098d3459c70fb5046a8df498e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb986098d3459c70fb5046a8df498e5">&#9670;&#160;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_shit.html#a115d3259dcff7e1837276d6115ef76df">JointType</a> getType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac352234eb70371b28d022e32ef9f601d" name="ac352234eb70371b28d022e32ef9f601d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac352234eb70371b28d022e32ef9f601d">&#9670;&#160;</a></span>hasValidJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasValidJoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbef2688cd43fd22241759f89fe12d28" name="acbef2688cd43fd22241759f89fe12d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbef2688cd43fd22241759f89fe12d28">&#9670;&#160;</a></span>onAttach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onAttach </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a6f4c9e6fe81d4bffc712d4d0ae4d72ff">Component</a> .</p>
+
+</div>
+</div>
+<a id="acbe76e0ea44ef342a8c85726573860d4" name="acbe76e0ea44ef342a8c85726573860d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe76e0ea44ef342a8c85726573860d4">&#9670;&#160;</a></span>onCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onCreate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a58db3b5933199c866796fade5e1ad722">Component</a> .</p>
+
+</div>
+</div>
+<a id="aee7be93617a6078496df31830d454990" name="aee7be93617a6078496df31830d454990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7be93617a6078496df31830d454990">&#9670;&#160;</a></span>onDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">Component</a> .</p>
+
+</div>
+</div>
+<a id="ad43b1fbcd8f355c3f312fa47fb3be914" name="ad43b1fbcd8f355c3f312fa47fb3be914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43b1fbcd8f355c3f312fa47fb3be914">&#9670;&#160;</a></span>onDetach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onDetach </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616">Component</a> .</p>
+
+</div>
+</div>
+<a id="aadba02841897aadd2819172be6c50058" name="aadba02841897aadd2819172be6c50058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadba02841897aadd2819172be6c50058">&#9670;&#160;</a></span>onFieldChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onFieldChanged </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fieldName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查器直写反射字段后回调：把运行时字段改动同步到已创建的 Box2D 关节 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a408a2dbeb7e4a239670553c2c6c3f3e3">Component</a> .</p>
+
+</div>
+</div>
+<a id="acb60232d2df17aae81f80027d826cd93" name="acb60232d2df17aae81f80027d826cd93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb60232d2df17aae81f80027d826cd93">&#9670;&#160;</a></span>setAnchor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAnchor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Vector2</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>anchor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>世界锚点（像素）。默认取本刚体位置；revolute/weld/distance 共用心智模型。 </p>
+
+</div>
+</div>
+<a id="a5cf8f71ab0e57e5c98211e825f2a6b46" name="a5cf8f71ab0e57e5c98211e825f2a6b46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf8f71ab0e57e5c98211e825f2a6b46">&#9670;&#160;</a></span>setAxisAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAxisAngle </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>滑动轴方向（度，相对 bodyA 局部） </p>
+
+</div>
+</div>
+<a id="a479b3600f1eec61c27f896e35978a499" name="a479b3600f1eec61c27f896e35978a499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a479b3600f1eec61c27f896e35978a499">&#9670;&#160;</a></span>setConnectedBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setConnectedBody </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_rigid_body2_d.html">RigidBody2D</a> *</td>          <td class="paramname"><span class="paramname"><em>body</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置另一端刚体（bodyB）。传 nullptr 清空。 </p>
+
+</div>
+</div>
+<a id="a134fd0ee75b067df93b86433f8169267" name="a134fd0ee75b067df93b86433f8169267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a134fd0ee75b067df93b86433f8169267">&#9670;&#160;</a></span>setDampingRatio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setDampingRatio </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>ratio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>弹簧阻尼比 </p>
+
+</div>
+</div>
+<a id="a8bc694936805c3a1df9ee65d101236f2" name="a8bc694936805c3a1df9ee65d101236f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bc694936805c3a1df9ee65d101236f2">&#9670;&#160;</a></span>setEnableLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setEnableLimit </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9358ccc8bb1268a9bbe1cbf8425cf63" name="ab9358ccc8bb1268a9bbe1cbf8425cf63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9358ccc8bb1268a9bbe1cbf8425cf63">&#9670;&#160;</a></span>setEnableMotor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setEnableMotor </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bdcbe8fcf8e1b664f1c65c118701ebd" name="a0bdcbe8fcf8e1b664f1c65c118701ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bdcbe8fcf8e1b664f1c65c118701ebd">&#9670;&#160;</a></span>setEnableSpring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setEnableSpring </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否作为弹簧（false=刚性距离） </p>
+
+</div>
+</div>
+<a id="a816d9cfd4c982ae2ab34d866b3dc47a1" name="a816d9cfd4c982ae2ab34d866b3dc47a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a816d9cfd4c982ae2ab34d866b3dc47a1">&#9670;&#160;</a></span>setHertz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setHertz </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>hertz</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>弹簧刚度（Hz） </p>
+
+</div>
+</div>
+<a id="a9a932443187c77d36ca920b5624784ec" name="a9a932443187c77d36ca920b5624784ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a932443187c77d36ca920b5624784ec">&#9670;&#160;</a></span>setLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLength </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>length</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自然长度（像素），默认取两锚点当前距离 </p>
+
+</div>
+</div>
+<a id="a93c3bc78c89de699d7c2bb99a1d24a1a" name="a93c3bc78c89de699d7c2bb99a1d24a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c3bc78c89de699d7c2bb99a1d24a1a">&#9670;&#160;</a></span>setLowerAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLowerAngle </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>角度下限（度） </p>
+
+</div>
+</div>
+<a id="a3cc53b7e9023b834c801ff0f38d7bada" name="a3cc53b7e9023b834c801ff0f38d7bada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cc53b7e9023b834c801ff0f38d7bada">&#9670;&#160;</a></span>setLowerTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLowerTranslation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>滑动下限（像素） </p>
+
+</div>
+</div>
+<a id="aced111ca05d3d274777e8a6652aeb140" name="aced111ca05d3d274777e8a6652aeb140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aced111ca05d3d274777e8a6652aeb140">&#9670;&#160;</a></span>setMaxMotorForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMaxMotorForce </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>force</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d4312b3a1457db23f9e5f8bd6611771" name="a4d4312b3a1457db23f9e5f8bd6611771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4312b3a1457db23f9e5f8bd6611771">&#9670;&#160;</a></span>setMaxMotorTorque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMaxMotorTorque </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>torque</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fb626f441961ed772df212823bd730c" name="a7fb626f441961ed772df212823bd730c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb626f441961ed772df212823bd730c">&#9670;&#160;</a></span>setMotorSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMotorSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>目标角速度（度/秒） </p>
+
+</div>
+</div>
+<a id="ac6d7b0995862d68533a05a36771a9423" name="ac6d7b0995862d68533a05a36771a9423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6d7b0995862d68533a05a36771a9423">&#9670;&#160;</a></span>setType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_shit.html#a115d3259dcff7e1837276d6115ef76df">JointType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa21b406e1fd01a8d7788978d8b185192" name="aa21b406e1fd01a8d7788978d8b185192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21b406e1fd01a8d7788978d8b185192">&#9670;&#160;</a></span>setUpperAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUpperAngle </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>角度上限（度） </p>
+
+</div>
+</div>
+<a id="a510a4ab2e784e03cee5703af2709f19f" name="a510a4ab2e784e03cee5703af2709f19f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510a4ab2e784e03cee5703af2709f19f">&#9670;&#160;</a></span>setUpperTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUpperTranslation </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>滑动上限（像素） </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="a9f71b50edf6a50133e776adef89f7dd0" name="a9f71b50edf6a50133e776adef89f7dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f71b50edf6a50133e776adef89f7dd0">&#9670;&#160;</a></span>PhysicsSystem2D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class PhysicsSystem2D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Physics/<a class="el" href="_joint2_d_8h_source.html">Joint2D.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_joint2_d.html">Joint2D</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

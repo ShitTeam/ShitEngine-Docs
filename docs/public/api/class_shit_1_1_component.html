@@ -169,12 +169,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 <area href="class_shit_1_1_box_collider2_d.html" title="盒子碰撞体组件" alt="BoxCollider2D" shape="rect" coords="149,112,288,136"/>
 <area href="class_shit_1_1_camera_component.html" title="相机组件，定义&quot;从哪个角度观察世界&quot;" alt="CameraComponent" shape="rect" coords="149,168,288,192"/>
 <area href="class_shit_1_1_circle_collider2_d.html" title="圆形碰撞体组件" alt="CircleCollider2D" shape="rect" coords="149,224,288,248"/>
-<area href="class_shit_1_1_renderer_component.html" title="渲染组件基类" alt="RendererComponent" shape="rect" coords="149,280,288,304"/>
-<area href="class_shit_1_1_rigid_body2_d.html" title="刚体组件" alt="RigidBody2D" shape="rect" coords="149,336,288,360"/>
-<area href="class_shit_1_1_transform_component.html" title="变换组件，决定 GameObject 的位置 / 缩放 / 旋转" alt="TransformComponent" shape="rect" coords="149,392,288,416"/>
-<area href="class_shit_1_1_u_i_canvas.html" title="UI 层级根节点" alt="UICanvas" shape="rect" coords="149,448,288,472"/>
-<area href="class_shit_1_1_u_i_renderer_component.html" title="UI 渲染控件基类（对应游戏世界的 RendererComponent）" alt="UIRendererComponent" shape="rect" coords="149,504,288,528"/>
-<area href="class_shit_1_1_u_i_transform.html" title="UI 专用变换组件（参考 Unity RectTransform，但不引入 Canvas Scaler）" alt="UITransform" shape="rect" coords="149,560,288,584"/>
+<area href="class_shit_1_1_joint2_d.html" title="2D 物理关节组件" alt="Joint2D" shape="rect" coords="149,280,288,304"/>
+<area href="class_shit_1_1_renderer_component.html" title="渲染组件基类" alt="RendererComponent" shape="rect" coords="149,336,288,360"/>
+<area href="class_shit_1_1_rigid_body2_d.html" title="刚体组件" alt="RigidBody2D" shape="rect" coords="149,392,288,416"/>
+<area href="class_shit_1_1_transform_component.html" title="变换组件，决定 GameObject 的位置 / 缩放 / 旋转" alt="TransformComponent" shape="rect" coords="149,448,288,472"/>
+<area href="class_shit_1_1_u_i_canvas.html" title="UI 层级根节点" alt="UICanvas" shape="rect" coords="149,504,288,528"/>
+<area href="class_shit_1_1_u_i_renderer_component.html" title="UI 渲染控件基类（对应游戏世界的 RendererComponent）" alt="UIRendererComponent" shape="rect" coords="149,560,288,584"/>
+<area href="class_shit_1_1_u_i_transform.html" title="UI 专用变换组件（参考 Unity RectTransform，但不引入 Canvas Scaler）" alt="UITransform" shape="rect" coords="149,616,288,640"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -417,7 +418,7 @@ Protected 属性</h2></td></tr>
 
 <p>反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。 </p>
 
-<p>被 <a class="el" href="class_shit_1_1_sprite_renderer.html#a9270529a4341cf8bf3f6a29a56556366">SpriteRenderer</a> 重载.</p>
+<p>被 <a class="el" href="class_shit_1_1_animation_component.html#a9270529a4341cf8bf3f6a29a56556366">AnimationComponent</a>, <a class="el" href="class_shit_1_1_animator.html#a9270529a4341cf8bf3f6a29a56556366">Animator</a>, <a class="el" href="class_shit_1_1_sprite_renderer.html#a9270529a4341cf8bf3f6a29a56556366">SpriteRenderer</a> , 以及 <a class="el" href="class_shit_1_1_tilemap.html#a9270529a4341cf8bf3f6a29a56556366">Tilemap</a> 重载.</p>
 
 </div>
 </div>
@@ -444,7 +445,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>被 <a class="el" href="class_shit_1_1_animation_component.html#acbef2688cd43fd22241759f89fe12d28">AnimationComponent</a>, <a class="el" href="class_shit_1_1_behavior.html#acbef2688cd43fd22241759f89fe12d28">Behavior</a>, <a class="el" href="class_shit_1_1_box_collider2_d.html#acbef2688cd43fd22241759f89fe12d28">BoxCollider2D</a>, <a class="el" href="class_shit_1_1_camera_component.html#acbef2688cd43fd22241759f89fe12d28">CameraComponent</a>, <a class="el" href="class_shit_1_1_circle_collider2_d.html#acbef2688cd43fd22241759f89fe12d28">CircleCollider2D</a>, <a class="el" href="class_shit_1_1_renderer_component.html#acbef2688cd43fd22241759f89fe12d28">RendererComponent</a>, <a class="el" href="class_shit_1_1_rigid_body2_d.html#acbef2688cd43fd22241759f89fe12d28">RigidBody2D</a> , 以及 <a class="el" href="class_shit_1_1_u_i_renderer_component.html#acbef2688cd43fd22241759f89fe12d28">UIRendererComponent</a> 重载.</p>
+<p>被 <a class="el" href="class_shit_1_1_animation_component.html#acbef2688cd43fd22241759f89fe12d28">AnimationComponent</a>, <a class="el" href="class_shit_1_1_animator.html#acbef2688cd43fd22241759f89fe12d28">Animator</a>, <a class="el" href="class_shit_1_1_behavior.html#acbef2688cd43fd22241759f89fe12d28">Behavior</a>, <a class="el" href="class_shit_1_1_box_collider2_d.html#acbef2688cd43fd22241759f89fe12d28">BoxCollider2D</a>, <a class="el" href="class_shit_1_1_camera_component.html#acbef2688cd43fd22241759f89fe12d28">CameraComponent</a>, <a class="el" href="class_shit_1_1_circle_collider2_d.html#acbef2688cd43fd22241759f89fe12d28">CircleCollider2D</a>, <a class="el" href="class_shit_1_1_joint2_d.html#acbef2688cd43fd22241759f89fe12d28">Joint2D</a>, <a class="el" href="class_shit_1_1_renderer_component.html#acbef2688cd43fd22241759f89fe12d28">RendererComponent</a>, <a class="el" href="class_shit_1_1_rigid_body2_d.html#acbef2688cd43fd22241759f89fe12d28">RigidBody2D</a> , 以及 <a class="el" href="class_shit_1_1_u_i_renderer_component.html#acbef2688cd43fd22241759f89fe12d28">UIRendererComponent</a> 重载.</p>
 
 </div>
 </div>
@@ -471,7 +472,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>被 <a class="el" href="class_shit_1_1_behavior.html#acbe76e0ea44ef342a8c85726573860d4">Behavior</a> , 以及 <a class="el" href="class_shit_1_1_rigid_body2_d.html#acbe76e0ea44ef342a8c85726573860d4">RigidBody2D</a> 重载.</p>
+<p>被 <a class="el" href="class_shit_1_1_behavior.html#acbe76e0ea44ef342a8c85726573860d4">Behavior</a>, <a class="el" href="class_shit_1_1_joint2_d.html#acbe76e0ea44ef342a8c85726573860d4">Joint2D</a> , 以及 <a class="el" href="class_shit_1_1_rigid_body2_d.html#acbe76e0ea44ef342a8c85726573860d4">RigidBody2D</a> 重载.</p>
 
 </div>
 </div>
@@ -498,7 +499,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>被 <a class="el" href="class_shit_1_1_animation_component.html#aee7be93617a6078496df31830d454990">AnimationComponent</a>, <a class="el" href="class_shit_1_1_behavior.html#aee7be93617a6078496df31830d454990">Behavior</a>, <a class="el" href="class_shit_1_1_box_collider2_d.html#aee7be93617a6078496df31830d454990">BoxCollider2D</a>, <a class="el" href="class_shit_1_1_circle_collider2_d.html#aee7be93617a6078496df31830d454990">CircleCollider2D</a>, <a class="el" href="class_shit_1_1_renderer_component.html#aee7be93617a6078496df31830d454990">RendererComponent</a>, <a class="el" href="class_shit_1_1_rigid_body2_d.html#aee7be93617a6078496df31830d454990">RigidBody2D</a>, <a class="el" href="class_shit_1_1_u_i_image.html#aee7be93617a6078496df31830d454990">UIImage</a>, <a class="el" href="class_shit_1_1_u_i_renderer_component.html#aee7be93617a6078496df31830d454990">UIRendererComponent</a> , 以及 <a class="el" href="class_shit_1_1_u_i_text.html#aee7be93617a6078496df31830d454990">UIText</a> 重载.</p>
+<p>被 <a class="el" href="class_shit_1_1_animation_component.html#aee7be93617a6078496df31830d454990">AnimationComponent</a>, <a class="el" href="class_shit_1_1_animator.html#aee7be93617a6078496df31830d454990">Animator</a>, <a class="el" href="class_shit_1_1_behavior.html#aee7be93617a6078496df31830d454990">Behavior</a>, <a class="el" href="class_shit_1_1_box_collider2_d.html#aee7be93617a6078496df31830d454990">BoxCollider2D</a>, <a class="el" href="class_shit_1_1_circle_collider2_d.html#aee7be93617a6078496df31830d454990">CircleCollider2D</a>, <a class="el" href="class_shit_1_1_joint2_d.html#aee7be93617a6078496df31830d454990">Joint2D</a>, <a class="el" href="class_shit_1_1_renderer_component.html#aee7be93617a6078496df31830d454990">RendererComponent</a>, <a class="el" href="class_shit_1_1_rigid_body2_d.html#aee7be93617a6078496df31830d454990">RigidBody2D</a>, <a class="el" href="class_shit_1_1_u_i_image.html#aee7be93617a6078496df31830d454990">UIImage</a>, <a class="el" href="class_shit_1_1_u_i_renderer_component.html#aee7be93617a6078496df31830d454990">UIRendererComponent</a> , 以及 <a class="el" href="class_shit_1_1_u_i_text.html#aee7be93617a6078496df31830d454990">UIText</a> 重载.</p>
 
 </div>
 </div>
@@ -525,7 +526,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>被 <a class="el" href="class_shit_1_1_behavior.html#ad43b1fbcd8f355c3f312fa47fb3be914">Behavior</a>, <a class="el" href="class_shit_1_1_box_collider2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914">BoxCollider2D</a>, <a class="el" href="class_shit_1_1_camera_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">CameraComponent</a>, <a class="el" href="class_shit_1_1_circle_collider2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914">CircleCollider2D</a>, <a class="el" href="class_shit_1_1_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">RendererComponent</a>, <a class="el" href="class_shit_1_1_rigid_body2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914">RigidBody2D</a> , 以及 <a class="el" href="class_shit_1_1_u_i_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">UIRendererComponent</a> 重载.</p>
+<p>被 <a class="el" href="class_shit_1_1_behavior.html#ad43b1fbcd8f355c3f312fa47fb3be914">Behavior</a>, <a class="el" href="class_shit_1_1_box_collider2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914">BoxCollider2D</a>, <a class="el" href="class_shit_1_1_camera_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">CameraComponent</a>, <a class="el" href="class_shit_1_1_circle_collider2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914">CircleCollider2D</a>, <a class="el" href="class_shit_1_1_joint2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914">Joint2D</a>, <a class="el" href="class_shit_1_1_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">RendererComponent</a>, <a class="el" href="class_shit_1_1_rigid_body2_d.html#ad43b1fbcd8f355c3f312fa47fb3be914">RigidBody2D</a> , 以及 <a class="el" href="class_shit_1_1_u_i_renderer_component.html#ad43b1fbcd8f355c3f312fa47fb3be914">UIRendererComponent</a> 重载.</p>
 
 </div>
 </div>
@@ -554,7 +555,7 @@ Protected 属性</h2></td></tr>
 
 <p>检查器直接写反射字段后回调（字段名）。用于绕过 setter 的直写完成后 重新同步引擎状态（如 Box2D 刚体/形状）。默认无操作。 </p>
 
-<p>被 <a class="el" href="class_shit_1_1_box_collider2_d.html#aadba02841897aadd2819172be6c50058">BoxCollider2D</a>, <a class="el" href="class_shit_1_1_circle_collider2_d.html#aadba02841897aadd2819172be6c50058">CircleCollider2D</a> , 以及 <a class="el" href="class_shit_1_1_rigid_body2_d.html#aadba02841897aadd2819172be6c50058">RigidBody2D</a> 重载.</p>
+<p>被 <a class="el" href="class_shit_1_1_animation_component.html#aadba02841897aadd2819172be6c50058">AnimationComponent</a>, <a class="el" href="class_shit_1_1_animator.html#aadba02841897aadd2819172be6c50058">Animator</a>, <a class="el" href="class_shit_1_1_box_collider2_d.html#aadba02841897aadd2819172be6c50058">BoxCollider2D</a>, <a class="el" href="class_shit_1_1_circle_collider2_d.html#aadba02841897aadd2819172be6c50058">CircleCollider2D</a>, <a class="el" href="class_shit_1_1_joint2_d.html#aadba02841897aadd2819172be6c50058">Joint2D</a>, <a class="el" href="class_shit_1_1_rigid_body2_d.html#aadba02841897aadd2819172be6c50058">RigidBody2D</a> , 以及 <a class="el" href="class_shit_1_1_tilemap.html#aadba02841897aadd2819172be6c50058">Tilemap</a> 重载.</p>
 
 </div>
 </div>

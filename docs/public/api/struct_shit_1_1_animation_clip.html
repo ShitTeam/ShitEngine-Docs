@@ -1,0 +1,455 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: AnimationClip结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_shit_1_1_animation_clip.html','','struct_shit_1_1_animation_clip-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AnimationClip结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>动画剪辑（可序列化数据，P28）  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_animation_clip_8h_source.html">AnimationClip.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a098007f3dd2a938824a819aa09423ca9" id="r_a098007f3dd2a938824a819aa09423ca9"><td class="memItemLeft">nlohmann::json&#160;</td><td class="memItemRight"><a class="el" href="#a098007f3dd2a938824a819aa09423ca9">toJson</a> () const</td></tr>
+<tr class="memdesc:a098007f3dd2a938824a819aa09423ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列化到 JSON（载体 / .anim 资产）  <br /></td></tr>
+<tr class="memitem:af45795b6689ae3e529abe569e6ef7fd7" id="r_af45795b6689ae3e529abe569e6ef7fd7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af45795b6689ae3e529abe569e6ef7fd7">fromJson</a> (const nlohmann::json &amp;j)</td></tr>
+<tr class="memdesc:af45795b6689ae3e529abe569e6ef7fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 JSON 解析（失败返回 false，字段保持默认）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a9b45b3e13bd9167aab02e17e08916231" id="r_a9b45b3e13bd9167aab02e17e08916231"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a9b45b3e13bd9167aab02e17e08916231">name</a></td></tr>
+<tr class="memdesc:a9b45b3e13bd9167aab02e17e08916231"><td class="mdescLeft">&#160;</td><td class="mdescRight">剪辑名（play/索引用）  <br /></td></tr>
+<tr class="memitem:a317ee047b4a1a39fcbc2e9b0461ef2b1" id="r_a317ee047b4a1a39fcbc2e9b0461ef2b1"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a317ee047b4a1a39fcbc2e9b0461ef2b1">texturePath</a></td></tr>
+<tr class="memdesc:a317ee047b4a1a39fcbc2e9b0461ef2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">精灵表纹理路径（编辑器预览与运行时切帧用）  <br /></td></tr>
+<tr class="memitem:a061459acc9e078fa4699e0e349887215" id="r_a061459acc9e078fa4699e0e349887215"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a061459acc9e078fa4699e0e349887215">rows</a> = 0</td></tr>
+<tr class="memdesc:a061459acc9e078fa4699e0e349887215"><td class="mdescLeft">&#160;</td><td class="mdescRight">网格行数  <br /></td></tr>
+<tr class="memitem:a4407a60bc4387adae24cee658711f2d9" id="r_a4407a60bc4387adae24cee658711f2d9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4407a60bc4387adae24cee658711f2d9">cols</a> = 0</td></tr>
+<tr class="memdesc:a4407a60bc4387adae24cee658711f2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">网格列数  <br /></td></tr>
+<tr class="memitem:a4ee78e8942a842be44aa8592bca6a979" id="r_a4ee78e8942a842be44aa8592bca6a979"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a4ee78e8942a842be44aa8592bca6a979">frameWidth</a> = 0.0f</td></tr>
+<tr class="memdesc:a4ee78e8942a842be44aa8592bca6a979"><td class="mdescLeft">&#160;</td><td class="mdescRight">单帧宽（像素）  <br /></td></tr>
+<tr class="memitem:a56bc3cb64fa74f13ecdf031d44e15a78" id="r_a56bc3cb64fa74f13ecdf031d44e15a78"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a56bc3cb64fa74f13ecdf031d44e15a78">frameHeight</a> = 0.0f</td></tr>
+<tr class="memdesc:a56bc3cb64fa74f13ecdf031d44e15a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">单帧高（像素）  <br /></td></tr>
+<tr class="memitem:aea1419deaadb54e70abae7fe5aada09e" id="r_aea1419deaadb54e70abae7fe5aada09e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aea1419deaadb54e70abae7fe5aada09e">margin</a> = 0.0f</td></tr>
+<tr class="memdesc:aea1419deaadb54e70abae7fe5aada09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">网格左上留白（像素）  <br /></td></tr>
+<tr class="memitem:aedc6398ddf4719ad026969c7a74ab8ba" id="r_aedc6398ddf4719ad026969c7a74ab8ba"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aedc6398ddf4719ad026969c7a74ab8ba">spacing</a> = 0.0f</td></tr>
+<tr class="memdesc:aedc6398ddf4719ad026969c7a74ab8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">帧间距（像素）  <br /></td></tr>
+<tr class="memitem:a66625d8d6c0894b4828b43f826a09b8f" id="r_a66625d8d6c0894b4828b43f826a09b8f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a66625d8d6c0894b4828b43f826a09b8f">duration</a> = 0.1f</td></tr>
+<tr class="memdesc:a66625d8d6c0894b4828b43f826a09b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧时长（秒）  <br /></td></tr>
+<tr class="memitem:a5ed2b25d9f2f070cb0ee764aa0985308" id="r_a5ed2b25d9f2f070cb0ee764aa0985308"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5ed2b25d9f2f070cb0ee764aa0985308">loop</a> = true</td></tr>
+<tr class="memdesc:a5ed2b25d9f2f070cb0ee764aa0985308"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否循环  <br /></td></tr>
+<tr class="memitem:a0cf294044cc229207fd8966ede32a9bf" id="r_a0cf294044cc229207fd8966ede32a9bf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0cf294044cc229207fd8966ede32a9bf">isDefault</a> = false</td></tr>
+<tr class="memdesc:a0cf294044cc229207fd8966ede32a9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否默认播放（onStart 自动播放）  <br /></td></tr>
+<tr class="memitem:a9c46f523f87401a418d5f261ea2b72ea" id="r_a9c46f523f87401a418d5f261ea2b72ea"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9c46f523f87401a418d5f261ea2b72ea">frames</a></td></tr>
+<tr class="memdesc:a9c46f523f87401a418d5f261ea2b72ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局帧索引序列  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>动画剪辑（可序列化数据，P28） </p>
+<p>一份动画剪辑描述"从某张精灵表纹理按网格切出的帧序列 + 播放参数"。 作为独立数据类，既可作为运行时/编辑器的动画数据，也可序列化为 <span class="tt">.anim</span> 资产 （AnimationClip 资产化）或内嵌进 <a class="el" href="class_shit_1_1_animator.html" title="动画状态机 / Animator（P28）">Animator</a> / <a class="el" href="class_shit_1_1_animation_component.html" title="动画组件 / Animator（可序列化多剪辑版本）">AnimationComponent</a> 的载体字符串。</p>
+<p>frames 为 <a class="el" href="class_shit_1_1_sprite_sheet.html" title="精灵图集（sprite-sheet）网格切割器">SpriteSheet</a> 全局帧索引序列（与 <a class="el" href="class_shit_1_1_animation_component.html#a35603aab48b6df36d41ee5c7b3dccc5a">AnimationComponent::play</a> 的 frames 语义一致）。 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="af45795b6689ae3e529abe569e6ef7fd7" name="af45795b6689ae3e529abe569e6ef7fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45795b6689ae3e529abe569e6ef7fd7">&#9670;&#160;</a></span>fromJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fromJson </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;</td>          <td class="paramname"><span class="paramname"><em>j</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从 JSON 解析（失败返回 false，字段保持默认） </p>
+
+</div>
+</div>
+<a id="a098007f3dd2a938824a819aa09423ca9" name="a098007f3dd2a938824a819aa09423ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098007f3dd2a938824a819aa09423ca9">&#9670;&#160;</a></span>toJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json toJson </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>序列化到 JSON（载体 / .anim 资产） </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a4407a60bc4387adae24cee658711f2d9" name="a4407a60bc4387adae24cee658711f2d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4407a60bc4387adae24cee658711f2d9">&#9670;&#160;</a></span>cols</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cols = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>网格列数 </p>
+
+</div>
+</div>
+<a id="a66625d8d6c0894b4828b43f826a09b8f" name="a66625d8d6c0894b4828b43f826a09b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66625d8d6c0894b4828b43f826a09b8f">&#9670;&#160;</a></span>duration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float duration = 0.1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>每帧时长（秒） </p>
+
+</div>
+</div>
+<a id="a56bc3cb64fa74f13ecdf031d44e15a78" name="a56bc3cb64fa74f13ecdf031d44e15a78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56bc3cb64fa74f13ecdf031d44e15a78">&#9670;&#160;</a></span>frameHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float frameHeight = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>单帧高（像素） </p>
+
+</div>
+</div>
+<a id="a9c46f523f87401a418d5f261ea2b72ea" name="a9c46f523f87401a418d5f261ea2b72ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c46f523f87401a418d5f261ea2b72ea">&#9670;&#160;</a></span>frames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; frames</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>全局帧索引序列 </p>
+
+</div>
+</div>
+<a id="a4ee78e8942a842be44aa8592bca6a979" name="a4ee78e8942a842be44aa8592bca6a979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee78e8942a842be44aa8592bca6a979">&#9670;&#160;</a></span>frameWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float frameWidth = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>单帧宽（像素） </p>
+
+</div>
+</div>
+<a id="a0cf294044cc229207fd8966ede32a9bf" name="a0cf294044cc229207fd8966ede32a9bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf294044cc229207fd8966ede32a9bf">&#9670;&#160;</a></span>isDefault</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isDefault = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否默认播放（onStart 自动播放） </p>
+
+</div>
+</div>
+<a id="a5ed2b25d9f2f070cb0ee764aa0985308" name="a5ed2b25d9f2f070cb0ee764aa0985308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed2b25d9f2f070cb0ee764aa0985308">&#9670;&#160;</a></span>loop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool loop = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否循环 </p>
+
+</div>
+</div>
+<a id="aea1419deaadb54e70abae7fe5aada09e" name="aea1419deaadb54e70abae7fe5aada09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1419deaadb54e70abae7fe5aada09e">&#9670;&#160;</a></span>margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float margin = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>网格左上留白（像素） </p>
+
+</div>
+</div>
+<a id="a9b45b3e13bd9167aab02e17e08916231" name="a9b45b3e13bd9167aab02e17e08916231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b45b3e13bd9167aab02e17e08916231">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>剪辑名（play/索引用） </p>
+
+</div>
+</div>
+<a id="a061459acc9e078fa4699e0e349887215" name="a061459acc9e078fa4699e0e349887215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061459acc9e078fa4699e0e349887215">&#9670;&#160;</a></span>rows</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rows = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>网格行数 </p>
+
+</div>
+</div>
+<a id="aedc6398ddf4719ad026969c7a74ab8ba" name="aedc6398ddf4719ad026969c7a74ab8ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc6398ddf4719ad026969c7a74ab8ba">&#9670;&#160;</a></span>spacing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float spacing = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>帧间距（像素） </p>
+
+</div>
+</div>
+<a id="a317ee047b4a1a39fcbc2e9b0461ef2b1" name="a317ee047b4a1a39fcbc2e9b0461ef2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a317ee047b4a1a39fcbc2e9b0461ef2b1">&#9670;&#160;</a></span>texturePath</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string texturePath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>精灵表纹理路径（编辑器预览与运行时切帧用） </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Animation/<a class="el" href="_animation_clip_8h_source.html">AnimationClip.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="struct_shit_1_1_animation_clip.html">AnimationClip</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

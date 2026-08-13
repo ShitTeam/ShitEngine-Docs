@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['markdirty_0',['markDirty',['../class_shit_1_1_u_i_text_input.html#a3eb72dbc9ad35c67e4435afb840c2d8b',1,'Shit::UITextInput']]],
-  ['marksortdirty_1',['markSortDirty',['../class_shit_1_1_u_i_render_system.html#acced817981e41bab560b75cd40612c68',1,'Shit::UIRenderSystem']]],
-  ['memberoffset_2',['memberOffset',['../namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13',1,'Shit']]],
-  ['meta_3',['Meta',['../class_shit_1_1_type_info_builder.html#ad22578c2cb5176da8b5ac26503cceddf',1,'Shit::TypeInfoBuilder']]],
-  ['movecursor_4',['moveCursor',['../class_shit_1_1_u_i_text_input.html#a9e55f123e1e534abe4c64ebf2a6231a4',1,'Shit::UITextInput']]],
-  ['movecursortoboundary_5',['moveCursorToBoundary',['../class_shit_1_1_u_i_text_input.html#ad4564c96d588002d412aa6c347d7f750',1,'Shit::UITextInput']]]
+  ['loadaudio_0',['LoadAudio',['../class_shit_1_1_resource_manager.html#a029bd523f3b16c95c42c64fb90a609c1',1,'Shit::ResourceManager']]],
+  ['loadfont_1',['LoadFont',['../class_shit_1_1_resource_manager.html#a8426d7a8cba1df3df1f08189e750ea8f',1,'Shit::ResourceManager']]],
+  ['loadfromconfig_2',['LoadFromConfig',['../class_shit_1_1_plugin_manager.html#a7ed43db4fb9f9367d73d103334cc5740',1,'Shit::PluginManager']]],
+  ['loadfromjson_3',['loadFromJson',['../class_shit_1_1_config.html#af061be3a4cb4f6095c8f35912f912560',1,'Shit::Config']]],
+  ['loadscene_4',['LoadScene',['../class_shit_1_1_scene_manager.html#a3dd3fb3f7ca5a03de3ac0fb468288a2f',1,'Shit::SceneManager']]],
+  ['loadscenefromfile_5',['LoadSceneFromFile',['../class_shit_1_1_scene_manager.html#a6d7de68a039bdfdbe606adf4830e96b1',1,'Shit::SceneManager']]],
+  ['loadtexture_6',['LoadTexture',['../class_shit_1_1_resource_manager.html#ad725872fe5683084c429452249fc1e7e',1,'Shit::ResourceManager']]]
 ];

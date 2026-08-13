@@ -196,6 +196,16 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a7e0af81cc06660115bea4567f101dede"><td class="mdescLeft">&#160;</td><td class="mdescRight">为 <a class="el" href="class_shit_1_1_rigid_body2_d.html" title="刚体组件">RigidBody2D</a> 创建物理体（组件认领时调用，从 Transform 读初始位姿）  <br /></td></tr>
 <tr class="memitem:a2cf41b6f810cd96209e298cd79d5edcd" id="r_a2cf41b6f810cd96209e298cd79d5edcd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2cf41b6f810cd96209e298cd79d5edcd">destroyRigidBody</a> (<a class="el" href="#adcad81e9b88ca1a7b55785f6c91b225a">RigidBody2D</a> *body)</td></tr>
 <tr class="memdesc:a2cf41b6f810cd96209e298cd79d5edcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁 <a class="el" href="class_shit_1_1_rigid_body2_d.html" title="刚体组件">RigidBody2D</a> 的物理体并注销（组件卸下时调用）  <br /></td></tr>
+<tr class="memitem:ab39cb5522c8eabb81f5482b765b37c9d" id="r_ab39cb5522c8eabb81f5482b765b37c9d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab39cb5522c8eabb81f5482b765b37c9d">registerJoint</a> (<a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *joint)</td></tr>
+<tr class="memdesc:ab39cb5522c8eabb81f5482b765b37c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册关节组件（onAttach 时调用），并尝试创建 Box2D 关节  <br /></td></tr>
+<tr class="memitem:ad9ae7863a7e7e95f6d4ab9948aadfcfa" id="r_ad9ae7863a7e7e95f6d4ab9948aadfcfa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad9ae7863a7e7e95f6d4ab9948aadfcfa">unregisterJoint</a> (<a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *joint)</td></tr>
+<tr class="memdesc:ad9ae7863a7e7e95f6d4ab9948aadfcfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">注销关节组件（onDetach/onDestroy 时调用）  <br /></td></tr>
+<tr class="memitem:a287308321c555ad1e74166febda4b586" id="r_a287308321c555ad1e74166febda4b586"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a287308321c555ad1e74166febda4b586">createJoint</a> (<a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *joint)</td></tr>
+<tr class="memdesc:a287308321c555ad1e74166febda4b586"><td class="mdescLeft">&#160;</td><td class="mdescRight">为 <a class="el" href="class_shit_1_1_joint2_d.html" title="2D 物理关节组件">Joint2D</a> 创建 Box2D 关节（幂等；bodyA/bodyB 就绪才创建）  <br /></td></tr>
+<tr class="memitem:a1ad8064bed4e7d92818e3fd553bdb1ce" id="r_a1ad8064bed4e7d92818e3fd553bdb1ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1ad8064bed4e7d92818e3fd553bdb1ce">destroyJoint</a> (<a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *joint)</td></tr>
+<tr class="memdesc:a1ad8064bed4e7d92818e3fd553bdb1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁 <a class="el" href="class_shit_1_1_joint2_d.html" title="2D 物理关节组件">Joint2D</a> 的 Box2D 关节并重置标志  <br /></td></tr>
+<tr class="memitem:a55b8f2e1cdf7a2f42d5fb050aa350407" id="r_a55b8f2e1cdf7a2f42d5fb050aa350407"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a55b8f2e1cdf7a2f42d5fb050aa350407">rebuildJoint</a> (<a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *joint)</td></tr>
+<tr class="memdesc:a55b8f2e1cdf7a2f42d5fb050aa350407"><td class="mdescLeft">&#160;</td><td class="mdescRight">重建 Box2D 关节（字段改动/类型切换/目标变更后调用）：销毁旧关节按当前字段重建  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_shit_1_1_system"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_system.html">System</a></td></tr>
 <tr class="memitem:a5034f7aabb39aa71406a18f57af4971e pub_methods_class_shit_1_1_system" id="r_a5034f7aabb39aa71406a18f57af4971e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#a5034f7aabb39aa71406a18f57af4971e">System</a> (int priority=0)</td></tr>
 <tr class="memitem:aa7229e118bb766e4752281389b321ed6 pub_methods_class_shit_1_1_system" id="r_aa7229e118bb766e4752281389b321ed6"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_system.html#aa7229e118bb766e4752281389b321ed6">~System</a> ()</td></tr>
@@ -277,6 +287,25 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a287308321c555ad1e74166febda4b586" name="a287308321c555ad1e74166febda4b586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287308321c555ad1e74166febda4b586">&#9670;&#160;</a></span>createJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createJoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *</td>          <td class="paramname"><span class="paramname"><em>joint</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为 <a class="el" href="class_shit_1_1_joint2_d.html" title="2D 物理关节组件">Joint2D</a> 创建 Box2D 关节（幂等；bodyA/bodyB 就绪才创建） </p>
+
+</div>
+</div>
 <a id="a7e0af81cc06660115bea4567f101dede" name="a7e0af81cc06660115bea4567f101dede"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e0af81cc06660115bea4567f101dede">&#9670;&#160;</a></span>createRigidBody()</h2>
 
@@ -322,6 +351,25 @@ Public 成员函数</h2></td></tr>
 <p>销毁（纯虚） </p>
 
 <p>实现了 <a class="el" href="class_shit_1_1_system.html#af79997318d96497d77015571261ec88b">System</a>.</p>
+
+</div>
+</div>
+<a id="a1ad8064bed4e7d92818e3fd553bdb1ce" name="a1ad8064bed4e7d92818e3fd553bdb1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad8064bed4e7d92818e3fd553bdb1ce">&#9670;&#160;</a></span>destroyJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void destroyJoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *</td>          <td class="paramname"><span class="paramname"><em>joint</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>销毁 <a class="el" href="class_shit_1_1_joint2_d.html" title="2D 物理关节组件">Joint2D</a> 的 Box2D 关节并重置标志 </p>
 
 </div>
 </div>
@@ -483,6 +531,44 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a55b8f2e1cdf7a2f42d5fb050aa350407" name="a55b8f2e1cdf7a2f42d5fb050aa350407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b8f2e1cdf7a2f42d5fb050aa350407">&#9670;&#160;</a></span>rebuildJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rebuildJoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *</td>          <td class="paramname"><span class="paramname"><em>joint</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重建 Box2D 关节（字段改动/类型切换/目标变更后调用）：销毁旧关节按当前字段重建 </p>
+
+</div>
+</div>
+<a id="ab39cb5522c8eabb81f5482b765b37c9d" name="ab39cb5522c8eabb81f5482b765b37c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39cb5522c8eabb81f5482b765b37c9d">&#9670;&#160;</a></span>registerJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void registerJoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *</td>          <td class="paramname"><span class="paramname"><em>joint</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注册关节组件（onAttach 时调用），并尝试创建 Box2D 关节 </p>
+
+</div>
+</div>
 <a id="a030cec013fe5c9d11c587ca9c71d2625" name="a030cec013fe5c9d11c587ca9c71d2625"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a030cec013fe5c9d11c587ca9c71d2625">&#9670;&#160;</a></span>registerRigidBody()</h2>
 
@@ -535,6 +621,25 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>设置像素↔米比例（必须在 <a class="el" href="#ad72eef1561c7a53b19b048397d4ef570" title="初始化（可覆写）">init()</a> 之前调用），默认 32 </p>
+
+</div>
+</div>
+<a id="ad9ae7863a7e7e95f6d4ab9948aadfcfa" name="ad9ae7863a7e7e95f6d4ab9948aadfcfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ae7863a7e7e95f6d4ab9948aadfcfa">&#9670;&#160;</a></span>unregisterJoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unregisterJoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_joint2_d.html">Joint2D</a> *</td>          <td class="paramname"><span class="paramname"><em>joint</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>注销关节组件（onDetach/onDestroy 时调用） </p>
 
 </div>
 </div>

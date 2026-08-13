@@ -238,7 +238,7 @@ Public 成员函数</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>音频播放组件 —— 挂在对象上播放场景音频 </p>
-<p>继承 Behavior（与 <a class="el" href="class_shit_1_1_animation_component.html" title="动画组件">AnimationComponent</a> 一致），由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 驱动： onStart 时按 PlayOnStart 自动播放；脚本中也可手动 <a class="el" href="#a6d58098c6cf63c241ed03bc797256bb1" title="按 AudioPath 播放（遵循 Loop / Volume）">play()</a>/stop()/pause()。</p>
+<p>继承 Behavior（与 <a class="el" href="class_shit_1_1_animation_component.html" title="动画组件 / Animator（可序列化多剪辑版本）">AnimationComponent</a> 一致），由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 驱动： onStart 时按 PlayOnStart 自动播放；脚本中也可手动 <a class="el" href="#a6d58098c6cf63c241ed03bc797256bb1" title="按 AudioPath 播放（遵循 Loop / Volume）">play()</a>/stop()/pause()。</p>
 <p>音频路径与纹理同一约定（相对资源目录），播放句柄为共享引用—— 播完引擎自动回收；重新 <a class="el" href="#a6d58098c6cf63c241ed03bc797256bb1" title="按 AudioPath 播放（遵循 Loop / Volume）">play()</a> 新建轨道替换旧句柄。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="addd529f5e8f956e6d0d6072d2f4a4c42" name="addd529f5e8f956e6d0d6072d2f4a4c42"></a>

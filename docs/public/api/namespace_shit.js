@@ -2,7 +2,13 @@ var namespace_shit =
 [
     [ "ActionBinding", "struct_shit_1_1_action_binding.html", "struct_shit_1_1_action_binding" ],
     [ "Animation", "class_shit_1_1_animation.html", "class_shit_1_1_animation" ],
+    [ "AnimationClip", "struct_shit_1_1_animation_clip.html", "struct_shit_1_1_animation_clip" ],
     [ "AnimationComponent", "class_shit_1_1_animation_component.html", "class_shit_1_1_animation_component" ],
+    [ "Animator", "class_shit_1_1_animator.html", "class_shit_1_1_animator" ],
+    [ "AnimatorParameter", "struct_shit_1_1_animator_parameter.html", "struct_shit_1_1_animator_parameter" ],
+    [ "AnimatorState", "struct_shit_1_1_animator_state.html", "struct_shit_1_1_animator_state" ],
+    [ "AnimatorTransition", "struct_shit_1_1_animator_transition.html", "struct_shit_1_1_animator_transition" ],
+    [ "AnimatorTransitionCondition", "struct_shit_1_1_animator_transition_condition.html", "struct_shit_1_1_animator_transition_condition" ],
     [ "AudioManager", "class_shit_1_1_audio_manager.html", "class_shit_1_1_audio_manager" ],
     [ "AudioPlayer", "class_shit_1_1_audio_player.html", "class_shit_1_1_audio_player" ],
     [ "AudioSource", "class_shit_1_1_audio_source.html", "class_shit_1_1_audio_source" ],
@@ -29,6 +35,7 @@ var namespace_shit =
     [ "GameObject", "class_shit_1_1_game_object.html", "class_shit_1_1_game_object" ],
     [ "Input", "class_shit_1_1_input.html", "class_shit_1_1_input" ],
     [ "InputMappingsConfig", "struct_shit_1_1_input_mappings_config.html", "struct_shit_1_1_input_mappings_config" ],
+    [ "Joint2D", "class_shit_1_1_joint2_d.html", "class_shit_1_1_joint2_d" ],
     [ "Log", "class_shit_1_1_log.html", "class_shit_1_1_log" ],
     [ "PhysicsSystem2D", "class_shit_1_1_physics_system2_d.html", "class_shit_1_1_physics_system2_d" ],
     [ "PluginManager", "class_shit_1_1_plugin_manager.html", "class_shit_1_1_plugin_manager" ],
@@ -49,6 +56,7 @@ var namespace_shit =
     [ "System", "class_shit_1_1_system.html", "class_shit_1_1_system" ],
     [ "TextInputGate", "class_shit_1_1_text_input_gate.html", "class_shit_1_1_text_input_gate" ],
     [ "TextureManager", "class_shit_1_1_texture_manager.html", "class_shit_1_1_texture_manager" ],
+    [ "Tilemap", "class_shit_1_1_tilemap.html", "class_shit_1_1_tilemap" ],
     [ "Time", "class_shit_1_1_time.html", "class_shit_1_1_time" ],
     [ "TransformComponent", "class_shit_1_1_transform_component.html", "class_shit_1_1_transform_component" ],
     [ "TypeInfo", "struct_shit_1_1_type_info.html", "struct_shit_1_1_type_info" ],
@@ -69,6 +77,18 @@ var namespace_shit =
     [ "WindowConfig", "struct_shit_1_1_window_config.html", "struct_shit_1_1_window_config" ],
     [ "Json", "namespace_shit.html#af13a1979f9e8f62c101433fac6511cc6", null ],
     [ "Vector2", "namespace_shit.html#ab13fcf529046c79a4544246bf8e28741", null ],
+    [ "AnimatorConditionType", "namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9", [
+      [ "FloatGt", "namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9af3b3463ca32cdf630cb0c0062916a5b9", null ],
+      [ "FloatLt", "namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9a86da9bffb670675791cf8f86aafbfd3a", null ],
+      [ "FloatEq", "namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9ae156442671e6333edafee24d99da8bad", null ],
+      [ "Bool", "namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9ac26f15e86e3de4c398a8273272aba034", null ],
+      [ "Trigger", "namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9af698f67f5666aff10729d8a1cb1c14d2", null ]
+    ] ],
+    [ "AnimatorParamType", "namespace_shit.html#a0ff40449e21004707960b3589989bf05", [
+      [ "Float", "namespace_shit.html#a0ff40449e21004707960b3589989bf05a22ae0e2b89e5e3d477f988cc36d3272b", null ],
+      [ "Bool", "namespace_shit.html#a0ff40449e21004707960b3589989bf05ac26f15e86e3de4c398a8273272aba034", null ],
+      [ "Trigger", "namespace_shit.html#a0ff40449e21004707960b3589989bf05af698f67f5666aff10729d8a1cb1c14d2", null ]
+    ] ],
     [ "KeyCode", "namespace_shit.html#a94b769a2899b14202ace87b550519a0d", [
       [ "Unknown", "namespace_shit.html#a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e", null ],
       [ "A", "namespace_shit.html#a94b769a2899b14202ace87b550519a0da7fc56270e7a70fa81a5935b72eacbe29", null ],
@@ -216,5 +236,9 @@ var namespace_shit =
     [ "DemangleTypeName", "namespace_shit.html#afe671363a5ef5f405485e38c225e0885", null ],
     [ "GenerateComponentUuid", "namespace_shit.html#aed855649b4c02f3c9f517528e8e9427b", null ],
     [ "memberOffset", "namespace_shit.html#abb6cad04f9d8dab77b41468f34943c13", null ],
-    [ "ReflectType", "namespace_shit.html#a2e911473ec7d41ed241324aba861713b", null ]
+    [ "ReflectType", "namespace_shit.html#a2e911473ec7d41ed241324aba861713b", null ],
+    [ "JointType", "namespace_shit.html#a115d3259dcff7e1837276d6115ef76df", null ],
+    [ "Prismatic", "namespace_shit.html#a517f02d9bc066433b8c1f35167f7b916", null ],
+    [ "Revolute", "namespace_shit.html#a1ec72dc6509614f6be6e0718187814cf", null ],
+    [ "Weld", "namespace_shit.html#a020b0b5f4bc33f2a9b95f32496060dc3", null ]
 ];

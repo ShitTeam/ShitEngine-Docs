@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>动画组件  
+<p>动画组件 / Animator（可序列化多剪辑版本）  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_animation_component_8h_source.html">AnimationComponent.h</a>&gt;</code></p>
@@ -180,13 +180,35 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ae15f5dc3626bedd435b05d234dabcb85" id="r_ae15f5dc3626bedd435b05d234dabcb85"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae15f5dc3626bedd435b05d234dabcb85">onUpdate</a> () override</td></tr>
 <tr class="memdesc:ae15f5dc3626bedd435b05d234dabcb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧执行  <br /></td></tr>
 <tr class="memitem:aee7be93617a6078496df31830d454990" id="r_aee7be93617a6078496df31830d454990"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee7be93617a6078496df31830d454990">onDestroy</a> () override</td></tr>
+<tr class="memitem:a9270529a4341cf8bf3f6a29a56556366" id="r_a9270529a4341cf8bf3f6a29a56556366"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9270529a4341cf8bf3f6a29a56556366">onAfterDeserialize</a> () override</td></tr>
+<tr class="memdesc:a9270529a4341cf8bf3f6a29a56556366"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。  <br /></td></tr>
+<tr class="memitem:aadba02841897aadd2819172be6c50058" id="r_aadba02841897aadd2819172be6c50058"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aadba02841897aadd2819172be6c50058">onFieldChanged</a> (const std::string &amp;fieldName) override</td></tr>
+<tr class="memdesc:aadba02841897aadd2819172be6c50058"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查器直接写反射字段后回调（字段名）。用于绕过 setter 的直写完成后 重新同步引擎状态（如 Box2D 刚体/形状）。默认无操作。  <br /></td></tr>
 <tr class="memitem:af45a49555d112977f9b820ddeedfad9e" id="r_af45a49555d112977f9b820ddeedfad9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af45a49555d112977f9b820ddeedfad9e">addAnimation</a> (const std::string &amp;name, std::unique_ptr&lt; <a class="el" href="class_shit_1_1_animation.html">Animation</a> &gt; animation)</td></tr>
 <tr class="memitem:a35603aab48b6df36d41ee5c7b3dccc5a" id="r_a35603aab48b6df36d41ee5c7b3dccc5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a35603aab48b6df36d41ee5c7b3dccc5a">play</a> (const std::string &amp;name)</td></tr>
 <tr class="memitem:a8c528baf37154d347366083f0f816846" id="r_a8c528baf37154d347366083f0f816846"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8c528baf37154d347366083f0f816846">stop</a> ()</td></tr>
 <tr class="memitem:a7167f5c196fc5e167bfabde1a730e81d" id="r_a7167f5c196fc5e167bfabde1a730e81d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7167f5c196fc5e167bfabde1a730e81d">pause</a> ()</td></tr>
 <tr class="memitem:a41de8150eff044a237990c271d57ea27" id="r_a41de8150eff044a237990c271d57ea27"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a41de8150eff044a237990c271d57ea27">resume</a> ()</td></tr>
 <tr class="memitem:adbfc61cd3f1ee21a9bb61c6f8d20ff99" id="r_adbfc61cd3f1ee21a9bb61c6f8d20ff99"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adbfc61cd3f1ee21a9bb61c6f8d20ff99">play</a> (const std::string &amp;name, const <a class="el" href="class_shit_1_1_sprite_sheet.html">SpriteSheet</a> &amp;sheet, const std::vector&lt; int &gt; &amp;frames, float duration=0.1f, bool loop=true)</td></tr>
-<tr class="memdesc:adbfc61cd3f1ee21a9bb61c6f8d20ff99"><td class="mdescLeft">&#160;</td><td class="mdescRight">用数字帧索引直接设置并播放一段动画  <br /></td></tr>
+<tr class="memdesc:adbfc61cd3f1ee21a9bb61c6f8d20ff99"><td class="mdescLeft">&#160;</td><td class="mdescRight">用数字帧索引直接设置并播放一段动画（运行时动态，不落盘）  <br /></td></tr>
+<tr class="memitem:a1f22cf65385bc8806b0172d56eff8296" id="r_a1f22cf65385bc8806b0172d56eff8296"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1f22cf65385bc8806b0172d56eff8296">clipCount</a> () const</td></tr>
+<tr class="memdesc:a1f22cf65385bc8806b0172d56eff8296"><td class="mdescLeft">&#160;</td><td class="mdescRight">剪辑数量  <br /></td></tr>
+<tr class="memitem:a22ed9beabeba3010a6c840d48157472b" id="r_a22ed9beabeba3010a6c840d48157472b"><td class="memItemLeft">const <a class="el" href="struct_shit_1_1_animation_clip.html">AnimationClip</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a22ed9beabeba3010a6c840d48157472b">clipAt</a> (int index) const</td></tr>
+<tr class="memdesc:a22ed9beabeba3010a6c840d48157472b"><td class="mdescLeft">&#160;</td><td class="mdescRight">取第 i 个剪辑（越界返回 nullptr）  <br /></td></tr>
+<tr class="memitem:aee7143a433e2f0bddad824c9906566d7" id="r_aee7143a433e2f0bddad824c9906566d7"><td class="memItemLeft">const std::vector&lt; <a class="el" href="struct_shit_1_1_animation_clip.html">AnimationClip</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aee7143a433e2f0bddad824c9906566d7">clips</a> () const</td></tr>
+<tr class="memdesc:aee7143a433e2f0bddad824c9906566d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">全部剪辑（只读）  <br /></td></tr>
+<tr class="memitem:aeb35d210eb7cf6f9a2c0ec7ca8db84af" id="r_aeb35d210eb7cf6f9a2c0ec7ca8db84af"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aeb35d210eb7cf6f9a2c0ec7ca8db84af">addClip</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:aeb35d210eb7cf6f9a2c0ec7ca8db84af"><td class="mdescLeft">&#160;</td><td class="mdescRight">新增一个剪辑（重名自动追加 " (N)"），返回其索引；-1 失败  <br /></td></tr>
+<tr class="memitem:ada41c28d957e22c559e8b2d35793b904" id="r_ada41c28d957e22c559e8b2d35793b904"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ada41c28d957e22c559e8b2d35793b904">setClip</a> (int index, const <a class="el" href="struct_shit_1_1_animation_clip.html">AnimationClip</a> &amp;clip)</td></tr>
+<tr class="memdesc:ada41c28d957e22c559e8b2d35793b904"><td class="mdescLeft">&#160;</td><td class="mdescRight">覆盖第 index 个剪辑为 clip（并重建运行时动画）；返回是否成功  <br /></td></tr>
+<tr class="memitem:a2dfdad925d296f21af4521579ab9fed6" id="r_a2dfdad925d296f21af4521579ab9fed6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2dfdad925d296f21af4521579ab9fed6">removeClip</a> (int index)</td></tr>
+<tr class="memdesc:a2dfdad925d296f21af4521579ab9fed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除第 index 个剪辑（若正播放则停止）；返回是否成功  <br /></td></tr>
+<tr class="memitem:a5ee3ca642e40b99bcdeef526f37a7755" id="r_a5ee3ca642e40b99bcdeef526f37a7755"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5ee3ca642e40b99bcdeef526f37a7755">setDefaultClip</a> (int index)</td></tr>
+<tr class="memdesc:a5ee3ca642e40b99bcdeef526f37a7755"><td class="mdescLeft">&#160;</td><td class="mdescRight">设为/取消默认剪辑（isDefault 唯一化）；返回是否成功  <br /></td></tr>
+<tr class="memitem:a3acf7ab0117736406848e70a3d720d2e" id="r_a3acf7ab0117736406848e70a3d720d2e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3acf7ab0117736406848e70a3d720d2e">defaultClipIndex</a> () const</td></tr>
+<tr class="memdesc:a3acf7ab0117736406848e70a3d720d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">取默认剪辑索引；无则 -1  <br /></td></tr>
+<tr class="memitem:a6db30044801064b05dd2ea3b15320586" id="r_a6db30044801064b05dd2ea3b15320586"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6db30044801064b05dd2ea3b15320586">syncClipsData</a> ()</td></tr>
+<tr class="memdesc:a6db30044801064b05dd2ea3b15320586"><td class="mdescLeft">&#160;</td><td class="mdescRight">把当前 m_clips 同步到 m_clipsData（JSON 载体）——编辑器/脚本修改后调用  <br /></td></tr>
 <tr class="memitem:a389ad71786b00ae81f69060f153509d2" id="r_a389ad71786b00ae81f69060f153509d2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a389ad71786b00ae81f69060f153509d2">isPlaying</a> () const</td></tr>
 <tr class="memitem:a48ffb22c4b73bf70c93e036abeab81f2" id="r_a48ffb22c4b73bf70c93e036abeab81f2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a48ffb22c4b73bf70c93e036abeab81f2">isPaused</a> () const</td></tr>
 <tr class="memitem:a1ac952e9527ddb8dfa0f379c5a3a26d5" id="r_a1ac952e9527ddb8dfa0f379c5a3a26d5"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1ac952e9527ddb8dfa0f379c5a3a26d5">getCurrentAnimationName</a> () const</td></tr>
@@ -209,10 +231,6 @@ Public 成员函数</h2></td></tr>
 <tr class="inherit_header pub_methods_class_shit_1_1_component"><td colspan="2">Public 成员函数 继承自 <a class="el" href="class_shit_1_1_component.html">Component</a></td></tr>
 <tr class="memitem:a0171e1571f18dc6a27c8b041de55feec pub_methods_class_shit_1_1_component" id="r_a0171e1571f18dc6a27c8b041de55feec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> ()</td></tr>
 <tr class="memitem:ab8905908be361c6fce216879f4739d98 pub_methods_class_shit_1_1_component" id="r_ab8905908be361c6fce216879f4739d98"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ab8905908be361c6fce216879f4739d98">~Component</a> ()=default</td></tr>
-<tr class="memitem:ae4c3a7f8b6190c245e7b62b07b4afc66 pub_methods_class_shit_1_1_component" id="r_ae4c3a7f8b6190c245e7b62b07b4afc66"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ae4c3a7f8b6190c245e7b62b07b4afc66">onAfterDeserialize</a> ()</td></tr>
-<tr class="memdesc:ae4c3a7f8b6190c245e7b62b07b4afc66 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。  <br /></td></tr>
-<tr class="memitem:a408a2dbeb7e4a239670553c2c6c3f3e3 pub_methods_class_shit_1_1_component" id="r_a408a2dbeb7e4a239670553c2c6c3f3e3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a408a2dbeb7e4a239670553c2c6c3f3e3">onFieldChanged</a> (const std::string &amp;fieldName)</td></tr>
-<tr class="memdesc:a408a2dbeb7e4a239670553c2c6c3f3e3 pub_methods_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查器直接写反射字段后回调（字段名）。用于绕过 setter 的直写完成后 重新同步引擎状态（如 Box2D 刚体/形状）。默认无操作。  <br /></td></tr>
 <tr class="memitem:a7a86c1a5c9cb8bc0be998d276c438054 pub_methods_class_shit_1_1_component" id="r_a7a86c1a5c9cb8bc0be998d276c438054"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#a7a86c1a5c9cb8bc0be998d276c438054">Component</a> (const Component &amp;)=delete</td></tr>
 <tr class="memitem:ace504c89f605c2e53f2450021ebca56e pub_methods_class_shit_1_1_component" id="r_ace504c89f605c2e53f2450021ebca56e"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#ace504c89f605c2e53f2450021ebca56e">operator=</a> (const <a class="el" href="class_shit_1_1_component.html#a0171e1571f18dc6a27c8b041de55feec">Component</a> &amp;)=delete</td></tr>
 <tr class="memitem:aa85c694df3855843a20a64cb0fc17233 pub_methods_class_shit_1_1_component" id="r_aa85c694df3855843a20a64cb0fc17233"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_component.html#aa85c694df3855843a20a64cb0fc17233">Component</a> (Component &amp;&amp;)=delete</td></tr>
@@ -237,10 +255,11 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a3d8f7ab3c5e355a10d043dc922da7706 pro_attribs_class_shit_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久 ID（构造时随机分配；0 仅在序列化前尚未赋值时短暂存在）  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>动画组件 </p>
+<div class="textblock"><p>动画组件 / Animator（可序列化多剪辑版本） </p>
 <p>继承 Behavior，由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 每帧调用 onUpdate 推进当前动画时间， 并把当前帧的源矩形 (SDL_FRect) 回写到同 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 上的 SpriteRenderer。</p>
-<p>典型用法（三点式 sprite-sheet）： <a class="el" href="class_shit_1_1_sprite_sheet.html" title="精灵图集（sprite-sheet）网格切割器">Shit::SpriteSheet</a> sheet(4, 8, 32, 32); // 4行8列，每帧32×32 auto* anim = go-&gt;addComponent&lt;AnimationComponent&gt;(); anim-&gt;play("walk", sheet, {0,1,2,3,4,5}, 0.1f, true); // 全局帧索引数组</p>
-<p>或手工添加已构造好的 Animation： anim-&gt;addAnimation("walk", std::move(walkAnim)); anim-&gt;play("walk"); </p>
+<p>P28：可序列化的动画剪辑管理。动画剪辑（AnimationClip，独立于 <a class="el" href="_animation_clip_8h.html">Animation/AnimationClip.h</a>） 以反射字符串载体 m_clipsData（JSON）持久化，onAfterDeserialize / onFieldChanged 把其解析 到内部 <a class="el" href="class_shit_1_1_animation.html" title="逐帧动画数据">Animation</a> 列表；onStart 自动播放默认剪辑。编辑器通过 addClip / setClip / removeClip / setDefaultClip 等 API 修改并反向同步 m_clipsData。</p>
+<p>运行时也可用原有 API 动态播放： anim-&gt;play("walk", sheet, {0,1,2,3,4,5}, 0.1f, true); // 全局帧索引数组</p>
+<p>注：如需参数驱动的状态机（状态/转换/参数），请用 <a class="el" href="_animator_8h.html">Animation/Animator.h</a>。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="ace67d3c9fe243d83ff4a3b49d5754d88" name="ace67d3c9fe243d83ff4a3b49d5754d88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace67d3c9fe243d83ff4a3b49d5754d88">&#9670;&#160;</a></span>AnimationComponent()</h2>
@@ -303,6 +322,117 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb35d210eb7cf6f9a2c0ec7ca8db84af" name="aeb35d210eb7cf6f9a2c0ec7ca8db84af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb35d210eb7cf6f9a2c0ec7ca8db84af">&#9670;&#160;</a></span>addClip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int addClip </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>新增一个剪辑（重名自动追加 " (N)"），返回其索引；-1 失败 </p>
+
+</div>
+</div>
+<a id="a22ed9beabeba3010a6c840d48157472b" name="a22ed9beabeba3010a6c840d48157472b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ed9beabeba3010a6c840d48157472b">&#9670;&#160;</a></span>clipAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_shit_1_1_animation_clip.html">AnimationClip</a> * clipAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>取第 i 个剪辑（越界返回 nullptr） </p>
+
+</div>
+</div>
+<a id="a1f22cf65385bc8806b0172d56eff8296" name="a1f22cf65385bc8806b0172d56eff8296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f22cf65385bc8806b0172d56eff8296">&#9670;&#160;</a></span>clipCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int clipCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>剪辑数量 </p>
+
+</div>
+</div>
+<a id="aee7143a433e2f0bddad824c9906566d7" name="aee7143a433e2f0bddad824c9906566d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7143a433e2f0bddad824c9906566d7">&#9670;&#160;</a></span>clips()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="struct_shit_1_1_animation_clip.html">AnimationClip</a> &gt; &amp; clips </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全部剪辑（只读） </p>
+
+</div>
+</div>
+<a id="a3acf7ab0117736406848e70a3d720d2e" name="a3acf7ab0117736406848e70a3d720d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acf7ab0117736406848e70a3d720d2e">&#9670;&#160;</a></span>defaultClipIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int defaultClipIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>取默认剪辑索引；无则 -1 </p>
 
 </div>
 </div>
@@ -381,6 +511,35 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a9270529a4341cf8bf3f6a29a56556366" name="a9270529a4341cf8bf3f6a29a56556366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9270529a4341cf8bf3f6a29a56556366">&#9670;&#160;</a></span>onAfterDeserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onAfterDeserialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>反序列化完成后回调（Prefab::apply 逐组件调用一次，字段已写入）。 用于重建"直写字段绕过了 setter、无法自动触发的引擎状态"（如精灵纹理加载）。 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#ae4c3a7f8b6190c245e7b62b07b4afc66">Component</a> .</p>
+
+</div>
+</div>
 <a id="acbef2688cd43fd22241759f89fe12d28" name="acbef2688cd43fd22241759f89fe12d28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbef2688cd43fd22241759f89fe12d28">&#9670;&#160;</a></span>onAttach()</h2>
 
@@ -432,6 +591,35 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>重载 <a class="el" href="class_shit_1_1_component.html#a448d46f0dcad2b19c77f8a2cc880127c">Component</a> .</p>
+
+</div>
+</div>
+<a id="aadba02841897aadd2819172be6c50058" name="aadba02841897aadd2819172be6c50058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadba02841897aadd2819172be6c50058">&#9670;&#160;</a></span>onFieldChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onFieldChanged </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fieldName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查器直接写反射字段后回调（字段名）。用于绕过 setter 的直写完成后 重新同步引擎状态（如 Box2D 刚体/形状）。默认无操作。 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_component.html#a408a2dbeb7e4a239670553c2c6c3f3e3">Component</a> .</p>
 
 </div>
 </div>
@@ -561,18 +749,26 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>用数字帧索引直接设置并播放一段动画 </p>
-<p>按 frames 中的索引从 sheet 切出条帧，构造一个 <a class="el" href="class_shit_1_1_animation.html" title="逐帧动画数据">Animation</a> 并以 name 登记/覆盖后播放。 若 name 已存在则替换。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>动画名（用作登记与 play 索引） </td></tr>
-    <tr><td class="paramname">sheet</td><td>精灵图集，提供行列网格切割 </td></tr>
-    <tr><td class="paramname">frames</td><td>想要播放的全局帧索引序列（如 {0,1,2,3,5,8}，可不连续） </td></tr>
-    <tr><td class="paramname">duration</td><td>每帧持续时间（秒） </td></tr>
-    <tr><td class="paramname">loop</td><td>是否循环 </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>用数字帧索引直接设置并播放一段动画（运行时动态，不落盘） </p>
+
+</div>
+</div>
+<a id="a2dfdad925d296f21af4521579ab9fed6" name="a2dfdad925d296f21af4521579ab9fed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dfdad925d296f21af4521579ab9fed6">&#9670;&#160;</a></span>removeClip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool removeClip </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移除第 index 个剪辑（若正播放则停止）；返回是否成功 </p>
 
 </div>
 </div>
@@ -593,6 +789,48 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="ada41c28d957e22c559e8b2d35793b904" name="ada41c28d957e22c559e8b2d35793b904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada41c28d957e22c559e8b2d35793b904">&#9670;&#160;</a></span>setClip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setClip </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_animation_clip.html">AnimationClip</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>clip</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>覆盖第 index 个剪辑为 clip（并重建运行时动画）；返回是否成功 </p>
+
+</div>
+</div>
+<a id="a5ee3ca642e40b99bcdeef526f37a7755" name="a5ee3ca642e40b99bcdeef526f37a7755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee3ca642e40b99bcdeef526f37a7755">&#9670;&#160;</a></span>setDefaultClip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setDefaultClip </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设为/取消默认剪辑（isDefault 唯一化）；返回是否成功 </p>
+
+</div>
+</div>
 <a id="a8c528baf37154d347366083f0f816846" name="a8c528baf37154d347366083f0f816846"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c528baf37154d347366083f0f816846">&#9670;&#160;</a></span>stop()</h2>
 
@@ -607,6 +845,25 @@ Public 成员函数</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6db30044801064b05dd2ea3b15320586" name="a6db30044801064b05dd2ea3b15320586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db30044801064b05dd2ea3b15320586">&#9670;&#160;</a></span>syncClipsData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void syncClipsData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>把当前 m_clips 同步到 m_clipsData（JSON 载体）——编辑器/脚本修改后调用 </p>
 
 </div>
 </div>
