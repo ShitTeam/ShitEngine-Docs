@@ -20,7 +20,7 @@ var searchData=
   ['registerjoint_17',['registerJoint',['../class_shit_1_1_physics_system2_d.html#ab39cb5522c8eabb81f5482b765b37c9d',1,'Shit::PhysicsSystem2D']]],
   ['registerrenderer_18',['registerRenderer',['../class_shit_1_1_render_system.html#ad8f82ce398f9a548a07a5530876fcb08',1,'Shit::RenderSystem']]],
   ['registerrigidbody_19',['registerRigidBody',['../class_shit_1_1_physics_system2_d.html#a030cec013fe5c9d11c587ca9c71d2625',1,'Shit::PhysicsSystem2D']]],
-  ['registersystem_20',['registerSystem',['../class_shit_1_1_scene.html#ad0d534f5199d8706d236fd00679450d9',1,'Shit::Scene']]],
+  ['registersystem_20',['registerSystem',['../class_shit_1_1_scene.html#ad0d534f5199d8706d236fd00679450d9',1,'Shit::Scene::registerSystem()'],['../class_shit_1_1_scene.html#a4d1ac81b76b770bc16e9730bec20e275',1,'Shit::Scene::registerSystem(const std::string &amp;typeName)']]],
   ['registertype_21',['registerType',['../class_shit_1_1_type_registry.html#aa85f3125942d3ebe0508b809344f9573',1,'Shit::TypeRegistry']]],
   ['registertypes_22',['registerTypes',['../struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html#a5a3d095779b2fee1a14c293f19b6ede7',1,'Shit::PluginManager::LoadedPlugin']]],
   ['registertypesfn_23',['RegisterTypesFn',['../class_shit_1_1_plugin_manager.html#a7aade3d8f1f1d1061593419f2886be1b',1,'Shit::PluginManager']]],

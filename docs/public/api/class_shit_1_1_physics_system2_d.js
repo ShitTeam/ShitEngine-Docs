@@ -12,6 +12,7 @@ var class_shit_1_1_physics_system2_d =
     [ "init", "class_shit_1_1_physics_system2_d.html#ad72eef1561c7a53b19b048397d4ef570", null ],
     [ "onComponentAttached", "class_shit_1_1_physics_system2_d.html#a783a7e369bc1d8c5dc998d08e3e956c1", null ],
     [ "onComponentDetached", "class_shit_1_1_physics_system2_d.html#a7d186d8169496a0f410a29378f23942b", null ],
+    [ "onFieldChanged", "class_shit_1_1_physics_system2_d.html#aadba02841897aadd2819172be6c50058", null ],
     [ "rebuildJoint", "class_shit_1_1_physics_system2_d.html#a55b8f2e1cdf7a2f42d5fb050aa350407", null ],
     [ "registerJoint", "class_shit_1_1_physics_system2_d.html#ab39cb5522c8eabb81f5482b765b37c9d", null ],
     [ "registerRigidBody", "class_shit_1_1_physics_system2_d.html#a030cec013fe5c9d11c587ca9c71d2625", null ],

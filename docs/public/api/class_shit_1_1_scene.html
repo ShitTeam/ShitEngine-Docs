@@ -198,6 +198,20 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ab4a3a27e9b74cb9cca5a7cded635aad6 template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#ab4a3a27e9b74cb9cca5a7cded635aad6">getSystem</a> ()</td></tr>
 <tr class="memitem:aea880a156468d35b99e0e49bb0502540" id="r_aea880a156468d35b99e0e49bb0502540"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:aea880a156468d35b99e0e49bb0502540 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aea880a156468d35b99e0e49bb0502540">hasSystem</a> ()</td></tr>
+<tr class="memitem:a4d1ac81b76b770bc16e9730bec20e275" id="r_a4d1ac81b76b770bc16e9730bec20e275"><td class="memItemLeft"><a class="el" href="class_shit_1_1_system.html">System</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4d1ac81b76b770bc16e9730bec20e275">registerSystem</a> (const std::string &amp;typeName)</td></tr>
+<tr class="memdesc:a4d1ac81b76b770bc16e9730bec20e275"><td class="mdescLeft">&#160;</td><td class="mdescRight">按类型名注册系统（通过反射 Factory 创建实例）。幂等（已有则返回现有）。 失败（类型未注册/无工厂/非 <a class="el" href="class_shit_1_1_system.html" title="System 基类">System</a> 派生）返回 nullptr 并 WARN。  <br /></td></tr>
+<tr class="memitem:a8a16d126b3ffa075e33f2ca3875062ab" id="r_a8a16d126b3ffa075e33f2ca3875062ab"><td class="memItemLeft"><a class="el" href="class_shit_1_1_system.html">System</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8a16d126b3ffa075e33f2ca3875062ab">getSystem</a> (const std::string &amp;typeName) const</td></tr>
+<tr class="memdesc:a8a16d126b3ffa075e33f2ca3875062ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">按类型名查询系统（返回 nullptr 表示未注册）  <br /></td></tr>
+<tr class="memitem:ad4cbb8d36e4677d6e375aecb7d920d6c" id="r_ad4cbb8d36e4677d6e375aecb7d920d6c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad4cbb8d36e4677d6e375aecb7d920d6c">hasSystem</a> (const std::string &amp;typeName) const</td></tr>
+<tr class="memdesc:ad4cbb8d36e4677d6e375aecb7d920d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">按类型名判断系统是否已注册  <br /></td></tr>
+<tr class="memitem:ad29c2413f84e208eb2dd6f3db0325337" id="r_ad29c2413f84e208eb2dd6f3db0325337"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad29c2413f84e208eb2dd6f3db0325337">unregisterSystem</a> (const std::string &amp;typeName)</td></tr>
+<tr class="memdesc:ad29c2413f84e208eb2dd6f3db0325337"><td class="mdescLeft">&#160;</td><td class="mdescRight">按类型名延迟移除系统  <br /></td></tr>
+<tr class="memitem:a8b9b46d8867385f9815d347ca55b1a7f" id="r_a8b9b46d8867385f9815d347ca55b1a7f"><td class="memItemLeft">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8b9b46d8867385f9815d347ca55b1a7f">getRegisteredSystemTypeNames</a> () const</td></tr>
+<tr class="memdesc:a8b9b46d8867385f9815d347ca55b1a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前已注册系统的类型名列表（按优先级排序）  <br /></td></tr>
+<tr class="memitem:aaa2905802c15d90211f36868c47ee05c" id="r_aaa2905802c15d90211f36868c47ee05c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaa2905802c15d90211f36868c47ee05c">setSystemPriority</a> (const std::string &amp;typeName, int priority)</td></tr>
+<tr class="memdesc:aaa2905802c15d90211f36868c47ee05c"><td class="mdescLeft">&#160;</td><td class="mdescRight">调整系统优先级（即时生效，下一帧 update 前重排序）  <br /></td></tr>
+<tr class="memitem:a17b9173946656f2f73f23886fb6188cf" id="r_a17b9173946656f2f73f23886fb6188cf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a17b9173946656f2f73f23886fb6188cf">unregisterSystemsBySource</a> (const std::string &amp;source)</td></tr>
+<tr class="memdesc:a17b9173946656f2f73f23886fb6188cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载指定来源注册的所有系统（插件卸载前调用，防止卸载 DLL 后 vtable 悬垂）  <br /></td></tr>
 <tr class="memitem:a3fd7335faa33dce2f87c7e50eef3e294" id="r_a3fd7335faa33dce2f87c7e50eef3e294"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3fd7335faa33dce2f87c7e50eef3e294">getName</a> () const</td></tr>
 <tr class="memitem:ae81a7db40b4b7cdc5f0b037e999fd560" id="r_ae81a7db40b4b7cdc5f0b037e999fd560"><td class="memItemLeft">std::vector&lt; std::unique_ptr&lt; <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae81a7db40b4b7cdc5f0b037e999fd560">getGameObjects</a> ()</td></tr>
 <tr class="memitem:a9d3a2685df23b5e7cbf59c19c4a1f9b5" id="r_a9d3a2685df23b5e7cbf59c19c4a1f9b5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9d3a2685df23b5e7cbf59c19c4a1f9b5">setName</a> (const std::string &amp;name)</td></tr>
@@ -499,8 +513,27 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a8b9b46d8867385f9815d347ca55b1a7f" name="a8b9b46d8867385f9815d347ca55b1a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9b46d8867385f9815d347ca55b1a7f">&#9670;&#160;</a></span>getRegisteredSystemTypeNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; getRegisteredSystemTypeNames </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回当前已注册系统的类型名列表（按优先级排序） </p>
+
+</div>
+</div>
 <a id="ab4a3a27e9b74cb9cca5a7cded635aad6" name="ab4a3a27e9b74cb9cca5a7cded635aad6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4a3a27e9b74cb9cca5a7cded635aad6">&#9670;&#160;</a></span>getSystem()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a3a27e9b74cb9cca5a7cded635aad6">&#9670;&#160;</a></span>getSystem() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,8 +559,27 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a8a16d126b3ffa075e33f2ca3875062ab" name="a8a16d126b3ffa075e33f2ca3875062ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a16d126b3ffa075e33f2ca3875062ab">&#9670;&#160;</a></span>getSystem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_system.html">System</a> * getSystem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>typeName</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>按类型名查询系统（返回 nullptr 表示未注册） </p>
+
+</div>
+</div>
 <a id="aea880a156468d35b99e0e49bb0502540" name="aea880a156468d35b99e0e49bb0502540"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea880a156468d35b99e0e49bb0502540">&#9670;&#160;</a></span>hasSystem()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aea880a156468d35b99e0e49bb0502540">&#9670;&#160;</a></span>hasSystem() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -550,6 +602,25 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4cbb8d36e4677d6e375aecb7d920d6c" name="ad4cbb8d36e4677d6e375aecb7d920d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cbb8d36e4677d6e375aecb7d920d6c">&#9670;&#160;</a></span>hasSystem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasSystem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>typeName</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>按类型名判断系统是否已注册 </p>
 
 </div>
 </div>
@@ -700,7 +771,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="ad0d534f5199d8706d236fd00679450d9" name="ad0d534f5199d8706d236fd00679450d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0d534f5199d8706d236fd00679450d9">&#9670;&#160;</a></span>registerSystem()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d534f5199d8706d236fd00679450d9">&#9670;&#160;</a></span>registerSystem() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -723,6 +794,25 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d1ac81b76b770bc16e9730bec20e275" name="a4d1ac81b76b770bc16e9730bec20e275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d1ac81b76b770bc16e9730bec20e275">&#9670;&#160;</a></span>registerSystem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_system.html">System</a> * registerSystem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>typeName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>按类型名注册系统（通过反射 Factory 创建实例）。幂等（已有则返回现有）。 失败（类型未注册/无工厂/非 <a class="el" href="class_shit_1_1_system.html" title="System 基类">System</a> 派生）返回 nullptr 并 WARN。 </p>
 
 </div>
 </div>
@@ -789,6 +879,29 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="aaa2905802c15d90211f36868c47ee05c" name="aaa2905802c15d90211f36868c47ee05c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2905802c15d90211f36868c47ee05c">&#9670;&#160;</a></span>setSystemPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSystemPriority </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>typeName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>priority</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>调整系统优先级（即时生效，下一帧 update 前重排序） </p>
+
+</div>
+</div>
 <a id="a5d063a69d1203a6038dd3a1f7e08761f" name="a5d063a69d1203a6038dd3a1f7e08761f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d063a69d1203a6038dd3a1f7e08761f">&#9670;&#160;</a></span>unregisterComponent()</h2>
 
@@ -809,7 +922,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="ab4e8eb9227833b905a437e3c31fa2d07" name="ab4e8eb9227833b905a437e3c31fa2d07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4e8eb9227833b905a437e3c31fa2d07">&#9670;&#160;</a></span>unregisterSystem()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e8eb9227833b905a437e3c31fa2d07">&#9670;&#160;</a></span>unregisterSystem() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -832,6 +945,44 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad29c2413f84e208eb2dd6f3db0325337" name="ad29c2413f84e208eb2dd6f3db0325337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad29c2413f84e208eb2dd6f3db0325337">&#9670;&#160;</a></span>unregisterSystem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unregisterSystem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>typeName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>按类型名延迟移除系统 </p>
+
+</div>
+</div>
+<a id="a17b9173946656f2f73f23886fb6188cf" name="a17b9173946656f2f73f23886fb6188cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b9173946656f2f73f23886fb6188cf">&#9670;&#160;</a></span>unregisterSystemsBySource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unregisterSystemsBySource </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>卸载指定来源注册的所有系统（插件卸载前调用，防止卸载 DLL 后 vtable 悬垂） </p>
 
 </div>
 </div>

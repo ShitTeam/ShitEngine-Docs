@@ -8,7 +8,7 @@ var searchData=
   ['hascomponent_5',['hasComponent',['../class_shit_1_1_game_object.html#abe100a1d418965113893d4aead521a7c',1,'Shit::GameObject']]],
   ['hasdata_6',['hasData',['../class_shit_1_1_prefab.html#a314b19ebe3b2ce78e9df49fee95c21dd',1,'Shit::Prefab']]],
   ['hasfocus_7',['HasFocus',['../class_shit_1_1_text_input_gate.html#ae84c045c5df6ca08c2f48127d9f5ae1b',1,'Shit::TextInputGate']]],
-  ['hassystem_8',['hasSystem',['../class_shit_1_1_scene.html#aea880a156468d35b99e0e49bb0502540',1,'Shit::Scene']]],
+  ['hassystem_8',['hasSystem',['../class_shit_1_1_scene.html#aea880a156468d35b99e0e49bb0502540',1,'Shit::Scene::hasSystem()'],['../class_shit_1_1_scene.html#ad4cbb8d36e4677d6e375aecb7d920d6c',1,'Shit::Scene::hasSystem(const std::string &amp;typeName) const']]],
   ['hassystems_9',['hasSystems',['../class_shit_1_1_scene.html#a7904c998322c92e144f5dba063b17e11',1,'Shit::Scene']]],
   ['hasvalidbody_10',['hasValidBody',['../class_shit_1_1_rigid_body2_d.html#aab0d57dd9c879d057ad83ae1977915a2',1,'Shit::RigidBody2D']]],
   ['hasvalidjoint_11',['hasValidJoint',['../class_shit_1_1_joint2_d.html#ac352234eb70371b28d022e32ef9f601d',1,'Shit::Joint2D']]],
