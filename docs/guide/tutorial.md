@@ -1,321 +1,190 @@
 ---
-title: 从零搭一个游戏
+title: 教程：做第一个游戏
 lang: zh_CN
 ---
 
-# 从零搭一个游戏
+# 教程：用编辑器做第一个游戏
 
-> 十分钟，从空文件夹到一个会动会响的游戏。
+> 二十分钟，从空项目到导出一个小游戏：一个能左右移动、跳跃的方块，踩上地面、捡金币、计分、播音效。
+
+会用到：可视化搭场景、行为脚本（C++）、输入映射、物理碰撞回调、`ComponentRef` 引用、音频——覆盖编辑器工作流的完整一环。
 
 ## 你需要什么
 
-- **C++20 编译器** — GCC 10+、Clang 11+、MSVC 2019+
-- **CMake 3.20+**
-- **ShitEngine SDK** — 见下方"获取 ShitEngine SDK"
+- **ShitEngine SDK**（含 `Editor.exe`）
+- **C++ 编译器**：Visual Studio Build Tools 或 MinGW + CMake（编辑器会自己探测，写行为脚本时才需要）
 
-## 一、搭项目骨架
+## 一、新建项目
 
-### 获取 ShitEngine SDK
+菜单「文件 → 新建项目…」：项目名 `CoinGame`，位置随意，勾选创建脚本工程。打开后你应该看到场景树（空）、视口、检查器、底部「资源 | 日志」。
 
-从 **GitHub Actions 产物**或 **GitHub Release** 下载对应平台的预编译包解压，即得 SDK。
+## 二、搭出世界
 
-**GitHub Actions 产物** — 每个提交都会自动构建并上传引擎包。去 [Actions 页面](https://github.com/ShitTeam/ShitEngine/actions/workflows/build.yml) 点开最新一次的绿色运行，在页面底部找到 Artifacts：
+设计一个简单关卡：地面 + 一枚金币 + 玩家方块 + 相机。
 
-| 产物名 | 平台 | 编译器 | 格式 |
-|---|---|---|---|
-| `ShitEngine-windows-mingw` | Windows | MinGW | zip |
-| `ShitEngine-windows-msvc` | Windows | MSVC | zip |
-| `ShitEngine-linux` | Linux | GCC | tar.gz |
-| `ShitEngine-macos` | macOS | Clang | tar.gz |
+### 1. 地面
 
-**GitHub Release** — 引擎发布正式版本时，可以在 [Releases 页面](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的预编译包。当前已发布 **v1.3.0**（首个正式 Release）。
+1. 准备一张地面图片（或 32×32 的纯色贴图）放进项目的 `Assets/`
+2. 资源窗口选到 `Assets/`，把图片**拖进场景视口**——地面精灵出现在光标处
+3. 场景树选中它（`F2` 重命名）改成 `Ground`，检查器 `Transform` 里把位置调到 `y ≈ 300`，缩放拉长（如 `scale = (6, 1)`）
+4. 给它挂物理：场景树右键「添加组件 → RigidBody2D」（静态，默认），再添加 `BoxCollider2D`——碰撞体尺寸默认对应精灵
 
-解压得到 SDK 结构：
+### 2. 玩家方块
 
-```
-ShitEngine/
-├── bin/          # ShitEngine.dll + 第三方 DLL
-├── lib/          # 导入库 + ShitEngineConfig.cmake
-└── include/      # 头文件
-```
+再拖入一张图片（用同一张也行），重命名 `Player`，位置放到 `(0, -60)`，缩放 `(1, 1)`：
 
-> **Linux 用户**：运行前需设置动态库路径：
-> ```bash
-> export LD_LIBRARY_PATH=/path/to/ShitEngine/lib:$LD_LIBRARY_PATH
-> ```
+1. 检查器 Add Component → `RigidBody2D` → 类型改为 **Dynamic**（受重力下落）
+2. `BoxCollider2D` 添加碰撞体；把 `RigidBody2D` 的 `Fixed Rotation` 打开（防翻倒）
+3. Add Component → `TransformComponent` 已有；把 `Player` 的 Transform 缩放调小一点（如 `(0.5, 0.5)`）
 
-新建一个文件夹，里面放两个文件：
+### 3. 相机
 
-```
-MyGame/
-├── CMakeLists.txt
-└── main.cpp
-```
+场景树右键「新建 → 相机」，位置 `(0, 0)`。没有相机时播放会自动补一个，但有个自己的相机更可控（相机缩放 = 你看世界的倍率，随意调）。
 
-### CMakeLists.txt
+### 4. 保存
 
-通过 `find_package` 引用 SDK：
+`Ctrl+S` 存成 `Scenes/Game.scene`。
 
-```cmake
-cmake_minimum_required(VERSION 3.20)
-project(MyGame)
+## 三、让玩家动起来（第一个行为脚本）
 
-find_package(ShitEngine REQUIRED
-    PATHS /path/to/ShitEngine/lib/cmake
-    NO_DEFAULT_PATH)
-
-add_executable(MyGame main.cpp)
-target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
-```
-
-`ShitEngineConfig.cmake` 会按 `CMAKE_BUILD_TYPE` 自动选择 Debug（`-d` 后缀）或 Release 导入库，第三方动态库随包自带。
-
-### 从源码构建（可选）
-
-如果你克隆了 ShitEngine 源码（比如想贡献代码），可以直接用 `add_subdirectory` 引用源码：
-
-```cmake
-add_subdirectory("path/to/ShitEngine" "${CMAKE_BINARY_DIR}/ShitEngine_Build")
-target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
-```
-
-### main.cpp
-
-引擎的启停代码是固定模板，先把它写上：
+游戏逻辑写在 `Scripts/Behaviors.h`。菜单「编辑 → 打开代码…」（`Ctrl+Shift+O`）用你选的 IDE 打开项目，编辑这个文件：
 
 ```cpp
-#include <ShitEngine.h>
-
-int main() {
-    if (Shit::Game::Init()) {
-        Shit::Game::Run();
-    }
-    Shit::Game::Destroy();
-}
-```
-
-编译运行试试：
-
-```bash
-cmake -B build -G Ninja
-cmake --build build
-./build/MyGame
-```
-
-应该弹出一个黑窗口。恭喜，你的游戏已经跑起来了。
-
-## 二、创建场景
-
-场景是游戏世界的容器。所有游戏对象都在场景里活着：
-
-```cpp
-auto scene = std::make_unique<Shit::Scene>("my game");
-scene->init();  // 注册了 BehaviorSystem + RenderSystem + UIRenderSystem
-```
-
-先别把场景塞进引擎——等我们把东西放进去再说。
-
-## 三、放一个玩家进去
-
-场景里的每个"东西"都是一个 **GameObject**。它本身是空的，挂上组件才有功能。
-
-GameObject 只能通过 `scene->createGameObject()` 创建：
-
-```cpp
-// 创建玩家
-auto* player = scene->createGameObject("player");
-
-// 挂上位置组件
-player->addComponent<Shit::TransformComponent>();
-
-// 挂上渲染组件，给它一张图
-auto* sprite = player->addComponent<Shit::SpriteRenderer>();
-sprite->setTexturePath("textures/player.png");
-```
-
-这套"空壳子插积木"的玩法叫**组件化架构**。每个组件管一件事：
-
-| 组件 | 管什么 |
-|---|---|
-| `TransformComponent` | 位置、缩放、旋转 |
-| `SpriteRenderer` | 画什么纹理、怎么画 |
-| `CameraComponent` | 从哪看世界 |
-| `AnimationComponent` | 逐帧动画 |
-| `Behavior` | 你的游戏脚本 |
-
-每种组件一个对象只能挂一个，重复 add 不会报错，直接返回已有的。
-
-## 四、让他动起来（Behavior）
-
-玩家的运动逻辑用 **Behavior** 来写。继承它，重写 `onStart()` 和 `onUpdate()`：
-
-```cpp
-class Player : public Shit::Behavior {
-    Shit::TransformComponent* transform = nullptr;
-    float speed = 200.0f;
-
+class SHIT_REFLECT(BlackList) PlayerController : public Shit::Behavior {
+    SHIT_REFLECT_BODY(PlayerController)
+public:
     void onStart() override {
-        transform = getOwner()->getComponent<Shit::TransformComponent>();
+        m_transform = getOwner()->getComponent<Shit::TransformComponent>();
+        m_body      = getOwner()->getComponent<Shit::RigidBody2D>();
     }
 
     void onUpdate() override {
-        Shit::Vector2 pos = transform->getPosition();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::W)) pos.y -= speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::S)) pos.y += speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::A)) pos.x -= speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::D)) pos.x += speed * Shit::Time::GetDeltaTime();
-        transform->setPosition(pos);
+        if (!m_body) return;
+
+        // 左右移动：直接设定水平速度（保留当前竖直速度，重力照常）
+        const float h = Shit::Input::GetAxis("Horizontal");
+        Shit::Vector2 v = m_body->getLinearVelocity();
+        m_body->setLinearVelocity({ h * m_moveSpeed, v.y });
+
+        // 跳跃：仅在着地时触发
+        if (Shit::Input::IsActionDown("Jump") && m_grounded)
+            m_body->applyImpulse({ 0.0f, -m_jumpImpulse });
     }
+
+    // 碰撞回调：落地 / 离地
+    void onCollisionEnter(Shit::GameObject* other) override {
+        if (other->getTag() == "ground") m_grounded = true;
+    }
+    void onCollisionExit(Shit::GameObject* other) override {
+        if (other->getTag() == "ground") m_grounded = false;
+    }
+
+private:
+    SHIT_META(Disable)
+    Shit::TransformComponent* m_transform = nullptr;
+    SHIT_META(Disable)
+    Shit::RigidBody2D* m_body = nullptr;
+    SHIT_META(Disable)
+    bool m_grounded = false;
+
+    float m_moveSpeed   = 240.0f;   // 反射字段，检查器可微调
+    float m_jumpImpulse = 420.0f;
 };
 ```
 
-然后把 Behavior 挂到玩家身上：
+别急着编译——脚本里用了 `ground` 标签，得先给地面打上。
+
+## 四、给地面打标签（顺便演示 Tag）
+
+在同一文件里加一个微型行为：
 
 ```cpp
-player->addComponent<Player>();
+class SHIT_REFLECT(BlackList) Ground : public Shit::Behavior {
+    SHIT_REFLECT_BODY(Ground)
+public:
+    void onStart() override { getOwner()->setTag("ground"); }
+};
 ```
 
-BehaviorSystem 每帧会自动找到这个组件并调用它的 `onUpdate`。不需要你手动管理。
+回到编辑器按 **`Ctrl+B`** 构建（首次会配置脚本工程：自动探测 VS / MinGW，可能要几十秒，看左下角日志）。成功后两种 `Add Component` 都会出现在检查器/右键菜单里：
 
-::: warning 命名提醒
-ShitEngine 中 `IsKeyPressed` = 持续按住（适合移动），`IsKeyDown` = 按下瞬间（适合跳跃）。这和 Unity/Godot 相反，注意区分。详见[输入系统](/guide/input)。
+- 给 `Ground` 添加 → `Ground`
+- 给 `Player` 添加 → `PlayerController`
+
+::: warning
+`Ctrl+B` 成功后再点 Add Component——新类型要等反射注册完成后才能实例化。
 :::
 
-::: info 生命周期小结
-`onCreate → onAttach → onStart → onUpdate(每帧) → onDetach → onDestroy`
-:::
+## 五、播放调试
 
-## 五、加个相机
+点 **▶ 运行**。玩家从天上掉下来落在平台上：
 
-没有相机，什么都看不到。相机决定你能看到多大范围的世界：
+- **A / D**（或 ←/→，映射见下）左右移动
+- **空格** 跳跃——注意空格只在落地后触发，空中再按无效（`m_grounded` 控制）
 
-```cpp
-auto* camera = scene->createGameObject("camera");
-camera->addComponent<Shit::TransformComponent>();
-camera->addComponent<Shit::CameraComponent>()->setZoom(5.0f);
-```
+按键映射来自项目模板默认值；想改键：「文件 → 项目设置… → 输入页」，点键名进入「按下任意键」捕获。`Horizontal` 轴与 `Jump` 动作改完即存即生效。
 
-相机的 TransformComponent 决定它的位置，CameraComponent 决定它怎么看。
+**■ 停止**：运行期的一切改动（位置、速度、甚至被删的对象）都会回滚到运行前快照——放心折腾。
 
-## 六、开跑
+## 六、金币：碰撞 + 计分 + 音效
 
-把场景交给 SceneManager，跑起来：
+放一枚金币：拖入一张金币图 → 重命名 `Coin` → 放在 `(100, -40)`：
 
-```cpp
-Shit::SceneManager::LoadScene(std::move(scene));
-Shit::Game::Run();
-```
-
-### 完整的 main.cpp
+1. Add Component → `RigidBody2D`（**Kinematic**，不受重力、不会被推走）、`CircleCollider2D`（半径约 12）
+2. 加一个 UI 文本：场景树右键「新建 → 文本」（自动挂到 Canvas 下），把它放到屏幕左上角，文字改成 `金币: 0`
+3. 给 `Coin` 加行为 `CoinPickup`，并把它的**计分文本引用字段**（`ComponentRef<UIText>`）用检查器拖拽赋给那个文本对象：
 
 ```cpp
-#include <ShitEngine.h>
-
-class Player : public Shit::Behavior {
-    Shit::TransformComponent* transform = nullptr;
-    float speed = 200.0f;
-
+class SHIT_REFLECT(BlackList) CoinPickup : public Shit::Behavior {
+    SHIT_REFLECT_BODY(CoinPickup)
+public:
     void onStart() override {
-        transform = getOwner()->getComponent<Shit::TransformComponent>();
+        m_ui = m_scoreText.get();   // ComponentRef → 实际组件（目标销毁自动失效）
     }
 
-    void onUpdate() override {
-        Shit::Vector2 pos = transform->getPosition();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::W)) pos.y -= speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::S)) pos.y += speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::A)) pos.x -= speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::D)) pos.x += speed * Shit::Time::GetDeltaTime();
-        transform->setPosition(pos);
+    void onCollisionEnter(Shit::GameObject* other) override {
+        if (other->getTag() != "player") return;   // 只有玩家碰到才收
+        m_total += 1;
+        if (m_ui) m_ui->setText("金币: " + std::to_string(m_total));
+        Shit::AudioPlayer::Play("Assets/coin.wav", "sfx");
+        getOwner()->destroy();                      // 金币消失（帧末清理）
     }
+
+private:
+    SHIT_META(({.displayName = "计分文本", .tooltip = "拖一个 UIText 进来"}))
+    Shit::ComponentRef<Shit::UIText> m_scoreText;
+
+    SHIT_META(Disable)
+    Shit::UIText* m_ui = nullptr;
+    SHIT_META(Disable)
+    int m_total = 0;
 };
-
-int main() {
-    if (Shit::Game::Init()) {
-        auto scene = std::make_unique<Shit::Scene>("demo");
-        scene->init();
-
-        auto* player = scene->createGameObject("player");
-        player->addComponent<Shit::TransformComponent>();
-        player->addComponent<Shit::SpriteRenderer>()->setTexturePath("player.png");
-        player->addComponent<Player>();
-
-        auto* camera = scene->createGameObject("camera");
-        camera->addComponent<Shit::TransformComponent>();
-        camera->addComponent<Shit::CameraComponent>()->setZoom(5.0f);
-
-        Shit::SceneManager::LoadScene(std::move(scene));
-        Shit::Game::Run();
-    }
-    Shit::Game::Destroy();
-}
 ```
 
-编译──你现在应该能看到一个玩家在屏幕上了。按 WASD 他会动。
+4. 别忘了给玩家打 `player` 标签（再写一个三行行为，或复制 `Ground` 改改名字——标签是运行时字符串，怎么实现都行）；放一段 `coin.wav` 到 `Assets/`
 
-## 七、加个音效
+再次 `Ctrl+B` → **▶ 运行** → 走过去一碰金币：音效响起、计数 +1、金币消失。
 
-连声音都没有，算什么游戏。加一行就播 BGM：
+::: info 这一节背后
+碰撞回调由物理系统按接触对驱动（`onCollisionEnter/Stay/Exit`），回调里**可以安全销毁对象**（走延时删除）；`ComponentRef<UIText>` 只存 UUID、检查器可拖拽赋值、序列化进 `.scene`。都记在手册里。
+:::
 
-```cpp
-// 在 onStart 里
-auto* bgm = Shit::AudioPlayer::Play("audio/bgm.mp3", "bgm");
-bgm->setLooping(-1);  // 无限循环
-```
+## 七、启动场景与导出
 
-`Play` 第二个参数是轨道组名，不传则默认归入 `"default"` 组。返回 `AudioTrack*`，可以用来控制暂停、恢复、音量。
+1. 「文件 → 项目设置… → 通用 → 启动场景」选 `Scenes/Game.scene`——这样打开项目/导出运行都会直接进你的游戏
+2. 多放几枚金币（选中 `Coin` 按 `Ctrl+C / Ctrl+V` 复制粘贴，拖到不同位置），`Ctrl+S` 保存
+3. 「文件 → 导出游戏…」→ 输出目录 → 得到 `CoinGame.exe`
 
-音量分三级：**主音量 × 组音量 × 轨道音量**。默认全 1.0，改哪层都行。
-
-## 八、试试动画
-
-如果你的角色用了精灵图集（sprite-sheet），一行就能定义动画：
-
-```cpp
-auto* anim = player->addComponent<Shit::AnimationComponent>();
-Shit::SpriteSheet sheet(4, 8, 32, 32);  // 4行8列，每帧32x32
-
-// 用帧索引数组定义"跑"的动画
-anim->play("run", sheet, {0, 1, 2, 3, 4, 5}, 0.1f, true);
-anim->play("run");  // 切换播放
-```
-
-`AnimationComponent` 继承自 Behavior，会自动被驱动。你不需要在 onUpdate 里写任何动画代码。
-
-## 九、收到事件
-
-模块之间不想互相认识？用 EventBus 喊话：
-
-```cpp
-// 1. 定义事件
-struct ScoreEvent : public Shit::Event { int points; };
-
-// 2. 订阅
-uint64_t token = Shit::EventBus::Subscribe<ScoreEvent>(
-    [](const ScoreEvent& e) {
-        // 更新 UI、播音效……
-    }
-);
-
-// 3. 发送
-EventBus::Emit(ScoreEvent{100});
-
-// 4. 退订（销毁前一定要做）
-EventBus::Unsubscribe<ScoreEvent>(token);
-```
-
-事件不会立即触发，而是排队等待 `ProcessEvents` 统一派发。引擎在主循环中已调用 `SceneManager::Update`，无需手动处理。
+把导出目录整个拷到另一台 Windows 机器上双击 `CoinGame.exe`——你的第一个游戏发布出去了。
 
 ## 继续深入
 
-到这里你已经能用 ShitEngine 写出一个完整的可玩游戏了。每个子系统想深入了解，看下面：
-
-| 模块 | 去这里 |
+| 话题 | 去这里 |
 |---|---|
-| GameObject、组件生命周期、Behavior、Prefab | [游戏对象与组件](/guide/game-objects) |
-| 场景切换（LoadScene）、自定义 System | [场景管理](/guide/scene) |
-| 多相机分屏、渲染流程、UI 直接绘制 | [渲染与相机](/guide/rendering) |
-| 键盘鼠标三态检测、鼠标位置 | [输入系统](/guide/input) |
-| SpriteSheet、动画生命周期 | [逐帧动画](/guide/animation) |
-| 轨道组、全局控制、缓存机制 | [音频系统](/guide/audio) |
-| EventBus 完整 API、回调安全性 | [事件系统](/guide/events) |
-| settings.json、逻辑分辨率、帧率 | [配置系统](/guide/config) |
+| 编辑器全部功能（Gizmo / 撤销重做 / 播放态 / 动画窗口 / 瓦片刷图…） | [可视化编辑器](/guide/editor) |
+| 组件生命周期、Prefab、`ComponentRef` | [游戏对象与组件](/guide/game-objects) |
+| 场景文件 .scene 与序列化 | [场景管理](/guide/scene) |
+| Animator 状态机 / `.anim` 资产 | [动画系统](/guide/animation) |
+| 关节、碰撞回调、物理自愈 | [物理系统](/guide/physics) |
+| 动作/轴映射与按键捕获 | [输入系统](/guide/input) |
+| 分层音频 / 事件总线 | [音频系统](/guide/audio) · [事件系统](/guide/events) |

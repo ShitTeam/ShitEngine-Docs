@@ -16,7 +16,7 @@ ShitEngine 是一个基于 **C++20** 的轻量级 2D 游戏引擎。它不依赖
 
 **因为 ShitEngine SDK 下载即用。**
 
-从 GitHub Release 下载对应平台的预编译包解压即得 ShitEngine SDK（引擎库 + 头文件 + CMake 配置），`find_package` 一行接入，SDL3 等第三方依赖全部自带。不需要源码编译、不需要开会对齐环境。
+从 GitHub Release 下载对应平台的预编译包解压即得 **ShitEngine SDK**——`Editor.exe`、`ShitRuntime.exe`、引擎库与头文件、SDL3 等全部第三方依赖一起打包。不需要源码编译、不需要开会对齐环境，解压双击 `Editor.exe` 就开始做游戏。
 
 **因为编辑器开箱即用。**
 
@@ -69,7 +69,7 @@ auto* player = scene->createGameObject("player");
 
 ### 🔍 Reflection — 窥探组件内幕
 
-ShitEngine 内置了一套**编译期反射系统**，通过 libClang 解析源码生成注册代码，调 `TypeRegistry::Get("TransformComponent")` 就能拿到所有字段的元信息——类型名、大小、偏移、编辑器显示名和数值范围。这是未来引擎编辑器的基础。
+ShitEngine 内置了一套**编译期反射系统**，通过 libClang 解析源码生成注册代码，调 `TypeRegistry::Get("TransformComponent")` 就能拿到所有字段的元信息——类型名、大小、偏移、编辑器显示名和数值范围。这是编辑器属性面板与 `.scene` 序列化的地基：行为脚本加 `SHIT_REFLECT` 标记后，字段就能在检查器里编辑、随场景落盘。
 
 ## 核心系统一览
 

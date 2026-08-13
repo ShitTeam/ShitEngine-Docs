@@ -7,221 +7,103 @@ lang: zh_CN
 
 > 从零到"窗口亮了"只需要两分钟。开始吧。
 
+ShitEngine 的唯一使用方式是**可视化编辑器**：搭场景、写行为脚本、调试、导出全流程在编辑器内完成，不需要手写 `main.cpp` 或 CMake。
+
 ## 环境要求
 
-- **C++20 编译器** — GCC 10+、Clang 11+、MSVC 2019+（仅手写代码/脚本构建需要，纯编辑器工作流可不装）
-- **CMake 3.20+**
-- **Ninja**（推荐）
+- **ShitEngine SDK**（含 `Editor.exe`），从 [GitHub Release](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台预编译包
+- **C++ 编译器**（写行为脚本时需要，编辑器自动探测）：Visual Studio Build Tools（MSVC）或 MinGW + CMake
+- 无需手动安装 SDL3 / spdlog 等任何第三方依赖——随包自带
 
-## 方式零：可视化编辑器（省心）
+## 一、启动编辑器
 
-如果你有随 SDK 附带的 `Editor.exe`：「文件 → 新建项目」→ 场景树右键新建对象 → 检查器面板调属性 → 资源窗口拖图片进视口 → `▶` 运行。搭场景全程不用写代码，写脚本也只需在 `Scripts/Behaviors.h` 里加类后按 `Ctrl+B` 热重载。详见[可视化编辑器](/guide/editor)。
+解压 SDK，双击 `bin/Editor.exe`。首次启动进入空会话（无项目）。
 
-下面仍然手把手用代码搭一遍——理解引擎的核心概念：
+## 二、新建项目
 
-## 创建项目
+菜单「文件 → 新建项目…」：
 
-新建一个文件夹，里面放两个文件：
+1. 填**项目名**与**保存位置**（如 `D:/MyGame`）
+2. 指定 **SDK 目录**（指向你刚解压的 SDK 根目录）
+3. 勾选创建 C++ 脚本工程（含 `Scripts/` 骨架），确认
+
+项目结构：
 
 ```
 MyGame/
-├── CMakeLists.txt
-└── main.cpp
+├── config.json          # 项目配置（sdkDir / scene / inputMappings）
+├── Scenes/              # .scene 场景
+├── Assets/              # 图片 / 音频 / .anim / .prefab
+├── Scripts/             # 行为脚本 C++ 工程（Behaviors.h）
+└── bin/                 # 脚本编译产物 DLL
 ```
 
-### 安装 ShitEngine SDK
+## 三、搭一个场景
 
-从 [GitHub Release](https://github.com/ShitTeam/ShitEngine/releases) 下载对应平台的预编译包并解压，即得 **ShitEngine SDK**：
+编辑器主窗口中央是**场景视口**，左侧**场景树**、右侧**属性检查器**、底部**资源窗口**（资源 | 日志）。
 
-```
-ShitEngine/
-├── bin/          # ShitEngine.dll (Release) + ShitEngine-d.dll (Debug) + 第三方 DLL
-├── lib/          # 导入库 + ShitEngineConfig.cmake
-└── include/      # 头文件
-```
+1. 资源窗口左侧文件夹树选到 `Assets/`，把图片文件放进该目录（或用系统资源管理器拷贝进去）
+2. 把图片从资源窗口**拖进场景视口** → 光标处生成一个精灵对象
+3. 场景树选中它，右侧检查器改 `Transform` 的位置 / 缩放；选中后按 `W` 或用视口 Gizmo 拖动
+4. 场景树右键「新建 → 相机」加一个相机（或直接播放——场景无相机时会自动补一个）
 
-### CMakeLists.txt
+## 四、运行看看
 
-通过 `find_package` 引用 SDK：
-
-```cmake
-cmake_minimum_required(VERSION 3.20)
-project(MyGame)
-
-find_package(ShitEngine REQUIRED
-    PATHS /path/to/ShitEngine/lib/cmake
-    NO_DEFAULT_PATH)
-
-add_executable(MyGame main.cpp)
-target_link_libraries(MyGame PRIVATE ShitEngine::ShitEngine)
-```
-
-`ShitEngineConfig.cmake` 会按 `CMAKE_BUILD_TYPE` 自动选择 Debug（`-d` 后缀）或 Release 导入库。预编译包自带 SDL3、spdlog、glm 等第三方动态库，无需额外安装。
-
-### main.cpp
-
-最小起手式：
-
-```cpp
-#include <ShitEngine.h>
-
-int main() {
-    if (Shit::Game::Init()) {
-        Shit::Game::Run();
-    }
-    Shit::Game::Destroy();
-    return 0;
-}
-```
-
-### 编译运行
-
-```bash
-cmake -B build -G Ninja
-cmake --build build
-./build/MyGame
-```
-
-弹出一个黑窗口。恭喜，你上路了。
-
-## 放点东西进去
-
-窗口太无聊了。加个场景、加个玩家、加个相机——你需要的三件套：
-
-### 1. 创建场景
-
-场景是世界的容器，管理所有对象和系统：
-
-```cpp
-auto scene = std::make_unique<Shit::Scene>("my game");
-scene->init();  // 注册 BehaviorSystem + RenderSystem + UIRenderSystem
-```
-
-### 2. 创建游戏对象
+点工具栏 **▶ 运行**。运行视口里你的精灵出现了——这就是游戏的真容。按 **■ 停止** 回到编辑状态（运行期的改动自动回滚，什么都不丢）。
 
 ::: tip
-GameObject 只能通过 `scene->createGameObject()` 创建，不能直接 `new`。
+运行视口接收键盘/鼠标输入（引擎会收到 `SDL_Event`），WASD 这类按键控制直接在播放里生效。
 :::
 
-```cpp
-auto* player = scene->createGameObject("player");
+## 五、写第一个行为脚本（让东西动起来）
 
-// 挂上组件才有功能
-player->addComponent<Shit::TransformComponent>();
-player->addComponent<Shit::SpriteRenderer>();
+场景树里的对象现在还不会动。游戏逻辑写在 `Scripts/Behaviors.h`（C++ 插件）：
 
-// 给个皮肤
-player->getComponent<Shit::SpriteRenderer>()
-    ->setTexturePath("textures/player.png");
-```
-
-### 3. 让画面跑起来
+1. 点「构建脚本」（`Ctrl+B`）前，先打开 `Scripts/Behaviors.h`——编辑器菜单「编辑 → 打开代码…」（`Ctrl+Shift+O`）会用所选 IDE 打开项目，或直接在任何编辑器里改这个文件
+2. 加一个类：
 
 ```cpp
-Shit::SceneManager::LoadScene(std::move(scene));
-Shit::Game::Run();
-```
-
-现在你有一个带着纹理的玩家出现在屏幕上了。虽然他还不会动。
-
-## 让他动起来
-
-继承 `Behavior` 来写你自己的游戏逻辑：
-
-```cpp
-class Player : public Shit::Behavior {
-    Shit::TransformComponent* transform = nullptr;
-    float speed = 200.0f;
-
+class SHIT_REFLECT(BlackList) Mover : public Shit::Behavior {
+    SHIT_REFLECT_BODY(Mover)
+public:
     void onStart() override {
-        transform = getOwner()->getComponent<Shit::TransformComponent>();
+        m_transform = getOwner()->getComponent<Shit::TransformComponent>();
     }
 
     void onUpdate() override {
-        Shit::Vector2 pos = transform->getPosition();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::W)) pos.y -= speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::S)) pos.y += speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::A)) pos.x -= speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::D)) pos.x += speed * Shit::Time::GetDeltaTime();
-        transform->setPosition(pos);
+        if (!m_transform) return;
+        Shit::Vector2 pos = m_transform->getPosition();
+        if (Shit::Input::IsKeyPressed(Shit::KeyCode::A)) pos.x -= 200.0f * Shit::Time::GetDeltaTime();
+        if (Shit::Input::IsKeyPressed(Shit::KeyCode::D)) pos.x += 200.0f * Shit::Time::GetDeltaTime();
+        m_transform->setPosition(pos);
     }
+
+private:
+    SHIT_META(Disable)
+    Shit::TransformComponent* m_transform = nullptr;
 };
 ```
 
-挂到玩家身上：
-
-```cpp
-player->addComponent<Player>();
-```
+3. 回编辑器按 **`Ctrl+B`** 构建（自动探测编译器与生成器，成功后热重载 DLL，编辑器现场不清空）
+4. 场景树选中对象 → 检查器底部 **「Add Component」** → 选 `Mover`（若列表没有要先 Ctrl+B 成功——新类型需要构建后才注册）
+5. 再点 **▶ 运行**，用 A/D 移动你的对象
 
 ::: tip
-`IsKeyPressed` 检测的是**持续按住**，适合移动。如果是跳跃这类单次触发，用 `IsKeyDown`。详见[输入系统](/guide/input)。
+`IsKeyPressed` = 持续按住（适合移动）；`IsKeyDown` = 按下瞬间（适合跳跃）。详见[输入系统](/guide/input)。
 :::
 
-## 再加个相机
+## 六、保存与导出
 
-没有相机就什么都看不到。相机决定你从哪个角度观察世界：
-
-```cpp
-auto* camera = scene->createGameObject("camera");
-camera->addComponent<Shit::TransformComponent>();
-camera->addComponent<Shit::CameraComponent>()->setZoom(5.0f);
-```
-
-## 完整的可运行例子
-
-```cpp
-#include <ShitEngine.h>
-
-class Player : public Shit::Behavior {
-    Shit::TransformComponent* transform;
-    float speed = 200.0f;
-
-    void onStart() override {
-        transform = getOwner()->getComponent<Shit::TransformComponent>();
-    }
-
-    void onUpdate() override {
-        Shit::Vector2 pos = transform->getPosition();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::W)) pos.y -= speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::S)) pos.y += speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::A)) pos.x -= speed * Shit::Time::GetDeltaTime();
-        if (Shit::Input::IsKeyPressed(Shit::KeyCode::D)) pos.x += speed * Shit::Time::GetDeltaTime();
-        transform->setPosition(pos);
-    }
-};
-
-int main() {
-    if (Shit::Game::Init()) {
-        auto scene = std::make_unique<Shit::Scene>("demo");
-        scene->init();
-
-        auto* player = scene->createGameObject("player");
-        player->addComponent<Shit::TransformComponent>();
-        player->addComponent<Shit::SpriteRenderer>()->setTexturePath("player.png");
-        player->addComponent<Player>();
-
-        auto* camera = scene->createGameObject("camera");
-        camera->addComponent<Shit::TransformComponent>();
-        camera->addComponent<Shit::CameraComponent>();
-
-        Shit::SceneManager::LoadScene(std::move(scene));
-        Shit::Game::Run();
-    }
-    Shit::Game::Destroy();
-}
-```
+- **保存场景**：`Ctrl+S`（存到 `Scenes/`）；关闭编辑器前若有未保存改动会提示
+- **导出游戏**：菜单「文件 → 导出游戏…」→ 选一个输出目录 → 得到**绿色免安装包**（`MyGame.exe` + 引擎/SDL 运行库 + 脚本 DLL + 场景与资源），拷到任何 Windows 机器双击即玩
 
 ## 下一步
 
-你已经能跑会动了。继续深入了解：
-
-- [引擎核心架构](/guide/introduction)
+- [可视化编辑器](/guide/editor) — 编辑器全部功能详解（Gizmo / 撤销重做 / 播放态 / 瓦片刷图 / 动画窗口 / 项目设置…）
+- [教程：做第一个游戏](/guide/tutorial) — 从空项目到可玩小游戏
 - [游戏对象与组件](/guide/game-objects) — 组件生命周期、Behavior、Prefab
-- [场景管理](/guide/scene) — 多场景切换、叠加菜单
-- [渲染与相机](/guide/rendering) — 多相机分屏、UI 层级
-- [输入系统](/guide/input) — 键盘鼠标三态检测
-- [逐帧动画](/guide/animation) — 让 sprite 动得更花哨
-- [事件系统](/guide/events) — 模块间通信不耦合
-- [音频系统](/guide/audio) — 音效和背景音乐
-- [配置系统](/guide/config) — settings.json、逻辑分辨率
+- [场景管理](/guide/scene) — 场景文件 .scene、切换与序列化
+- [动画系统](/guide/animation) — Animator 状态机 / 帧动画
+- [物理系统](/guide/physics) — 刚体、碰撞回调、关节
+- [渲染与相机](/guide/rendering) — 多相机分屏、精灵与 UI
+- [输入系统](/guide/input) / [音频系统](/guide/audio) / [事件系统](/guide/events) / [配置系统](/guide/config)
