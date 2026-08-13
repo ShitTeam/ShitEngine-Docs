@@ -166,12 +166,34 @@ Public 属性</h2></td></tr>
 <tr class="memdesc:a9b45b3e13bd9167aab02e17e08916231"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态名  <br /></td></tr>
 <tr class="memitem:ad4ed26fd7b88ea04030a7b2073121dbd" id="r_ad4ed26fd7b88ea04030a7b2073121dbd"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_animation_clip.html">AnimationClip</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad4ed26fd7b88ea04030a7b2073121dbd">clip</a></td></tr>
 <tr class="memdesc:ad4ed26fd7b88ea04030a7b2073121dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">本状态播放的剪辑（内嵌数据）  <br /></td></tr>
+<tr class="memitem:a9884b7e32955f05a2736f88f4d7862f7" id="r_a9884b7e32955f05a2736f88f4d7862f7"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a9884b7e32955f05a2736f88f4d7862f7">assetPath</a></td></tr>
+<tr class="memdesc:a9884b7e32955f05a2736f88f4d7862f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用的 .anim 资产路径（相对项目根；空 = 内嵌剪辑，由编辑器维护）  <br /></td></tr>
 <tr class="memitem:a80ffe4b445213a14d05691866f46cb3f" id="r_a80ffe4b445213a14d05691866f46cb3f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a80ffe4b445213a14d05691866f46cb3f">isEntry</a> = false</td></tr>
 <tr class="memdesc:a80ffe4b445213a14d05691866f46cb3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否入口状态（onStart 优先进入）  <br /></td></tr>
+<tr class="memitem:a1ac0fbdce52692e06feaeb8e92ab3d6a" id="r_a1ac0fbdce52692e06feaeb8e92ab3d6a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1ac0fbdce52692e06feaeb8e92ab3d6a">graphX</a> = 0.0f</td></tr>
+<tr class="memdesc:a1ac0fbdce52692e06feaeb8e92ab3d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态机图节点 X（编辑器布局用，随 .scene 保存）  <br /></td></tr>
+<tr class="memitem:a129cc4e908c164480ebe3f3fa47dc70e" id="r_a129cc4e908c164480ebe3f3fa47dc70e"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a129cc4e908c164480ebe3f3fa47dc70e">graphY</a> = 0.0f</td></tr>
+<tr class="memdesc:a129cc4e908c164480ebe3f3fa47dc70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态机图节点 Y（编辑器布局用，随 .scene 保存）  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>状态机节点（可序列化） </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a9884b7e32955f05a2736f88f4d7862f7" name="a9884b7e32955f05a2736f88f4d7862f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9884b7e32955f05a2736f88f4d7862f7">&#9670;&#160;</a></span>assetPath</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string assetPath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>引用的 .anim 资产路径（相对项目根；空 = 内嵌剪辑，由编辑器维护） </p>
+
+</div>
+</div>
 <a id="ad4ed26fd7b88ea04030a7b2073121dbd" name="ad4ed26fd7b88ea04030a7b2073121dbd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4ed26fd7b88ea04030a7b2073121dbd">&#9670;&#160;</a></span>clip</h2>
 
@@ -185,6 +207,38 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>本状态播放的剪辑（内嵌数据） </p>
+
+</div>
+</div>
+<a id="a1ac0fbdce52692e06feaeb8e92ab3d6a" name="a1ac0fbdce52692e06feaeb8e92ab3d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac0fbdce52692e06feaeb8e92ab3d6a">&#9670;&#160;</a></span>graphX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float graphX = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>状态机图节点 X（编辑器布局用，随 .scene 保存） </p>
+
+</div>
+</div>
+<a id="a129cc4e908c164480ebe3f3fa47dc70e" name="a129cc4e908c164480ebe3f3fa47dc70e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a129cc4e908c164480ebe3f3fa47dc70e">&#9670;&#160;</a></span>graphY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float graphY = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>状态机图节点 Y（编辑器布局用，随 .scene 保存） </p>
 
 </div>
 </div>

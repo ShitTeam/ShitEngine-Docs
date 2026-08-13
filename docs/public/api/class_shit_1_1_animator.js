@@ -9,6 +9,7 @@ var class_shit_1_1_animator =
     [ "currentStateName", "class_shit_1_1_animator.html#a8b7d18646ed8467a73d858ea4a6a96b3", null ],
     [ "evaluateTransitions", "class_shit_1_1_animator.html#a73d6c35e0dc66e9657eba7c45a0b4f47", null ],
     [ "findParam", "class_shit_1_1_animator.html#af19b885bc2c6cb93159b0575172ad545", null ],
+    [ "getDataGeneration", "class_shit_1_1_animator.html#a30d6e7ae10c47bac4189b8a5c7358633", null ],
     [ "isPlaying", "class_shit_1_1_animator.html#a389ad71786b00ae81f69060f153509d2", null ],
     [ "onAfterDeserialize", "class_shit_1_1_animator.html#a9270529a4341cf8bf3f6a29a56556366", null ],
     [ "onAttach", "class_shit_1_1_animator.html#acbef2688cd43fd22241759f89fe12d28", null ],

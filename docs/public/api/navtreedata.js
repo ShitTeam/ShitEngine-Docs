@@ -62,15 +62,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_animation_8h.html",
-"class_shit_1_1_animator.html#a8edb3de82005015744a16934838ed980",
-"class_shit_1_1_camera_component.html#a4f49ac7d5921e6e3595517ffa6dc5971",
-"class_shit_1_1_game_object.html#a7e3a4076579262cdc6d8b88ee4e609d8",
-"class_shit_1_1_renderer_component.html#a17349359a2bd5bd4fe0ce2c13be0ae5f",
-"class_shit_1_1_sprite_sheet.html#a8a6293e1f2b6fb2f50b41e5d38110ae8",
-"class_shit_1_1_u_i_button.html#a8e52bcaecc271b1b57c4608da2d4b11e",
-"class_shit_1_1_u_i_text_input.html#abab5cd0e42c632ffc53abc41e9048a78",
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0da692ed49ff2182a144044181274242db5",
-"struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html#a9f7a63af920d6fb6dd3c7ebfe546dfcf"
+"class_shit_1_1_animator.html#a595954ce03f80953932eebd46181d5c6",
+"class_shit_1_1_camera_component.html#a0935f7489d0a9fdc768a68e4b585bae6",
+"class_shit_1_1_game_object.html#a3fd7335faa33dce2f87c7e50eef3e294",
+"class_shit_1_1_renderer.html#a32811c887b0278ddb626ea18f42447a6",
+"class_shit_1_1_sprite_sheet.html#a66bd8056aa42395bc44c2824eeb7d0a0",
+"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8a960b44c579bc2f6818d2daaf9e4c16f0",
+"class_shit_1_1_u_i_text_input.html#ab26532f5785cae73973ad3050a0ffe38",
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da58be47db9455679e6a44df2eff9c9fa6",
+"struct_shit_1_1_input_mappings_config.html"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

@@ -186,13 +186,15 @@ Public 属性</h2></td></tr>
 <tr class="memitem:aedc6398ddf4719ad026969c7a74ab8ba" id="r_aedc6398ddf4719ad026969c7a74ab8ba"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aedc6398ddf4719ad026969c7a74ab8ba">spacing</a> = 0.0f</td></tr>
 <tr class="memdesc:aedc6398ddf4719ad026969c7a74ab8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">帧间距（像素）  <br /></td></tr>
 <tr class="memitem:a66625d8d6c0894b4828b43f826a09b8f" id="r_a66625d8d6c0894b4828b43f826a09b8f"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a66625d8d6c0894b4828b43f826a09b8f">duration</a> = 0.1f</td></tr>
-<tr class="memdesc:a66625d8d6c0894b4828b43f826a09b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧时长（秒）  <br /></td></tr>
+<tr class="memdesc:a66625d8d6c0894b4828b43f826a09b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">统一每帧时长（秒，无 frameDurations 时使用）  <br /></td></tr>
 <tr class="memitem:a5ed2b25d9f2f070cb0ee764aa0985308" id="r_a5ed2b25d9f2f070cb0ee764aa0985308"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5ed2b25d9f2f070cb0ee764aa0985308">loop</a> = true</td></tr>
 <tr class="memdesc:a5ed2b25d9f2f070cb0ee764aa0985308"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否循环  <br /></td></tr>
 <tr class="memitem:a0cf294044cc229207fd8966ede32a9bf" id="r_a0cf294044cc229207fd8966ede32a9bf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0cf294044cc229207fd8966ede32a9bf">isDefault</a> = false</td></tr>
 <tr class="memdesc:a0cf294044cc229207fd8966ede32a9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否默认播放（onStart 自动播放）  <br /></td></tr>
 <tr class="memitem:a9c46f523f87401a418d5f261ea2b72ea" id="r_a9c46f523f87401a418d5f261ea2b72ea"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9c46f523f87401a418d5f261ea2b72ea">frames</a></td></tr>
 <tr class="memdesc:a9c46f523f87401a418d5f261ea2b72ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局帧索引序列  <br /></td></tr>
+<tr class="memitem:a75386ce23f4b4d3e0c73fcbb05a45b10" id="r_a75386ce23f4b4d3e0c73fcbb05a45b10"><td class="memItemLeft">std::vector&lt; float &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a75386ce23f4b4d3e0c73fcbb05a45b10">frameDurations</a></td></tr>
+<tr class="memdesc:a75386ce23f4b4d3e0c73fcbb05a45b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧独立时长（秒，可选）。长度与 frames 相同时逐帧生效， 否则回退到统一 duration（Dope Sheet 时间轴，P29）  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>动画剪辑（可序列化数据，P28） </p>
@@ -266,7 +268,23 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>每帧时长（秒） </p>
+<p>统一每帧时长（秒，无 frameDurations 时使用） </p>
+
+</div>
+</div>
+<a id="a75386ce23f4b4d3e0c73fcbb05a45b10" name="a75386ce23f4b4d3e0c73fcbb05a45b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75386ce23f4b4d3e0c73fcbb05a45b10">&#9670;&#160;</a></span>frameDurations</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;float&gt; frameDurations</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>每帧独立时长（秒，可选）。长度与 frames 相同时逐帧生效， 否则回退到统一 duration（Dope Sheet 时间轴，P29） </p>
 
 </div>
 </div>

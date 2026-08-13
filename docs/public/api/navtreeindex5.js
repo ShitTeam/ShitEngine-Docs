@@ -1,5 +1,15 @@
 var NAVTREEINDEX5 =
 {
+"class_shit_1_1_sprite_sheet.html#a66bd8056aa42395bc44c2824eeb7d0a0":[1,0,0,52,16],
+"class_shit_1_1_sprite_sheet.html#a66bd8056aa42395bc44c2824eeb7d0a0":[2,0,0,52,16],
+"class_shit_1_1_sprite_sheet.html#a6b72e2634e52bca5934299ffd9d455e8":[1,0,0,52,6],
+"class_shit_1_1_sprite_sheet.html#a6b72e2634e52bca5934299ffd9d455e8":[2,0,0,52,6],
+"class_shit_1_1_sprite_sheet.html#a74be57bd40687e061c6c3cc2246ad63c":[1,0,0,52,9],
+"class_shit_1_1_sprite_sheet.html#a74be57bd40687e061c6c3cc2246ad63c":[2,0,0,52,9],
+"class_shit_1_1_sprite_sheet.html#a7df2cb572cdb9d70c10eef65798c0881":[1,0,0,52,13],
+"class_shit_1_1_sprite_sheet.html#a7df2cb572cdb9d70c10eef65798c0881":[2,0,0,52,13],
+"class_shit_1_1_sprite_sheet.html#a84593b69dee341df0b48441f2fdd9e58":[1,0,0,52,15],
+"class_shit_1_1_sprite_sheet.html#a84593b69dee341df0b48441f2fdd9e58":[2,0,0,52,15],
 "class_shit_1_1_sprite_sheet.html#a8a6293e1f2b6fb2f50b41e5d38110ae8":[1,0,0,52,7],
 "class_shit_1_1_sprite_sheet.html#a8a6293e1f2b6fb2f50b41e5d38110ae8":[2,0,0,52,7],
 "class_shit_1_1_sprite_sheet.html#a99abb798e1f923f27926f1eade34ba76":[1,0,0,52,17],
@@ -239,15 +249,5 @@ var NAVTREEINDEX5 =
 "class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8":[1,0,0,62,1],
 "class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8":[2,0,0,62,1],
 "class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8a128f36ec46f7ca11bafb48cd2022a54c":[1,0,0,62,1,1],
-"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8a128f36ec46f7ca11bafb48cd2022a54c":[2,0,0,62,1,1],
-"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8a960b44c579bc2f6818d2daaf9e4c16f0":[1,0,0,62,1,0],
-"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8a960b44c579bc2f6818d2daaf9e4c16f0":[2,0,0,62,1,0],
-"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8ab9f5c797ebbf55adccdd8539a65a0241":[1,0,0,62,1,3],
-"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8ab9f5c797ebbf55adccdd8539a65a0241":[2,0,0,62,1,3],
-"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8ad78a68f6a85421ae121c2cb5b73a1040":[1,0,0,62,1,2],
-"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8ad78a68f6a85421ae121c2cb5b73a1040":[2,0,0,62,1,2],
-"class_shit_1_1_u_i_button.html#a816248a75d12c6837a7cc23529e9cba2":[1,0,0,62,14],
-"class_shit_1_1_u_i_button.html#a816248a75d12c6837a7cc23529e9cba2":[2,0,0,62,14],
-"class_shit_1_1_u_i_button.html#a8adfbd30b2a9f46af502431a87662a5f":[1,0,0,62,3],
-"class_shit_1_1_u_i_button.html#a8adfbd30b2a9f46af502431a87662a5f":[2,0,0,62,3]
+"class_shit_1_1_u_i_button.html#a5d74787dedbc4e11c1ab15bf487e61f8a128f36ec46f7ca11bafb48cd2022a54c":[2,0,0,62,1,1]
 };

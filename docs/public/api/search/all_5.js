@@ -43,10 +43,11 @@ var searchData=
   ['foreach_40',['ForEach',['../class_shit_1_1_type_registry.html#a95d41ba8e879cbd5ed1eb9d1967587d8',1,'Shit::TypeRegistry']]],
   ['foreach_41',['forEach',['../class_shit_1_1_type_registry.html#ab741f61fd936cb1fea75d452931d33ea',1,'Shit::TypeRegistry']]],
   ['foreachcomponent_42',['forEachComponent',['../class_shit_1_1_game_object.html#a83fda332b3e926aae80bd38bb1766aad',1,'Shit::GameObject']]],
-  ['frameheight_43',['frameHeight',['../struct_shit_1_1_animation_clip.html#a56bc3cb64fa74f13ecdf031d44e15a78',1,'Shit::AnimationClip']]],
-  ['frames_44',['frames',['../struct_shit_1_1_animation_clip.html#a9c46f523f87401a418d5f261ea2b72ea',1,'Shit::AnimationClip']]],
-  ['framewidth_45',['frameWidth',['../struct_shit_1_1_animation_clip.html#a4ee78e8942a842be44aa8592bca6a979',1,'Shit::AnimationClip']]],
-  ['fromjson_46',['FromJson',['../class_shit_1_1_prefab.html#a7799270796d824226f9daafb14463bad',1,'Shit::Prefab']]],
-  ['fromjson_47',['fromJson',['../struct_shit_1_1_animation_clip.html#af45795b6689ae3e529abe569e6ef7fd7',1,'Shit::AnimationClip::fromJson()'],['../class_shit_1_1_scene_serializer.html#a92d24a1b1e91ebe5c228b9eb5d879409',1,'Shit::SceneSerializer::fromJson()']]],
-  ['fromstate_48',['fromState',['../struct_shit_1_1_animator_transition.html#a04d785214421919229777e3019b05a78',1,'Shit::AnimatorTransition']]]
+  ['framedurations_43',['frameDurations',['../struct_shit_1_1_animation_clip.html#a75386ce23f4b4d3e0c73fcbb05a45b10',1,'Shit::AnimationClip']]],
+  ['frameheight_44',['frameHeight',['../struct_shit_1_1_animation_clip.html#a56bc3cb64fa74f13ecdf031d44e15a78',1,'Shit::AnimationClip']]],
+  ['frames_45',['frames',['../struct_shit_1_1_animation_clip.html#a9c46f523f87401a418d5f261ea2b72ea',1,'Shit::AnimationClip']]],
+  ['framewidth_46',['frameWidth',['../struct_shit_1_1_animation_clip.html#a4ee78e8942a842be44aa8592bca6a979',1,'Shit::AnimationClip']]],
+  ['fromjson_47',['FromJson',['../class_shit_1_1_prefab.html#a7799270796d824226f9daafb14463bad',1,'Shit::Prefab']]],
+  ['fromjson_48',['fromJson',['../struct_shit_1_1_animation_clip.html#af45795b6689ae3e529abe569e6ef7fd7',1,'Shit::AnimationClip::fromJson()'],['../class_shit_1_1_scene_serializer.html#a92d24a1b1e91ebe5c228b9eb5d879409',1,'Shit::SceneSerializer::fromJson()']]],
+  ['fromstate_49',['fromState',['../struct_shit_1_1_animator_transition.html#a04d785214421919229777e3019b05a78',1,'Shit::AnimatorTransition']]]
 ];

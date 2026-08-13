@@ -4,6 +4,7 @@ var struct_shit_1_1_animation_clip =
     [ "toJson", "struct_shit_1_1_animation_clip.html#a098007f3dd2a938824a819aa09423ca9", null ],
     [ "cols", "struct_shit_1_1_animation_clip.html#a4407a60bc4387adae24cee658711f2d9", null ],
     [ "duration", "struct_shit_1_1_animation_clip.html#a66625d8d6c0894b4828b43f826a09b8f", null ],
+    [ "frameDurations", "struct_shit_1_1_animation_clip.html#a75386ce23f4b4d3e0c73fcbb05a45b10", null ],
     [ "frameHeight", "struct_shit_1_1_animation_clip.html#a56bc3cb64fa74f13ecdf031d44e15a78", null ],
     [ "frames", "struct_shit_1_1_animation_clip.html#a9c46f523f87401a418d5f261ea2b72ea", null ],
     [ "frameWidth", "struct_shit_1_1_animation_clip.html#a4ee78e8942a842be44aa8592bca6a979", null ],
