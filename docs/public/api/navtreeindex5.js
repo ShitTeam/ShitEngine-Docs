@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"class_shit_1_1_sprite_sheet.html#a020bc01fe5af38371c152924e10e817e":[1,0,0,52,5],
+"class_shit_1_1_sprite_sheet.html#a020bc01fe5af38371c152924e10e817e":[2,0,0,52,5],
 "class_shit_1_1_sprite_sheet.html#a1211c84bcbcd2d5acaa530e76d7b58d7":[1,0,0,52,12],
 "class_shit_1_1_sprite_sheet.html#a1211c84bcbcd2d5acaa530e76d7b58d7":[2,0,0,52,12],
 "class_shit_1_1_sprite_sheet.html#a15dbe8362fb658e89feacb5e7bae3ef3":[1,0,0,52,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "class_shit_1_1_type_registry.html#afa246c7edbd1f16b730d6f5bf30b11e4":[1,0,0,61,6],
 "class_shit_1_1_type_registry.html#afa246c7edbd1f16b730d6f5bf30b11e4":[2,0,0,61,6],
 "class_shit_1_1_type_registry.html#affa6bce88f1ce899fd0d3b5cd17f5310":[1,0,0,61,14],
-"class_shit_1_1_type_registry.html#affa6bce88f1ce899fd0d3b5cd17f5310":[2,0,0,61,14],
-"class_shit_1_1_u_i_button.html":[1,0,0,62],
-"class_shit_1_1_u_i_button.html":[2,0,0,62]
+"class_shit_1_1_type_registry.html#affa6bce88f1ce899fd0d3b5cd17f5310":[2,0,0,61,14]
 };

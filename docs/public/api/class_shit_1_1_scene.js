@@ -9,6 +9,7 @@ var class_shit_1_1_scene =
     [ "containsGameObject", "class_shit_1_1_scene.html#a4df86bf18be1baecc1768d2a53d7c591", null ],
     [ "createGameObject", "class_shit_1_1_scene.html#a9f4ae128a66f2c918b57e58ed9534677", null ],
     [ "destroy", "class_shit_1_1_scene.html#aed2d208f4d304cc6def0a15b73f115bf", null ],
+    [ "flushPendingSystemRemovals", "class_shit_1_1_scene.html#a8e1fc2ada5d0551d8f645a6387d38068", null ],
     [ "getGameObjects", "class_shit_1_1_scene.html#ae81a7db40b4b7cdc5f0b037e999fd560", null ],
     [ "getGeneration", "class_shit_1_1_scene.html#a09c903ef22a1fcd1e672368ffc96f0f0", null ],
     [ "getName", "class_shit_1_1_scene.html#a3fd7335faa33dce2f87c7e50eef3e294", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"class_shit_1_1_u_i_text_input.html#a94a13b425cc5cd8b1392f0f7fa30fdb1":[1,0,0,70,32],
+"class_shit_1_1_u_i_text_input.html#a94a13b425cc5cd8b1392f0f7fa30fdb1":[2,0,0,70,32],
 "class_shit_1_1_u_i_text_input.html#a96669b3101e41160a45755dd7e67e589":[1,0,0,70,50],
 "class_shit_1_1_u_i_text_input.html#a96669b3101e41160a45755dd7e67e589":[2,0,0,70,50],
 "class_shit_1_1_u_i_text_input.html#a980e3cb951c3d50008c4e6ba92ac9074":[1,0,0,70,46],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da2d9f557d86388fe13895e0245e7d6592":[1,0,0,79,119],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da2e4d11b4925221b71e5954c1343a2e9e":[1,0,0,79,97],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da33a469d9c6424719d4912a23e94d3319":[1,0,0,79,84],
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0da358cfe58715d680d9ab09f82e4010cbc":[1,0,0,79,53],
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0da37f438df6a6d5ba4c17ef8ca58562f00":[1,0,0,79,59],
-"namespace_shit.html#a94b769a2899b14202ace87b550519a0da3a3ea00cfc35332cedf6e5e9a32e94da":[1,0,0,79,5]
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da358cfe58715d680d9ab09f82e4010cbc":[1,0,0,79,53]
 };

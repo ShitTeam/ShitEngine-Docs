@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da37f438df6a6d5ba4c17ef8ca58562f00":[1,0,0,79,59],
+"namespace_shit.html#a94b769a2899b14202ace87b550519a0da3a3ea00cfc35332cedf6e5e9a32e94da":[1,0,0,79,5],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da3c07283997c5468041e4c4cd6de71a41":[1,0,0,79,117],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da3d548437292c0cd1662fc30d420f2c27":[1,0,0,79,94],
 "namespace_shit.html#a94b769a2899b14202ace87b550519a0da44c29edb103a2872f519ad0c9a0fdaaa":[1,0,0,79,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "struct_shit_1_1_field_info.html#a854352f53b148adc24983a58a1866d66":[2,0,0,28,9],
 "struct_shit_1_1_field_info.html#a9b45b3e13bd9167aab02e17e08916231":[1,0,0,28,6],
 "struct_shit_1_1_field_info.html#a9b45b3e13bd9167aab02e17e08916231":[2,0,0,28,6],
-"struct_shit_1_1_field_info.html#aadb6d6eb83e646653a1402032e45dcab":[1,0,0,28,7],
-"struct_shit_1_1_field_info.html#aadb6d6eb83e646653a1402032e45dcab":[2,0,0,28,7],
-"struct_shit_1_1_field_info.html#ae798b5109d23cfc98128b29520eef49d":[1,0,0,28,5]
+"struct_shit_1_1_field_info.html#aadb6d6eb83e646653a1402032e45dcab":[1,0,0,28,7]
 };

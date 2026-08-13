@@ -212,6 +212,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:aaa2905802c15d90211f36868c47ee05c"><td class="mdescLeft">&#160;</td><td class="mdescRight">调整系统优先级（即时生效，下一帧 update 前重排序）  <br /></td></tr>
 <tr class="memitem:a17b9173946656f2f73f23886fb6188cf" id="r_a17b9173946656f2f73f23886fb6188cf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a17b9173946656f2f73f23886fb6188cf">unregisterSystemsBySource</a> (const std::string &amp;source)</td></tr>
 <tr class="memdesc:a17b9173946656f2f73f23886fb6188cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载指定来源注册的所有系统（插件卸载前调用，防止卸载 DLL 后 vtable 悬垂）  <br /></td></tr>
+<tr class="memitem:a8e1fc2ada5d0551d8f645a6387d38068" id="r_a8e1fc2ada5d0551d8f645a6387d38068"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8e1fc2ada5d0551d8f645a6387d38068">flushPendingSystemRemovals</a> ()</td></tr>
+<tr class="memdesc:a8e1fc2ada5d0551d8f645a6387d38068"><td class="mdescLeft">&#160;</td><td class="mdescRight">立即处理待移除系统队列（热重载卸载 DLL 前调用，确保 vtable 悬垂前销毁系统）  <br /></td></tr>
 <tr class="memitem:a3fd7335faa33dce2f87c7e50eef3e294" id="r_a3fd7335faa33dce2f87c7e50eef3e294"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3fd7335faa33dce2f87c7e50eef3e294">getName</a> () const</td></tr>
 <tr class="memitem:ae81a7db40b4b7cdc5f0b037e999fd560" id="r_ae81a7db40b4b7cdc5f0b037e999fd560"><td class="memItemLeft">std::vector&lt; std::unique_ptr&lt; <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae81a7db40b4b7cdc5f0b037e999fd560">getGameObjects</a> ()</td></tr>
 <tr class="memitem:a9d3a2685df23b5e7cbf59c19c4a1f9b5" id="r_a9d3a2685df23b5e7cbf59c19c4a1f9b5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9d3a2685df23b5e7cbf59c19c4a1f9b5">setName</a> (const std::string &amp;name)</td></tr>
@@ -433,6 +435,25 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>销毁所有对象与系统 </p>
+
+</div>
+</div>
+<a id="a8e1fc2ada5d0551d8f645a6387d38068" name="a8e1fc2ada5d0551d8f645a6387d38068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e1fc2ada5d0551d8f645a6387d38068">&#9670;&#160;</a></span>flushPendingSystemRemovals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void flushPendingSystemRemovals </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>立即处理待移除系统队列（热重载卸载 DLL 前调用，确保 vtable 悬垂前销毁系统） </p>
 
 </div>
 </div>
