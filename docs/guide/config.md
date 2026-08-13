@@ -7,7 +7,20 @@ lang: zh_CN
 
 > 不改代码就能改游戏参数——这就是配置系统的意义。
 
-ShitEngine 使用一个 JSON 文件来管理项目、窗口和输入映射配置。没有配置文件时，引擎会用默认值正常运行。
+ShitEngine 使用 JSON 文件管理项目、窗口和输入映射配置。没有配置文件时，引擎会用默认值正常运行。
+
+引擎读取两个文件（均位于可执行文件同目录），**`config.json` 的 `inputMappings` 会覆盖 `settings.json`**：
+
+| 文件 | 内容 | 谁生成 |
+|---|---|---|
+| `settings.json` | 窗口 / 项目 / 输入映射（可选，缺失用默认值） | 手写 |
+| `config.json` | `scene`（启动场景）、`plugins`（插件 DLL）、`engine.sdkDir`、`inputMappings` | 编辑器「项目设置」/ 导出游戏自动生成 |
+
+---
+
+## 编辑器项目 config.json
+
+编辑器「文件 → 项目设置…」把项目名、SDK 目录、启动场景、输入映射写入项目的 `config.json`；「导出游戏」也会自动生成一份（scene / plugins / inputMappings）。Runtime 启动时读 `config.json` 顶层 `"scene"` 字段 → `SceneManager::LoadSceneFromFile`，`inputMappings` 与 `settings.json` 同构合并（编程者手写 `settings.json` 时可以直接用下面的 `inputMappings` 段）。
 
 ---
 

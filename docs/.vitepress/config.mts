@@ -30,6 +30,7 @@ export default defineConfig({
       {
         text: '手册',
         items: [
+          { text: '可视化编辑器', link: '/guide/editor' },
           { text: '游戏对象与组件', link: '/guide/game-objects' },
           { text: '场景与系统', link: '/guide/scene' },
           { text: 'UI 系统', link: '/guide/ui' },

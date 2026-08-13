@@ -62,10 +62,14 @@ go->isNeedDestroy();     // 是否已被标记
 | **SpriteRenderer** | 渲染精灵纹理，支持源矩形裁剪与水平翻转 |
 | **CameraComponent** | 定义视口与缩放，控制视角 |
 | **AnimationComponent** | 逐帧动画驱动，基于 SpriteSheet 自动回写源矩形 |
+| **Animator** | 动画状态机：状态 + 转换 + float/bool/trigger 参数驱动 |
+| **Tilemap** | 瓦片地图：网格铺排瓦片集纹理，随 .scene 序列化 |
 | **Behavior** | 供你继承写自定义脚本 |
 | **RigidBody2D** | 2D 物理刚体（Static / Kinematic / Dynamic） |
 | **BoxCollider2D** | 矩形碰撞体（像素尺寸） |
 | **CircleCollider2D** | 圆形碰撞体（像素半径） |
+| **Joint2D** | 2D 关节（Distance / Revolute / Weld / Prismatic），连接两个刚体 |
+| **AudioSource** | 场景音频播放（挂载即播，可序列化） |
 | **UITransform** | UI 屏幕空间定位（锚点 + 轴心 + 尺寸） |
 | **UIImage** | UI 图片显示控件，支持颜色叠加 |
 | **UIText** | UI 文字显示控件（SDL_ttf 渲染） |
@@ -222,19 +226,49 @@ auto enemyPrefab = Shit::Prefab::Capture(enemyGO);
 // ② 批量实例化：反射工厂重建组件，字段值保持一致
 auto* e1 = enemyPrefab.instantiate(scene, "enemy_1");
 auto* e2 = enemyPrefab.instantiate(scene, "enemy_2");
-auto* e3 = enemyPrefab.instantiate(scene, "enemy_3");
+
+// 序列化 / 反序列化（可落盘成 .prefab 资产）
+std::string jsonStr = enemyPrefab.toJson().dump();
+auto prefab2 = Shit::Prefab::FromJson(nlohmann::json::parse(jsonStr));
 ```
 
-序列化 / 反序列化（可落盘，编辑器保存/加载预制体）：
-
-```cpp
-std::string jsonStr = enemyPrefab.toJson().dump();      // 序列化
-auto prefab2 = Shit::Prefab::FromJson(nlohmann::json::parse(jsonStr));  // 反序列化
-```
-
-- 捕获全部反射组件（跳过 `readOnly` 运行时状态与不可序列化类型）
+- 捕获全部反射组件（跳过 `SHIT_META(Disable)` 运行时状态与不可序列化类型）
 - `Vector2` / `Color` / 数值 / 字符串 / 枚举 均可序列化
 - 实例化后自动确保有 `TransformComponent`
+- 组件有跨编辑会话稳定的 **UUID**（随 `.scene` 落盘）；`ComponentRef<T>` 引用字段存 UUID 懒解析
+
+### .prefab 资产与编辑器
+
+编辑器场景树右键「存为预置…」把选中对象**含子树**存为 `.prefab` 文件（格式与 `.scene` 同构）；资源窗口双击 / 拖入视口即实例化（重名自动去重后缀、拖入落点定位、自动选中）。你的插件 DLL 里用 `SHIT_REFLECT` 标记的行为组件同样可进预制体。
+
+## 组件引用（ComponentRef）— 跨对象引用字段
+
+`ComponentRef<T>` 是**可序列化的组件引用**：字段只存目标组件的持久 UUID，`get()` 时经当前场景的 uuid 索引懒解析。目标组件被移除/对象销毁后返回 `nullptr`——**永不悬垂**（与 `WeakComponentRef` 会话期弱引用互补）。
+
+```cpp
+class Coin : public Shit::Behavior {
+    SHIT_REFLECT_BODY(Coin)
+public:
+    // 扫描器自动识别为"引用字段"：编辑器渲染为拖拽引用控件、序列化存 UUID
+    SHIT_META(({.displayName = "计数文本"}))
+    Shit::ComponentRef<Shit::UIText> coinText;
+
+    void onUpdate() override {
+        if (auto t = coinText.get())       // 目标销毁后自动失效，判空即可
+            t->setText("金币: " + std::to_string(m_count));
+    }
+private:
+    SHIT_META(Disable)
+    int m_count = 0;
+};
+```
+
+- 编辑器里组件标题栏可拖拽赋值，也可从**场景树拖对象**进引用控件（自动挑第一个类型可赋值的组件，沿反射基类链校验）
+- 引用仅限同一场景（UUID 索引挂在 Scene 上），跨场景解析为 null；运行时实例化不恢复记录 ID，防复制实例串线
+
+## 反序列化钩子（onAfterDeserialize）
+
+反射直写字段会"绕过" setter——需要重建内部状态的组件可实现 `onAfterDeserialize()`（`SceneSerializer` 加载/撤销恢复时逐组件调用）与 `onFieldChanged(fieldName)`（检查器直写后回调）。典型用法：把反射字符串载体解析进运行时容器（如 `Tilemap::m_gridData` → 网格、`Animator::m_animatorData` → 状态机、`AnimationComponent::m_clipsData` → 剪辑表）。
 
 ---
 

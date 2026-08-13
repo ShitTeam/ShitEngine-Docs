@@ -26,7 +26,7 @@ ShitEngine 的输入系统基于 SDL3 事件，提供**两层 API**：
 
 ### 配置文件
 
-`settings.json` 的 `inputMappings` 段：
+映射写在 `settings.json` 的 `inputMappings` 段（项目工作流下写在 `config.json` 的同名段，引擎合并读取、后者覆盖前者，编辑器「项目设置」页可视化编辑）：
 
 ```json
 {

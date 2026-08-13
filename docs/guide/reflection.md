@@ -239,6 +239,20 @@ for (auto& v : ti->enumValues)
 | `UITextInput` | `m_isFocused`, `m_isMultiline`, `m_fontHeight`, `m_isDirty`, `m_cursor`, `m_selectionAnchor`, `m_preedit`, `m_preeditStart`, `m_preeditLength` | `m_text`, `m_placeholder`, `m_fontPath`, `m_fontSize`, `m_textColor`, `m_placeholderColor`, `m_cursorColor`, `m_selectionColor` |
 | `UITextArea` | `m_scrollY` | — |
 | `UITextBox` | — | `m_characterLimit` |
+| `Tilemap` | `m_tiles`（运行时网格） | `m_texturePath`, `m_tileWidth/Height`, `m_gridWidth/Height`, `m_tileWorldSize`, `m_gridData` |
+| `Animator` | 状态/参数/转换容器、当前状态、`m_dataGeneration` | `m_animatorData`（状态机 JSON 载体）、`m_currentStateDisplay`（readOnly） |
+| `AnimationComponent` | 运行时动画表 | `m_clipsData`（剪辑 JSON 载体）、只读展示字段 |
+| `Joint2D` | `m_jointIndex/World0/Generation`、`m_jointValid` | `m_type`, `m_connectedBody`（引用字段）, `m_anchor`, 各关节参数 |
+| `AudioSource` | `m_track`（运行时句柄） | `m_audioPath`, `m_loop`, `m_volume`, `m_playOnStart` |
+
+## 序列化注意事项
+
+引擎的序列化（Prefab / `.scene` / 检查器）基于反射字段，有几个约定：
+
+- **引用字段**：`ComponentRef<T>`（存目标组件 UUID，懒解析、永不悬垂）被扫描器自动识别为引用字段（`FieldInfo::refType`），检查器渲染为拖拽引用控件、序列化存 UUID。见[游戏对象与组件](/guide/game-objects)
+- **可变长度容器**：反射不支持 `std::vector` 等动态容器字段（按 offset+size+memcpy 处理固定 POD）。惯用法是"**序列化载体字符串**"——容器字段标 `SHIT_META(Disable)`（运行时高效存储），另配一个反射 `std::string` 字段作持久化载体（如 Tilemap 的 `m_gridData`、Animator 的 `m_animatorData`、AnimationComponent 的 `m_clipsData`），`onAfterDeserialize` / `onFieldChanged` 双向同步
+- **`readOnly` 陷阱**：标 `readOnly` 的字段会被 Prefab 序列化**跳过**——需要落盘的数据即使不该在编辑器编辑，也不能标 `readOnly`（改用 `SHIT_META(Disable)` 排除或用只读展示字段）
+- 修改带反射宏的头文件后需重新生成 `.gen.h`（`BUILD_TOOLS=ON` 构建时自动，否则 `cmake --build . --target run-reflectionscanner`）
 
 ## 编译期校验（Static Assertions）
 

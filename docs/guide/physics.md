@@ -11,13 +11,14 @@ ShitEngine 集成了 [Box2D 3.1.1](https://box2d.org/)（C 语言重写版），
 
 ## 启用物理
 
-`PhysicsSystem2D` 是可选的系统，不会在 `Scene::init()` 中自动注册。按需添加：
+`PhysicsSystem2D` 是可选的系统，但**自愈注册**——首个 `RigidBody2D` 挂载时自动 `registerSystem<PhysicsSystem2D>()`，无需手动注册：
 
 ```cpp
+// 手动显式注册（可选；不注册会在第一个刚体挂载时自动拉起）
 scene->registerSystem<Shit::PhysicsSystem2D>();
 ```
 
-注册后系统自动拥有 `b2World`，每帧步进并同步 Transform。
+物理系统同样兼容"先加组件、后注册系统"（系统注册时重扫未注册组件）；`.scene` 组件顺序不定（Transform 晚于刚体反序列化）时，`update()` 每帧补建已注册未建体的刚体，物理 API 调用前也自愈建体——`onStart` 里调物理 API 不会落空。
 
 ## 核心组件
 
@@ -26,6 +27,7 @@ scene->registerSystem<Shit::PhysicsSystem2D>();
 | `RigidBody2D` | 刚体（Static / Kinematic / Dynamic） |
 | `BoxCollider2D` | 盒子碰撞体（像素尺寸） |
 | `CircleCollider2D` | 圆形碰撞体（像素半径） |
+| `Joint2D` | 关节：连接本对象刚体与另一刚体（Distance / Revolute / Weld / Prismatic） |
 
 ### 生命周期
 
@@ -165,6 +167,55 @@ auto* sr = box->addComponent<Shit::SpriteRenderer>();
 sr->setTexturePath("resource/box.png");
 ```
 
+## 关节（Joint2D）
+
+`Joint2D` 组件把本对象刚体（bodyA）与 `connectedBody` 引用刚体（bodyB）用 Box2D 约束连接。必须挂在一个已挂 `RigidBody2D` 的 GameObject 上：
+
+```cpp
+auto* joint = go->addComponent<Shit::Joint2D>();
+joint->setType(Shit::JointType::Revolute);   // 铰链
+joint->setConnectedBody(otherBody);           // 或反射字段在检查器里拖拽赋值
+joint->setAnchor({400, 100});                // 世界锚点（像素）
+```
+
+`JointType` 反射枚举四种：
+
+| 类型 | 行为 | 主要参数 |
+|---|---|---|
+| `Distance` | 距离关节：保持两锚点间距离，可做**弹簧** | `Length` / `Spring`（Hertz + Damping Ratio） |
+| `Revolute` | 铰链：两刚体绕锚点相对旋转（门/轮子） | `Motor`（速度 + 最大扭矩）/ `Limit`（角度上下限） |
+| `Weld` | 焊接：把两刚体刚性连在一起（软体） | — |
+| `Prismatic` | 滑动：沿局部轴相对滑动（活塞/滑轨） | `AxisAngle` / 滑动上下限 / 电机力 |
+
+- 目标刚体未就绪时**每帧补建**（自愈，同刚体语义）；字段改动 / 类型切换经 `rebuildJoint` 销毁重建
+- `connectedBody` 是 `ComponentRef<RigidBody2D>` 引用字段——检查器拖拽赋引用、序列化存 UUID、目标销毁自动失效，`.scene` 可完整保存/加载关节
+- 编辑器「碰撞体」调试开关会同时绘制关节青色连接线 + 锚点圆点
+
+完整示例见 `Examples/scenes/JointTest.scene`。
+
+## 碰撞回调
+
+物理步进后按**接触对**驱动接触双方的 `Behavior` 回调（仅已启动行为）：
+
+```cpp
+class BallDemo : public Shit::Behavior {
+    SHIT_REFLECT_BODY(BallDemo)
+    void onCollisionEnter(Shit::GameObject* other) override {
+        Shit::ST_INFO("开始接触: {}", other->getName());
+    }
+    void onCollisionStay(Shit::GameObject* other) override {
+        // 每帧一次
+    }
+    void onCollisionExit(Shit::GameObject* other) override {
+        Shit::ST_INFO("结束接触: {}", other->getName());
+    }
+};
+```
+
+- 用 Box2D Begin/End 接触事件驱动：新接触 → `Enter`（每对象对一次）、持续 → `Stay`（每帧）、结束 → `Exit`；接触重建/休眠唤醒不重复 Enter
+- 回调内可安全销毁对象 / 移除组件（播放态延时删除 + 派发前逐对校验 + 逐轮重扫）
+- 刚体 / 碰撞体销毁时自动清理接触集合
+
 ## 底层 API 访问
 
 各组件通过 getter 方法暴露底层 Box2D 句柄的拆解字段，用于高级操作：
@@ -174,11 +225,11 @@ sr->setTexturePath("resource/box.png");
 
 若需要 Box2D 原生 API（关节、射线检测、传感器等），在 `.cpp` 中包含 `<box2d/box2d.h>` 并用拆解字段重构 ID。
 
-## 进阶（v1 范围外）
+## 已内置的进阶能力
 
 | 功能 | 说明 |
 |---|---|
-| 关节（Joint） | 距离/旋转/马达关节 → 自行调 Box2D API |
-| 碰撞事件 | `b2World_GetContactEvents()` → v2 内置 |
-| 碰撞分组 | `b2Filter` → v2 暴露 |
-| debug draw | `b2World_Draw()` → v2 集成 |
+| 关节（Joint） | `Joint2D` 组件：Distance / Revolute / Weld / Prismatic，见上文 |
+| 碰撞事件 | `Behavior::onCollisionEnter/Stay/Exit`，见上文 |
+| debug draw | 编辑器视口「碰撞体」开关绘制碰撞体轮廓 + 关节连线 |
+| 传感器 / 碰撞分组 | 需要 Box2D 原生 API：在 `.cpp` 中包含 `<box2d/box2d.h>`，用 `getBodyIndex()` 等拆解字段重构 `b2BodyId` |

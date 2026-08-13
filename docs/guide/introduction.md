@@ -18,7 +18,9 @@ ShitEngine 是一个基于 **C++20** 的轻量级 2D 游戏引擎。它不依赖
 
 从 GitHub Release 下载对应平台的预编译包解压即得 ShitEngine SDK（引擎库 + 头文件 + CMake 配置），`find_package` 一行接入，SDL3 等第三方依赖全部自带。不需要源码编译、不需要开会对齐环境。
 
-> 🚧 **ShitEngine 编辑器（开发中）**：未来的开发方式是通过 SDK 附带的编辑器创建与管理项目，像 Unity/Godot 一样可视化开发，无需手写 CMake。
+**因为编辑器开箱即用。**
+
+SDK 附带 Qt 可视化编辑器：场景树、属性检查器、双视口、Gizmo、撤销/重做、Unity 式播放态、动画状态机图、瓦片刷图、一键导出游戏——搭场景不用手写一行代码；C++ 行为脚本写好按 `Ctrl+B` 热重载进编辑器。详见[可视化编辑器](/guide/editor)。
 
 ## 核心架构
 
@@ -41,11 +43,15 @@ auto* player = scene->createGameObject("player");
 - `SpriteRenderer` — 你长什么样、画什么纹理
 - `CameraComponent` — 从哪个角度观察世界
 - `AnimationComponent` — 让 sprite 动起来
+- `Animator` — 参数驱动的动画状态机（状态/转换/float·bool·trigger）
+- `Tilemap` — 瓦片地图（网格刷图、.scene 序列化）
 - `Behavior` — 你自己的游戏逻辑——继承它，重写 `onUpdate`
 - `UITransform` / `UIImage` / `UIText` — UI 控件三件套
 - `UIButton` — 可交互按钮
 - `UITextBox` / `UITextArea` — 文本输入（含 IME 中文）
 - `RigidBody2D` / `BoxCollider2D` / `CircleCollider2D` — 刚体和碰撞体
+- `Joint2D` — Box2D 关节（距离/铰链/焊接/滑动）
+- `AudioSource` — 挂载即播放的场景音频
 - 所有组件通过 `addComponent<T>()` 按类型索引，每种一个实例
 
 ### ⚙️ System — 车间流水线
@@ -74,14 +80,16 @@ ShitEngine 内置了一套**编译期反射系统**，通过 libClang 解析源�
 | **Renderer** | 逻辑分辨率、缩放、渲染 API 封装 |
 | **Time** | 告诉你上一帧花了多久（DeltaTime）|
 | **Input** | 键盘鼠标 Down / Pressed / Released 三态 + 动作轴映射 |
-| **Config** | `settings.json` 读配置，没有就默认 |
+| **Config** | `config.json` / `settings.json` 读配置，没有就默认 |
 | **ResourceManager** | 纹理/音频/字体自动缓存，不重复加载 |
 | **AudioPlayer** | 分层音频：master × group × track |
 | **EventBus** | 事件缓冲区，统一时刻派发 |
-| **SceneManager** | 单一当前场景 + LoadScene 切换 |
+| **SceneManager** | 单一当前场景 + LoadScene / LoadSceneFromFile 切换 |
+| **SceneSerializer** | `.scene` 文件的事实标准：反射 + JSON 序列化，编辑/运行/切关共用 |
+| **PluginManager** | 插件 DLL 加载/卸载与反射类型注册（Runtime 与编辑器共用）|
 | **EngineContext** | 持有全部子系统实例的容器，支持多实例（编辑器预览/测试）|
 | **ReflectionSystem** | 编译期解析 AST，运行时查询类型信息 |
-| **PhysicsSystem2D** | Box2D 封装：刚体、碰撞形状、积分器 |
+| **PhysicsSystem2D** | Box2D 封装：刚体、碰撞形状、关节、碰撞回调 |
 
 ### 🧰 EngineContext — 多实例引擎
 
@@ -111,6 +119,7 @@ Shit::EngineContext::setCurrent(&editorCtx); // 切回编辑器上下文
 | v1.1 | 基础架构：Game/Scene/Component/System、SDL3 渲染管线、输入、音频、配置 |
 | v1.2 | UI 系统：UITransform、UIImage/IUText、UIButton、UITextBox/UITextArea；物理系统（Box2D）；DLL 插件架构 |
 | v1.3 | 反射系统：SHIT_REFLECT/SHIT_ENUM、设计化的元数据、WhiteList/BlackList、static_assert 编译检查；SDL3 迁移 |
+| Unreleased | 可视化编辑器（项目系统/播放态/导出）、组件 UUID + ComponentRef 引用、Prefab/.scene 数据驱动、Tilemap 瓦片地图、Joint2D 关节、Animator 状态机 + Animator 窗口、帧动画 Animation 窗口、Unity 风格资源窗口 |
 
 ## 链接
 

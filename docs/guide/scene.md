@@ -41,6 +41,32 @@ class MyScene : public Shit::Scene {
 
 > **💡 v1.3+ 组件与系统解耦**：组件不再查询"哪个系统驱动我"。`Behavior`、`RendererComponent`、`RigidBody2D` 等组件挂载时通过 `Scene` 广播给所有系统，由系统用 `dynamic_cast` 认领自己关心的类型。因此**先加组件、后注册系统也能正确挂接**——系统注册时会重扫场景中未注册的组件。新增自定义系统时覆写 `System::onComponentAttached`/`onComponentDetached` 即可认领对应组件。
 
+## 场景文件（.scene）— 场景的事实标准
+
+> 场景**只来自 `.scene` 文件**：编辑器保存、Runtime 启动、关卡切换共用同一加载器 `SceneSerializer`（反射 + JSON，v2 层级格式），编辑结果与运行结果完全一致。
+
+`.scene` 格式与 Prefab 同构：根对象 + 按 `parent` 下标引用的层级 + 每对象一组反射序列化的组件字段。
+
+```json
+{
+  "version": 2,
+  "objects": [
+    { "name": "Main Camera", "parent": -1, "data": [
+        { "type": "CameraComponent", "fields": { "m_worldSize": [1280, 720], "m_zoom": 1.0 } },
+        { "type": "TransformComponent", "fields": { "m_position": [640, 360] } }
+    ] },
+    { "name": "player", "parent": -1, "data": [
+        { "type": "SpriteRenderer", "fields": { "m_texturePath": "resource/player.png" } }
+    ] }
+  ]
+}
+```
+
+- **加载**：`SceneManager::LoadSceneFromFile(path)` 从 `.scene` 加载并替换当前场景（Runtime 启动 / 关卡切换统一入口）；`config.json` 顶层 `"scene"` 字段指定启动场景，缺省空场景 + 默认相机
+- **序列化 API**：`SceneSerializer::toJson(Scene*)` / `fromJson(json, scene)` / `toJson(GameObject*)`（存单个对象含子树 → `.prefab` 资产），编辑器与导出游戏共用
+- **组件钩子**：加载时逐组件调 `onAfterDeserialize()`（重建绕过 setter 的内部状态）与 `onFieldChanged()`；加载后无已启用相机则自动补 `game_camera`
+- **可序列化字段**：只有 `SHIT_REFLECT` 标记的组件、反射字段会落盘；跨对象引用用 `ComponentRef<T>`（存 UUID）；可变长数据用反射字符串载体（如 Tilemap 网格、Animator 状态机）
+
 ## 场景管理
 
 SceneManager 持有**当前活跃场景**（单一场景模型，与 Unity/Godot 一致）。切换场景即销毁旧的、加载新的：
