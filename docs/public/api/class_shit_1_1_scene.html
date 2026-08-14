@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Scene类 参考</div></div>
+  <div class="headertitle"><div class="title">Scene类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -168,14 +168,14 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a022dd9625fc47205f10ec978727b90d0" id="r_a022dd9625fc47205f10ec978727b90d0"><td class="memItemLeft"><a class="el" href="#af054c02064ec2ebee723a6a651934aaa">Scene</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a022dd9625fc47205f10ec978727b90d0">operator=</a> (const <a class="el" href="#af054c02064ec2ebee723a6a651934aaa">Scene</a> &amp;)=delete</td></tr>
 <tr class="memitem:a91f30edc038f2faa6a57127cb69bb764" id="r_a91f30edc038f2faa6a57127cb69bb764"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a91f30edc038f2faa6a57127cb69bb764">Scene</a> (Scene &amp;&amp;)=delete</td></tr>
 <tr class="memitem:af09f0b2d48bd4461b96f47a768f4aa3a" id="r_af09f0b2d48bd4461b96f47a768f4aa3a"><td class="memItemLeft"><a class="el" href="#af054c02064ec2ebee723a6a651934aaa">Scene</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af09f0b2d48bd4461b96f47a768f4aa3a">operator=</a> (<a class="el" href="#af054c02064ec2ebee723a6a651934aaa">Scene</a> &amp;&amp;)=delete</td></tr>
-<tr class="memitem:a9339772ec5ac9fa929938109207f2863" id="r_a9339772ec5ac9fa929938109207f2863"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9339772ec5ac9fa929938109207f2863">init</a> ()</td></tr>
-<tr class="memdesc:a9339772ec5ac9fa929938109207f2863"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册默认系统（BehaviorSystem + <a class="el" href="class_shit_1_1_render_system.html" title="渲染系统">RenderSystem</a> + UIRenderSystem），幂等  <br /></td></tr>
+<tr class="memitem:a02fd73d861ef2e4aabb38c0c9ff82947" id="r_a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02fd73d861ef2e4aabb38c0c9ff82947">init</a> ()</td></tr>
+<tr class="memdesc:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册默认系统（BehaviorSystem + <a class="el" href="class_shit_1_1_render_system.html" title="渲染系统">RenderSystem</a> + UIRenderSystem），幂等  <br /></td></tr>
 <tr class="memitem:ac5c54df7ed3b930268c8d7752c101725" id="r_ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
 <tr class="memdesc:ac5c54df7ed3b930268c8d7752c101725"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新所有 <a class="el" href="class_shit_1_1_system.html" title="System 基类">System</a> + 处理延迟操作  <br /></td></tr>
-<tr class="memitem:aed2d208f4d304cc6def0a15b73f115bf" id="r_aed2d208f4d304cc6def0a15b73f115bf"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aed2d208f4d304cc6def0a15b73f115bf">destroy</a> ()</td></tr>
-<tr class="memdesc:aed2d208f4d304cc6def0a15b73f115bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁所有对象与系统  <br /></td></tr>
+<tr class="memitem:a3a80b6032f86a56bec74609034b3246f" id="r_a3a80b6032f86a56bec74609034b3246f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3a80b6032f86a56bec74609034b3246f">destroy</a> ()</td></tr>
+<tr class="memdesc:a3a80b6032f86a56bec74609034b3246f"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁所有对象与系统  <br /></td></tr>
 <tr class="memitem:a7904c998322c92e144f5dba063b17e11" id="r_a7904c998322c92e144f5dba063b17e11"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7904c998322c92e144f5dba063b17e11">hasSystems</a> () const</td></tr>
-<tr class="memdesc:a7904c998322c92e144f5dba063b17e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否已注册任何 System（SceneManager 用于自动初始化，防止漏调 <a class="el" href="#a9339772ec5ac9fa929938109207f2863" title="注册默认系统（BehaviorSystem + RenderSystem + UIRenderSystem），幂等">init()</a> 导致空场景）  <br /></td></tr>
+<tr class="memdesc:a7904c998322c92e144f5dba063b17e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否已注册任何 System（SceneManager 用于自动初始化，防止漏调 <a class="el" href="#a02fd73d861ef2e4aabb38c0c9ff82947" title="注册默认系统（BehaviorSystem + RenderSystem + UIRenderSystem），幂等">init()</a> 导致空场景）  <br /></td></tr>
 <tr class="memitem:a011567ea2e90782dc7cffbd962549f88" id="r_a011567ea2e90782dc7cffbd962549f88"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a011567ea2e90782dc7cffbd962549f88">addGameObject</a> (std::unique_ptr&lt; <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> &gt; &amp;&amp;gameObject)</td></tr>
 <tr class="memdesc:a011567ea2e90782dc7cffbd962549f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">延迟添加 GameObject（帧末生效）  <br /></td></tr>
 <tr class="memitem:a9f4ae128a66f2c918b57e58ed9534677" id="r_a9f4ae128a66f2c918b57e58ed9534677"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f4ae128a66f2c918b57e58ed9534677">createGameObject</a> (const std::string &amp;name)</td></tr>
@@ -412,27 +412,19 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="aed2d208f4d304cc6def0a15b73f115bf" name="aed2d208f4d304cc6def0a15b73f115bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed2d208f4d304cc6def0a15b73f115bf">&#9670;&#160;</a></span>destroy()</h2>
+<a id="a3a80b6032f86a56bec74609034b3246f" name="a3a80b6032f86a56bec74609034b3246f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a80b6032f86a56bec74609034b3246f">&#9670;&#160;</a></span>destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void destroy </td>
+          <td class="memname">void destroy </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>销毁所有对象与系统 </p>
@@ -669,31 +661,23 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>是否已注册任何 System（SceneManager 用于自动初始化，防止漏调 <a class="el" href="#a9339772ec5ac9fa929938109207f2863" title="注册默认系统（BehaviorSystem + RenderSystem + UIRenderSystem），幂等">init()</a> 导致空场景） </p>
+<p>是否已注册任何 System（SceneManager 用于自动初始化，防止漏调 <a class="el" href="#a02fd73d861ef2e4aabb38c0c9ff82947" title="注册默认系统（BehaviorSystem + RenderSystem + UIRenderSystem），幂等">init()</a> 导致空场景） </p>
 
 </div>
 </div>
-<a id="a9339772ec5ac9fa929938109207f2863" name="a9339772ec5ac9fa929938109207f2863"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9339772ec5ac9fa929938109207f2863">&#9670;&#160;</a></span>init()</h2>
+<a id="a02fd73d861ef2e4aabb38c0c9ff82947" name="a02fd73d861ef2e4aabb38c0c9ff82947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02fd73d861ef2e4aabb38c0c9ff82947">&#9670;&#160;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void init </td>
+          <td class="memname">void init </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>注册默认系统（BehaviorSystem + <a class="el" href="class_shit_1_1_render_system.html" title="渲染系统">RenderSystem</a> + UIRenderSystem），幂等 </p>
