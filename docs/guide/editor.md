@@ -120,8 +120,8 @@ MyGame/
 
 ## 动画窗口
 
-- **Animator 窗口**（「窗口 → Animator」，检查器 Animator 入口按钮触发）：Unity 风格状态机图——拖动节点重排（坐标随 `.scene` 保存）、右键勾连创建转换（空白引出 = 任意状态）、入口状态黄色标记、Any State 虚线节点、滚轮缩放；左侧参数面板（float / bool / trigger）、底部选中状态/转换属性（剪辑 + 帧序列 / from-to + 条件）；状态可引用 `.anim` 资产
-- **Animation 窗口**（「窗口 → Animation」，检查器 AnimationComponent 入口按钮触发）：独立 `.anim` 资产编辑器——精灵表面板网格点选帧、中央 **Dope Sheet 时间轴**（拖块排序、拉右缘调逐帧时长、双击移除）、播放预览；保存写 `.anim`，供 Animator 状态 / 运行时引用
+- **Animator 窗口**（「窗口 → Animator」，检查器 Animator 入口按钮触发）：Unity 风格状态机图——拖动节点重排（坐标随 `.scene` 保存）、右键勾连创建转换（空白引出 = 任意状态）、入口状态黄色标记、任意状态节点、滚轮缩放；左侧参数面板（float / bool / trigger）、底部选中状态/转换属性（名称 + 入口 + **`.anim` 剪辑资产（必选）** +「浏览…」/「打开」/ from-to + 条件）；状态**只引用 `.anim` 资产**（Unity 语义），内嵌剪辑编辑已移除——想改动画在 Animation 窗口编辑对应的 `.anim` 文件
+- **Animation 窗口**（「窗口 → Animation」，检查器 AnimationComponent 入口按钮触发）：独立 `.anim` 资产编辑器——精灵表面板网格点选帧、中央 **Dope Sheet 时间轴**（拖块排序、拉右缘调逐帧时长、双击移除）、播放预览；保存写 `.anim`，供 Animator 状态引用
 
 ## 导出游戏
 
