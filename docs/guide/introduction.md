@@ -88,7 +88,7 @@ ShitEngine 内置了一套**编译期反射系统**，通过 libClang 解析源�
 | **ResourceManager** | 纹理/音频/字体自动缓存，不重复加载 |
 | **AudioPlayer** | 分层音频：master × group × track |
 | **EventBus** | 事件缓冲区，统一时刻派发 |
-| **SceneManager** | 单一当前场景 + LoadScene / LoadSceneFromFile 切换 |
+| **SceneManager** | 单一当前场景 + LoadSceneFromFile 切换（唯一公开入口）|
 | **SceneSerializer** | `.scene` 文件的事实标准：反射 + JSON 序列化，编辑/运行/切关共用 |
 | **PluginManager** | 插件 DLL 加载/卸载与反射类型注册（Runtime 与编辑器共用）|
 | **EngineContext** | 持有全部子系统实例的容器，支持多实例（编辑器预览/测试）|

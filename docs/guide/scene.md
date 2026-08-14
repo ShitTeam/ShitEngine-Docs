@@ -15,20 +15,20 @@ lang: zh_CN
 创建 → init → update(每帧) → destroy → 销毁
 ```
 
+> 场景**只从 `.scene` 文件加载**——下面会看到，`SceneManager::LoadSceneFromFile` 是加载场景的唯一入口。
+
 出生：
 
 ```cpp
-auto scene = std::make_unique<Shit::Scene>("level1");
-scene->init();
+Shit::SceneManager::LoadSceneFromFile("Scenes/level1.scene");
 ```
 
-`init()` 帮你注册了三个默认系统：`BehaviorSystem`（跑脚本）、`RenderSystem`（画游戏世界）、`UIRenderSystem`（画 UI）。你要有自己的系统，就在这里注册。
+`LoadSceneFromFile` 内部会创建 `Scene` 对象、调用 `init()` 注册三个默认系统（`BehaviorSystem`、`RenderSystem`、`UIRenderSystem`），然后从文件反序列化所有对象和组件。
 
-> **💡 v1.3+**：`scene->init()` 现在是**可选**的。`SceneManager` 在 `LoadScene` 时若检测到场景还没有任何系统，会自动调用 `init()`——忘记调也不会得到空场景。`init()` 本身幂等，手动调用 + 自动调用不会重复注册系统。自定义 `init()` 覆写仍需调用父类 `Shit::Scene::init()` 以获得默认系统。
-
-如果你想在场景初始化时做点自己的事，继承它就行：
+如果你想在场景初始化时做点自己的事，可以继承 `Scene` 覆写 `init()`，但需要注册自定义类型并让 `SceneManager` 使用它——通常不必要，直接用 `.scene` 文件数据驱动即可：
 
 ```cpp
+// 自定义场景类（高级用法，多数项目不需要）
 class MyScene : public Shit::Scene {
     using Shit::Scene::Scene;
 
@@ -77,15 +77,15 @@ SceneManager 持有**当前活跃场景**（单一场景模型，与 Unity/Godot
 
 ```cpp
 // 加载主菜单
-Shit::SceneManager::LoadScene(std::move(menuScene));
+Shit::SceneManager::LoadSceneFromFile("Scenes/menu.scene");
 
 // 玩家点击"开始游戏"：切换场景（旧场景销毁）
-Shit::SceneManager::LoadScene(std::move(gameScene));
+Shit::SceneManager::LoadSceneFromFile("Scenes/game.scene");
 ```
 
-`LoadScene` 同帧生效，会自动 `init()` 未初始化的场景。
+`LoadSceneFromFile` 同帧生效，内部自动创建 Scene 对象、调用 `init()` 注册默认系统。
 
-> **⚠️ update 期间的 LoadScene 延迟生效**：若在场景 update 的某帧内（如 `Behavior::onUpdate`、按钮回调里）调用 `LoadScene`，切换会**推迟到本帧 update 结束后**才执行——防止当前场景在更新中途自毁导致 use-after-free。行为上仍是"同帧完成"，只是不中断正在执行的更新循环。
+> **⚠️ 加载场景延迟生效**：若在场景 update 的某帧内（如 `Behavior::onUpdate`、按钮回调里）调用 `LoadSceneFromFile`，切换会**推迟到本帧 update 结束后**才执行——防止当前场景在更新中途自毁导致 use-after-free。行为上仍是"同帧完成"，只是不中断正在执行的更新循环。
 
 ### 暂停
 
@@ -111,12 +111,11 @@ Shit::Game::SetPaused(false);
 **主菜单 → 游戏中 → 暂停 → 恢复**：
 
 ```cpp
-auto menu = std::make_unique<MenuScene>("menu");
-SceneManager::LoadScene(std::move(menu));
+SceneManager::LoadSceneFromFile("Scenes/menu.scene");
 Game::Run();
 
 // 玩家点了"开始"：
-SceneManager::LoadScene(std::make_unique<GameScene>("game"));
+SceneManager::LoadSceneFromFile("Scenes/game.scene");
 
 // 游戏中按 ESC：
 Game::SetPaused(true);                     // 冻结游戏

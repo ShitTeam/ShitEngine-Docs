@@ -429,7 +429,16 @@ int main() {
         input->setPlaceholder("Type here...");
     }
 
-    Shit::SceneManager::LoadScene(std::move(scene));
+    // 保存到临时 .scene 文件，通过 LoadSceneFromFile 加载（唯一公开入口）
+    std::error_code ec;
+    const std::filesystem::path tempPath = std::filesystem::temp_directory_path(ec) / "ui_example.scene";
+    {
+        std::ofstream ofs(tempPath.string());
+        ofs << Shit::SceneSerializer::toJson(scene.get()).dump(2);
+    }
+    Shit::SceneManager::LoadSceneFromFile(tempPath.string());
+    std::filesystem::remove(tempPath, ec);
+
     Shit::Game::Run();
     Shit::Game::Destroy();
     return 0;
