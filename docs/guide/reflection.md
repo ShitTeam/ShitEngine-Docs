@@ -245,6 +245,18 @@ for (auto& v : ti->enumValues)
 | `Joint2D` | `m_jointIndex/World0/Generation`、`m_jointValid` | `m_type`, `m_connectedBody`（引用字段）, `m_anchor`, 各关节参数 |
 | `AudioSource` | `m_track`（运行时句柄） | `m_audioPath`, `m_loop`, `m_volume`, `m_playOnStart` |
 
+## 反射任意类（不限于 Component）
+
+扫描器**不限制基类**——任何标了 `SHIT_REFLECT` 的类都会被注册（有默认构造即生成工厂）。`System` 基类已反射，`System` 派生类加反射标记后就能被编辑器「添加系统」菜单收集、在检查器里编辑字段、随 `.scene` 序列化：
+
+| 系统 | 禁用字段（SHIT_META(Disable)） | 编辑器可见字段 |
+|------|------|------|
+| `System`（基类） | `m_priority`, `m_scene` | —（WhiteList 无字段） |
+| `BehaviorSystem` / `RenderSystem` / `UIRenderSystem` | — | —（WhiteList 无字段，默认三系统） |
+| `PhysicsSystem2D` | `m_bodies`/`m_joints`/`m_activeContacts`/`m_accumulator`/`m_worldIndex`/`m_worldGeneration`/`m_initialized` | `m_gravity`（Vector2）, `m_pixelsPerMeter`（float） |
+
+系统字段被编辑器/反序列化写入后触发 `System::onFieldChanged(fieldName)`（类似组件的 `onFieldChanged`）——在其中把变更同步到运行时状态（如 `PhysicsSystem2D` 把重力写回 Box2D 世界）。自定义系统示例见[场景管理 · 写一个自己的系统](/guide/scene#写一个自己的系统)。
+
 ## 序列化注意事项
 
 引擎的序列化（Prefab / `.scene` / 检查器）基于反射字段，有几个约定：

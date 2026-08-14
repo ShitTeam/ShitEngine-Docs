@@ -58,6 +58,9 @@ class MyScene : public Shit::Scene {
     { "name": "player", "parent": -1, "data": [
         { "type": "SpriteRenderer", "fields": { "m_texturePath": "resource/player.png" } }
     ] }
+  ],
+  "systems": [
+    { "type": "PhysicsSystem2D", "fields": { "m_gravity": [0, 500], "m_pixelsPerMeter": 32.0 } }
   ]
 }
 ```
@@ -66,6 +69,7 @@ class MyScene : public Shit::Scene {
 - **序列化 API**：`SceneSerializer::toJson(Scene*)` / `fromJson(json, scene)` / `toJson(GameObject*)`（存单个对象含子树 → `.prefab` 资产），编辑器与导出游戏共用
 - **组件钩子**：加载时逐组件调 `onAfterDeserialize()`（重建绕过 setter 的内部状态）与 `onFieldChanged()`；加载后无已启用相机则自动补 `game_camera`
 - **可序列化字段**：只有 `SHIT_REFLECT` 标记的组件、反射字段会落盘；跨对象引用用 `ComponentRef<T>`（存 UUID）；可变长数据用反射字符串载体（如 Tilemap 网格、Animator 状态机）
+- **系统（可选 `"systems"` 数组）**：非默认系统以 `{"type", "fields"}` 落盘（字段复用反射序列化）；加载/撤销/切关时按"默认三系统 ∪ 文件列表"同步——停用多余的非默认系统、注册缺失的并恢复字段。旧 v2 文件无该字段则跳过，完全向后兼容
 
 ## 场景管理
 
@@ -135,27 +139,52 @@ scene->registerSystem<MyCustomSystem>();     // 你自己的系统
 
 顺序是：BehaviorSystem（0）→ 你的系统 → RenderSystem（100）→ UIRenderSystem（200）。逻辑先跑、游戏世界渲染、UI 叠在最上面。
 
-### 写一个自己的系统
-
-继承 `System`，重写 `update` 和 `destroy`：
+除模板注册外，引擎还提供**按类型名**的管理 API（编辑器运行时使用）：
 
 ```cpp
-class PhysicsSystem : public Shit::System {
-    using Shit::System::System;
+scene->registerSystem("MyCustomSystem");         // 走反射 Factory 创建 + init 补扫
+scene->hasSystem("MyCustomSystem");
+scene->getSystem("MyCustomSystem");
+scene->unregisterSystem("MyCustomSystem");        // 延迟移除（帧末生效）
+scene->setSystemPriority("MyCustomSystem", 40);   // 调整优先级
+scene->getRegisteredSystemTypeNames();            // 列出全部已注册系统
+```
 
-    void update() override {
-        // 每帧遍历场景对象，更新物理
-        for (auto& obj : getScene()->getGameObjects()) {
-            auto* physics = obj->getComponent<PhysicsComponent>();
-            if (physics) physics->tick();
-        }
-    }
+### 场景系统
 
-    void destroy() override {
-        // 清理资源
-    }
+编辑器不需要把系统写在代码里——检查器**未选中对象时**显示「场景系统」面板：
+
+- **添加/移除**：从「添加系统」菜单任选（列表来自反射注册的 `System` 派生类型，含插件自定义系统），已注册的置灰
+- **优先级**：每系统一行 `QSpinBox` 直接改，随 `.scene` 保存
+- **字段编辑**：允许反射系统暴露字段（如 `PhysicsSystem2D` 的 `m_gravity`、`m_pixelsPerMeter`），点击系统名展开编辑，修改即时生效并入撤销栈
+- **持久化**：非默认系统随 `.scene` 以 `"systems": [{"type": "...", "fields": {...}}]` 落盘，运行时/导出包按文件恢复——**自定义系统零注册代码进游戏**
+
+详见[编辑器手册 · 属性检查器](/guide/editor#属性检查器)。
+
+### 写一个自己的系统
+
+继承 `System`，重写纯虚的 `update` 和 `destroy`；想让编辑器能添加它并编辑字段，加上反射标记（`System` 基类已反射，任意 `System` 派生类只要标记即可被收集）：
+
+```cpp
+class SHIT_API SHIT_REFLECT(BlackList) MyCustomSystem : public Shit::System {
+    SHIT_REFLECT_BODY(MyCustomSystem)
+public:
+    MyCustomSystem(int priority = 40);   // 需要默认构造（反射工厂）
+
+    void update() override { /* 每帧逻辑 */ }
+    void destroy() override { /* 清理 */ }
+
+    // 反射字段被编辑器直写后回调（把变更同步到运行时状态）
+    void onFieldChanged(const std::string& fieldName) override { /* ... */ }
+
+private:
+    SHIT_META(({.displayName = "Update Interval", .range = {0.01f, 1.0f}}))
+    float m_interval = 0.1f;
 };
 ```
+
+- `System` 反射字段的**即时生效**靠覆写 `onFieldChanged(fieldName)`（字段被检查器/反序列化写入后触发）
+- 自定义系统写在插件 `Scripts/` 里同样适用——`Ctrl+B` 构建后出现在「添加系统」菜单，随场景保存/恢复
 
 ## 延迟操作
 
