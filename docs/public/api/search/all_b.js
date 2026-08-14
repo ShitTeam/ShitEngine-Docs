@@ -11,11 +11,10 @@ var searchData=
   ['loadfont_8',['LoadFont',['../class_shit_1_1_resource_manager.html#a8426d7a8cba1df3df1f08189e750ea8f',1,'Shit::ResourceManager']]],
   ['loadfromconfig_9',['LoadFromConfig',['../class_shit_1_1_plugin_manager.html#a7ed43db4fb9f9367d73d103334cc5740',1,'Shit::PluginManager']]],
   ['loadfromjson_10',['loadFromJson',['../class_shit_1_1_config.html#af061be3a4cb4f6095c8f35912f912560',1,'Shit::Config']]],
-  ['loadscene_11',['LoadScene',['../class_shit_1_1_scene_manager.html#a3dd3fb3f7ca5a03de3ac0fb468288a2f',1,'Shit::SceneManager']]],
-  ['loadscenefromfile_12',['LoadSceneFromFile',['../class_shit_1_1_scene_manager.html#a6d7de68a039bdfdbe606adf4830e96b1',1,'Shit::SceneManager']]],
-  ['loadtexture_13',['LoadTexture',['../class_shit_1_1_resource_manager.html#ad725872fe5683084c429452249fc1e7e',1,'Shit::ResourceManager']]],
-  ['log_14',['Log',['../class_shit_1_1_log.html',1,'Shit']]],
-  ['log_2eh_15',['Log.h',['../_log_8h.html',1,'']]],
-  ['loop_16',['loop',['../struct_shit_1_1_animation_clip.html#a5ed2b25d9f2f070cb0ee764aa0985308',1,'Shit::AnimationClip']]],
-  ['lshift_17',['LShift',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da667d08af6165c1cb6e72970036a9f7d7',1,'Shit']]]
+  ['loadscenefromfile_11',['LoadSceneFromFile',['../class_shit_1_1_scene_manager.html#a6d7de68a039bdfdbe606adf4830e96b1',1,'Shit::SceneManager']]],
+  ['loadtexture_12',['LoadTexture',['../class_shit_1_1_resource_manager.html#ad725872fe5683084c429452249fc1e7e',1,'Shit::ResourceManager']]],
+  ['log_13',['Log',['../class_shit_1_1_log.html',1,'Shit']]],
+  ['log_2eh_14',['Log.h',['../_log_8h.html',1,'']]],
+  ['loop_15',['loop',['../struct_shit_1_1_animation_clip.html#a5ed2b25d9f2f070cb0ee764aa0985308',1,'Shit::AnimationClip']]],
+  ['lshift_16',['LShift',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da667d08af6165c1cb6e72970036a9f7d7',1,'Shit']]]
 ];

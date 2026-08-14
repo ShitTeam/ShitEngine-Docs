@@ -170,10 +170,8 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:aee88db8ba5649a8b071cdd7b3742b99c" id="r_aee88db8ba5649a8b071cdd7b3742b99c"><td class="memItemLeft">static <a class="el" href="#a56e74084b96a4960cbac4c377472e5ad">SceneManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aee88db8ba5649a8b071cdd7b3742b99c">GetInstance</a> ()</td></tr>
-<tr class="memitem:a3dd3fb3f7ca5a03de3ac0fb468288a2f" id="r_a3dd3fb3f7ca5a03de3ac0fb468288a2f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3dd3fb3f7ca5a03de3ac0fb468288a2f">LoadScene</a> (std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;scene)</td></tr>
-<tr class="memdesc:a3dd3fb3f7ca5a03de3ac0fb468288a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">切换场景（销毁当前，加载新场景；update 期间调用时延迟到 update 结束后生效）  <br /></td></tr>
 <tr class="memitem:a6d7de68a039bdfdbe606adf4830e96b1" id="r_a6d7de68a039bdfdbe606adf4830e96b1"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a6d7de68a039bdfdbe606adf4830e96b1">LoadSceneFromFile</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a6d7de68a039bdfdbe606adf4830e96b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 .scene 文件加载并替换当前场景（启动 / 关卡切换共用）  <br /></td></tr>
+<tr class="memdesc:a6d7de68a039bdfdbe606adf4830e96b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 .scene 文件加载并替换当前场景（启动 / 关卡切换共用）。这是加载场景的唯一公开入口。  <br /></td></tr>
 <tr class="memitem:a554d0f30ae93d2787435dca9a46c6c5d" id="r_a554d0f30ae93d2787435dca9a46c6c5d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a554d0f30ae93d2787435dca9a46c6c5d">Update</a> ()</td></tr>
 <tr class="memitem:a62a73aff7afffe2fba7c2e47e07d9134" id="r_a62a73aff7afffe2fba7c2e47e07d9134"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a62a73aff7afffe2fba7c2e47e07d9134">Destroy</a> ()</td></tr>
 <tr class="memitem:ab2f16df8a0e2a6937af9c6b7be04f7d7" id="r_ab2f16df8a0e2a6937af9c6b7be04f7d7"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab2f16df8a0e2a6937af9c6b7be04f7d7">GetCurrentScene</a> ()</td></tr>
@@ -185,10 +183,10 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>场景管理器（单例） </p>
 <p>持有当前活跃场景（单一场景模型，与 Unity/Godot 一致）：</p><ul>
-<li><a class="el" href="#a3dd3fb3f7ca5a03de3ac0fb468288a2f" title="切换场景（销毁当前，加载新场景；update 期间调用时延迟到 update 结束后生效）">LoadScene()</a> 切换场景：销毁旧场景、加载新场景（同帧生效）</li>
+<li><a class="el" href="#a6d7de68a039bdfdbe606adf4830e96b1" title="从 .scene 文件加载并替换当前场景（启动 / 关卡切换共用）。这是加载场景的唯一公开入口。">LoadSceneFromFile()</a> 切换场景：销毁旧场景、加载新场景（同帧生效）</li>
 <li>暂停用 <a class="el" href="class_shit_1_1_game.html#a3dccc49f182dd9488e9e02add177429c" title="全局暂停（冻结 Behavior/物理，UI 叠层照常）">Game::SetPaused()</a>：冻结 Behavior/物理，UI 叠层照常响应</li>
 </ul>
-<p>用法： Shit::SceneManager::LoadScene(std::move(levelScene)); Shit::Game::SetPaused(true); // 暂停（冻结行为/物理，UI 菜单照常） </p>
+<p>用法： <a class="el" href="#a6d7de68a039bdfdbe606adf4830e96b1" title="从 .scene 文件加载并替换当前场景（启动 / 关卡切换共用）。这是加载场景的唯一公开入口。">Shit::SceneManager::LoadSceneFromFile</a>("Scenes/level1.scene"); Shit::Game::SetPaused(true); // 暂停（冻结行为/物理，UI 菜单照常） </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a56e74084b96a4960cbac4c377472e5ad" name="a56e74084b96a4960cbac4c377472e5ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56e74084b96a4960cbac4c377472e5ad">&#9670;&#160;</a></span>SceneManager() <span class="overload">[1/2]</span></h2>
@@ -316,33 +314,6 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a3dd3fb3f7ca5a03de3ac0fb468288a2f" name="a3dd3fb3f7ca5a03de3ac0fb468288a2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dd3fb3f7ca5a03de3ac0fb468288a2f">&#9670;&#160;</a></span>LoadScene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LoadScene </td>
-          <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_scene.html">Scene</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>切换场景（销毁当前，加载新场景；update 期间调用时延迟到 update 结束后生效） </p>
-
-</div>
-</div>
 <a id="a6d7de68a039bdfdbe606adf4830e96b1" name="a6d7de68a039bdfdbe606adf4830e96b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d7de68a039bdfdbe606adf4830e96b1">&#9670;&#160;</a></span>LoadSceneFromFile()</h2>
 
@@ -366,7 +337,7 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>从 .scene 文件加载并替换当前场景（启动 / 关卡切换共用） </p>
+<p>从 .scene 文件加载并替换当前场景（启动 / 关卡切换共用）。这是加载场景的唯一公开入口。 </p>
 
 </div>
 </div>
