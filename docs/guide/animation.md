@@ -12,7 +12,7 @@ ShitEngine 提供**两代**动画方案：
 | 方案 | 适用场景 | 说明 |
 |---|---|---|
 | **`AnimationComponent`** | 简单播放几个固定剪辑 | 用帧索引数组定义并播放，一行代码一套动作 |
-| **`Animator`**（推荐） | 需要按玩法状态切换动画 | 状态机：状态 + 转换 + float/bool/trigger 参数驱动，可序列化、可作 `.anim` 资产 |
+| **`Animator`**（推荐） | 需要按玩法状态切换动画 | 状态机：状态 + 转换 + float/bool/trigger 参数驱动，状态引用 `.anim` 资产文件，运行时从文件加载 |
 
 两者都基于 **`AnimationClip`**（精灵表 + 帧序列数据）与 `SpriteSheet`（切图工具）。先从工具说起。
 
@@ -122,7 +122,8 @@ animator->addParam("speed",    Shit::AnimatorParamType::Float);    // 移动速�
 animator->addParam("grounded", Shit::AnimatorParamType::Bool);     // 是否着地
 animator->addParam("jump",     Shit::AnimatorParamType::Trigger);  // 跳跃触发器
 
-// ② 状态（第一个状态自动成为入口状态）
+// ② 创建剪辑并保存为 .anim 资产（状态只引用资产文件，不内嵌数据）
+//    实际项目在编辑器中用 Animation 窗口创建 .anim 文件，无需手写代码
 Shit::AnimationClip idleClip{
     .name = "idle", .texturePath = "resource/anim_sheet.png",
     .rows = 2, .cols = 2, .frameWidth = 32.0f, .frameHeight = 32.0f,
@@ -133,12 +134,17 @@ Shit::AnimationClip runClip{
     .rows = 2, .cols = 2, .frameWidth = 32.0f, .frameHeight = 32.0f,
     .duration = 0.12f, .loop = true, .frames = {0, 1, 2, 3},
 };
+// 保存到 .anim 文件（运行时从文件加载）
+{ std::ofstream("Assets/idle.anim") << idleClip.toJson().dump(2); }
+{ std::ofstream("Assets/run.anim")  << runClip.toJson().dump(2);  }
+
+// ③ 状态（第一个状态自动成为入口状态）
 int idle = animator->addState("idle");
 int run  = animator->addState("run");
-animator->setState(idle, Shit::AnimatorState{.name = "idle", .clip = idleClip, .isEntry = true});
-animator->setState(run,  Shit::AnimatorState{.name = "run",  .clip = runClip});
+animator->setState(idle, Shit::AnimatorState{.name = "idle", .assetPath = "Assets/idle.anim", .isEntry = true});
+animator->setState(run,  Shit::AnimatorState{.name = "run",  .assetPath = "Assets/run.anim"});
 
-// ③ 转换：idle → run（speed > 0.1）；run → idle（speed < 0.1）
+// ④ 转换：idle → run（speed > 0.1）；run → idle（speed < 0.1）
 int t1 = animator->addTransition(idle, run);
 animator->setTransition(t1, Shit::AnimatorTransition{
     .fromState = idle, .toState = run,
@@ -150,7 +156,7 @@ animator->setTransition(t2, Shit::AnimatorTransition{
     .conditions = {{ "speed", Shit::AnimatorConditionType::FloatLt, 0.1f, false }},
 });
 
-// ④ 任意状态 → jump（trigger 一触即跳）
+// ⑤ 任意状态 → jump（trigger 一触即跳）
 int tj = animator->addTransition(-1, jump);
 animator->setTransition(tj, Shit::AnimatorTransition{
     .fromState = -1, .toState = jump,
@@ -188,8 +194,9 @@ private:
 ### 序列化与 .anim 资产
 
 - **随场景落盘**：状态/参数/转换以反射字符串载体 `m_animatorData`（JSON）随 `.scene` 持久化；编辑器里的节点坐标（`graphX/graphY`）也保存，重开布局不丢
-- **状态引用资产**：`AnimatorState.assetPath` 可指向一个 `.anim` 文件（相对项目根）——剪辑内容交由资产驱动，多个状态/项目可复用同一份剪辑
-- **`.anim` 资产**：`AnimationClip::toJson` 生成的独立文件（见上方 `run.anim`），资源窗口双击在 Animation 窗口中编辑；运行时仍用内嵌数据，无文件 IO
+- **状态引用资产**：`AnimatorState.assetPath` 指向 `.anim` 文件（相对 CWD），状态剪辑**只来自 `.anim` 资产**，不内嵌数据。运行时 `parseData` 从文件加载到内存缓存，多个状态/项目可复用同一份 `.anim` 文件
+- **`.anim` 资产**：`AnimationClip::toJson` 生成的独立文件（见上方 `run.anim`），资源窗口双击在 Animation 窗口中编辑；**运行时从文件读取**（场景加载时一次性加载，非每帧读盘）
+- **旧场景兼容**：从旧版 `.scene`（含内嵌 clip）加载的状态仍可正常播放，保存后自动剥离内嵌数据（需先设置 `assetPath`，否则编辑器不提供内嵌编辑）
 
 ## 编辑器动画工具
 
