@@ -25,19 +25,7 @@ Shit::SceneManager::LoadSceneFromFile("Scenes/level1.scene");
 
 `LoadSceneFromFile` 内部会创建 `Scene` 对象、调用 `init()` 注册三个默认系统（`BehaviorSystem`、`RenderSystem`、`UIRenderSystem`），然后从文件反序列化所有对象和组件。
 
-如果你想在场景初始化时做点自己的事，可以继承 `Scene` 覆写 `init()`，但需要注册自定义类型并让 `SceneManager` 使用它——通常不必要，直接用 `.scene` 文件数据驱动即可：
-
-```cpp
-// 自定义场景类（高级用法，多数项目不需要）
-class MyScene : public Shit::Scene {
-    using Shit::Scene::Scene;
-
-    void init() override {
-        Shit::Scene::init();  // 别忘了先调父类，否则没有系统跑
-        // 加载地图、生成敌人、播放 BGM……
-    }
-};
-```
+> **`Scene` 已标记 `final`**，不支持继承。所有场景逻辑通过 `.scene` 文件数据驱动 + 自定义 `System`／`Behavior` 实现——无需编写任何场景搭建代码。
 
 > **💡 v1.3+ 组件与系统解耦**：组件不再查询"哪个系统驱动我"。`Behavior`、`RendererComponent`、`RigidBody2D` 等组件挂载时通过 `Scene` 广播给所有系统，由系统用 `dynamic_cast` 认领自己关心的类型。因此**先加组件、后注册系统也能正确挂接**——系统注册时会重扫场景中未注册的组件。新增自定义系统时覆写 `System::onComponentAttached`/`onComponentDetached` 即可认领对应组件。
 
