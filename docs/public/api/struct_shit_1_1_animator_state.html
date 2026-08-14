@@ -165,9 +165,9 @@ Public 属性</h2></td></tr>
 <tr class="memitem:a9b45b3e13bd9167aab02e17e08916231" id="r_a9b45b3e13bd9167aab02e17e08916231"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a9b45b3e13bd9167aab02e17e08916231">name</a></td></tr>
 <tr class="memdesc:a9b45b3e13bd9167aab02e17e08916231"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态名  <br /></td></tr>
 <tr class="memitem:ad4ed26fd7b88ea04030a7b2073121dbd" id="r_ad4ed26fd7b88ea04030a7b2073121dbd"><td class="memItemLeft"><a class="el" href="struct_shit_1_1_animation_clip.html">AnimationClip</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad4ed26fd7b88ea04030a7b2073121dbd">clip</a></td></tr>
-<tr class="memdesc:ad4ed26fd7b88ea04030a7b2073121dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">本状态播放的剪辑（内嵌数据）  <br /></td></tr>
+<tr class="memdesc:ad4ed26fd7b88ea04030a7b2073121dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">运行时剪辑缓存（从 .anim 文件加载，不入序列化）  <br /></td></tr>
 <tr class="memitem:a9884b7e32955f05a2736f88f4d7862f7" id="r_a9884b7e32955f05a2736f88f4d7862f7"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a9884b7e32955f05a2736f88f4d7862f7">assetPath</a></td></tr>
-<tr class="memdesc:a9884b7e32955f05a2736f88f4d7862f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用的 .anim 资产路径（相对项目根；空 = 内嵌剪辑，由编辑器维护）  <br /></td></tr>
+<tr class="memdesc:a9884b7e32955f05a2736f88f4d7862f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用的 .anim 资产路径（序列化字段；空 = 旧场景内嵌 clip，向后兼容）  <br /></td></tr>
 <tr class="memitem:a80ffe4b445213a14d05691866f46cb3f" id="r_a80ffe4b445213a14d05691866f46cb3f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a80ffe4b445213a14d05691866f46cb3f">isEntry</a> = false</td></tr>
 <tr class="memdesc:a80ffe4b445213a14d05691866f46cb3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否入口状态（onStart 优先进入）  <br /></td></tr>
 <tr class="memitem:a1ac0fbdce52692e06feaeb8e92ab3d6a" id="r_a1ac0fbdce52692e06feaeb8e92ab3d6a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1ac0fbdce52692e06feaeb8e92ab3d6a">graphX</a> = 0.0f</td></tr>
@@ -190,7 +190,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>引用的 .anim 资产路径（相对项目根；空 = 内嵌剪辑，由编辑器维护） </p>
+<p>引用的 .anim 资产路径（序列化字段；空 = 旧场景内嵌 clip，向后兼容） </p>
 
 </div>
 </div>
@@ -206,7 +206,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>本状态播放的剪辑（内嵌数据） </p>
+<p>运行时剪辑缓存（从 .anim 文件加载，不入序列化） </p>
 
 </div>
 </div>
