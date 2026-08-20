@@ -186,6 +186,8 @@ Public 类型</h2></td></tr>
 <tr class="memdesc:aa59a321b649a76288796ccddbbbc0908"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册全局日志转发回调（Init 前/后均可；重新注册替换旧回调；传 nullptr 解除转发）  <br /></td></tr>
 <tr class="memitem:ad1549be2ef068ccfb806b70543cc13f2" id="r_ad1549be2ef068ccfb806b70543cc13f2"><td class="memItemLeft">static const <a class="el" href="#aaceb2649b53765286f8eb9310feedc2a">MessageCallback</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad1549be2ef068ccfb806b70543cc13f2">GetMessageCallback</a> ()</td></tr>
 <tr class="memdesc:ad1549be2ef068ccfb806b70543cc13f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前回调（供引擎内部 sink 读取）  <br /></td></tr>
+<tr class="memitem:a05139f2416b131924f8c2e0ea2d06dd2" id="r_a05139f2416b131924f8c2e0ea2d06dd2"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a05139f2416b131924f8c2e0ea2d06dd2">SetLogDirectory</a> (const std::string &amp;dir)</td></tr>
+<tr class="memdesc:a05139f2416b131924f8c2e0ea2d06dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置文件日志目录（P32：编辑器打开项目后把日志写入项目 .shitengine/log） dir 为最终日志目录（引擎内部不再拼接子目录）；空 = 恢复默认（进程工作目录/.shitengine/log）。 未初始化时仅记录，Init() 按新目录创建；已初始化时重建文件 sink（旧文件关闭、 新目录按当前时间新开归档文件）。幂等，可重复调用。  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>日志封装类 </p>
@@ -430,6 +432,33 @@ template&lt;typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05139f2416b131924f8c2e0ea2d06dd2" name="a05139f2416b131924f8c2e0ea2d06dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05139f2416b131924f8c2e0ea2d06dd2">&#9670;&#160;</a></span>SetLogDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLogDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置文件日志目录（P32：编辑器打开项目后把日志写入项目 .shitengine/log） dir 为最终日志目录（引擎内部不再拼接子目录）；空 = 恢复默认（进程工作目录/.shitengine/log）。 未初始化时仅记录，Init() 按新目录创建；已初始化时重建文件 sink（旧文件关闭、 新目录按当前时间新开归档文件）。幂等，可重复调用。 </p>
 
 </div>
 </div>

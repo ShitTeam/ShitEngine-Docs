@@ -185,6 +185,11 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aa5d64e7b0857fb39a9837eaac1474a19" id="r_aa5d64e7b0857fb39a9837eaac1474a19"><td class="memItemLeft">const std::vector&lt; <a class="el" href="struct_shit_1_1_plugin_manager_1_1_loaded_plugin.html">LoadedPlugin</a> &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa5d64e7b0857fb39a9837eaac1474a19">GetPlugins</a> () const</td></tr>
 <tr class="memdesc:aa5d64e7b0857fb39a9837eaac1474a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取已加载插件列表  <br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a9776e9c9729b09061db0a8dfbd08f0dc" id="r_a9776e9c9729b09061db0a8dfbd08f0dc"><td class="memItemLeft">static const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9776e9c9729b09061db0a8dfbd08f0dc">GetLastLoadError</a> ()</td></tr>
+<tr class="memdesc:a9776e9c9729b09061db0a8dfbd08f0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">最近一次插件加载失败的描述（P33：编辑器据此弹窗提示用户）。 每次 LoadFromConfig 开始时清空；加载成功/未加载任何插件时为空字符串。  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静态 Public 属性</h2></td></tr>
 <tr class="memitem:ac9795d470dd39948d322b6d783d69bcb" id="r_ac9795d470dd39948d322b6d783d69bcb"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#ac9795d470dd39948d322b6d783d69bcb">kAbiVersion</a> = 2</td></tr>
@@ -280,6 +285,33 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a9776e9c9729b09061db0a8dfbd08f0dc" name="a9776e9c9729b09061db0a8dfbd08f0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9776e9c9729b09061db0a8dfbd08f0dc">&#9670;&#160;</a></span>GetLastLoadError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; GetLastLoadError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最近一次插件加载失败的描述（P33：编辑器据此弹窗提示用户）。 每次 LoadFromConfig 开始时清空；加载成功/未加载任何插件时为空字符串。 </p>
+
+</div>
+</div>
 <a id="aa5d64e7b0857fb39a9837eaac1474a19" name="aa5d64e7b0857fb39a9837eaac1474a19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5d64e7b0857fb39a9837eaac1474a19">&#9670;&#160;</a></span>GetPlugins()</h2>
 
