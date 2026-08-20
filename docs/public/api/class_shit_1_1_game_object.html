@@ -191,7 +191,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a8ec3a8d4557c78eebb2cafef428070c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取全部组件（按 type_index 索引）  <br /></td></tr>
 <tr class="memitem:a83fda332b3e926aae80bd38bb1766aad" id="r_a83fda332b3e926aae80bd38bb1766aad"><td class="memTemplParams" colspan="2">template&lt;typename Fn&gt; </td></tr>
 <tr class="memitem:a83fda332b3e926aae80bd38bb1766aad template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a83fda332b3e926aae80bd38bb1766aad">forEachComponent</a> (Fn &amp;&amp;fn)</td></tr>
-<tr class="memdesc:a83fda332b3e926aae80bd38bb1766aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">只读遍历全部组件（供系统补扫等使用，避免暴露内部可变 map）  <br /></td></tr>
+<tr class="memdesc:a83fda332b3e926aae80bd38bb1766aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">只读遍历全部组件（供系统补扫等使用，避免暴露内部可变 map） 安全遍历：先快照指针再逐回调，且回调前重验组件仍归属本对象—— 回调内 removeComponent 修改 map 不会使迭代器失效，已移除的组件也不会被调用。  <br /></td></tr>
 <tr class="memitem:aec9022828862661155e679aeacd5301b" id="r_aec9022828862661155e679aeacd5301b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:aec9022828862661155e679aeacd5301b template"><td class="memItemLeft"><a class="el" href="class_shit_1_1_weak_component_ref.html">WeakComponentRef</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aec9022828862661155e679aeacd5301b">getWeakRef</a> ()</td></tr>
 <tr class="memdesc:aec9022828862661155e679aeacd5301b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建指向本对象上 T 组件的弱引用（组件被移除/对象销毁后自动失效）  <br /></td></tr>
@@ -433,7 +433,7 @@ template&lt;typename Fn&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>只读遍历全部组件（供系统补扫等使用，避免暴露内部可变 map） </p>
+<p>只读遍历全部组件（供系统补扫等使用，避免暴露内部可变 map） 安全遍历：先快照指针再逐回调，且回调前重验组件仍归属本对象—— 回调内 removeComponent 修改 map 不会使迭代器失效，已移除的组件也不会被调用。 </p>
 
 </div>
 </div>
