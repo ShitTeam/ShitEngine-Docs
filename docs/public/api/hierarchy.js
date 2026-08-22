@@ -73,8 +73,11 @@ var hierarchy =
       [ "Font", "class_shit_1_1_font.html", null ],
       [ "Texture", "class_shit_1_1_texture.html", null ]
     ] ],
-    [ "ResourceCache&lt; Key, Res, Hash &gt;", "class_shit_1_1_resource_cache.html", null ],
     [ "ResourceManager", "class_shit_1_1_resource_manager.html", null ],
+    [ "ResourceTraits&lt; Res &gt;", "struct_shit_1_1_resource_traits.html", null ],
+    [ "ResourceTraits&lt; Audio &gt;", "struct_shit_1_1_resource_traits_3_01_audio_01_4.html", null ],
+    [ "ResourceTraits&lt; Font &gt;", "struct_shit_1_1_resource_traits_3_01_font_01_4.html", null ],
+    [ "ResourceTraits&lt; Texture &gt;", "struct_shit_1_1_resource_traits_3_01_texture_01_4.html", null ],
     [ "Scene", "class_shit_1_1_scene.html", null ],
     [ "SceneManager", "class_shit_1_1_scene_manager.html", null ],
     [ "SceneSerializer", "class_shit_1_1_scene_serializer.html", null ],
@@ -88,6 +91,9 @@ var hierarchy =
     ] ],
     [ "TextInputGate", "class_shit_1_1_text_input_gate.html", null ],
     [ "Time", "class_shit_1_1_time.html", null ],
+    [ "TypedCacheBase", "class_shit_1_1_typed_cache_base.html", [
+      [ "TypedResourceCache< Res >", "class_shit_1_1_typed_resource_cache.html", null ]
+    ] ],
     [ "TypeInfo", "struct_shit_1_1_type_info.html", null ],
     [ "TypeInfoBuilder", "class_shit_1_1_type_info_builder.html", null ],
     [ "TypeRegistry", "class_shit_1_1_type_registry.html", null ],

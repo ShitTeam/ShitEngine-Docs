@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShitEngine: ResourceCache&lt; Key, Res, Hash &gt; 模板类 参考</title>
+<title>ShitEngine: TypedCacheBase类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_resource_cache.html','','class_shit_1_1_resource_cache-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_typed_cache_base.html','','class_shit_1_1_typed_cache_base-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -162,45 +162,49 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ResourceCache&lt; Key, Res, Hash &gt; 模板类 参考</div></div>
+  <div class="headertitle"><div class="title">TypedCacheBase类 参考<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>泛型资源缓存外壳 —— 统一「查缓存 → 工厂创建 → 加载 → 插入」模式  
+<p>类型擦除缓存接口 —— <a class="el" href="class_shit_1_1_resource_manager.html" title="资源管理器（引擎上下文持有）—— 模板化统一门面">ResourceManager</a> 按资源类型注册缓存，经此统一遍历/清理  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_resource_8h_source.html">Resource.h</a>&gt;</code></p>
+<div class="dynheader">
+类 TypedCacheBase 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_shit_1_1_typed_cache_base.png" usemap="#TypedCacheBase_map" alt=""/>
+  <map id="TypedCacheBase_map" name="TypedCacheBase_map">
+<area href="class_shit_1_1_typed_resource_cache.html" title="类型化缓存 —— 统一「查缓存 → 工厂创建 → 加载 → 插入」模式" alt="TypedResourceCache&lt; Res &gt;" shape="rect" coords="0,56,183,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a71da0a39b48b8b15e925bfeee944293f" id="r_a71da0a39b48b8b15e925bfeee944293f"><td class="memTemplParams" colspan="2">template&lt;typename Make&gt; </td></tr>
-<tr class="memitem:a71da0a39b48b8b15e925bfeee944293f template"><td class="memItemLeft">Res *&#160;</td><td class="memItemRight"><a class="el" href="#a71da0a39b48b8b15e925bfeee944293f">getOrLoad</a> (const Key &amp;key, Make &amp;&amp;make)</td></tr>
-<tr class="memdesc:a71da0a39b48b8b15e925bfeee944293f"><td class="mdescLeft">&#160;</td><td class="mdescRight">查缓存命中直接返回；未命中用工厂创建 Res 并 load()，成功才入缓存  <br /></td></tr>
-<tr class="memitem:af62d54c2c0034a5862267979c5ddf1b2" id="r_af62d54c2c0034a5862267979c5ddf1b2"><td class="memItemLeft">Res *&#160;</td><td class="memItemRight"><a class="el" href="#af62d54c2c0034a5862267979c5ddf1b2">find</a> (const Key &amp;key) const</td></tr>
-<tr class="memitem:a8dd18b4d989fc43fa154661b8a52b084" id="r_a8dd18b4d989fc43fa154661b8a52b084"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8dd18b4d989fc43fa154661b8a52b084">unload</a> (const Key &amp;key)</td></tr>
-<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
-<tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc" id="r_a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
-<tr class="memitem:a259cb5a711406a8c3e5d937eb9350cca" id="r_a259cb5a711406a8c3e5d937eb9350cca"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a259cb5a711406a8c3e5d937eb9350cca">size</a> () const</td></tr>
-<tr class="memitem:aa3ad1b2177e1d70bc4bea951844686dc" id="r_aa3ad1b2177e1d70bc4bea951844686dc"><td class="memItemLeft">const std::unordered_map&lt; Key, std::unique_ptr&lt; Res &gt;, Hash &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa3ad1b2177e1d70bc4bea951844686dc">entries</a> () const</td></tr>
+<tr class="memitem:a271ada31a84e66ef683beb754734ab8e" id="r_a271ada31a84e66ef683beb754734ab8e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a271ada31a84e66ef683beb754734ab8e">~TypedCacheBase</a> ()=default</td></tr>
+<tr class="memitem:a5eeb94d22b8366d1b68d0614384802fe" id="r_a5eeb94d22b8366d1b68d0614384802fe"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5eeb94d22b8366d1b68d0614384802fe">clear</a> ()=0</td></tr>
+<tr class="memitem:aa983ddaeded5756189f46428be79c631" id="r_aa983ddaeded5756189f46428be79c631"><td class="memItemLeft">virtual size_t&#160;</td><td class="memItemRight"><a class="el" href="#aa983ddaeded5756189f46428be79c631">size</a> () const =0</td></tr>
+<tr class="memitem:a4381e38fd9347559177ae18503583839" id="r_a4381e38fd9347559177ae18503583839"><td class="memItemLeft">virtual std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a4381e38fd9347559177ae18503583839">typeName</a> () const =0</td></tr>
+<tr class="memdesc:a4381e38fd9347559177ae18503583839"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志用类型名（来自 ResourceTraits&lt;T&gt;::kTypeName）  <br /></td></tr>
+<tr class="memitem:ad67dfab2a37ba1cf058cc9708979b443" id="r_ad67dfab2a37ba1cf058cc9708979b443"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad67dfab2a37ba1cf058cc9708979b443">forEachResource</a> (const std::function&lt; void(<a class="el" href="class_shit_1_1_resource.html">Resource</a> *)&gt; &amp;fn) const =0</td></tr>
+<tr class="memdesc:ad67dfab2a37ba1cf058cc9708979b443"><td class="mdescLeft">&#160;</td><td class="mdescRight">遍历缓存内全部资源封装（uuid 查询用；顺序不保证）  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt;<br />
-class Shit::ResourceCache&lt; Key, Res, Hash &gt;</div><p>泛型资源缓存外壳 —— 统一「查缓存 → 工厂创建 → 加载 → 插入」模式 </p>
-<p>加载失败不缓存：下次请求重试（与旧懒加载行为一致，文件后补/修复后自愈）。 </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&#160;</a></span>clear()</h2>
+<div class="textblock"><p>类型擦除缓存接口 —— <a class="el" href="class_shit_1_1_resource_manager.html" title="资源管理器（引擎上下文持有）—— 模板化统一门面">ResourceManager</a> 按资源类型注册缓存，经此统一遍历/清理 </p>
+<p>引擎/插件侧新增的资源类型缓存都以此基类指针进入管理器的类型注册表， GetResourceByUuid / 全量清理 / 日志计数只依赖本接口（无跨 DLL 模板问题）。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a271ada31a84e66ef683beb754734ab8e" name="a271ada31a84e66ef683beb754734ab8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a271ada31a84e66ef683beb754734ab8e">&#9670;&#160;</a></span>~TypedCacheBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void clear </td>
+          <td class="memname">virtual ~<a class="el" href="class_shit_1_1_typed_cache_base.html">TypedCacheBase</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -208,180 +212,123 @@ template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt;
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a644718bb2fb240de962dc3c9a1fdf0dc" name="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a644718bb2fb240de962dc3c9a1fdf0dc">&#9670;&#160;</a></span>empty()</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a5eeb94d22b8366d1b68d0614384802fe" name="a5eeb94d22b8366d1b68d0614384802fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eeb94d22b8366d1b68d0614384802fe">&#9670;&#160;</a></span>clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool empty </td>
+          <td class="memname">virtual void clear </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa3ad1b2177e1d70bc4bea951844686dc" name="aa3ad1b2177e1d70bc4bea951844686dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3ad1b2177e1d70bc4bea951844686dc">&#9670;&#160;</a></span>entries()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::unordered_map&lt; Key, std::unique_ptr&lt; Res &gt;, Hash &gt; &amp; entries </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af62d54c2c0034a5862267979c5ddf1b2" name="af62d54c2c0034a5862267979c5ddf1b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af62d54c2c0034a5862267979c5ddf1b2">&#9670;&#160;</a></span>find()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Res * find </td>
-          <td>(</td>
-          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a71da0a39b48b8b15e925bfeee944293f" name="a71da0a39b48b8b15e925bfeee944293f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71da0a39b48b8b15e925bfeee944293f">&#9670;&#160;</a></span>getOrLoad()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
-<div class="memtemplate">
-template&lt;typename Make&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Res * getOrLoad </td>
-          <td>(</td>
-          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Make &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>make</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>查缓存命中直接返回；未命中用工厂创建 Res 并 load()，成功才入缓存 </p>
-
-</div>
-</div>
-<a id="a259cb5a711406a8c3e5d937eb9350cca" name="a259cb5a711406a8c3e5d937eb9350cca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a259cb5a711406a8c3e5d937eb9350cca">&#9670;&#160;</a></span>size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t size </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8dd18b4d989fc43fa154661b8a52b084" name="a8dd18b4d989fc43fa154661b8a52b084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dd18b4d989fc43fa154661b8a52b084">&#9670;&#160;</a></span>unload()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool unload </td>
-          <td>(</td>
-          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>在 <a class="el" href="class_shit_1_1_typed_resource_cache.html#aee7cb2065b88d21ac4ad05bc997ecf82">TypedResourceCache&lt; Res &gt;</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ad67dfab2a37ba1cf058cc9708979b443" name="ad67dfab2a37ba1cf058cc9708979b443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67dfab2a37ba1cf058cc9708979b443">&#9670;&#160;</a></span>forEachResource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void forEachResource </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(<a class="el" href="class_shit_1_1_resource.html">Resource</a> *)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>遍历缓存内全部资源封装（uuid 查询用；顺序不保证） </p>
+
+<p>在 <a class="el" href="class_shit_1_1_typed_resource_cache.html#aa3e0f7872e59bb0bfcab0372c9e7553b">TypedResourceCache&lt; Res &gt;</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aa983ddaeded5756189f46428be79c631" name="aa983ddaeded5756189f46428be79c631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa983ddaeded5756189f46428be79c631">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="class_shit_1_1_typed_resource_cache.html#ad7701a09a964eab360a8e51fa7ad2c16">TypedResourceCache&lt; Res &gt;</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a4381e38fd9347559177ae18503583839" name="a4381e38fd9347559177ae18503583839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4381e38fd9347559177ae18503583839">&#9670;&#160;</a></span>typeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string_view typeName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>日志用类型名（来自 ResourceTraits&lt;T&gt;::kTypeName） </p>
+
+<p>在 <a class="el" href="class_shit_1_1_typed_resource_cache.html#a96e0a4d078724c86ccac18355e6186cb">TypedResourceCache&lt; Res &gt;</a> 内被实现.</p>
 
 </div>
 </div>
@@ -402,7 +349,7 @@ template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt;
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_resource_cache.html">ResourceCache</a></li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_typed_cache_base.html">TypedCacheBase</a></li>
     <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>资源基类 —— 所有引擎资产（Texture / <a class="el" href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）">Font</a> / Audio）的统一封装  
+<p>资源基类 —— 所有引擎资产（Texture / <a class="el" href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）">Font</a> / <a class="el" href="class_shit_1_1_audio.html" title="音频：封装 MIX_Audio*（加载需 mixer 就绪，由管理器注入）">Audio</a> / 自定义类型）的统一封装  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_resource_8h_source.html">Resource.h</a>&gt;</code></p>
@@ -207,8 +207,9 @@ Protected 属性</h2></td></tr>
 <tr class="memitem:ad20520a6fcf50446280bd5a68c2c594d" id="r_ad20520a6fcf50446280bd5a68c2c594d"><td class="memItemLeft"><a class="el" href="namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad20520a6fcf50446280bd5a68c2c594d">m_state</a> = <a class="el" href="namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705aa5ae20aa7fda5bd38bf0dce98e65bd2d">ResourceState::Unloaded</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>资源基类 —— 所有引擎资产（Texture / <a class="el" href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）">Font</a> / Audio）的统一封装 </p>
-<p>所有权模型：管理器独占（缓存持 unique_ptr），调用方借用指针。 缓存生命周期 = 整个引擎会话（Game::Destroy 统一销毁），销毁顺序集中受控 （音频先于 mixer、纹理先于 Renderer、再 SDL_Quit）——因此借用裸指针安全。 将来热重载应走 <a class="el" href="#a1aa27fd6a749c00fc61857d3640f4481" title="加载底层句柄（子类实现；失败记录 m_error 并返回 false，内部已打日志）">load()</a> 原地重载（同一 wrapper 换内部句柄），借用指针保持有效。 </p>
+<div class="textblock"><p>资源基类 —— 所有引擎资产（Texture / <a class="el" href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）">Font</a> / <a class="el" href="class_shit_1_1_audio.html" title="音频：封装 MIX_Audio*（加载需 mixer 就绪，由管理器注入）">Audio</a> / 自定义类型）的统一封装 </p>
+<p>所有权模型：管理器独占（缓存持 unique_ptr），调用方借用指针。 缓存生命周期 = 整个引擎会话（Game::Destroy 统一销毁），销毁顺序集中受控 （音频先于 mixer、纹理先于 Renderer、再 SDL_Quit）——因此借用裸指针安全。 将来热重载应走 <a class="el" href="#a1aa27fd6a749c00fc61857d3640f4481" title="加载底层句柄（子类实现；失败记录 m_error 并返回 false，内部已打日志）">load()</a> 原地重载（同一 wrapper 换内部句柄），借用指针保持有效。</p>
+<p>扩展新资源类型：继承本类实现 <a class="el" href="#a1aa27fd6a749c00fc61857d3640f4481" title="加载底层句柄（子类实现；失败记录 m_error 并返回 false，内部已打日志）">load()</a>/release()，再特化 <a class="el" href="_resource_manager_8h.html">ResourceManager.h</a> 中的 <a class="el" href="struct_shit_1_1_resource_traits.html">ResourceTraits&lt;T&gt;</a> 即接入缓存/uuid 查询/全量清理——管理器零改动。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a1cac913324e4512cbe5e8d14980ae13c" name="a1cac913324e4512cbe5e8d14980ae13c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1cac913324e4512cbe5e8d14980ae13c">&#9670;&#160;</a></span>Resource() <span class="overload">[1/2]</span></h2>

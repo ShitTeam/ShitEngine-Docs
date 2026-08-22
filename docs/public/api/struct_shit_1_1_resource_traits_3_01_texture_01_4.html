@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShitEngine: 成员列表</title>
+<title>ShitEngine: ResourceTraits&lt; Texture &gt;结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_resource_cache.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_shit_1_1_resource_traits_3_01_texture_01_4.html','','struct_shit_1_1_resource_traits_3_01_texture_01_4-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -162,26 +162,125 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ResourceCache&lt; Key, Res, Hash &gt; 成员列表</div></div>
+  <div class="headertitle"><div class="title">ResourceTraits&lt; Texture &gt;结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>成员的完整列表，这些成员属于 <a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a>,包括所有继承而来的类成员</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>()</td><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a>() const</td><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html#aa3ad1b2177e1d70bc4bea951844686dc">entries</a>() const</td><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html#af62d54c2c0034a5862267979c5ddf1b2">find</a>(const Key &amp;key) const</td><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html#a71da0a39b48b8b15e925bfeee944293f">getOrLoad</a>(const Key &amp;key, Make &amp;&amp;make)</td><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html#a259cb5a711406a8c3e5d937eb9350cca">size</a>() const</td><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html#a8dd18b4d989fc43fa154661b8a52b084">unload</a>(const Key &amp;key)</td><td class="entry"><a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-</table></div><!-- contents -->
+<p><code>#include &lt;<a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a88ddc691e6b56c38f3e9449e97f58ef1" id="r_a88ddc691e6b56c38f3e9449e97f58ef1"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a88ddc691e6b56c38f3e9449e97f58ef1">KeyType</a> = std::string</td></tr>
+<tr class="memitem:a6d436d774a02fb82d9ce05e632953b81" id="r_a6d436d774a02fb82d9ce05e632953b81"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a6d436d774a02fb82d9ce05e632953b81">HashType</a> = std::hash&lt;std::string&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a8a38c605bcb2757f6106302b23af66d0" id="r_a8a38c605bcb2757f6106302b23af66d0"><td class="memItemLeft">static std::unique_ptr&lt; <a class="el" href="class_shit_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8a38c605bcb2757f6106302b23af66d0">create</a> (<a class="el" href="class_shit_1_1_resource_manager.html">ResourceManager</a> &amp;owner, const <a class="el" href="#a88ddc691e6b56c38f3e9449e97f58ef1">KeyType</a> &amp;key)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:aaf4db2f8f57243787ecbd75418a311f5" id="r_aaf4db2f8f57243787ecbd75418a311f5"><td class="memItemLeft">static constexpr std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#aaf4db2f8f57243787ecbd75418a311f5">kTypeName</a> = &quot;纹理&quot;</td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">成员类型定义说明</h2>
+<a id="a6d436d774a02fb82d9ce05e632953b81" name="a6d436d774a02fb82d9ce05e632953b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d436d774a02fb82d9ce05e632953b81">&#9670;&#160;</a></span>HashType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a6d436d774a02fb82d9ce05e632953b81">HashType</a> = std::hash&lt;std::string&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88ddc691e6b56c38f3e9449e97f58ef1" name="a88ddc691e6b56c38f3e9449e97f58ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88ddc691e6b56c38f3e9449e97f58ef1">&#9670;&#160;</a></span>KeyType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a88ddc691e6b56c38f3e9449e97f58ef1">KeyType</a> = std::string</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a8a38c605bcb2757f6106302b23af66d0" name="a8a38c605bcb2757f6106302b23af66d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a38c605bcb2757f6106302b23af66d0">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="class_shit_1_1_texture.html">Texture</a> &gt; create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shit_1_1_resource_manager.html">ResourceManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>owner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a88ddc691e6b56c38f3e9449e97f58ef1">KeyType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="aaf4db2f8f57243787ecbd75418a311f5" name="aaf4db2f8f57243787ecbd75418a311f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf4db2f8f57243787ecbd75418a311f5">&#9670;&#160;</a></span>kTypeName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view kTypeName = &quot;纹理&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Resource/<a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- HTML footer for doxygen 1.17.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="struct_shit_1_1_resource_traits_3_01_texture_01_4.html">ResourceTraits&lt; Texture &gt;</a></li>
     <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

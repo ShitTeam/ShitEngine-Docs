@@ -30,12 +30,14 @@ var searchData=
   ['trigger_27',['Trigger',['../namespace_shit.html#a0ff40449e21004707960b3589989bf05af698f67f5666aff10729d8a1cb1c14d2',1,'Shit::Trigger'],['../namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9af698f67f5666aff10729d8a1cb1c14d2',1,'Shit::Trigger']]],
   ['type_28',['Type',['../class_shit_1_1_rigid_body2_d.html#a1d1cfd8ffb84e947f82999c682b666a7',1,'Shit::RigidBody2D']]],
   ['type_29',['type',['../struct_shit_1_1_animator_parameter.html#aae57cf504e0166326d01a5fb9f2fe5dd',1,'Shit::AnimatorParameter::type'],['../struct_shit_1_1_animator_transition_condition.html#a6388a6231fbf1fe619609d0f67f91091',1,'Shit::AnimatorTransitionCondition::type']]],
-  ['typeindex_30',['typeIndex',['../struct_shit_1_1_type_info.html#a179500c846c41a50dfc9fd26d174f458',1,'Shit::TypeInfo']]],
-  ['typeinfo_31',['TypeInfo',['../struct_shit_1_1_type_info.html',1,'Shit']]],
-  ['typeinfo_2eh_32',['TypeInfo.h',['../_type_info_8h.html',1,'']]],
-  ['typeinfobuilder_33',['TypeInfoBuilder',['../class_shit_1_1_type_info_builder.html',1,'TypeInfoBuilder'],['../class_shit_1_1_type_registry.html#a206b044745b4ae1ec69f6595acfce573',1,'Shit::TypeRegistry::TypeInfoBuilder()']]],
-  ['typename_34',['typeName',['../struct_shit_1_1_prefab_1_1_component_data.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::Prefab::ComponentData::typeName'],['../struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::FieldInfo::typeName'],['../struct_shit_1_1_property_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::PropertyInfo::typeName']]],
-  ['typeregistry_35',['TypeRegistry',['../class_shit_1_1_type_registry.html',1,'TypeRegistry'],['../class_shit_1_1_type_registry.html#a8fb345584b509941f28e6c820566d04b',1,'Shit::TypeRegistry::TypeRegistry(const TypeRegistry &amp;)=delete'],['../class_shit_1_1_type_registry.html#ab5bba81829c886b8714a3bda049f7519',1,'Shit::TypeRegistry::TypeRegistry(TypeRegistry &amp;&amp;)=delete']]],
-  ['typeregistry_36',['typeRegistry',['../class_shit_1_1_engine_context.html#a9417290b37c4a38af77a107c65a702a0',1,'Shit::EngineContext']]],
-  ['typeregistry_2eh_37',['TypeRegistry.h',['../_type_registry_8h.html',1,'']]]
+  ['typedcachebase_30',['TypedCacheBase',['../class_shit_1_1_typed_cache_base.html',1,'Shit']]],
+  ['typedresourcecache_31',['TypedResourceCache',['../class_shit_1_1_typed_resource_cache.html',1,'TypedResourceCache&lt; Res &gt;'],['../class_shit_1_1_typed_resource_cache.html#a5dfff558b4ae2c802c392d0739cbb6cb',1,'Shit::TypedResourceCache::TypedResourceCache()']]],
+  ['typeindex_32',['typeIndex',['../struct_shit_1_1_type_info.html#a179500c846c41a50dfc9fd26d174f458',1,'Shit::TypeInfo']]],
+  ['typeinfo_33',['TypeInfo',['../struct_shit_1_1_type_info.html',1,'Shit']]],
+  ['typeinfo_2eh_34',['TypeInfo.h',['../_type_info_8h.html',1,'']]],
+  ['typeinfobuilder_35',['TypeInfoBuilder',['../class_shit_1_1_type_info_builder.html',1,'TypeInfoBuilder'],['../class_shit_1_1_type_registry.html#a206b044745b4ae1ec69f6595acfce573',1,'Shit::TypeRegistry::TypeInfoBuilder()']]],
+  ['typename_36',['typeName',['../struct_shit_1_1_prefab_1_1_component_data.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::Prefab::ComponentData::typeName'],['../struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::FieldInfo::typeName'],['../struct_shit_1_1_property_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::PropertyInfo::typeName'],['../class_shit_1_1_typed_cache_base.html#a4381e38fd9347559177ae18503583839',1,'Shit::TypedCacheBase::typeName()'],['../class_shit_1_1_typed_resource_cache.html#a96e0a4d078724c86ccac18355e6186cb',1,'Shit::TypedResourceCache::typeName()']]],
+  ['typeregistry_37',['TypeRegistry',['../class_shit_1_1_type_registry.html',1,'TypeRegistry'],['../class_shit_1_1_type_registry.html#a8fb345584b509941f28e6c820566d04b',1,'Shit::TypeRegistry::TypeRegistry(const TypeRegistry &amp;)=delete'],['../class_shit_1_1_type_registry.html#ab5bba81829c886b8714a3bda049f7519',1,'Shit::TypeRegistry::TypeRegistry(TypeRegistry &amp;&amp;)=delete']]],
+  ['typeregistry_38',['typeRegistry',['../class_shit_1_1_engine_context.html#a9417290b37c4a38af77a107c65a702a0',1,'Shit::EngineContext']]],
+  ['typeregistry_2eh_39',['TypeRegistry.h',['../_type_registry_8h.html',1,'']]]
 ];

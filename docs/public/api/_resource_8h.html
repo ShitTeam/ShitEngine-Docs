@@ -166,8 +166,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_resource_8h.h
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &quot;<a class="el" href="_core_8h_source.html">ShitEngine/Core/Core.h</a>&quot;</code><br />
 </div>
@@ -176,7 +178,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_resource_8h.h
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:Resource" id="r_Resource"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_resource.html">Resource</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">资源基类 —— 所有引擎资产（Texture / <a class="el" href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）">Font</a> / Audio）的统一封装  <a href="class_shit_1_1_resource.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">资源基类 —— 所有引擎资产（Texture / <a class="el" href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）">Font</a> / <a class="el" href="class_shit_1_1_audio.html" title="音频：封装 MIX_Audio*（加载需 mixer 就绪，由管理器注入）">Audio</a> / 自定义类型）的统一封装  <a href="class_shit_1_1_resource.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:Texture" id="r_Texture"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_texture.html">Texture</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">纹理：封装 SDL_Texture*（渲染用；加载需渲染器已初始化）  <a href="class_shit_1_1_texture.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:FontKey" id="r_FontKey"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_shit_1_1_font_key.html">FontKey</a></td></tr>
@@ -186,8 +188,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_resource_8h.h
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">字体：封装 TTF_Font*（按路径+字号复合键缓存）  <a href="class_shit_1_1_font.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:Audio" id="r_Audio"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_audio.html">Audio</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">音频：封装 MIX_Audio*（加载需 mixer 就绪，由管理器注入）  <a href="class_shit_1_1_audio.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:ResourceCache_3C_20Key_2C_20Res_2C_20Hash_20_3E" id="r_ResourceCache_3C_20Key_2C_20Res_2C_20Hash_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_resource_cache.html">ResourceCache&lt; Key, Res, Hash &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">泛型资源缓存外壳 —— 统一「查缓存 → 工厂创建 → 加载 → 插入」模式  <a href="class_shit_1_1_resource_cache.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:TypedCacheBase" id="r_TypedCacheBase"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_shit_1_1_typed_cache_base.html">TypedCacheBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">类型擦除缓存接口 —— <a class="el" href="class_shit_1_1_resource_manager.html" title="资源管理器（引擎上下文持有）—— 模板化统一门面">ResourceManager</a> 按资源类型注册缓存，经此统一遍历/清理  <a href="class_shit_1_1_typed_cache_base.html#details">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>

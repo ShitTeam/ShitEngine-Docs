@@ -6,7 +6,7 @@ var _resource_8h =
     [ "FontKeyHash", "struct_shit_1_1_font_key_hash.html", "struct_shit_1_1_font_key_hash" ],
     [ "Font", "class_shit_1_1_font.html", "class_shit_1_1_font" ],
     [ "Audio", "class_shit_1_1_audio.html", "class_shit_1_1_audio" ],
-    [ "ResourceCache&lt; Key, Res, Hash &gt;", "class_shit_1_1_resource_cache.html", "class_shit_1_1_resource_cache" ],
+    [ "TypedCacheBase", "class_shit_1_1_typed_cache_base.html", "class_shit_1_1_typed_cache_base" ],
     [ "Shit::ResourceState", "namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705", [
       [ "Shit::ResourceState::Unloaded", "namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705aa5ae20aa7fda5bd38bf0dce98e65bd2d", null ],
       [ "Shit::ResourceState::Loaded", "namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705a7381d487d18845b379422325c0a768d6", null ],

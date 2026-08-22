@@ -67,12 +67,12 @@ var NAVTREEINDEX =
 "class_shit_1_1_camera_component.html#a0365ad1e60466b1f48a2ecadc8f16734",
 "class_shit_1_1_game_object.html#a36f2aa21e8b3898775462d2a378d2e0f",
 "class_shit_1_1_render_system.html#ad5267b789c11ef525f9c8377eaa9b54b",
-"class_shit_1_1_scene_manager.html#a04bbcf4e6db0801aeeda962157cc2673",
-"class_shit_1_1_transform_component.html#a10a489a162a4fb1c43c38d7f60537fe1",
-"class_shit_1_1_u_i_text.html#ab30b5fdc3e433e5af1dacb7e4ee1834f",
-"functions_func_m.html",
-"struct_shit_1_1_animation_clip.html#a56bc3cb64fa74f13ecdf031d44e15a78",
-"struct_shit_1_1_u_i_button_1_1_color_block.html"
+"class_shit_1_1_sprite.html#a17fe7863cd71e57172115e80f1650c6f",
+"class_shit_1_1_type_info_builder.html",
+"class_shit_1_1_u_i_text.html#a358226741faaee4a1bc2b83bc93b9291",
+"functions.html",
+"pch_8h.html",
+"struct_shit_1_1_resource_traits_3_01_audio_01_4.html#a88ddc691e6b56c38f3e9449e97f58ef1"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

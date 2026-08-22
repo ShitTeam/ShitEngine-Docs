@@ -11,5 +11,7 @@ var searchData=
   ['transformcomponent_8',['TransformComponent',['../class_shit_1_1_transform_component.html#a666d167dbdf85cdc16b62d17d0201e73',1,'Shit::TransformComponent']]],
   ['transitionat_9',['transitionAt',['../class_shit_1_1_animator.html#adca0a465a1556d26b5daa9e3302cd0a7',1,'Shit::Animator']]],
   ['transitioncount_10',['transitionCount',['../class_shit_1_1_animator.html#ab3d9a9ec4c934a374c2a699e162db024',1,'Shit::Animator']]],
-  ['typeregistry_11',['TypeRegistry',['../class_shit_1_1_type_registry.html#a8fb345584b509941f28e6c820566d04b',1,'Shit::TypeRegistry::TypeRegistry(const TypeRegistry &amp;)=delete'],['../class_shit_1_1_type_registry.html#ab5bba81829c886b8714a3bda049f7519',1,'Shit::TypeRegistry::TypeRegistry(TypeRegistry &amp;&amp;)=delete']]]
+  ['typedresourcecache_11',['TypedResourceCache',['../class_shit_1_1_typed_resource_cache.html#a5dfff558b4ae2c802c392d0739cbb6cb',1,'Shit::TypedResourceCache']]],
+  ['typename_12',['typeName',['../class_shit_1_1_typed_cache_base.html#a4381e38fd9347559177ae18503583839',1,'Shit::TypedCacheBase::typeName()'],['../class_shit_1_1_typed_resource_cache.html#a96e0a4d078724c86ccac18355e6186cb',1,'Shit::TypedResourceCache::typeName()']]],
+  ['typeregistry_13',['TypeRegistry',['../class_shit_1_1_type_registry.html#a8fb345584b509941f28e6c820566d04b',1,'Shit::TypeRegistry::TypeRegistry(const TypeRegistry &amp;)=delete'],['../class_shit_1_1_type_registry.html#ab5bba81829c886b8714a3bda049f7519',1,'Shit::TypeRegistry::TypeRegistry(TypeRegistry &amp;&amp;)=delete']]]
 ];
