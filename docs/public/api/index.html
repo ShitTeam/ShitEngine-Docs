@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -158,12 +169,91 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html',''
 <blockquote class="doxtable">
 <p>基于 C++20 与 SDL3 的轻量级 2D 游戏引擎 </p>
 </blockquote>
-<p>这里是 ShitEngine 引擎的 **API 参考文档**，由 Doxygen 从源码头文件自动生成。</p>
-<p>每个公有类、方法、枚举的签名与说明均已包含在内。左侧导航树可按模块浏览，顶部搜索框可快速定位任意符号。</p>
-<p>查看引擎的使用手册与教程，请访问主文档网站：</p>
-<p><a href="https://engine.shitteam.top"><b>ShitEngine 文档 →</b></a></p>
+<p>本站是 ShitEngine 的 <b>API 参考文档**（由 Doxygen 从源码自动生成）。 引擎的使用手册与教程在主文档站：[**ShitEngine 文档 →</b>](<a href="https://engine.shitteam.top">https://engine.shitteam.top</a>)</p>
 <hr  />
-<p><em>此 API 文档由 Doxygen 自动生成。</em> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+五分钟上手</h1>
+<p>一个可运行的最小工程只需三步——初始化、运行、销毁：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;ShitEngine.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_function" href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::Game::Init</a>();    <span class="comment">// 日志/窗口/渲染/输入/音频等子系统一次性就绪</span></div>
+<div class="line">    <a class="code hl_function" href="class_shit_1_1_game.html#abcf24ae9fc270d7a9e1664d94ba02900">Shit::Game::Run</a>();     <span class="comment">// 主循环（事件 → 更新 → 渲染）</span></div>
+<div class="line">    <a class="code hl_function" href="class_shit_1_1_game.html#a62a73aff7afffe2fba7c2e47e07d9134">Shit::Game::Destroy</a>(); <span class="comment">// 按初始化的逆序清理</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_shit_1_1_game_html_a62a73aff7afffe2fba7c2e47e07d9134"><div class="ttname"><a href="class_shit_1_1_game.html#a62a73aff7afffe2fba7c2e47e07d9134">Shit::Game::Destroy</a></div><div class="ttdeci">static void Destroy()</div><div class="ttdoc">反初始化，按依赖逆序清理子系统（init 部分失败时也能安全调用）</div><div class="ttdef"><b>定义</b> Game.h:28</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_abcf24ae9fc270d7a9e1664d94ba02900"><div class="ttname"><a href="class_shit_1_1_game.html#abcf24ae9fc270d7a9e1664d94ba02900">Shit::Game::Run</a></div><div class="ttdeci">static void Run()</div><div class="ttdef"><b>定义</b> Game.h:27</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_html_ae596c367662c7f3b19b6626b89ffc08b"><div class="ttname"><a href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Shit::Game::Init</a></div><div class="ttdeci">static bool Init()</div><div class="ttdef"><b>定义</b> Game.h:26</div></div>
+</div><!-- fragment --><p>游戏逻辑写在 **Behavior 脚本**里（类似 Unity 的 MonoBehaviour），挂到场景对象上即可被自动驱动：</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>PlayerMove : <span class="keyword">public</span> <a class="code hl_class" href="class_shit_1_1_behavior.html">Shit::Behavior</a> {</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_behavior.html#a62c5b2c91580204a54e2d32e9594e6e9">onStart</a>()<span class="keyword"> override  </span>{ <span class="comment">/* 首帧前调用一次 */</span> }</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shit_1_1_behavior.html#ac521702842354e4c4c71d4cf28b1db0b">onUpdate</a>()<span class="keyword"> override </span>{</div>
+<div class="line">        <span class="comment">// 每帧调用：动作映射查询输入，移动自身 Transform</span></div>
+<div class="line">        <span class="keywordtype">float</span> axis = <a class="code hl_function" href="class_shit_1_1_input.html#aeb4090813198ea487c30da92f531e246">Shit::Input::GetAxis</a>(<span class="stringliteral">&quot;Horizontal&quot;</span>);</div>
+<div class="line">        <span class="keyword">auto</span>* t = <a class="code hl_function" href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">getOwner</a>()-&gt;<a class="code hl_function" href="class_shit_1_1_game_object.html#af3fc709644a6ee3ffe6496d8fe2fe521">getComponent</a>&lt;<a class="code hl_class" href="class_shit_1_1_transform_component.html">Shit::TransformComponent</a>&gt;();</div>
+<div class="line">        t-&gt;<a class="code hl_function" href="class_shit_1_1_transform_component.html#a5c42a8a652adfd7a2185229dfa8a2f99">setPosition</a>(t-&gt;getPosition() + <a class="code hl_typedef" href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Shit::Vector2</a>{ axis * 5.0f, 0 });</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="ttc" id="aclass_shit_1_1_behavior_html"><div class="ttname"><a href="class_shit_1_1_behavior.html">Shit::Behavior</a></div><div class="ttdoc">行为基类 —— 用于编写自定义游戏逻辑</div><div class="ttdef"><b>定义</b> Behavior.h:21</div></div>
+<div class="ttc" id="aclass_shit_1_1_behavior_html_a62c5b2c91580204a54e2d32e9594e6e9"><div class="ttname"><a href="class_shit_1_1_behavior.html#a62c5b2c91580204a54e2d32e9594e6e9">Shit::Behavior::onStart</a></div><div class="ttdeci">virtual void onStart()</div><div class="ttdoc">首次 update 前执行一次</div></div>
+<div class="ttc" id="aclass_shit_1_1_behavior_html_ac521702842354e4c4c71d4cf28b1db0b"><div class="ttname"><a href="class_shit_1_1_behavior.html#ac521702842354e4c4c71d4cf28b1db0b">Shit::Behavior::onUpdate</a></div><div class="ttdeci">virtual void onUpdate()</div><div class="ttdoc">每帧执行</div></div>
+<div class="ttc" id="aclass_shit_1_1_component_html_a9b36b6de005b18dd7c77687d8621774a"><div class="ttname"><a href="class_shit_1_1_component.html#a9b36b6de005b18dd7c77687d8621774a">Shit::Component::getOwner</a></div><div class="ttdeci">GameObject * getOwner() const</div><div class="ttdef"><b>定义</b> Component.h:53</div></div>
+<div class="ttc" id="aclass_shit_1_1_game_object_html_af3fc709644a6ee3ffe6496d8fe2fe521"><div class="ttname"><a href="class_shit_1_1_game_object.html#af3fc709644a6ee3ffe6496d8fe2fe521">Shit::GameObject::getComponent</a></div><div class="ttdeci">T * getComponent()</div><div class="ttdoc">获取组件</div><div class="ttdef"><b>定义</b> GameObject.h:194</div></div>
+<div class="ttc" id="aclass_shit_1_1_input_html_aeb4090813198ea487c30da92f531e246"><div class="ttname"><a href="class_shit_1_1_input.html#aeb4090813198ea487c30da92f531e246">Shit::Input::GetAxis</a></div><div class="ttdeci">static float GetAxis(const std::string &amp;axis)</div><div class="ttdef"><b>定义</b> Input.h:86</div></div>
+<div class="ttc" id="aclass_shit_1_1_transform_component_html"><div class="ttname"><a href="class_shit_1_1_transform_component.html">Shit::TransformComponent</a></div><div class="ttdoc">变换组件，决定 GameObject 的位置 / 缩放 / 旋转</div><div class="ttdef"><b>定义</b> TransformComponent.h:11</div></div>
+<div class="ttc" id="aclass_shit_1_1_transform_component_html_a5c42a8a652adfd7a2185229dfa8a2f99"><div class="ttname"><a href="class_shit_1_1_transform_component.html#a5c42a8a652adfd7a2185229dfa8a2f99">Shit::TransformComponent::setPosition</a></div><div class="ttdeci">void setPosition(const Vector2 &amp;position)</div><div class="ttdef"><b>定义</b> TransformComponent.h:20</div></div>
+<div class="ttc" id="anamespace_shit_html_ab13fcf529046c79a4544246bf8e28741"><div class="ttname"><a href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Shit::Vector2</a></div><div class="ttdeci">glm::vec2 Vector2</div><div class="ttdef"><b>定义</b> Math.h:7</div></div>
+</div><!-- fragment --><p>组件通过 <span class="tt">GameObject::addComponent&lt;T&gt;()</span> 挂载、<span class="tt">getComponent&lt;T&gt;()</span> 取回； 场景以 <span class="tt">.<a class="el" href="group__scene.html" title="场景持有、切换与 .scene 数据驱动加载。">场景管理</a></span> 文件数据驱动加载（<span class="tt">SceneManager::LoadSceneFromFile</span>）， 自定义脚本编译为插件 DLL 后即可被 Runtime 与编辑器实例化。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+新人阅读路径</h1>
+<ol type="1">
+<li><a class="el" href="class_shit_1_1_game.html" title="Game">Game</a> —— 引擎生命周期与主循环</li>
+<li><a class="el" href="class_shit_1_1_game_object.html" title="GameObject">GameObject</a> / <a class="el" href="class_shit_1_1_component.html" title="Component">Component</a> —— 组件容器模型</li>
+<li><a class="el" href="class_shit_1_1_behavior.html" title="Behavior">Behavior</a> —— 脚本入口（onStart / onUpdate / 碰撞回调）</li>
+<li><a class="el" href="class_shit_1_1_scene_manager.html" title="SceneManager">SceneManager</a> 与 <a class="el" href="class_shit_1_1_scene.html" title="Scene">Scene</a> —— 场景切换与数据驱动加载</li>
+<li>之后按需查阅下方模块速查表</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+模块速查表</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">模块  </th><th class="markdownTableHeadNone">职责  </th><th class="markdownTableHeadNone">关键类  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">核心框架  </td><td class="markdownTableBodyNone">引擎主循环、窗口、时间、日志、配置  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_game.html" title="Game">Game</a>、<a class="el" href="class_shit_1_1_engine_context.html" title="EngineContext">EngineContext</a>、<a class="el" href="class_shit_1_1_window.html" title="Window">Window</a>、<a class="el" href="class_shit_1_1_time.html" title="Time">Time</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">对象与组件  </td><td class="markdownTableBodyNone">组件容器与内置组件  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_game_object.html" title="GameObject">GameObject</a>、<a class="el" href="class_shit_1_1_sprite_renderer.html" title="SpriteRenderer">SpriteRenderer</a>、<a class="el" href="class_shit_1_1_camera_component.html" title="CameraComponent">CameraComponent</a>、<a class="el" href="class_shit_1_1_tilemap.html" title="Tilemap">Tilemap</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">场景  </td><td class="markdownTableBodyNone">场景持有 / 切换 / 序列化  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_scene.html" title="Scene">Scene</a>、<a class="el" href="class_shit_1_1_scene_manager.html" title="SceneManager">SceneManager</a>、<a class="el" href="class_shit_1_1_scene_serializer.html" title="SceneSerializer">SceneSerializer</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">行为脚本  </td><td class="markdownTableBodyNone">用户脚本驱动  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_behavior.html" title="Behavior">Behavior</a>、<a class="el" href="class_shit_1_1_behavior_system.html" title="BehaviorSystem">BehaviorSystem</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">渲染  </td><td class="markdownTableBodyNone">多相机管线与精灵绘制  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_render_system.html" title="RenderSystem">RenderSystem</a>、<a class="el" href="class_shit_1_1_renderer.html" title="Renderer">Renderer</a>、<a class="el" href="class_shit_1_1_sprite.html" title="Sprite">Sprite</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">动画  </td><td class="markdownTableBodyNone">状态机与帧动画剪辑  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_animator.html" title="Animator">Animator</a>、<a class="el" href="struct_shit_1_1_animation_clip.html" title="AnimationClip">AnimationClip</a>、<a class="el" href="class_shit_1_1_animation_component.html" title="AnimationComponent">AnimationComponent</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">音频  </td><td class="markdownTableBodyNone">分层增益播放  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_audio_player.html" title="AudioPlayer">AudioPlayer</a>、<a class="el" href="class_shit_1_1_audio_source.html" title="AudioSource">AudioSource</a>、<a class="el" href="class_shit_1_1_audio_track.html" title="AudioTrack">AudioTrack</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">输入  </td><td class="markdownTableBodyNone">键鼠三态 + 动作/轴映射  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_input.html" title="Input">Input</a>、<a class="el" href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d" title="KeyCode">KeyCode</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">事件  </td><td class="markdownTableBodyNone">缓冲队列事件总线  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_event_bus.html" title="EventBus">EventBus</a>、<a class="el" href="struct_shit_1_1_event.html" title="Event">Event</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">资源  </td><td class="markdownTableBodyNone">纹理/字体/音频缓存  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_resource_manager.html" title="ResourceManager">ResourceManager</a>、<a class="el" href="class_shit_1_1_texture.html" title="Texture">Texture</a>、<a class="el" href="class_shit_1_1_font.html" title="Font">Font</a>、<a class="el" href="class_shit_1_1_audio.html" title="Audio">Audio</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">物理  </td><td class="markdownTableBodyNone">Box2D 2D 物理封装  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_physics_system2_d.html" title="PhysicsSystem2D">PhysicsSystem2D</a>、<a class="el" href="class_shit_1_1_rigid_body2_d.html" title="RigidBody2D">RigidBody2D</a>、<a class="el" href="class_shit_1_1_joint2_d.html" title="Joint2D">Joint2D</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">UI  </td><td class="markdownTableBodyNone">Canvas / 控件体系  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_u_i_canvas.html" title="UICanvas">UICanvas</a>、<a class="el" href="class_shit_1_1_u_i_text.html" title="UIText">UIText</a>、<a class="el" href="class_shit_1_1_u_i_button.html" title="UIButton">UIButton</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">反射  </td><td class="markdownTableBodyNone">运行时类型信息与编辑器绑定  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_type_registry.html" title="TypeRegistry">TypeRegistry</a>、<a class="el" href="struct_shit_1_1_type_info.html" title="TypeInfo">TypeInfo</a>、反射宏  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">插件  </td><td class="markdownTableBodyNone">脚本 DLL 动态加载  </td><td class="markdownTableBodyNone"><a class="el" href="class_shit_1_1_plugin_manager.html" title="PluginManager">PluginManager</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">数学  </td><td class="markdownTableBodyNone">向量 / 矩阵（glm 别名）与矩形  </td><td class="markdownTableBodyNone"><span class="tt">Vector2</span>（glm::vec2 别名）、<a class="el" href="struct_shit_1_1_rect.html" title="Rect">Rect</a>  </td></tr>
+</table>
+<blockquote class="doxtable">
+<p>各模块的完整类列表见左侧导航树；顶部搜索框可直接定位任意符号。 </p>
+</blockquote>
+<hr  />
+<p><em>此 API 文档由 Doxygen 自动生成，随每次提交更新。</em> </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

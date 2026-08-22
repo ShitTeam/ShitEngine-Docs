@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -155,97 +166,98 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_macros_8h_sou
 </div><!--header-->
 <div class="contents">
 <a href="_macros_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// 反射标记宏（annotate 方案）</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// SHIT_REFLECT(Mode)</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//   放在 class/struct 关键字之后、类名之前。展开为</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//   __attribute__((annotate(&quot;shit-reflection:Mode&quot;)))，</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//   ReflectionScanner 通过 AST 的 CXCursor_AnnotateAttr 读取。</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//   Mode: WhiteList | BlackList</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//     WhiteList — 仅反射 SHIT_META(Enable) 标记的字段（opt-in）</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//     BlackList — 反射全部字段，SHIT_META(Disable) 标记的除外（opt-out）</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//     （向后兼容：Fields ≈ BlackList，WhiteListFields ≈ WhiteList）</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//   用法：</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//     class  SHIT_API SHIT_REFLECT(BlackList) MyComponent : Base { ... };</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//     struct           SHIT_REFLECT(WhiteList) MyStruct                { ... };</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//   展开示例（libClang 下）：</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//     class  __declspec(dllexport) __attribute__((annotate(&quot;shit-reflection:BlackList&quot;)))</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//     struct                          __attribute__((annotate(&quot;shit-reflection:WhiteList&quot;)))</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// SHIT_REFLECT_BODY(Type)</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//   放在类/结构体体内。展开为 friend 声明，授予生成的 Register_Type()</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//   访问 private/protected 成员的权限（供成员指针取 offset，ABI 安全）。</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//   注意：annotate 无法替代 friend 的运行期授权作用，必须保留。</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// SHIT_ENUM(Type)</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">//   标记 enum / enum class。放在 enum/class 关键字之后、枚举名之前。</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//   展开为 __attribute__((annotate(&quot;shit-enum:Type&quot;)))。</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">//</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//   用法：</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//     enum class SHIT_ENUM(MyEnum) MyEnum { A, B, C };</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//   Scanner 遍历枚举项（CXCursor_EnumConstantDecl），提取名称与数值。</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">//   生成的注册代码调用 .Value(&quot;A&quot;, 0) 登记每个枚举常量。</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">//</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// SHIT_META(...)</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">//   放在字段上方，为字段添加结构化元数据（供编辑器属性面板显示用）。</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">//   使用双括号语法：SHIT_META(({...}))</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">//   多条 SHIT_META 可叠加（每个生成独立的 annotate 属性）。</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">//   示例：</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//     SHIT_META(({.displayName = &quot;HP&quot;, .range = {0, 100}}))</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//     SHIT_META(Enable)  ← WhiteListFields 模式的简写标记</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// libClang（ReflectionScanner 使用的解析器）定义 __clang__，GCC 不定义。</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// 仅在 __clang__ 下启用 annotate，避免 GCC 编译时产生</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// -Wattributes &quot;annotate attribute directive ignored&quot; 告警。</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">  #define SHIT_DETAIL_ANNOTATE(str) __attribute__((annotate(str)))</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">// 非 clang 编译器（GCC/MSVC）：annotate 退化为空。</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">// 不影响 ReflectionScanner——libClang 自带解析器，即使目标编译器是 GCC</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="comment">// 也能识别 __attribute__ 语法（libClang 定义 __clang__）。</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_macros_8h.html#a64852d86c9c3f67893c3c26c30ca96dc">   55</a></span><span class="preprocessor">  #define SHIT_DETAIL_ANNOTATE(str)</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// ── 类/结构体级反射 ────────────────────────────────</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="_macros_8h.html#a87a97ecacfee8e95dc16f195eb87a4f4">   59</a></span><span class="preprocessor">#define SHIT_REFLECT(Mode) SHIT_DETAIL_ANNOTATE(&quot;shit-reflection:&quot; #Mode)</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// ── 类内 friend 授权（必须保留） ───────────────────</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="_macros_8h.html#a38f21dc4a597fb3558ab7f67bfb7ae38">   62</a></span><span class="preprocessor">#define SHIT_REFLECT_BODY(Type) friend bool Register_##Type();</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// ── 枚举反射 ──────────────────────────────────────</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="_macros_8h.html#a1b3a79dade80bae9109455ee7347ebd2">   65</a></span><span class="preprocessor">#define SHIT_ENUM(Type) SHIT_DETAIL_ANNOTATE(&quot;shit-enum:&quot; #Type)</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// ── 字段级元数据 ──────────────────────────────────</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">   68</a></span><span class="preprocessor">#define SHIT_META(...) SHIT_DETAIL_ANNOTATE(&quot;shit-meta:&quot; #__VA_ARGS__)</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// ── 方法反射 ──────────────────────────────────────</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// 放在方法声明上方，标记该方法可被反射系统发现。</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// Scanner 遍历 CXCursor_CXXMethod 时检查此注解。</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">//</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// 用法：</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//   SHIT_METHOD</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//   float getSourceRectX() const;</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="_macros_8h.html#a8ab68bf4f9120ff57c7323ddf32e5741">   78</a></span><span class="preprocessor">#define SHIT_METHOD SHIT_DETAIL_ANNOTATE(&quot;shit-method&quot;)</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// ── 属性反射（getter/setter 对）────────────────────</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// 放在 getter 方法声明上方，标记一对 getter/setter 为一个属性。</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// Scanner 检测到此注解后，会查找同名 setter 方法。</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">// 用法：</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">//   SHIT_PROPERTY(getSourceRectX, setSourceRectX)</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">//   float getSourceRectX() const;</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//   void setSourceRectX(float v);</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">// 属性在编辑器中渲染为可编辑字段，通过 getter/setter 读写。</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// setter 为空字符串时表示只读属性。</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">//</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="_macros_8h.html#a2ab02deb3393c2c03443987ee3c02b11">   92</a></span><span class="preprocessor">#define SHIT_PROPERTY(Getter, Setter) SHIT_DETAIL_ANNOTATE(&quot;shit-property:&quot; #Getter &quot;:&quot; #Setter)</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// 反射标记宏（annotate 方案）</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">//</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// SHIT_REFLECT(Mode)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//   放在 class/struct 关键字之后、类名之前。展开为</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//   __attribute__((annotate(&quot;shit-reflection:Mode&quot;)))，</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">//   ReflectionScanner 通过 AST 的 CXCursor_AnnotateAttr 读取。</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">//   Mode: WhiteList | BlackList</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//     WhiteList — 仅反射 SHIT_META(Enable) 标记的字段（opt-in）</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">//     BlackList — 反射全部字段，SHIT_META(Disable) 标记的除外（opt-out）</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">//     （向后兼容：Fields ≈ BlackList，WhiteListFields ≈ WhiteList）</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">//</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//   用法：</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">//     class  SHIT_API SHIT_REFLECT(BlackList) MyComponent : Base { ... };</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//     struct           SHIT_REFLECT(WhiteList) MyStruct                { ... };</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">//   展开示例（libClang 下）：</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">//     class  __declspec(dllexport) __attribute__((annotate(&quot;shit-reflection:BlackList&quot;)))</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">//     struct                          __attribute__((annotate(&quot;shit-reflection:WhiteList&quot;)))</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">//</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// SHIT_REFLECT_BODY(Type)</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">//   放在类/结构体体内。展开为 friend 声明，授予生成的 Register_Type()</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">//   访问 private/protected 成员的权限（供成员指针取 offset，ABI 安全）。</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">//   注意：annotate 无法替代 friend 的运行期授权作用，必须保留。</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">//</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// SHIT_ENUM(Type)</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">//   标记 enum / enum class。放在 enum/class 关键字之后、枚举名之前。</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">//   展开为 __attribute__((annotate(&quot;shit-enum:Type&quot;)))。</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">//</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">//   用法：</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//     enum class SHIT_ENUM(MyEnum) MyEnum { A, B, C };</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">//</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">//   Scanner 遍历枚举项（CXCursor_EnumConstantDecl），提取名称与数值。</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//   生成的注册代码调用 .Value(&quot;A&quot;, 0) 登记每个枚举常量。</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// SHIT_META(...)</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">//   放在字段上方，为字段添加结构化元数据（供编辑器属性面板显示用）。</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//   使用双括号语法：SHIT_META(({...}))</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">//   多条 SHIT_META 可叠加（每个生成独立的 annotate 属性）。</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">//</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">//   示例：</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">//     SHIT_META(({.displayName = &quot;HP&quot;, .range = {0, 100}}))</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">//     SHIT_META(Enable)  ← WhiteListFields 模式的简写标记</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// libClang（ReflectionScanner 使用的解析器）定义 __clang__，GCC 不定义。</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// 仅在 __clang__ 下启用 annotate，避免 GCC 编译时产生</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">// -Wattributes &quot;annotate attribute directive ignored&quot; 告警。</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">  #define SHIT_DETAIL_ANNOTATE(str) __attribute__((annotate(str)))</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="comment">// 非 clang 编译器（GCC/MSVC）：annotate 退化为空。</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="comment">// 不影响 ReflectionScanner——libClang 自带解析器，即使目标编译器是 GCC</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="comment">// 也能识别 __attribute__ 语法（libClang 定义 __clang__）。</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="_macros_8h.html#a64852d86c9c3f67893c3c26c30ca96dc">   82</a></span><span class="preprocessor">  #define SHIT_DETAIL_ANNOTATE(str)</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">// ── 类/结构体级反射 ────────────────────────────────</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="_macros_8h.html#a87a97ecacfee8e95dc16f195eb87a4f4">   86</a></span><span class="preprocessor">#define SHIT_REFLECT(Mode) SHIT_DETAIL_ANNOTATE(&quot;shit-reflection:&quot; #Mode)</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">// ── 类内 friend 授权（必须保留） ───────────────────</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="_macros_8h.html#a38f21dc4a597fb3558ab7f67bfb7ae38">   89</a></span><span class="preprocessor">#define SHIT_REFLECT_BODY(Type) friend bool Register_##Type();</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">// ── 枚举反射 ──────────────────────────────────────</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="_macros_8h.html#a1b3a79dade80bae9109455ee7347ebd2">   92</a></span><span class="preprocessor">#define SHIT_ENUM(Type) SHIT_DETAIL_ANNOTATE(&quot;shit-enum:&quot; #Type)</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">// ── 字段级元数据 ──────────────────────────────────</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">   95</a></span><span class="preprocessor">#define SHIT_META(...) SHIT_DETAIL_ANNOTATE(&quot;shit-meta:&quot; #__VA_ARGS__)</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">// ── 方法反射 ──────────────────────────────────────</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">// 放在方法声明上方，标记该方法可被反射系统发现。</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// Scanner 遍历 CXCursor_CXXMethod 时检查此注解。</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">//</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">// 用法：</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">//   SHIT_METHOD</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">//   float getSourceRectX() const;</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">//</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="_macros_8h.html#a8ab68bf4f9120ff57c7323ddf32e5741">  105</a></span><span class="preprocessor">#define SHIT_METHOD SHIT_DETAIL_ANNOTATE(&quot;shit-method&quot;)</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">// ── 属性反射（getter/setter 对）────────────────────</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">// 放在 getter 方法声明上方，标记一对 getter/setter 为一个属性。</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">// Scanner 检测到此注解后，会查找同名 setter 方法。</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">//</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">// 用法：</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">//   SHIT_PROPERTY(getSourceRectX, setSourceRectX)</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">//   float getSourceRectX() const;</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">//   void setSourceRectX(float v);</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">//</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">// 属性在编辑器中渲染为可编辑字段，通过 getter/setter 读写。</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">// setter 为空字符串时表示只读属性。</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">//</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="_macros_8h.html#a2ab02deb3393c2c03443987ee3c02b11">  119</a></span><span class="preprocessor">#define SHIT_PROPERTY(Getter, Setter) SHIT_DETAIL_ANNOTATE(&quot;shit-property:&quot; #Getter &quot;:&quot; #Setter)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

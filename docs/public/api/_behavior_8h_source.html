@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -193,9 +204,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_behavior_8h_s
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
 <div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
 <div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
-<div class="ttc" id="a_macros_8h_html_a38f21dc4a597fb3558ab7f67bfb7ae38"><div class="ttname"><a href="_macros_8h.html#a38f21dc4a597fb3558ab7f67bfb7ae38">SHIT_REFLECT_BODY</a></div><div class="ttdeci">#define SHIT_REFLECT_BODY(Type)</div><div class="ttdef"><b>定义</b> Macros.h:62</div></div>
-<div class="ttc" id="a_macros_8h_html_a87a97ecacfee8e95dc16f195eb87a4f4"><div class="ttname"><a href="_macros_8h.html#a87a97ecacfee8e95dc16f195eb87a4f4">SHIT_REFLECT</a></div><div class="ttdeci">#define SHIT_REFLECT(Mode)</div><div class="ttdef"><b>定义</b> Macros.h:59</div></div>
-<div class="ttc" id="a_macros_8h_html_abda51617d4152febb4da2bb01b57703b"><div class="ttname"><a href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a></div><div class="ttdeci">#define SHIT_META(...)</div><div class="ttdef"><b>定义</b> Macros.h:68</div></div>
+<div class="ttc" id="a_macros_8h_html_a38f21dc4a597fb3558ab7f67bfb7ae38"><div class="ttname"><a href="_macros_8h.html#a38f21dc4a597fb3558ab7f67bfb7ae38">SHIT_REFLECT_BODY</a></div><div class="ttdeci">#define SHIT_REFLECT_BODY(Type)</div><div class="ttdef"><b>定义</b> Macros.h:89</div></div>
+<div class="ttc" id="a_macros_8h_html_a87a97ecacfee8e95dc16f195eb87a4f4"><div class="ttname"><a href="_macros_8h.html#a87a97ecacfee8e95dc16f195eb87a4f4">SHIT_REFLECT</a></div><div class="ttdeci">#define SHIT_REFLECT(Mode)</div><div class="ttdef"><b>定义</b> Macros.h:86</div></div>
+<div class="ttc" id="a_macros_8h_html_abda51617d4152febb4da2bb01b57703b"><div class="ttname"><a href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a></div><div class="ttdeci">#define SHIT_META(...)</div><div class="ttdef"><b>定义</b> Macros.h:95</div></div>
 <div class="ttc" id="aclass_shit_1_1_behavior_html_a00df87c957d8f7ee0fc51f07a0542f4a"><div class="ttname"><a href="class_shit_1_1_behavior.html#a00df87c957d8f7ee0fc51f07a0542f4a">Shit::Behavior::GameObject</a></div><div class="ttdeci">friend class GameObject</div><div class="ttdef"><b>定义</b> Behavior.h:22</div></div>
 <div class="ttc" id="aclass_shit_1_1_behavior_html_a04b5b6d3587350e5f8834fedeb9cab9e"><div class="ttname"><a href="class_shit_1_1_behavior.html#a04b5b6d3587350e5f8834fedeb9cab9e">Shit::Behavior::m_isStarted</a></div><div class="ttdeci">bool m_isStarted</div><div class="ttdef"><b>定义</b> Behavior.h:47</div></div>
 <div class="ttc" id="aclass_shit_1_1_behavior_html_a062926a9c57f956ba91179747e7b10c5"><div class="ttname"><a href="class_shit_1_1_behavior.html#a062926a9c57f956ba91179747e7b10c5">Shit::Behavior::onCollisionEnter</a></div><div class="ttdeci">virtual void onCollisionEnter(GameObject *other)</div><div class="ttdoc">与 other 开始接触（每对象对一次）</div></div>

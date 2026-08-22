@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -193,7 +204,7 @@ Public 成员函数</h2></td></tr>
 <div class="textblock"><p>事件总线，缓冲队列模式 </p>
 <p>所有事件先入队，在游戏循环的统一时刻（ProcessEvents）派发。 避免递归触发、迭代器失效等问题。</p>
 <p>使用示例： struct CollisionEvent : public <a class="el" href="struct_shit_1_1_event.html" title="事件基类，所有自定义事件须继承此结构体">Shit::Event</a> { class GameObject* a; class GameObject* b; };</p>
-<p>uint64_t id = <a class="el" href="#ad0640c08d4605baad81a07600d73baf3">Shit::EventBus::Subscribe&lt;CollisionEvent&gt;</a>( [](const CollisionEvent&amp; e) { /* handle *\/ });</p>
+<p>uint64_t id = <a class="el" href="#ad0640c08d4605baad81a07600d73baf3">Shit::EventBus::Subscribe&lt;CollisionEvent&gt;</a>( [](const CollisionEvent&amp; e) { ... });</p>
 <p><a class="el" href="#ad800bc2ed091aea074aeed2b65f7b506">Shit::EventBus::Emit</a>(CollisionEvent{nullptr, nullptr}); // 游戏循环结束时： <a class="el" href="#ae7c1278f3c351b9d96c8715ed23e257d">Shit::EventBus::ProcessEvents()</a>; Shit::EventBus::Unsubscribe&lt;CollisionEvent&gt;(id); </p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">成员类型定义说明</h2>
 <a id="a74f6a4a2f0198c7132749234a6d5d63f" name="a74f6a4a2f0198c7132749234a6d5d63f"></a>

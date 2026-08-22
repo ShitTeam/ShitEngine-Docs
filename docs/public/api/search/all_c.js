@@ -55,7 +55,8 @@ var searchData=
   ['min_52',['min',['../struct_shit_1_1_range_meta.html#ad2e88d75f808e6d4e78d48bceb10c336',1,'Shit::RangeMeta']]],
   ['minus_53',['Minus',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da453fb623e752c5993f65bc410fd74fe5',1,'Shit']]],
   ['mode_54',['Mode',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da650be61892bf690026089544abbd9d26',1,'Shit']]],
-  ['mousebutton_55',['MouseButton',['../namespace_shit.html#a826ef52e881054fee6a2055e382950b4',1,'Shit']]],
-  ['movecursor_56',['moveCursor',['../class_shit_1_1_u_i_text_input.html#a9e55f123e1e534abe4c64ebf2a6231a4',1,'Shit::UITextInput']]],
-  ['movecursortoboundary_57',['moveCursorToBoundary',['../class_shit_1_1_u_i_text_input.html#ad4564c96d588002d412aa6c347d7f750',1,'Shit::UITextInput']]]
+  ['modules_2edox_55',['modules.dox',['../modules_8dox.html',1,'']]],
+  ['mousebutton_56',['MouseButton',['../namespace_shit.html#a826ef52e881054fee6a2055e382950b4',1,'Shit']]],
+  ['movecursor_57',['moveCursor',['../class_shit_1_1_u_i_text_input.html#a9e55f123e1e534abe4c64ebf2a6231a4',1,'Shit::UITextInput']]],
+  ['movecursortoboundary_58',['moveCursorToBoundary',['../class_shit_1_1_u_i_text_input.html#ad4564c96d588002d412aa6c347d7f750',1,'Shit::UITextInput']]]
 ];

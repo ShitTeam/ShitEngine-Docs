@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -541,6 +552,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit
 &#160;&#160;<a class="el" href="#a94b769a2899b14202ace87b550519a0dae93f994f01c537c4e2f7d8528c3eb5e9">Count</a> = SDL_SCANCODE_COUNT
 <br />
  }</td></tr>
+<tr class="memdesc:a94b769a2899b14202ace87b550519a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">键盘键码表（基于 SDL 扫描码，值为物理键位、不随键盘布局变化）  <a href="#a94b769a2899b14202ace87b550519a0d">更多...</a><br /></td></tr>
 <tr class="memitem:a826ef52e881054fee6a2055e382950b4" id="r_a826ef52e881054fee6a2055e382950b4"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a826ef52e881054fee6a2055e382950b4">MouseButton</a> : int { <br />
 &#160;&#160;<a class="el" href="#a826ef52e881054fee6a2055e382950b4a945d5e233cf7d6240f6b783b36a374ff">Left</a> = SDL_BUTTON_LEFT
 , <a class="el" href="#a826ef52e881054fee6a2055e382950b4a92b09c7c48c520c3c55e497875da437c">Right</a> = SDL_BUTTON_RIGHT
@@ -552,6 +564,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit
 , <a class="el" href="#a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a> = 6
 <br />
  }</td></tr>
+<tr class="memdesc:a826ef52e881054fee6a2055e382950b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">鼠标按键码（左/右/中键 + 两个侧键）  <a href="#a826ef52e881054fee6a2055e382950b4">更多...</a><br /></td></tr>
 <tr class="memitem:a33ee7da93cb9c170c97d8e60f3187705" id="r_a33ee7da93cb9c170c97d8e60f3187705"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> { <br />
 &#160;&#160;<a class="el" href="#a33ee7da93cb9c170c97d8e60f3187705aa5ae20aa7fda5bd38bf0dce98e65bd2d">Unloaded</a>
 , <a class="el" href="#a33ee7da93cb9c170c97d8e60f3187705a7381d487d18845b379422325c0a768d6">Loaded</a>
@@ -703,6 +716,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>键盘键码表（基于 SDL 扫描码，值为物理键位、不随键盘布局变化） </p>
+<p>与 <a class="el" href="class_shit_1_1_input.html" title="Input">Input</a> 的三态查询配合使用：Input::IsKeyDown(KeyCode::Space)。 推荐优先用动作映射（Input::IsActionDown("Jump")）解耦具体键位—— 键位到动作的绑定在 settings.json / 编辑器项目设置中配置，玩家可改键。 </p>
 <table class="fieldtable">
 <tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e" name="a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e"></a>Unknown&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a94b769a2899b14202ace87b550519a0da7fc56270e7a70fa81a5935b72eacbe29" name="a94b769a2899b14202ace87b550519a0da7fc56270e7a70fa81a5935b72eacbe29"></a>A&#160;</td><td class="fielddoc"></td></tr>
@@ -860,6 +876,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespace_shit
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>鼠标按键码（左/右/中键 + 两个侧键） </p>
 <table class="fieldtable">
 <tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a826ef52e881054fee6a2055e382950b4a945d5e233cf7d6240f6b783b36a374ff" name="a826ef52e881054fee6a2055e382950b4a945d5e233cf7d6240f6b783b36a374ff"></a>Left&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a826ef52e881054fee6a2055e382950b4a92b09c7c48c520c3c55e497875da437c" name="a826ef52e881054fee6a2055e382950b4a92b09c7c48c520c3c55e497875da437c"></a>Right&#160;</td><td class="fielddoc"></td></tr>

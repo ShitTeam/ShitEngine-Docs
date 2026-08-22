@@ -25,7 +25,8 @@
 var NAVTREE =
 [
   [ "ShitEngine", "index.html", [
-    [ "ShitEngine API 参考", "index.html", null ],
+    [ "ShitEngine API 参考", "index.html", "index" ],
+    [ "专题", "topics.html", "topics" ],
     [ "命名空间", "namespaces.html", [
       [ "命名空间列表", "namespaces.html", "namespaces_dup" ],
       [ "命名空间成员", "namespacemembers.html", [
@@ -70,7 +71,8 @@ var NAVTREEINDEX =
 "class_shit_1_1_transform_component.html#a666d167dbdf85cdc16b62d17d0201e73",
 "class_shit_1_1_u_i_text_area.html#a1e024fef3917d7ab9c955482de5d9648",
 "functions_func_w.html",
-"struct_shit_1_1_animator_parameter.html#af531fbe47f480902277d8438d485a61a"
+"struct_shit_1_1_animation_clip.html#a9b45b3e13bd9167aab02e17e08916231",
+"struct_shit_1_1_u_i_button_1_1_color_block.html#ab1503d57b018fba5b8ec4c31a66a61f5"
 ];
 
 const SYNCONMSG = '点击 关闭 面板同步';

@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -180,9 +191,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_u_i_text_area
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 <div class="ttc" id="a_core_8h_html"><div class="ttname"><a href="_core_8h.html">Core.h</a></div></div>
 <div class="ttc" id="a_core_8h_html_a58974cbf2d8d9423b235379fdafb8380"><div class="ttname"><a href="_core_8h.html#a58974cbf2d8d9423b235379fdafb8380">SHIT_API</a></div><div class="ttdeci">#define SHIT_API</div><div class="ttdef"><b>定义</b> Core.h:14</div></div>
-<div class="ttc" id="a_macros_8h_html_a38f21dc4a597fb3558ab7f67bfb7ae38"><div class="ttname"><a href="_macros_8h.html#a38f21dc4a597fb3558ab7f67bfb7ae38">SHIT_REFLECT_BODY</a></div><div class="ttdeci">#define SHIT_REFLECT_BODY(Type)</div><div class="ttdef"><b>定义</b> Macros.h:62</div></div>
-<div class="ttc" id="a_macros_8h_html_a87a97ecacfee8e95dc16f195eb87a4f4"><div class="ttname"><a href="_macros_8h.html#a87a97ecacfee8e95dc16f195eb87a4f4">SHIT_REFLECT</a></div><div class="ttdeci">#define SHIT_REFLECT(Mode)</div><div class="ttdef"><b>定义</b> Macros.h:59</div></div>
-<div class="ttc" id="a_macros_8h_html_abda51617d4152febb4da2bb01b57703b"><div class="ttname"><a href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a></div><div class="ttdeci">#define SHIT_META(...)</div><div class="ttdef"><b>定义</b> Macros.h:68</div></div>
+<div class="ttc" id="a_macros_8h_html_a38f21dc4a597fb3558ab7f67bfb7ae38"><div class="ttname"><a href="_macros_8h.html#a38f21dc4a597fb3558ab7f67bfb7ae38">SHIT_REFLECT_BODY</a></div><div class="ttdeci">#define SHIT_REFLECT_BODY(Type)</div><div class="ttdef"><b>定义</b> Macros.h:89</div></div>
+<div class="ttc" id="a_macros_8h_html_a87a97ecacfee8e95dc16f195eb87a4f4"><div class="ttname"><a href="_macros_8h.html#a87a97ecacfee8e95dc16f195eb87a4f4">SHIT_REFLECT</a></div><div class="ttdeci">#define SHIT_REFLECT(Mode)</div><div class="ttdef"><b>定义</b> Macros.h:86</div></div>
+<div class="ttc" id="a_macros_8h_html_abda51617d4152febb4da2bb01b57703b"><div class="ttname"><a href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">SHIT_META</a></div><div class="ttdeci">#define SHIT_META(...)</div><div class="ttdef"><b>定义</b> Macros.h:95</div></div>
 <div class="ttc" id="a_u_i_text_input_8h_html"><div class="ttname"><a href="_u_i_text_input_8h.html">UITextInput.h</a></div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_area_html_a1e024fef3917d7ab9c955482de5d9648"><div class="ttname"><a href="class_shit_1_1_u_i_text_area.html#a1e024fef3917d7ab9c955482de5d9648">Shit::UITextArea::onKeyDown</a></div><div class="ttdeci">bool onKeyDown(KeyCode key, bool shift, bool ctrl) override</div><div class="ttdoc">子类可覆写：处理键盘控制键（方向键、退格、删除、Home/End、回车）</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_area_html_a63cddb228edf6e767eefdd98f34e2516"><div class="ttname"><a href="class_shit_1_1_u_i_text_area.html#a63cddb228edf6e767eefdd98f34e2516">Shit::UITextArea::UITextArea</a></div><div class="ttdeci">UITextArea()</div></div>
@@ -191,7 +202,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_u_i_text_area
 <div class="ttc" id="aclass_shit_1_1_u_i_text_area_html_ac717c35a0270efeda965d8c421e6b4e4"><div class="ttname"><a href="class_shit_1_1_u_i_text_area.html#ac717c35a0270efeda965d8c421e6b4e4">Shit::UITextArea::insertNewline</a></div><div class="ttdeci">void insertNewline() override</div><div class="ttdoc">子类可覆写：当前选区是否被替换为换行（UITextBox 拒绝）</div></div>
 <div class="ttc" id="aclass_shit_1_1_u_i_text_input_html_a4323c909c02ea45b95344e08ce1a6e24"><div class="ttname"><a href="class_shit_1_1_u_i_text_input.html#a4323c909c02ea45b95344e08ce1a6e24">Shit::UITextInput::UITextInput</a></div><div class="ttdeci">UITextInput()=default</div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AnimationClip.h:12</div></div>
-<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0d"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">Shit::KeyCode</a></div><div class="ttdeci">KeyCode</div><div class="ttdef"><b>定义</b> KeyCode.h:8</div></div>
+<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0d"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">Shit::KeyCode</a></div><div class="ttdeci">KeyCode</div><div class="ttdoc">键盘键码表（基于 SDL 扫描码，值为物理键位、不随键盘布局变化）</div><div class="ttdef"><b>定义</b> KeyCode.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

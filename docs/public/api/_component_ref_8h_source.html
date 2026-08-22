@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -230,7 +241,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_component_ref
 <div class="ttc" id="aclass_shit_1_1_scene_html"><div class="ttname"><a href="class_shit_1_1_scene.html">Shit::Scene</a></div><div class="ttdoc">场景类</div><div class="ttdef"><b>定义</b> Scene.h:36</div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AnimationClip.h:12</div></div>
 <div class="ttc" id="anamespace_shit_html_a893cf9371fd527345f0a25b524c131d9"><div class="ttname"><a href="namespace_shit.html#a893cf9371fd527345f0a25b524c131d9">Shit::ComponentRefLookup</a></div><div class="ttdeci">Component * ComponentRefLookup(uint64_t uuid)</div><div class="ttdoc">内部：从当前上下文的活跃场景按 uuid 查组件（实现在 ComponentRef.cpp，跨 TU/DLL 共享）</div></div>
-<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">Shit::KeyCode::T</a></div><div class="ttdeci">@ T</div><div class="ttdef"><b>定义</b> KeyCode.h:31</div></div>
+<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0dab9ece18c950afbfa6b0fdbfa4ff731d3">Shit::KeyCode::T</a></div><div class="ttdeci">@ T</div><div class="ttdef"><b>定义</b> KeyCode.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -324,10 +335,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_input_8h_sour
 <div class="ttc" id="aclass_shit_1_1_input_html_af41a9ab6a963c4afdbc7dc4889605865"><div class="ttname"><a href="class_shit_1_1_input.html#af41a9ab6a963c4afdbc7dc4889605865">Shit::Input::isActionDown</a></div><div class="ttdeci">bool isActionDown(const std::string &amp;action) const</div></div>
 <div class="ttc" id="aclass_shit_1_1_input_html_af98b2fdbfc2655d915f2bff5d5d876ae"><div class="ttname"><a href="class_shit_1_1_input.html#af98b2fdbfc2655d915f2bff5d5d876ae">Shit::Input::GetMouseScroll</a></div><div class="ttdeci">static Vector2 GetMouseScroll()</div><div class="ttdef"><b>定义</b> Input.h:81</div></div>
 <div class="ttc" id="anamespace_shit_html"><div class="ttname"><a href="namespace_shit.html">Shit</a></div><div class="ttdef"><b>定义</b> AnimationClip.h:12</div></div>
-<div class="ttc" id="anamespace_shit_html_a826ef52e881054fee6a2055e382950b4"><div class="ttname"><a href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">Shit::MouseButton</a></div><div class="ttdeci">MouseButton</div><div class="ttdef"><b>定义</b> KeyCode.h:170</div></div>
-<div class="ttc" id="anamespace_shit_html_a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9"><div class="ttname"><a href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9">Shit::MouseButton::Count</a></div><div class="ttdeci">@ Count</div><div class="ttdef"><b>定义</b> KeyCode.h:176</div></div>
-<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0d"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">Shit::KeyCode</a></div><div class="ttdeci">KeyCode</div><div class="ttdef"><b>定义</b> KeyCode.h:8</div></div>
-<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e">Shit::KeyCode::Unknown</a></div><div class="ttdeci">@ Unknown</div><div class="ttdef"><b>定义</b> KeyCode.h:9</div></div>
+<div class="ttc" id="anamespace_shit_html_a826ef52e881054fee6a2055e382950b4"><div class="ttname"><a href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4">Shit::MouseButton</a></div><div class="ttdeci">MouseButton</div><div class="ttdoc">鼠标按键码（左/右/中键 + 两个侧键）</div><div class="ttdef"><b>定义</b> KeyCode.h:178</div></div>
+<div class="ttc" id="anamespace_shit_html_a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9"><div class="ttname"><a href="namespace_shit.html#a826ef52e881054fee6a2055e382950b4ae93f994f01c537c4e2f7d8528c3eb5e9">Shit::MouseButton::Count</a></div><div class="ttdeci">@ Count</div><div class="ttdef"><b>定义</b> KeyCode.h:184</div></div>
+<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0d"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0d">Shit::KeyCode</a></div><div class="ttdeci">KeyCode</div><div class="ttdoc">键盘键码表（基于 SDL 扫描码，值为物理键位、不随键盘布局变化）</div><div class="ttdef"><b>定义</b> KeyCode.h:14</div></div>
+<div class="ttc" id="anamespace_shit_html_a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e"><div class="ttname"><a href="namespace_shit.html#a94b769a2899b14202ace87b550519a0da88183b946cc5f0e8c96b2e66e1c74a7e">Shit::KeyCode::Unknown</a></div><div class="ttdeci">@ Unknown</div><div class="ttdef"><b>定义</b> KeyCode.h:15</div></div>
 <div class="ttc" id="anamespace_shit_html_ab13fcf529046c79a4544246bf8e28741"><div class="ttname"><a href="namespace_shit.html#ab13fcf529046c79a4544246bf8e28741">Shit::Vector2</a></div><div class="ttdeci">glm::vec2 Vector2</div><div class="ttdef"><b>定义</b> Math.h:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -47,6 +47,16 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
         'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
         'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
       document.body.appendChild(toggle);
+      // 跨站导航：返回手册 / 教程主站（API 站为 engine.shitteam.top 的 /api/ 子路径）
+      var guide = document.createElement('a');
+      guide.href = 'https://engine.shitteam.top';
+      guide.textContent = '📘 手册 / 教程';
+      guide.title = '前往 ShitEngine 主文档站（手册与教程）';
+      guide.style.cssText = 'position:fixed;bottom:16px;left:16px;z-index:9999;' +
+        'padding:8px 14px;background:#fff;color:#3a4a5a;border:1px solid #ddd;' +
+        'border-radius:22px;cursor:pointer;text-decoration:none;font-size:13px;' +
+        'box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(guide);
       // fragment copy
       DoxygenAwesomeFragmentCopyButton.init();
     }
@@ -64,8 +74,9 @@ mermaid.initialize({ startOnLoad: true, theme: theme });
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ShitEngine
+   <div id="projectname">ShitEngine<span id="projectnumber">&#160;1.4.2</span>
    </div>
    <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
   </td>
@@ -200,9 +211,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aec9022828862661155e679aeacd5301b template"><td class="memItemLeft"><a class="el" href="class_shit_1_1_weak_component_ref.html">WeakComponentRef</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aec9022828862661155e679aeacd5301b">getWeakRef</a> ()</td></tr>
 <tr class="memdesc:aec9022828862661155e679aeacd5301b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建指向本对象上 T 组件的弱引用（组件被移除/对象销毁后自动失效）  <br /></td></tr>
 <tr class="memitem:a51ac371861e87dea45be6bb117cbcbcf" id="r_a51ac371861e87dea45be6bb117cbcbcf"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a51ac371861e87dea45be6bb117cbcbcf">addComponentInstance</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *component)</td></tr>
-<tr class="memdesc:a51ac371861e87dea45be6bb117cbcbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加组件  <br /></td></tr>
+<tr class="memdesc:a51ac371861e87dea45be6bb117cbcbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态添加组件实例（Prefab 实例化等反射场景用，所有权转移给 GameObject）  <br /></td></tr>
 <tr class="memitem:ac4cb35ac024fe4a08a4c23b4e24484e5" id="r_ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
 <tr class="memitem:ac4cb35ac024fe4a08a4c23b4e24484e5 template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#ac4cb35ac024fe4a08a4c23b4e24484e5">addComponent</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:ac4cb35ac024fe4a08a4c23b4e24484e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加组件  <br /></td></tr>
 <tr class="memitem:af3fc709644a6ee3ffe6496d8fe2fe521" id="r_af3fc709644a6ee3ffe6496d8fe2fe521"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:af3fc709644a6ee3ffe6496d8fe2fe521 template"><td class="memItemLeft">T *&#160;</td><td class="memItemRight"><a class="el" href="#af3fc709644a6ee3ffe6496d8fe2fe521">getComponent</a> ()</td></tr>
 <tr class="memdesc:af3fc709644a6ee3ffe6496d8fe2fe521"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取组件  <br /></td></tr>
@@ -351,6 +363,22 @@ template&lt;typename T, typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>添加组件 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>组件类型（须继承 Component） </td></tr>
+    <tr><td class="paramname">Args</td><td>构造参数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>传递给组件构造函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>组件指针（若已存在则返回已有的） </dd></dl>
+
 </div>
 </div>
 <a id="a51ac371861e87dea45be6bb117cbcbcf" name="a51ac371861e87dea45be6bb117cbcbcf"></a>
@@ -368,22 +396,8 @@ template&lt;typename T, typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>添加组件 </p>
-<dl class="tparams"><dt>模板参数</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>组件类型（须继承 Component） </td></tr>
-    <tr><td class="paramname">Args</td><td>构造参数类型 </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>动态添加组件实例（Prefab 实例化等反射场景用，所有权转移给 GameObject） </p>
 <dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">args</td><td>传递给组件构造函数 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>组件指针（若已存在则返回已有的）</dd></dl>
-<p>动态添加组件实例（Prefab 实例化等反射场景用，所有权转移给 GameObject） </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">component</td><td>已通过反射工厂创建的组件实例 </td></tr>
   </table>
