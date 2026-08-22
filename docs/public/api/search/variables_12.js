@@ -10,6 +10,6 @@ var searchData=
   ['tostate_7',['toState',['../struct_shit_1_1_animator_transition.html#a1807cdc4ad7fa7ed539b7e391655e086',1,'Shit::AnimatorTransition']]],
   ['type_8',['type',['../struct_shit_1_1_animator_parameter.html#aae57cf504e0166326d01a5fb9f2fe5dd',1,'Shit::AnimatorParameter::type'],['../struct_shit_1_1_animator_transition_condition.html#a6388a6231fbf1fe619609d0f67f91091',1,'Shit::AnimatorTransitionCondition::type']]],
   ['typeindex_9',['typeIndex',['../struct_shit_1_1_type_info.html#a179500c846c41a50dfc9fd26d174f458',1,'Shit::TypeInfo']]],
-  ['typename_10',['typeName',['../struct_shit_1_1_prefab_1_1_component_data.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::Prefab::ComponentData::typeName'],['../struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::FieldInfo::typeName']]],
+  ['typename_10',['typeName',['../struct_shit_1_1_prefab_1_1_component_data.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::Prefab::ComponentData::typeName'],['../struct_shit_1_1_field_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::FieldInfo::typeName'],['../struct_shit_1_1_property_info.html#a3f13bbbf7a2e3a9357c1053612ecb0ff',1,'Shit::PropertyInfo::typeName']]],
   ['typeregistry_11',['typeRegistry',['../class_shit_1_1_engine_context.html#a9417290b37c4a38af77a107c65a702a0',1,'Shit::EngineContext']]]
 ];

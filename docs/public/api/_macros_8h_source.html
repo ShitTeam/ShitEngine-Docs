@@ -222,6 +222,30 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_macros_8h_sou
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// ── 字段级元数据 ──────────────────────────────────</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="_macros_8h.html#abda51617d4152febb4da2bb01b57703b">   68</a></span><span class="preprocessor">#define SHIT_META(...) SHIT_DETAIL_ANNOTATE(&quot;shit-meta:&quot; #__VA_ARGS__)</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// ── 方法反射 ──────────────────────────────────────</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// 放在方法声明上方，标记该方法可被反射系统发现。</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// Scanner 遍历 CXCursor_CXXMethod 时检查此注解。</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">//</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// 用法：</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//   SHIT_METHOD</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//   float getSourceRectX() const;</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="_macros_8h.html#a8ab68bf4f9120ff57c7323ddf32e5741">   78</a></span><span class="preprocessor">#define SHIT_METHOD SHIT_DETAIL_ANNOTATE(&quot;shit-method&quot;)</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// ── 属性反射（getter/setter 对）────────────────────</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// 放在 getter 方法声明上方，标记一对 getter/setter 为一个属性。</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// Scanner 检测到此注解后，会查找同名 setter 方法。</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">// 用法：</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">//   SHIT_PROPERTY(getSourceRectX, setSourceRectX)</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">//   float getSourceRectX() const;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//   void setSourceRectX(float v);</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">// 属性在编辑器中渲染为可编辑字段，通过 getter/setter 读写。</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// setter 为空字符串时表示只读属性。</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">//</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="_macros_8h.html#a2ab02deb3393c2c03443987ee3c02b11">   92</a></span><span class="preprocessor">#define SHIT_PROPERTY(Getter, Setter) SHIT_DETAIL_ANNOTATE(&quot;shit-property:&quot; #Getter &quot;:&quot; #Setter)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

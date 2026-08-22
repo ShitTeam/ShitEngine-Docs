@@ -176,6 +176,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a3a80b6032f86a56bec74609034b3246f"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁所有对象与系统  <br /></td></tr>
 <tr class="memitem:a7904c998322c92e144f5dba063b17e11" id="r_a7904c998322c92e144f5dba063b17e11"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7904c998322c92e144f5dba063b17e11">hasSystems</a> () const</td></tr>
 <tr class="memdesc:a7904c998322c92e144f5dba063b17e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否已注册任何 System（SceneManager 用于自动初始化，防止漏调 <a class="el" href="#a02fd73d861ef2e4aabb38c0c9ff82947" title="注册默认系统（BehaviorSystem + RenderSystem + UIRenderSystem），幂等">init()</a> 导致空场景）  <br /></td></tr>
+<tr class="memitem:a8e78398f1721d60fbd3237b4d120f672" id="r_a8e78398f1721d60fbd3237b4d120f672"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8e78398f1721d60fbd3237b4d120f672">hasEnabledCamera</a> ()</td></tr>
+<tr class="memdesc:a8e78398f1721d60fbd3237b4d120f672"><td class="mdescLeft">&#160;</td><td class="mdescRight">场景中是否存在已启用的相机（含延迟添加的 pending 对象）。 运行态加载场景时对象先进 m_pendingAdditions、m_gameObjects 为空， 只扫正式容器会误判"没有相机"而重复注入兜底相机。  <br /></td></tr>
+<tr class="memitem:adedf6af630101825258dda6f3ffd23b5" id="r_adedf6af630101825258dda6f3ffd23b5"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#adedf6af630101825258dda6f3ffd23b5">findGameObjectByName</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:adedf6af630101825258dda6f3ffd23b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">遍历全部对象（正式 + pending），返回第一个名为 name 的对象。 与 hasEnabledCamera 同理，覆盖 pending 防止运行态漏判。  <br /></td></tr>
 <tr class="memitem:a011567ea2e90782dc7cffbd962549f88" id="r_a011567ea2e90782dc7cffbd962549f88"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a011567ea2e90782dc7cffbd962549f88">addGameObject</a> (std::unique_ptr&lt; <a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> &gt; &amp;&amp;gameObject)</td></tr>
 <tr class="memdesc:a011567ea2e90782dc7cffbd962549f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">延迟添加 GameObject（帧末生效）  <br /></td></tr>
 <tr class="memitem:a9f4ae128a66f2c918b57e58ed9534677" id="r_a9f4ae128a66f2c918b57e58ed9534677"><td class="memItemLeft"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f4ae128a66f2c918b57e58ed9534677">createGameObject</a> (const std::string &amp;name)</td></tr>
@@ -431,6 +435,25 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="adedf6af630101825258dda6f3ffd23b5" name="adedf6af630101825258dda6f3ffd23b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedf6af630101825258dda6f3ffd23b5">&#9670;&#160;</a></span>findGameObjectByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> * findGameObjectByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>遍历全部对象（正式 + pending），返回第一个名为 name 的对象。 与 hasEnabledCamera 同理，覆盖 pending 防止运行态漏判。 </p>
+
+</div>
+</div>
 <a id="a8e1fc2ada5d0551d8f645a6387d38068" name="a8e1fc2ada5d0551d8f645a6387d38068"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e1fc2ada5d0551d8f645a6387d38068">&#9670;&#160;</a></span>flushPendingSystemRemovals()</h2>
 
@@ -589,6 +612,25 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>按类型名查询系统（返回 nullptr 表示未注册） </p>
+
+</div>
+</div>
+<a id="a8e78398f1721d60fbd3237b4d120f672" name="a8e78398f1721d60fbd3237b4d120f672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e78398f1721d60fbd3237b4d120f672">&#9670;&#160;</a></span>hasEnabledCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasEnabledCamera </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>场景中是否存在已启用的相机（含延迟添加的 pending 对象）。 运行态加载场景时对象先进 m_pendingAdditions、m_gameObjects 为空， 只扫正式容器会误判"没有相机"而重复注入兜底相机。 </p>
 
 </div>
 </div>

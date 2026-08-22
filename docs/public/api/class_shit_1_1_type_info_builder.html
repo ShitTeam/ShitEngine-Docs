@@ -172,6 +172,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ad22578c2cb5176da8b5ac26503cceddf" id="r_ad22578c2cb5176da8b5ac26503cceddf"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad22578c2cb5176da8b5ac26503cceddf">Meta</a> (const <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &amp;meta)</td></tr>
 <tr class="memitem:af2d1260dc3133daf0a7a4a1d9d640581" id="r_af2d1260dc3133daf0a7a4a1d9d640581"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af2d1260dc3133daf0a7a4a1d9d640581">Ref</a> (const char *refType)</td></tr>
 <tr class="memitem:aee8ed17f906a476b727596eae5b54487" id="r_aee8ed17f906a476b727596eae5b54487"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aee8ed17f906a476b727596eae5b54487">Value</a> (const char *name, int64_t val)</td></tr>
+<tr class="memitem:af1e086da54d4ff9f4c8514eb16f06ceb" id="r_af1e086da54d4ff9f4c8514eb16f06ceb"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af1e086da54d4ff9f4c8514eb16f06ceb">Method</a> (const char *name, const char *returnType, std::function&lt; void *(void *, const void **)&gt; invoker, std::vector&lt; std::string &gt; paramTypes={})</td></tr>
+<tr class="memitem:ab4fdeac9b6ef8683269e611c58e63374" id="r_ab4fdeac9b6ef8683269e611c58e63374"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab4fdeac9b6ef8683269e611c58e63374">MethodMeta</a> (const <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &amp;meta)</td></tr>
+<tr class="memitem:aa5fb40986f46e17bd8a155df14c7d58a" id="r_aa5fb40986f46e17bd8a155df14c7d58a"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa5fb40986f46e17bd8a155df14c7d58a">Property</a> (const char *name, const char *typeName, std::function&lt; void *(void *)&gt; getter, std::function&lt; void(void *, const void *)&gt; setter)</td></tr>
+<tr class="memitem:ae0d36acef9d3b08440db3f007d137868" id="r_ae0d36acef9d3b08440db3f007d137868"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae0d36acef9d3b08440db3f007d137868">PropertyMeta</a> (const <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &amp;meta)</td></tr>
 <tr class="memitem:a868904b119a9e894dcc5c66871d39ae9" id="r_a868904b119a9e894dcc5c66871d39ae9"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a868904b119a9e894dcc5c66871d39ae9 template"><td class="memItemLeft">TypeInfoBuilder &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a868904b119a9e894dcc5c66871d39ae9">Factory</a> ()</td></tr>
 <tr class="memitem:a9bfe6d7f6157040f0a5f83c29249a2ae" id="r_a9bfe6d7f6157040f0a5f83c29249a2ae"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -405,6 +409,134 @@ template&lt;typename T, typename M&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">TypeInfoBuilder &amp; Meta </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>meta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1e086da54d4ff9f4c8514eb16f06ceb" name="af1e086da54d4ff9f4c8514eb16f06ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e086da54d4ff9f4c8514eb16f06ceb">&#9670;&#160;</a></span>Method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeInfoBuilder &amp; Method </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>returnType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void *(void *, const void **)&gt;</td>          <td class="paramname"><span class="paramname"><em>invoker</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;</td>          <td class="paramname"><span class="paramname"><em>paramTypes</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4fdeac9b6ef8683269e611c58e63374" name="ab4fdeac9b6ef8683269e611c58e63374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4fdeac9b6ef8683269e611c58e63374">&#9670;&#160;</a></span>MethodMeta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeInfoBuilder &amp; MethodMeta </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>meta</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5fb40986f46e17bd8a155df14c7d58a" name="aa5fb40986f46e17bd8a155df14c7d58a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5fb40986f46e17bd8a155df14c7d58a">&#9670;&#160;</a></span>Property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeInfoBuilder &amp; Property </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>typeName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void *(void *)&gt;</td>          <td class="paramname"><span class="paramname"><em>getter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(void *, const void *)&gt;</td>          <td class="paramname"><span class="paramname"><em>setter</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d36acef9d3b08440db3f007d137868" name="ae0d36acef9d3b08440db3f007d137868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d36acef9d3b08440db3f007d137868">&#9670;&#160;</a></span>PropertyMeta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TypeInfoBuilder &amp; PropertyMeta </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_shit_1_1_field_meta.html">FieldMeta</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>meta</em></span></td><td>)</td>
           <td></td>
