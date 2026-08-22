@@ -186,6 +186,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a9bcaafd127c8f7c68d3d22ad444aadea" id="r_a9bcaafd127c8f7c68d3d22ad444aadea"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9bcaafd127c8f7c68d3d22ad444aadea">~BehaviorSystem</a> () override</td></tr>
 <tr class="memitem:a44137bb65de2396875934e48a6ee5099" id="r_a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
 <tr class="memdesc:a44137bb65de2396875934e48a6ee5099"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧更新（纯虚）  <br /></td></tr>
+<tr class="memitem:a463ce7b758c3e0027e5ffac6ecbd214d" id="r_a463ce7b758c3e0027e5ffac6ecbd214d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a463ce7b758c3e0027e5ffac6ecbd214d">fixedUpdate</a> (float fixedDt) override</td></tr>
+<tr class="memdesc:a463ce7b758c3e0027e5ffac6ecbd214d"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定步阶段（Scene 固定步循环节拍调用）：补跑 onStart 后驱动 onFixedUpdate(fixedDt)  <br /></td></tr>
 <tr class="memitem:ae1cf30cae681d95a94934492ae7ea627" id="r_ae1cf30cae681d95a94934492ae7ea627"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae1cf30cae681d95a94934492ae7ea627">destroy</a> () override</td></tr>
 <tr class="memdesc:ae1cf30cae681d95a94934492ae7ea627"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁（纯虚）  <br /></td></tr>
 <tr class="memitem:a783a7e369bc1d8c5dc998d08e3e956c1" id="r_a783a7e369bc1d8c5dc998d08e3e956c1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a783a7e369bc1d8c5dc998d08e3e956c1">onComponentAttached</a> (<a class="el" href="class_shit_1_1_component.html">Component</a> *component) override</td></tr>
@@ -223,7 +225,7 @@ Public 成员函数</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p><a class="el" href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑">Behavior</a> 驱动系统 </p>
-<p>每帧遍历已注册的 <a class="el" href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑">Behavior</a> 组件，驱动其 onStart / onUpdate。 <a class="el" href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑">Behavior</a> 的 onAttach / onDetach 会自动调用 register / unregister。 </p>
+<p>变步长阶段每帧驱动 onStart / onUpdate；固定步阶段驱动 onFixedUpdate(fixedDt)（与物理同拍）。 <a class="el" href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑">Behavior</a> 的 onAttach / onDetach 会自动调用 register / unregister。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a580b6b2767a0695fe483d22b5e7d074a" name="a580b6b2767a0695fe483d22b5e7d074a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a580b6b2767a0695fe483d22b5e7d074a">&#9670;&#160;</a></span>BehaviorSystem()</h2>
@@ -294,6 +296,35 @@ Public 成员函数</h2></td></tr>
 <p>销毁（纯虚） </p>
 
 <p>实现了 <a class="el" href="class_shit_1_1_system.html#af79997318d96497d77015571261ec88b">System</a>.</p>
+
+</div>
+</div>
+<a id="a463ce7b758c3e0027e5ffac6ecbd214d" name="a463ce7b758c3e0027e5ffac6ecbd214d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a463ce7b758c3e0027e5ffac6ecbd214d">&#9670;&#160;</a></span>fixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fixedUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fixedDt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>固定步阶段（Scene 固定步循环节拍调用）：补跑 onStart 后驱动 onFixedUpdate(fixedDt) </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_system.html#af33837c1054215fd5cda6f992f50c8e3">System</a> .</p>
 
 </div>
 </div>

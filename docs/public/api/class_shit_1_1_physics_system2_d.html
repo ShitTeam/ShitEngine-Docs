@@ -188,6 +188,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:ad72eef1561c7a53b19b048397d4ef570"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化（可覆写）  <br /></td></tr>
 <tr class="memitem:a44137bb65de2396875934e48a6ee5099" id="r_a44137bb65de2396875934e48a6ee5099"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44137bb65de2396875934e48a6ee5099">update</a> () override</td></tr>
 <tr class="memdesc:a44137bb65de2396875934e48a6ee5099"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧更新（纯虚）  <br /></td></tr>
+<tr class="memitem:a463ce7b758c3e0027e5ffac6ecbd214d" id="r_a463ce7b758c3e0027e5ffac6ecbd214d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a463ce7b758c3e0027e5ffac6ecbd214d">fixedUpdate</a> (float fixedDt) override</td></tr>
+<tr class="memdesc:a463ce7b758c3e0027e5ffac6ecbd214d"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定步阶段（Scene 固定步循环节拍调用）：补建自愈 → 步进一次 → 同步 Transform → 收集派发本步接触事件  <br /></td></tr>
 <tr class="memitem:ae1cf30cae681d95a94934492ae7ea627" id="r_ae1cf30cae681d95a94934492ae7ea627"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae1cf30cae681d95a94934492ae7ea627">destroy</a> () override</td></tr>
 <tr class="memdesc:ae1cf30cae681d95a94934492ae7ea627"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁（纯虚）  <br /></td></tr>
 <tr class="memitem:aadba02841897aadd2819172be6c50058" id="r_aadba02841897aadd2819172be6c50058"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aadba02841897aadd2819172be6c50058">onFieldChanged</a> (const std::string &amp;fieldName) override</td></tr>
@@ -246,8 +248,8 @@ Public 成员函数</h2></td></tr>
 <div class="textblock"><p>2D 物理系统 </p>
 <p>包装 Box2D 3.x（C 语言 API）物理世界。 默认使用 b2SetLengthUnitsPerMeter(32) 以像素为长度单位， 用户无需手动转换像素↔米。</p>
 <p>使用方式： scene-&gt;registerSystem&lt;Shit::PhysicsSystem2D&gt;();</p>
-<p>物理步进后按接触事件驱动冲突对象的 <a class="el" href="class_shit_1_1_behavior.html" title="行为基类 —— 用于编写自定义游戏逻辑">Behavior</a> 碰撞回调： onCollisionEnter / onCollisionStay / onCollisionExit(对方 <a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a>)。</p>
-<p>priority=50，晚于 BehaviorSystem(0) 早于 RenderSystem(100)。 </p>
+<p>由 <a class="el" href="class_shit_1_1_scene.html" title="场景类">Scene</a> 固定步循环驱动（默认 60Hz）：每步 补建自愈 → b2World_Step(fixedDt) → 同步刚体位姿到 Transform → 收集并派发本步接触事件（碰撞回调每固定步一次）。</p>
+<p>priority=50，晚于 BehaviorSystem(0) 早于 RenderSystem(100)——同一固定步内 脚本的 onFixedUpdate 先施力/设速，物理随后模拟。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a5a2124f1f32f2d89dfc201b3ce2f00d4" name="a5a2124f1f32f2d89dfc201b3ce2f00d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a2124f1f32f2d89dfc201b3ce2f00d4">&#9670;&#160;</a></span>PhysicsSystem2D()</h2>
@@ -402,6 +404,35 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>销毁 <a class="el" href="class_shit_1_1_rigid_body2_d.html" title="刚体组件">RigidBody2D</a> 的物理体并注销（组件卸下时调用） </p>
+
+</div>
+</div>
+<a id="a463ce7b758c3e0027e5ffac6ecbd214d" name="a463ce7b758c3e0027e5ffac6ecbd214d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a463ce7b758c3e0027e5ffac6ecbd214d">&#9670;&#160;</a></span>fixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fixedUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fixedDt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>固定步阶段（Scene 固定步循环节拍调用）：补建自愈 → 步进一次 → 同步 Transform → 收集派发本步接触事件 </p>
+
+<p>重载 <a class="el" href="class_shit_1_1_system.html#af33837c1054215fd5cda6f992f50c8e3">System</a> .</p>
 
 </div>
 </div>

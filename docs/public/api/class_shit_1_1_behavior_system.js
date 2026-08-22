@@ -3,6 +3,7 @@ var class_shit_1_1_behavior_system =
     [ "BehaviorSystem", "class_shit_1_1_behavior_system.html#a580b6b2767a0695fe483d22b5e7d074a", null ],
     [ "~BehaviorSystem", "class_shit_1_1_behavior_system.html#a9bcaafd127c8f7c68d3d22ad444aadea", null ],
     [ "destroy", "class_shit_1_1_behavior_system.html#ae1cf30cae681d95a94934492ae7ea627", null ],
+    [ "fixedUpdate", "class_shit_1_1_behavior_system.html#a463ce7b758c3e0027e5ffac6ecbd214d", null ],
     [ "onComponentAttached", "class_shit_1_1_behavior_system.html#a783a7e369bc1d8c5dc998d08e3e956c1", null ],
     [ "onComponentDetached", "class_shit_1_1_behavior_system.html#a7d186d8169496a0f410a29378f23942b", null ],
     [ "registerBehavior", "class_shit_1_1_behavior_system.html#ade5bdfcef86c78042aa1357822c17969", null ],

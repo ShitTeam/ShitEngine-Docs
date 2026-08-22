@@ -191,6 +191,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:acbef2688cd43fd22241759f89fe12d28" id="r_acbef2688cd43fd22241759f89fe12d28"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acbef2688cd43fd22241759f89fe12d28">onAttach</a> () override</td></tr>
 <tr class="memitem:a62c5b2c91580204a54e2d32e9594e6e9" id="r_a62c5b2c91580204a54e2d32e9594e6e9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a62c5b2c91580204a54e2d32e9594e6e9">onStart</a> ()</td></tr>
 <tr class="memdesc:a62c5b2c91580204a54e2d32e9594e6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">首次 update 前执行一次  <br /></td></tr>
+<tr class="memitem:abb45fe0a32ea82e62b1f35fe80764cab" id="r_abb45fe0a32ea82e62b1f35fe80764cab"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#abb45fe0a32ea82e62b1f35fe80764cab">onFixedUpdate</a> (float fixedDt)</td></tr>
+<tr class="memdesc:abb45fe0a32ea82e62b1f35fe80764cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定步长执行（与物理同拍；Scene 固定步循环驱动）  <br /></td></tr>
 <tr class="memitem:ac521702842354e4c4c71d4cf28b1db0b" id="r_ac521702842354e4c4c71d4cf28b1db0b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac521702842354e4c4c71d4cf28b1db0b">onUpdate</a> ()</td></tr>
 <tr class="memdesc:ac521702842354e4c4c71d4cf28b1db0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">每帧执行  <br /></td></tr>
 <tr class="memitem:a062926a9c57f956ba91179747e7b10c5" id="r_a062926a9c57f956ba91179747e7b10c5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a062926a9c57f956ba91179747e7b10c5">onCollisionEnter</a> (<a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *other)</td></tr>
@@ -242,8 +244,8 @@ Protected 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>行为基类 —— 用于编写自定义游戏逻辑 </p>
-<p>继承自 Component，扩展出 onStart / onUpdate 两个阶段： onCreate → onAttach → onStart → (每帧)onUpdate → onDetach → onDestroy</p>
-<p>onStart 在首次 update 前执行一次，适用于缓存指针。 onUpdate 每帧执行，适用于输入、移动、碰撞检测等。</p>
+<p>继承自 Component，扩展出 onStart / onFixedUpdate / onUpdate 三个阶段： onCreate → onAttach → onStart → (固定步)onFixedUpdate / (每帧)onUpdate → onDetach → onDestroy</p>
+<p>onStart 在首次 update 前执行一次，适用于缓存指针。 onFixedUpdate 固定步长执行（默认 60Hz、与物理步进同拍、先于本步物理模拟），适用于施力/设速等需稳定帧率的逻辑。 onUpdate 每渲染帧执行，适用于输入、移动、碰撞检测等。</p>
 <p>碰撞回调（onCollisionEnter/Stay/Exit）由 <a class="el" href="class_shit_1_1_physics_system2_d.html" title="2D 物理系统">PhysicsSystem2D</a> 在物理步进后驱动， 仅已启动（onStart 已执行）的行为收到，参数为碰撞对方的 GameObject。</p>
 <p>挂载后由 <a class="el" href="class_shit_1_1_behavior_system.html" title="Behavior 驱动系统">BehaviorSystem</a> 自动驱动，无需手动调用。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
@@ -511,6 +513,33 @@ Protected 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>重载 <a class="el" href="class_shit_1_1_component.html#aae1f5204fbabb92a0de013b8f0fd6616">Component</a> .</p>
+
+</div>
+</div>
+<a id="abb45fe0a32ea82e62b1f35fe80764cab" name="abb45fe0a32ea82e62b1f35fe80764cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb45fe0a32ea82e62b1f35fe80764cab">&#9670;&#160;</a></span>onFixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onFixedUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fixedDt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>固定步长执行（与物理同拍；Scene 固定步循环驱动） </p>
 
 </div>
 </div>

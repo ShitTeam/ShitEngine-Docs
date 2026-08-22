@@ -10,6 +10,7 @@ var class_shit_1_1_behavior =
     [ "onCreate", "class_shit_1_1_behavior.html#acbe76e0ea44ef342a8c85726573860d4", null ],
     [ "onDestroy", "class_shit_1_1_behavior.html#aee7be93617a6078496df31830d454990", null ],
     [ "onDetach", "class_shit_1_1_behavior.html#ad43b1fbcd8f355c3f312fa47fb3be914", null ],
+    [ "onFixedUpdate", "class_shit_1_1_behavior.html#abb45fe0a32ea82e62b1f35fe80764cab", null ],
     [ "onStart", "class_shit_1_1_behavior.html#a62c5b2c91580204a54e2d32e9594e6e9", null ],
     [ "onUpdate", "class_shit_1_1_behavior.html#ac521702842354e4c4c71d4cf28b1db0b", null ],
     [ "setStarted", "class_shit_1_1_behavior.html#aa28282f574997057b62d336af9198bb2", null ],

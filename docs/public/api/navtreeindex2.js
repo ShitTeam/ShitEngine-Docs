@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"class_shit_1_1_camera_component.html#a0365ad1e60466b1f48a2ecadc8f16734":[2,0,0,18,4],
+"class_shit_1_1_camera_component.html#a0365ad1e60466b1f48a2ecadc8f16734":[3,0,0,18,4],
+"class_shit_1_1_camera_component.html#a0935f7489d0a9fdc768a68e4b585bae6":[2,0,0,18,0],
+"class_shit_1_1_camera_component.html#a0935f7489d0a9fdc768a68e4b585bae6":[3,0,0,18,0],
 "class_shit_1_1_camera_component.html#a0f25b79a5807f94786a01bb8e28932a0":[2,0,0,18,14],
 "class_shit_1_1_camera_component.html#a0f25b79a5807f94786a01bb8e28932a0":[3,0,0,18,14],
 "class_shit_1_1_camera_component.html#a257fc8f8148265762ab350a6a8563ffc":[2,0,0,18,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "class_shit_1_1_game_object.html#a2619c8ab3a893aaec60458343051b17d":[2,0,0,34,8],
 "class_shit_1_1_game_object.html#a2619c8ab3a893aaec60458343051b17d":[3,0,0,34,8],
 "class_shit_1_1_game_object.html#a354c7d206ec624b9bdbb81f3b788f826":[2,0,0,34,17],
-"class_shit_1_1_game_object.html#a354c7d206ec624b9bdbb81f3b788f826":[3,0,0,34,17],
-"class_shit_1_1_game_object.html#a36f2aa21e8b3898775462d2a378d2e0f":[2,0,0,34,28],
-"class_shit_1_1_game_object.html#a36f2aa21e8b3898775462d2a378d2e0f":[3,0,0,34,28],
-"class_shit_1_1_game_object.html#a3a80b6032f86a56bec74609034b3246f":[2,0,0,34,6],
-"class_shit_1_1_game_object.html#a3a80b6032f86a56bec74609034b3246f":[3,0,0,34,6]
+"class_shit_1_1_game_object.html#a354c7d206ec624b9bdbb81f3b788f826":[3,0,0,34,17]
 };

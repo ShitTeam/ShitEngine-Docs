@@ -3,6 +3,7 @@ var class_shit_1_1_system =
     [ "System", "class_shit_1_1_system.html#a5034f7aabb39aa71406a18f57af4971e", null ],
     [ "~System", "class_shit_1_1_system.html#aa7229e118bb766e4752281389b321ed6", null ],
     [ "destroy", "class_shit_1_1_system.html#af79997318d96497d77015571261ec88b", null ],
+    [ "fixedUpdate", "class_shit_1_1_system.html#af33837c1054215fd5cda6f992f50c8e3", null ],
     [ "getPriority", "class_shit_1_1_system.html#ad65045bcc70661e1e745edbb1da0377b", null ],
     [ "getScene", "class_shit_1_1_system.html#a0c36c4965240371f43c896f8d6af7feb", null ],
     [ "init", "class_shit_1_1_system.html#a9339772ec5ac9fa929938109207f2863", null ],

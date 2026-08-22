@@ -182,7 +182,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a02fd73d861ef2e4aabb38c0c9ff82947" id="r_a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02fd73d861ef2e4aabb38c0c9ff82947">init</a> ()</td></tr>
 <tr class="memdesc:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册默认系统（BehaviorSystem + <a class="el" href="class_shit_1_1_render_system.html" title="渲染系统">RenderSystem</a> + UIRenderSystem），幂等  <br /></td></tr>
 <tr class="memitem:ac5c54df7ed3b930268c8d7752c101725" id="r_ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
-<tr class="memdesc:ac5c54df7ed3b930268c8d7752c101725"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新所有 <a class="el" href="class_shit_1_1_system.html" title="System 基类">System</a> + 处理延迟操作  <br /></td></tr>
+<tr class="memdesc:ac5c54df7ed3b930268c8d7752c101725"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新所有 System（固定步循环 + 变步长遍历）+ 处理延迟操作  <br /></td></tr>
 <tr class="memitem:a3a80b6032f86a56bec74609034b3246f" id="r_a3a80b6032f86a56bec74609034b3246f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3a80b6032f86a56bec74609034b3246f">destroy</a> ()</td></tr>
 <tr class="memdesc:a3a80b6032f86a56bec74609034b3246f"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁所有对象与系统  <br /></td></tr>
 <tr class="memitem:a7904c998322c92e144f5dba063b17e11" id="r_a7904c998322c92e144f5dba063b17e11"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7904c998322c92e144f5dba063b17e11">hasSystems</a> () const</td></tr>
@@ -238,6 +238,13 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a4df86bf18be1baecc1768d2a53d7c591"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象是否仍在当前场景容器中（地址比较，供编辑器校验旧选中指针）  <br /></td></tr>
 <tr class="memitem:a37c73db4fb406e7db9ad0a3acc119c0d" id="r_a37c73db4fb406e7db9ad0a3acc119c0d"><td class="memItemLeft"><a class="el" href="class_shit_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a37c73db4fb406e7db9ad0a3acc119c0d">componentByUuid</a> (uint64_t uuid) const</td></tr>
 <tr class="memdesc:a37c73db4fb406e7db9ad0a3acc119c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">按持久 UUID 查找组件（ComponentRef&lt;T&gt; 懒解析 / 编辑器拖拽引用共用） 组件已移除或对象已销毁后返回 nullptr（UUID 索引随组件生命周期维护）。  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a12df5ad061e5cf7de37fcddaedcb01df" id="r_a12df5ad061e5cf7de37fcddaedcb01df"><td class="memItemLeft">static constexpr float&#160;</td><td class="memItemRight"><a class="el" href="#a12df5ad061e5cf7de37fcddaedcb01df">FIXED_TIME_STEP</a> = 1.0f / 60.0f</td></tr>
+<tr class="memdesc:a12df5ad061e5cf7de37fcddaedcb01df"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定步长（秒）：onFixedUpdate 与物理模拟的共同节拍  <br /></td></tr>
+<tr class="memitem:ad74deffbf69a93f0125bc95eafd7ed09" id="r_ad74deffbf69a93f0125bc95eafd7ed09"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#ad74deffbf69a93f0125bc95eafd7ed09">MAX_FIXED_STEPS_PER_FRAME</a> = 3</td></tr>
+<tr class="memdesc:ad74deffbf69a93f0125bc95eafd7ed09"><td class="mdescLeft">&#160;</td><td class="mdescRight">单渲染帧最大固定步数（超出丢弃，防死亡螺旋）  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
@@ -1060,7 +1067,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>更新所有 <a class="el" href="class_shit_1_1_system.html" title="System 基类">System</a> + 处理延迟操作 </p>
+<p>更新所有 System（固定步循环 + 变步长遍历）+ 处理延迟操作 </p>
 
 </div>
 </div>
@@ -1086,6 +1093,55 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p><a class="el" href="class_shit_1_1_game_object.html" title="游戏物体类">GameObject</a> 结构变更（组件增删/改名/改父）时通知 bumpGeneration </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a12df5ad061e5cf7de37fcddaedcb01df" name="a12df5ad061e5cf7de37fcddaedcb01df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12df5ad061e5cf7de37fcddaedcb01df">&#9670;&#160;</a></span>FIXED_TIME_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float FIXED_TIME_STEP = 1.0f / 60.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>固定步长（秒）：onFixedUpdate 与物理模拟的共同节拍 </p>
+
+</div>
+</div>
+<a id="ad74deffbf69a93f0125bc95eafd7ed09" name="ad74deffbf69a93f0125bc95eafd7ed09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad74deffbf69a93f0125bc95eafd7ed09">&#9670;&#160;</a></span>MAX_FIXED_STEPS_PER_FRAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MAX_FIXED_STEPS_PER_FRAME = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>单渲染帧最大固定步数（超出丢弃，防死亡螺旋） </p>
 
 </div>
 </div>
