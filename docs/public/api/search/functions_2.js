@@ -6,7 +6,7 @@ var searchData=
   ['circlecollider2d_3',['CircleCollider2D',['../class_shit_1_1_circle_collider2_d.html#ada7f4a14d66a871d9968fe4c0d0e8c87',1,'Shit::CircleCollider2D::CircleCollider2D()'],['../class_shit_1_1_circle_collider2_d.html#aeed3a3f0ef6898d0ab4f0c11d4b19c10',1,'Shit::CircleCollider2D::CircleCollider2D(float radius)']]],
   ['clampcursor_4',['clampCursor',['../class_shit_1_1_u_i_text_input.html#a9952698f624131a4d1e58d13139ba41e',1,'Shit::UITextInput']]],
   ['clear_5',['Clear',['../class_shit_1_1_event_bus.html#a0a411c917b6c53f4bbcf8e315c11fee8',1,'Shit::EventBus']]],
-  ['clear_6',['clear',['../class_shit_1_1_tilemap.html#ac8bb3912a3ce86b15842e79d0b421204',1,'Shit::Tilemap']]],
+  ['clear_6',['clear',['../class_shit_1_1_tilemap.html#ac8bb3912a3ce86b15842e79d0b421204',1,'Shit::Tilemap::clear()'],['../class_shit_1_1_resource_cache.html#ac8bb3912a3ce86b15842e79d0b421204',1,'Shit::ResourceCache::clear()']]],
   ['clearall_7',['ClearAll',['../class_shit_1_1_event_bus.html#af7ffedb25d7bc40a105a65f0a9cb7943',1,'Shit::EventBus']]],
   ['clearallfonts_8',['ClearAllFonts',['../class_shit_1_1_resource_manager.html#a7d6350463ce65b6a712496cc56146173',1,'Shit::ResourceManager']]],
   ['clearalltextures_9',['ClearAllTextures',['../class_shit_1_1_resource_manager.html#a27a8cdbe1a72f6bdce598110066f3734',1,'Shit::ResourceManager']]],

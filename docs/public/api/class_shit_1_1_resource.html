@@ -1,0 +1,579 @@
+<!-- HTML header for doxygen 1.17.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ShitEngine: Resource类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<!--BEGIN MATHJAX-->
+<!--END MATHJAX-->
+<!--BEGIN DARKMODE-->
+<!--END DARKMODE-->
+<!--BEGIN MERMAID-->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<!--END MERMAID-->
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<!-- Doxygen Awesome JS -->
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+  // 手动初始化 Doxygen Awesome 组件（不依赖 jQuery）
+  (function() {
+    function init() {
+      // darkmode toggle - 追加到标题栏，确保桌面/移动都可见
+      var toggle = document.createElement('doxygen-awesome-dark-mode-toggle');
+      toggle.title = 'Toggle Light/Dark Mode';
+      toggle.updateIcon();
+      toggle.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:9999;' +
+        'width:44px;height:44px;background:#fff;border:1px solid #ddd;' +
+        'border-radius:50%;cursor:pointer;display:flex;align-items:center;' +
+        'justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.15);';
+      document.body.appendChild(toggle);
+      // fragment copy
+      DoxygenAwesomeFragmentCopyButton.init();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ShitEngine
+   </div>
+   <div id="projectbrief">基于 C++20 与 SDL3 的轻量级 2D 游戏引擎</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_resource.html','','class_shit_1_1_resource-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Resource类 参考<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>资源基类 —— 所有引擎资产（Texture / <a class="el" href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）">Font</a> / Audio）的统一封装  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_resource_8h_source.html">Resource.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Resource 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_shit_1_1_resource.png" usemap="#Resource_map" alt=""/>
+  <map id="Resource_map" name="Resource_map">
+<area href="class_shit_1_1_audio.html" title="音频：封装 MIX_Audio*（加载需 mixer 就绪，由管理器注入）" alt="Audio" shape="rect" coords="0,56,66,80"/>
+<area href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）" alt="Font" shape="rect" coords="76,56,142,80"/>
+<area href="class_shit_1_1_texture.html" title="纹理：封装 SDL_Texture*（渲染用；加载需渲染器已初始化）" alt="Texture" shape="rect" coords="152,56,218,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1cac913324e4512cbe5e8d14980ae13c" id="r_a1cac913324e4512cbe5e8d14980ae13c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1cac913324e4512cbe5e8d14980ae13c">Resource</a> (std::string path)</td></tr>
+<tr class="memitem:aac69a60dbdaab0a6eff2ca4c13ad23ca" id="r_aac69a60dbdaab0a6eff2ca4c13ad23ca"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#aac69a60dbdaab0a6eff2ca4c13ad23ca">~Resource</a> ()=default</td></tr>
+<tr class="memitem:af95babff07ca905ed6522fdf3ee9321f" id="r_af95babff07ca905ed6522fdf3ee9321f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af95babff07ca905ed6522fdf3ee9321f">Resource</a> (const Resource &amp;)=delete</td></tr>
+<tr class="memitem:a9f988fd7e024a66578b5b36b2003f456" id="r_a9f988fd7e024a66578b5b36b2003f456"><td class="memItemLeft"><a class="el" href="#a1cac913324e4512cbe5e8d14980ae13c">Resource</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9f988fd7e024a66578b5b36b2003f456">operator=</a> (const <a class="el" href="#a1cac913324e4512cbe5e8d14980ae13c">Resource</a> &amp;)=delete</td></tr>
+<tr class="memitem:a7f800131eb7def589b584b37279d43a1" id="r_a7f800131eb7def589b584b37279d43a1"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7f800131eb7def589b584b37279d43a1">getPath</a> () const</td></tr>
+<tr class="memitem:aa04c692eaaabcae208971742f9189c08" id="r_aa04c692eaaabcae208971742f9189c08"><td class="memItemLeft"><a class="el" href="namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa04c692eaaabcae208971742f9189c08">getState</a> () const</td></tr>
+<tr class="memitem:af4529478109e5691162fef4acf9bf0c5" id="r_af4529478109e5691162fef4acf9bf0c5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af4529478109e5691162fef4acf9bf0c5">isLoaded</a> () const</td></tr>
+<tr class="memitem:a4542ba8c43e456a6eadff8dbf0803641" id="r_a4542ba8c43e456a6eadff8dbf0803641"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a4542ba8c43e456a6eadff8dbf0803641">getError</a> () const</td></tr>
+<tr class="memdesc:a4542ba8c43e456a6eadff8dbf0803641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Failed 时的诊断信息  <br /></td></tr>
+<tr class="memitem:ace77f8e9b6b289a615d5e63537ba09e8" id="r_ace77f8e9b6b289a615d5e63537ba09e8"><td class="memItemLeft">std::uint64_t&#160;</td><td class="memItemRight"><a class="el" href="#ace77f8e9b6b289a615d5e63537ba09e8">getUuid</a> () const</td></tr>
+<tr class="memdesc:ace77f8e9b6b289a615d5e63537ba09e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">会话级 uuid（进程内随机，不落盘）  <br /></td></tr>
+<tr class="memitem:a1aa27fd6a749c00fc61857d3640f4481" id="r_a1aa27fd6a749c00fc61857d3640f4481"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a1aa27fd6a749c00fc61857d3640f4481">load</a> ()=0</td></tr>
+<tr class="memdesc:a1aa27fd6a749c00fc61857d3640f4481"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载底层句柄（子类实现；失败记录 m_error 并返回 false，内部已打日志）  <br /></td></tr>
+<tr class="memitem:af8a84115de3507728d5e19e804529052" id="r_af8a84115de3507728d5e19e804529052"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af8a84115de3507728d5e19e804529052">release</a> ()</td></tr>
+<tr class="memdesc:af8a84115de3507728d5e19e804529052"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放底层句柄（幂等；子类析构与管理器回收时调用；基类无句柄可释放）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a7a820ad5cf838eda18973257bbd6eb8e" id="r_a7a820ad5cf838eda18973257bbd6eb8e"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a7a820ad5cf838eda18973257bbd6eb8e">m_path</a></td></tr>
+<tr class="memitem:a02924780457fc1937ca66c26baee8a2c" id="r_a02924780457fc1937ca66c26baee8a2c"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a02924780457fc1937ca66c26baee8a2c">m_error</a></td></tr>
+<tr class="memitem:ad20520a6fcf50446280bd5a68c2c594d" id="r_ad20520a6fcf50446280bd5a68c2c594d"><td class="memItemLeft"><a class="el" href="namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad20520a6fcf50446280bd5a68c2c594d">m_state</a> = <a class="el" href="namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705aa5ae20aa7fda5bd38bf0dce98e65bd2d">ResourceState::Unloaded</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>资源基类 —— 所有引擎资产（Texture / <a class="el" href="class_shit_1_1_font.html" title="字体：封装 TTF_Font*（按路径+字号复合键缓存）">Font</a> / Audio）的统一封装 </p>
+<p>所有权模型：管理器独占（缓存持 unique_ptr），调用方借用指针。 缓存生命周期 = 整个引擎会话（Game::Destroy 统一销毁），销毁顺序集中受控 （音频先于 mixer、纹理先于 Renderer、再 SDL_Quit）——因此借用裸指针安全。 将来热重载应走 <a class="el" href="#a1aa27fd6a749c00fc61857d3640f4481" title="加载底层句柄（子类实现；失败记录 m_error 并返回 false，内部已打日志）">load()</a> 原地重载（同一 wrapper 换内部句柄），借用指针保持有效。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a1cac913324e4512cbe5e8d14980ae13c" name="a1cac913324e4512cbe5e8d14980ae13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cac913324e4512cbe5e8d14980ae13c">&#9670;&#160;</a></span>Resource() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Resource </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac69a60dbdaab0a6eff2ca4c13ad23ca" name="aac69a60dbdaab0a6eff2ca4c13ad23ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac69a60dbdaab0a6eff2ca4c13ad23ca">&#9670;&#160;</a></span>~Resource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="#a1cac913324e4512cbe5e8d14980ae13c">Resource</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af95babff07ca905ed6522fdf3ee9321f" name="af95babff07ca905ed6522fdf3ee9321f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af95babff07ca905ed6522fdf3ee9321f">&#9670;&#160;</a></span>Resource() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Resource </td>
+          <td>(</td>
+          <td class="paramtype">const Resource &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a4542ba8c43e456a6eadff8dbf0803641" name="a4542ba8c43e456a6eadff8dbf0803641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4542ba8c43e456a6eadff8dbf0803641">&#9670;&#160;</a></span>getError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; getError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Failed 时的诊断信息 </p>
+
+</div>
+</div>
+<a id="a7f800131eb7def589b584b37279d43a1" name="a7f800131eb7def589b584b37279d43a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f800131eb7def589b584b37279d43a1">&#9670;&#160;</a></span>getPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; getPath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa04c692eaaabcae208971742f9189c08" name="aa04c692eaaabcae208971742f9189c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04c692eaaabcae208971742f9189c08">&#9670;&#160;</a></span>getState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> getState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace77f8e9b6b289a615d5e63537ba09e8" name="ace77f8e9b6b289a615d5e63537ba09e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace77f8e9b6b289a615d5e63537ba09e8">&#9670;&#160;</a></span>getUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint64_t getUuid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>会话级 uuid（进程内随机，不落盘） </p>
+
+</div>
+</div>
+<a id="af4529478109e5691162fef4acf9bf0c5" name="af4529478109e5691162fef4acf9bf0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4529478109e5691162fef4acf9bf0c5">&#9670;&#160;</a></span>isLoaded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isLoaded </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1aa27fd6a749c00fc61857d3640f4481" name="a1aa27fd6a749c00fc61857d3640f4481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa27fd6a749c00fc61857d3640f4481">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool load </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>加载底层句柄（子类实现；失败记录 m_error 并返回 false，内部已打日志） </p>
+
+<p>在 <a class="el" href="class_shit_1_1_audio.html#a9437e851549fc56c5d1bda87ffffe4aa">Audio</a>, <a class="el" href="class_shit_1_1_font.html#a9437e851549fc56c5d1bda87ffffe4aa">Font</a> , 以及 <a class="el" href="class_shit_1_1_texture.html#a9437e851549fc56c5d1bda87ffffe4aa">Texture</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a9f988fd7e024a66578b5b36b2003f456" name="a9f988fd7e024a66578b5b36b2003f456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f988fd7e024a66578b5b36b2003f456">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a1cac913324e4512cbe5e8d14980ae13c">Resource</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a1cac913324e4512cbe5e8d14980ae13c">Resource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8a84115de3507728d5e19e804529052" name="af8a84115de3507728d5e19e804529052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8a84115de3507728d5e19e804529052">&#9670;&#160;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void release </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>释放底层句柄（幂等；子类析构与管理器回收时调用；基类无句柄可释放） </p>
+
+<p>被 <a class="el" href="class_shit_1_1_audio.html#ad7ed3842c3160ae4b9f51acbf4564438">Audio</a>, <a class="el" href="class_shit_1_1_font.html#ad7ed3842c3160ae4b9f51acbf4564438">Font</a> , 以及 <a class="el" href="class_shit_1_1_texture.html#ad7ed3842c3160ae4b9f51acbf4564438">Texture</a> 重载.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a02924780457fc1937ca66c26baee8a2c" name="a02924780457fc1937ca66c26baee8a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02924780457fc1937ca66c26baee8a2c">&#9670;&#160;</a></span>m_error</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string m_error</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a820ad5cf838eda18973257bbd6eb8e" name="a7a820ad5cf838eda18973257bbd6eb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a820ad5cf838eda18973257bbd6eb8e">&#9670;&#160;</a></span>m_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string m_path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad20520a6fcf50446280bd5a68c2c594d" name="ad20520a6fcf50446280bd5a68c2c594d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20520a6fcf50446280bd5a68c2c594d">&#9670;&#160;</a></span>m_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705">ResourceState</a> m_state = <a class="el" href="namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705aa5ae20aa7fda5bd38bf0dce98e65bd2d">ResourceState::Unloaded</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Resource/<a class="el" href="_resource_8h_source.html">Resource.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- HTML footer for doxygen 1.17.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_resource.html">Resource</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

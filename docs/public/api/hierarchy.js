@@ -7,7 +7,6 @@ var hierarchy =
     [ "AnimatorState", "struct_shit_1_1_animator_state.html", null ],
     [ "AnimatorTransition", "struct_shit_1_1_animator_transition.html", null ],
     [ "AnimatorTransitionCondition", "struct_shit_1_1_animator_transition_condition.html", null ],
-    [ "AudioManager", "class_shit_1_1_audio_manager.html", null ],
     [ "AudioPlayer", "class_shit_1_1_audio_player.html", null ],
     [ "AudioTrack", "class_shit_1_1_audio_track.html", null ],
     [ "AxisBinding", "struct_shit_1_1_axis_binding.html", null ],
@@ -53,7 +52,8 @@ var hierarchy =
     [ "EventBus", "class_shit_1_1_event_bus.html", null ],
     [ "FieldInfo", "struct_shit_1_1_field_info.html", null ],
     [ "FieldMeta", "struct_shit_1_1_field_meta.html", null ],
-    [ "FontManager", "class_shit_1_1_font_manager.html", null ],
+    [ "FontKey", "struct_shit_1_1_font_key.html", null ],
+    [ "FontKeyHash", "struct_shit_1_1_font_key_hash.html", null ],
     [ "Game", "class_shit_1_1_game.html", null ],
     [ "GameObject", "class_shit_1_1_game_object.html", null ],
     [ "Input", "class_shit_1_1_input.html", null ],
@@ -68,6 +68,12 @@ var hierarchy =
     [ "RangeMeta", "struct_shit_1_1_range_meta.html", null ],
     [ "Rect", "struct_shit_1_1_rect.html", null ],
     [ "Renderer", "class_shit_1_1_renderer.html", null ],
+    [ "Resource", "class_shit_1_1_resource.html", [
+      [ "Audio", "class_shit_1_1_audio.html", null ],
+      [ "Font", "class_shit_1_1_font.html", null ],
+      [ "Texture", "class_shit_1_1_texture.html", null ]
+    ] ],
+    [ "ResourceCache&lt; Key, Res, Hash &gt;", "class_shit_1_1_resource_cache.html", null ],
     [ "ResourceManager", "class_shit_1_1_resource_manager.html", null ],
     [ "Scene", "class_shit_1_1_scene.html", null ],
     [ "SceneManager", "class_shit_1_1_scene_manager.html", null ],
@@ -81,7 +87,6 @@ var hierarchy =
       [ "UIRenderSystem", "class_shit_1_1_u_i_render_system.html", null ]
     ] ],
     [ "TextInputGate", "class_shit_1_1_text_input_gate.html", null ],
-    [ "TextureManager", "class_shit_1_1_texture_manager.html", null ],
     [ "Time", "class_shit_1_1_time.html", null ],
     [ "TypeInfo", "struct_shit_1_1_type_info.html", null ],
     [ "TypeInfoBuilder", "class_shit_1_1_type_info_builder.html", null ],

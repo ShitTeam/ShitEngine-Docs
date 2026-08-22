@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>资源管理器（单例）  
+<p>资源管理器（引擎上下文持有）  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a>&gt;</code></p>
@@ -177,22 +177,33 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a62a73aff7afffe2fba7c2e47e07d9134"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放所有资源缓存（必须在 SDL_Quit 之前调用）  <br /></td></tr>
 <tr class="memitem:ad725872fe5683084c429452249fc1e7e" id="r_ad725872fe5683084c429452249fc1e7e"><td class="memItemLeft">static SDL_Texture *&#160;</td><td class="memItemRight"><a class="el" href="#ad725872fe5683084c429452249fc1e7e">LoadTexture</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:aafc43012f24df717203acec29d7dd8c6" id="r_aafc43012f24df717203acec29d7dd8c6"><td class="memItemLeft">static SDL_Texture *&#160;</td><td class="memItemRight"><a class="el" href="#aafc43012f24df717203acec29d7dd8c6">GetTexture</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memitem:aa61b7e2f498d3f43551390a0d8535498" id="r_aa61b7e2f498d3f43551390a0d8535498"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa61b7e2f498d3f43551390a0d8535498">GetTextureAsset</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:aa61b7e2f498d3f43551390a0d8535498"><td class="mdescLeft">&#160;</td><td class="mdescRight">完整封装（状态/错误/uuid）  <br /></td></tr>
 <tr class="memitem:a0a6525d07e3b6d71c53350c43e31eb59" id="r_a0a6525d07e3b6d71c53350c43e31eb59"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0a6525d07e3b6d71c53350c43e31eb59">UnloadTexture</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:a27a8cdbe1a72f6bdce598110066f3734" id="r_a27a8cdbe1a72f6bdce598110066f3734"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a27a8cdbe1a72f6bdce598110066f3734">ClearAllTextures</a> ()</td></tr>
 <tr class="memitem:a51a1a1592ed7b9526cc062cd2425cd95" id="r_a51a1a1592ed7b9526cc062cd2425cd95"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a51a1a1592ed7b9526cc062cd2425cd95">ClearTexture</a> ()</td></tr>
 <tr class="memitem:a029bd523f3b16c95c42c64fb90a609c1" id="r_a029bd523f3b16c95c42c64fb90a609c1"><td class="memItemLeft">static MIX_Audio *&#160;</td><td class="memItemRight"><a class="el" href="#a029bd523f3b16c95c42c64fb90a609c1">LoadAudio</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:a95a2051da3dd8154854122a27c9714f7" id="r_a95a2051da3dd8154854122a27c9714f7"><td class="memItemLeft">static MIX_Audio *&#160;</td><td class="memItemRight"><a class="el" href="#a95a2051da3dd8154854122a27c9714f7">GetAudio</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memitem:a643cfa1d69444e15c36f0fa4027b7c5f" id="r_a643cfa1d69444e15c36f0fa4027b7c5f"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_audio.html">Audio</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a643cfa1d69444e15c36f0fa4027b7c5f">GetAudioAsset</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:a293d58b1556dce47af8451475db7e5db" id="r_a293d58b1556dce47af8451475db7e5db"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a293d58b1556dce47af8451475db7e5db">UnloadAudio</a> (const std::string &amp;filePath)</td></tr>
 <tr class="memitem:a132d07a4ffd0097f21c351066eecf3fb" id="r_a132d07a4ffd0097f21c351066eecf3fb"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a132d07a4ffd0097f21c351066eecf3fb">ClearAudio</a> ()</td></tr>
 <tr class="memitem:a8426d7a8cba1df3df1f08189e750ea8f" id="r_a8426d7a8cba1df3df1f08189e750ea8f"><td class="memItemLeft">static TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="#a8426d7a8cba1df3df1f08189e750ea8f">LoadFont</a> (const std::string &amp;filePath, float fontSize)</td></tr>
 <tr class="memitem:a55d4aa393669181ec5dcf3073cd78ae3" id="r_a55d4aa393669181ec5dcf3073cd78ae3"><td class="memItemLeft">static TTF_Font *&#160;</td><td class="memItemRight"><a class="el" href="#a55d4aa393669181ec5dcf3073cd78ae3">GetFont</a> (const std::string &amp;filePath, float fontSize)</td></tr>
+<tr class="memitem:a40aae6b1bfd424b279966bc0f81e0193" id="r_a40aae6b1bfd424b279966bc0f81e0193"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_font.html">Font</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a40aae6b1bfd424b279966bc0f81e0193">GetFontAsset</a> (const std::string &amp;filePath, float fontSize)</td></tr>
 <tr class="memitem:a7d6350463ce65b6a712496cc56146173" id="r_a7d6350463ce65b6a712496cc56146173"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a7d6350463ce65b6a712496cc56146173">ClearAllFonts</a> ()</td></tr>
 <tr class="memitem:a48cba22a6a68c7adc5ae8672eab58250" id="r_a48cba22a6a68c7adc5ae8672eab58250"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a48cba22a6a68c7adc5ae8672eab58250">ClearFont</a> ()</td></tr>
-<tr class="memitem:a8394950c01f3467de9329b92ec611f07" id="r_a8394950c01f3467de9329b92ec611f07"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8394950c01f3467de9329b92ec611f07">SetAudioMixer</a> (struct MIX_Mixer *mixer)</td></tr>
+<tr class="memitem:ad07542d4f76f955ee0748523e5362081" id="r_ad07542d4f76f955ee0748523e5362081"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ad07542d4f76f955ee0748523e5362081">SetAudioMixer</a> (MIX_Mixer *mixer)</td></tr>
+<tr class="memitem:a00ee4f0b308cf9b21f44d47f36a1f9a0" id="r_a00ee4f0b308cf9b21f44d47f36a1f9a0"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a00ee4f0b308cf9b21f44d47f36a1f9a0">SetAssetRoot</a> (const std::string &amp;root)</td></tr>
+<tr class="memdesc:a00ee4f0b308cf9b21f44d47f36a1f9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置资产根目录（空串清除）。相对路径在资产根下存在时按根解析，否则原样 （进程 cwd 语义）。编辑器打开项目时指向项目根，使项目内相对路径可加载。  <br /></td></tr>
+<tr class="memitem:aa68e22ecd33d682450158e112f9f34fb" id="r_aa68e22ecd33d682450158e112f9f34fb"><td class="memItemLeft">static const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa68e22ecd33d682450158e112f9f34fb">GetAssetRoot</a> ()</td></tr>
+<tr class="memitem:a343486dffdf84640e431e7cd7fb25caf" id="r_a343486dffdf84640e431e7cd7fb25caf"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#a343486dffdf84640e431e7cd7fb25caf">ResolveAssetPath</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a343486dffdf84640e431e7cd7fb25caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">绝对路径原样返回；相对路径先试资产根（存在才用），否则原样返回  <br /></td></tr>
+<tr class="memitem:a89ae5344a39d4ab8828957f7e11d59e1" id="r_a89ae5344a39d4ab8828957f7e11d59e1"><td class="memItemLeft">static <a class="el" href="class_shit_1_1_resource.html">Resource</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a89ae5344a39d4ab8828957f7e11d59e1">GetResourceByUuid</a> (std::uint64_t uuid)</td></tr>
+<tr class="memdesc:a89ae5344a39d4ab8828957f7e11d59e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">按会话级 uuid 查资源（遍历三类缓存；未命中返回 nullptr）  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>资源管理器（单例） </p>
-<p>统一门面类，封装纹理、音频、字体的加载与缓存。 同路径资源只加载一次，后续请求从缓存返回。 在 <a class="el" href="class_shit_1_1_game.html#ae596c367662c7f3b19b6626b89ffc08b">Game::Init()</a> 中自动初始化。 </p>
+<div class="textblock"><p>资源管理器（引擎上下文持有） </p>
+<p>统一门面：纹理 / 音频 / 字体的加载与缓存（原 TextureManager/FontManager/ AudioManager 已折叠为 <a class="el" href="class_shit_1_1_resource_cache.html" title="泛型资源缓存外壳 —— 统一「查缓存 → 工厂创建 → 加载 → 插入」模式">ResourceCache</a> 模板缓存 + <a class="el" href="class_shit_1_1_resource.html" title="资源基类 —— 所有引擎资产（Texture / Font / Audio）的统一封装">Resource</a> 子类封装）。 同键资源只加载一次；调用方借用裸句柄，缓存在 <a class="el" href="class_shit_1_1_game.html#a62a73aff7afffe2fba7c2e47e07d9134" title="反初始化，按依赖逆序清理子系统（init 部分失败时也能安全调用）">Game::Destroy</a> 统一按序销毁。 相对路径经资产根解析（SetAssetRoot，编辑器指向项目根）；未命中回退进程 cwd 语义——Runtime 的 "resource/..." 场景路径不受影响。 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a6a2f2dfe18eed126c72be99972c02236" name="a6a2f2dfe18eed126c72be99972c02236"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a2f2dfe18eed126c72be99972c02236">&#9670;&#160;</a></span>ResourceManager() <span class="overload">[1/3]</span></h2>
@@ -297,7 +308,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -322,7 +333,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -347,7 +358,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -372,7 +383,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -397,7 +408,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -431,6 +442,31 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="aa68e22ecd33d682450158e112f9f34fb" name="aa68e22ecd33d682450158e112f9f34fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa68e22ecd33d682450158e112f9f34fb">&#9670;&#160;</a></span>GetAssetRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; GetAssetRoot </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a95a2051da3dd8154854122a27c9714f7" name="a95a2051da3dd8154854122a27c9714f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95a2051da3dd8154854122a27c9714f7">&#9670;&#160;</a></span>GetAudio()</h2>
 
@@ -449,7 +485,32 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a643cfa1d69444e15c36f0fa4027b7c5f" name="a643cfa1d69444e15c36f0fa4027b7c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643cfa1d69444e15c36f0fa4027b7c5f">&#9670;&#160;</a></span>GetAudioAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_audio.html">Audio</a> * GetAudioAsset </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -478,7 +539,36 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40aae6b1bfd424b279966bc0f81e0193" name="a40aae6b1bfd424b279966bc0f81e0193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40aae6b1bfd424b279966bc0f81e0193">&#9670;&#160;</a></span>GetFontAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_font.html">Font</a> * GetFontAsset </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fontSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -510,6 +600,33 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a89ae5344a39d4ab8828957f7e11d59e1" name="a89ae5344a39d4ab8828957f7e11d59e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ae5344a39d4ab8828957f7e11d59e1">&#9670;&#160;</a></span>GetResourceByUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_resource.html">Resource</a> * GetResourceByUuid </td>
+          <td>(</td>
+          <td class="paramtype">std::uint64_t</td>          <td class="paramname"><span class="paramname"><em>uuid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>按会话级 uuid 查资源（遍历三类缓存；未命中返回 nullptr） </p>
+
+</div>
+</div>
 <a id="aafc43012f24df717203acec29d7dd8c6" name="aafc43012f24df717203acec29d7dd8c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafc43012f24df717203acec29d7dd8c6">&#9670;&#160;</a></span>GetTexture()</h2>
 
@@ -528,10 +645,37 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa61b7e2f498d3f43551390a0d8535498" name="aa61b7e2f498d3f43551390a0d8535498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa61b7e2f498d3f43551390a0d8535498">&#9670;&#160;</a></span>GetTextureAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shit_1_1_texture.html">Texture</a> * GetTextureAsset </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>完整封装（状态/错误/uuid） </p>
 
 </div>
 </div>
@@ -578,7 +722,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -607,7 +751,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -632,7 +776,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -689,8 +833,62 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a8394950c01f3467de9329b92ec611f07" name="a8394950c01f3467de9329b92ec611f07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8394950c01f3467de9329b92ec611f07">&#9670;&#160;</a></span>SetAudioMixer()</h2>
+<a id="a343486dffdf84640e431e7cd7fb25caf" name="a343486dffdf84640e431e7cd7fb25caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343486dffdf84640e431e7cd7fb25caf">&#9670;&#160;</a></span>ResolveAssetPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ResolveAssetPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绝对路径原样返回；相对路径先试资产根（存在才用），否则原样返回 </p>
+
+</div>
+</div>
+<a id="a00ee4f0b308cf9b21f44d47f36a1f9a0" name="a00ee4f0b308cf9b21f44d47f36a1f9a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ee4f0b308cf9b21f44d47f36a1f9a0">&#9670;&#160;</a></span>SetAssetRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAssetRoot </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>root</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置资产根目录（空串清除）。相对路径在资产根下存在时按根解析，否则原样 （进程 cwd 语义）。编辑器打开项目时指向项目根，使项目内相对路径可加载。 </p>
+
+</div>
+</div>
+<a id="ad07542d4f76f955ee0748523e5362081" name="ad07542d4f76f955ee0748523e5362081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad07542d4f76f955ee0748523e5362081">&#9670;&#160;</a></span>SetAudioMixer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -701,13 +899,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void SetAudioMixer </td>
           <td>(</td>
-          <td class="paramtype">struct MIX_Mixer *</td>          <td class="paramname"><span class="paramname"><em>mixer</em></span></td><td>)</td>
+          <td class="paramtype">MIX_Mixer *</td>          <td class="paramname"><span class="paramname"><em>mixer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -732,7 +930,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -757,7 +955,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShitEngine: FontManager类 参考</title>
+<title>ShitEngine: ResourceCache&lt; Key, Res, Hash &gt; 模板类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_font_manager.html','','class_shit_1_1_font_manager-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_resource_cache.html','','class_shit_1_1_resource_cache-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -151,92 +151,45 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">FontManager类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+  <div class="headertitle"><div class="title">ResourceCache&lt; Key, Res, Hash &gt; 模板类 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>字体缓存管理器（按路径+字号复合键缓存 TTF_Font）  
+<p>泛型资源缓存外壳 —— 统一「查缓存 → 工厂创建 → 加载 → 插入」模式  
  <a href="#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_font_manager_8h_source.html">FontManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_resource_8h_source.html">Resource.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a5520f17d8d70b43bceaaba0085ee5905" id="r_a5520f17d8d70b43bceaaba0085ee5905"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> (const FontManager &amp;)=delete</td></tr>
-<tr class="memitem:a3f2667eaea1dbae0a96236f8e2a87b44" id="r_a3f2667eaea1dbae0a96236f8e2a87b44"><td class="memItemLeft"><a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3f2667eaea1dbae0a96236f8e2a87b44">operator=</a> (const <a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> &amp;)=delete</td></tr>
-<tr class="memitem:a0315701b5ee6b96d3fae9de3c71c7eae" id="r_a0315701b5ee6b96d3fae9de3c71c7eae"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0315701b5ee6b96d3fae9de3c71c7eae">FontManager</a> (FontManager &amp;&amp;)=default</td></tr>
-<tr class="memitem:af241907d5fd747fe778ade6f730ac263" id="r_af241907d5fd747fe778ade6f730ac263"><td class="memItemLeft"><a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af241907d5fd747fe778ade6f730ac263">operator=</a> (<a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> &amp;&amp;)=default</td></tr>
-<tr class="memitem:a3edda2d47c72c5cec1233a8f2b6d571a" id="r_a3edda2d47c72c5cec1233a8f2b6d571a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3edda2d47c72c5cec1233a8f2b6d571a">~FontManager</a> ()</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
-友元</h2></td></tr>
-<tr class="memitem:a54c1252abc87a78a301e6b6984470408" id="r_a54c1252abc87a78a301e6b6984470408"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a54c1252abc87a78a301e6b6984470408">ResourceManager</a></td></tr>
+<tr class="memitem:a71da0a39b48b8b15e925bfeee944293f" id="r_a71da0a39b48b8b15e925bfeee944293f"><td class="memTemplParams" colspan="2">template&lt;typename Make&gt; </td></tr>
+<tr class="memitem:a71da0a39b48b8b15e925bfeee944293f template"><td class="memItemLeft">Res *&#160;</td><td class="memItemRight"><a class="el" href="#a71da0a39b48b8b15e925bfeee944293f">getOrLoad</a> (const Key &amp;key, Make &amp;&amp;make)</td></tr>
+<tr class="memdesc:a71da0a39b48b8b15e925bfeee944293f"><td class="mdescLeft">&#160;</td><td class="mdescRight">查缓存命中直接返回；未命中用工厂创建 Res 并 load()，成功才入缓存  <br /></td></tr>
+<tr class="memitem:af62d54c2c0034a5862267979c5ddf1b2" id="r_af62d54c2c0034a5862267979c5ddf1b2"><td class="memItemLeft">Res *&#160;</td><td class="memItemRight"><a class="el" href="#af62d54c2c0034a5862267979c5ddf1b2">find</a> (const Key &amp;key) const</td></tr>
+<tr class="memitem:a8dd18b4d989fc43fa154661b8a52b084" id="r_a8dd18b4d989fc43fa154661b8a52b084"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8dd18b4d989fc43fa154661b8a52b084">unload</a> (const Key &amp;key)</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc" id="r_a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
+<tr class="memitem:a259cb5a711406a8c3e5d937eb9350cca" id="r_a259cb5a711406a8c3e5d937eb9350cca"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a259cb5a711406a8c3e5d937eb9350cca">size</a> () const</td></tr>
+<tr class="memitem:aa3ad1b2177e1d70bc4bea951844686dc" id="r_aa3ad1b2177e1d70bc4bea951844686dc"><td class="memItemLeft">const std::unordered_map&lt; Key, std::unique_ptr&lt; Res &gt;, Hash &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa3ad1b2177e1d70bc4bea951844686dc">entries</a> () const</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>字体缓存管理器（按路径+字号复合键缓存 TTF_Font） </p>
-<p>同一字体不同字号各自缓存一份。私有构造，仅 <a class="el" href="class_shit_1_1_resource_manager.html" title="资源管理器（单例）">ResourceManager</a> 可创建。 </p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
-<a id="a5520f17d8d70b43bceaaba0085ee5905" name="a5520f17d8d70b43bceaaba0085ee5905"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5520f17d8d70b43bceaaba0085ee5905">&#9670;&#160;</a></span>FontManager() <span class="overload">[1/2]</span></h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt;<br />
+class Shit::ResourceCache&lt; Key, Res, Hash &gt;</div><p>泛型资源缓存外壳 —— 统一「查缓存 → 工厂创建 → 加载 → 插入」模式 </p>
+<p>加载失败不缓存：下次请求重试（与旧懒加载行为一致，文件后补/修复后自愈）。 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&#160;</a></span>clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">FontManager </td>
-          <td>(</td>
-          <td class="paramtype">const FontManager &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0315701b5ee6b96d3fae9de3c71c7eae" name="a0315701b5ee6b96d3fae9de3c71c7eae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0315701b5ee6b96d3fae9de3c71c7eae">&#9670;&#160;</a></span>FontManager() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">FontManager </td>
-          <td>(</td>
-          <td class="paramtype">FontManager &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3edda2d47c72c5cec1233a8f2b6d571a" name="a3edda2d47c72c5cec1233a8f2b6d571a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3edda2d47c72c5cec1233a8f2b6d571a">&#9670;&#160;</a></span>~FontManager()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">~<a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> </td>
+          <td class="memname">void clear </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -251,74 +204,170 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="a3f2667eaea1dbae0a96236f8e2a87b44" name="a3f2667eaea1dbae0a96236f8e2a87b44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f2667eaea1dbae0a96236f8e2a87b44">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a644718bb2fb240de962dc3c9a1fdf0dc" name="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644718bb2fb240de962dc3c9a1fdf0dc">&#9670;&#160;</a></span>empty()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> &amp; operator= </td>
+          <td class="memname">bool empty </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af241907d5fd747fe778ade6f730ac263" name="af241907d5fd747fe778ade6f730ac263"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af241907d5fd747fe778ade6f730ac263">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aa3ad1b2177e1d70bc4bea951844686dc" name="aa3ad1b2177e1d70bc4bea951844686dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3ad1b2177e1d70bc4bea951844686dc">&#9670;&#160;</a></span>entries()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> &amp; operator= </td>
+          <td class="memname">const std::unordered_map&lt; Key, std::unique_ptr&lt; Res &gt;, Hash &gt; &amp; entries </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a5520f17d8d70b43bceaaba0085ee5905">FontManager</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
-<a id="a54c1252abc87a78a301e6b6984470408" name="a54c1252abc87a78a301e6b6984470408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54c1252abc87a78a301e6b6984470408">&#9670;&#160;</a></span>ResourceManager</h2>
+<a id="af62d54c2c0034a5862267979c5ddf1b2" name="af62d54c2c0034a5862267979c5ddf1b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af62d54c2c0034a5862267979c5ddf1b2">&#9670;&#160;</a></span>find()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class ResourceManager</td>
+          <td class="memname">Res * find </td>
+          <td>(</td>
+          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71da0a39b48b8b15e925bfeee944293f" name="a71da0a39b48b8b15e925bfeee944293f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71da0a39b48b8b15e925bfeee944293f">&#9670;&#160;</a></span>getOrLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename Make&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Res * getOrLoad </td>
+          <td>(</td>
+          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Make &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>make</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查缓存命中直接返回；未命中用工厂创建 Res 并 load()，成功才入缓存 </p>
+
+</div>
+</div>
+<a id="a259cb5a711406a8c3e5d937eb9350cca" name="a259cb5a711406a8c3e5d937eb9350cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259cb5a711406a8c3e5d937eb9350cca">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dd18b4d989fc43fa154661b8a52b084" name="a8dd18b4d989fc43fa154661b8a52b084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd18b4d989fc43fa154661b8a52b084">&#9670;&#160;</a></span>unload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Key, typename Res, typename Hash = std::hash&lt;Key&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unload </td>
+          <td>(</td>
+          <td class="paramtype">const Key &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -326,7 +375,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>include/ShitEngine/Resource/<a class="el" href="_font_manager_8h_source.html">FontManager.h</a></li>
+<li>include/ShitEngine/Resource/<a class="el" href="_resource_8h_source.html">Resource.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -342,7 +391,7 @@ Public 成员函数</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_font_manager.html">FontManager</a></li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_resource_cache.html">ResourceCache</a></li>
     <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

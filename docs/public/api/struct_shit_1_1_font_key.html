@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ShitEngine: AudioManager类 参考</title>
+<title>ShitEngine: FontKey结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1_audio_manager.html','','class_shit_1_1_audio_manager-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_shit_1_1_font_key.html','','struct_shit_1_1_font_key-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -151,27 +151,29 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_shit_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">AudioManager类 参考<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+  <div class="headertitle"><div class="title">FontKey结构体 参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_audio_manager_8h_source.html">AudioManager.h</a>&gt;</code></p>
+<p>字体缓存键：同字体不同字号各缓存一份  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_resource_8h_source.html">Resource.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a6c9b10afa36efd5acc683e19d15cd968" id="r_a6c9b10afa36efd5acc683e19d15cd968"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> (const AudioManager &amp;)=delete</td></tr>
-<tr class="memitem:aca4dc1c68e0df56c304fada6b20089b9" id="r_aca4dc1c68e0df56c304fada6b20089b9"><td class="memItemLeft"><a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aca4dc1c68e0df56c304fada6b20089b9">operator=</a> (const <a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> &amp;)=delete</td></tr>
-<tr class="memitem:a80272ef45a7324adeff5a67cb57c7cfb" id="r_a80272ef45a7324adeff5a67cb57c7cfb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a80272ef45a7324adeff5a67cb57c7cfb">AudioManager</a> (AudioManager &amp;&amp;)=default</td></tr>
-<tr class="memitem:ab947eeee488379d402e4e98ec85ccb5d" id="r_ab947eeee488379d402e4e98ec85ccb5d"><td class="memItemLeft"><a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab947eeee488379d402e4e98ec85ccb5d">operator=</a> (<a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> &amp;&amp;)=default</td></tr>
-<tr class="memitem:a01d94dbb0173cede5c56004b20562671" id="r_a01d94dbb0173cede5c56004b20562671"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a01d94dbb0173cede5c56004b20562671">~AudioManager</a> ()</td></tr>
+<tr class="memitem:a04ca73bfe363d7128bb80fc41a94dbfe" id="r_a04ca73bfe363d7128bb80fc41a94dbfe"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a04ca73bfe363d7128bb80fc41a94dbfe">operator==</a> (const <a class="el" href="struct_shit_1_1_font_key.html">FontKey</a> &amp;o) const</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
-友元</h2></td></tr>
-<tr class="memitem:a54c1252abc87a78a301e6b6984470408" id="r_a54c1252abc87a78a301e6b6984470408"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a54c1252abc87a78a301e6b6984470408">ResourceManager</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a4d455efceee21e97d8e21ee40e9b4a20" id="r_a4d455efceee21e97d8e21ee40e9b4a20"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a4d455efceee21e97d8e21ee40e9b4a20">path</a></td></tr>
+<tr class="memitem:aa6ea9b07932df851a61fa72bd01761fe" id="r_aa6ea9b07932df851a61fa72bd01761fe"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aa6ea9b07932df851a61fa72bd01761fe">size</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
-<a id="a6c9b10afa36efd5acc683e19d15cd968" name="a6c9b10afa36efd5acc683e19d15cd968"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c9b10afa36efd5acc683e19d15cd968">&#9670;&#160;</a></span>AudioManager() <span class="overload">[1/2]</span></h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>字体缓存键：同字体不同字号各缓存一份 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a04ca73bfe363d7128bb80fc41a94dbfe" name="a04ca73bfe363d7128bb80fc41a94dbfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ca73bfe363d7128bb80fc41a94dbfe">&#9670;&#160;</a></span>operator==()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,60 +182,10 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">AudioManager </td>
+          <td class="memname">bool operator== </td>
           <td>(</td>
-          <td class="paramtype">const AudioManager &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a80272ef45a7324adeff5a67cb57c7cfb" name="a80272ef45a7324adeff5a67cb57c7cfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80272ef45a7324adeff5a67cb57c7cfb">&#9670;&#160;</a></span>AudioManager() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">AudioManager </td>
-          <td>(</td>
-          <td class="paramtype">AudioManager &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a01d94dbb0173cede5c56004b20562671" name="a01d94dbb0173cede5c56004b20562671"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01d94dbb0173cede5c56004b20562671">&#9670;&#160;</a></span>~AudioManager()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">~<a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_shit_1_1_font_key.html">FontKey</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>o</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -245,82 +197,37 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="ab947eeee488379d402e4e98ec85ccb5d" name="ab947eeee488379d402e4e98ec85ccb5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab947eeee488379d402e4e98ec85ccb5d">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a4d455efceee21e97d8e21ee40e9b4a20" name="a4d455efceee21e97d8e21ee40e9b4a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d455efceee21e97d8e21ee40e9b4a20">&#9670;&#160;</a></span>path</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> &amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">std::string path</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aca4dc1c68e0df56c304fada6b20089b9" name="aca4dc1c68e0df56c304fada6b20089b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca4dc1c68e0df56c304fada6b20089b9">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aa6ea9b07932df851a61fa72bd01761fe" name="aa6ea9b07932df851a61fa72bd01761fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ea9b07932df851a61fa72bd01761fe">&#9670;&#160;</a></span>size</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> &amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a6c9b10afa36efd5acc683e19d15cd968">AudioManager</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">float size</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
-<a id="a54c1252abc87a78a301e6b6984470408" name="a54c1252abc87a78a301e6b6984470408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54c1252abc87a78a301e6b6984470408">&#9670;&#160;</a></span>ResourceManager</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class ResourceManager</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>该类的文档由以下文件生成:<ul>
-<li>include/ShitEngine/Resource/<a class="el" href="_audio_manager_8h_source.html">AudioManager.h</a></li>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>include/ShitEngine/Resource/<a class="el" href="_resource_8h_source.html">Resource.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -336,7 +243,7 @@ Public 成员函数</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="class_shit_1_1_audio_manager.html">AudioManager</a></li>
+    <li class="navelem"><a href="namespace_shit.html">Shit</a></li><li class="navelem"><a href="struct_shit_1_1_font_key.html">FontKey</a></li>
     <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

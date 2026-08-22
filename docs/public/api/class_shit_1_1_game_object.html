@@ -181,9 +181,13 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:af83d38d84c66cc8ea7a83659d941a323" id="r_af83d38d84c66cc8ea7a83659d941a323"><td class="memItemLeft">const std::string &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af83d38d84c66cc8ea7a83659d941a323">getTag</a> () const</td></tr>
 <tr class="memitem:a0c36c4965240371f43c896f8d6af7feb" id="r_a0c36c4965240371f43c896f8d6af7feb"><td class="memItemLeft"><a class="el" href="#a032858ae1fe02d2d1170981c2af2d67c">Scene</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0c36c4965240371f43c896f8d6af7feb">getScene</a> () const</td></tr>
 <tr class="memitem:af9c9255af4b284a0b456483acbfe1b0e" id="r_af9c9255af4b284a0b456483acbfe1b0e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af9c9255af4b284a0b456483acbfe1b0e">isNeedDestroy</a> () const</td></tr>
+<tr class="memitem:a354c7d206ec624b9bdbb81f3b788f826" id="r_a354c7d206ec624b9bdbb81f3b788f826"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a354c7d206ec624b9bdbb81f3b788f826">isActive</a> () const</td></tr>
+<tr class="memdesc:a354c7d206ec624b9bdbb81f3b788f826"><td class="mdescLeft">&#160;</td><td class="mdescRight">自身启用标志（isActiveInHierarchy 为含父链的最终生效状态）  <br /></td></tr>
+<tr class="memitem:ae29ff1928c9ccf772dee5613db72f283" id="r_ae29ff1928c9ccf772dee5613db72f283"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae29ff1928c9ccf772dee5613db72f283">isActiveInHierarchy</a> () const</td></tr>
+<tr class="memdesc:ae29ff1928c9ccf772dee5613db72f283"><td class="mdescLeft">&#160;</td><td class="mdescRight">层级生效状态：自身与所有祖先都启用（Unity 语义：父失活子随失活）  <br /></td></tr>
+<tr class="memitem:a92f6a09fee97399e88ace3f852323f30" id="r_a92f6a09fee97399e88ace3f852323f30"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a92f6a09fee97399e88ace3f852323f30">setActive</a> (bool active)</td></tr>
 <tr class="memitem:a9d3a2685df23b5e7cbf59c19c4a1f9b5" id="r_a9d3a2685df23b5e7cbf59c19c4a1f9b5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9d3a2685df23b5e7cbf59c19c4a1f9b5">setName</a> (const std::string &amp;name)</td></tr>
 <tr class="memitem:a7f57a9ed979c10c89eb81e09136718a5" id="r_a7f57a9ed979c10c89eb81e09136718a5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7f57a9ed979c10c89eb81e09136718a5">setTag</a> (const std::string &amp;tag)</td></tr>
-<tr class="memdesc:a7f57a9ed979c10c89eb81e09136718a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置标签（用于分类，如 "enemy"、"player"）  <br /></td></tr>
 <tr class="memitem:a36f2aa21e8b3898775462d2a378d2e0f" id="r_a36f2aa21e8b3898775462d2a378d2e0f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a36f2aa21e8b3898775462d2a378d2e0f">setScene</a> (<a class="el" href="#a032858ae1fe02d2d1170981c2af2d67c">Scene</a> *scene)</td></tr>
 <tr class="memdesc:a36f2aa21e8b3898775462d2a378d2e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置所属场景（同时触发未注册组件的 onAttach）  <br /></td></tr>
 <tr class="memitem:a03eb988617fc41944c0de1bbf62a8abf" id="r_a03eb988617fc41944c0de1bbf62a8abf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a03eb988617fc41944c0de1bbf62a8abf">setNeedDestroy</a> (bool needDestroy)</td></tr>
@@ -694,6 +698,60 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a354c7d206ec624b9bdbb81f3b788f826" name="a354c7d206ec624b9bdbb81f3b788f826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354c7d206ec624b9bdbb81f3b788f826">&#9670;&#160;</a></span>isActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isActive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>自身启用标志（isActiveInHierarchy 为含父链的最终生效状态） </p>
+
+</div>
+</div>
+<a id="ae29ff1928c9ccf772dee5613db72f283" name="ae29ff1928c9ccf772dee5613db72f283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29ff1928c9ccf772dee5613db72f283">&#9670;&#160;</a></span>isActiveInHierarchy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isActiveInHierarchy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>层级生效状态：自身与所有祖先都启用（Unity 语义：父失活子随失活） </p>
+
+</div>
+</div>
 <a id="af9c9255af4b284a0b456483acbfe1b0e" name="af9c9255af4b284a0b456483acbfe1b0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9c9255af4b284a0b456483acbfe1b0e">&#9670;&#160;</a></span>isNeedDestroy()</h2>
 
@@ -838,6 +896,31 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a92f6a09fee97399e88ace3f852323f30" name="a92f6a09fee97399e88ace3f852323f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f6a09fee97399e88ace3f852323f30">&#9670;&#160;</a></span>setActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setActive </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>active</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9d3a2685df23b5e7cbf59c19c4a1f9b5" name="a9d3a2685df23b5e7cbf59c19c4a1f9b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d3a2685df23b5e7cbf59c19c4a1f9b5">&#9670;&#160;</a></span>setName()</h2>
 
@@ -954,8 +1037,6 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>设置标签（用于分类，如 "enemy"、"player"） </p>
 
 </div>
 </div>

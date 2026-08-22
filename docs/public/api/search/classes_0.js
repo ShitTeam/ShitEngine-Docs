@@ -9,7 +9,7 @@ var searchData=
   ['animatorstate_6',['AnimatorState',['../struct_shit_1_1_animator_state.html',1,'Shit']]],
   ['animatortransition_7',['AnimatorTransition',['../struct_shit_1_1_animator_transition.html',1,'Shit']]],
   ['animatortransitioncondition_8',['AnimatorTransitionCondition',['../struct_shit_1_1_animator_transition_condition.html',1,'Shit']]],
-  ['audiomanager_9',['AudioManager',['../class_shit_1_1_audio_manager.html',1,'Shit']]],
+  ['audio_9',['Audio',['../class_shit_1_1_audio.html',1,'Shit']]],
   ['audioplayer_10',['AudioPlayer',['../class_shit_1_1_audio_player.html',1,'Shit']]],
   ['audiosource_11',['AudioSource',['../class_shit_1_1_audio_source.html',1,'Shit']]],
   ['audiotrack_12',['AudioTrack',['../class_shit_1_1_audio_track.html',1,'Shit']]],

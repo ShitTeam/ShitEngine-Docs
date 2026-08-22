@@ -25,8 +25,9 @@ var searchData=
   ['f7_22',['F7',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da47489eb597b7db34caa24b1fc78fc839',1,'Shit']]],
   ['f8_23',['F8',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da4787509ad9f9d747a81a30e9dde3d4a7',1,'Shit']]],
   ['f9_24',['F9',['../namespace_shit.html#a94b769a2899b14202ace87b550519a0da892a245e287c163080b23db737d3c4c9',1,'Shit']]],
-  ['float_25',['Float',['../namespace_shit.html#a0ff40449e21004707960b3589989bf05a22ae0e2b89e5e3d477f988cc36d3272b',1,'Shit']]],
-  ['floateq_26',['FloatEq',['../namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9ae156442671e6333edafee24d99da8bad',1,'Shit']]],
-  ['floatgt_27',['FloatGt',['../namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9af3b3463ca32cdf630cb0c0062916a5b9',1,'Shit']]],
-  ['floatlt_28',['FloatLt',['../namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9a86da9bffb670675791cf8f86aafbfd3a',1,'Shit']]]
+  ['failed_25',['Failed',['../namespace_shit.html#a33ee7da93cb9c170c97d8e60f3187705ad7c8c85bf79bbe1b7188497c32c3b0ca',1,'Shit']]],
+  ['float_26',['Float',['../namespace_shit.html#a0ff40449e21004707960b3589989bf05a22ae0e2b89e5e3d477f988cc36d3272b',1,'Shit']]],
+  ['floateq_27',['FloatEq',['../namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9ae156442671e6333edafee24d99da8bad',1,'Shit']]],
+  ['floatgt_28',['FloatGt',['../namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9af3b3463ca32cdf630cb0c0062916a5b9',1,'Shit']]],
+  ['floatlt_29',['FloatLt',['../namespace_shit.html#a83168aaec7888e88bd97ef7d95fedeb9a86da9bffb670675791cf8f86aafbfd3a',1,'Shit']]]
 ];

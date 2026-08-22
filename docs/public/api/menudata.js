@@ -111,14 +111,7 @@ var menudata={children:[
 {text:"y",url:"functions_vars.html#index_y"}]},
 {text:"类型定义",url:"functions_type.html"},
 {text:"枚举",url:"functions_enum.html"},
-{text:"相关符号",url:"functions_rela.html",children:[
-{text:"a",url:"functions_rela.html#index_a"},
-{text:"e",url:"functions_rela.html#index_e"},
-{text:"g",url:"functions_rela.html#index_g"},
-{text:"p",url:"functions_rela.html#index_p"},
-{text:"r",url:"functions_rela.html#index_r"},
-{text:"s",url:"functions_rela.html#index_s"},
-{text:"t",url:"functions_rela.html#index_t"}]}]}]},
+{text:"相关符号",url:"functions_rela.html"}]}]},
 {text:"文件",url:"files.html",children:[
 {text:"文件列表",url:"files.html"},
 {text:"文件成员",url:"globals.html",children:[
