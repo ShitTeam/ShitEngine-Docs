@@ -375,75 +375,33 @@ input->setCharacterLimit(16);  // 最多输入 16 个 UTF-8 字符
 
 ## 完整示例
 
-这是一个完整的 UI 场景——Canvas + 标题 + 可点击按钮 + 输入框：
+这是一个主菜单 UI——Canvas + 标题 + 可点击按钮 + 输入框。
+
+**搭建（编辑器）**：场景树右键「新建 → UI Canvas」创建根节点（无 Canvas 时文本模板会顺带创建）；右键 Canvas 或用模板加「文本」，再手动为按钮对象添加 `UIImage` + `UIButton`、为输入框添加 `UIImage` + `UITextBox`；在检查器里调 UITransform 的锚点与尺寸。保存为 `.scene` 后即可被 `LoadSceneFromFile` 加载，也可直接 ▶ 预览。
+
+**接线（脚本）**：按钮的点击行为由 Behavior 在运行时挂接：
 
 ```cpp
-#include <ShitEngine.h>
+class MainMenuScript : public Shit::Behavior {
+    void onStart() override {
+        auto* scene = getOwner()->getScene();
 
-int main() {
-    Shit::Game::Init();
+        // 点击「开始游戏」→ 切换到游戏关卡
+        if (auto* btnGo = scene->findGameObjectByName("StartBtn"))
+            if (auto* btn = btnGo->getComponent<Shit::UIButton>())
+                btn->setOnClick([] {
+                    Shit::SceneManager::LoadSceneFromFile("Scenes/Game.scene");
+                });
 
-    auto scene = std::make_unique<Shit::Scene>("MainMenu");
-    scene->init();
-
-    // ── Canvas ──
-    auto* canvas = scene->createGameObject("Canvas");
-    canvas->addComponent<Shit::UITransform>(0.0f, 0.0f,
-        static_cast<float>(Shit::Renderer::GetLogicalWidth()),
-        static_cast<float>(Shit::Renderer::GetLogicalHeight()));
-    canvas->addComponent<Shit::UICanvas>();
-
-    // ── 标题 ──
-    auto* title = scene->createGameObject("Title");
-    title->setParent(canvas);
-    auto* tf = title->addComponent<Shit::UITransform>(0.0f, 0.0f, 320.0f, 60.0f);
-    tf->setAnchorMin({0.5f, 0.8f});
-    tf->setAnchorMax({0.5f, 0.8f});
-    title->addComponent<Shit::UIText>("ShitEngine", "fonts/main.ttf", 36)
-         ->setColor({255, 255, 255, 255});
-
-    // ── 按钮 ──
-    {
-        auto* btn = scene->createGameObject("StartBtn");
-        btn->setParent(canvas);
-        auto* bt = btn->addComponent<Shit::UITransform>(0.0f, 30.0f, 200.0f, 60.0f);
-        bt->setAnchorMin({0.5f, 0.5f});
-        bt->setAnchorMax({0.5f, 0.5f});
-
-        btn->addComponent<Shit::UIImage>("textures/button.png");
-        auto* button = btn->addComponent<Shit::UIButton>();
-        button->setOnClick([]() { Shit::ST_INFO("Button clicked!"); });
+        // 输入框：读取玩家输入的名字
+        if (auto* boxGo = scene->findGameObjectByName("NameBox"))
+            if (auto* box = boxGo->getComponent<Shit::UITextBox>())
+                box->setPlaceholder("输入你的名字…");
     }
-
-    // ── 输入框 ──
-    {
-        auto* inputGO = scene->createGameObject("InputBox");
-        inputGO->setParent(canvas);
-        auto* itf = inputGO->addComponent<Shit::UITransform>(0.0f, -80.0f, 400.0f, 48.0f);
-        itf->setAnchorMin({0.5f, 0.5f});
-        itf->setAnchorMax({0.5f, 0.5f});
-
-        inputGO->addComponent<Shit::UIImage>("textures/input_bg.png");
-        auto* input = inputGO->addComponent<Shit::UITextBox>();
-        input->setFontPath("fonts/NotoSansSC-Regular.ttf");
-        input->setPlaceholder("Type here...");
-    }
-
-    // 保存到临时 .scene 文件，通过 LoadSceneFromFile 加载（唯一公开入口）
-    std::error_code ec;
-    const std::filesystem::path tempPath = std::filesystem::temp_directory_path(ec) / "ui_example.scene";
-    {
-        std::ofstream ofs(tempPath.string());
-        ofs << Shit::SceneSerializer::toJson(scene.get()).dump(2);
-    }
-    Shit::SceneManager::LoadSceneFromFile(tempPath.string());
-    std::filesystem::remove(tempPath, ec);
-
-    Shit::Game::Run();
-    Shit::Game::Destroy();
-    return 0;
-}
+};
 ```
+
+把这个脚本挂到场景中任意对象上（如 Canvas），编译插件后编辑器即可识别并随场景序列化。
 
 ---
 

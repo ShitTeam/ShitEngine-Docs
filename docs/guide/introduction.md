@@ -20,7 +20,7 @@ ShitEngine 是一个基于 **C++20** 的轻量级 2D 游戏引擎。它不依赖
 
 **因为想啃源码也啃得动。**
 
-如果有一天你想真正理解引擎在做什么——全部子系统收进 `EngineContext`，源码即文档，没有黑盒，没有魔法。
+如果有一天你想真正理解引擎在做什么——全部子系统收进 `EngineContext`，纹理/字体/音频由统一的 `Resource` 基类与缓存管理（带资产根解析），源码即文档，没有黑盒，没有魔法。
 
 ## 核心架构
 
@@ -123,7 +123,9 @@ Shit::EngineContext::setCurrent(&editorCtx); // 切回编辑器上下文
 | v1.1 | 基础架构：Game/Scene/Component/System、SDL3 渲染管线、输入、音频、配置 |
 | v1.2 | UI 系统：UITransform、UIImage/IUText、UIButton、UITextBox/UITextArea；物理系统（Box2D）；DLL 插件架构 |
 | v1.3 | 反射系统：SHIT_REFLECT/SHIT_ENUM、设计化的元数据、WhiteList/BlackList、static_assert 编译检查；SDL3 迁移 |
-| Unreleased | 可视化编辑器（项目系统/播放态/导出）、组件 UUID + ComponentRef 引用、Prefab/.scene 数据驱动、Tilemap 瓦片地图、Joint2D 关节、Animator 状态机 + Animator 窗口、帧动画 Animation 窗口、Unity 风格资源窗口 |
+| v1.4.0 | 可视化编辑器（项目系统/播放态/导出）、组件 UUID + ComponentRef 引用、Prefab/.scene 数据驱动、Tilemap 瓦片地图、Joint2D 关节、Animator 状态机 + Animator 窗口、帧动画 Animation 窗口、Unity 风格资源窗口 |
+| v1.4.1 | 反射扩展 SHIT_METHOD / SHIT_PROPERTY（getter/setter 属性）、Shit::Rect、14 项引擎级 BUG 修复 |
+| v1.4.2 | 引擎 Resource 基类与统一资源缓存 + 资产根解析；GameObject 启用语义（isActiveInHierarchy 随父链级联）与 tag 序列化；属性面板「组件/系统」双页 Tab 与对象属性区；路径字段拖拽填充 / 浏览选择 / 相对项目根存储；编辑器便捷操作批次（F 聚焦、Ctrl+D 复制、Ctrl+P 暂停、单步、站内过滤等）|
 
 ## 链接
 

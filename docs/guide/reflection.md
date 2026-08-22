@@ -1,3 +1,8 @@
+---
+title: 反射系统
+lang: zh_CN
+---
+
 # 反射系统
 
 ShitEngine 提供一套基于 **libClang** 的编译期反射系统。开发者只需在类/结构体上添加宏标记，ReflectionScanner 工具自动解析源码并生成注册代码。

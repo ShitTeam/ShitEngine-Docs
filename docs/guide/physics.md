@@ -134,38 +134,60 @@ UIRenderSystem::update()   (priority 200)  → UI 叠加
 
 ## 完整示例
 
-```cpp
-#include <ShitEngine/Physics/PhysicsSystem2D.h>
-#include <ShitEngine/Physics/RigidBody2D.h>
-#include <ShitEngine/Physics/BoxCollider2D.h>
-#include <ShitEngine/Physics/CircleCollider2D.h>
-#include <ShitEngine/Component/TransformComponent.h>
-#include <ShitEngine/Component/CameraComponent.h>
-#include <ShitEngine/Component/SpriteRenderer.h>
+物理不需要任何初始化代码——场景里出现第一个 `RigidBody2D` 时，物理系统会**自动注册并创建物理世界**（自愈机制，数据驱动场景无需手动配置）。
 
-auto scene = std::make_unique<Shit::Scene>("PhysicsTest");
-scene->init();
-scene->registerSystem<Shit::PhysicsSystem2D>();
+在编辑器中搭建：给地面挂 `RigidBody2D`（Static）+ `BoxCollider2D`，给掉落物挂 `RigidBody2D`（Dynamic）+ `BoxCollider2D` + `SpriteRenderer`，保存为 `.scene` 即可。对应的 `.scene` 数据长这样：
 
-// 相机
-auto* cam = scene->createGameObject("Camera");
-cam->addComponent<Shit::TransformComponent>()->setPosition({400, 350});
-cam->addComponent<Shit::CameraComponent>();
-
-// 地面
-auto* ground = scene->createGameObject("Ground");
-ground->addComponent<Shit::TransformComponent>()->setPosition({400, 680});
-ground->addComponent<Shit::RigidBody2D>();
-ground->addComponent<Shit::BoxCollider2D>(Shit::Vector2{750, 30});
-
-// 掉落的盒子
-auto* box = scene->createGameObject("Box");
-box->addComponent<Shit::TransformComponent>()->setPosition({400, 100});
-box->addComponent<Shit::RigidBody2D>()->setBodyType(Shit::RigidBody2D::Type::Dynamic);
-box->addComponent<Shit::BoxCollider2D>(Shit::Vector2{64, 64});
-auto* sr = box->addComponent<Shit::SpriteRenderer>();
-sr->setTexturePath("resource/box.png");
+```json
+{
+  "version": 2,
+  "objects": [
+    {
+      "name": "Ground",
+      "parent": -1,
+      "data": [{
+        "type": "TransformComponent",
+        "fields": { "m_positionX": 400, "m_positionY": 680 }
+      }, {
+        "type": "RigidBody2D",
+        "fields": {}
+      }, {
+        "type": "BoxCollider2D",
+        "fields": { "m_sizeW": 750, "m_sizeH": 30 }
+      }]
+    },
+    {
+      "name": "Box",
+      "parent": -1,
+      "data": [{
+        "type": "TransformComponent",
+        "fields": { "m_positionX": 400, "m_positionY": 100 }
+      }, {
+        "type": "RigidBody2D",
+        "fields": { "m_bodyType": 1 }
+      }, {
+        "type": "BoxCollider2D",
+        "fields": { "m_sizeW": 64, "m_sizeH": 64 }
+      }]
+    }
+  ]
+}
 ```
+
+加载与运行：
+
+```cpp
+#include <ShitEngine.h>
+
+int main() {
+    Shit::Game::Init();
+    Shit::SceneManager::LoadSceneFromFile("Scenes/PhysicsTest.scene");
+    Shit::Game::Run();
+    Shit::Game::Destroy();
+}
+```
+
+> 编辑器工作流下这些都在可视化界面完成——右键新建对象、检查器加组件调参数，保存即得 `.scene`；运行直接点 ▶。
 
 ## 关节（Joint2D）
 

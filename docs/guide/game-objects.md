@@ -33,13 +33,25 @@ auto* player = scene->createGameObject("player");
 
 ### 标签（Tag）
 
-标签用于快速分类和批量筛选游戏对象：
+标签用于快速分类和批量筛选游戏对象，**随 `.scene` 文件保存**（编辑器检查器的 Tag 行可直接编辑）：
 
 ```cpp
 auto* enemy = scene->createGameObject("goblin");
 enemy->setTag("enemy");
 enemy->getTag();  // → "enemy"
 ```
+
+### 启用 / 禁用（Active）
+
+每个 GameObject 有启用标志，**失活的对象不渲染、不更新行为脚本、不参与 UI 与物理**：
+
+```cpp
+go->isActive();              // 自身启用标志
+go->isActiveInHierarchy();   // 最终生效状态：自身与所有祖先都启用（父失活子随失活）
+go->setActive(false);        // 失活；重新启用后 Behavior 的 onStart 会补跑
+```
+
+编辑器中在检查器顶部的「启用 ✓」勾选框切换，场景树里失活对象灰显。典型用途：暂时下线某个机关、对象池里待命的对象。
 
 ### 销毁游戏对象
 

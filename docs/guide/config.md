@@ -26,7 +26,7 @@ ShitEngine 使用 JSON 文件管理项目、窗口和输入映射配置。没有
 
 ## settings.json
 
-在项目根目录下创建 `settings.json`：
+在**可执行文件同目录**创建 `settings.json`（导出的游戏包内即 exe 旁；编辑器直接运行 SDK 时为 `bin/` 目录）：
 
 ```json
 {
@@ -144,3 +144,16 @@ unsigned int current = Time::GetTargetFPS();
 ## 无配置文件运行
 
 `settings.json` 是可选的。没有它，引擎用所有默认值正常启动——这也是为什么 Quick Start 里不需要你创建这个文件。
+
+---
+
+## 资产路径与资产根
+
+组件里的资源路径（纹理 / 字体 / 音频）支持两种写法，加载时自动解析：
+
+- **绝对路径**：原样使用；
+- **相对路径**：先按**资产根**（asset root）解析——命中即用；未命中回退到进程工作目录，再回退 exe 旁的 `resource/`、`assets/`、`Assets/` 目录。
+
+编辑器打开项目时会把资产根设为**项目根目录**，因此项目内相对路径（如 `Assets/hero.png`）在编辑器与运行视图里都能直接加载。编辑器写入的路径字段（拖拽填充、浏览选择、视口拖入建精灵）统一保存为**相对项目根**的形式；手写的旧场景若存的是绝对路径也照常兼容。导出游戏时会自动归一化资源路径为包内相对路径。
+
+代码侧对应 `ResourceManager::SetAssetRoot()` / `ResolveAssetPath()`（详见 [API 文档](/api/)）。

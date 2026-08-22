@@ -65,28 +65,15 @@ EventBus::Emit(PlayerDeathEvent{playerId, killer});
 
 ## 派发事件
 
-`ProcessEvents()` 由引擎在 `Game::run()` 主循环中自动调用——你一般不需要手动调它。
-
-如果你继承了 `Game` 并重写了 `run()`，需要在自己的循环中手动调用：
+`ProcessEvents()` 由引擎主循环自动调用（每帧固定时刻，位于场景更新之后）——**你不需要手动调它**。`Game` 是静态门面，没有可重写的循环函数；整个生命周期就是三步：
 
 ```cpp
-void MyGame::run() {
-    SDL_Event event;
-    while (Window::IsOpen()) {
-        while (SDL_PollEvent(&event)) {
-            Window::HandleEvent(event);
-            Input::HandleEvent(event);
-        }
-        Input::Update();
-        SceneManager::Update();
-        EventBus::ProcessEvents();   // 派发本帧事件
-        AudioPlayer::Update();
-        Renderer::Present();
-    }
-}
+Shit::Game::Init();
+Shit::Game::Run();     // 主循环内自动：轮询事件 → 派发 EventBus → 更新场景 → 渲染
+Shit::Game::Destroy();
 ```
 
-事件派发发生在 `ProcessEvents()` 被调用的那一刻。回调内可以安全地 `Emit` 新事件（会被排队到下一次 `ProcessEvents`），也可以安全地 `Subscribe` / `Unsubscribe`。
+你的游戏逻辑全部写在 Behavior 脚本与事件回调里，由引擎驱动。
 
 ## 退订事件
 

@@ -113,7 +113,7 @@ group->setVolume(0.3f);  // 批量调音量
 
 ## 缓存机制
 
-音频文件由 `ResourceManager` 统一管理。第一次播的时候从磁盘加载，后续直接从缓存返回——不会重复读文件：
+音频文件由 `ResourceManager` 统一管理（`Resource` 基类 + 会话级缓存）。第一次播的时候从磁盘加载，后续直接从缓存返回——不会重复读文件：
 
 ```cpp
 // 第一次加载，磁盘 I/O
@@ -122,6 +122,27 @@ AudioPlayer::Play("bgm.ogg", "music");
 // 第二次直接走缓存，零延迟
 AudioPlayer::Play("bgm.ogg", "music");
 ```
+
+## AudioSource 组件——场景内播放
+
+不想在代码里管播放时机？给对象挂 `AudioSource` 组件，把音频声明在场景里：
+
+- 检查器添加「AudioSource」组件，填 `m_audioPath`（支持从资源窗口直接拖音频文件到字段）并设置音量、是否循环
+- 代码里在合适的时机触发：
+
+```cpp
+// Behavior 脚本中：受击时播音效
+void onStart() override {
+    m_source = getOwner()->getComponent<Shit::AudioSource>();
+}
+
+void onUpdate() override {
+    if (Shit::Input::IsActionDown("Hurt"))
+        m_source->play();
+}
+```
+
+`audioPath` 随 `.scene` 文件保存，导出游戏后照常工作。适合环境音、循环 BGM（挂相机上循环播放）、可交互物体的提示音。
 
 ## 清理机制
 
